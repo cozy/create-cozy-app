@@ -1,0 +1,8 @@
+{
+  "name": "create-cozy-app",
+  "version": "0.1.0",
+  "description": "A tool to create cozy applications",
+  "main": "index.js",
+  "author": "CPatchane <code@patchane.com>",
+  "license": "AGPL-3.0"
+}
