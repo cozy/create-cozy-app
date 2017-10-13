@@ -1,5 +1,5 @@
 {
-  "name": "create-cozy-app",
+  "name": "cozy-create-app",
   "version": "0.1.0",
   "description": "A tool to create cozy applications",
   "main": "index.js",
