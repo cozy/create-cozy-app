@@ -51,7 +51,7 @@ function createApp (name) {
   checkAppName(appName)
   ensureProjectFolder(rootPath)
 
-  console.log(`Let's create the Cozy Application in ${chalk.blue(rootPath)}.`)
+  console.log(`Let's create the Cozy Application in ${chalk.blue(rootPath)}`)
   console.log()
 
   // move to project directory
