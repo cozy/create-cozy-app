@@ -89,12 +89,16 @@ function ensureProjectFolder (folderPath) {
   try {
     fs.ensureDirSync(folderPath) // create folder if it doesn't exist
     const dir = fs.readdirSync(folderPath)
-    const acceptedExistingFiles = ['.git', '.DS_Store', 'Thumbs.db']
+    const acceptedExistingFiles = [
+      '.git',
+      '.DS_Store',
+      'Thumbs.db'
+    ]
     const conflicts = dir.filter(file => !acceptedExistingFiles.includes(file))
     if (conflicts.length < 1) return true // no conflicts files
     console.log(`The directory ${chalk.blue(folderPath)} contains unexpected files:`)
     for (const file of conflicts) {
-      console.log(`\t${file}`)
+      console.log(`\t- ${chalk.red(file)}`)
     }
     console.log('Please use a non-existing folder name or remove these files.')
     process.exit(1)
@@ -134,14 +138,15 @@ function bootstrapApp (rootPath, appName) {
     init(rootPath, appName)
   })
   .catch(error => {
-    console.log('An error occured during installation. Aborting.')
+    installingSpinner.fail(`An error occured during ${chalk.cyan('cozy-scripts')} installation. Aborting.`)
     if (error.command) {
-      console.log(`\t${chalk.cyan(error.command)} has failed.`)
+      console.log(`${chalk.cyan(error.command)} has failed.`)
     } else {
       console.log(chalk.red('Unexpected error. Please report it as a bug:'))
       console.log(error)
     }
     console.log()
+    gracefulExit(rootPath, appName)
   })
 }
 
@@ -157,4 +162,41 @@ function install (dependencies) {
       resolve()
     })
   })
+}
+
+function gracefulExit (rootPath, appName) {
+  console.log(chalk.yellow('Cleaning generated elements'))
+  const expectedGeneratedElements = [
+    'package.json',
+    'npm-debug.log',
+    'yarn-error.log',
+    'yarn-debug.log',
+    'node_modules',
+    'yarn.lock'
+  ]
+  const generatedElements = fs.readdirSync(path.join(rootPath))
+  if (generatedElements.length) {
+    console.log(`Deleting generated files in ${chalk.cyan(rootPath)}`)
+  }
+  generatedElements.forEach(element => {
+    expectedGeneratedElements.forEach(expected => {
+      if (element === expected) {
+        fs.removeSync(path.join(rootPath, element))
+        console.log(`\t- ${chalk.cyan(element)} deleted.`)
+      }
+    })
+  })
+  console.log()
+  const remainingElements = fs.readdirSync(path.join(rootPath))
+  if (!remainingElements.length) { // folder empty, so we can delete it
+    process.chdir(path.resolve(rootPath, '..'))
+    fs.removeSync(path.join(rootPath))
+    console.log(`${chalk.cyan(`${appName}/`)} empty folder deleted.`)
+  } else {
+    console.log(`Can't delete ${chalk.cyan(`${appName}/`)} folder. Some unexpected files are remaining:`)
+    remainingElements.forEach(element => {
+      console.log(`\t- ${chalk.cyan(element)}`)
+    })
+  }
+  process.exit(1)
 }
