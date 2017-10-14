@@ -150,10 +150,12 @@ function bootstrapApp (rootPath, appName) {
       'init.js'
     )
     const init = require(initScriptPath)
-    init(rootPath, appName)
+    init(rootPath, appName, function (error) {
+      gracefulExit(rootPath, appName, error)
+    })
   })
   .catch(error => {
-    installingSpinner.fail(`An error occured during ${chalk.cyan('appName')} initialisation. Aborting.`)
+    installingSpinner.fail(`An error occured during ${chalk.cyan(appName)} initialisation. Aborting.`)
     if (error.command) {
       console.log(`${chalk.cyan(error.command)} has failed.`)
     } else {
@@ -179,7 +181,7 @@ function install (dependencies) {
   })
 }
 
-function gracefulExit (rootPath, appName) {
+function gracefulExit (rootPath, appName, error) {
   console.log()
   console.log(chalk.yellow('Cleaning generated elements'))
   const expectedGeneratedElements = [
@@ -215,6 +217,11 @@ function gracefulExit (rootPath, appName) {
     remainingElements.forEach(element => {
       console.log(`\t- ${chalk.cyan(element)}`)
     })
+  }
+  if (error) {
+    console.log()
+    console.log(chalk.red('ERROR:'))
+    throw error
   }
   process.exit(1)
 }
