@@ -6,6 +6,7 @@ const path = require('path')
 const validateProjectName = require('validate-npm-package-name')
 const fs = require('fs-extra')
 const spawn = require('cross-spawn')
+const ora = require('ora')
 
 const pkg = require('./package.json')
 let projectName = null
@@ -107,18 +108,18 @@ function ensureProjectFolder (folderPath) {
 }
 
 function bootstrapApp (rootPath, appName) {
-  console.log(
-    `Installing ${chalk.cyan('cozy-scripts')}`
-  )
-  console.log()
+  const installingSpinner = ora({
+    text: `Installing ${chalk.cyan('cozy-scripts')}...`,
+    spinner: 'bouncingBall',
+    color: 'yellow'
+  }).start()
+
   install(['cozy-scripts'])
   .then(() => {
-    console.log(
-      `${chalk.cyan('cozy-scripts')} installed.`
-    )
+    installingSpinner.succeed(chalk.green('cozy-scripts installed.'))
     console.log()
     console.log(
-      `Bootsraping the application ${chalk.blue(appName)}`
+      `Starting the application ${chalk.cyan(appName)} bootstrap`
     )
     console.log()
     // use the create script from cozy-scripts
@@ -149,7 +150,8 @@ function install (dependencies) {
     const command = 'yarn'
     const args = ['add', '--exact'].concat(dependencies)
 
-    const installProcess = spawn(command, args, { stdio: 'inherit' })
+    // disable output here using pipe stdio
+    const installProcess = spawn(command, args, { stdio: 'pipe' })
     installProcess.on('close', code => {
       if (code !== 0) return reject({ command: `${command} ${args.join(' ')}` })
       resolve()
