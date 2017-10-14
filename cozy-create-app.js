@@ -11,6 +11,16 @@ const ora = require('ora')
 const pkg = require('./package.json')
 let projectName = null
 
+process.on('SIGINT', () => {
+  console.log()
+  console.log()
+  console.log(chalk.red('Kill signal detected. Graceful exit...'))
+  const rootPath = path.resolve('.')
+  const appName = path.parse(rootPath).name
+  gracefulExit(rootPath, appName)
+  process.exit(1)
+})
+
 const program = new commander.Command(pkg.name)
   .version(pkg.version)
   .arguments('<project-name>')
@@ -145,7 +155,6 @@ function bootstrapApp (rootPath, appName) {
       console.log(chalk.red('Unexpected error. Please report it as a bug:'))
       console.log(error)
     }
-    console.log()
     gracefulExit(rootPath, appName)
   })
 }
@@ -165,6 +174,7 @@ function install (dependencies) {
 }
 
 function gracefulExit (rootPath, appName) {
+  console.log()
   console.log(chalk.yellow('Cleaning generated elements'))
   const expectedGeneratedElements = [
     'package.json',
@@ -186,7 +196,9 @@ function gracefulExit (rootPath, appName) {
       }
     })
   })
-  console.log()
+  if (generatedElements.length) {
+    console.log()
+  }
   const remainingElements = fs.readdirSync(path.join(rootPath))
   if (!remainingElements.length) { // folder empty, so we can delete it
     process.chdir(path.resolve(rootPath, '..'))
