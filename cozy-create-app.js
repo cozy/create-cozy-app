@@ -29,6 +29,7 @@ const program = new commander.Command(pkg.name)
   .action(name => {
     projectName = name
   })
+  .option('--verbose', 'print additional logs')
   .on('--help|-h', () => {
     console.log(`\tOnly ${chalk.blue('<project>')} is required.`)
     console.log(`\tThis command will automatically create the project, in a new folder or in a empty existing folder ('.git' allowed).`)
@@ -54,9 +55,9 @@ if (!projectName) {
   process.exit(1)
 }
 
-createApp(projectName)
+createApp(projectName, program.verbose)
 
-function createApp (name) {
+function createApp (name, verbose) {
   const rootPath = path.resolve(name)
   const appName = path.basename(rootPath)
 
@@ -70,7 +71,7 @@ function createApp (name) {
   // move to project directory
   process.chdir(rootPath)
 
-  bootstrapApp(rootPath, appName)
+  bootstrapApp(rootPath, appName, verbose)
 }
 
 function printErrorsList (errors) {
@@ -123,19 +124,24 @@ function ensureProjectFolder (folderPath) {
   }
 }
 
-function bootstrapApp (rootPath, appName) {
-  const installingSpinner = ora({
-    text: `Installing ${chalk.cyan('cozy-scripts')}... (may take a while)`,
-    spinner: 'bouncingBall',
-    color: 'yellow'
-  }).start()
+function bootstrapApp (rootPath, appName, verbose) {
+  let installingSpinner
+  if (verbose) {
+    console.log(`Installing ${chalk.cyan('cozy-scripts')}... (may take a while)`)
+  } else {
+    installingSpinner = ora({
+      text: `Installing ${chalk.cyan('cozy-scripts')}... (may take a while)`,
+      spinner: 'bouncingBall',
+      color: 'yellow'
+    }).start()
+  }
 
   // create a package.json here to avoid being detected as subdirectory
   // by yarn and add deps to parent
   fs.writeJsonSync('./package.json', {name: appName})
-  install(['cozy-scripts'])
+  install(['cozy-scripts'], verbose)
   .then(() => {
-    installingSpinner.succeed(chalk.green('cozy-scripts installed.'))
+    installingSpinner && installingSpinner.succeed(`${chalk.cyan('cozy-scripts')} installed.`)
     console.log()
     console.log(
       `Starting the application ${chalk.cyan(appName)} bootstrap`
@@ -150,12 +156,12 @@ function bootstrapApp (rootPath, appName) {
       'init.js'
     )
     const init = require(initScriptPath)
-    init(rootPath, appName, function (error) {
+    init(rootPath, appName, verbose, function (error) {
       gracefulExit(rootPath, appName, error)
     })
   })
   .catch(error => {
-    installingSpinner.fail(`An error occured during ${chalk.cyan(appName)} initialisation. Aborting.`)
+    installingSpinner && installingSpinner.fail(`An error occured during ${chalk.cyan(appName)} initialisation. Aborting.`)
     if (error.command) {
       console.log(`${chalk.cyan(error.command)} has failed.`)
     } else {
@@ -166,13 +172,15 @@ function bootstrapApp (rootPath, appName) {
   })
 }
 
-function install (dependencies) {
+function install (dependencies, verbose) {
   return new Promise((resolve, reject) => {
     const command = 'yarn'
     const args = ['add', '--exact'].concat(dependencies)
 
     // disable output here using pipe stdio
-    const installProcess = spawn(command, args, { stdio: 'pipe' })
+    const installProcess = spawn(command, args, {
+      stdio: verbose ? 'inherit' : 'pipe'
+    })
     installProcess.on('close', code => {
       // eslint-disable-next-line
       if (code !== 0) return reject({ command: `${command} ${args.join(' ')}` })
@@ -194,7 +202,7 @@ function gracefulExit (rootPath, appName, error) {
   ]
   const generatedElements = fs.readdirSync(path.join(rootPath))
   if (generatedElements.length) {
-    console.log(`Deleting generated files in ${chalk.cyan(rootPath)}`)
+    console.log(`Deleting generated files/folders in ${chalk.cyan(rootPath)}`)
   }
   generatedElements.forEach(element => {
     expectedGeneratedElements.forEach(expected => {
