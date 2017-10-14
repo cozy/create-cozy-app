@@ -130,6 +130,9 @@ function bootstrapApp (rootPath, appName) {
     color: 'yellow'
   }).start()
 
+  // create a package.json here to avoid being detected as subdirectory
+  // by yarn and add deps to parent
+  fs.writeJsonSync('./package.json', {name: appName})
   install(['cozy-scripts'])
   .then(() => {
     installingSpinner.succeed(chalk.green('cozy-scripts installed.'))
@@ -169,6 +172,7 @@ function install (dependencies) {
     // disable output here using pipe stdio
     const installProcess = spawn(command, args, { stdio: 'pipe' })
     installProcess.on('close', code => {
+      // eslint-disable-next-line
       if (code !== 0) return reject({ command: `${command} ${args.join(' ')}` })
       resolve()
     })
