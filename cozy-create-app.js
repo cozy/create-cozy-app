@@ -64,8 +64,8 @@ function createApp (name, verbose) {
   checkAppName(appName)
   ensureProjectFolder(rootPath)
 
-  console.log(chalk.blue(cozyAscii))
-  console.log(`Let's create the Cozy Application in ${chalk.blue(rootPath)}`)
+  console.log(chalk.blue.hex('#297EF2')(cozyAscii))
+  console.log(`Let's create the Cozy Application in ${chalk.white.bold(rootPath)}`)
   console.log()
 
   // move to project directory
@@ -191,7 +191,7 @@ function install (dependencies, verbose) {
 
 function gracefulExit (rootPath, appName, error) {
   console.log()
-  console.log(chalk.yellow('Cleaning generated elements'))
+  console.log(chalk.yellow('Cleaning remaining generated elements'))
   const expectedGeneratedElements = [
     'package.json',
     'npm-debug.log',
@@ -202,7 +202,7 @@ function gracefulExit (rootPath, appName, error) {
   ]
   const generatedElements = fs.readdirSync(path.join(rootPath))
   if (generatedElements.length) {
-    console.log(`Deleting generated files/folders in ${chalk.cyan(rootPath)}`)
+    console.log(`Deleting generated files/folders from ${chalk.cyan(rootPath)}`)
   }
   generatedElements.forEach(element => {
     expectedGeneratedElements.forEach(expected => {
