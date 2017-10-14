@@ -7,6 +7,7 @@ const validateProjectName = require('validate-npm-package-name')
 const fs = require('fs-extra')
 const spawn = require('cross-spawn')
 const ora = require('ora')
+const cozyAscii = require('./cozyIoAscii.js')
 
 const pkg = require('./package.json')
 let projectName = null
@@ -62,6 +63,7 @@ function createApp (name) {
   checkAppName(appName)
   ensureProjectFolder(rootPath)
 
+  console.log(chalk.blue(cozyAscii))
   console.log(`Let's create the Cozy Application in ${chalk.blue(rootPath)}`)
   console.log()
 
@@ -123,7 +125,7 @@ function ensureProjectFolder (folderPath) {
 
 function bootstrapApp (rootPath, appName) {
   const installingSpinner = ora({
-    text: `Installing ${chalk.cyan('cozy-scripts')}...`,
+    text: `Installing ${chalk.cyan('cozy-scripts')}... (may take a while)`,
     spinner: 'bouncingBall',
     color: 'yellow'
   }).start()
@@ -148,7 +150,7 @@ function bootstrapApp (rootPath, appName) {
     init(rootPath, appName)
   })
   .catch(error => {
-    installingSpinner.fail(`An error occured during ${chalk.cyan('cozy-scripts')} installation. Aborting.`)
+    installingSpinner.fail(`An error occured during ${chalk.cyan('appName')} initialisation. Aborting.`)
     if (error.command) {
       console.log(`${chalk.cyan(error.command)} has failed.`)
     } else {
