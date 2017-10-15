@@ -158,7 +158,9 @@ function run (appPath, dataMap, verbose) {
   })
 
   // Write created files from templates
-  fs.writeJsonSync(path.join(appPath, 'package.json'), JSON.parse(newPkg))
+  const newPkgJson = JSON.parse(newPkg)
+  delete newPkgJson.private // was used only for lerna
+  fs.writeJsonSync(path.join(appPath, 'package.json'), newPkgJson)
   console.log(`${colorize.cyan('package.json')} copied.`)
   fs.writeFileSync(path.join(appPath, 'manifest.webapp'), newManifest)
   console.log(`${colorize.cyan('manifest.webapp')} copied.`)

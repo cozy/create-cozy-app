@@ -1,5 +1,6 @@
 {
   "name": "template-dont-publish-it",
+  "private": true,
   "version": "0.1.0",
   "scripts": {
     "build": "npm run build:browser",
