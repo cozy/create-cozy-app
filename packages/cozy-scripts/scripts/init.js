@@ -75,7 +75,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
     }
   ]
   prompt.start()
-  prompt.message = colorize.white('Question:')
+  prompt.message = colorize.bold('Question:')
   prompt.delimiter = ' '
   prompt.get(promptProperties, function (err, received) {
     const dataMap = new Map()

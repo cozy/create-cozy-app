@@ -3,7 +3,7 @@
 const chalk = require('chalk')
 
 module.exports = {
-  white: chalk.hex('#FFFFFF'),
+  bold: chalk.bold,
   blue: chalk.hex('#297EF2'),
   cyan: chalk.hex('#4DCEC5'),
   green: chalk.hex('#08b442'),

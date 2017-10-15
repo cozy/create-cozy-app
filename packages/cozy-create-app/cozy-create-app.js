@@ -36,7 +36,7 @@ const program = new commander.Command(pkg.name)
   )
   .on('--help', () => {
     console.log()
-    console.log(`\t--- ${colorize.white.bold('USAGE INFORMATIONS')} ---`)
+    console.log(`\t--- ${colorize.bold('USAGE INFORMATIONS')} ---`)
     console.log()
     console.log(`\tOnly ${colorize.blue('<project-name>')} is required.`)
     console.log(`\tThis command will automatically create the project, in a new folder or in a empty existing folder ('.git' allowed).`)
@@ -84,7 +84,7 @@ function createApp (name, verbose, scriptsSource) {
   ensureProjectFolder(rootPath)
 
   console.log(colorize.blue(cozyAscii))
-  console.log(`Let's create the Cozy Application in ${colorize.white.bold(rootPath)}`)
+  console.log(`Let's create the Cozy Application in ${colorize.bold(rootPath)}`)
   console.log()
 
   // move to project directory
@@ -128,7 +128,7 @@ function ensureProjectFolder (folderPath) {
     ]
     const conflicts = dir.filter(file => !acceptedExistingFiles.includes(file))
     if (conflicts.length < 1) return true // no conflicts files
-    console.log(`The directory ${colorize.blue(folderPath)} contains unexpected files:`)
+    console.log(`The directory ${colorize.bold(folderPath)} contains unexpected files:`)
     for (const file of conflicts) {
       console.log(`\t- ${colorize.red(file)}`)
     }
