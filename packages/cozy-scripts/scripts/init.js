@@ -2,7 +2,7 @@
 
 const fs = require('fs-extra')
 const path = require('path')
-const chalk = require('chalk')
+const colorize = require('./_colorize.js')
 const spawn = require('cross-spawn')
 const prompt = require('prompt')
 const validateProjectName = require('validate-npm-package-name')
@@ -22,7 +22,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
   const promptProperties = [
     {
       name: '<SLUG_GH>',
-      description: chalk.yellow('Github project name?'),
+      description: colorize.yellow('Github project name?'),
       conform: function (value) {
         return validateProjectName(value).validForNewPackages
       },
@@ -32,7 +32,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
     },
     {
       name: '<SLUG_NPM>',
-      description: chalk.yellow('Future NPM slug name?'),
+      description: colorize.yellow('Future NPM slug name?'),
       conform: function (value) {
         return validateProjectName(value).validForNewPackages
       },
@@ -42,45 +42,45 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
     },
     {
       name: '<APP_SHORT_DESCRIPTION>',
-      description: chalk.yellow('Short description of your application?'),
+      description: colorize.yellow('Short description of your application?'),
       conform: function (value) { return value.length <= 500 },
       message: 'Required. Must be less than 500 characters',
       required: true
     },
     {
       name: '<APP_CATEGORY>',
-      description: chalk.yellow('Category of your application'),
+      description: colorize.yellow('Category of your application'),
       required: false
     },
     {
       name: '<USERNAME_GH>',
-      description: chalk.yellow('Your github username?'),
+      description: colorize.yellow('Your github username?'),
       pattern: /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i,
       message: 'Must be valid github username',
       required: true
     },
     {
       name: '<USER_EMAIL_GH>',
-      description: chalk.yellow('Your github email (for the application build deployment script)?'),
+      description: colorize.yellow('Your github email (for the application build deployment script)?'),
       pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       message: 'Must be valid github username',
       required: true
     },
     {
       name: '<USER_WEBSITE>',
-      description: chalk.yellow('Your website (optional)?'),
+      description: colorize.yellow('Your website (optional)?'),
       pattern: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/,
       message: 'Must be valid url',
       required: false
     }
   ]
   prompt.start()
-  prompt.message = chalk.white('Question:')
+  prompt.message = colorize.white('Question:')
   prompt.delimiter = ' '
   prompt.get(promptProperties, function (err, received) {
     const dataMap = new Map()
     if (err) {
-      console.log(chalk.red(err))
+      console.log(colorize.red(err))
       gracefulRootExit(err)
     } else {
       if (verbose) {
@@ -146,7 +146,7 @@ function run (appPath, dataMap, verbose) {
   const newContributing = replaceDataIn(templateContributing)
 
   console.log()
-  console.log(`Copying in ${chalk.cyan(appPath)}`)
+  console.log(`Copying in ${colorize.cyan(appPath)}`)
   // Copy app outline from template (template/app)
   const templateFiles = fs.readdirSync(templateAppPath)
   templateFiles.forEach(element => {
@@ -154,18 +154,18 @@ function run (appPath, dataMap, verbose) {
       path.join(templateAppPath, element),
       path.join(appPath, element)
     )
-    console.log(`${chalk.cyan(element)} copied.`)
+    console.log(`${colorize.cyan(element)} copied.`)
   })
 
   // Write created files from templates
   fs.writeJsonSync(path.join(appPath, 'package.json'), JSON.parse(newPkg))
-  console.log(`${chalk.cyan('package.json')} copied.`)
+  console.log(`${colorize.cyan('package.json')} copied.`)
   fs.writeFileSync(path.join(appPath, 'manifest.webapp'), newManifest)
-  console.log(`${chalk.cyan('manifest.webapp')} copied.`)
+  console.log(`${colorize.cyan('manifest.webapp')} copied.`)
   fs.writeFileSync(path.join(appPath, 'README.md'), newReadme)
-  console.log(`${chalk.cyan('README.md')} copied.`)
+  console.log(`${colorize.cyan('README.md')} copied.`)
   fs.writeFileSync(path.join(appPath, 'CONTRIBUTING.md'), newContributing)
-  console.log(`${chalk.cyan('CONTRIBUTING.md')} copied.`)
+  console.log(`${colorize.cyan('CONTRIBUTING.md')} copied.`)
 
   // install all dependencies
   console.log()
@@ -184,12 +184,12 @@ function run (appPath, dataMap, verbose) {
   console.log()
   console.log('App dependencies installed.')
   console.log()
-  console.log(chalk.green(`Great! Your application ${chalk.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/`))
+  console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/`))
 }
 
 function gracefulExit (appPath) {
   console.log()
-  console.log(chalk.yellow('Cleaning generated app template elements'))
+  console.log(colorize.yellow('Cleaning generated app template elements'))
   const templateAppPath = path.join(path.join(__dirname, '..', 'template', 'app'))
   const templateFiles = fs.readdirSync(templateAppPath)
   const expectedGeneratedElements = [
@@ -202,13 +202,13 @@ function gracefulExit (appPath) {
   ].concat(templateFiles)
   const generatedElements = fs.readdirSync(path.join(appPath))
   if (generatedElements.length) {
-    console.log(`Deleting generated files/folders from ${chalk.cyan(appPath)}`)
+    console.log(`Deleting generated files/folders from ${colorize.cyan(appPath)}`)
   }
   generatedElements.forEach(element => {
     expectedGeneratedElements.forEach(expected => {
       if (element === expected) {
         fs.removeSync(path.join(appPath, element))
-        console.log(`\t- ${chalk.cyan(element)} deleted.`)
+        console.log(`\t- ${colorize.cyan(element)} deleted.`)
       }
     })
   })
@@ -219,7 +219,7 @@ function gracefulExit (appPath) {
   if (remainingElements.length) { // folder empty, so we can delete it
     console.log(`Some unexpected elements are remaining:`)
     remainingElements.forEach(element => {
-      console.log(`\t- ${chalk.cyan(element)}`)
+      console.log(`\t- ${colorize.cyan(element)}`)
     })
   }
 }
