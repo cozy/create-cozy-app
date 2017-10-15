@@ -2,7 +2,8 @@
   "lerna": "2.4.0",
   "npmClient": "yarn",
   "packages": [
-    "packages/*"
+    "packages/*",
+    "packages/cozy-scripts/template"
   ],
   "version": "independent"
 }
