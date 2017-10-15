@@ -1,0 +1,119 @@
+{
+  "name": "<APP_NAME>",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "npm run build:browser",
+    "build:browser": "NODE_ENV=browser:production npm run commons:build",
+    "build:mobile": "NODE_ENV=mobile:production npm run commons:build",
+    "clean:browser": "rm -rf build/*",
+    "clean:mobile": "rm -rf mobile/www/*",
+    "commons:build": "webpack --config node_modules/cozy-scripts/scripts/config.js --bail",
+    "commons:watch": "webpack --config node_modules/cozy-scripts/scripts/config.js --watch --display-modules --display-chunks",
+    "commons:watch:standalone": "webpack-dev-server --config node_modules/cozy-scripts/scripts/config.js --output-path='./build' --output-filename='[name][hash].bundle.js' --inline --hot",
+    "deploy": "git-directory-deploy --username <USERNAME_GH> --email <USER_EMAIL_GH> --directory build/ --repo=https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git",
+    "tx": "tx pull --all || true",
+    "precommons:build": "npm-run-all lint tx",
+    "prebuild:browser": "npm run clean:browser",
+    "prebuild:mobile": "npm run clean:mobile",
+    "pretest": "npm run lint",
+    "prewatch:browser": "npm run clean:browser",
+    "prewatch:mobile": "npm run clean:mobile",
+    "lint": "npm-run-all --parallel 'lint:*'",
+    "lint:js": "standard --parser babel-eslint 'src/**/*.js' 'src/**/*.jsx'",
+    "lint:styles": "stylint src/styles --config ./.stylintrc",
+    "stack:docker": "docker run --rm -it -p 8080:8080 -v \"$(pwd)/build\":/data/cozy-app/app cozy/cozy-app-dev",
+    "test": "jest --verbose --coverage",
+    "watch": "npm run watch:browser",
+    "watch:browser": "NODE_ENV=browser:development npm run commons:watch",
+    "watch:mobile": "NODE_ENV=mobile:development npm run commons:watch",
+    "watch:browser:standalone": "NODE_ENV=browser:development npm run commons:watch:standalone",
+    "watch:mobile:standalone": "NODE_ENV=mobile:development npm run commons:watch:standalone",
+    "watch:standalone": "npm run watch:browser:standalone",
+    "android:run": "cd mobile ; cordova run android --device ; cd ..",
+    "android:run:emulator": "cd mobile ; cordova run android --emulator ; cd ..",
+    "android:release": "npm run build:mobile && cd mobile ; cordova build android --release ; cd ..",
+    "android:signed": "npm run android:release && cd mobile ; apksigner sign --ks keys/android/<SLUG_GH>-release-key.jks --out build/android/<SLUG_GH>.apk platforms/android/build/outputs/apk/android-release-unsigned.apk ; cd ..",
+    "android:publish": "npm run android:signed && cd mobile ; fastlane supply ; cd ..",
+    "ios:run": "cd mobile ; cordova run ios --device ; cd ..",
+    "ios:run:emulator": "cd mobile ; cordova run ios --emulator ; cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<USERNAME_GH>/<SLUG_GH>.git"
+  },
+  "author": "",
+  "contributors": [],
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/<USERNAME_GH>/<SLUG_GH>/issues"
+  },
+  "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "git-directory-deploy": "^1.5.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.3.0",
+    "standard": "^10.0.3",
+    "stylint": "^1.5.9",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "cozy-bar": "^4.2.5",
+    "cozy-client-js": "^0.3.19",
+    "cozy-ui": "git://github.com/cozy/cozy-ui.git#8282172cc2001e811cad87c49a21599e72269e44",
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-raven-middleware": "^1.2.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "styl"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/jestLib/setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(png|gif|jpe?g|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
+      "styles": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!cozy-ui)"
+    ],
+    "globals": {
+      "__ALLOW_HTTP__": false,
+      "__TARGET__": "browser",
+      "cozy": {}
+    }
+  },
+  "standard": {
+    "env": [
+      "browser",
+      "jest"
+    ]
+  }
+}

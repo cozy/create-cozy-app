@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component should be rendered correctly 1`] = `
+<nav>
+  <ul
+    className="c-nav"
+  >
+    <li
+      className="c-nav-item"
+    >
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        className="hello-cat-hello1 c-nav-link"
+        to="/viewhello1"
+      >
+        First menu item
+      </NavLink>
+    </li>
+    <li
+      className="c-nav-item"
+    >
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        className="hello-cat-hello2 c-nav-link"
+        to="/viewhello2"
+      >
+        Second menu item
+      </NavLink>
+    </li>
+    <li
+      className="c-nav-item"
+    >
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        className="hello-cat-hello3 c-nav-link"
+        to="/viewhello3"
+      >
+        Third menu item
+      </NavLink>
+    </li>
+  </ul>
+</nav>
+`;
