@@ -44,15 +44,15 @@ const program = new commander.Command(pkg.name)
     console.log('\t---')
     console.log()
     console.log(`\tYou can pass a custom cozy-scripts package using the optional ${colorize.cyan('--scripts-source')} option, it can be one of:`)
-    console.log(`\t\t- a relative local path to a tarball (${colorize.yellow('fileRel:')} prefix): ${colorize.cyan('fileRel:./a-folder/my-cozy-scripts.tar.gz')}`)
-    console.log(`\t\t- an absolute local path to a tarball (${colorize.yellow('fileAbs:')} prefix): ${colorize.cyan('fileAbs:/root/my-cozy-scripts.tar.gz')}`)
-    console.log(`\t\t- an URL to a tarball (${colorize.yellow('url:')} prefix): ${colorize.cyan('url:https://myurl.com/my-cozy-scripts.tar.gz')}`)
-    console.log(`\t\t- a specific npm version (${colorize.yellow('version:')} prefix): ${colorize.cyan('version:0.1.5')}`)
+    console.log(`\t\t- a relative local path to a tarball (${colorize.bold('fileRel:')} prefix): ${colorize.cyan('fileRel:./a-folder/my-cozy-scripts.tar.gz')}`)
+    console.log(`\t\t- an absolute local path to a tarball (${colorize.bold('fileAbs:')} prefix): ${colorize.cyan('fileAbs:/root/my-cozy-scripts.tar.gz')}`)
+    console.log(`\t\t- an URL to a tarball (${colorize.bold('url:')} prefix): ${colorize.cyan('url:https://myurl.com/my-cozy-scripts.tar.gz')}`)
+    console.log(`\t\t- a specific npm version (${colorize.bold('version:')} prefix): ${colorize.cyan('version:0.1.5')}`)
     console.log(`\t\t- a specific git commit/branch (after the '#'): ${colorize.cyan('git://github.com/CPatchane/cozy-scripts.git#master')}`)
     console.log()
     console.log('\t---')
     console.log()
-    console.log(`\t${colorize.yellow('Any issue?')} Do not hesitate to let us know:`)
+    console.log(`\t${colorize.orange('Any issue?')} Do not hesitate to let us know:`)
     console.log(
       `\t${colorize.cyan(
         'https://github.com/CPatchane/cozy-create-app/issues/new'
@@ -151,7 +151,7 @@ function bootstrapApp (rootPath, appName, verbose, scriptsSource) {
     installingSpinner = ora({
       text: `Installing ${colorize.cyan('cozy-scripts')}... (may take a while)`,
       spinner: 'bouncingBall',
-      color: 'yellow'
+      color: 'gray'
     }).start()
   }
 
@@ -240,7 +240,7 @@ function install (dependencies, verbose) {
 
 function gracefulExit (rootPath, appName, error) {
   console.log()
-  console.log(colorize.yellow('Cleaning remaining generated elements'))
+  console.log(colorize.orange('Cleaning remaining generated elements'))
   const expectedGeneratedElements = [
     'package.json',
     'npm-debug.log',

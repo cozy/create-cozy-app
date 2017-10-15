@@ -22,7 +22,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
   const promptProperties = [
     {
       name: '<SLUG_GH>',
-      description: colorize.yellow('Github project name?'),
+      description: colorize.orange('Github project name?'),
       conform: function (value) {
         return validateProjectName(value).validForNewPackages
       },
@@ -32,7 +32,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
     },
     {
       name: '<SLUG_NPM>',
-      description: colorize.yellow('Future NPM slug name?'),
+      description: colorize.orange('Future NPM slug name?'),
       conform: function (value) {
         return validateProjectName(value).validForNewPackages
       },
@@ -42,33 +42,33 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
     },
     {
       name: '<APP_SHORT_DESCRIPTION>',
-      description: colorize.yellow('Short description of your application?'),
+      description: colorize.orange('Short description of your application?'),
       conform: function (value) { return value.length <= 500 },
       message: 'Required. Must be less than 500 characters',
       required: true
     },
     {
       name: '<APP_CATEGORY>',
-      description: colorize.yellow('Category of your application'),
+      description: colorize.orange('Category of your application'),
       required: false
     },
     {
       name: '<USERNAME_GH>',
-      description: colorize.yellow('Your github username?'),
+      description: colorize.orange('Your github username?'),
       pattern: /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i,
       message: 'Must be valid github username',
       required: true
     },
     {
       name: '<USER_EMAIL_GH>',
-      description: colorize.yellow('Your github email (for the application build deployment script)?'),
+      description: colorize.orange('Your github email (for the application build deployment script)?'),
       pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       message: 'Must be valid github username',
       required: true
     },
     {
       name: '<USER_WEBSITE>',
-      description: colorize.yellow('Your website (optional)?'),
+      description: colorize.orange('Your website (optional)?'),
       pattern: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/,
       message: 'Must be valid url',
       required: false
@@ -191,7 +191,7 @@ function run (appPath, dataMap, verbose) {
 
 function gracefulExit (appPath) {
   console.log()
-  console.log(colorize.yellow('Cleaning generated app template elements'))
+  console.log(colorize.orange('Cleaning generated app template elements'))
   const templateAppPath = path.join(path.join(__dirname, '..', 'template', 'app'))
   const templateFiles = fs.readdirSync(templateAppPath)
   const expectedGeneratedElements = [
