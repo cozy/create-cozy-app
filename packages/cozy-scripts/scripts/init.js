@@ -132,6 +132,8 @@ function run (appPath, dataMap, verbose) {
   templatePackage.name = dataMap.get('<APP_NAME>')
   // merge generated app dependencies to template dependencies
   templatePackage.dependencies = Object.assign({}, templatePackage.dependencies, createdDeps)
+  // remove private attribute (was used only for lerna)
+  delete templatePackage.private
   // utils
   const dataRegExp = new RegExp([...dataMap.keys()].join('|'), 'g')
   function replaceDataIn (string) {
@@ -140,7 +142,7 @@ function run (appPath, dataMap, verbose) {
     )
   }
   // replace data in all templates
-  const newPkg = replaceDataIn(JSON.stringify(templatePackage))
+  const newPkg = replaceDataIn(JSON.stringify(templatePackage, null, 2))
   const newManifest = replaceDataIn(templateManifest)
   const newReadme = replaceDataIn(templateReadme)
   const newContributing = replaceDataIn(templateContributing)
@@ -158,9 +160,7 @@ function run (appPath, dataMap, verbose) {
   })
 
   // Write created files from templates
-  const newPkgJson = JSON.parse(newPkg)
-  delete newPkgJson.private // was used only for lerna
-  fs.writeJsonSync(path.join(appPath, 'package.json'), newPkgJson)
+  fs.writeFileSync(path.join(appPath, 'package.json'), newPkg)
   console.log(`${colorize.cyan('package.json')} copied.`)
   fs.writeFileSync(path.join(appPath, 'manifest.webapp'), newManifest)
   console.log(`${colorize.cyan('manifest.webapp')} copied.`)
