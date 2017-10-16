@@ -22,3 +22,10 @@ if (program.showConfig) {
   console.log(JSON.stringify(appConfig, null, 4))
   process.exit(0)
 }
+
+const availableScripts = ['watch', 'build']
+
+if (availableScripts.includes(actionName)) {
+  const scriptPath = `../scripts/${actionName}`
+  require(scriptPath)
+}
