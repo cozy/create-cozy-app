@@ -23,9 +23,11 @@ if (program.showConfig) {
   process.exit(0)
 }
 
-const availableScripts = ['watch', 'build']
+const availableScripts = ['watch', 'build', 'standalone']
 
 if (availableScripts.includes(actionName)) {
   const scriptPath = `../scripts/${actionName}`
   require(scriptPath)
+} else {
+  console.log(`cozy-scripts: unknown command ${colorize.cyan(actionName)}`)
 }

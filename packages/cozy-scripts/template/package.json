@@ -19,9 +19,9 @@
     "watch:browser": "NODE_ENV=browser:development npm-run-all --serial clean:browser commons:watch",
     "watch:mobile": "NODE_ENV=mobile:development npm-run-all --serial clean:mobile commons:watch",
     "watch:standalone": "yarn run watch:browser:standalone",
+    "commons:watch:standalone": "cozy-scripts standalone",
     "watch:browser:standalone": "NODE_ENV=browser:development yarn run commons:watch:standalone",
     "watch:mobile:standalone": "NODE_ENV=mobile:development yarn run commons:watch:standalone",
-    "commons:watch:standalone": "webpack-dev-server --config node_modules/cozy-scripts/scripts/config.js --output-path='./build' --output-filename='[name][hash].bundle.js' --inline --hot",
     "config:browser:production": " NODE_ENV=browser:production cozy-scripts --show-config",
     "config:browser:development": " NODE_ENV=browser:development cozy-scripts --show-config",
     "config:mobile:production": " NODE_ENV=mobile:production cozy-scripts --show-config",
@@ -65,9 +65,7 @@
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.3.0",
     "standard": "^10.0.3",
-    "stylint": "^1.5.9",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "stylint": "^1.5.9"
   },
   "dependencies": {
     "cozy-bar": "^4.2.5",
