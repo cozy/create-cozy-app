@@ -19,6 +19,7 @@
     "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.2",
     "chalk": "^2.1.0",
+    "commander": "^2.11.0",
     "copy-webpack-plugin": "^4.1.1",
     "cross-spawn": "^5.1.0",
     "css-loader": "^0.28.7",
@@ -46,7 +47,11 @@
     "webpack": "^3.6.0",
     "webpack-merge": "^4.1.0"
   },
+  "bin": {
+    "cozy-scripts": "./bin/cozy-scripts.js"
+  },
   "files": [
+    "bin",
     "config",
     "scripts",
     "template",

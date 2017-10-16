@@ -2,7 +2,7 @@
 
 const fs = require('fs-extra')
 const path = require('path')
-const colorize = require('./_colorize.js')
+const colorize = require('../utils/_colorize.js')
 const spawn = require('cross-spawn')
 const prompt = require('prompt')
 const validateProjectName = require('validate-npm-package-name')
@@ -49,7 +49,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
     },
     {
       name: '<APP_CATEGORY>',
-      description: colorize.orange('Category of your application'),
+      description: colorize.orange('Category of your application?'),
       required: false
     },
     {
