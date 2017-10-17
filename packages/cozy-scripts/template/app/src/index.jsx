@@ -31,20 +31,37 @@ const renderApp = function (lang) {
   , document.querySelector('[role=application]'))
 }
 
+// return a defaultData if the template hasn't been replaced by cozy-stack
+const getDataOrDefault = function (toTest, defaultData) {
+  const templateRegex = /^\{\{\.[a-zA-Z]*\}\}$/ // {{.Example}}
+  return templateRegex.test(toTest) ? defaultData : toTest
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('[role=application]')
   const data = root.dataset
+
+  // default data will allow to display correctly the cozy-bar
+  // in the standalone (without cozy-stack connexion)
+  const appIcon = getDataOrDefault(data.cozyIconPath, require('../vendor/assets/icon.svg'))
+
+  const appEditor = getDataOrDefault(data.cozyAppEditor, '')
+
+  const appName = getDataOrDefault(data.cozyAppName, require('../package.json').name)
+
+  const appLocale = getDataOrDefault(data.cozyLocale, 'en')
+
   cozy.client.init({
     cozyURL: '//' + data.cozyDomain,
     token: data.cozyToken
   })
   cozy.bar.init({
-    appEditor: data.cozyAppEditor,
-    appName: data.cozyAppName,
-    iconPath: data.cozyIconPath,
-    lang: data.cozyLocale,
+    appEditor: appEditor,
+    appName: appName,
+    iconPath: appIcon,
+    lang: appLocale,
     replaceTitleOnMobile: true
   })
 
-  renderApp(data.cozyLocale)
+  renderApp(appLocale)
 })
