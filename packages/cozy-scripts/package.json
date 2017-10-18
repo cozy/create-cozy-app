@@ -4,15 +4,15 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CPatchane/cozy-scripts.git"
+    "url": "git+https://github.com/CPatchane/cozy-create-app.git"
   },
-  "author": "Cozy Cloud <contact@cozycloud.cc> (https://cozy.io/)",
+  "author": "CPatchane <code@patchane.com>",
   "contributors": [],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/CPatchane/cozy-scripts/issues"
+    "url": "https://github.com/CPatchane/cozy-create-app/issues"
   },
-  "homepage": "https://github.com/CPatchane/cozy-scripts#readme",
+  "homepage": "https://github.com/CPatchane/cozy-create-app#readme",
   "dependencies": {
     "autoprefixer": "^7.1.5",
     "babel-core": "^6.26.0",
