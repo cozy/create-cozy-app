@@ -28,7 +28,7 @@ const renderApp = function (lang) {
         <App />
       </Provider>
     </I18n>
-  , document.querySelector('[role=application]'))
+    , document.querySelector('[role=application]'))
 }
 
 // return a defaultData if the template hasn't been replaced by cozy-stack

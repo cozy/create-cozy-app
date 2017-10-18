@@ -5,6 +5,7 @@ const { environment, target } = require('cozy-scripts/config/webpack.vars')
 const configs = [
   require('cozy-scripts/config/webpack.config.base'),
   require('cozy-scripts/config/webpack.config.preact'),
+  require('cozy-scripts/config/webpack.config.eslint'),
   require('cozy-scripts/config/webpack.config.cozy-ui'),
   require('cozy-scripts/config/webpack.config.cozy-ui.react'),
   require('cozy-scripts/config/webpack.config.pictures'),

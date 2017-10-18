@@ -7,12 +7,12 @@
     "clean:mobile": "rm -rf mobile/www/*",
     "tx": "tx pull --all || true",
     "lint": "npm-run-all --parallel 'lint:*'",
-    "lint:js": "standard --parser babel-eslint 'src/**/*.js' 'src/**/*.jsx'",
+    "lint:js": "eslint '{src,test}/**/*.{js,jsx}'",
     "lint:styles": "stylint src/styles --config ./.stylintrc",
     "build": "yarn run build:browser",
     "commons:build": "cozy-scripts build",
-    "build:browser": "NODE_ENV=browser:production npm-run-all --serial clean:browser lint tx commons:build",
-    "build:mobile": "NODE_ENV=mobile:production npm-run-all --serial clean:mobile lint tx commons:build",
+    "build:browser": "NODE_ENV=browser:production npm-run-all --serial clean:browser lint:js tx commons:build",
+    "build:mobile": "NODE_ENV=mobile:production npm-run-all --serial clean:mobile lint:js tx commons:build",
     "prewatch:mobile": "yarn run clean:mobile",
     "watch": "yarn run watch:browser",
     "commons:watch": "cozy-scripts watch",
@@ -44,11 +44,13 @@
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.1",
     "babel-jest": "^21.2.0",
     "babel-polyfill": "^6.26.0",
+    "babel-preset-cozy-app": "file:../../babel-preset-cozy-app/babel-preset-cozy-app.tar.gz",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
+    "eslint": "^4.9.0",
+    "eslint-config-cozy-app": "file:../../eslint-config-cozy-app/eslint-config-cozy-app.tar.gz",
     "git-directory-deploy": "^1.5.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
@@ -58,11 +60,9 @@
     "react-test-renderer": "^16.0.0",
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.3.0",
-    "standard": "^10.0.3",
     "stylint": "^1.5.9"
   },
   "dependencies": {
-    "babel-preset-cozy-app": "file:../cozy-create-app/packages/babel-preset-cozy-app/babel-preset-cozy-app.tar.gz",
     "cozy-bar": "^4.2.5",
     "cozy-client-js": "^0.3.19",
     "cozy-ui": "git://github.com/cozy/cozy-ui.git#8282172cc2001e811cad87c49a21599e72269e44",
@@ -96,11 +96,5 @@
       "__TARGET__": "browser",
       "cozy": {}
     }
-  },
-  "standard": {
-    "env": [
-      "browser",
-      "jest"
-    ]
   }
 }

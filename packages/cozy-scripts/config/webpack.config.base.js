@@ -19,15 +19,6 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre', // was preLoaders property in webpack v1
-        test: /\.jsx?$/,
-        loader: 'standard-loader',
-        exclude: /node_modules/,
-        options: {
-          parser: 'babel-eslint'
-        }
-      },
-      {
         test: /\.js$/,
         exclude: /(node_modules|cozy-(bar|client-js))/,
         loader: 'babel-loader'
