@@ -62,6 +62,7 @@
     "stylint": "^1.5.9"
   },
   "dependencies": {
+    "babel-preset-cozy-app": "file:../cozy-create-app/packages/babel-preset-cozy-app/babel-preset-cozy-app.tar.gz",
     "cozy-bar": "^4.2.5",
     "cozy-client-js": "^0.3.19",
     "cozy-ui": "git://github.com/cozy/cozy-ui.git#8282172cc2001e811cad87c49a21599e72269e44",
