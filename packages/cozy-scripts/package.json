@@ -66,9 +66,6 @@
     "template/app/.eslintrc.json",
     "template/app/.stylintrc",
     "template/app/.travis.yml",
-    "utils",
-    "package.json",
-    "yarn.lock",
-    ".gitignore"
+    "utils"
   ]
 }

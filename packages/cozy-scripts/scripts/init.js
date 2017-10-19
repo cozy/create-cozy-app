@@ -49,7 +49,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
     },
     {
       name: '<APP_CATEGORY>',
-      description: colorize.orange('Category of your application?'),
+      description: colorize.orange('Category of your application (optional)?'),
       required: false
     },
     {
