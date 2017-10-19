@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cozy-app",
-  "version": "0.1.0",
+  "version": "0.0.9",
   "description": "ESLint config for Cozy Application (Cozy Cloud)",
   "author": "CPatchane <code@patchane.com>",
   "repository": {
