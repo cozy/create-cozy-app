@@ -93,7 +93,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
       }
       dataMap.set('<APP_NAME>', appName) // add already provided app name
       try {
-        run(appPath, dataMap, verbose)
+        run(appPath, dataMap, verbose, gracefulRootExit)
       } catch (e) {
         gracefulExit(appPath)
         gracefulRootExit(e)
@@ -106,7 +106,7 @@ function requireFileAsString (filename) {
   return fs.readFileSync(filename, 'utf8')
 }
 
-function run (appPath, dataMap, verbose) {
+function run (appPath, dataMap, verbose, gracefulRootExit) {
   const ownPackageName = require(
     path.join(__dirname, '..', 'package.json')
   ).name
@@ -175,18 +175,36 @@ function run (appPath, dataMap, verbose) {
   console.log('(May take a while)')
   console.log()
   process.chdir(appPath)
-  const command = 'yarn'
-  const args = ['install']
-  if (!verbose) {
-    args.push('--silent')
+  installDependencies(verbose)
+  .then(() => {
     console.log()
+    console.log('App dependencies installed.')
     console.log()
-  }
-  spawn.sync(command, args, { stdio: 'inherit' })
-  console.log()
-  console.log('App dependencies installed.')
-  console.log()
-  console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/`))
+    console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/`))
+  })
+  .catch(error => {
+    gracefulExit(appPath)
+    gracefulRootExit(error)
+  })
+}
+
+function installDependencies (verbose) {
+  return new Promise((resolve, reject) => {
+    const command = 'yarn'
+    const args = ['install']
+    if (!verbose) {
+      args.push('--silent')
+      console.log()
+      console.log()
+    }
+
+    const installProcess = spawn(command, args, { stdio: 'inherit' })
+    installProcess.on('close', code => {
+      // eslint-disable-next-line
+      if (code !== 0) return reject({ command: `${command} ${args.join(' ')}` })
+      resolve()
+    })
+  })
 }
 
 function gracefulExit (appPath) {
