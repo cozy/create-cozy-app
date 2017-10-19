@@ -42,7 +42,7 @@ You can reach the Cozy Community by:
 License
 -------
 
-cozy-create-app is distributed under the [AGPL v3 license][agpl-3.0].
+cozy-create-app is distributed under the MIT.
 
 
 [cozy]: https://cozy.io "Cozy Cloud"

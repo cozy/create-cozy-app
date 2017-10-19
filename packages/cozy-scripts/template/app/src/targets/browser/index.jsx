@@ -2,7 +2,7 @@
 
 import 'babel-polyfill'
 
-import './styles'
+import '../../styles'
 
 import React from 'react'
 import { render } from 'react-dom'
@@ -23,7 +23,7 @@ if (__DEVELOPMENT__) {
 
 const renderApp = function (lang) {
   render(
-    <I18n lang={lang} dictRequire={(lang) => require(`./locales/${lang}`)}>
+    <I18n lang={lang} dictRequire={(lang) => require(`../../locales/${lang}`)}>
       <Provider store={store}>
         <App />
       </Provider>
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const appEditor = getDataOrDefault(data.cozyAppEditor, '')
 
-  const appName = getDataOrDefault(data.cozyAppName, require('../package.json').name)
+  const appName = getDataOrDefault(data.cozyAppName, require('../../../package.json').name)
 
   const appLocale = getDataOrDefault(data.cozyLocale, 'en')
 
