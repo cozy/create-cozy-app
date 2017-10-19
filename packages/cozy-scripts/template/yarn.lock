@@ -723,7 +723,7 @@ babel-polyfill@^6.26.0:
 
 "babel-preset-cozy-app@file:../../babel-preset-cozy-app/babel-preset-cozy-app.tar.gz":
   version "0.1.0"
-  resolved "file:../../babel-preset-cozy-app/babel-preset-cozy-app.tar.gz#e30eb754be6220895a6b968a210ad983ff58724b"
+  resolved "file:../../babel-preset-cozy-app/babel-preset-cozy-app.tar.gz#f75c470aae04f023f716b54e90abbf9b8b37cc32"
   dependencies:
     babel-plugin-transform-object-rest-spread "^6.26.0"
     babel-plugin-transform-react-jsx "^6.24.1"
@@ -1489,7 +1489,7 @@ escodegen@^1.6.1:
 
 "eslint-config-cozy-app@file:../../eslint-config-cozy-app/eslint-config-cozy-app.tar.gz":
   version "0.1.0"
-  resolved "file:../../eslint-config-cozy-app/eslint-config-cozy-app.tar.gz#751f0e5f1bca70c28990b2a45911af9f16b1b946"
+  resolved "file:../../eslint-config-cozy-app/eslint-config-cozy-app.tar.gz#22d7226da060d111995740f6857c4ea7d1da3932"
   dependencies:
     babel-eslint "^8.0.1"
     eslint "^4.9.0"
