@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect, HashRouter } from 'react-router-dom'
 
-import Sidebar from './ducks/components/Sidebar'
+import Sidebar from './Sidebar'
 
 const Hello = (name) => (<p style='margin-left: 2em'>Just... Hello world! This is {name}</p>)
 

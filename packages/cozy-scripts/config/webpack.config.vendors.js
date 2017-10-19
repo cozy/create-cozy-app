@@ -6,7 +6,7 @@ const paths = require('../utils/paths')
 module.exports = {
   plugins: [
     new CopyPlugin([
-      { from: paths.appVendorAssets, ignore: ['.gitkeep'] }
+      { from: paths.appVendorAssets }
     ])
   ]
 }

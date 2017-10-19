@@ -1,12 +1,10 @@
 'use strict'
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const paths = require('../utils/paths')
 
 const {extractor, production} = require('./webpack.vars')
-const pkg = require(paths.appPackageJson)
 
 module.exports = {
   output: {
@@ -57,14 +55,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: paths.appHtmlTemplate,
-      title: pkg.name,
-      inject: false,
-      minify: {
-        collapseWhitespace: true
-      }
-    }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
     }),
