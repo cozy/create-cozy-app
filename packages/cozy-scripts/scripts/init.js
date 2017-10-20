@@ -133,7 +133,7 @@ function run (appPath, dataMap, verbose, gracefulRootExit) {
   // merge generated app dependencies to template dependencies
   templatePackage.dependencies = Object.assign({}, templatePackage.dependencies, createdDeps)
   // remove private attribute (was used only for lerna)
-  delete templatePackage.private
+  if (templatePackage.private) delete templatePackage.private
   // utils
   const dataRegExp = new RegExp([...dataMap.keys()].join('|'), 'g')
   function replaceDataIn (string) {
