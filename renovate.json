@@ -2,8 +2,44 @@
   "assignees": ["CPatchane"],
   "labels": ["tag: chore"],
   "automerge": false,
-  "pinVersions": false,
   "extends": [
     "config:js-lib"
+  ],
+  "packageFiles": [
+    {
+      "packageFile": "packages/babel-preset-cozy-app/package.json",
+      "pinVersions": false
+    },
+    {
+      "packageFile": "packages/eslint-config-cozy-app/package.json",
+      "pinVersions": false
+    },
+    {
+      "packageFile": "packages/cozy-create-app/package.json",
+      "devDependencies": {
+        "pinVersions": true
+      },
+      "dependencies": {
+        "pinVersions": true
+      }
+    },
+    {
+      "packageFile": "packages/cozy-scripts/package.json",
+      "devDependencies": {
+        "pinVersions": true
+      },
+      "dependencies": {
+        "pinVersions": true
+      }
+    },
+    {
+      "packageFile": "packages/cozy-scripts/template/package.json",
+      "devDependencies": {
+        "pinVersions": true
+      },
+      "dependencies": {
+        "pinVersions": true
+      }
+    }
   ]
 }
