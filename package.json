@@ -1,5 +1,9 @@
 {
+	"scripts": {
+		"changelog": "lerna-changelog"
+	},
 	"devDependencies": {
-		"lerna": "^2.4.0"
+		"lerna": "^2.4.0",
+		"lerna-changelog": "^0.6.0"
 	}
 }

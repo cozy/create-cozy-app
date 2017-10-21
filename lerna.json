@@ -1,6 +1,19 @@
 {
   "lerna": "2.4.0",
   "npmClient": "yarn",
+  "changelog": {
+    "repo": "CPatchane/cozy-create-app",
+    "labels": {
+      "tag: feature": ":sparkles: New Features",
+      "tag: enhancement": ":nail_care: Enhancements",
+      "tag: breaking change": ":boom: Breaking Changes",
+      "tag: bug": ":bug: Bug Fixes",
+      "tag: chore": ":wrench: Chore",
+      "tag: documentation": ":memo: Documentations"
+    },
+    "cacheDir": ".changelog",
+    "ignoreCommitters": ["renovate"]
+  },
   "packages": [
     "packages/*"
   ],
