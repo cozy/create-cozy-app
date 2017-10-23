@@ -1,6 +1,8 @@
 {
 	"scripts": {
-		"changelog": "lerna-changelog"
+		"changelog": "lerna-changelog",
+		"test": "yarn test:cli",
+		"test:cli": "bash packages/cozy-create-app/tests/cozy-create-app.sh"
 	},
 	"devDependencies": {
 		"lerna": "^2.4.0",
