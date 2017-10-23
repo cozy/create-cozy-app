@@ -6,6 +6,6 @@ const path = require('path')
 /* PATHS, PROPS AND UTILS */
 
 // app/node_modules/cozy-scripts/scripts
-const appConfigs = require(path.join(__dirname, '..', '..', '..', 'app.config.js')).configs
+const appConfigs = require(path.join(process.cwd(), 'app.config.js')).configs
 
 module.exports = merge.apply(null, appConfigs)

@@ -5,7 +5,10 @@ module.exports = {
     extensions: ['.jsx'],
     alias: {
       'react': 'preact-compat',
-      'react-dom': 'preact-compat'
+      'react-dom': 'preact-compat',
+
+      // https://github.com/developit/preact-compat/issues/392
+      'preact-compat': 'preact-compat/dist/preact-compat'
     }
   },
   module: {
