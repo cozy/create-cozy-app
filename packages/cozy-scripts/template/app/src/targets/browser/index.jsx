@@ -2,15 +2,15 @@
 
 import 'babel-polyfill'
 
-import '../../styles'
+import 'styles'
 
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { I18n } from 'cozy-ui/react/I18n'
 
-import store from '../../lib/store'
-import App from '../../components/App'
+import store from 'lib/store'
+import App from 'components/App'
 
 if (__DEVELOPMENT__) {
   // Enables React dev tools for Preact
@@ -23,7 +23,7 @@ if (__DEVELOPMENT__) {
 
 const renderApp = function (lang) {
   render(
-    <I18n lang={lang} dictRequire={(lang) => require(`../../locales/${lang}`)}>
+    <I18n lang={lang} dictRequire={(lang) => require(`locales/${lang}`)}>
       <Provider store={store}>
         <App />
       </Provider>
