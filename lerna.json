@@ -9,7 +9,8 @@
       "tag: breaking change": ":boom: Breaking Changes",
       "tag: bug": ":bug: Bug Fixes",
       "tag: chore": ":wrench: Chore",
-      "tag: documentation": ":memo: Documentations"
+      "tag: documentation": ":memo: Documentations",
+      "tag: up(deps)": ":arrow_up: Dependencies"
     },
     "cacheDir": ".changelog",
     "ignoreCommitters": ["renovate"]
