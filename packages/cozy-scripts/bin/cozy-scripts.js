@@ -19,7 +19,7 @@ const program = new commander.Command(pkg.name)
   .parse(process.argv)
 
 if (program.showConfig) {
-  console.log(JSON.stringify(appConfig, null, 4))
+  console.log(JSON.stringify(appConfig, null, 2))
   process.exit(0)
 }
 
@@ -27,7 +27,8 @@ const availableScripts = ['watch', 'build', 'standalone']
 
 if (availableScripts.includes(actionName)) {
   const scriptPath = `../scripts/${actionName}`
-  require(scriptPath)
+  const script = require(scriptPath)
+  script()
 } else {
   console.log(`cozy-scripts: unknown command ${colorize.cyan(actionName)}`)
 }
