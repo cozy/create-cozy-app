@@ -115,7 +115,7 @@ describe('App', () => {
   })
 
   it('should have the correct config browser:development by default', () => {
-    console.log(colorize.orange('Checking configs...'))
+    console.log(colorize.orange('Asserting configs...'))
     const appConfig = getConfig()
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
@@ -145,14 +145,14 @@ describe('App', () => {
   })
 
   it('should run webpack.run correctly with build script', (done) => {
-    console.log(colorize.orange('Checking cozy-scripts build script...'))
+    console.log(colorize.orange('Testing cozy-scripts build script...'))
     process.env.NODE_ENV = 'browser:production'
     const build = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'build.js'))
     expect(() => build(done)).not.toThrow()
   })
 
   it('should run webpack.watch correctly with watch script', (done) => {
-    console.log(colorize.orange('Checking cozy-scripts watch script...'))
+    console.log(colorize.orange('Testing cozy-scripts watch script...'))
     process.env.NODE_ENV = 'browser:development'
     const watch = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'watch.js'))
     expect(() => watch(watcher => {
@@ -165,5 +165,12 @@ describe('App', () => {
       }
       done()
     })).not.toThrow()
+  })
+
+  it('should pass all app tests with success', () => {
+    console.log(colorize.orange('Running app tests...'))
+    expect(() => {
+      spawn.sync('yarn', ['test'], { stdio: 'inherit' })
+    }).not.toThrow()
   })
 })
