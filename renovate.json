@@ -1,11 +1,15 @@
 {
   "assignees": ["CPatchane"],
-  "labels": ["tag: chore"],
+  "labels": ["tag: up(deps)"],
   "automerge": false,
   "extends": [
     "config:js-lib"
   ],
   "packageFiles": [
+    {
+      "packageFile": "package.json",
+      "pinVersions": false
+    },
     {
       "packageFile": "packages/babel-preset-cozy-app/package.json",
       "pinVersions": false
