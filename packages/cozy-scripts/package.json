@@ -18,7 +18,7 @@
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.1",
     "babel-loader": "7.1.2",
-    "chalk": "2.2.0",
+    "chalk": "2.3.0",
     "commander": "2.11.0",
     "copy-webpack-plugin": "4.2.0",
     "cross-spawn": "5.1.0",
