@@ -75,8 +75,8 @@ fi
 mkdir $test_folder
 cd $test_folder
 
-# clean yarn cache
-yarn cache clean
+# clean yarn cache (disabled because it can make tests too long)
+# yarn cache clean
 
 #######
 ## Test with --scripts-source fileAbs:...

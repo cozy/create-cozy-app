@@ -15,3 +15,6 @@ desktop.ini
 
 # lerna-changelog
 .changelog
+
+# tests
+.tmp_test

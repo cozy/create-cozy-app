@@ -7,7 +7,9 @@ const spawn = require('cross-spawn')
 const prompt = require('prompt')
 const validateProjectName = require('validate-npm-package-name')
 
-module.exports = function (appPath, appName, verbose, gracefulRootExit) {
+// override is used only for test to skip prompt (cf prompt.override)
+// successCallback is for now only used for the test assertions
+module.exports = function (appPath, appName, verbose, gracefulRootExit, override, successCallback) {
   // informations needed to replace in templates
   /*
     <APP_NAME> (already provided with appName) : application name
@@ -74,6 +76,9 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
       required: false
     }
   ]
+
+  if (override) prompt.override = override
+
   prompt.start()
   prompt.message = colorize.bold('Question:')
   prompt.delimiter = ' '
@@ -93,7 +98,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit) {
       }
       dataMap.set('<APP_NAME>', appName) // add already provided app name
       try {
-        run(appPath, dataMap, verbose, gracefulRootExit)
+        run(appPath, dataMap, verbose, gracefulRootExit, successCallback)
       } catch (e) {
         gracefulExit(appPath)
         gracefulRootExit(e)
@@ -106,7 +111,7 @@ function requireFileAsString (filename) {
   return fs.readFileSync(filename, 'utf8')
 }
 
-function run (appPath, dataMap, verbose, gracefulRootExit) {
+function run (appPath, dataMap, verbose, gracefulRootExit, successCallback) {
   const ownPackageName = require(
     path.join(__dirname, '..', 'package.json')
   ).name
@@ -181,6 +186,7 @@ function run (appPath, dataMap, verbose, gracefulRootExit) {
     console.log('App dependencies installed.')
     console.log()
     console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/`))
+    if (typeof successCallback === 'function') successCallback()
   })
   .catch(error => {
     gracefulExit(appPath)

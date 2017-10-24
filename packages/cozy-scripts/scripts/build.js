@@ -7,14 +7,19 @@ const compiler = webpack(Object.assign({}, appConfig, {
   bail: true
 }))
 
-compiler.run((err, stats) => {
-  if (err) {
-    console.error(err)
-    return
-  }
+// add a way to provide success callback for (at least) better tests
+module.exports = (successCallback) => {
+  compiler.run((err, stats) => {
+    if (err) {
+      console.error(err)
+      return
+    }
 
-  console.log(stats.toString({
-    chunks: false,  // Makes the build much quieter
-    colors: true    // Shows colors in the console
-  }))
-})
+    console.log(stats.toString({
+      chunks: false,  // Makes the build much quieter
+      colors: true    // Shows colors in the console
+    }))
+
+    if (typeof successCallback === 'function') successCallback()
+  })
+}

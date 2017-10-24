@@ -1,7 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
-const webpackDevServer = require('webpack-dev-server')
+const WebpackDevServer = require('webpack-dev-server')
 const colorize = require('../utils/_colorize.js')
 const appConfig = require('./config')
 
@@ -11,7 +11,7 @@ const config = Object.assign({}, appConfig, {
   }
 })
 
-const port = process.env.PORT || '8080'
+const port = process.env.PORT || '8888'
 const host = process.env.HOST || 'localhost'
 
 const options = {
@@ -22,15 +22,21 @@ const options = {
   port
 }
 
-webpackDevServer.addDevServerEntrypoints(config, options);
+WebpackDevServer.addDevServerEntrypoints(config, options)
 
 const compiler = webpack(config)
-const server = new webpackDevServer(compiler, options)
+const server = new WebpackDevServer(compiler, options)
 
-server.listen(port, host, err => {
-  console.log()
-  if (err) {
-    console.log(colorize.red(err))
-  }
-  console.log(colorize.green(`Your app is running at http://${host}:${port}`))
-})
+// There is no callback available on compiler here,
+// it's not handled by webpack-dev-server 2.x
+// see https://github.com/webpack/webpack-dev-server/issues/818
+module.exports = () => {
+  server.listen(port, host, err => {
+    console.log()
+    if (err) {
+      server.close()
+      throw new Error(colorize.red(err))
+    }
+    console.log(colorize.green(`Your app is running at http://${host}:${port}`))
+  })
+}
