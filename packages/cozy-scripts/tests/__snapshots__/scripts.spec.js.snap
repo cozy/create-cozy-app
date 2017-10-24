@@ -1615,6 +1615,7 @@ Array [
   "src/targets/mobile/DOCS.md",
   "src/targets/vendor/assets/icon.svg",
   "test/__mocks__/fileMock.js",
+  "test/__snapshots__/app.spec.js.snap",
   "test/app.spec.js",
   "test/ducks/components/__snapshots__/nav.spec.js.snap",
   "test/ducks/components/__snapshots__/sidebar.spec.js.snap",

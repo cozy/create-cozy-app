@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component only should be mounted correctly 1`] = `
+<HashRouter>
+  <div
+    className="hello-wrapper coz-sticky"
+  >
+    <Sidebar />
+    <main
+      className="hello-content"
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          path="/viewhello1"
+        />
+        <Route
+          component={[Function]}
+          path="/viewhello2"
+        />
+        <Route
+          component={[Function]}
+          path="/viewhello3"
+        />
+        <Redirect
+          from="/"
+          push={false}
+          to="/viewhello1"
+        />
+      </Switch>
+    </main>
+  </div>
+</HashRouter>
+`;
