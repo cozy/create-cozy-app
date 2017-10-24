@@ -7,7 +7,7 @@ import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import { mockT } from '../../lib/I18n'
-import { Nav } from '../../../src/ducks/components/Nav'
+import { Nav } from '../../../src/components/Nav'
 
 Enzyme.configure({ adapter: new Adapter() })
 
