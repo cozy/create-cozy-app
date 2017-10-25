@@ -6,8 +6,8 @@
 		"test:cozy-scripts": "jest packages/cozy-scripts/tests/*.js"
 	},
 	"devDependencies": {
-		"jest": "^21.2.1",
-		"lerna": "^2.4.0",
-		"lerna-changelog": "^0.6.0"
+		"jest": "21.2.1",
+		"lerna": "2.4.0",
+		"lerna-changelog": "0.6.0"
 	}
 }

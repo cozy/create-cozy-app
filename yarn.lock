@@ -1898,7 +1898,7 @@ jest-validate@^21.2.1:
     leven "^2.1.0"
     pretty-format "^21.2.1"
 
-jest@^21.2.1:
+jest@21.2.1:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/jest/-/jest-21.2.1.tgz#c964e0b47383768a1438e3ccf3c3d470327604e1"
   dependencies:
@@ -2024,7 +2024,7 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-lerna-changelog@^0.6.0:
+lerna-changelog@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/lerna-changelog/-/lerna-changelog-0.6.0.tgz#9810d0f1070eb64bbd6204526018d751cae714cd"
   dependencies:
@@ -2039,7 +2039,7 @@ lerna-changelog@^0.6.0:
     string.prototype.padend "^3.0.0"
     yargs "^6.6.0"
 
-lerna@^2.4.0:
+lerna@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/lerna/-/lerna-2.4.0.tgz#7b76446b154bafb9cba8996f3dc233f1cb6ca7c3"
   dependencies:
