@@ -8,7 +8,12 @@
   "packageFiles": [
     {
       "packageFile": "package.json",
-      "pinVersions": false
+      "devDependencies": {
+        "pinVersions": true
+      },
+      "dependencies": {
+        "pinVersions": true
+      }
     },
     {
       "packageFile": "packages/babel-preset-cozy-app/package.json",
