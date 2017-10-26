@@ -1,3 +1,17 @@
+## cozy-scripts@0.2.0, cozy-create-app@0.2.0, babel-preset-cozy-app@0.2.0, eslint-config-cozy-app 0.2.0 (2017-10-27)
+
+#### :boom: Breaking Changes:
+* `babel-preset-cozy-app`, `cozy-scripts`, `create-cozy-app`, `eslint-config-cozy-app`
+  * [#21](https://github.com/CPatchane/create-cozy-app/pull/21) Rename cozy-create-app to create-cozy-app :boom:. ([@CPatchane](https://github.com/CPatchane))
+
+#### :memo: Documentations:
+* `babel-preset-cozy-app`, `cozy-scripts`, `create-cozy-app`, `eslint-config-cozy-app`
+  * [#20](https://github.com/CPatchane/create-cozy-app/pull/20) Update the description of the project. ([@clochix](https://github.com/clochix))
+
+#### Committers: 2
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+- Clochix ([clochix](https://github.com/clochix))
+
 ## cozy-scripts@0.1.2, cozy-create-app@0.1.1 (2017-10-26)
 
 #### :wrench: Chore
