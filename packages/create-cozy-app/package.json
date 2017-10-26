@@ -1,11 +1,11 @@
 {
-  "name": "cozy-create-app",
+  "name": "create-cozy-app",
   "version": "0.1.1",
   "description": "A tool to create cozy applications",
   "author": "CPatchane <code@patchane.com>",
   "license": "MIT",
   "bin": {
-    "cozy-create-app": "./index.js"
+    "create-cozy-app": "./index.js"
   },
   "dependencies": {
     "chalk": "2.3.0",
@@ -17,7 +17,7 @@
   },
   "files": [
     "index.js",
-    "cozy-create-app.js",
+    "create-cozy-app.js",
     "_colorize.js",
     "_cozyIoAscii.js"
   ]

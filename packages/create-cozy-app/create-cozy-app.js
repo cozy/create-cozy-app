@@ -55,7 +55,7 @@ const program = new commander.Command(pkg.name)
     console.log(`\t${colorize.orange('Any issue?')} Do not hesitate to let us know:`)
     console.log(
       `\t${colorize.cyan(
-        'https://github.com/CPatchane/cozy-create-app/issues/new'
+        'https://github.com/CPatchane/create-cozy-app/issues/new'
       )}`
     )
     console.log()
@@ -109,7 +109,7 @@ function checkAppName (appName) {
     printErrorsList(validationResult.warnings)
     process.exit(1)
   }
-  if (appName === 'cozy-scripts' || appName === 'cozy-create-app') {
+  if (appName === 'cozy-scripts' || appName === 'create-cozy-app') {
     console.log(
       `Could not create a project called ${colorize.red(`"${appName}"`)}. Please change it.`
     )

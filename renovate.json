@@ -24,7 +24,7 @@
       "pinVersions": false
     },
     {
-      "packageFile": "packages/cozy-create-app/package.json",
+      "packageFile": "packages/create-cozy-app/package.json",
       "devDependencies": {
         "pinVersions": true
       },

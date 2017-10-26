@@ -12,7 +12,7 @@ const execSync = require('child_process').execSync
 if (major < 6) {
   console.error(
     chalk.red(`You are running Node v${currentNodeVersion}.
-      cozy-create-app requires Node v6 minimum, please update you version of Node`
+      create-cozy-app requires Node v6 minimum, please update you version of Node`
     )
   )
   process.exit(1)
@@ -22,9 +22,9 @@ try {
   execSync('yarn --version', { stdio: 'ignore' })
 } catch (e) {
   console.error(chalk.red(
-    `cozy-create-app need yarn (https://yarnpkg.com) to run correctly.\nPlease install yarn before using cozy-create-app (https://yarnpkg.com/en/docs/install)`
+    `create-cozy-app need yarn (https://yarnpkg.com) to run correctly.\nPlease install yarn before using create-cozy-app (https://yarnpkg.com/en/docs/install)`
   ))
   process.exit(1)
 }
 
-require('./cozy-create-app.js')
+require('./create-cozy-app.js')

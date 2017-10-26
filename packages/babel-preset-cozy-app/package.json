@@ -5,11 +5,11 @@
   "author": "CPatchane <code@patchane.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CPatchane/cozy-create-app.git"
+    "url": "git+https://github.com/CPatchane/create-cozy-app.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CPatchane/cozy-create-app/issues"
+    "url": "https://github.com/CPatchane/create-cozy-app/issues"
   },
   "files": [
     "index.js"

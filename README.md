@@ -9,17 +9,17 @@ What's Cozy?
 [Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
 
 
-What's cozy-create-app?
+What's create-cozy-app?
 --------------------
 
 :warning: __Working in progress...__ :warning:
 
-> :pushpin: `cozy-create-app` uses only [`yarnpkg`](https://yarnpkg.com) to handle node modules for now. Please install it before using `cozy-create-app`.
+> :pushpin: `create-cozy-app` uses only [`yarnpkg`](https://yarnpkg.com) to handle node modules for now. Please install it before using `create-cozy-app`.
 
 #### Install
 
 ```
-yarn global add cozy-create-app
+yarn global add create-cozy-app
 ```
 
 
@@ -28,7 +28,7 @@ yarn global add cozy-create-app
 This command will bootstrap your app in a folder 'my-app':
 
 ```
-cozy-create-app my-app
+create-cozy-app my-app
 ```
 
 Then enjoy it:
@@ -49,7 +49,7 @@ Community
 
 ### Maintainer
 
-The lead maintainer for cozy-create-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
+The lead maintainer for create-cozy-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
 
 
 ### Get in touch
@@ -65,7 +65,7 @@ You can reach the Cozy Community by:
 License
 -------
 
-cozy-create-app is distributed under the MIT license.
+create-cozy-app is distributed under the MIT license.
 
 
 [cozy]: https://cozy.io "Cozy Cloud"
