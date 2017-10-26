@@ -1,8 +1,8 @@
-## Cozy Create App
+## Create Cozy App
 
-### What's cozy-create-app?
+### What's create-cozy-app?
 
-`cozy-create-app` is a command line tool that create a skeleton of an application for Cozy, based on React, Redux and Cozy libraries.
+`create-cozy-app` is a command line tool that create a skeleton of an application for Cozy, based on React, Redux and Cozy libraries.
 
 #### Requirement
 
@@ -14,19 +14,19 @@
 
 #### Install
 
-Just use `yarn` to download and install the `cozy-create-app` command;
+Just use `yarn` to download and install the `create-cozy-app` command;
 
 ```
-yarn global add cozy-create-app
+yarn global add create-cozy-app
 ```
 
 
 #### Usage
 
-Use the `cozy-create-app` command to bootstrap your application:
+Use the `create-cozy-app` command to bootstrap your application:
 
 ```
-cozy-create-app mycozyapp
+create-cozy-app mycozyapp
 ```
 
 This will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`
@@ -38,19 +38,19 @@ cd mycozyapp
 yarn watch:standalone
 ```
 
-After the webpack build, your app should be available at http://localhost:8080
+After the webpack build, your app should be available at http://localhost:8888
 
 
 #### Known limitations
 
-For now, this project has only been tested on GNU/Linux and MacOS. 
+For now, this project has only been tested on GNU/Linux and MacOS.
 
 
 ## Community
 
 ### Maintainer
 
-The lead maintainer for cozy-create-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
+The lead maintainer for create-cozy-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
 
 ### What's Cozy?
 
@@ -70,7 +70,7 @@ You can reach the Cozy Community by:
 
 ## License
 
-`cozy-create-app` is distributed under the MIT license.
+`create-cozy-app` is distributed under the MIT license.
 
 
 [cozy]: https://cozy.io "Cozy Cloud"
