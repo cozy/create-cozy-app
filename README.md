@@ -1,22 +1,20 @@
-Cozy Scripts
-=============
+## Cozy Create App
 
-What's Cozy?
-------------
+### What's cozy-create-app?
 
-![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
+`cozy-create-app` is a command line tool that create a skeleton of an application for Cozy, based on React, Redux and Cozy libraries.
 
-[Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
+#### Requirement
 
+ - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment);
+ - Node.js version 6 or higher;
+ - [Yarn](https://yarnpkg.com). Yarn is a Node.js package manager, like `npm`;
+ - knowledge of React / Redux / some build tools;
 
-What's cozy-create-app?
---------------------
-
-:warning: __Working in progress...__ :warning:
-
-> :pushpin: `cozy-create-app` uses only [`yarnpkg`](https://yarnpkg.com) to handle node modules for now. Please install it before using `cozy-create-app`.
 
 #### Install
+
+Just use `yarn` to download and install the `cozy-create-app` command;
 
 ```
 yarn global add cozy-create-app
@@ -25,32 +23,40 @@ yarn global add cozy-create-app
 
 #### Usage
 
-This command will bootstrap your app in a folder 'my-app':
+Use the `cozy-create-app` command to bootstrap your application:
 
 ```
-cozy-create-app my-app
+cozy-create-app mycozyapp
 ```
 
-Then enjoy it:
+This will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`
+
+That's all! You can start hacking:
 
 ```
-cd my-app
+cd mycozyapp
 yarn watch:standalone
 ```
 
 After the webpack build, your app should be available at http://localhost:8080
 
-:warning: __Working in progress...__ :warning:
 
-__Note:__ This package has been tested only on OS X Sierra for now.
+#### Known limitations
 
-Community
----------
+For now, this project has only been tested on GNU/Linux and MacOS. 
+
+
+## Community
 
 ### Maintainer
 
 The lead maintainer for cozy-create-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
 
+### What's Cozy?
+
+![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
+
+[Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
 
 ### Get in touch
 
@@ -62,14 +68,13 @@ You can reach the Cozy Community by:
 - Say Hi! on [Twitter][twitter]
 
 
-License
--------
+## License
 
-cozy-create-app is distributed under the MIT license.
+`cozy-create-app` is distributed under the MIT license.
 
 
 [cozy]: https://cozy.io "Cozy Cloud"
 [freenode]: http://webchat.freenode.net/?randomnick=1&channels=%23cozycloud&uio=d4
 [forum]: https://forum.cozy.io/
 [github]: https://github.com/cozy/
-[twitter]: https://twitter.com/mycozycloud
+[twitter]: https://twitter.com/cozycloud
