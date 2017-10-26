@@ -12,7 +12,7 @@
  - knowledge of React / Redux / some build tools;
 
 
-#### Install
+#### Install the CLI
 
 Just use `yarn` to download and install the `create-cozy-app` command;
 
@@ -20,14 +20,26 @@ Just use `yarn` to download and install the `create-cozy-app` command;
 yarn global add create-cozy-app
 ```
 
+> :bulb: __Tip:__ You can also use `create-cozy-app` directly using `yarn` __without installing globally the CLI__. See the next part below.
 
 #### Usage
 
-Use the `create-cozy-app` command to bootstrap your application:
+* If you installed the CLI as described before:
 
-```
-create-cozy-app mycozyapp
-```
+    Use the `create-cozy-app` command to bootstrap your application:
+
+    ```
+    create-cozy-app mycozyapp
+    ```
+* If you want to use directly `yarn` (no need to install globally `create-cozy-app`):
+
+    Use the `yarn create cozy-app` command to bootstrap your application:
+
+    ```
+    yarn create cozy-app mycozyapp
+    ```
+
+    You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
 
 This will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`
 
