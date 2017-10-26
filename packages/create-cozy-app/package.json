@@ -1,6 +1,6 @@
 {
   "name": "create-cozy-app",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A tool to create cozy applications",
   "author": "CPatchane <code@patchane.com>",
   "license": "MIT",
