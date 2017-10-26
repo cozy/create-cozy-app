@@ -26,7 +26,7 @@ Community
 
 ### Maintainer
 
-The lead maintainer for cozy-create-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
+The lead maintainer for create-cozy-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
 
 
 ### Get in touch
@@ -42,7 +42,7 @@ You can reach the Cozy Community by:
 License
 -------
 
-cozy-create-app is distributed under the MIT.
+create-cozy-app is distributed under the MIT.
 
 
 [cozy]: https://cozy.io "Cozy Cloud"

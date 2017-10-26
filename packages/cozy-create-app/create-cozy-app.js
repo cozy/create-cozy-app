@@ -109,7 +109,7 @@ function checkAppName (appName) {
     printErrorsList(validationResult.warnings)
     process.exit(1)
   }
-  if (appName === 'cozy-scripts' || appName === 'cozy-create-app') {
+  if (appName === 'cozy-scripts' || appName === 'create-cozy-app') {
     console.log(
       `Could not create a project called ${colorize.red(`"${appName}"`)}. Please change it.`
     )

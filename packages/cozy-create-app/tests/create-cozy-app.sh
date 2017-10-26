@@ -123,4 +123,4 @@ echo -e "${color_blue}----------------------------------------------------------
 clean_up
 
 echo -e "${color_green}-------------------------------------${color_close}\n"
-echo -e "${color_green}cozy-create-app: Tests successfully passed.${color_close}\n"
+echo -e "${color_green}create-cozy-app: Tests successfully passed.${color_close}\n"
