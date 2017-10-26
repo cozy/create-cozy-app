@@ -2,7 +2,7 @@
   "lerna": "2.4.0",
   "npmClient": "yarn",
   "changelog": {
-    "repo": "CPatchane/cozy-create-app",
+    "repo": "CPatchane/create-cozy-app",
     "labels": {
       "tag: feature": ":sparkles: New Features",
       "tag: enhancement": ":nail_care: Enhancements",

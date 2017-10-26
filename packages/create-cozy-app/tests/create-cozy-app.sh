@@ -20,7 +20,7 @@ color_close='\033[0m'
 # and remove it in any cases (error or success)
 test_folder='.tmp_test'
 root_path=$PWD
-mock_scripts_path_from_root=packages/cozy-create-app/tests/mocks/mock-scripts
+mock_scripts_path_from_root=packages/create-cozy-app/tests/mocks/mock-scripts
 app_name='test-app'
 
 #######
@@ -85,7 +85,7 @@ cd $test_folder
 # run the script (reset yarn cache before)
 echo -e "\n${color_blue}----------------------------------------------------------------------------------${color_close}"
 echo -e "${color_blue}• Test with --scripts-source fileAbs:$root_path/$mock_scripts_path_from_root${color_close}"
-node $root_path/packages/cozy-create-app/index.js $app_name --scripts-source fileAbs:$root_path/$mock_scripts_path_from_root
+node $root_path/packages/create-cozy-app/index.js $app_name --scripts-source fileAbs:$root_path/$mock_scripts_path_from_root
 
 # if here, there is no errors with the script
 # check the new created folder content
@@ -108,7 +108,7 @@ rm -rf $app_name
 echo -e "\n${color_blue}----------------------------------------------------------------------------------${color_close}"
 echo -e "${color_blue}• Test with --scripts-source fileRel:../$mock_scripts_path_from_root${color_close}"
 # here: cwd = $test_folder
-node $root_path/packages/cozy-create-app/index.js $app_name --scripts-source fileRel:../$mock_scripts_path_from_root
+node $root_path/packages/create-cozy-app/index.js $app_name --scripts-source fileRel:../$mock_scripts_path_from_root
 
 # if here, there is no errors with the script
 # check the new created folder content
