@@ -1183,9 +1183,9 @@ cozy-client-js@0.3.19, cozy-client-js@^0.3.19:
   version "0.3.19"
   resolved "https://registry.yarnpkg.com/cozy-client-js/-/cozy-client-js-0.3.19.tgz#c20361a8bc6b23eb4d092360040e8765ef5e59a3"
 
-"cozy-ui@git://github.com/cozy/cozy-ui.git#8282172cc2001e811cad87c49a21599e72269e44":
-  version "4.0.0"
-  resolved "git://github.com/cozy/cozy-ui.git#8282172cc2001e811cad87c49a21599e72269e44"
+cozy-ui@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-4.0.3.tgz#8dcaef8a01d1f372803351a70e7d8b75ff915711"
   dependencies:
     classnames "^2.2.5"
     date-fns "^1.28.5"
@@ -2273,9 +2273,13 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
-is-buffer@^1.1.5, is-buffer@~1.1.1:
+is-buffer@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.5.tgz#1f3b26ef613b214b88cbca23cc6c01d87961eecc"
+
+is-buffer@~1.1.1:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
 is-builtin-module@^1.0.0:
   version "1.0.0"
