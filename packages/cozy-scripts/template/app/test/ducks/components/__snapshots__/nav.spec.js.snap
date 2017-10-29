@@ -11,10 +11,13 @@ exports[`Nav component should be rendered correctly 1`] = `
       <NavLink
         activeClassName="active"
         ariaCurrent="true"
-        className="hello-cat-hello1 c-nav-link"
+        className="c-nav-link"
         to="/viewhello1"
       >
-        First menu item
+        <Icon
+          icon="test-file-stub"
+        />
+        First
       </NavLink>
     </li>
     <li
@@ -23,10 +26,13 @@ exports[`Nav component should be rendered correctly 1`] = `
       <NavLink
         activeClassName="active"
         ariaCurrent="true"
-        className="hello-cat-hello2 c-nav-link"
+        className="c-nav-link"
         to="/viewhello2"
       >
-        Second menu item
+        <Icon
+          icon="test-file-stub"
+        />
+        Second
       </NavLink>
     </li>
     <li
@@ -35,10 +41,13 @@ exports[`Nav component should be rendered correctly 1`] = `
       <NavLink
         activeClassName="active"
         ariaCurrent="true"
-        className="hello-cat-hello3 c-nav-link"
+        className="c-nav-link"
         to="/viewhello3"
       >
-        Third menu item
+        <Icon
+          icon="test-file-stub"
+        />
+        Third
       </NavLink>
     </li>
   </ul>

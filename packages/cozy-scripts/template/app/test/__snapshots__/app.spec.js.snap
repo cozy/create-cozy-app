@@ -3,11 +3,11 @@
 exports[`App component only should be mounted correctly 1`] = `
 <HashRouter>
   <div
-    className="hello-wrapper coz-sticky"
+    className="app-wrapper coz-sticky"
   >
     <Sidebar />
     <main
-      className="hello-content"
+      className="app-content"
     >
       <Switch>
         <Route
