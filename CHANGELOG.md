@@ -1,3 +1,22 @@
+## cozy-scripts@0.2.1 (2017-10-29)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#25](https://github.com/CPatchane/create-cozy-app/pull/25) Prevent .gitignore to be renamed to .npmignore when npm publishing. ([@CPatchane](https://github.com/CPatchane))
+
+#### :memo: Documentations:
+* [#22](https://github.com/CPatchane/create-cozy-app/pull/22) Update changelog and readme. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#26](https://github.com/CPatchane/create-cozy-app/pull/26) Update babel-preset and eslint-config packages to 0.2.0. ([@CPatchane](https://github.com/CPatchane))
+  * [#24](https://github.com/CPatchane/create-cozy-app/pull/24) Update cozy-ui to 4.0.3. ([@CPatchane](https://github.com/CPatchane))
+  * [#23](https://github.com/CPatchane/create-cozy-app/pull/23) chore(deps): update dependency eslint to v4.10.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.2.0, cozy-create-app@0.2.0, babel-preset-cozy-app@0.2.0, eslint-config-cozy-app 0.2.0 (2017-10-27)
 
 #### :boom: Breaking Changes:
