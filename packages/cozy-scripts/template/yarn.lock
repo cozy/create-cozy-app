@@ -721,9 +721,9 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-cozy-app@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-0.1.0.tgz#109adada5563fe43366dd4d86334764c5b6a7946"
+babel-preset-cozy-app@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-0.2.0.tgz#5fbd10afc42d414a5dfdafd910c5459fa1ab4a4d"
   dependencies:
     babel-plugin-transform-object-rest-spread "^6.26.0"
     babel-plugin-transform-react-jsx "^6.24.1"
@@ -1487,9 +1487,9 @@ escodegen@^1.6.1:
   optionalDependencies:
     source-map "~0.5.6"
 
-eslint-config-cozy-app@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-0.1.0.tgz#6332f6b8f0949af977fa347424132fa98b964efd"
+eslint-config-cozy-app@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-0.2.0.tgz#fbaac5918dba19c1f6cf4c9bef51e741cca3a8f9"
   dependencies:
     babel-eslint "^8.0.1"
     eslint "^4.9.0"
