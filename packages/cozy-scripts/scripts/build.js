@@ -1,7 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
-const appConfig = require('./config')
+const appConfig = require('./config.js')
 
 const compiler = webpack(Object.assign({}, appConfig, {
   bail: true

@@ -5,7 +5,7 @@
 const commander = require('commander')
 const pkg = require('../package.json')
 const colorize = require('../utils/_colorize.js')
-const appConfig = require('../scripts/config')
+const appConfig = require('../scripts/config.js')
 
 let actionName
 const program = new commander.Command(pkg.name)
