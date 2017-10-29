@@ -3,7 +3,7 @@
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const colorize = require('../utils/_colorize.js')
-const appConfig = require('./config')
+const appConfig = require('./config.js')
 
 const config = Object.assign({}, appConfig, {
   output: {

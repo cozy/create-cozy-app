@@ -1,7 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
-const appConfig = require('./config')
+const appConfig = require('./config.js')
 const colorize = require('../utils/_colorize.js')
 
 const compiler = webpack(Object.assign({}, appConfig, {

@@ -11,9 +11,9 @@ const Hello3 = () => Hello('View 3')
 
 const App = ({ children }) => (
   <HashRouter>
-    <div className='hello-wrapper coz-sticky'>
+    <div className='app-wrapper coz-sticky'>
       <Sidebar />
-      <main className='hello-content'>
+      <main className='app-content'>
         <Switch>
           <Route path='/viewhello1' component={Hello1} />
           <Route path='/viewhello2' component={Hello2} />
