@@ -157,11 +157,15 @@ function run (appPath, dataMap, verbose, gracefulRootExit, successCallback) {
   // Copy app outline from template (template/app)
   const templateFiles = fs.readdirSync(templateAppPath)
   templateFiles.forEach(element => {
+    // We don't directly use .gitignore as file name to prevent npm from
+    // renaming it to .npmignore, so we rename it to .gitignore here
+    // See: https://github.com/npm/npm/issues/1862
+    const targetName = element === 'gitignore' ? '.gitignore' : element
     fs.copySync(
       path.join(templateAppPath, element),
-      path.join(appPath, element)
+      path.join(appPath, targetName)
     )
-    console.log(`${colorize.cyan(element)} copied.`)
+    console.log(`${colorize.cyan(targetName)} copied.`)
   })
 
   // Write created files from templates
