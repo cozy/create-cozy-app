@@ -2,12 +2,12 @@
 	padding: 0 1rem;
 }
 
-.c-nav-link svg {
+.c-nav-link .nav-icon {
 	padding-right: 0.5rem;
 	fill: #95999D;
 }
 
-.c-nav-link.active svg {
+.c-nav-link.active .nav-icon {
 	fill: #297EF2;
 }
 
@@ -20,7 +20,7 @@
 		color: #297EF2;
 	}
 
-	.c-nav-link svg {
+	.c-nav-link .nav-icon {
 		display: block;
 		padding: 0;
 		width: 1.15rem;

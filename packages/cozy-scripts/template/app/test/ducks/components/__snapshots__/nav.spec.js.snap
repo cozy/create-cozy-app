@@ -15,6 +15,7 @@ exports[`Nav component should be rendered correctly 1`] = `
         to="/viewhello1"
       >
         <Icon
+          className="nav-icon"
           icon="test-file-stub"
         />
         First
@@ -30,6 +31,7 @@ exports[`Nav component should be rendered correctly 1`] = `
         to="/viewhello2"
       >
         <Icon
+          className="nav-icon"
           icon="test-file-stub"
         />
         Second
@@ -45,6 +47,7 @@ exports[`Nav component should be rendered correctly 1`] = `
         to="/viewhello3"
       >
         <Icon
+          className="nav-icon"
           icon="test-file-stub"
         />
         Third
