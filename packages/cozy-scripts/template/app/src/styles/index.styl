@@ -4,14 +4,3 @@
 
 .app-wrapper
     @extend $app-2panes-sticky
-
-.app-content
-    top-padded(15px)
-    @media (max-width: (768/basefont)rem)
-        top-padded(10px)
-
-[role=application]
-    // need this due to no css-modules usage in this app
-    @media (max-width: (1023/basefont)rem)
-        aside
-            width   100%!important // @stylint ignore
