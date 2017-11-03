@@ -721,7 +721,7 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-cozy-app@0.2.0:
+babel-preset-cozy-app@0.2.0, babel-preset-cozy-app@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-0.2.0.tgz#5fbd10afc42d414a5dfdafd910c5459fa1ab4a4d"
   dependencies:
@@ -1168,16 +1168,19 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cozy-bar@4.2.6:
-  version "4.2.6"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.2.6.tgz#88a0c90922086aabb43baf77101f8327e5d7ad9e"
+cozy-bar@4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.3.5.tgz#53cb06438c78139797f5e728b06286b6e36b132e"
   dependencies:
+    babel-preset-cozy-app "^0.2.0"
     cozy-client-js "^0.3.19"
     node-polyglot "^2.2.2"
     piwik-react-router "^0.10.0"
     preact "^8.2.5"
     preact-compat "^3.17.0"
     react-autosuggest "^9.3.2"
+    react-redux "^5.0.6"
+    redux "^3.7.2"
 
 cozy-client-js@0.3.21:
   version "0.3.21"
@@ -3603,7 +3606,7 @@ react-dom@16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-redux@5.0.6:
+react-redux@5.0.6, react-redux@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
   dependencies:
@@ -3739,7 +3742,7 @@ redux-thunk@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.2.0.tgz#e615a16e16b47a19a515766133d1e3e99b7852e5"
 
-redux@3.7.2:
+redux@3.7.2, redux@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
