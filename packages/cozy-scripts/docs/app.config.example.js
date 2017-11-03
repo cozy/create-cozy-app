@@ -20,4 +20,14 @@ if (environment === 'production') {
   configs.push(require('cozy-scripts/config/webpack.environment.dev'))
 }
 
+/*
+Or if you just want to overload on the default configuration you can just do
+
+const configs = [
+  // this bundle file include all configs file like above
+  require('cozy-scripts/config/webpack.bundle.default'),
+  require('path/to/my/webpack.config') // your custom config to overload
+]
+*/
+
 module.exports = { configs }

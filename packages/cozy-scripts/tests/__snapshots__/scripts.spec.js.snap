@@ -1594,7 +1594,6 @@ Array [
   "CONTRIBUTING.md",
   "LICENSE",
   "README.md",
-  "app.config.js",
   "manifest.webapp",
   "node_modules",
   "package.json",
@@ -1621,4 +1620,23 @@ Array [
   "test/lib/I18n.js",
   "yarn.lock",
 ]
+`;
+
+exports[`App should use the custom app config if an \`app.config.js\` exists in the app directory 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": Object {},
+        "loader": "babel-loader",
+        "test": Object {},
+      },
+    ],
+  },
+  "resolve": Object {
+    "extensions": Array [
+      ".js",
+    ],
+  },
+}
 `;
