@@ -1,3 +1,33 @@
+## cozy-scripts@0.3.0, babel-preset-cozy-app@0.2.1 (2017-11-04)
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#38](https://github.com/CPatchane/create-cozy-app/pull/38) Use a more opinionated config by default (without `app.config.js`). ([@CPatchane](https://github.com/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#37](https://github.com/CPatchane/create-cozy-app/pull/37) Add and use moduleDirectories for jest tests. ([@CPatchane](https://github.com/CPatchane))
+  * [#28](https://github.com/CPatchane/create-cozy-app/pull/28) App template styles cleaning up. ([@CPatchane](https://github.com/CPatchane))
+  * [#27](https://github.com/CPatchane/create-cozy-app/pull/27) Minor app template improvements. ([@CPatchane](https://github.com/CPatchane))
+
+#### :wrench: Chore:
+* `babel-preset-cozy-app`
+  * [#39](https://github.com/CPatchane/create-cozy-app/pull/39) Add transform class properties plugin to babel preset cozy-app. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#35](https://github.com/CPatchane/create-cozy-app/pull/35) fix(deps): update dependency cozy-client-js to v0.3.21. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#32](https://github.com/CPatchane/create-cozy-app/pull/32) chore(deps): update dependency enzyme-adapter-react-16 to v1.0.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#33](https://github.com/CPatchane/create-cozy-app/pull/33) fix(deps): update dependency postcss to v6.0.14. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#34](https://github.com/CPatchane/create-cozy-app/pull/34) fix(deps): update dependency webpack-dev-server to v2.9.4. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#36](https://github.com/CPatchane/create-cozy-app/pull/36) fix(deps): update dependency cozy-ui to v4.0.4. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#31](https://github.com/CPatchane/create-cozy-app/pull/31) fix(deps): update dependency webpack-merge to v4.1.1. ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#30](https://github.com/CPatchane/create-cozy-app/pull/30) chore(deps): update dependency lerna to v2.5.1. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
 ## cozy-scripts@0.2.1 (2017-10-29)
 
 #### :bug: Bug Fixes:
