@@ -25,6 +25,9 @@ module.exports = {
     [require.resolve('babel-plugin-transform-object-rest-spread'), {
       useBuiltIns: true
     }],
+    // transform class attributes and methods with auto-binding
+    // to the class instance and no constructor needed
+    require.resolve('babel-plugin-transform-class-properties'),
     // Polyfills generator functions (for async/await usage)
     [require.resolve('babel-plugin-transform-runtime'), {
       helpers: false,
