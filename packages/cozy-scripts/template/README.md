@@ -83,7 +83,7 @@ yarn link cozy-ui
 
 ### Tests
 
-Tests are run by [mocha] under the hood, and written using [chai] and [sinon]. You can easily run the tests suite with:
+Tests are run by [jest] under the hood. You can easily run the tests suite with:
 
 ```sh
 $ cd <SLUG_GH>
@@ -165,8 +165,4 @@ You can reach the Cozy Community by:
 [twitter]: https://twitter.com/cozycloud
 [nvm]: https://github.com/creationix/nvm
 [ndenv]: https://github.com/riywo/ndenv
-[cozy-dev]: https://github.com/cozy/cozy-dev/
-[mocha]: https://mochajs.org/
-[chai]: http://chaijs.com/
-[sinon]: http://sinonjs.org/
-[checkbox]: https://help.github.com/articles/basic-writing-and-formatting-syntax/#task-lists
+[jest]: https://facebook.github.io/jest/
