@@ -4,26 +4,22 @@
 [![NPM Licence shield](https://img.shields.io/npm/l/<SLUG_NPM>.svg)](https://github.com/<USERNAME_GH>/<SLUG_GH>/blob/master/LICENSE)
 
 
-<APP_NAME>
-=======================
+# <APP_NAME>
 
 
-What's Cozy?
-------------
+## What's Cozy?
 
 ![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
 
 [Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
 
 
-What's <APP_NAME>?
------------------------
+## What's <APP_NAME>?
 
 <APP_SHORT_DESCRIPTION>
 
 
-Hack
-----
+## Hack
 
 _:pushpin: Note:_ we recommend to use [Yarn] instead of NPM for package management. Don't hesitate to [install][yarn-install] and use it for your Cozy projects, it's now our main node packages tool for Cozy official apps.
 
@@ -114,8 +110,7 @@ Whenever your app needs to use a given `doctype`, you should:
 If you want to work on <APP_NAME> and submit code modifications, feel free to open pull-requests! See the [contributing guide][contribute] for more information about how to properly open pull-requests.
 
 
-Community
----------
+## Community
 
 ### Localization
 
@@ -141,8 +136,7 @@ You can reach the Cozy Community by:
 - Say Hi! on [Twitter][twitter]
 
 
-License
--------
+## License
 
 <APP_NAME> is developed by <USERNAME_GH> and distributed under the [AGPL v3 license][agpl-3.0].
 
@@ -168,7 +162,7 @@ License
 [freenode]: http://webchat.freenode.net/?randomnick=1&channels=%23cozycloud&uio=d4
 [forum]: https://forum.cozy.io/
 [github]: https://github.com/cozy/
-[twitter]: https://twitter.com/mycozycloud
+[twitter]: https://twitter.com/cozycloud
 [nvm]: https://github.com/creationix/nvm
 [ndenv]: https://github.com/riywo/ndenv
 [cozy-dev]: https://github.com/cozy/cozy-dev/
