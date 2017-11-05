@@ -1,47 +1,55 @@
+[![NPM Licence shield](https://img.shields.io/npm/l/create-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/blob/master/packages/create-cozy-app/LICENSE)
+[![Travis](https://img.shields.io/travis/CPatchane/create-cozy-app.svg)]()
+[![npm](https://img.shields.io/npm/dm/create-cozy-app.svg)]()
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
+
+
 ## Create Cozy App
 
 ### What's create-cozy-app?
 
-`create-cozy-app` is a command line tool that create a skeleton of an application for Cozy, based on React, Redux and Cozy libraries.
+`create-cozy-app` is a command line tool that create a skeleton of an application for Cozy, using Cozy libraries.
 
-#### Requirement
+This tool can be run as an installed CLI or by using `yarn create`, see below for more information.
 
- - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment);
+By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on Preact (tested on React) and Redux frameworks.
+
+#### Requirements
+
  - Node.js version 6 or higher;
  - [Yarn](https://yarnpkg.com). Yarn is a Node.js package manager, like `npm`;
- - knowledge of React / Redux / some build tools;
+ - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use standalone mode);
 
+
+#### Run without install it via Yarn
+
+If you want to use directly `yarn` (no need to install globally `create-cozy-app`), use the `yarn create cozy-app` command to bootstrap your application:
+
+```
+yarn create cozy-app mycozyapp
+```
+
+You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
 
 #### Install the CLI
 
-Just use `yarn` to download and install the `create-cozy-app` command;
+Just use `yarn` to download and install globally the `create-cozy-app` command;
 
 ```
 yarn global add create-cozy-app
 ```
 
-> :bulb: __Tip:__ You can also use `create-cozy-app` directly using `yarn` __without installing globally the CLI__. See the next part below.
+#### CLI usage
 
-#### Usage
+If you installed the CLI as described before, use the `create-cozy-app` command to bootstrap your application:
 
-* If you installed the CLI as described before:
+```
+create-cozy-app mycozyapp
+```
 
-    Use the `create-cozy-app` command to bootstrap your application:
+#### Ready to go
 
-    ```
-    create-cozy-app mycozyapp
-    ```
-* If you want to use directly `yarn` (no need to install globally `create-cozy-app`):
-
-    Use the `yarn create cozy-app` command to bootstrap your application:
-
-    ```
-    yarn create cozy-app mycozyapp
-    ```
-
-    You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
-
-This will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`
+The script will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`
 
 That's all! You can start hacking:
 
@@ -55,14 +63,25 @@ After the webpack build, your app should be available at http://localhost:8888
 
 #### Known limitations
 
-For now, this project has only been tested on GNU/Linux and MacOS.
+For now, this project has only been tested on GNU/Linux and OS X.
 
+#### Options
+
+##### `--scripts-source`
+
+You can pass a custom scripts package using the optional `--scripts-source` option, it can be one of:
+
+- a __relative local path__ to a tarball (`fileRel:` prefix): `fileRel:./a-folder/my-cozy-scripts.tar.gz`
+- an __absolute local path__ to a tarball (`fileAbs:` prefix): `fileAbs:/root/my-cozy-scripts.tar.gz`
+- an __URL__ to a tarball (`url:` prefix): `url:https://myurl.com/my-cozy-scripts.tar.gz`
+- a specific __npm version__ (`version:` prefix): `version:0.1.5`
+- a specific __git commit/branch__ with name provided after the '#' (`git:` prefix): `git://github.com/CPatchane/cozy-scripts.git#master`
 
 ## Community
 
 ### Maintainer
 
-The lead maintainer for create-cozy-app and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
+The lead maintainer for `create-cozy-app` and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
 
 ### What's Cozy?
 
