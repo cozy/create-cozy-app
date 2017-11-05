@@ -1,6 +1,8 @@
+[![npm](https://img.shields.io/npm/v/create-cozy-app.svg)](https://www.npmjs.com/package/create-cozy-app)
 [![NPM Licence shield](https://img.shields.io/npm/l/create-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/blob/master/packages/create-cozy-app/LICENSE)
 [![Travis](https://img.shields.io/travis/CPatchane/create-cozy-app.svg)]()
 [![npm](https://img.shields.io/npm/dm/create-cozy-app.svg)]()
+[![David](https://david-dm.org/CPatchane/create-cozy-app.svg)](https://david-dm.org/CPatchane/create-cozy-app)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
 
