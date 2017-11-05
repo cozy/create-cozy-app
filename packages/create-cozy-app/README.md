@@ -6,7 +6,7 @@
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
 
-## Create Cozy App
+# Create Cozy App
 
 ### What's create-cozy-app?
 
@@ -83,7 +83,7 @@ You can pass a custom scripts package using the optional `--scripts-source` opti
 
 ### Maintainer
 
-The lead maintainer for `create-cozy-app` and tooling is [@CPatchane](https://github.com/cpatchane), send him a :beers: to say hello!
+The lead maintainer for `create-cozy-app` and tooling is [@CPatchane](https://github.com/CPatchane), send him a :beers: to say hello!
 
 ### What's Cozy?
 
