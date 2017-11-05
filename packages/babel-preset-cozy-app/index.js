@@ -12,7 +12,8 @@ module.exports = {
           firefox: 40,
           browsers: ['last 2 versions']
         },
-        useBuiltIns: true
+        // don't transform polyfills
+        useBuiltIns: false
       }
     ],
     // for JSX
