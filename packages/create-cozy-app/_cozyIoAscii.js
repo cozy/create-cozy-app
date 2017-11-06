@@ -3,8 +3,9 @@
 // generated from http://my.asciiart.club
 
 module.exports = `
+
                                                      %@
-    
+
      ,#@#W@@p   e@8W@@M,   @@@@@#@@b'@@      #@      @b    ;@#WW@M,
     6@C       ,@#     7$k       ##\`  '@@    {$\`      $b   @#     "Sk
     $$        @$~      @$     ;@^     '@k  {@^       $b  |$b      @$
