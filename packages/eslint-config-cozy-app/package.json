@@ -7,6 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/CPatchane/create-cozy-app.git"
   },
+  "homepage": "https://github.com/CPatchane/create-cozy-app/tree/master/packages/eslint-config-cozy-app",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CPatchane/create-cozy-app/issues"

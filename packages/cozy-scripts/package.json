@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/CPatchane/create-cozy-app.git"
   },
+  "homepage": "https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts",
   "author": "CPatchane <code@patchane.com>",
   "contributors": [],
   "license": "MIT",
