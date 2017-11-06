@@ -145,6 +145,7 @@ function ensureProjectFolder (folderPath) {
 
 function bootstrapApp (rootPath, appName, verbose, scriptsSource) {
   let installingSpinner
+  if (scriptsSource) console.log(`Specific scripts source provided: ${scriptsSource}`)
   if (verbose) {
     console.log(`Installing ${colorize.cyan('cozy-scripts')}... (may take a while)`)
   } else {
