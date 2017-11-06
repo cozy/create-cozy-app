@@ -1,7 +1,7 @@
 import React from 'react'
 import { translate, Icon } from 'cozy-ui/react'
 import { NavLink } from 'react-router-dom'
-import NavIcon from '../assets/icons/icon-pin.svg'
+import NavIcon from '../assets/icons/icon-bullet-point.svg'
 
 export const Nav = ({ t }) => (
   <nav>
