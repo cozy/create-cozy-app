@@ -1597,7 +1597,7 @@ Array [
   "manifest.webapp",
   "node_modules",
   "package.json",
-  "src/assets/icons/icon-pin.svg",
+  "src/assets/icons/icon-bullet-point.svg",
   "src/components/App.jsx",
   "src/components/Nav.jsx",
   "src/components/Sidebar.jsx",
