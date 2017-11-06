@@ -1,19 +1,16 @@
-How to contribute to <APP_NAME>?
-====================================
+# How to contribute to <APP_NAME>?
 
 Thank you for your interest in contributing to this Cozy application! There are many ways to contribute, and we appreciate all of them.
 
 
-Security Issues
----------------
+## Security Issues
 
 If you discover a security issue, please bring it to our attention right away! Please **DO NOT** file a public issue, instead send your report privately to security AT cozycloud DOT cc.
 
 Security reports are greatly appreciated and we will publicly thank you for it. We currently do not offer a paid security bounty program, but are not ruling it out in the future.
 
 
-Bug Reports
------------
+## Bug Reports
 
 While bugs are unfortunate, they're a reality in software. We can't fix what we don't know about, so please report liberally. If you're not sure if something is a bug or not, feel free to file a bug anyway.
 
@@ -26,8 +23,7 @@ Opening an issue is as easy as following [this link][issues] and filling out the
 - What is the version of the Cozy <APP_NAME>?
 
 
-Pull Requests
--------------
+## Pull Requests
 
 Please keep in mind that:
 
@@ -104,20 +100,17 @@ $ git pull-request -b master -m "My PR message" -o
 Pull requests are usually reviewed within a few days. If there are comments to address, apply your changes in a separate commit and push that to your branch. Post a comment in the pull request afterwards; GitHub doesn't send out notifications when you add commits.
 
 
-Writing documentation
----------------------
+## Writing documentation
 
 Documentation improvements are very welcome. We try to keep a good documentation in the `/docs` folder. But, you know, we are developers, we can forget to document important stuff that look obvious to us. And documentation can always be improved.
 
 
-Translations
-------------
+## Translations
 
 The <APP_NAME> is translated on a platform called [Transifex][tx]. [This tutorial][tx-start] can help you to learn how to make your first steps here. If you have any question, don't hesitate to ask us!
 
 
-Community
----------
+## Community
 
 You can help us by making our community even more vibrant. For example, you can write a blog post, take some videos, answer the questions on [the forum][forum], organize new meetups, and speak about what you like in Cozy!
 

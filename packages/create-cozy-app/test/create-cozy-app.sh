@@ -20,7 +20,7 @@ color_close='\033[0m'
 # and remove it in any cases (error or success)
 test_folder='.tmp_test'
 root_path=$PWD
-mock_scripts_path_from_root=packages/create-cozy-app/tests/mocks/mock-scripts
+mock_scripts_path_from_root=packages/create-cozy-app/test/mocks/mock-scripts
 app_name='test-app'
 
 #######

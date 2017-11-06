@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/eslint-config-cozy-app.svg)](https://www.npmjs.com/package/eslint-config-cozy-app)
-[![NPM Licence shield](https://img.shields.io/npm/l/eslint-config-cozy-app.svg)](https://github.com/cpatchane/create-cozy-app/blob/master/packages/eslint-config-cozy-app/LICENSE)
+[![NPM Licence shield](https://img.shields.io/npm/l/eslint-config-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/blob/master/packages/eslint-config-cozy-app/LICENSE)
 [![npm](https://img.shields.io/npm/dm/eslint-config-cozy-app.svg)]()
-[![David](https://david-dm.org/cpatchane/eslint-config-cozy-app.svg)](https://david-dm.org/cpatchane/eslint-config-cozy-app)
+[![David](https://david-dm.org/CPatchane/eslint-config-cozy-app.svg)](https://david-dm.org/CPatchane/eslint-config-cozy-app)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
 # eslint-config-cozy-app
@@ -24,7 +24,9 @@ In a file named `.eslintrc.json` (the ESLint configuration file), you can use th
 }
 ```
 
-## What's Cozy?
+## Community
+
+### What's Cozy?
 
 ![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
 
@@ -40,13 +42,13 @@ You can reach the Cozy Community by:
 - Say Hi! on [Twitter][twitter]
 
 
-License
--------
+## License
 
 `eslint-config-cozy-app` is distributed under the MIT license.
+
 
 [cozy]: https://cozy.io "Cozy Cloud"
 [freenode]: http://webchat.freenode.net/?randomnick=1&channels=%23cozycloud&uio=d4
 [forum]: https://forum.cozy.io/
 [github]: https://github.com/cozy/
-[twitter]: https://twitter.com/mycozycloud
+[twitter]: https://twitter.com/cozycloud
