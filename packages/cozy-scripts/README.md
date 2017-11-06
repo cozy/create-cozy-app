@@ -7,7 +7,69 @@
 
 # Cozy Scripts
 
+`cozy-scripts` is a script bundle designed to be run by `create-cozy-app`. This latter will just create the root folder and then run `cozy-scripts init` inside it.
 
+All the template structure is handled by `cozy-scripts`. After the initialisation, you should have the following folder structure:
+
+```
+mycozyapp/
+    CONTRIBUTING.md
+    LICENSE
+    README.md
+    manifest.webapp
+    node_modules/
+    package.json
+    yarn.lock
+    src/
+        assets/
+        components/
+            App.jsx
+            Nav.jsx
+            Sidebar.jsx
+        lib/store.js
+        locales/en.json
+        styles/
+            index.styl
+            nav.css
+        targets/
+            browser/
+                index.ejs
+                index.jsx
+            mobile/
+            vendor/
+    test/
+    .babelrc
+    .editorconfig
+    .eslintrc.json
+    .github/
+        .ISSUE_TEMPLATE
+        .PULL_REQUEST_TEMPLATE
+    .gitignore
+    .stylintrc
+    .travis.yml
+    .tx/
+        config
+```
+
+### `cozy-scripts` CLI
+
+`cozy-scripts` make available some scripts to be used inside your application (used by default in applications created from `create-cozy-app`)
+
+##### `cozy-scripts --show-config`
+
+This command will output the webpack config computed according your current global variable `NODE_ENV`.
+
+##### `cozy-scripts build`
+
+This command will run webpack in a one shot execution of webpack (without files watching mode so) in a quiter way. It's recommended for production build.
+
+##### `cozy-scripts watch`
+
+Unlike the previous command, this will run webpack using the files watching mode. Each time you will modify a file, a new build will triggered. It's recommended for development build.
+
+##### `cozy-scripts standalone`
+
+Do the same thing than the previous command with webpack in a watching mode but also run a server (`webpack-dev-server`) to serve your application (as a static application) on the url `http://localhost:8888`
 
 ## Community
 
