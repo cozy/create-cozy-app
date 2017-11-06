@@ -2,8 +2,8 @@
 	"scripts": {
 		"changelog": "lerna-changelog",
 		"test": "yarn test:cli && yarn test:cozy-scripts",
-		"test:cli": "bash packages/create-cozy-app/tests/create-cozy-app.sh",
-		"test:cozy-scripts": "jest packages/cozy-scripts/tests/*.js"
+		"test:cli": "bash packages/create-cozy-app/test/create-cozy-app.sh",
+		"test:cozy-scripts": "jest packages/cozy-scripts/test/*.js"
 	},
 	"devDependencies": {
 		"jest": "21.2.1",
