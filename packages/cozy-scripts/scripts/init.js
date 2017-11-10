@@ -189,7 +189,8 @@ function run (appPath, dataMap, verbose, gracefulRootExit, successCallback) {
     console.log()
     console.log('App dependencies installed.')
     console.log()
-    console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/`))
+    console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/. Enjoy it!`))
+    console.log('You can also create an `app.config.js` if you want to customize the webpack configuration.')
     if (typeof successCallback === 'function') successCallback()
   })
   .catch(error => {
