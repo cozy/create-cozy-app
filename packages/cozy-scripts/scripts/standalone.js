@@ -13,9 +13,14 @@ const config = Object.assign({}, appConfig, {
 
 const port = process.env.PORT || '8888'
 const host = process.env.HOST || 'localhost'
+const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 
 const options = {
-  stats: { colors: true },
+  stats: {
+    modules: isDebugMode, // display modules
+    chunks: isDebugMode,  // display chunks
+    colors: true    // Shows colors in the console
+  },
   inline: true,
   hot: true,
   host,

@@ -8,6 +8,8 @@ const compiler = webpack(Object.assign({}, appConfig, {
   bail: true
 }))
 
+const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
+
 // add a way to provide success callback for (at least) better tests
 // return a watcher to be able to close it programmatically
 module.exports = (successCallback) => {
@@ -18,8 +20,8 @@ module.exports = (successCallback) => {
     }
 
     console.log(stats.toString({
-      modules: true, // display modules
-      chunks: true,  // display chunks
+      modules: isDebugMode, // display modules
+      chunks: isDebugMode,  // display chunks
       colors: true    // Shows colors in the console
     }))
 

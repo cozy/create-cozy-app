@@ -16,11 +16,18 @@ const program = new commander.Command(pkg.name)
     actionName = name
   })
   .option('--show-config', 'just print app final webpack config')
+  .option('--debug', 'print more outputs for debugging')
   .parse(process.argv)
 
 if (program.showConfig) {
   console.log(JSON.stringify(appConfig, null, 2))
   process.exit(0)
+}
+
+if (program.debug) {
+  process.env.COZY_SCRIPTS_DEBUG = true
+} else {
+  process.env.COZY_SCRIPTS_DEBUG = false
 }
 
 const availableScripts = ['watch', 'build', 'standalone']
