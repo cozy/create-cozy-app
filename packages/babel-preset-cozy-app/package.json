@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-cozy-app",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Babel preset for Cozy Application (Cozy Cloud)",
   "author": "CPatchane <code@patchane.com>",
   "repository": {

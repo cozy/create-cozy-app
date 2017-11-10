@@ -1,19 +1,18 @@
 {
   "name": "cozy-scripts",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CPatchane/create-cozy-app.git"
   },
-  "homepage": "https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts",
+  "homepage": "https://github.com/CPatchane/create-cozy-app#readme",
   "author": "CPatchane <code@patchane.com>",
   "contributors": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CPatchane/create-cozy-app/issues"
   },
-  "homepage": "https://github.com/CPatchane/create-cozy-app#readme",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
