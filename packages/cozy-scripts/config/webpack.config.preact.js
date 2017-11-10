@@ -15,7 +15,10 @@ module.exports = {
     rules: [{
       test: /\.jsx$/,
       exclude: /node_modules\/(?!(cozy-ui))/,
-      loader: 'babel-loader'
+      loader: 'babel-loader',
+      options: {
+        cacheDirectory: 'node_modules/.cache/babel-loader'
+      }
     }]
   }
 }

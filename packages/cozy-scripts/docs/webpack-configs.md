@@ -78,7 +78,7 @@ The default basic configuration of the application.
     - extensions: `.js`, `.json` and `.css`
 
 ##### Rules
-- all `.js` (excluding `node_modules`, `cozy-bar` and `cozy-client-js`) to be loaded using `babel-loader`
+- all `.js` (excluding `node_modules`, `cozy-bar` and `cozy-client-js`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
 - all `.json` files to be loaded using `json-loader`
 - all `.css` to be loaded using `extract-text-webpack-plugin` imported from `webpack.vars.js` with options:
     - `style-loader` as fallback
@@ -154,7 +154,7 @@ It will:
     - `react` to `preact-compat`
     - `react-dom` to `preact-compat`
     - Due to [an HMR issue](https://github.com/developit/preact-compat/issues/392), `preact-compat` to `preact-compat/dist/preact-compat`
-- add a rule for `.jsx` files excluding `node_modules` (exception for `node_modules/cozy-ui`) to be loaded using `babel-loader`
+- add a rule for `.jsx` files excluding `node_modules` (exception for `node_modules/cozy-ui`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
 
 ### `webpack.config.services.js`
 

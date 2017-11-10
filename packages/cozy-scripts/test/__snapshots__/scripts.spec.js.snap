@@ -17,6 +17,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -55,6 +58,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -334,6 +340,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -372,6 +381,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -650,6 +662,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -688,6 +703,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -957,6 +975,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -995,6 +1016,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -1280,6 +1304,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
@@ -1318,6 +1345,9 @@ Object {
       Object {
         "exclude": Object {},
         "loader": "babel-loader",
+        "options": Object {
+          "cacheDirectory": "node_modules/.cache/babel-loader",
+        },
         "test": Object {},
       },
       Object {
