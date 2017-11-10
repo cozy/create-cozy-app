@@ -15,7 +15,7 @@
     "build:mobile": "NODE_ENV=mobile:production npm-run-all --serial clean:mobile lint:js tx commons:build",
     "prewatch:mobile": "yarn run clean:mobile",
     "watch": "yarn run watch:browser",
-    "commons:watch": "cozy-scripts watch",
+    "commons:watch": "cozy-scripts watch --debug",
     "watch:browser": "NODE_ENV=browser:development npm-run-all --serial clean:browser commons:watch",
     "watch:mobile": "NODE_ENV=mobile:development npm-run-all --serial clean:mobile commons:watch",
     "watch:standalone": "yarn run watch:browser:standalone",

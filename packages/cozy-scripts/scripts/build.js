@@ -17,6 +17,7 @@ module.exports = (successCallback) => {
 
     console.log(stats.toString({
       chunks: false,  // Makes the build much quieter
+      modules: false,
       colors: true    // Shows colors in the console
     }))
 
