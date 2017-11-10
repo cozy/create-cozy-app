@@ -19,7 +19,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|cozy-(bar|client-js))/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: 'node_modules/.cache/babel-loader'
+        }
       },
       {
         test: /\.json$/,
