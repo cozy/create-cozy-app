@@ -30,7 +30,9 @@ mycozyapp/
     .editorconfig
 ```
 
-The bootstraped application will have two views (`/` and `/view2`) and you should be ready to start using your app with a Cozy.
+The bootstraped application will have two views (`/` and `/view2`).
+
+And that's it, the application is ready to be served by a Cozy.
 
 ## Community
 
