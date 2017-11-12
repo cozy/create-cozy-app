@@ -2,7 +2,6 @@
   "name": "<APP_NAME>",
   "slug": "<SLUG_GH>",
   "icon": "assets/icon-app.svg",
-  "description": "<APP_SHORT_DESCRIPTION>",
   "category": "<APP_CATEGORY>",
   "version": "0.1.0",
   "licence": "AGPL-3.0",
@@ -11,7 +10,6 @@
     "name": "<USERNAME_GH>",
     "url": "<USER_WEBSITE>"
   },
-  "default_locale": "en",
   "locales": {},
   "routes": {
     "/": {
@@ -20,7 +18,7 @@
       "public": false
     },
     "/view2": {
-      "folder": "/pages",
+      "folder": "/",
       "index": "view2.html",
       "public": false
     }
