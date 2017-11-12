@@ -17,11 +17,21 @@
     },
     {
       "packageFile": "packages/babel-preset-cozy-app/package.json",
-      "pinVersions": false
+      "devDependencies": {
+        "pinVersions": false
+      },
+      "dependencies": {
+        "pinVersions": false
+      }
     },
     {
       "packageFile": "packages/eslint-config-cozy-app/package.json",
-      "pinVersions": false
+      "devDependencies": {
+        "pinVersions": false
+      },
+      "dependencies": {
+        "pinVersions": false
+      }
     },
     {
       "packageFile": "packages/create-cozy-app/package.json",
@@ -43,6 +53,15 @@
     },
     {
       "packageFile": "packages/cozy-scripts/template/package.json",
+      "devDependencies": {
+        "pinVersions": true
+      },
+      "dependencies": {
+        "pinVersions": true
+      }
+    },
+    {
+      "packageFile": "packages/cozy-scripts-vanilla/package.json",
       "devDependencies": {
         "pinVersions": true
       },
