@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/eslint-config-cozy-app.svg)](https://www.npmjs.com/package/eslint-config-cozy-app)
-[![NPM Licence shield](https://img.shields.io/npm/l/babel-preset-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/blob/master/packages/babel-preset-cozy-app/LICENSE)
+[![NPM Licence shield](https://img.shields.io/npm/l/babel-preset-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/tree/master/packages/babel-preset-cozy-app/LICENSE)
 [![npm](https://img.shields.io/npm/dm/babel-preset-cozy-app.svg)]()
-[![David](https://david-dm.org/CPatchane/babel-preset-cozy-app.svg)](https://david-dm.org/CPatchane/babel-preset-cozy-app)
+[![dependencies Status](https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/babel-preset-cozy-app)](https://david-dm.org/cpatchane/create-cozy-app?path=packages/babel-preset-cozy-app)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
 # babel-preset-cozy-app
