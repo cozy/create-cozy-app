@@ -1,3 +1,28 @@
+## create-cozy-app@0.4.0, cozy-scripts@0.3.2, cozy-scripts-vanilla@0.1.0, babel-preset-cozy-app@0.3.1, eslint-config-cozy-app@0.3.1  (2017-11-12)
+
+#### :sparkles: New Features:
+* `cozy-scripts-vanilla`, `create-cozy-app`
+  * [#66](https://github.com/CPatchane/create-cozy-app/pull/66) Add `cozy-scripts-vanilla` to bootstrap Cozy applications in vanillaJS. ([@CPatchane](https://github.com/CPatchane))
+
+#### :memo: Documentations:
+* `create-cozy-app`
+  * [#70](https://github.com/CPatchane/create-cozy-app/pull/70) Add `--vanilla` option documentation in create-cozy-app README. ([@CPatchane](https://github.com/CPatchane))
+* `cozy-scripts`
+  * [#67](https://github.com/CPatchane/create-cozy-app/pull/67) Add LICENSE file + minor changes (README, test name). ([@CPatchane](https://github.com/CPatchane))
+* `babel-preset-cozy-app`, `cozy-scripts-vanilla`, `create-cozy-app`, `eslint-config-cozy-app`
+  * [#68](https://github.com/CPatchane/create-cozy-app/pull/68) Fix broken links + minor changes in many README. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts-vanilla`
+  * [#69](https://github.com/CPatchane/create-cozy-app/pull/69) refactor(deps): pin dependencies. ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts`
+  * [#65](https://github.com/CPatchane/create-cozy-app/pull/65) chore(deps): update dependency eslint-config-cozy-app to v0.3.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#64](https://github.com/CPatchane/create-cozy-app/pull/64) chore(deps): update dependency babel-preset-cozy-app to v0.3.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## create-cozy-app@0.3.0, cozy-scripts@0.3.1, babel-preset-cozy-app@0.3.0, eslint-config-cozy-app@0.3.0 (2017-11-10)
 
 #### :nail_care: Enhancements:
