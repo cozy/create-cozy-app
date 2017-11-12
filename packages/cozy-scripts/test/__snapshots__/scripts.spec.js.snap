@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should have the correct config browser:development according to NODE_ENV=browser:development 1`] = `
+exports[`App from cozy-scripts should have the correct config browser:development according to NODE_ENV=browser:development 1`] = `
 Object {
   "devtool": "#source-map",
   "entry": Object {
@@ -323,7 +323,7 @@ Object {
 }
 `;
 
-exports[`App should have the correct config browser:development by default 1`] = `
+exports[`App from cozy-scripts should have the correct config browser:development by default 1`] = `
 Object {
   "devtool": "#source-map",
   "entry": Object {
@@ -646,7 +646,7 @@ Object {
 }
 `;
 
-exports[`App should have the correct config browser:production according to NODE_ENV=browser:production 1`] = `
+exports[`App from cozy-scripts should have the correct config browser:production according to NODE_ENV=browser:production 1`] = `
 Object {
   "entry": Object {
     "app": ".tmp_test/test-app/src/targets/browser/index.jsx",
@@ -958,7 +958,7 @@ Object {
 }
 `;
 
-exports[`App should have the correct config mobile:development according to NODE_ENV=mobile:development 1`] = `
+exports[`App from cozy-scripts should have the correct config mobile:development according to NODE_ENV=mobile:development 1`] = `
 Object {
   "devtool": "#source-map",
   "entry": Array [
@@ -1291,7 +1291,7 @@ Object {
 }
 `;
 
-exports[`App should have the correct config mobile:production according to NODE_ENV=mobile:production 1`] = `
+exports[`App from cozy-scripts should have the correct config mobile:production according to NODE_ENV=mobile:production 1`] = `
 Object {
   "entry": Array [
     ".tmp_test/test-app/src/targets/mobile/index.jsx",
@@ -1610,7 +1610,7 @@ Object {
 }
 `;
 
-exports[`App should have the correct files outline 1`] = `
+exports[`App from cozy-scripts should have the correct files outline 1`] = `
 Array [
   ".babelrc",
   ".editorconfig",
@@ -1652,7 +1652,7 @@ Array [
 ]
 `;
 
-exports[`App should use the custom app config if an \`app.config.js\` exists in the app directory 1`] = `
+exports[`App from cozy-scripts should use the custom app config if an \`app.config.js\` exists in the app directory 1`] = `
 Object {
   "module": Object {
     "rules": Array [

@@ -77,7 +77,7 @@ function getConfig () {
     .replace(pathReplaceRegex, `"${testFolder}/${appName}`)
 }
 
-describe('App', () => {
+describe('App from cozy-scripts', () => {
   beforeAll(() => {
     // create the app test folder
     fs.ensureDirSync(appPath)

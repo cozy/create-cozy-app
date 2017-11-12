@@ -1,13 +1,12 @@
 [![npm](https://img.shields.io/npm/v/cozy-scripts.svg)](https://www.npmjs.com/package/cozy-scripts)
-[![NPM Licence shield](https://img.shields.io/npm/l/cozy-scripts.svg)](https://github.com/CPatchane/cozy-scripts/blob/master/packages/cozy-scripts/LICENSE)
-[![Travis](https://img.shields.io/travis/CPatchane/cozy-scripts.svg)]()
+[![NPM Licence shield](https://img.shields.io/npm/l/cozy-scripts.svg)](https://github.com/CPatchane/create-cozy-app/blob/master/packages/cozy-scripts/LICENSE)
 [![npm](https://img.shields.io/npm/dm/cozy-scripts.svg)]()
-[![David](https://david-dm.org/CPatchane/cozy-scripts.svg)](https://david-dm.org/CPatchane/cozy-scripts)
+[![dependencies Status](https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/cozy-scripts)](https://david-dm.org/cpatchane/create-cozy-app?path=packages/cozy-scripts)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
 # Cozy Scripts
 
-`cozy-scripts` is a script bundle designed to be run by `create-cozy-app`. This latter will just create the root folder and then run `cozy-scripts init` inside it.
+`cozy-scripts` is a script bundle designed to be run by `create-cozy-app`. This latter will just create the root folder and then run the `node_modules/cozy-scripts/scripts/init.js` script inside it.
 
 All the template structure is handled by `cozy-scripts`. After the initialisation, you should have the following folder structure:
 
@@ -62,10 +61,12 @@ This command will output the webpack config computed according your current glob
 ##### `cozy-scripts build`
 
 This command will run webpack in a one shot execution of webpack (without files watching mode so) in a quiter way. It's recommended for production build.
+The built files (destined to the Cozy) will be in `build/`.
 
 ##### `cozy-scripts watch`
 
 Unlike the previous command, this will run webpack using the files watching mode. Each time you will modify a file, a new build will triggered. It's recommended for development build.
+The built files (destined to the Cozy) will be in `build/`.
 
 ##### `cozy-scripts standalone`
 
