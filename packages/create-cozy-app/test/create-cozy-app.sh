@@ -34,6 +34,16 @@ function exists {
     done
 }
 
+# Check if provided filenames exists, stop with error if not
+function exists_or_error {
+    for file in $*; do
+        if test ! -e $file; then
+            echo -e "${color_red}The expected created file $file doesn't exist.${color_close}\n"
+            exit 1
+        fi
+    done
+}
+
 function clean_up {
     # clean up generated files
     echo -e "${color_orange}Cleaning up generated files${color_close}"
@@ -43,12 +53,12 @@ function clean_up {
 }
 
 function graceful_exit {
-    if [ -z "$1" ]; then
-        echo -e "${color_red}$(basename $0): ERROR! Something went wrong executing $1.${color_close}" 1>&2;
+    if [ -n "$1" ]; then
+        echo -e "${color_red}$(basename $0): ERROR! Something went wrong executing $1.${color_close}\n" 1>&2
         clean_up
         exit 1
     else
-        echo -e "${color_red}Something when wrong, exiting.${color_close}" 1>&2;
+        echo -e "${color_red}Something when wrong, exiting.${color_close}\n" 1>&2
         clean_up
         exit 1
     fi
@@ -67,7 +77,7 @@ trap 'set +x; graceful_exit' SIGQUIT SIGTERM SIGINT SIGKILL SIGHUP
 # and remove it in any cases (error or success)
 if exists $test_folder; then
     echo -e "The test directory \"$test_folder/\" already exists.\nPlease verify its content and remove the \"$test_folder/\" folder then run the tests again."
-    echo -e "${color_red}Exiting due to already existing folder $test_folder/ error.${color_close}" 1>&2;
+    echo -e "${color_red}Exiting due to already existing folder $test_folder/ error.${color_close}" 1>&2
     exit 1
 fi
 
@@ -82,7 +92,7 @@ cd $test_folder
 ## Test with --scripts-source fileAbs:...
 #######
 
-# run the script (reset yarn cache before)
+# run the script
 echo -e "\n${color_blue}----------------------------------------------------------------------------------${color_close}"
 echo -e "${color_blue}• Test with --scripts-source fileAbs:$root_path/$mock_scripts_path_from_root${color_close}"
 node $root_path/packages/create-cozy-app/index.js $app_name --scripts-source fileAbs:$root_path/$mock_scripts_path_from_root
@@ -90,9 +100,16 @@ node $root_path/packages/create-cozy-app/index.js $app_name --scripts-source fil
 # if here, there is no errors with the script
 # check the new created folder content
 
-exists $app_name
+exists_or_error $app_name
 cd $app_name
-exists package.json yarn.lock node_modules
+exists_or_error package.json yarn.lock node_modules
+# check dependency name in package.json
+scriptsDep="$(node -pe 'JSON.parse(process.argv[1]).dependencies["cozy-scripts"]' "$(cat package.json)")"
+if [ $scriptsDep == 'undefined' ]; then
+    echo -e "${color_red} Dependency 'cozy-scripts' not found in package.json or not correctly installed.${color_close}\n"
+    clean_up
+    exit 1
+fi
 
 #######
 ## Clean up app folder for the next test
@@ -100,11 +117,13 @@ exists package.json yarn.lock node_modules
 cd ..
 rm -rf $app_name
 
+####------------------------------------------------------------####
+
 #######
 ## Test with --scripts-source fileRel:...
 #######
 
-# run the script (reset yarn cache before)
+# run the script
 echo -e "\n${color_blue}----------------------------------------------------------------------------------${color_close}"
 echo -e "${color_blue}• Test with --scripts-source fileRel:../$mock_scripts_path_from_root${color_close}"
 # here: cwd = $test_folder
@@ -113,9 +132,49 @@ node $root_path/packages/create-cozy-app/index.js $app_name --scripts-source fil
 # if here, there is no errors with the script
 # check the new created folder content
 
-exists $app_name
+exists_or_error $app_name
 cd $app_name
-exists package.json yarn.lock node_modules
+exists_or_error package.json yarn.lock node_modules
+# check dependency name in package.json
+scriptsDep="$(node -pe 'JSON.parse(process.argv[1]).dependencies["cozy-scripts"]' "$(cat package.json)")"
+if [ $scriptsDep == 'undefined' ]; then
+    echo -e "${color_red} Dependency 'cozy-scripts' not found in package.json or not correctly installed.${color_close}\n"
+    clean_up
+    exit 1
+fi
+
+#######
+## Clean up app folder for the next test
+#######
+cd ..
+rm -rf $app_name
+
+####------------------------------------------------------------####
+
+#######
+## Test with --vanilla option with fileRel:...
+#######
+
+# run the script
+echo -e "\n${color_blue}----------------------------------------------------------------------------------${color_close}"
+echo -e "${color_blue}• Test with --vanilla option and --scripts-source fileRel:../$mock_scripts_path_from_root${color_close}"
+node $root_path/packages/create-cozy-app/index.js $app_name --vanilla --scripts-source fileRel:../$mock_scripts_path_from_root
+
+# if here, there is no errors with the script
+# check the new created folder content
+
+exists_or_error $app_name
+cd $app_name
+exists_or_error package.json yarn.lock node_modules
+# check dependency name in package.json
+scriptsDep="$(node -pe 'JSON.parse(process.argv[1]).dependencies["cozy-scripts-vanilla"]' "$(cat package.json)")"
+if [ $scriptsDep == 'undefined' ]; then
+    echo -e "${color_red} Dependency 'cozy-scripts-vanilla' not found in package.json or not correctly installed.${color_close}\n"
+    clean_up
+    exit 1
+fi
+
+####---END---####
 
 echo -e "${color_blue}----------------------------------------------------------------------------------${color_close}\n"
 
