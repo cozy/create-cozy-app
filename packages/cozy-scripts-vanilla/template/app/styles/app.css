@@ -1,0 +1,12 @@
+html {
+  background: white;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+.app-content {
+  padding: 1em 0 0 1em;
+}

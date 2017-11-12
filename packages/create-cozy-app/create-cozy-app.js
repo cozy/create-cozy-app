@@ -30,20 +30,21 @@ const program = new commander.Command(pkg.name)
     projectName = name
   })
   .option('--verbose', 'print additional logs')
+  .option('--vanilla', 'build a vanilla JS application instead of the default one')
   .option(
     '--scripts-source <scritps-source>',
-    'use a specific package of cozy-scripts (see --help)'
+    'use a specific package of scripts package (see --help)'
   )
   .on('--help', () => {
     console.log()
     console.log(`\t--- ${colorize.bold('USAGE INFORMATIONS')} ---`)
     console.log()
     console.log(`\tOnly ${colorize.blue('<project-name>')} is required.`)
-    console.log(`\tThis command will automatically create the project, in a new folder or in a empty existing folder ('.git' allowed).`)
+    console.log(`\tThis command will automatically create the project, in a new folder or in a empty existing folder ('.git' allowed). It will use cozy-scripts package by default.`)
     console.log()
     console.log('\t---')
     console.log()
-    console.log(`\tYou can pass a custom cozy-scripts package using the optional ${colorize.cyan('--scripts-source')} option, it can be one of:`)
+    console.log(`\tYou can pass a custom scripts package using the optional ${colorize.cyan('--scripts-source')} option, it can be one of:`)
     console.log(`\t\t- a relative local path to a tarball (${colorize.bold('fileRel:')} prefix): ${colorize.cyan('fileRel:./a-folder/my-cozy-scripts.tar.gz')}`)
     console.log(`\t\t- an absolute local path to a tarball (${colorize.bold('fileAbs:')} prefix): ${colorize.cyan('fileAbs:/root/my-cozy-scripts.tar.gz')}`)
     console.log(`\t\t- an URL to a tarball (${colorize.bold('url:')} prefix): ${colorize.cyan('url:https://myurl.com/my-cozy-scripts.tar.gz')}`)
@@ -74,9 +75,13 @@ if (!projectName) {
   process.exit(1)
 }
 
-createApp(projectName, program.verbose, program.scriptsSource)
+createApp(projectName, {
+  verbose: program.verbose,
+  vanilla: program.vanilla,
+  scriptsSource: program.scriptsSource
+})
 
-function createApp (name, verbose, scriptsSource) {
+function createApp (name, cliOptions) {
   const rootPath = path.resolve(name)
   const appName = path.basename(rootPath)
 
@@ -90,7 +95,7 @@ function createApp (name, verbose, scriptsSource) {
   // move to project directory
   process.chdir(rootPath)
 
-  bootstrapApp(rootPath, appName, verbose, scriptsSource)
+  bootstrapApp(rootPath, appName, cliOptions)
 }
 
 function printErrorsList (errors) {
@@ -109,7 +114,11 @@ function checkAppName (appName) {
     printErrorsList(validationResult.warnings)
     process.exit(1)
   }
-  if (appName === 'cozy-scripts' || appName === 'create-cozy-app') {
+  if (
+    appName === 'create-cozy-app' ||
+    appName === 'cozy-scripts' ||
+    appName === 'cozy-scripts-vanilla'
+  ) {
     console.log(
       `Could not create a project called ${colorize.red(`"${appName}"`)}. Please change it.`
     )
@@ -143,14 +152,21 @@ function ensureProjectFolder (folderPath) {
   }
 }
 
-function bootstrapApp (rootPath, appName, verbose, scriptsSource) {
+function bootstrapApp (rootPath, appName, cliOptions) {
+  // chose the correct scritps package
+  let scriptsPkgName = 'cozy-scripts'
+  if (cliOptions.vanilla) scriptsPkgName = 'cozy-scripts-vanilla'
+  // the loading spinner reference
   let installingSpinner
-  if (scriptsSource) console.log(`Specific scripts source provided: ${scriptsSource}`)
-  if (verbose) {
-    console.log(`Installing ${colorize.cyan('cozy-scripts')}... (may take a while)`)
+  // notice if a specific source is provided
+  if (cliOptions.scriptsSource) console.log(`Specific scripts source provided: ${cliOptions.scriptsSource}`)
+
+  console.log()
+  if (cliOptions.verbose) {
+    console.log(`Installing ${colorize.cyan(scriptsPkgName)}... (may take a while)`)
   } else {
     installingSpinner = ora({
-      text: `Installing ${colorize.cyan('cozy-scripts')}... (may take a while)`,
+      text: `Installing ${colorize.cyan(scriptsPkgName)}... (may take a while)`,
       spinner: 'bouncingBall',
       color: 'gray'
     }).start()
@@ -159,11 +175,12 @@ function bootstrapApp (rootPath, appName, verbose, scriptsSource) {
   // create a package.json here to avoid being detected as subdirectory
   // by yarn and add deps to parent
   fs.writeJsonSync('./package.json', {name: appName})
+  // compute scripts source if provided
   let packageSource = null
-  if (scriptsSource) {
-    const options = scriptsSource.match(/^(\w+):([^\s]*)/)
+  if (cliOptions.scriptsSource) {
+    const options = cliOptions.scriptsSource.match(/^(\w+):([^\s]*)/)
     if (options.length < 3) {
-      packageSource = scriptsSource
+      packageSource = cliOptions.scriptsSource
     } else {
       const sourceType = options[1]
       const source = options[2]
@@ -181,32 +198,32 @@ function bootstrapApp (rootPath, appName, verbose, scriptsSource) {
           packageSource = source
           break
         default:
-          packageSource = scriptsSource
+          packageSource = cliOptions.scriptsSource
           break
       }
     }
   }
   const toInstall = packageSource
-    ? `cozy-scripts@${packageSource}`
-    : 'cozy-scripts'
-  install([toInstall], verbose)
+    ? `${scriptsPkgName}@${packageSource}`
+    : scriptsPkgName
+  install([toInstall], cliOptions.verbose)
   .then(() => {
-    installingSpinner && installingSpinner.succeed(`${colorize.cyan('cozy-scripts')} installed.`)
+    installingSpinner && installingSpinner.succeed(`${colorize.cyan(scriptsPkgName)} installed.`)
     console.log()
     console.log(
       `Starting the application ${colorize.cyan(appName)} bootstrap`
     )
     console.log()
-    // use the create script from cozy-scripts
+    // use the init script from scripts package for taking over
     const initScriptPath = path.resolve(
       process.cwd(),
       'node_modules',
-      'cozy-scripts',
+      scriptsPkgName,
       'scripts',
       'init.js'
     )
     const init = require(initScriptPath)
-    init(rootPath, appName, verbose, function (error) {
+    init(rootPath, appName, cliOptions.verbose, function (error) {
       gracefulExit(rootPath, appName, error)
     })
   })

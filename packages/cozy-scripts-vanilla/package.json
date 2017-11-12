@@ -1,0 +1,29 @@
+{
+  "name": "cozy-scripts-vanilla",
+  "version": "0.1.0",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CPatchane/create-cozy-app.git"
+  },
+  "homepage": "https://github.com/CPatchane/create-cozy-app#readme",
+  "author": "CPatchane <code@patchane.com>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CPatchane/create-cozy-app/issues"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "cross-spawn": "^5.1.0",
+    "fs-extra": "^4.0.2",
+    "prompt": "^1.0.0",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "files": [
+    "scripts",
+    "template",
+    "template/app/.editorconfig",
+    "utils"
+  ]
+}
