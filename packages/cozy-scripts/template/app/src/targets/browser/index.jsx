@@ -58,8 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   appLocale = getDataOrDefault(data.cozyLocale, 'en')
 
+  const protocol = window.location ? window.location.protocol : 'https:'
+
   cozy.client.init({
-    cozyURL: '//' + data.cozyDomain,
+    cozyURL: `${protocol}//${data.cozyDomain}`,
     token: data.cozyToken
   })
   cozy.bar.init({
