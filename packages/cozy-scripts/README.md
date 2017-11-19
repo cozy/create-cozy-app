@@ -72,6 +72,13 @@ The built files (destined to the Cozy) will be in `build/`.
 
 Do the same thing than the previous command with webpack in a watching mode but also run a server (`webpack-dev-server`) to serve your application (as a static application) on the url `http://localhost:8888`
 
+### `cozy-scripts` webpack configuration
+
+`cozy-scripts` is designed to used a default webpack configuration for a basic (P)React/Redux application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder.
+
+You can find mora information about webpack configuration files available via `cozy-scripts` in the dedicated [documentation](docs/webpack-configs.md).
+
+
 ## Community
 
 ### Maintainer
