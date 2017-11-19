@@ -30,4 +30,4 @@ const configs = [
 ]
 */
 
-module.exports = { configs }
+module.exports = configs
