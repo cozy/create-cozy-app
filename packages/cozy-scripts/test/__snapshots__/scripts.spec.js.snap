@@ -49,6 +49,7 @@ Object {
           Object {
             "loader": "postcss-loader",
             "options": Object {
+              "ident": "postcss",
               "sourceMap": true,
             },
           },
@@ -372,6 +373,7 @@ Object {
           Object {
             "loader": "postcss-loader",
             "options": Object {
+              "ident": "postcss",
               "sourceMap": true,
             },
           },
@@ -694,6 +696,7 @@ Object {
           Object {
             "loader": "postcss-loader",
             "options": Object {
+              "ident": "postcss",
               "sourceMap": true,
             },
           },
@@ -1007,6 +1010,7 @@ Object {
           Object {
             "loader": "postcss-loader",
             "options": Object {
+              "ident": "postcss",
               "sourceMap": true,
             },
           },
@@ -1336,6 +1340,7 @@ Object {
           Object {
             "loader": "postcss-loader",
             "options": Object {
+              "ident": "postcss",
               "sourceMap": true,
             },
           },
