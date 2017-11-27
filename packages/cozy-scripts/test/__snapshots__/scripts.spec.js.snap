@@ -1589,7 +1589,7 @@ Object {
       "definitions": Object {
         "__DEVELOPMENT__": false,
         "__DEVTOOLS__": false,
-        "__STACK_ASSETS__": true,
+        "__STACK_ASSETS__": false,
         "process.env.NODE_ENV": "\\"production\\"",
       },
     },
