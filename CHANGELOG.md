@@ -1,3 +1,53 @@
+## create-cozy-app@0.4.1, cozy-scripts@0.3.3 (2017-12-02)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#78](https://github.com/CPatchane/create-cozy-app/pull/78) fix: add font stack from stack. ([@ptbrowne](https://github.com/ptbrowne))
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#77](https://github.com/CPatchane/create-cozy-app/pull/77) chore: add protocol to cozy client js init. ([@y-lohse](https://github.com/y-lohse))
+
+#### :memo: Documentations:
+* `cozy-scripts`
+  * [#81](https://github.com/CPatchane/create-cozy-app/pull/81) Better config documentation + minor fix for postcss loader. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#99](https://github.com/CPatchane/create-cozy-app/pull/99) fix(deps): update dependency webpack to v3.9.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#95](https://github.com/CPatchane/create-cozy-app/pull/95) chore(deps): renovate react monorepo packages. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#94](https://github.com/CPatchane/create-cozy-app/pull/94) fix(deps): update dependency cozy-ui to v4.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#96](https://github.com/CPatchane/create-cozy-app/pull/96) fix(deps): update dependency cozy-bar to v4.5.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#100](https://github.com/CPatchane/create-cozy-app/pull/100) fix(deps): update dependency babel-eslint to v8.0.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#98](https://github.com/CPatchane/create-cozy-app/pull/98) chore(deps): update dependency eslint to v4.12.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#92](https://github.com/CPatchane/create-cozy-app/pull/92) fix(deps): update dependency webpack-dev-server to v2.9.5. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#90](https://github.com/CPatchane/create-cozy-app/pull/90) chore(deps): update dependency eslint to v4.12.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#89](https://github.com/CPatchane/create-cozy-app/pull/89) fix(deps): update dependency postcss-loader to v2.0.9. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#86](https://github.com/CPatchane/create-cozy-app/pull/86) fix(deps): update dependency copy-webpack-plugin to v4.2.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#88](https://github.com/CPatchane/create-cozy-app/pull/88) fix(deps): update dependency cozy-bar to v4.5.2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#84](https://github.com/CPatchane/create-cozy-app/pull/84) fix(deps): update dependency cozy-bar to v4.5.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#83](https://github.com/CPatchane/create-cozy-app/pull/83) fix(deps): update dependency cozy-bar to v4.5.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#82](https://github.com/CPatchane/create-cozy-app/pull/82) fix(deps): update dependency csswring to v6.0.2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#80](https://github.com/CPatchane/create-cozy-app/pull/80) fix(deps): update dependency copy-webpack-plugin to v4.2.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#79](https://github.com/CPatchane/create-cozy-app/pull/79) fix(deps): update dependency cozy-ui to v4.0.5. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#76](https://github.com/CPatchane/create-cozy-app/pull/76) chore(deps): update dependency enzyme-adapter-react-16 to v1.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#75](https://github.com/CPatchane/create-cozy-app/pull/75) chore(deps): update dependency enzyme to v3.2.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#74](https://github.com/CPatchane/create-cozy-app/pull/74) fix(deps): update dependency cozy-bar to v4.4.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#73](https://github.com/CPatchane/create-cozy-app/pull/73) chore(deps): renovate react monorepo packages. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#72](https://github.com/CPatchane/create-cozy-app/pull/72) chore(deps): update dependency eslint-config-cozy-app to v0.3.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#71](https://github.com/CPatchane/create-cozy-app/pull/71) chore(deps): update dependency babel-preset-cozy-app to v0.3.1. ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts`, `create-cozy-app`
+  * [#93](https://github.com/CPatchane/create-cozy-app/pull/93) fix(deps): update dependency commander to v2.12.2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#87](https://github.com/CPatchane/create-cozy-app/pull/87) fix(deps): update dependency commander to v2.12.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#85](https://github.com/CPatchane/create-cozy-app/pull/85) fix(deps): update dependency commander to v2.12.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 4
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+- Patrick Browne ([ptbrowne](https://github.com/ptbrowne))
+- Simon ([kosssi](https://github.com/kosssi))
+- Yannick Lohse ([y-lohse](https://github.com/y-lohse))
+
+
 ## create-cozy-app@0.4.0, cozy-scripts@0.3.2, cozy-scripts-vanilla@0.1.0, babel-preset-cozy-app@0.3.1, eslint-config-cozy-app@0.3.1  (2017-11-12)
 
 #### :sparkles: New Features:
