@@ -8,7 +8,11 @@ const {production} = require('./webpack.vars')
 const pkg = require(paths.appPackageJson)
 
 module.exports = {
-  entry: [paths.appMobileIndexJsx],
+  entry: [
+    // since the file extension depends on the framework here
+    // we get it from a function call
+    paths.appMobileIndex()
+  ],
   output: {
     path: paths.appMobileWWW
   },

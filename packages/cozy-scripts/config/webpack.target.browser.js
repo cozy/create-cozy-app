@@ -7,7 +7,9 @@ const pkg = require(paths.appPackageJson)
 
 module.exports = {
   entry: {
-    app: paths.appBrowserIndexJsx
+    // since the file extension depends on the framework here
+    // we get it from a function call
+    app: paths.appBrowserIndex()
   },
   output: {
     path: paths.appBuild,
