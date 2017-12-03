@@ -4,6 +4,59 @@ exports[`Sidebar component should be rendered correctly 1`] = `
 <aside
   className="coz-sidebar"
 >
-  <_translate />
+  <nav>
+    <ul
+      className="c-nav"
+    >
+      <li
+        className="c-nav-item"
+      >
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="c-nav-link"
+          to="/viewhello1"
+        >
+          <Icon
+            className="nav-icon"
+            icon="test-file-stub"
+          />
+          First
+        </NavLink>
+      </li>
+      <li
+        className="c-nav-item"
+      >
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="c-nav-link"
+          to="/viewhello2"
+        >
+          <Icon
+            className="nav-icon"
+            icon="test-file-stub"
+          />
+          Second
+        </NavLink>
+      </li>
+      <li
+        className="c-nav-item"
+      >
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="c-nav-link"
+          to="/viewhello3"
+        >
+          <Icon
+            className="nav-icon"
+            icon="test-file-stub"
+          />
+          Third
+        </NavLink>
+      </li>
+    </ul>
+  </nav>
 </aside>
 `;

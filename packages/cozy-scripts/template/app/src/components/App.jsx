@@ -2,12 +2,9 @@ import React from 'react'
 import { Route, Switch, Redirect, HashRouter } from 'react-router-dom'
 
 import Sidebar from './Sidebar'
-
-const Hello = (name) => (<p style='margin-left: 2em'>Just... Hello world! This is {name}</p>)
-
-const Hello1 = () => Hello('View 1')
-const Hello2 = () => Hello('View 2')
-const Hello3 = () => Hello('View 3')
+import Hello1 from './HelloViews/Hello1'
+import Hello2 from './HelloViews/Hello2'
+import Hello3 from './HelloViews/Hello3'
 
 const App = ({ children }) => (
   <HashRouter>
