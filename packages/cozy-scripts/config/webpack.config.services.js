@@ -6,7 +6,9 @@ const pkg = require(paths.appPackageJson)
 
 module.exports = {
   entry: {
-    services: paths.appServicesIndexJsx
+    // since the file extension depends on the framework here
+    // we get it from a function call
+    services: paths.appServicesIndex()
   },
   plugins: [
     new HtmlWebpackPlugin({
