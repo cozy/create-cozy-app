@@ -5,7 +5,7 @@ exports[`App component only should be mounted correctly 1`] = `
   <div
     className="app-wrapper coz-sticky"
   >
-    <Sidebar />
+    <Unknown />
     <main
       className="app-content"
     >

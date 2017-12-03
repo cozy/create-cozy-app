@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello components: Hello1 should be rendered correctly 1`] = `
+<p
+  style="margin-left: 2em"
+>
+  Just... Hello world! This is View 1
+</p>
+`;
+
+exports[`Hello components: Hello2 should be rendered correctly 1`] = `
+<p
+  style="margin-left: 2em"
+>
+  Just... Hello world! This is View 2
+</p>
+`;
+
+exports[`Hello components: Hello3 should be rendered correctly 1`] = `
+<p
+  style="margin-left: 2em"
+>
+  Just... Hello world! This is View 3
+</p>
+`;
