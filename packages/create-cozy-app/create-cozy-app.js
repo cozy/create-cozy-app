@@ -31,6 +31,7 @@ const program = new commander.Command(pkg.name)
   })
   .option('--verbose', 'print additional logs')
   .option('--vanilla', 'build a vanilla JS application instead of the default one')
+  .option('--vue', 'build a VueJS 2+ application instead of the default one')
   .option(
     '--scripts-source <scritps-source>',
     'use a specific package of scripts package (see --help)'
@@ -78,6 +79,7 @@ if (!projectName) {
 createApp(projectName, {
   verbose: program.verbose,
   vanilla: program.vanilla,
+  vue: program.vue,
   scriptsSource: program.scriptsSource
 })
 
@@ -223,7 +225,7 @@ function bootstrapApp (rootPath, appName, cliOptions) {
       'init.js'
     )
     const init = require(initScriptPath)
-    init(rootPath, appName, cliOptions.verbose, function (error) {
+    init(rootPath, appName, cliOptions, function (error) {
       gracefulExit(rootPath, appName, error)
     })
   })

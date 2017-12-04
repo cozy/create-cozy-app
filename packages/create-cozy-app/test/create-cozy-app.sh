@@ -174,6 +174,37 @@ if [ $scriptsDep == 'undefined' ]; then
     exit 1
 fi
 
+#######
+## Clean up app folder for the next test
+#######
+cd ..
+rm -rf $app_name
+
+####------------------------------------------------------------####
+
+#######
+## Test with --vue option with fileRel:... (cozy-scripts)
+#######
+
+# run the script
+echo -e "\n${color_blue}----------------------------------------------------------------------------------${color_close}"
+echo -e "${color_blue}• Test with --vue option and --scripts-source fileRel:../$mock_scripts_path_from_root${color_close}"
+node $root_path/packages/create-cozy-app/index.js $app_name --vue --scripts-source fileRel:../$mock_scripts_path_from_root
+
+# if here, there is no errors with the script
+# check the new created folder content
+
+exists_or_error $app_name
+cd $app_name
+exists_or_error package.json yarn.lock node_modules
+# check dependency name in package.json
+scriptsDep="$(node -pe 'JSON.parse(process.argv[1]).dependencies["cozy-scripts"]' "$(cat package.json)")"
+if [ $scriptsDep == 'undefined' ]; then
+    echo -e "${color_red} Dependency 'cozy-scripts' not found in package.json or not correctly installed.${color_close}\n"
+    clean_up
+    exit 1
+fi
+
 ####---END---####
 
 echo -e "${color_blue}----------------------------------------------------------------------------------${color_close}\n"
