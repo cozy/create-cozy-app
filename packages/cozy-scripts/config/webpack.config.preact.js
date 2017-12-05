@@ -1,6 +1,6 @@
 'use strict'
 
-process.env.__FILE_EXT__ = '.jsx'
+process.env.__ENTRY_EXT__ = '.jsx'
 
 module.exports = {
   resolve: {

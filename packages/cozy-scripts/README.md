@@ -6,9 +6,13 @@
 
 # Cozy Scripts
 
-`cozy-scripts` is a script bundle designed to be run by `create-cozy-app`. This latter will just create the root folder and then run the `node_modules/cozy-scripts/scripts/init.js` script inside it.
+`cozy-scripts` is a script bundle designed to be run by `create-cozy-app`. This latter will just create the root folder and then run the `node_modules/cozy-scripts/scripts/init.js` script inside it with some CLI options.
 
-All the template structure is handled by `cozy-scripts`. After the initialisation, you should have the following folder structure:
+All the application template outline is handled by `cozy-scripts`.
+
+### Default template (`template` folder)
+
+Using the default template, `cozy-scripts` will generate a (P)React/Redux application. After the initialisation, you should have the following folder structure:
 
 ```
 mycozyapp/
@@ -23,8 +27,11 @@ mycozyapp/
         assets/
         components/
             App.jsx
-            Nav.jsx
             Sidebar.jsx
+            HelloViews/
+                Hello1.jsx
+                Hello2.jsx
+                Hello3.jsx
         lib/store.js
         locales/en.json
         styles/
@@ -49,6 +56,56 @@ mycozyapp/
     .tx/
         config
 ```
+
+### VueJS 2+ template (`template-vue` folder)
+
+Using the VueJS template, `cozy-scripts` will generate a VueJS/Vuex application. After the initialisation, you should have the following folder structure:
+
+```
+mycozyapp/
+    CONTRIBUTING.md
+    LICENSE
+    README.md
+    manifest.webapp
+    node_modules/
+    package.json
+    yarn.lock
+    src/
+        assets/
+        components/
+            App.vue
+            Icon.vue
+            HelloViews/
+                Hello1.vue
+                Hello2.vue
+                Hello3.vue
+        lib/
+            store.js
+            I18n/
+        locales/en.json
+        styles/
+            index.styl
+            nav.css
+        targets/
+            browser/
+                index.ejs
+                index.js
+            mobile/
+            vendor/
+    test/
+    .babelrc
+    .editorconfig
+    .eslintrc.json
+    .github/
+        .ISSUE_TEMPLATE
+        .PULL_REQUEST_TEMPLATE
+    .gitignore
+    .stylintrc
+    .travis.yml
+    .tx/
+        config
+```
+
 
 ### `cozy-scripts` CLI
 

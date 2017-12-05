@@ -11,7 +11,7 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 // to be sure to use the current process.env context
 // and not the one at the first loading of this file
 const resolveWithExtension = (path, extension) => {
-  const ext = extension || process.env.__FILE_EXT__ || '.js'
+  const ext = extension || process.env.__ENTRY_EXT__ || '.js'
   return resolveApp(`${path}${ext}`)
 }
 
