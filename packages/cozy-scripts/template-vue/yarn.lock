@@ -922,18 +922,6 @@ babel-preset-cozy-app@0.3.0:
     babel-preset-react "^6.24.1"
     babel-runtime "^6.26.0"
 
-babel-preset-cozy-app@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-0.2.1.tgz#f0133750f97d72365853d34b2279d77b233bbf42"
-  dependencies:
-    babel-plugin-transform-class-properties "^6.24.1"
-    babel-plugin-transform-object-rest-spread "^6.26.0"
-    babel-plugin-transform-react-jsx "^6.24.1"
-    babel-plugin-transform-runtime "^6.23.0"
-    babel-preset-env "^1.6.1"
-    babel-preset-react "^6.24.1"
-    babel-runtime "^6.26.0"
-
 babel-preset-cozy-app@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-0.3.1.tgz#3b5d646b5038afad00b16f1c4eada4c4fa8b955f"
@@ -1785,11 +1773,11 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
-cozy-bar@4.3.7:
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.3.7.tgz#b4e9000237d79ab30979764fc45aaeec39213917"
+cozy-bar@4.5.4:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.5.4.tgz#7f079d4358d7ff02c660c721cd196aca337d9bd7"
   dependencies:
-    babel-preset-cozy-app "^0.2.0"
+    babel-preset-cozy-app "^0.3.1"
     cozy-client-js "^0.3.19"
     node-polyglot "^2.2.2"
     piwik-react-router "^0.10.0"
