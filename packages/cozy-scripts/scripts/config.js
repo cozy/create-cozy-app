@@ -11,7 +11,7 @@ let appConfigs
 if (fs.existsSync(path.join(process.cwd(), 'app.config.js'))) {
   appConfigs = require(path.join(process.cwd(), 'app.config.js'))
 } else {
-  appConfigs = require(path.join('../config/webpack.bundle.default.js'))
+  appConfigs = [require(path.join('../config/webpack.bundle.default.js'))]
 }
 
 module.exports = merge.apply(null, appConfigs)
