@@ -4,6 +4,7 @@
 
 - __[Bundles](#bundles)__
     - [`webpack.bundle.default.js`](#webpackbundledefaultjs)
+    - [`webpack.bundle.vue.js`](#webpackbundlevuejs)
 - __[Unit Configs](#unit-configs)__
     - [`webpack.config.base.js`](#webpackconfigbasejs)
     - [`webpack.config.cozy-ui.js`](#webpackconfigcozy-uijs)
@@ -15,6 +16,7 @@
     - [`webpack.config.preact.js`](#webpackconfigpreactjs)
     - [`webpack.config.services.js`](#webpackconfigservicesjs)
     - [`webpack.config.vendors.js`](#webpackconfigvendorsjs)
+    - [`webpack.config.vue.js`](#webpackconfigvuejs)
 - __[Environments](#environments)__
     - [`webpack.environment.dev.js`](#webpackenvironmentdevjs)
     - [`webpack.environment.prod.js`](#webpackenvironmentprodjs)
@@ -33,11 +35,9 @@ This file is the default config bundle used for the application built from `cozy
 - `webpack.config.cozy-ui.js`
 - `webpack.config.cozy-ui.react.js`
 - `webpack.config.eslint.js`
-- `webpack.config.hash.js`
 - `webpack.config.manifest.js`
 - `webpack.config.pictures.js`
 - `webpack.config.preact.js`
-- `webpack.config.services.js`
 - `webpack.config.vendors.js`
 - `webpack.environment.dev.js`
 - `webpack.environment.prod.js`
@@ -57,12 +57,42 @@ import myConfig from './config/webpack.myconfig.js'
 const configs = require('cozy-scripts/config/webpack.bundle.default.js')
 const myConfig = require('./config/webpack.myconfig.js')
 
-// configs is an array of configurations, so just push the custom one
-configs.push(myConfig)
+// it's possible to add many custom configurations using this way,
+// the last will overwrite the previous in case of conflicts
+module.exports = [configs, myConfig]
+```
 
-// it's possible to add many custom configurations using this way
+### `webpack.bundle.vue.js`
 
-module.exports = configs
+This file is the VueJS config bundle used for the application built from `cozy-scripts` with the option `--vue`. It uses all following configs files:
+- `webpack.config.base.js`
+- `webpack.config.cozy-ui.js`
+- `webpack.config.eslint.js`
+- `webpack.config.manifest.js`
+- `webpack.config.pictures.js`
+- `webpack.config.vendors.js`
+- `webpack.config.vue.js`
+- `webpack.environment.dev.js`
+- `webpack.environment.prod.js`
+- `webpack.target.browser.js`
+- `webpack.target.mobile.js`
+- `webpack.vars.js`
+
+The `app.config.js` is needed to use this bundle since it's not the default one for `cozy-scripts`. But you can still overload it using a custom config like the default bundle:
+
+```js
+// app.config.js
+
+// ES Modules
+import configs from 'cozy-scripts/config/webpack.bundle.vue.js'
+import myConfig from './config/webpack.myconfig.js'
+// or CommonJS
+const configs = require('cozy-scripts/config/webpack.bundle.vue.js')
+const myConfig = require('./config/webpack.myconfig.js')
+
+// it's possible to add many custom configurations using this way,
+// the last will overwrite the previous in case of conflicts
+module.exports = [configs, myConfig]
 ```
 
 ## Unit Configs
@@ -172,6 +202,14 @@ It will:
 ### `webpack.config.vendors.js`
 
 A `copy-webpack-plugin` plugin usage to copy all files from the `vendors/assets/` folder to the output build folder.
+
+### `webpack.config.vue.js`
+
+A config to use the VueJS (v2+) framework.
+
+It will:
+- resolve `.vue` extensions
+- add a rule for `.vue` files, excluding `node_modules`, to be loaded using `vue-loader`.
 
 ## Environments
 
