@@ -9,7 +9,7 @@ const validateProjectName = require('validate-npm-package-name')
 
 // override is used only for test to skip prompt (cf prompt.override)
 // successCallback is for now only used for the test assertions
-module.exports = function (appPath, appName, verbose, gracefulRootExit, override, successCallback) {
+module.exports = function (appPath, appName, cliOptions, gracefulRootExit, override, successCallback) {
   // informations needed to replace in templates
   /*
     <APP_NAME> (already provided with appName) : application name
@@ -88,17 +88,17 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
       console.log(colorize.red(err))
       gracefulRootExit(err)
     } else {
-      if (verbose) {
+      if (cliOptions.verbose) {
         console.log()
         console.log('Informations received:')
       }
       for (const propName in received) {
         dataMap.set(propName, received[propName])
-        if (verbose) console.log(`\t${propName}: ${received[propName]}`)
+        if (cliOptions.verbose) console.log(`\t${propName}: ${received[propName]}`)
       }
       dataMap.set('<APP_NAME>', appName) // add already provided app name
       try {
-        run(appPath, dataMap, verbose, gracefulRootExit, successCallback)
+        run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback)
       } catch (e) {
         gracefulExit(appPath)
         gracefulRootExit(e)
@@ -111,13 +111,14 @@ function requireFileAsString (filename) {
   return fs.readFileSync(filename, 'utf8')
 }
 
-function run (appPath, dataMap, verbose, gracefulRootExit, successCallback) {
+function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   const ownPackageName = require(
     path.join(__dirname, '..', 'package.json')
   ).name
+  const templateName = cliOptions.vue ? 'template-vue' : 'template'
   // paths
   const ownPath = path.join(appPath, 'node_modules', ownPackageName)
-  const templatePath = path.join(ownPath, 'template')
+  const templatePath = path.join(ownPath, templateName)
   const templateAppPath = path.join(templatePath, 'app')
   // dependencies from create-cozy-app script
   const createdDeps = require(path.join(appPath, 'package.json')).dependencies
@@ -184,13 +185,17 @@ function run (appPath, dataMap, verbose, gracefulRootExit, successCallback) {
   console.log('(May take a while)')
   console.log()
   process.chdir(appPath)
-  installDependencies(verbose)
+  installDependencies(cliOptions.verbose)
   .then(() => {
     console.log()
     console.log('App dependencies installed.')
     console.log()
     console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/. Enjoy it!`))
-    console.log('You can also create an `app.config.js` if you want to customize the webpack configuration.')
+    if (cliOptions.vue) {
+      console.log('You can use the `app.config.js` file if you want to customize the webpack configuration.')
+    } else {
+      console.log('You can also create an `app.config.js` file if you want to customize the webpack configuration.')
+    }
     if (typeof successCallback === 'function') successCallback()
   })
   .catch(error => {

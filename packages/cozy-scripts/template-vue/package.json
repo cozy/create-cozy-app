@@ -1,0 +1,123 @@
+{
+  "name": "cozy-scripts-template-vue",
+  "version": "0.1.0",
+  "scripts": {
+    "clean:browser": "rm -rf build/*",
+    "clean:mobile": "rm -rf mobile/www/*",
+    "tx": "tx pull --all || true",
+    "lint": "npm-run-all --parallel 'lint:*'",
+    "lint:js": "eslint '{src,test}/**/*.{js,jsx}'",
+    "prettier": "prettier --write '{src,test}/**/*.{js,jsx}' && eslint --fix '{src,test}/**/*.{js,jsx}'",
+    "lint:styles": "stylint src/styles --config ./.stylintrc",
+    "build": "yarn run build:browser",
+    "commons:build": "cozy-scripts build",
+    "build:browser": "NODE_ENV=browser:production npm-run-all --serial clean:browser lint:js tx commons:build",
+    "build:mobile": "NODE_ENV=mobile:production npm-run-all --serial clean:mobile lint:js tx commons:build",
+    "prewatch:mobile": "yarn run clean:mobile",
+    "watch": "yarn run watch:browser",
+    "commons:watch": "cozy-scripts watch --debug",
+    "watch:browser": "NODE_ENV=browser:development npm-run-all --serial clean:browser commons:watch",
+    "watch:mobile": "NODE_ENV=mobile:development npm-run-all --serial clean:mobile commons:watch",
+    "watch:standalone": "yarn run watch:browser:standalone",
+    "commons:watch:standalone": "cozy-scripts standalone",
+    "watch:browser:standalone": "NODE_ENV=browser:development yarn run commons:watch:standalone",
+    "watch:mobile:standalone": "NODE_ENV=mobile:development yarn run commons:watch:standalone",
+    "config:browser:production": "NODE_ENV=browser:production cozy-scripts --show-config",
+    "config:browser:development": "NODE_ENV=browser:development cozy-scripts --show-config",
+    "config:mobile:production": "NODE_ENV=mobile:production cozy-scripts --show-config",
+    "config:mobile:development": "NODE_ENV=mobile:development cozy-scripts --show-config",
+    "deploy": "git-directory-deploy --username <USERNAME_GH> --email <USER_EMAIL_GH> --directory build/ --repo=https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git",
+    "test": "npm-run-all --serial lint test:jest",
+    "test:jest": "jest --verbose --coverage",
+    "stack:docker": "docker run --rm -it -p 8080:8080 -v \"$(pwd)/build\":/data/cozy-app/app cozy/cozy-app-dev",
+    "android:prepare": "(cd src/targets/mobile && cordova platform add android && cordova prepare)",
+    "android:run": "(cd src/targets/mobile && cordova run android --device)",
+    "android:run:emulator": "(cd src/targets/mobile && cordova run android --emulator)",
+    "android:release": "npm run build:mobile && (cd src/targets/mobile && cordova build android --release)",
+    "android:signed": "npm run android:release && (cd src/targets/mobile && apksigner sign --ks keys/android/<APP_NAME>-release-key.jks --out build/android/<APP_NAME>.apk platforms/android/build/outputs/apk/android-release-unsigned.apk)",
+    "android:publish": "npm run android:signed && (cd src/targets/mobile && fastlane supply)",
+    "ios:prepare": "(cd src/targets/mobile && cordova platform add ios && cordova prepare)",
+    "ios:run": "(cd src/targets/mobile && cordova run ios --device)",
+    "ios:run:emulator": "(cd src/targets/mobile && cordova run ios --emulator)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<USERNAME_GH>/<SLUG_GH>.git"
+  },
+  "author": "",
+  "contributors": [],
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/<USERNAME_GH>/<SLUG_GH>/issues"
+  },
+  "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-jest": "21.2.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-cozy-app": "0.3.0",
+    "eslint": "4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "git-directory-deploy": "1.5.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "21.2.1",
+    "jest-serializer-vue": "^0.3.0",
+    "npm-run-all": "4.1.2",
+    "prettier": "1.8.2",
+    "standard": "^10.0.3",
+    "stylint": "1.5.9",
+    "vue-jest": "^1.2.0",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.8",
+    "vue-test-utils": "^1.0.0-beta.6"
+  },
+  "dependencies": {
+    "cozy-bar": "4.3.7",
+    "cozy-client-js": "0.3.21",
+    "cozy-scripts": "0.3.2",
+    "cozy-ui": "^4.0.5",
+    "date-fns": "^1.29.0",
+    "node-polyglot": "^2.2.2",
+    "vue": "^2.5.8",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue",
+      "json",
+      "styl"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/jestLib/setup.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(png|gif|jpe?g|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
+      "styles": "identity-obj-proxy"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!cozy-ui)"
+    ],
+    "globals": {
+      "__ALLOW_HTTP__": false,
+      "__TARGET__": "browser",
+      "cozy": {}
+    }
+  }
+}

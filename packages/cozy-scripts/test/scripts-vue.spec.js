@@ -8,7 +8,7 @@ const colorize = require('../utils/_colorize.js')
 
 const testFolder = '.tmp_test'
 const rootPath = process.cwd()
-const appName = 'test-app'
+const appName = 'test-app-vue'
 const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
 const customConfigPath = path.join(appPath, 'app.config.js')
@@ -77,7 +77,7 @@ function getConfig () {
     .replace(pathReplaceRegex, `"${testFolder}/${appName}`)
 }
 
-describe('App from cozy-scripts', () => {
+describe('App from cozy-scripts with VueJS 2', () => {
   beforeAll(() => {
     // create the app test folder
     fs.ensureDirSync(appPath)
@@ -92,7 +92,6 @@ describe('App from cozy-scripts', () => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
     jest.resetModules()
-    if (fs.existsSync(customConfigPath)) fs.removeSync(customConfigPath)
   })
 
   afterAll(() => {
@@ -102,7 +101,7 @@ describe('App from cozy-scripts', () => {
 
   it('should have the correct files outline', (done) => {
     const init = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'init.js'))
-    const options = { verbose: false }
+    const options = { verbose: false, vue: true }
     // run the initiallisation script
     init(appPath, appName, options, (e) => {
       console.log(colorize.red('The script exited for some reasons. The test failed.'))
@@ -144,12 +143,6 @@ describe('App from cozy-scripts', () => {
 
   it('should have the correct config mobile:production according to NODE_ENV=mobile:production', () => {
     process.env.NODE_ENV = 'mobile:production'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
-  })
-
-  it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
-    fs.copySync(ownTestConfig, customConfigPath)
     const appConfig = getConfig()
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
