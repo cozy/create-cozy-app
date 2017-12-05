@@ -53,7 +53,9 @@ const router = new VueRouter({
     { path: '/', redirect: '/viewhello1'},
     { path: '/viewhello1', component: Hello1 },
     { path: '/viewhello2', component: Hello2 },
-    { path: '/viewhello3', component: Hello3 }
+    { path: '/viewhello3', component: Hello3 },
+    // default, always at the end
+    { path: '*', redirect: '/viewhello1'}
   ]
 })
 
