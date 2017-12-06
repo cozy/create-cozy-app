@@ -78,7 +78,6 @@
   "dependencies": {
     "cozy-bar": "4.5.4",
     "cozy-client-js": "0.3.21",
-    "cozy-scripts": "0.3.3",
     "cozy-ui": "4.1.1",
     "date-fns": "1.29.0",
     "node-polyglot": "2.2.2",
