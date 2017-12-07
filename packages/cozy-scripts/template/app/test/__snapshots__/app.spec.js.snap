@@ -10,6 +10,11 @@ exports[`App component only should be mounted correctly 1`] = `
       className="app-content"
     >
       <Switch>
+        <Redirect
+          from="/"
+          push={false}
+          to="/viewhello1"
+        />
         <Route
           component={[Function]}
           path="/viewhello1"
@@ -23,7 +28,7 @@ exports[`App component only should be mounted correctly 1`] = `
           path="/viewhello3"
         />
         <Redirect
-          from="/"
+          from="*"
           push={false}
           to="/viewhello1"
         />

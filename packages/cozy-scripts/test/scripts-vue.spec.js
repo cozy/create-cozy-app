@@ -11,8 +11,6 @@ const rootPath = process.cwd()
 const appName = 'test-app-vue'
 const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
-const customConfigPath = path.join(appPath, 'app.config.js')
-const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
 const spawn = require('cross-spawn')
 
 process.on('SIGINT', () => {
@@ -23,7 +21,7 @@ process.on('SIGINT', () => {
   process.exit(1)
 })
 
-jest.setTimeout(120000) // 120s timeout
+jest.setTimeout(180000) // 180s timeout
 
 function cleanUp () {
   console.log(colorize.orange('Cleaning up generated files'))
@@ -173,7 +171,8 @@ describe('App from cozy-scripts with VueJS 2', () => {
   it('should pass all app tests with success', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
-      spawn.sync('yarn', ['test'], { stdio: 'inherit' })
+      const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
+      if (result.status === 1) throw new Error('The generated applciation tests failed')
     }).not.toThrow()
   })
 })
