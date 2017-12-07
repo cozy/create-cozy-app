@@ -23,7 +23,7 @@ process.on('SIGINT', () => {
   process.exit(1)
 })
 
-jest.setTimeout(120000) // 120s timeout
+jest.setTimeout(180000) // 180s timeout
 
 function cleanUp () {
   console.log(colorize.orange('Cleaning up generated files'))
@@ -180,7 +180,8 @@ describe('App from cozy-scripts', () => {
   it('should pass all app tests with success', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
-      spawn.sync('yarn', ['test'], { stdio: 'inherit' })
+      const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
+      if (result.status === 1) throw new Error('The generated applciation tests failed')
     }).not.toThrow()
   })
 })
