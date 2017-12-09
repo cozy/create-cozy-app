@@ -5,19 +5,19 @@
         <ul class='c-nav'>
           <li class='c-nav-item'>
             <router-link class='c-nav-link' to='/viewhello1'>
-              <icon class='nav-icon' v-bind:icon='navIcon' />
+              <icon class='c-nav-icon' v-bind:icon='navIcon' />
               {{ t('Nav.hello_nav_1') }}
             </router-link>
           </li>
           <li class='c-nav-item'>
             <router-link class='c-nav-link' to='/viewhello2'>
-              <icon class='nav-icon' v-bind:icon='navIcon' />
+              <icon class='c-nav-icon' v-bind:icon='navIcon' />
               {{ t('Nav.hello_nav_2') }}
             </router-link>
           </li>
           <li class='c-nav-item'>
             <router-link class='c-nav-link' to='/viewhello3'>
-              <icon class='nav-icon' v-bind:icon='navIcon' />
+              <icon class='c-nav-icon' v-bind:icon='navIcon' />
               {{ t('Nav.hello_nav_3') }}
             </router-link>
           </li>
