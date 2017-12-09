@@ -7,7 +7,7 @@
 	fill: #95999D;
 }
 
-.c-nav-link.active .nav-icon {
+.c-nav-link.is-active .nav-icon {
 	fill: #297EF2;
 }
 
@@ -16,7 +16,7 @@
 		padding: 0;
 	}
 
-	.c-nav-link.active {
+	.c-nav-link.is-active {
 		color: #297EF2;
 	}
 

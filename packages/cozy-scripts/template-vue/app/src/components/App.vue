@@ -1,6 +1,6 @@
 <template>
-  <div class='app-wrapper coz-sticky'>
-    <aside class='coz-sidebar'>
+  <div class='app-wrapper o-layout--2panes'>
+    <aside class='o-sidebar'>
       <nav>
         <ul class='c-nav'>
           <li class='c-nav-item'>
@@ -48,7 +48,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'hash',
   base: '/',
-  linkActiveClass: 'active',
+  linkActiveClass: 'is-active',
   routes: [
     { path: '/viewhello1', component: Hello1 },
     { path: '/viewhello2', component: Hello2 },
