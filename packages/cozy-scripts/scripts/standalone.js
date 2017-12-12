@@ -2,14 +2,13 @@
 
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
-const colorize = require('../utils/_colorize.js')
-const appConfig = require('./config.js')
+const colorize = require('../utils/_colorize')
+const configs = require('./config')
 
-const config = Object.assign({}, appConfig, {
-  output: {
-    filename: '[name][hash].bundle.js'
-  }
-})
+// the main app config is at the first position
+const appConfig = configs[0]
+appConfig.bail = false // disable bail when watching
+appConfig.output = {filename: '[name][hash].bundle.js'}
 
 const port = process.env.PORT || '8888'
 const host = process.env.HOST || 'localhost'
@@ -27,9 +26,9 @@ const options = {
   port
 }
 
-WebpackDevServer.addDevServerEntrypoints(config, options)
+WebpackDevServer.addDevServerEntrypoints(appConfig, options)
 
-const compiler = webpack(config)
+const compiler = webpack(appConfig)
 const server = new WebpackDevServer(compiler, options)
 
 // There is no callback available on compiler here,

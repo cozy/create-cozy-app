@@ -32,6 +32,8 @@ module.exports = {
   // for intents
   appIntentsHtmlTemplate: resolveApp('src/targets/intents/index.ejs'),
   appIntentsIndex: (ext) => resolveWithExtension('src/targets/intents/index', ext),
+  // for services
+  appServicesFolder: resolveApp('src/targets/services'),
   // for mobile
   appMobileHtmlTemplate: resolveApp('src/targets/mobile/index.ejs'),
   appMobileIndex: (ext) => resolveWithExtension('src/targets/mobile/index', ext),

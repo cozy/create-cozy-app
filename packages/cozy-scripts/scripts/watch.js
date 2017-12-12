@@ -1,12 +1,13 @@
 'use strict'
 
 const webpack = require('webpack')
-const appConfig = require('./config.js')
-const colorize = require('../utils/_colorize.js')
+const configs = require('./config')
+const colorize = require('../utils/_colorize')
 
-const compiler = webpack(Object.assign({}, appConfig, {
-  bail: true
-}))
+// the main app config is at the first position
+const appConfig = configs[0]
+appConfig.bail = false // disable bail when watching
+const compiler = webpack(appConfig)
 
 const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 
