@@ -67,7 +67,7 @@
     "jest": "21.2.1",
     "jest-serializer-vue": "0.3.0",
     "npm-run-all": "4.1.2",
-    "prettier": "1.9.1",
+    "prettier": "1.9.2",
     "standard": "10.0.3",
     "stylint": "1.5.9",
     "vue-jest": "1.3.0",
