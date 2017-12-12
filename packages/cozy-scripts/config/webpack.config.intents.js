@@ -8,15 +8,15 @@ module.exports = {
   entry: {
     // since the file extension depends on the framework here
     // we get it from a function call
-    services: paths.appServicesIndex()
+    intents: paths.appIntentsIndex()
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: paths.appServicesHtmlTemplate,
-      title: `${pkg.name} services`,
-      filename: 'services/index.html',
+      template: paths.appIntentsHtmlTemplate,
+      title: `${pkg.name} intents`,
+      filename: 'intents/index.html',
       inject: false,
-      chunks: ['services'],
+      chunks: ['intents'],
       minify: {
         collapseWhitespace: true
       }

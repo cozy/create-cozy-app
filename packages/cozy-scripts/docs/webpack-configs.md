@@ -186,16 +186,16 @@ It will:
     - Due to [an HMR issue](https://github.com/developit/preact-compat/issues/392), `preact-compat` to `preact-compat/dist/preact-compat`
 - add a rule for `.jsx` files excluding `node_modules` (exception for `node_modules/cozy-ui`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
 
-### `webpack.config.services.js`
+### `webpack.config.intents.js`
 
-This is a specific configuration file to develop application services for the Cozy platform.
+This is a specific configuration file to develop application intents for the Cozy platform.
 
 It will:
-- add a webpack entry: `src/targets/services/services.jsx`
-- use `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/services/` with options:
-    - `title`: `name` property of the `package.json` + ` services`
-    - `filename`: `services/index.html`, the output file
-    - `chunks`: ['services']
+- add a webpack entry: `src/targets/intents/intents.jsx`
+- use `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/intents/` with options:
+    - `title`: `name` property of the `package.json` + ` intents`
+    - `filename`: `intents/index.html`, the output file
+    - `chunks`: ['intents']
     - `inject` to `false`
     - `minify` with `collapseWhitespace` to `true`
 
