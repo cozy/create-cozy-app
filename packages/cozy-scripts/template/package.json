@@ -76,7 +76,7 @@
     "cozy-bar": "4.5.4",
     "cozy-client-js": "0.4.4",
     "cozy-ui": "4.1.1",
-    "preact": "8.2.6",
+    "preact": "8.2.7",
     "preact-compat": "3.17.0",
     "react-redux": "5.0.6",
     "react-router-dom": "4.2.2",
