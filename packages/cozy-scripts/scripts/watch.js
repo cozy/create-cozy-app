@@ -4,9 +4,7 @@ const webpack = require('webpack')
 const appConfig = require('./config.js')
 const colorize = require('../utils/_colorize.js')
 
-const compiler = webpack(Object.assign({}, appConfig, {
-  bail: true
-}))
+const compiler = webpack(Object.assign({}, appConfig))
 
 const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 
