@@ -12,10 +12,10 @@ const App = ({ children }) => (
       <Sidebar />
       <main className='app-content'>
         <Switch>
-          <Redirect from='/' to='/viewhello1' />
           <Route path='/viewhello1' component={Hello1} />
           <Route path='/viewhello2' component={Hello2} />
           <Route path='/viewhello3' component={Hello3} />
+          <Redirect from='/' to='/viewhello1' />
           <Redirect from='*' to='/viewhello1' />
         </Switch>
       </main>
