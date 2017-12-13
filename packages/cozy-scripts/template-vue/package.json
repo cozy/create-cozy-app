@@ -72,7 +72,7 @@
     "stylint": "1.5.9",
     "vue-jest": "1.3.0",
     "vue-loader": "13.5.0",
-    "vue-template-compiler": "2.5.9",
+    "vue-template-compiler": "2.5.10",
     "vue-test-utils": "1.0.0-beta.7"
   },
   "dependencies": {
