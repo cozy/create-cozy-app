@@ -50,10 +50,10 @@ const router = new VueRouter({
   base: '/',
   linkActiveClass: 'active',
   routes: [
-    { path: '/', redirect: '/viewhello1'},
     { path: '/viewhello1', component: Hello1 },
     { path: '/viewhello2', component: Hello2 },
     { path: '/viewhello3', component: Hello3 },
+    { path: '/', redirect: '/viewhello1'},
     // default, always at the end
     { path: '*', redirect: '/viewhello1'}
   ]
