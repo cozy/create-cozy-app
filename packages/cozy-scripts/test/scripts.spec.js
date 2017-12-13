@@ -5,6 +5,7 @@
 const fs = require('fs-extra')
 const path = require('path')
 const colorize = require('../utils/_colorize.js')
+const spawn = require('cross-spawn')
 
 const testFolder = '.tmp_test'
 const rootPath = process.cwd()
@@ -13,7 +14,7 @@ const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
 const customConfigPath = path.join(appPath, 'app.config.js')
 const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
-const spawn = require('cross-spawn')
+const servicesTestConfig = path.join(__dirname, 'lib', 'services.config.js')
 
 process.on('SIGINT', () => {
   console.log()
@@ -92,7 +93,9 @@ describe('App from cozy-scripts', () => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
     jest.resetModules()
-    if (fs.existsSync(customConfigPath)) fs.removeSync(customConfigPath)
+    if (fs.existsSync(customConfigPath)) {
+      fs.removeSync(customConfigPath)
+    }
   })
 
   afterAll(() => {
@@ -148,10 +151,26 @@ describe('App from cozy-scripts', () => {
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
 
-  it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
-    fs.copySync(ownTestConfig, customConfigPath)
+  // Jest will cache app.config.js require, need to find a way to disable that
+  // it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
+  //   fs.copySync(ownTestConfig, customConfigPath)
+  //   const appConfig = getConfig()
+  //   expect(JSON.parse(appConfig)).toMatchSnapshot()
+  // })
+
+  it('should return two separated configs if services config is used (also test app.config.js usage)', () => {
+    fs.copySync(servicesTestConfig, customConfigPath)
+    fs.writeFileSync(path.join(appPath, 'src', 'targets', 'services', 'testservice.js'), '')
     const appConfig = getConfig()
     expect(JSON.parse(appConfig)).toMatchSnapshot()
+  })
+
+  it('should pass all app tests with success', () => {
+    console.log(colorize.orange('Running app tests...'))
+    expect(() => {
+      const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
+      if (result.status === 1) throw new Error('The generated applciation tests failed')
+    }).not.toThrow()
   })
 
   it('should run webpack.run correctly with build script', (done) => {
@@ -161,6 +180,7 @@ describe('App from cozy-scripts', () => {
     expect(() => build(done)).not.toThrow()
   })
 
+  // should be always at the end (due to cleanUp usage)
   it('should run webpack.watch correctly with watch script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts watch script...'))
     process.env.NODE_ENV = 'browser:development'
@@ -175,13 +195,5 @@ describe('App from cozy-scripts', () => {
       }
       done()
     })).not.toThrow()
-  })
-
-  it('should pass all app tests with success', () => {
-    console.log(colorize.orange('Running app tests...'))
-    expect(() => {
-      const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
-      if (result.status === 1) throw new Error('The generated applciation tests failed')
-    }).not.toThrow()
   })
 })

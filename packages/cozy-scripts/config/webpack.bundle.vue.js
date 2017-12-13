@@ -1,5 +1,6 @@
 'use strict'
 
+const merge = require('webpack-merge')
 const { environment, target } = require('./webpack.vars')
 
 const configs = [
@@ -19,4 +20,4 @@ if (environment === 'production') {
   configs.push(require('./webpack.environment.dev'))
 }
 
-module.exports = configs
+module.exports = merge.apply(null, configs)

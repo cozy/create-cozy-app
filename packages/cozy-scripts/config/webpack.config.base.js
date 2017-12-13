@@ -14,6 +14,7 @@ module.exports = {
     modules: [paths.appNodeModules, paths.appSrc],
     extensions: ['.js', '.json', '.css']
   },
+  bail: true,
   module: {
     rules: [
       {

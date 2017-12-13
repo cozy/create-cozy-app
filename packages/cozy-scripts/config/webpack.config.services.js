@@ -1,25 +1,40 @@
 'use strict'
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const fs = require('fs-extra')
+const webpack = require('webpack')
 const paths = require('../utils/paths')
-const pkg = require(paths.appPackageJson)
+const { target } = require('./webpack.vars')
 
-module.exports = {
-  entry: {
-    // since the file extension depends on the framework here
-    // we get it from a function call
-    services: paths.appServicesIndex()
+const servicesFolder = paths.appServicesFolder
+const servicesPaths = fs.readdirSync(servicesFolder)
+
+const servicesEntries = {}
+servicesPaths.forEach(file => {
+  if (!file.match(/^[^.]*.js$/)) return
+  var filename = file.match(/^([^.]*).js$/)[1]
+  servicesEntries[filename] = path.resolve(
+    path.join(servicesFolder, file)
+  )
+})
+
+const config = {
+  mergeStrategy: {
+    plugins: 'replace',
+    output: 'replace',
+    entry: 'replace'
   },
+  entry: servicesEntries,
+  target: 'node',
+  devtool: false,
   plugins: [
-    new HtmlWebpackPlugin({
-      template: paths.appServicesHtmlTemplate,
-      title: `${pkg.name} services`,
-      filename: 'services/index.html',
-      inject: false,
-      chunks: ['services'],
-      minify: {
-        collapseWhitespace: true
-      }
+    new webpack.DefinePlugin({
+      __TARGET__: JSON.stringify('services')
     })
   ]
 }
+
+// only for browser target (services are usable only on cozy-stack)
+module.exports = target === 'browser'
+  ? { multiple: { services: config } }
+  : {}

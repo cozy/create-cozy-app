@@ -145,6 +145,14 @@ describe('App from cozy-scripts with VueJS 2', () => {
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
 
+  it('should pass all app tests with success', () => {
+    console.log(colorize.orange('Running app tests...'))
+    expect(() => {
+      const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
+      if (result.status === 1) throw new Error('The generated applciation tests failed')
+    }).not.toThrow()
+  })
+
   it('should run webpack.run correctly with build script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
     process.env.NODE_ENV = 'browser:production'
@@ -152,6 +160,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
     expect(() => build(done)).not.toThrow()
   })
 
+  // should be always at the end (due to cleanUp usage)
   it('should run webpack.watch correctly with watch script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts watch script...'))
     process.env.NODE_ENV = 'browser:development'
@@ -166,13 +175,5 @@ describe('App from cozy-scripts with VueJS 2', () => {
       }
       done()
     })).not.toThrow()
-  })
-
-  it('should pass all app tests with success', () => {
-    console.log(colorize.orange('Running app tests...'))
-    expect(() => {
-      const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
-      if (result.status === 1) throw new Error('The generated applciation tests failed')
-    }).not.toThrow()
   })
 })
