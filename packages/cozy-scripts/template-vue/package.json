@@ -73,7 +73,7 @@
     "vue-jest": "1.4.0",
     "vue-loader": "13.5.0",
     "vue-template-compiler": "2.5.10",
-    "vue-test-utils": "1.0.0-beta.7"
+    "vue-test-utils": "1.0.0-beta.8"
   },
   "dependencies": {
     "cozy-bar": "4.5.5",
