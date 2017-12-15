@@ -1,23 +1,23 @@
 <template>
-  <div class='app-wrapper coz-sticky'>
-    <aside class='coz-sidebar'>
+  <div class='app-wrapper o-layout--2panes'>
+    <aside class='o-sidebar'>
       <nav>
         <ul class='c-nav'>
           <li class='c-nav-item'>
             <router-link class='c-nav-link' to='/viewhello1'>
-              <icon class='nav-icon' v-bind:icon='navIcon' />
+              <icon class='c-nav-icon' v-bind:icon='navIcon' />
               {{ t('Nav.hello_nav_1') }}
             </router-link>
           </li>
           <li class='c-nav-item'>
             <router-link class='c-nav-link' to='/viewhello2'>
-              <icon class='nav-icon' v-bind:icon='navIcon' />
+              <icon class='c-nav-icon' v-bind:icon='navIcon' />
               {{ t('Nav.hello_nav_2') }}
             </router-link>
           </li>
           <li class='c-nav-item'>
             <router-link class='c-nav-link' to='/viewhello3'>
-              <icon class='nav-icon' v-bind:icon='navIcon' />
+              <icon class='c-nav-icon' v-bind:icon='navIcon' />
               {{ t('Nav.hello_nav_3') }}
             </router-link>
           </li>
@@ -48,7 +48,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'hash',
   base: '/',
-  linkActiveClass: 'active',
+  linkActiveClass: 'is-active',
   routes: [
     { path: '/viewhello1', component: Hello1 },
     { path: '/viewhello2', component: Hello2 },

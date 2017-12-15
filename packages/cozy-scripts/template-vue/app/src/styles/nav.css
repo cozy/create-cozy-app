@@ -2,12 +2,12 @@
 	padding: 0 1rem;
 }
 
-.c-nav-link .nav-icon {
+.c-nav-link .c-nav-icon {
 	padding-right: 0.5rem;
 	fill: #95999D;
 }
 
-.c-nav-link.active .nav-icon {
+.c-nav-link.is-active .c-nav-icon {
 	fill: #297EF2;
 }
 
@@ -16,11 +16,11 @@
 		padding: 0;
 	}
 
-	.c-nav-link.active {
+	.c-nav-link.is-active {
 		color: #297EF2;
 	}
 
-	.c-nav-link .nav-icon {
+	.c-nav-link .c-nav-icon {
 		display: block;
 		padding: 0;
 		width: 1.15rem;

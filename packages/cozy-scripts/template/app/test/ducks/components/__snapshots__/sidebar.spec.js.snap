@@ -2,7 +2,7 @@
 
 exports[`Sidebar component should be rendered correctly 1`] = `
 <aside
-  className="coz-sidebar"
+  className="o-sidebar"
 >
   <nav>
     <ul
@@ -12,13 +12,13 @@ exports[`Sidebar component should be rendered correctly 1`] = `
         className="c-nav-item"
       >
         <NavLink
-          activeClassName="active"
+          activeClassName="is-active"
           ariaCurrent="true"
           className="c-nav-link"
           to="/viewhello1"
         >
           <Icon
-            className="nav-icon"
+            className="c-nav-icon"
             icon="test-file-stub"
           />
           First
@@ -28,13 +28,13 @@ exports[`Sidebar component should be rendered correctly 1`] = `
         className="c-nav-item"
       >
         <NavLink
-          activeClassName="active"
+          activeClassName="is-active"
           ariaCurrent="true"
           className="c-nav-link"
           to="/viewhello2"
         >
           <Icon
-            className="nav-icon"
+            className="c-nav-icon"
             icon="test-file-stub"
           />
           Second
@@ -44,13 +44,13 @@ exports[`Sidebar component should be rendered correctly 1`] = `
         className="c-nav-item"
       >
         <NavLink
-          activeClassName="active"
+          activeClassName="is-active"
           ariaCurrent="true"
           className="c-nav-link"
           to="/viewhello3"
         >
           <Icon
-            className="nav-icon"
+            className="c-nav-icon"
             icon="test-file-stub"
           />
           Third

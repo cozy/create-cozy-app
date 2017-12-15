@@ -3,7 +3,7 @@
 exports[`App component only should be mounted correctly 1`] = `
 <HashRouter>
   <div
-    className="app-wrapper coz-sticky"
+    className="app-wrapper o-layout--2panes"
   >
     <Unknown />
     <main

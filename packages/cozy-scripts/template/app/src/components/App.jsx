@@ -8,7 +8,7 @@ import Hello3 from './HelloViews/Hello3'
 
 const App = ({ children }) => (
   <HashRouter>
-    <div className='app-wrapper coz-sticky'>
+    <div className='app-wrapper o-layout--2panes'>
       <Sidebar />
       <main className='app-content'>
         <Switch>
