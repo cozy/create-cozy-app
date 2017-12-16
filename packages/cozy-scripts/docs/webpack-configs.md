@@ -120,7 +120,7 @@ A specific `noParse` property is enabled on `/localforage/dist`.
 ##### Plugins:
 - `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading)
 - `extract-text-webpack-plugin` imported from `webpack.vars.js`
-- `postcss-assets-webpack-plugin` to load all `.css` files with:
+- `postcss-assets-webpack-plugin` (logs from this plugin are shown only in `--debug` mode) to load all `.css` files with:
     - `css-mqpacker` (pack all CSS media query rules into one)
     - `postcss-discard-duplicates` (remove duplicates)
     - `postcss-discard-empty` (remove empty definitions)

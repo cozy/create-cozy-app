@@ -21,8 +21,8 @@ module.exports = (successCallback) => {
     }
 
     console.log(stats.toString({
-      modules: isDebugMode, // display modules
-      chunks: isDebugMode,  // display chunks
+      modules: isDebugMode, // display modules in debug mode
+      chunks: isDebugMode,  // display chunks in debug mode
       colors: true    // Shows colors in the console
     }))
 

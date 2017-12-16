@@ -540,6 +540,333 @@ Array [
       },
       Object {
         "options": Object {
+          "log": false,
+          "plugins": Array [
+            null,
+            null,
+            null,
+          ],
+          "test": Object {},
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
+      Object {
+        "options": Object {
+          "options": Object {
+            "stylus": Object {
+              "use": Array [
+                null,
+              ],
+            },
+          },
+          "test": Object {},
+        },
+      },
+      Object {},
+      Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "chunks": "all",
+          "compile": true,
+          "excludeChunks": Array [],
+          "favicon": false,
+          "filename": "index.html",
+          "hash": false,
+          "inject": false,
+          "minify": Object {
+            "collapseWhitespace": true,
+          },
+          "showErrors": true,
+          "template": ".tmp_test/test-app/src/targets/browser/index.ejs",
+          "title": "test-app",
+          "xhtml": false,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__TARGET__": "\\"browser\\"",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__DEVELOPMENT__": true,
+          "__STACK_ASSETS__": false,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "cozy.bar": "cozy-bar/dist/cozy-bar.js",
+          "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {
+        "options": Object {},
+      },
+      Object {
+        "fullBuildTimeout": 200,
+        "options": Object {},
+        "requestTimeout": 10000,
+      },
+    ],
+    "resolve": Object {
+      "alias": Object {
+        "preact-compat": "preact-compat/dist/preact-compat",
+        "react": "preact-compat",
+        "react-dom": "preact-compat",
+      },
+      "extensions": Array [
+        ".js",
+        ".json",
+        ".css",
+        ".jsx",
+        ".styl",
+      ],
+      "modules": Array [
+        ".tmp_test/test-app/node_modules",
+        ".tmp_test/test-app/src",
+      ],
+    },
+  },
+]
+`;
+
+exports[`App from cozy-scripts should have the correct config browser:development by default handling --debug mode 1`] = `
+Array [
+  Object {
+    "bail": true,
+    "devtool": "#source-map",
+    "entry": Object {
+      "app": ".tmp_test/test-app/src/targets/browser/index.jsx",
+    },
+    "externals": Array [
+      "cozy",
+    ],
+    "module": Object {
+      "noParse": Array [
+        Object {},
+      ],
+      "rules": Array [
+        Object {
+          "exclude": Object {},
+          "loader": "babel-loader",
+          "options": Object {
+            "cacheDirectory": "node_modules/.cache/babel-loader",
+          },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
+          "test": Object {},
+        },
+        Object {
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "babel-loader",
+          "options": Object {
+            "cacheDirectory": "node_modules/.cache/babel-loader",
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "extends": Array [
+              "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "stylus-loader",
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "localIdentName": "[local]--[hash:base64:5]",
+                "modules": true,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "stylus-loader",
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": "svg-sprite-loader",
+          "options": Object {
+            "name": "[name]_[hash]",
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "file-loader",
+          "options": Object {
+            "name": "[name].[ext]",
+            "path": "img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "loader": "imports-loader",
+          "options": Object {
+            "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
+          },
+          "test": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name].js",
+      "path": ".tmp_test/test-app/build",
+    },
+    "plugins": Array [
+      Object {
+        "options": Object {
+          "async": Object {
+            "test": Array [],
+          },
+          "custom": Array [],
+          "defaultAttribute": "defer",
+          "defer": Object {
+            "test": Array [],
+          },
+          "inline": Object {
+            "test": Array [],
+          },
+          "module": Object {
+            "test": Array [],
+          },
+          "prefetch": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "preload": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "removeInlinedAssets": true,
+          "sync": Object {
+            "test": Array [],
+          },
+        },
+      },
+      Object {
+        "filename": "[name].css",
+        "id": 1,
+        "options": Object {},
+      },
+      Object {
+        "options": Object {
           "log": true,
           "plugins": Array [
             null,

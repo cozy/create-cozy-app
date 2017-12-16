@@ -5,7 +5,6 @@
 const commander = require('commander')
 const pkg = require('../package.json')
 const colorize = require('../utils/_colorize.js')
-const appConfig = require('../scripts/config.js')
 
 let actionName
 const program = new commander.Command(pkg.name)
@@ -19,15 +18,16 @@ const program = new commander.Command(pkg.name)
   .option('--debug', 'print more outputs for debugging')
   .parse(process.argv)
 
-if (program.showConfig) {
-  console.log(JSON.stringify(appConfig, null, 2))
-  process.exit(0)
-}
-
 if (program.debug) {
   process.env.COZY_SCRIPTS_DEBUG = true
 } else {
   process.env.COZY_SCRIPTS_DEBUG = false
+}
+
+if (program.showConfig) {
+  const appConfig = require('../scripts/config.js')
+  console.log(JSON.stringify(appConfig, null, 2))
+  process.exit(0)
 }
 
 const availableScripts = ['watch', 'build', 'standalone']
