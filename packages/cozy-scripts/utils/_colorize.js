@@ -8,5 +8,8 @@ module.exports = {
   cyan: chalk.hex('#4DCEC5'),
   green: chalk.hex('#08b442'),
   orange: chalk.hex('#FFAE5F'),
-  red: chalk.hex('#DD0505')
+  red: chalk.hex('#DD0505'),
+  // backgrounds
+  bgBlue: chalk.bgHex('#297EF2'),
+  bgWhite: chalk.bgWhite
 }

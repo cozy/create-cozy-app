@@ -11,6 +11,7 @@ const configs = [
   require('cozy-scripts/config/webpack.config.pictures'),
   require('cozy-scripts/config/webpack.config.vendors'),
   require('cozy-scripts/config/webpack.config.manifest'),
+  require('cozy-scripts/config/webpack.config.progress'),
   require(`cozy-scripts/config/webpack.target.${target}`)
 ]
 
