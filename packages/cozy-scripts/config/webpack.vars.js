@@ -9,8 +9,11 @@ const target = process.env.NODE_ENV.match(/^(\w+):/)[1]
 const environment = process.env.NODE_ENV.match(/^\w+:(\w+)$/)[1]
 const production = environment === 'production'
 
+const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
+
 module.exports = {
   environment,
   target,
+  isDebugMode,
   extractor: new ExtractTextPlugin(`[name]${production ? '.[hash].min' : ''}.css`)
 }

@@ -120,10 +120,14 @@ This command will output the webpack config computed according your current glob
 This command will run webpack in a one shot execution of webpack (without files watching mode so) in a quiter way. It's recommended for production build.
 The built files (destined to the Cozy) will be in `build/`.
 
+A `--debug` options is available if you want to ouput more informations about webpack building in your console.
+
 ##### `cozy-scripts watch`
 
 Unlike the previous command, this will run webpack using the files watching mode. Each time you will modify a file, a new build will triggered. It's recommended for development build.
 The built files (destined to the Cozy) will be in `build/`.
+
+A `--debug` options is available if you want to ouput more informations about webpack building in your console.
 
 ##### `cozy-scripts standalone`
 

@@ -127,6 +127,12 @@ describe('App from cozy-scripts', () => {
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
 
+  it('should have the correct config browser:development by default handling --debug mode', () => {
+    process.env.COZY_SCRIPTS_DEBUG = 'true'
+    const appConfig = getConfig()
+    expect(JSON.parse(appConfig)).toMatchSnapshot()
+  })
+
   it('should have the correct config browser:development according to NODE_ENV=browser:development', () => {
     process.env.NODE_ENV = 'browser:development'
     const appConfig = getConfig()

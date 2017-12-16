@@ -4,7 +4,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const paths = require('../utils/paths')
 
-const {extractor, production} = require('./webpack.vars')
+const {extractor, production, isDebugMode} = require('./webpack.vars')
 
 module.exports = {
   output: {
@@ -66,6 +66,7 @@ module.exports = {
     extractor,
     new PostCSSAssetsPlugin({
       test: /\.css$/,
+      log: isDebugMode,
       plugins: [
         require('css-mqpacker'),
         require('postcss-discard-duplicates'),
