@@ -14,6 +14,7 @@
     - [`webpack.config.manifest.js`](#webpackconfigmanifestjs)
     - [`webpack.config.pictures.js`](#webpackconfigpicturesjs)
     - [`webpack.config.preact.js`](#webpackconfigpreactjs)
+    - [`webpack.config.progress.js`](#webpackconfigprogressjs)
     - [`webpack.config.services.js`](#webpackconfigservicesjs)
     - [`webpack.config.vendors.js`](#webpackconfigvendorsjs)
     - [`webpack.config.vue.js`](#webpackconfigvuejs)
@@ -185,6 +186,10 @@ It will:
     - `react-dom` to `preact-compat`
     - Due to [an HMR issue](https://github.com/developit/preact-compat/issues/392), `preact-compat` to `preact-compat/dist/preact-compat`
 - add a rule for `.jsx` files excluding `node_modules` (exception for `node_modules/cozy-ui`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
+
+### `webpack.config.progress.js`
+
+This config will just add a custom webpack plugin to display a progress bar when webpack building/watching. It internally uses the included webpack plugin `webpack.ProgressPlugin`.
 
 ### `webpack.config.intents.js`
 

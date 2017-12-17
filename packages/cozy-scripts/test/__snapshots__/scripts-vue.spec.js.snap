@@ -222,6 +222,7 @@ Array [
       },
       Object {},
       Object {},
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -504,6 +505,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {},
       Object {},
       Object {
@@ -790,6 +792,7 @@ Array [
       },
       Object {},
       Object {},
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -1064,6 +1067,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {},
       Object {},
       Object {
@@ -1347,6 +1351,7 @@ Array [
       },
       Object {},
       Object {},
+      Object {},
       Object {
         "definitions": Object {
           "__ALLOW_HTTP__": true,
@@ -1628,6 +1633,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {},
       Object {},
       Object {

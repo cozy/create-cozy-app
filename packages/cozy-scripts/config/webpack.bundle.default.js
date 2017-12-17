@@ -12,6 +12,7 @@ const configs = [
   require('./webpack.config.pictures'),
   require('./webpack.config.vendors'),
   require('./webpack.config.manifest'),
+  require('./webpack.config.progress'),
   require(`./webpack.target.${target}`)
 ]
 
