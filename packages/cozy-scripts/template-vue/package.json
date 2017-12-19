@@ -81,7 +81,7 @@
     "cozy-ui": "6.0.3",
     "date-fns": "1.29.0",
     "node-polyglot": "2.2.2",
-    "vue": "2.5.10",
+    "vue": "2.5.13",
     "vue-router": "3.0.1",
     "vuex": "3.0.1"
   },
