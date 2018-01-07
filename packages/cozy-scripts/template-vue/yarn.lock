@@ -1316,16 +1316,16 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
-cozy-bar@4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.5.5.tgz#152ab68b25d2739fbee030763249e29001aacd54"
+cozy-bar@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.7.0.tgz#c4ad0793a2f3c155ffe470f431664c7d33dccd83"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     cozy-client-js "^0.3.19"
     localforage "^1.5.5"
     node-polyglot "^2.2.2"
     piwik-react-router "^0.10.0"
-    preact "^8.2.5"
+    preact "^8.2.7"
     preact-compat "^3.17.0"
     react-autosuggest "^9.3.2"
     react-redux "^5.0.6"
@@ -4549,9 +4549,9 @@ preact-transition-group@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/preact-transition-group/-/preact-transition-group-1.1.1.tgz#f0a49327ea515ece34ea2be864c4a7d29e5d6e10"
 
-preact@^8.2.5:
-  version "8.2.6"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-8.2.6.tgz#0028b426ef98fcca741a3c617ff5b813b9a947c7"
+preact@^8.2.7:
+  version "8.2.7"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-8.2.7.tgz#316249fb678cd5e93e7cee63cea7bfb62dbd6814"
 
 prebuild@^4.1.1:
   version "4.5.0"
