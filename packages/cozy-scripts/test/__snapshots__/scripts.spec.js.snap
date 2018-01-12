@@ -225,6 +225,7 @@ Array [
       Object {
         "config": Object {
           "plainSprite": false,
+          "spriteAttrs": Object {},
         },
         "svgCompiler": Object {
           "config": Object {
@@ -553,6 +554,7 @@ Array [
       Object {
         "config": Object {
           "plainSprite": false,
+          "spriteAttrs": Object {},
         },
         "svgCompiler": Object {
           "config": Object {
@@ -881,6 +883,7 @@ Array [
       Object {
         "config": Object {
           "plainSprite": false,
+          "spriteAttrs": Object {},
         },
         "svgCompiler": Object {
           "config": Object {
@@ -1201,6 +1204,7 @@ Array [
       Object {
         "config": Object {
           "plainSprite": false,
+          "spriteAttrs": Object {},
         },
         "svgCompiler": Object {
           "config": Object {
@@ -1526,6 +1530,7 @@ Array [
       Object {
         "config": Object {
           "plainSprite": false,
+          "spriteAttrs": Object {},
         },
         "svgCompiler": Object {
           "config": Object {
@@ -1853,6 +1858,7 @@ Array [
       Object {
         "config": Object {
           "plainSprite": false,
+          "spriteAttrs": Object {},
         },
         "svgCompiler": Object {
           "config": Object {
@@ -2233,6 +2239,7 @@ Array [
       Object {
         "config": Object {
           "plainSprite": false,
+          "spriteAttrs": Object {},
         },
         "svgCompiler": Object {
           "config": Object {
