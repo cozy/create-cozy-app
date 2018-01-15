@@ -21,9 +21,9 @@ By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/C
  - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use standalone mode);
 
 
-#### Run without install it via Yarn
+#### Running it without installation via Yarn
 
-If you want to use directly `yarn` (no need to install globally `create-cozy-app`), use the `yarn create cozy-app` command to bootstrap your application:
+You can use `create-cozy-app` without installing it globally by using the `yarn create cozy-app` command to bootstrap your application:
 
 ```
 yarn create cozy-app mycozyapp
@@ -33,7 +33,7 @@ You can find more information about `yarn create` in the [yarnpkg documentation]
 
 #### Install the CLI
 
-Just use `yarn` to download and install globally the `create-cozy-app` command;
+Just use `yarn` to download and globally install the `create-cozy-app` CLI;
 
 ```
 yarn global add create-cozy-app
