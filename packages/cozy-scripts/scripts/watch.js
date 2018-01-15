@@ -18,7 +18,7 @@ module.exports = (successCallback) => {
     if (err) {
       // FIXME For some weird reasons, hex is not available from chalk in the jest
       // tests environment, so we have to explicitly use colors ansi characters
-      throw new Error(`\u001b[38;2;221;5;5m${err}\u001b[39m`)
+      console.error(new Error(`\u001b[38;2;221;5;5m${err}\u001b[39m`))
     }
 
     console.log(stats.toString({
