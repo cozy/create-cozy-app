@@ -9,7 +9,7 @@
 		"test:cozy-scripts-vanilla": "jest packages/cozy-scripts-vanilla/test/*.js"
 	},
 	"devDependencies": {
-		"jest": "22.0.4",
+		"jest": "22.0.6",
 		"lerna": "2.7.0",
 		"lerna-changelog": "0.7.0"
 	}
