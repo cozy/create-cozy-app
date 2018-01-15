@@ -2,7 +2,6 @@
 
 const webpack = require('webpack')
 const configs = require('./config')
-const colorize = require('../utils/_colorize')
 
 // the main app config is at the first position
 const appConfig = configs[0]
@@ -17,7 +16,9 @@ module.exports = (successCallback) => {
   let watcher
   watcher = compiler.watch({}, (err, stats) => {
     if (err) {
-      throw new Error(colorize.red(err))
+      // FIXME For some weird reasons, hex is not available from chalk in the jest
+      // tests environment, so we have to explicitly use colors ansi characters
+      throw new Error(`\u001b[38;2;221;5;5m${err}\u001b[39m`)
     }
 
     console.log(stats.toString({

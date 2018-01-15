@@ -70,7 +70,8 @@ const overrideData = {
 }
 
 function getConfig () {
-  let appConfig = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js'))
+  const configFromScriptPath = path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js')
+  let appConfig = require(configFromScriptPath)
   // we replace path to avoid environment specific snapshots
   // ex: paths like `/me/test/${testFolder}/...` will be `${testFolder}/...`
   const pathReplaceRegex = new RegExp(`"\\S*/${testFolder}/${appName}`, 'g')
