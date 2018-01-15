@@ -28,7 +28,7 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
       conform: function (value) {
         return validateProjectName(value).validForNewPackages
       },
-      message: 'Must be maily lowercase letters, digits or dashes (see NPM name requirements)',
+      message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements)',
       required: false,
       default: appName
     },
@@ -207,7 +207,7 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
 function installDependencies (verbose) {
   return new Promise((resolve, reject) => {
     const command = 'yarn'
-    const args = ['install']
+    const args = ['install', '--prefer-online']
     if (!verbose) {
       args.push('--silent')
       console.log()
