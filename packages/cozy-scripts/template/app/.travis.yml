@@ -26,11 +26,8 @@ before_install:
 - travis_retry pip3.5 install --user transifex-client
 - install -m0644 .templates/.transifexrc ~/.transifexrc
 - echo "password = $TX_PASSWD" >> ~/.transifexrc
-- yarn global add greenkeeper-lockfile@1
-before_script: greenkeeper-lockfile-update
 script:
 - yarn test
 - yarn build:browser
-after_script: greenkeeper-lockfile-upload
 after_success:
 - test $TRAVIS_BRANCH = "master" && yarn run deploy -- --branch=build
