@@ -1,3 +1,5 @@
+![cca_1920x1080](https://user-images.githubusercontent.com/10224453/34997712-6327f856-fadd-11e7-87d5-c7ff6a1d7817.png)
+
 [![NPM Licence shield](https://img.shields.io/npm/l/create-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/blob/master/packages/create-cozy-app/LICENSE)
 [![Travis](https://img.shields.io/travis/CPatchane/create-cozy-app.svg)]()
 [![npm](https://img.shields.io/npm/dm/create-cozy-app.svg)]()
