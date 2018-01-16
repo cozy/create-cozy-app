@@ -1978,6 +1978,7 @@ Array [
   ".github/PULL_REQUEST_TEMPLATE",
   ".gitignore",
   ".stylintrc",
+  ".transifexrc.tpl",
   ".travis.yml",
   ".tx/config",
   "CONTRIBUTING.md",
