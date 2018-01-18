@@ -12,9 +12,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('App component only', () => {
   it('should be mounted correctly', () => {
-    const component = shallow(
-      <App />
-    ).getElement()
+    const component = shallow(<App />).getElement()
     expect(component).toMatchSnapshot()
   })
 })
