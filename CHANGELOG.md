@@ -1,3 +1,31 @@
+## cozy-scripts@0.4.2 (2018-01-18)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#210](https://github.com/CPatchane/create-cozy-app/pull/210) Add 5984 couchdb port access in stack:docker script. ([@CPatchane](https://github.com/CPatchane))
+  * [#209](https://github.com/CPatchane/create-cozy-app/pull/209) "Prettierize" templates files. ([@CPatchane](https://github.com/CPatchane))
+  * [#201](https://github.com/CPatchane/create-cozy-app/pull/201) Remove greenkeeper-lockfile from .travis.yml. ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#202](https://github.com/CPatchane/create-cozy-app/pull/202) Add missing .transifexrc.tpl file for travis tx usage. ([@CPatchane](https://github.com/CPatchane))
+
+#### :memo: Documentations:
+* [#203](https://github.com/CPatchane/create-cozy-app/pull/203) Add CCA illustration in the main README. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#208](https://github.com/CPatchane/create-cozy-app/pull/208) fix(deps): update dependency cozy-ui to v7.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#175](https://github.com/CPatchane/create-cozy-app/pull/175) fix(deps): update dependency cozy-ui to v7. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#206](https://github.com/CPatchane/create-cozy-app/pull/206) fix(deps): update dependency css-loader to v0.28.9. ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#198](https://github.com/CPatchane/create-cozy-app/pull/198) chore(deps): update dependency lerna to v2.7.1. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+- Yannick Lohse ([y-lohse](https://github.com/y-lohse))
+
+
 ## create-cozy-app@0.5.1, cozy-scripts@0.4.1, cozy-scripts-vanilla@0.1.2 (2018-01-15)
 
 #### :sparkles: New Features:
