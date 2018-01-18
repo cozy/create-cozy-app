@@ -13,9 +13,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Sidebar component', () => {
   it('should be rendered correctly', () => {
-    const component = shallow(
-      <Sidebar t={mockT} />
-    ).getElement()
+    const component = shallow(<Sidebar t={mockT} />).getElement()
     expect(component).toMatchSnapshot()
   })
 })

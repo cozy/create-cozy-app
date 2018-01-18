@@ -14,21 +14,15 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Hello components:', () => {
   it('Hello1 should be rendered correctly', () => {
-    const component = shallow(
-      <Hello1 />
-    ).getElement()
+    const component = shallow(<Hello1 />).getElement()
     expect(component).toMatchSnapshot()
   })
   it('Hello2 should be rendered correctly', () => {
-    const component = shallow(
-      <Hello2 />
-    ).getElement()
+    const component = shallow(<Hello2 />).getElement()
     expect(component).toMatchSnapshot()
   })
   it('Hello3 should be rendered correctly', () => {
-    const component = shallow(
-      <Hello3 />
-    ).getElement()
+    const component = shallow(<Hello3 />).getElement()
     expect(component).toMatchSnapshot()
   })
 })

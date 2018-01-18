@@ -13,11 +13,7 @@ export function getI18nMixin (lang, dictRequire, defaultLang) {
       return { lang }
     },
     methods: {
-      t: initTranslation(
-        lang,
-        dictRequire,
-        defaultLang
-      ),
+      t: initTranslation(lang, dictRequire, defaultLang),
       f: initFormat(lang, defaultLang)
     }
   }

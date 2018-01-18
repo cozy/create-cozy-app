@@ -12,5 +12,6 @@ export const initFormat = (lang, defaultLang = DEFAULT_LANG) => {
       console.warn(`The "${lang}" locale isn't supported by date-fns`)
     }
   }
-  return (date, formatStr) => format(date, formatStr, { locale: locales[lang] })
+  return (date, formatStr) =>
+    format(date, formatStr, { locale: locales[lang] })
 }
