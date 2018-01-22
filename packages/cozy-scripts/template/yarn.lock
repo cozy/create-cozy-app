@@ -1279,9 +1279,9 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cozy-bar@4.8.3:
-  version "4.8.3"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.8.3.tgz#746bfac0b98b4b0b00303cb6281e67fa5c731d2a"
+cozy-bar@4.8.5:
+  version "4.8.5"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.8.5.tgz#bd7c81a7c0629c84b164b0d9b44e7b59be25403d"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     cozy-client-js "^0.3.19"
