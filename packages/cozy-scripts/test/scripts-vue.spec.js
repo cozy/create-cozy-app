@@ -1,5 +1,3 @@
-'use strict'
-
 /* eslint-env jest */
 
 const fs = require('fs-extra')
