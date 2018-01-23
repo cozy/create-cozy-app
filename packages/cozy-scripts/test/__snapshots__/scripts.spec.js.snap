@@ -2544,3 +2544,24 @@ Array [
   },
 ]
 `;
+
+exports[`App from cozy-scripts should use the custom app config if an \`app.config.js\` exists in the app directory 1`] = `
+Array [
+  Object {
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": Object {},
+          "loader": "babel-loader",
+          "test": Object {},
+        },
+      ],
+    },
+    "resolve": Object {
+      "extensions": Array [
+        ".js",
+      ],
+    },
+  },
+]
+`;

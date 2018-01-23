@@ -1,5 +1,3 @@
-'use strict'
-
 /* eslint-env jest */
 
 const fs = require('fs-extra')
@@ -13,8 +11,8 @@ const appName = 'test-app'
 const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
 const customConfigPath = path.join(appPath, 'app.config.js')
-const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
-const servicesTestConfig = path.join(__dirname, 'lib', 'services.config.js')
+const ownTestConfig = path.join(rootPath, __dirname, 'lib', 'test.config.js')
+const servicesTestConfig = path.join(rootPath, __dirname, 'lib', 'services.config.js')
 
 process.on('SIGINT', () => {
   console.log()
@@ -162,26 +160,25 @@ describe('App from cozy-scripts', () => {
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
 
-  // Jest will cache app.config.js require, need to find a way to disable that
-  // it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
-  //   fs.copySync(ownTestConfig, customConfigPath)
-  //   const appConfig = getConfig()
-  //   expect(JSON.parse(appConfig)).toMatchSnapshot()
-  // })
-
-  it('should return two separated configs if services config is used (also test app.config.js usage)', () => {
-    fs.copySync(servicesTestConfig, customConfigPath)
-    fs.writeFileSync(path.join(appPath, 'src', 'targets', 'services', 'testservice.js'), '')
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
-  })
-
   it('should pass all app tests with success', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
       const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
       if (result.status === 1) throw new Error('The generated applciation tests failed')
     }).not.toThrow()
+  })
+
+  it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
+    fs.copySync(ownTestConfig, customConfigPath)
+    const appConfig = getConfig()
+    expect(JSON.parse(appConfig)).toMatchSnapshot()
+  })
+
+  it('should return two separated configs if services config is used (also test app.config.js usage)', () => {
+    fs.copySync(servicesTestConfig, customConfigPath)
+    fs.writeFileSync(path.join(appPath, 'src', 'targets', 'services', 'testservice.js'), '')
+    const appConfig = getConfig()
+    expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
 
   it('should run webpack.run correctly with build script', (done) => {

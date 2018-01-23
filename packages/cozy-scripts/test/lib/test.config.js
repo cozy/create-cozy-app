@@ -1,5 +1,3 @@
-'use strict'
-
 /* This file is used FOR TESTS PURPOSE ONLY */
 
 const myConfig = {
