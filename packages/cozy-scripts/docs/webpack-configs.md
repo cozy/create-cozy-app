@@ -37,6 +37,7 @@ This file is the default config bundle used for the application built from `cozy
 - `webpack.config.cozy-ui.js`
 - `webpack.config.cozy-ui.react.js`
 - `webpack.config.eslint.js`
+- `webpack.config.intents.js`
 - `webpack.config.manifest.js`
 - `webpack.config.pictures.js`
 - `webpack.config.preact.js`
@@ -70,6 +71,7 @@ This file is the VueJS config bundle used for the application built from `cozy-s
 - `webpack.config.base.js`
 - `webpack.config.cozy-ui.js`
 - `webpack.config.eslint.js`
+- `webpack.config.intents.js`
 - `webpack.config.manifest.js`
 - `webpack.config.pictures.js`
 - `webpack.config.vendors.js`
