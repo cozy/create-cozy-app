@@ -41,6 +41,7 @@ mycozyapp/
             browser/
                 index.ejs
                 index.jsx
+            intents/
             mobile/
             vendor/
     test/
@@ -63,6 +64,7 @@ Using the VueJS template, `cozy-scripts` will generate a VueJS/Vuex application.
 
 ```
 mycozyapp/
+    app.config.js
     CONTRIBUTING.md
     LICENSE
     README.md
@@ -90,6 +92,7 @@ mycozyapp/
             browser/
                 index.ejs
                 index.js
+            intents/
             mobile/
             vendor/
     test/
