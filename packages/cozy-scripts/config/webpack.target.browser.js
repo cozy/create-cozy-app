@@ -23,6 +23,7 @@ module.exports = {
       template: paths.appBrowserHtmlTemplate,
       title: pkg.name,
       inject: false,
+      chunks: ['app'],
       minify: {
         collapseWhitespace: true
       }

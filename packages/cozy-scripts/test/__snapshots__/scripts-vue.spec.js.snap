@@ -227,7 +227,9 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "app",
+          ],
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
@@ -513,7 +515,9 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "app",
+          ],
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
@@ -799,7 +803,9 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "app",
+          ],
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
@@ -1077,7 +1083,9 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "app",
+          ],
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
