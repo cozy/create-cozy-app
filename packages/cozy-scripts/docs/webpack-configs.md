@@ -11,6 +11,7 @@
     - [`webpack.config.cozy-ui.react.js`](#webpackconfigcozy-uireactjs)
     - [`webpack.config.eslint.js`](#webpackconfigeslintjs)
     - [`webpack.config.hash.js`](#webpackconfighashjs)
+    - [`webpack.config.intents.js`](#webpackconfigintentsjs)
     - [`webpack.config.manifest.js`](#webpackconfigmanifestjs)
     - [`webpack.config.pictures.js`](#webpackconfigpicturesjs)
     - [`webpack.config.preact.js`](#webpackconfigpreactjs)
@@ -155,6 +156,19 @@ It adds a rule for all `.styl` files from `cozy-ui/react` to be loaded using:
 
 A rule to preload all `.js/.jsx` files with `eslint-loader` (excluding `node_modules`) extending [`babel-preset-cozy-app`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/babel-preset-cozy-app)
 
+### `webpack.config.intents.js`
+
+This is a specific configuration file to develop application intents for the Cozy platform.
+
+It will:
+- add a webpack entry: `src/targets/intents/intents.jsx`
+- use `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/intents/` with options:
+    - `title`: `name` property of the `package.json` + ` intents`
+    - `filename`: `intents/index.html`, the output file
+    - `chunks`: ['intents']
+    - `inject` to `false`
+    - `minify` with `collapseWhitespace` to `true`
+
 ### `webpack.config.hash.js`
 
 A custom webpack plugin usage to extract the hash from built files for reference.
@@ -191,18 +205,9 @@ It will:
 
 This config will just add a custom webpack plugin to display a progress bar when webpack building/watching. It internally uses the included webpack plugin `webpack.ProgressPlugin`.
 
-### `webpack.config.intents.js`
+### `webpack.config.services.js`
 
-This is a specific configuration file to develop application intents for the Cozy platform.
-
-It will:
-- add a webpack entry: `src/targets/intents/intents.jsx`
-- use `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/intents/` with options:
-    - `title`: `name` property of the `package.json` + ` intents`
-    - `filename`: `intents/index.html`, the output file
-    - `chunks`: ['intents']
-    - `inject` to `false`
-    - `minify` with `collapseWhitespace` to `true`
+Coming soon...
 
 ### `webpack.config.vendors.js`
 
@@ -261,6 +266,7 @@ It will:
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/browser/` with options:
     - `title`: `name` property of the `package.json`
     - `inject` to `false`
+    - `chunks`: ['app']
     - `minify` with `collapseWhitespace` to `true`
 - `webpack.DefinePlugin` to define globals variables at compile time:
     - `__TARGET__` to `browser`
