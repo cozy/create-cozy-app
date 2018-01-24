@@ -1,3 +1,36 @@
+## create-cozy-app@0.5.2, cozy-scripts@0.4.3, cozy-scripts-vanilla@0.1.3 (2018-01-24)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#225](https://github.com/CPatchane/create-cozy-app/pull/225) Put intents config in default bundles. ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#223](https://github.com/CPatchane/create-cozy-app/pull/223) Use only `app` webpack chunk for main browser html file. ([@CPatchane](https://github.com/CPatchane))
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#220](https://github.com/CPatchane/create-cozy-app/pull/220) Remove eslint-loader from template-vue. ([@CPatchane](https://github.com/CPatchane))
+  * [#219](https://github.com/CPatchane/create-cozy-app/pull/219) Fix and improve cozy-scripts tests. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#224](https://github.com/CPatchane/create-cozy-app/pull/224) fix(deps): update dependency cozy-client-js to v0.5.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#196](https://github.com/CPatchane/create-cozy-app/pull/196) chore(deps): update jest monorepo packages. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#217](https://github.com/CPatchane/create-cozy-app/pull/217) fix(deps): update dependency preact-compat to v3.18.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#216](https://github.com/CPatchane/create-cozy-app/pull/216) fix(deps): update dependency cozy-bar to v4.8.5. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#215](https://github.com/CPatchane/create-cozy-app/pull/215) fix(deps): update dependency cozy-bar to v4.8.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#214](https://github.com/CPatchane/create-cozy-app/pull/214) fix(deps): update dependency webpack-dev-server to v2.11.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#213](https://github.com/CPatchane/create-cozy-app/pull/213) chore(deps): update dependency eslint to v4.16.0. ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`
+  * [#218](https://github.com/CPatchane/create-cozy-app/pull/218) fix(deps): update dependency cross-spawn to v6. ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#212](https://github.com/CPatchane/create-cozy-app/pull/212) chore(deps): update dependency lerna to v2.8.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.4.2 (2018-01-18)
 
 #### :nail_care: Enhancements:
