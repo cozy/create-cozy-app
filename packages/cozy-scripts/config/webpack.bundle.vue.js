@@ -8,6 +8,7 @@ const configs = [
   require('./webpack.config.vue'),
   require('./webpack.config.eslint'),
   require('./webpack.config.cozy-ui'),
+  require('./webpack.config.intents'),
   require('./webpack.config.pictures'),
   require('./webpack.config.vendors'),
   require('./webpack.config.manifest'),

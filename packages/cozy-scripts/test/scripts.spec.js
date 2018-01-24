@@ -176,6 +176,7 @@ describe('App from cozy-scripts', () => {
 
   it('should return two separated configs if services config is used (also test app.config.js usage)', () => {
     fs.copySync(servicesTestConfig, customConfigPath)
+    fs.ensureDirSync(path.join(appPath, 'src', 'targets', 'services'))
     fs.writeFileSync(path.join(appPath, 'src', 'targets', 'services', 'testservice.js'), '')
     const appConfig = getConfig()
     expect(JSON.parse(appConfig)).toMatchSnapshot()
