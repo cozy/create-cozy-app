@@ -16,7 +16,7 @@
     "index.js"
   ],
   "dependencies": {
-    "babel-eslint": "^8.0.1",
+    "babel-eslint": "^8.0.0",
     "eslint": "^4.9.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-jsx": "^4.0.2",
