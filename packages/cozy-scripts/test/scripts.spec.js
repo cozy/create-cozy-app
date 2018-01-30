@@ -13,6 +13,7 @@ const appPath = path.join(testPath, appName)
 const customConfigPath = path.join(appPath, 'app.config.js')
 const ownTestConfig = path.join(rootPath, __dirname, 'lib', 'test.config.js')
 const servicesTestConfig = path.join(rootPath, __dirname, 'lib', 'services.config.js')
+const strategyTestConfig = path.join(rootPath, __dirname, 'lib', 'strategy.config.js')
 
 process.on('SIGINT', () => {
   console.log()
@@ -106,6 +107,7 @@ describe('App from cozy-scripts', () => {
     cleanUp()
   })
 
+  // Files outline
   it('should have the correct files outline', (done) => {
     const init = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'init.js'))
     const options = { verbose: false }
@@ -124,6 +126,7 @@ describe('App from cozy-scripts', () => {
     })
   })
 
+  // Output configuration
   it('should have the correct config browser:development by default', () => {
     console.log(colorize.orange('Asserting configs...'))
     const appConfig = getConfig()
@@ -160,6 +163,7 @@ describe('App from cozy-scripts', () => {
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
 
+  // Generated app tests
   it('should pass all app tests with success', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
@@ -168,6 +172,7 @@ describe('App from cozy-scripts', () => {
     }).not.toThrow()
   })
 
+  // Custom app.config.js
   it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
     fs.copySync(ownTestConfig, customConfigPath)
     const appConfig = getConfig()
@@ -182,6 +187,13 @@ describe('App from cozy-scripts', () => {
     expect(JSON.parse(appConfig)).toMatchSnapshot()
   })
 
+  it('should correctly use the webpack-merge strategy if a __mergeStrategy property is found', () => {
+    fs.copySync(strategyTestConfig, customConfigPath)
+    const appConfig = getConfig()
+    expect(JSON.parse(appConfig)).toMatchSnapshot()
+  })
+
+  // Webpack running
   it('should run webpack.run correctly with build script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
     process.env.NODE_ENV = 'browser:production'

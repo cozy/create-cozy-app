@@ -19,10 +19,13 @@ servicesPaths.forEach(file => {
 })
 
 const config = {
-  mergeStrategy: {
-    plugins: 'replace',
-    output: 'replace',
-    entry: 'replace'
+  __mergeStrategy: {
+    smart: false,
+    strategy: {
+      plugins: 'replace',
+      output: 'replace',
+      entry: 'replace'
+    }
   },
   entry: servicesEntries,
   target: 'node',

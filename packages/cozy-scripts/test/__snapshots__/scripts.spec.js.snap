@@ -1,5 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App from cozy-scripts should correctly use the webpack-merge strategy if a __mergeStrategy property is found 1`] = `
+Array [
+  Object {
+    "module": Object {
+      "rules": Array [
+        Object {
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "localIdentName": "[local]--[hash:base64:5]",
+                "modules": true,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "stylus-loader",
+            },
+          ],
+          "test": Object {},
+        },
+      ],
+    },
+    "resolve": Object {
+      "extensions": Array [
+        ".styl",
+      ],
+    },
+  },
+]
+`;
+
 exports[`App from cozy-scripts should have the correct config browser:development according to NODE_ENV=browser:development 1`] = `
 Array [
   Object {
