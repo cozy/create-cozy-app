@@ -9,6 +9,7 @@
     - [`webpack.config.base.js`](#webpackconfigbasejs)
     - [`webpack.config.cozy-ui.js`](#webpackconfigcozy-uijs)
     - [`webpack.config.cozy-ui.react.js`](#webpackconfigcozy-uireactjs)
+    - [`webpack.config.css-modules.js`](#webpackconfigcss-modulesjs)
     - [`webpack.config.eslint.js`](#webpackconfigeslintjs)
     - [`webpack.config.hash.js`](#webpackconfighashjs)
     - [`webpack.config.intents.js`](#webpackconfigintentsjs)
@@ -149,6 +150,16 @@ It uses two plugins:
 This configuration is specific to `react` components usage from `cozy-ui`, since they currently need `css-modules`. This configuration file could be removed if this `cozy-ui` requirement disappear.
 
 It adds a rule for all `.styl` files from `cozy-ui/react` to be loaded using:
+- `style-loader` as fallback
+- `css-loader` with `modules`, `sourceMap` and `[local]--[hash:base64:5]` as `localIdentName`
+- `postcss-loader` to optimize css output code with `sourceMap` and `autoprefixer` plugin to `{ browsers: ['last 2 versions'] }`
+- `stylus-loader`
+
+### `webpack.config.css-modules.js`
+
+This configuration will allow to use `css-modules` with stylus files. To overload previous stylus loaders, it uses the following `webpack-merge` `smartStrategy`: `{ 'modules.loaders': 'replace' }`.
+
+It adds a rule for all `.styl` files excluding `node_modules` and `node_modules/cozy-ui/react` to be loaded using:
 - `style-loader` as fallback
 - `css-loader` with `modules`, `sourceMap` and `[local]--[hash:base64:5]` as `localIdentName`
 - `postcss-loader` to optimize css output code with `sourceMap` and `autoprefixer` plugin to `{ browsers: ['last 2 versions'] }`
