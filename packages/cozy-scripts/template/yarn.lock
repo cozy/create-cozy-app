@@ -1303,9 +1303,9 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cozy-bar@4.8.5:
-  version "4.8.5"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.8.5.tgz#bd7c81a7c0629c84b164b0d9b44e7b59be25403d"
+cozy-bar@4.8.6:
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.8.6.tgz#a371a9e2a73072388874f7112260e809d6de7401"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     cozy-client-js "^0.3.19"
@@ -4365,9 +4365,9 @@ pn@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.0.0.tgz#1cf5a30b0d806cd18f88fc41a6b5d4ad615b3ba9"
 
-"pouchdb-adapter-cordova-sqlite@git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
+"pouchdb-adapter-cordova-sqlite@https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
   version "2.0.2"
-  resolved "git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
+  resolved "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
   dependencies:
     pouchdb-adapter-websql-core "^6.1.1"
 
