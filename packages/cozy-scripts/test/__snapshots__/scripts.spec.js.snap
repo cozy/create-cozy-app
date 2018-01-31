@@ -239,7 +239,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "path": "img",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
@@ -570,7 +570,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "path": "img",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
@@ -901,7 +901,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "path": "img",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
@@ -1230,8 +1230,8 @@ Array [
           "exclude": Object {},
           "loader": "file-loader",
           "options": Object {
-            "name": "[name].[ext]",
-            "path": "img",
+            "name": "[name].[hash].[ext]",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
@@ -1552,7 +1552,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "path": "img",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
@@ -1886,8 +1886,8 @@ Array [
           "exclude": Object {},
           "loader": "file-loader",
           "options": Object {
-            "name": "[name].[ext]",
-            "path": "img",
+            "name": "[name].[hash].[ext]",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
@@ -2262,7 +2262,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "path": "img",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
@@ -2588,7 +2588,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "path": "img",
+            "outputPath": "img/",
           },
           "test": Object {},
         },
