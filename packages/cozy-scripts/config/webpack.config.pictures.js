@@ -1,6 +1,6 @@
 'use strict'
 
-const {production} = require('./webpack.vars')
+const { environment } = require('./webpack.vars')
 
 module.exports = {
   module: {
@@ -18,8 +18,8 @@ module.exports = {
         exclude: /(sprites|icons)/,
         loader: `file-loader`,
         options: {
-          path: 'img',
-          name: `[name]${production ? '.[hash]' : ''}.[ext]`
+          outputPath: 'img/',
+          name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }
       }
     ]
