@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "chalk": "2.3.0",
-    "cross-spawn": "6.0.3",
+    "cross-spawn": "6.0.4",
     "fs-extra": "5.0.0",
     "prompt": "1.0.0",
     "validate-npm-package-name": "3.0.0"
