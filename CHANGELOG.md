@@ -1,3 +1,17 @@
+## create-cozy-app@0.5.3, cozy-scripts@0.4.5, cozy-scripts-vanilla@0.1.4 (2018-01-31)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#243](https://github.com/CPatchane/create-cozy-app/pull/243) Fix environment detection in pictures config for hashing in production. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`
+  * [#244](https://github.com/CPatchane/create-cozy-app/pull/244) fix(deps): update dependency cross-spawn to v6.0.4. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.4.4 (2018-01-31)
 
 #### :sparkles: New Features:
