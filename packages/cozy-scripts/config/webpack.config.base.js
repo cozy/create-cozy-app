@@ -12,7 +12,9 @@ module.exports = {
   },
   resolve: {
     modules: [paths.appNodeModules, paths.appSrc],
-    extensions: ['.js', '.json', '.css']
+    extensions: ['.js', '.json', '.css'],
+    // linked package will still be see as a node_modules package
+    symlinks: false
   },
   bail: true,
   module: {

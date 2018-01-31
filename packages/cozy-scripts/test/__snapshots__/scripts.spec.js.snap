@@ -407,6 +407,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -738,6 +739,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -1069,6 +1071,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -1389,6 +1392,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -1728,6 +1732,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -2053,6 +2058,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -2430,6 +2436,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
   },
   Object {
@@ -2630,6 +2637,7 @@ Array [
         ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
       ],
+      "symlinks": false,
     },
     "target": "node",
   },
