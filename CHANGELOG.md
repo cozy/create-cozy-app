@@ -1,3 +1,34 @@
+## cozy-scripts@0.4.4 (2018-01-31)
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#242](https://github.com/CPatchane/create-cozy-app/pull/242) Add css-modules config for stylus (not provided by default). ([@CPatchane](https://github.com/CPatchane))
+  * [#241](https://github.com/CPatchane/create-cozy-app/pull/241) Handle webpack-merge strategies by config file. ([@CPatchane](https://github.com/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#236](https://github.com/CPatchane/create-cozy-app/pull/236) Remove unused prewatch script from templates package.json. ([@CPatchane](https://github.com/CPatchane))
+
+#### :memo: Documentations:
+* [#227](https://github.com/CPatchane/create-cozy-app/pull/227) Update illustration in README. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#239](https://github.com/CPatchane/create-cozy-app/pull/239) fix(deps): update dependency cozy-ui to v7.2.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#240](https://github.com/CPatchane/create-cozy-app/pull/240) fix(deps): update dependency cozy-bar to v4.8.6. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#238](https://github.com/CPatchane/create-cozy-app/pull/238) fix(deps): update dependency cozy-client-js to v0.6.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#235](https://github.com/CPatchane/create-cozy-app/pull/235) fix(deps): update dependency cozy-ui to v7.2.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#234](https://github.com/CPatchane/create-cozy-app/pull/234) fix(deps): update dependency cozy-client-js to v0.6.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#233](https://github.com/CPatchane/create-cozy-app/pull/233) chore(deps): update dependency redux-mock-store to v1.5.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#232](https://github.com/CPatchane/create-cozy-app/pull/232) chore(deps): update dependency vue-jest to v2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#231](https://github.com/CPatchane/create-cozy-app/pull/231) fix(deps): update dependency style-loader to v0.20.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#228](https://github.com/CPatchane/create-cozy-app/pull/228) chore(deps): update dependency redux-mock-store to v1.5.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#226](https://github.com/CPatchane/create-cozy-app/pull/226) fix(deps): update dependency css-mqpacker to v6.0.2. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## create-cozy-app@0.5.2, cozy-scripts@0.4.3, cozy-scripts-vanilla@0.1.3 (2018-01-24)
 
 #### :nail_care: Enhancements:
