@@ -2073,6 +2073,7 @@ Array [
   "CONTRIBUTING.md",
   "LICENSE",
   "README.md",
+  "jest.config.js",
   "manifest.webapp",
   "node_modules",
   "package.json",
