@@ -220,7 +220,20 @@ This config will just add a custom webpack plugin to display a progress bar when
 
 ### `webpack.config.services.js`
 
-Coming soon...
+This config will provide a separate config to build app services using [Webpack multi-compiling](https://webpack.js.org/api/compiler/#multicompiler).
+In this case, all services files (`.js` files in the `/src/targets/services/` folder) will be built using this separate webpack config.
+
+This config will:
+    - use `__mergeStrategy` to drive the [`webpack-merge` strategy](docs/webpack-merge-strategy.md):
+        - disable smart merging
+        - use the `replace` mode `plugins`, `output` and `entry`
+    - define as webpack entry an array of all `.js` files contained in `/src/target/services` folder
+    - use as output the `/build/services` folder with `[name].js` as filename
+    - define the target as `'node'`
+    - disable devtool (boolean to `false`)
+    - define the global variable `__TARGET__` to `services` using the plugin `webpack.DefinePlugin`
+
+This config will be used only if the webpack target is `browser`.
 
 ### `webpack.config.vendors.js`
 
