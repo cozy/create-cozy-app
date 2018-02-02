@@ -18,6 +18,7 @@ const resolveWithExtension = (path, extension) => {
 module.exports = {
   appPath: resolveApp('.'),
   appBuild: resolveApp('build'),
+  appServicesBuild: resolveApp('build/services'),
   appBuildAssetsJson: resolveApp('build/assets/json'),
   appPackageJson: resolveApp('package.json'),
   appManifest: resolveApp('manifest.webapp'),

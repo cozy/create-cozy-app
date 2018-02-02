@@ -2604,7 +2604,7 @@ Array [
     "multiple": Object {},
     "output": Object {
       "filename": "[name].js",
-      "path": ".tmp_test/test-app/build",
+      "path": ".tmp_test/test-app/build/services",
     },
     "plugins": Array [
       Object {
