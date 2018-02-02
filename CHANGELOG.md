@@ -1,3 +1,30 @@
+## create-cozy-app@0.5.4, cozy-scripts@0.5.0 (2018-02-02)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#256](https://github.com/CPatchane/create-cozy-app/pull/256) Move jest config from package.json to jest.config.js. ([@CPatchane](https://github.com/CPatchane))
+  * [#253](https://github.com/CPatchane/create-cozy-app/pull/253) Enable multi-compiling with webpack watch script. ([@CPatchane](https://github.com/CPatchane))
+  * [#252](https://github.com/CPatchane/create-cozy-app/pull/252) Build services in `build/services/` folder instead of `build/`. ([@CPatchane](https://github.com/CPatchane))
+  * [#249](https://github.com/CPatchane/create-cozy-app/pull/249) Disable webpack symlinks resolving. ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#251](https://github.com/CPatchane/create-cozy-app/pull/251) Remove remaining `multiple` property when multi-compiling. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#255](https://github.com/CPatchane/create-cozy-app/pull/255) fix(deps): update dependency postcss-loader to v2.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#245](https://github.com/CPatchane/create-cozy-app/pull/245) chore(deps): update dependency vue-loader to v14. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#248](https://github.com/CPatchane/create-cozy-app/pull/248) fix(deps): update dependency cozy-bar to v4.8.7. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#247](https://github.com/CPatchane/create-cozy-app/pull/247) fix(deps): update dependency cozy-client-js to v0.6.2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#250](https://github.com/CPatchane/create-cozy-app/pull/250) fix(deps): update dependency postcss to v6.0.17. ([@renovate[bot]](https://github.com/apps/renovate))
+* `create-cozy-app`
+  * [#254](https://github.com/CPatchane/create-cozy-app/pull/254) fix(deps): update dependency ora to v1.4.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## create-cozy-app@0.5.3, cozy-scripts@0.4.5, cozy-scripts-vanilla@0.1.4 (2018-01-31)
 
 #### :bug: Bug Fixes:
