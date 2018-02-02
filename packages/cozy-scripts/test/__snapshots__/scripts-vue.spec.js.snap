@@ -1741,6 +1741,7 @@ Array [
   "LICENSE",
   "README.md",
   "app.config.js",
+  "jest.config.js",
   "manifest.webapp",
   "node_modules",
   "package.json",
