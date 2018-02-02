@@ -28,6 +28,10 @@ const config = {
     }
   },
   entry: servicesEntries,
+  output: {
+    path: paths.appServicesBuild,
+    filename: '[name].js'
+  },
   target: 'node',
   devtool: false,
   plugins: [
