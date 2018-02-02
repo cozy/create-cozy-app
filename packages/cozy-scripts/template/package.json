@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "cozy-bar": "4.8.6",
-    "cozy-client-js": "0.6.1",
+    "cozy-client-js": "0.6.2",
     "cozy-ui": "7.2.1",
     "preact": "8.2.7",
     "preact-compat": "3.18.0",
