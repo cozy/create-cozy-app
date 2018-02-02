@@ -51,13 +51,16 @@ if (mergedConfig.multiple) {
       {}, mergedConfig.multiple[config]
     )
     delete mergedConfig.multiple[config]
+    let separateConfig = {}
     if (configPart.__mergeStrategy) { // if merge strategy found
       const options = Object.assign({}, configPart.__mergeStrategy)
       delete configPart.__mergeStrategy
-      configs.push(mergeWithOptions(options, [mergedConfig], configPart))
+      separateConfig = mergeWithOptions(options, [mergedConfig], configPart)
     } else {
-      configs.push(merge(mergedConfig, configPart))
+      separateConfig = merge(mergedConfig, configPart)
     }
+    if (separateConfig.multiple) delete separateConfig.multiple
+    configs.push(separateConfig)
   }
   delete mergedConfig.multiple
 }
