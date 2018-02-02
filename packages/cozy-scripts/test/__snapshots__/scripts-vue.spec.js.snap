@@ -283,6 +283,7 @@ Array [
         ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -571,6 +572,7 @@ Array [
         ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -859,6 +861,7 @@ Array [
         ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -1136,6 +1139,7 @@ Array [
         ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -1432,6 +1436,7 @@ Array [
         ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
       ],
+      "symlinks": false,
     },
   },
 ]
@@ -1714,6 +1719,7 @@ Array [
         ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
       ],
+      "symlinks": false,
     },
   },
 ]
