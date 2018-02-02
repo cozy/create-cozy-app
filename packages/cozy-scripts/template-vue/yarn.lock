@@ -1284,9 +1284,9 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
-cozy-bar@4.8.6:
-  version "4.8.6"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.8.6.tgz#a371a9e2a73072388874f7112260e809d6de7401"
+cozy-bar@4.8.7:
+  version "4.8.7"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-4.8.7.tgz#2f24b75388f9c060ad8ae083fccbb87953e575ef"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     cozy-client-js "^0.3.19"
@@ -4404,9 +4404,9 @@ postcss@^6.0.8:
     source-map "^0.6.1"
     supports-color "^4.4.0"
 
-"pouchdb-adapter-cordova-sqlite@git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
+"pouchdb-adapter-cordova-sqlite@https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
   version "2.0.2"
-  resolved "git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
+  resolved "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
   dependencies:
     pouchdb-adapter-websql-core "^6.1.1"
 
