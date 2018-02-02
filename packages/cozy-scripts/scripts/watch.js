@@ -4,10 +4,10 @@ const webpack = require('webpack')
 const configs = require('./config')
 const colorize = require('../utils/_colorize')
 
-// the main app config is at the first position
-const appConfig = configs[0]
-appConfig.bail = false // disable bail when watching
-const compiler = webpack(appConfig)
+for (const config in configs) {
+  configs[config].bail = false // disable bail when watching
+}
+const compiler = webpack(configs)
 
 const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 
