@@ -173,15 +173,20 @@ describe('App from cozy-scripts with VueJS 2', () => {
     console.log(colorize.orange('Testing cozy-scripts watch script...'))
     process.env.NODE_ENV = 'browser:development'
     const watch = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'watch.js'))
-    expect(() => watch(watcher => {
-      watcher.close()
-      if (watcher.closed) {
-        console.log(colorize.orange('Watch script closed correctly.'))
-      } else {
-        cleanUp()
-        throw new Error(colorize.red('The watch script may not have been closed correctly'))
-      }
-      done()
+    expect(() => watch(multiWatching => {
+      multiWatching.close(() => {
+        let isClosed = true
+        for (const watching of multiWatching.watchings) {
+          isClosed = isClosed && watching.closed
+        }
+        if (isClosed) {
+          console.log(colorize.orange('Watch script closed correctly.'))
+        } else {
+          cleanUp()
+          throw new Error(colorize.red('The watch script may not have been closed correctly'))
+        }
+        done()
+      })
     })).not.toThrow()
   })
 })
