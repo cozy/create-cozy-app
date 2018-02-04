@@ -1,5 +1,3 @@
-'use strict'
-
 const { environment, target } = require('cozy-scripts/config/webpack.vars')
 
 const configs = [

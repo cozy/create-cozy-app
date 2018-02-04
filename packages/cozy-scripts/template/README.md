@@ -1,18 +1,9 @@
 [![Travis build status shield](https://img.shields.io/travis/<USERNAME_GH>/<SLUG_GH>/master.svg)](https://travis-ci.org/<USERNAME_GH>/<SLUG_GH>)
-[![NPM release version shield](https://img.shields.io/npm/v/<SLUG_NPM>.svg)](https://www.npmjs.com/package/<SLUG_NPM>)
 [![Github Release version shield](https://img.shields.io/github/tag/<USERNAME_GH>/<SLUG_GH>.svg)](https://github.com/<USERNAME_GH>/<SLUG_GH>/releases)
-[![NPM Licence shield](https://img.shields.io/npm/l/<SLUG_NPM>.svg)](https://github.com/<USERNAME_GH>/<SLUG_GH>/blob/master/LICENSE)
+[![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
 
 
 # <APP_NAME>
-
-
-## What's Cozy?
-
-![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
-
-[Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
-
 
 ## What's <APP_NAME>?
 
@@ -111,6 +102,17 @@ If you want to work on <APP_NAME> and submit code modifications, feel free to op
 
 
 ## Community
+
+### What's Cozy?
+
+<div align="center">
+  <a href="https://cozy.io">
+    <img src="https://cdn.rawgit.com/cozy/cozy-site/master/src/images/cozy-logo-name-horizontal-blue.svg" alt="cozy" height="48" />
+  </a>
+ </div>
+ </br>
+
+[Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
 
 ### Localization
 

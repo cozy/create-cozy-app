@@ -1,10 +1,24 @@
-[![npm](https://img.shields.io/npm/v/eslint-config-cozy-app.svg)](https://www.npmjs.com/package/eslint-config-cozy-app)
-[![NPM Licence shield](https://img.shields.io/npm/l/eslint-config-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/tree/master/packages/eslint-config-cozy-app/LICENSE)
-[![npm](https://img.shields.io/npm/dm/eslint-config-cozy-app.svg)]()
-[![dependencies Status](https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/eslint-config-cozy-app)](https://david-dm.org/cpatchane/create-cozy-app?path=packages/eslint-config-cozy-app)
-[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
+<h1 align="center">Eslint Config Cozy App</h1>
 
-# eslint-config-cozy-app
+<div align="center">
+  <a href="https://www.npmjs.com/package/eslint-config-cozy-app">
+    <img src="https://img.shields.io/npm/v/eslint-config-cozy-app.svg" alt="npm version" />
+  </a>
+  <a href="https://github.com/CPatchane/create-cozy-app/blob/master/packages/eslint-config-cozy-app/LICENSE">
+    <img src="https://img.shields.io/npm/l/eslint-config-cozy-app.svg" alt="license" />
+  </a>
+  <a href="https://npmjs.org/package/eslint-config-cozy-app">
+    <img src="https://img.shields.io/npm/dm/eslint-config-cozy-app.svg" alt="npm downloads" />
+  </a>
+  <a href="https://david-dm.org/cpatchane/create-cozy-app?path=packages/eslint-config-cozy-app">
+    <img src="https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/eslint-config-cozy-app" alt="david-dm" />
+  </a>
+  <a href="https://renovateapp.com/">
+    <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="renovate" />
+  </a>
+</div>
+
+### What's eslint-config-cozy-app?
 
 A shareable configuration for Cozy Application using Standard configs and `babel-eslint` parser with JSX support.
 
@@ -28,7 +42,12 @@ In a file named `.eslintrc.json` (the ESLint configuration file), you can use th
 
 ### What's Cozy?
 
-![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
+<div align="center">
+  <a href="https://cozy.io">
+    <img src="https://cdn.rawgit.com/cozy/cozy-site/master/src/images/cozy-logo-name-horizontal-blue.svg" alt="cozy" height="48" />
+  </a>
+ </div>
+ </br>
 
 [Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
 
