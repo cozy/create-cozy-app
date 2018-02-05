@@ -1,12 +1,28 @@
-![cca_1920x1080_white](https://user-images.githubusercontent.com/10224453/35386369-19aa2aaa-01cc-11e8-929c-c10330634e39.png)
+<div align="center">
+  <img src="https://github.com/cpatchane/create-cozy-app/raw/master/CreateCozyApp.png" alt="CCA illustration" />
+</div>
 
-[![NPM Licence shield](https://img.shields.io/npm/l/create-cozy-app.svg)](https://github.com/CPatchane/create-cozy-app/blob/master/packages/create-cozy-app/LICENSE)
-[![Travis](https://img.shields.io/travis/CPatchane/create-cozy-app.svg)]()
-[![npm](https://img.shields.io/npm/dm/create-cozy-app.svg)]()
-[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
+<h1 align="center">Create Cozy App</h1>
 
+<div align="center">
+  <a href="https://github.com/CPatchane/create-cozy-app/blob/master/packages/create-cozy-app/LICENSE">
+    <img src="https://img.shields.io/npm/l/create-cozy-app.svg" alt="license" />
+  </a>
+  <a href="https://travis-ci.org/CPatchane/create-cozy-app">
+    <img src="https://img.shields.io/travis/CPatchane/create-cozy-app.svg" alt="travis" />
+  </a>
+  <a href="https://npmjs.org/package/create-cozy-app">
+    <img src="https://img.shields.io/npm/dm/create-cozy-app.svg" alt="downloads" />
+  </a>
+  <a href="https://renovateapp.com/">
+    <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="renovate" />
+  </a>
+  <a href="https://github.com/facebook/jest">
+    <img src="https://facebook.github.io/jest/img/jest-badge.svg" alt="tested with jest" />
+  </a>
+</div>
 
-## Create Cozy App
+<p align="center">Start quickly your Cozy application</p>
 
 ### What's create-cozy-app?
 
@@ -23,7 +39,7 @@ By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/C
  - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use standalone mode);
 
 
-#### Running it without installation via Yarn
+### Running it without installation via Yarn
 
 You can use `create-cozy-app` without installing it globally by using the `yarn create cozy-app` command to bootstrap your application:
 
@@ -33,7 +49,7 @@ yarn create cozy-app mycozyapp
 
 You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
 
-#### Install the CLI
+### Install the CLI
 
 Just use `yarn` to download and globally install the `create-cozy-app` CLI;
 
@@ -49,7 +65,7 @@ If you installed the CLI as described before, use the `create-cozy-app` command 
 create-cozy-app mycozyapp
 ```
 
-#### Ready to go
+### Ready to go
 
 The script will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`
 
@@ -63,11 +79,11 @@ yarn watch:standalone
 After the webpack build, your app should be available at http://localhost:8888
 
 
-#### Known limitations
+### Known limitations
 
 For now, this project has only been tested on GNU/Linux and OS X.
 
-#### Options
+### Options
 
 ##### `--scripts-source`
 
@@ -90,13 +106,14 @@ Using this options, `create-cozy-app` will use the `cozy-scripts-vanilla` packag
 
 ## Community
 
-### Maintainer
-
-The lead maintainer for `create-cozy-app` and tooling is [@CPatchane](https://github.com/CPatchane), send him a :beers: to say hello!
-
 ### What's Cozy?
 
-![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
+<div align="center">
+  <a href="https://cozy.io">
+    <img src="https://cdn.rawgit.com/cozy/cozy-site/master/src/images/cozy-logo-name-horizontal-blue.svg" alt="cozy" height="48" />
+  </a>
+ </div>
+ </br>
 
 [Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
 
@@ -113,6 +130,8 @@ You can reach the Cozy Community by:
 ## License
 
 `create-cozy-app` is distributed under the MIT license.
+
+CCA logo by [@CPatchane](https://github.com/CPatchane).
 
 
 [cozy]: https://cozy.io "Cozy Cloud"

@@ -1,10 +1,30 @@
-[![npm](https://img.shields.io/npm/v/cozy-scripts-vanilla.svg)](https://www.npmjs.com/package/cozy-scripts-vanilla)
-[![NPM Licence shield](https://img.shields.io/npm/l/cozy-scripts-vanilla.svg)](https://github.com/CPatchane/cozy-scripts-vanilla/tree/master/packages/cozy-scripts-vanilla/LICENSE)
-[![npm](https://img.shields.io/npm/dm/cozy-scripts-vanilla.svg)]()
-[![dependencies Status](https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/cozy-scripts-vanilla)](https://david-dm.org/cpatchane/create-cozy-app?path=packages/cozy-scripts-vanilla)
-[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
+<h1 align="center">Cozy Scripts Vanilla</h1>
 
-# Cozy Scripts Vanilla
+<div align="center">
+  <a href="https://www.npmjs.com/package/cozy-scripts-vanilla">
+    <img src="https://img.shields.io/npm/v/cozy-scripts-vanilla.svg" alt="npm version" />
+  </a>
+  <a href="https://github.com/CPatchane/create-cozy-app/blob/master/packages/cozy-scripts-vanilla/LICENSE">
+    <img src="https://img.shields.io/npm/l/cozy-scripts-vanilla.svg" alt="license" />
+  </a>
+  <a href="https://travis-ci.org/CPatchane/create-cozy-app">
+    <img src="https://img.shields.io/travis/CPatchane/create-cozy-app.svg" alt="travis" />
+  </a>
+  <a href="https://npmjs.org/package/cozy-scripts-vanilla">
+    <img src="https://img.shields.io/npm/dm/cozy-scripts-vanilla.svg" alt="npm downloads" />
+  </a>
+  <a href="https://david-dm.org/cpatchane/create-cozy-app?path=packages/cozy-scripts-vanilla">
+    <img src="https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/cozy-scripts-vanilla" alt="david-dm" />
+  </a>
+  <a href="https://renovateapp.com/">
+    <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="renovate" />
+  </a>
+  <a href="https://github.com/facebook/jest">
+    <img src="https://facebook.github.io/jest/img/jest-badge.svg" alt="tested with jest" />
+  </a>
+</div>
+
+### What's cozy-scripts-vanilla?
 
 `cozy-scripts-vanilla` is a script bundle designed to be run by `create-cozy-app`. This latter will just create the root folder and then run the `node_modules/cozy-scripts-vanilla/scripts/init.js` script inside it.
 
@@ -36,13 +56,14 @@ And that's it, the application is ready to be served by a Cozy.
 
 ## Community
 
-### Maintainer
-
-The lead maintainer for `cozy-scripts` and tooling is [@CPatchane](https://github.com/CPatchane), send him a :beers: to say hello!
-
 ### What's Cozy?
 
-![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
+<div align="center">
+  <a href="https://cozy.io">
+    <img src="https://cdn.rawgit.com/cozy/cozy-site/master/src/images/cozy-logo-name-horizontal-blue.svg" alt="cozy" height="48" />
+  </a>
+ </div>
+ </br>
 
 [Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
 

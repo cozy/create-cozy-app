@@ -1,7 +1,8 @@
-# `cozy-scripts` configurations
+# The `cozy-scripts` configurations
 
 ## Table of content
 
+- __[Introduction](#introduction)__
 - __[Bundles](#bundles)__
     - [`webpack.bundle.default.js`](#webpackbundledefaultjs)
     - [`webpack.bundle.vue.js`](#webpackbundlevuejs)
@@ -29,6 +30,22 @@
 - __[Miscellaneous](#miscellaneous)__
     - [`webpack.vars.js`](#webpackvarsjs)
 
+## Introduction
+
+To build a Cozy application, `cozy-scripts` uses `webpack` under the hood, and this documentation is dedicated to all webpack configuration files.
+In order to organize all these webpack configurations, they are classified in many files according to the concern.
+Having many unit files for the configuration will also allow to support specific application needs without 'ejecting' (removing `cozy-scripts` dependency and copy all webpack configurations and dependencies to the application repository).
+These files are supposed to be enoughly independant to be usable upon request as far as possible without conflicts.
+
+#### Kind of config file:
+
+__Bundle:__ A bundle regroup many unit configuration for a specific use case like the default \(P\)React application or an VueJS application.
+
+__Environment:__ An environment config is in charge of provided variables and pluging specific to a compiling context (development or production for example).
+
+__Target:__ A target means the one which will use the built. For now we only have to targets, `browser` for the default web application and `mobile` for the native mobile application using Cordova (in progress).
+
+
 ## Bundles
 
 ### `webpack.bundle.default.js`
@@ -49,15 +66,15 @@ This file is the default config bundle used for the application built from `cozy
 - `webpack.target.mobile.js`
 - `webpack.vars.js`
 
-By default `cozy-scripts` uses this bundle in an opinionated way, but you can overload this configuration using a custom `app.config.js` in your application root directory:
+By default `cozy-scripts` uses this bundle in an opinionated way, but you can overload this configuration by creating a custom `app.config.js` in your application root directory:
 
 ```js
 // app.config.js
 
-// ES Modules
+// using ES Modules
 import configs from 'cozy-scripts/config/webpack.bundle.default.js'
 import myConfig from './config/webpack.myconfig.js'
-// or CommonJS
+// or using CommonJS
 const configs = require('cozy-scripts/config/webpack.bundle.default.js')
 const myConfig = require('./config/webpack.myconfig.js')
 
@@ -224,14 +241,14 @@ This config will provide a separate config to build app services using [Webpack 
 In this case, all services files (`.js` files in the `/src/targets/services/` folder) will be built using this separate webpack config.
 
 This config will:
-    - use `__mergeStrategy` to drive the [`webpack-merge` strategy](docs/webpack-merge-strategy.md):
-        - disable smart merging
-        - use the `replace` mode `plugins`, `output` and `entry`
-    - define as webpack entry an array of all `.js` files contained in `/src/target/services` folder
-    - use as output the `/build/services` folder with `[name].js` as filename
-    - define the target as `'node'`
-    - disable devtool (boolean to `false`)
-    - define the global variable `__TARGET__` to `services` using the plugin `webpack.DefinePlugin`
+- use `__mergeStrategy` to drive the [`webpack-merge` strategy](docs/webpack-merge-strategy.md):
+    - disable smart merging
+    - use the `replace` mode `plugins`, `output` and `entry`
+- define as webpack entry an array of all `.js` files contained in `/src/target/services` folder
+- use as output the `/build/services` folder with `[name].js` as filename
+- define the target as `'node'`
+- disable devtool (boolean to `false`)
+- define the global variable `__TARGET__` to `services` using the plugin `webpack.DefinePlugin`
 
 This config will be used only if the webpack target is `browser`.
 
@@ -259,7 +276,7 @@ It will:
 - load `cozy-bar` js and css files using `imports-loader`
 
 ##### Plugins:
-- `webpack.DefinePlugin` to define globals variables at compile time:
+- `webpack.DefinePlugin` to define globals variables at compiling time:
     - `__DEVELOPMENT__` to `true`
     - `__STACK_ASSETS__` to `false`
 - `webpack.ProvidePlugin` to provide `cozy-bar` and `cozy-client-js` from `node_modules` (in production, these modules will be provided to the application by the [`cozy-stack`](https://cozy.github.io/cozy-stack/client-app-dev.html#good-practices-for-your-application))
@@ -273,7 +290,7 @@ It will:
 - `webpack.optimize.UglifyJsPlugin` with options:
     - `mangle` to `true`
     - `compress` with `warnings: false`
-- `webpack.DefinePlugin` to define globals variables at compile time:
+- `webpack.DefinePlugin` to define globals variables at compiling time:
     - `process.env.NODE_ENV` to `production`
     - `__DEVELOPMENT__` to `false`
     - `__DEVTOOLS__` to `false`
