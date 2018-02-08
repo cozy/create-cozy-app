@@ -24,6 +24,12 @@ A shareable configuration for Cozy Application using Standard configs and `babel
 
 This package is an ESLint shareable config used by [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app).
 
+To install:
+
+```
+yarn add --dev eslint-config-cozy-app
+```
+
 ### Usage with a Create Cozy App projects
 
 If you started your project using [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app), you don't need to do anything, you should already have a `.eslintrc.json` configured to used this preset.

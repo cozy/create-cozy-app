@@ -32,6 +32,12 @@
 
 All the application template outline is handled by `cozy-scripts`.
 
+To install:
+
+```
+yarn add --dev cozy-scripts
+```
+
 ### Default template (`template` folder)
 
 Using the default template, `cozy-scripts` will generate a \(P\)React/Redux application. After the initialisation, you should have the following folder structure:
