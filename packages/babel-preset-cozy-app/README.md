@@ -24,6 +24,12 @@ A shareable configuration for Cozy Application with React and JSX support.
 
 This package is a Babel preset used by [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app).
 
+To install:
+
+```
+yarn add --dev babel-preset-cozy-app
+```
+
 ### Usage with a Create Cozy App projects
 
 If you started your project using [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app), you don't need to do anything, you should already have a `.babelrc` configured to used this preset.
