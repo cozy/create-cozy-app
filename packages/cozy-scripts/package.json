@@ -20,7 +20,7 @@
     "babel-loader": "7.1.2",
     "chalk": "2.2.2",
     "commander": "2.14.1",
-    "copy-webpack-plugin": "4.3.1",
+    "copy-webpack-plugin": "4.4.0",
     "cross-spawn": "6.0.4",
     "css-loader": "0.28.9",
     "css-mqpacker": "6.0.2",
