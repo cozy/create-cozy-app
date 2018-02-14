@@ -68,7 +68,7 @@ Then, in a file named `.babelrc` (the Babel configuration file), you can use the
 
 #### Plugins:
 
-- [`transform-object-rest-spread`](http://babeljs.io/docs/plugins/transform-object-rest-spread/) to transform rest properties for object destructuring assignment and spread properties for object literals. The `useBuiltIns` options is enable to directly use `Object.assign` considered as available or polyilled.
+- [`transform-object-rest-spread`](http://babeljs.io/docs/plugins/transform-object-rest-spread/) to transform rest properties for object destructuring assignment and spread properties for object literals. The `useBuiltIns` options is enable to directly use `Object.assign` considered as available or polyfilled.
 
 - [`transform-class-properties`](https://babeljs.io/docs/plugins/transform-class-properties/) to transform class attributes and methods with auto-binding to the class instance and no constructor needed.
 

@@ -25,6 +25,7 @@ module.exports = {
   appREADME: resolveApp('README.md'),
   appLICENSE: resolveApp('LICENSE'),
   appSrc: resolveApp('src'),
+  appLocales: resolveApp('src/locales'),
   appVendorAssets: resolveApp('src/targets/vendor/assets'),
   appNodeModules: resolveApp('node_modules'),
   // for browser

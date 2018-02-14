@@ -207,6 +207,8 @@ A custom webpack plugin usage to extract the hash from built files for reference
 
 A `copy-webpack-plugin` plugin usage to copy the `manifest.webapp`, `README.md` and `LICENSE` files to the output build folder.
 
+In the `production` environment, the `manifest.webapp` is transformed to include locales from the application `src/locales` folder (locales concerning manifest descriptions, permissions, names...). It will look for the `manifest` property (if found) of the locale `.json` file. So the `locales` property of the `manifest.webapp` will be an object of language slugs as properties and each slug matching the related locales found. The `langs` array in the manifest will also be computed according to the languages found in `src/locales`.
+
 Except for `production` environment, the `manifest.webapp` is transformed using a custom function to change the `slug` property value to `app` (to keep using `app.cozy.tools:8080` URL for different app development).
 
 ### `webpack.config.pictures.js`
