@@ -2,7 +2,11 @@
 
 const webpack = require('webpack')
 const configs = require('./config')
+const colorize = require('../utils/_colorize')
 
+for (const config in configs) {
+  configs[config].bail = true // enable bail when building
+}
 const compiler = webpack(configs)
 
 const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
@@ -11,8 +15,7 @@ const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 module.exports = (successCallback) => {
   compiler.run((err, stats) => {
     if (err) {
-      console.error(err)
-      return
+      throw new Error(colorize.red(err))
     }
 
     console.log(stats.toString({
