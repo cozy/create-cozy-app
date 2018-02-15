@@ -24,7 +24,7 @@ module.exports = {
     // and spread properties for object literals
     // useBuiltIns to directly use Object.assign instead of using Babel extends
     [require.resolve('babel-plugin-transform-object-rest-spread'), {
-      useBuiltIns: true
+      useBuiltIns: false
     }],
     // transform class attributes and methods with auto-binding
     // to the class instance and no constructor needed
