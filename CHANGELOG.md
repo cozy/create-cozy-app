@@ -12,7 +12,7 @@
 * `cozy-scripts`
   * [#289](https://github.com/CPatchane/create-cozy-app/pull/289) chore(deps): update dependency eslint to v4.18.0. ([@renovate[bot]](https://github.com/apps/renovate))
   * [#288](https://github.com/CPatchane/create-cozy-app/pull/288) fix(deps): update dependency react-redux to v5.0.7. ([@renovate[bot]](https://github.com/apps/renovate))
-  * [#287](https://github.com/CPatchane/create-cozy-app/pull/287) chore(deps): update dependency eslint-config-cozy-app to v0.3.2 - autoclosed. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#287](https://github.com/CPatchane/create-cozy-app/pull/287) chore(deps): update dependency eslint-config-cozy-app to v0.3.2. ([@renovate[bot]](https://github.com/apps/renovate))
   * [#286](https://github.com/CPatchane/create-cozy-app/pull/286) chore(deps): update dependency babel-preset-cozy-app to v0.3.2. ([@renovate[bot]](https://github.com/apps/renovate))
 
 #### Committers: 1
