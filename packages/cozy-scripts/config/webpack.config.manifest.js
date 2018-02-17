@@ -2,7 +2,7 @@
 
 const CopyPlugin = require('copy-webpack-plugin')
 
-const {production} = require('./webpack.vars')
+const { environment } = require('./webpack.vars')
 const paths = require('../utils/paths')
 const path = require('path')
 const fs = require('fs')
@@ -27,7 +27,7 @@ module.exports = {
 // It also computes the langs array according to the existing locales files
 function transformManifest (buffer) {
   const content = JSON.parse(buffer.toString())
-  if (production) {
+  if (environment === 'production') {
     const locales = fs.readdirSync(paths.appLocales)
     content.locales = {}
     content.langs = []
