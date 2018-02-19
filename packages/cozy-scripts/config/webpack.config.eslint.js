@@ -1,5 +1,7 @@
 'use strict'
 
+const {isDebugMode} = require('./webpack.vars')
+
 module.exports = {
   module: {
     rules: [
@@ -10,7 +12,8 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app'],
-          fix: true
+          fix: true,
+          emitWarning: isDebugMode
         }
       }
     ]
