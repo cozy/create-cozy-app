@@ -55,7 +55,7 @@
     "babel-jest": "22.2.2",
     "babel-polyfill": "6.26.0",
     "babel-preset-cozy-app": "0.3.2",
-    "eslint": "4.18.0",
+    "eslint": "4.18.1",
     "eslint-config-standard": "11.0.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-node": "6.0.0",
