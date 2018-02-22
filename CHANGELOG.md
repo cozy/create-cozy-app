@@ -1,3 +1,23 @@
+## create-cozy-app@0.5.6, cozy-scripts@0.5.3, eslint-config-cozy-app@0.3.3 (2018-02-22)
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#305](https://github.com/CPatchane/create-cozy-app/pull/305) chore(deps): update dependency eslint-plugin-import to v2.9.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#304](https://github.com/CPatchane/create-cozy-app/pull/304) fix(deps): update dependency file-loader to v1.1.9. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#302](https://github.com/CPatchane/create-cozy-app/pull/302) fix(deps): update dependency cozy-client-js to v0.7.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#301](https://github.com/CPatchane/create-cozy-app/pull/301) chore(deps): update dependency eslint to v4.18.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#295](https://github.com/CPatchane/create-cozy-app/pull/295) chore(deps): update dependency standard to v11. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#300](https://github.com/CPatchane/create-cozy-app/pull/300) fix(deps): update dependency imports-loader to v0.8.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#298](https://github.com/CPatchane/create-cozy-app/pull/298) fix(deps): update dependency babel-eslint to v8.2.2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#297](https://github.com/CPatchane/create-cozy-app/pull/297) fix(deps): update dependency file-loader to v1.1.8. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#292](https://github.com/CPatchane/create-cozy-app/pull/292) fix(deps): update dependency postcss to v6.0.19. ([@renovate[bot]](https://github.com/apps/renovate))
+* `create-cozy-app`
+  * [#303](https://github.com/CPatchane/create-cozy-app/pull/303) fix(deps): update dependency ora to v2. ([@renovate[bot]](https://github.com/apps/renovate))
+* `eslint-config-cozy-app`
+  * [#294](https://github.com/CPatchane/create-cozy-app/pull/294) fix(deps): update dependency eslint-config-standard-jsx to ^5.0.0. ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts`, `eslint-config-cozy-app`
+  * [#293](https://github.com/CPatchane/create-cozy-app/pull/293) chore(deps): update dependency eslint-config-standard to v11. ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## cozy-scripts@0.5.2 (2018-02-17)
 
 #### :nail_care: Enhancements:
