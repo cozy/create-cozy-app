@@ -239,7 +239,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
@@ -571,7 +571,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
@@ -903,7 +903,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
@@ -1234,7 +1234,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
@@ -1556,7 +1556,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
@@ -1892,7 +1892,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
@@ -2269,7 +2269,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
@@ -2596,7 +2596,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
+            "outputPath": "/img/",
           },
           "test": Object {},
         },
