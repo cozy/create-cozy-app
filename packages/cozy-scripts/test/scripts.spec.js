@@ -11,9 +11,9 @@ const appName = 'test-app'
 const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
 const customConfigPath = path.join(appPath, 'app.config.js')
-const ownTestConfig = path.join(rootPath, __dirname, 'lib', 'test.config.js')
-const servicesTestConfig = path.join(rootPath, __dirname, 'lib', 'services.config.js')
-const strategyTestConfig = path.join(rootPath, __dirname, 'lib', 'strategy.config.js')
+const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
+const servicesTestConfig = path.join(__dirname, 'lib', 'services.config.js')
+const strategyTestConfig = path.join(__dirname, 'lib', 'strategy.config.js')
 
 process.on('SIGINT', () => {
   console.log()
