@@ -12,7 +12,6 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app'],
-          fix: true,
           emitWarning: isDebugMode
         }
       }

@@ -72,7 +72,6 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
-            "fix": true,
           },
           "test": Object {},
         },
@@ -363,7 +362,6 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
-            "fix": true,
           },
           "test": Object {},
         },
@@ -654,7 +652,6 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
-            "fix": true,
           },
           "test": Object {},
         },
@@ -944,7 +941,6 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
-            "fix": true,
           },
           "test": Object {},
         },
@@ -1225,7 +1221,6 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
-            "fix": true,
           },
           "test": Object {},
         },
@@ -1520,7 +1515,6 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
-            "fix": true,
           },
           "test": Object {},
         },
