@@ -152,6 +152,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -484,6 +485,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": false,
             "extends": Array [
               "cozy-app",
             ],
@@ -816,6 +818,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -1147,6 +1150,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -1469,6 +1473,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -1805,6 +1810,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -2182,6 +2188,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -2509,6 +2516,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
