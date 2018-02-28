@@ -14,7 +14,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
   /*
     <APP_NAME> (already provided with appName) : application name
     <SLUG_GH> : github project name (same as appName by default)
-    <APP_CATEGORY> : application category (empty by default)
     <USERNAME_GH> : github author (that will host the project) username
     <USER_EMAIL_GH> : github author (that will host the project) email
     <USER_WEBSITE> : author website
@@ -29,11 +28,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
       message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements)',
       required: false,
       default: appName
-    },
-    {
-      name: '<APP_CATEGORY>',
-      description: colorize.orange('Category of your application (optional)?'),
-      required: false
     },
     {
       name: '<USERNAME_GH>',
