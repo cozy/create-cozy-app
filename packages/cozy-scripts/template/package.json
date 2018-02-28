@@ -74,7 +74,7 @@
   "dependencies": {
     "cozy-bar": "4.8.9",
     "cozy-client-js": "0.7.1",
-    "cozy-ui": "7.5.0",
+    "cozy-ui": "7.6.0",
     "preact": "8.2.7",
     "preact-compat": "3.18.0",
     "react-redux": "5.0.7",
