@@ -5,6 +5,7 @@
   "categories": [],
   "version": "0.1.0",
   "licence": "AGPL-3.0",
+  "editor": "",
   "source": "https://github.com/<USERNAME_GH>/<SLUG_GH>.git@build",
   "developer": {
     "name": "<USERNAME_GH>",

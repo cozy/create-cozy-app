@@ -30,4 +30,4 @@ script:
 - yarn test
 - yarn build:browser
 after_success:
-- test $TRAVIS_BRANCH = "master" && yarn run deploy -- --branch=build
+- test $TRAVIS_BRANCH = "master" && yarn run deploy:travis -- --branch=build
