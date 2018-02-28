@@ -60,7 +60,6 @@
     "scripts",
     "template",
     "template/app/.github",
-    "template/app/.gitignore",
     "template/app/.tx",
     "template/app/.babelrc",
     "template/app/.editorconfig",
