@@ -11,7 +11,6 @@
     "name": "<USERNAME_GH>",
     "url": "<USER_WEBSITE>"
   },
-  "locales": {},
   "routes": {
     "/": {
       "folder": "/",
