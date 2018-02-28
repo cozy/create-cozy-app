@@ -2,7 +2,7 @@
   "name": "<APP_NAME>",
   "slug": "<SLUG_GH>",
   "icon": "icon.svg",
-  "category": "<APP_CATEGORY>",
+  "categories": [],
   "version": "0.1.0",
   "licence": "AGPL-3.0",
   "source": "https://github.com/<USERNAME_GH>/<SLUG_GH>.git@build",
