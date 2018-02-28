@@ -1,6 +1,6 @@
 {
   "name": "<APP_NAME>",
-  "slug": "<SLUG_GH>",
+  "slug": "<APP_SLUG>",
   "icon": "icon.svg",
   "categories": [],
   "version": "0.1.0",

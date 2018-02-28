@@ -12,6 +12,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
   // informations needed to replace in templates
   /*
     <APP_NAME> (already provided with appName) : application name
+    <APP_SLUG> slug of the app, must be unique for the apps registry
     <SLUG_GH> : github project name (same as appName by default)
     <USERNAME_GH> : github author (that will host the project) username
     <USER_WEBSITE> : author website
@@ -25,6 +26,16 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
         return validateProjectName(value).validForNewPackages
       },
       message: 'Must be maily lowercase letters, digits or dashes (see NPM name requirements)',
+      required: false,
+      default: appName
+    },
+    {
+      name: '<APP_SLUG>',
+      description: colorize.orange('Your app slug?'),
+      conform: function (value) {
+        return validateProjectName(value).validForNewPackages
+      },
+      message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements).',
       required: false,
       default: appName
     },
