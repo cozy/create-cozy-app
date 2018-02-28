@@ -7,7 +7,7 @@
 
 ## What's <APP_NAME>?
 
-<APP_SHORT_DESCRIPTION>
+<TODO>...
 
 
 ## Hack

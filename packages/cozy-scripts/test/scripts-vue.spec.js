@@ -56,8 +56,6 @@ var readDeepDirSync = function (dir, filelist, parentPath = '') {
 
 const overrideData = {
   '<SLUG_GH>': appName,
-  '<SLUG_NPM>': appName,
-  '<APP_SHORT_DESCRIPTION>': 'Application for tests',
   '<APP_CATEGORY>': 'test',
   '<USERNAME_GH>': 'foo',
   '<USER_EMAIL_GH>': 'mock@example.test',

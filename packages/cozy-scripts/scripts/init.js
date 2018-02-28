@@ -14,8 +14,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
   /*
     <APP_NAME> (already provided with appName) : application name
     <SLUG_GH> : github project name (same as appName by default)
-    <SLUG_NPM> : future npm slug name (same as appName by default)
-    <APP_SHORT_DESCRIPTION> : application short description
     <APP_CATEGORY> : application category (empty by default)
     <USERNAME_GH> : github author (that will host the project) username
     <USER_EMAIL_GH> : github author (that will host the project) email
@@ -31,23 +29,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
       message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements)',
       required: false,
       default: appName
-    },
-    {
-      name: '<SLUG_NPM>',
-      description: colorize.orange('Future NPM slug name?'),
-      conform: function (value) {
-        return validateProjectName(value).validForNewPackages
-      },
-      message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements).',
-      required: false,
-      default: appName
-    },
-    {
-      name: '<APP_SHORT_DESCRIPTION>',
-      description: colorize.orange('Short description of your application?'),
-      conform: function (value) { return value.length <= 500 },
-      message: 'Required. Must be less than 500 characters',
-      required: true
     },
     {
       name: '<APP_CATEGORY>',

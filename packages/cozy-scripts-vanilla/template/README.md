@@ -1,7 +1,5 @@
 [![Travis build status shield](https://img.shields.io/travis/<USERNAME_GH>/<SLUG_GH>/master.svg)](https://travis-ci.org/<USERNAME_GH>/<SLUG_GH>)
-[![NPM release version shield](https://img.shields.io/npm/v/<SLUG_NPM>.svg)](https://www.npmjs.com/package/<SLUG_NPM>)
 [![Github Release version shield](https://img.shields.io/github/tag/<USERNAME_GH>/<SLUG_GH>.svg)](https://github.com/<USERNAME_GH>/<SLUG_GH>/releases)
-[![NPM Licence shield](https://img.shields.io/npm/l/<SLUG_NPM>.svg)](https://github.com/<USERNAME_GH>/<SLUG_GH>/blob/master/LICENSE)
 
 
 # <APP_NAME>
@@ -16,7 +14,7 @@
 
 ## What's <APP_NAME>?
 
-<APP_SHORT_DESCRIPTION>
+<TODO>...
 
 
 ## Hack
