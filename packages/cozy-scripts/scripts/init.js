@@ -12,24 +12,13 @@ const validateProjectName = require('validate-npm-package-name')
 module.exports = function (appPath, appName, cliOptions, gracefulRootExit, override, successCallback) {
   // informations needed to replace in templates
   /*
-    <APP_NAME> (already provided with appName) : application name
     <APP_SLUG> slug of the app, must be unique for the apps registry
-    <SLUG_GH> : github project name (same as appName by default)
+    <APP_NAME> application full name
     <USERNAME_GH> : github author (that will host the project) username
     <USER_EMAIL_GH> : github author (that will host the project) email
     <USER_WEBSITE> : author website
   */
   const promptProperties = [
-    {
-      name: '<SLUG_GH>',
-      description: colorize.orange('Github project name?'),
-      conform: function (value) {
-        return validateProjectName(value).validForNewPackages
-      },
-      message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements)',
-      required: false,
-      default: appName
-    },
     {
       name: '<APP_SLUG>',
       description: colorize.orange('Your app slug?'),
@@ -37,6 +26,25 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
         return validateProjectName(value).validForNewPackages
       },
       message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements).',
+      required: false,
+      default: appName
+    },
+    {
+      name: '<APP_NAME>',
+      description: colorize.orange('Your app full name?'),
+      pattern: /^[0-9A-Za-z\s-]{3,}$/i,
+
+      message: 'Can contain (3 or more) letters, digits, hyphens and spaces.',
+      required: false,
+      default: appName
+    },
+    {
+      name: '<SLUG_GH>',
+      description: colorize.orange('The Github project slug?'),
+      conform: function (value) {
+        return validateProjectName(value).validForNewPackages
+      },
+      message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements)',
       required: false,
       default: appName
     },
@@ -82,7 +90,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
         dataMap.set(propName, received[propName])
         if (cliOptions.verbose) console.log(`\t${propName}: ${received[propName]}`)
       }
-      dataMap.set('<APP_NAME>', appName) // add already provided app name
       try {
         run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback)
       } catch (e) {
@@ -118,10 +125,10 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   console.log('Building files...')
   // Create files from template (manifest, package...)
   /*
-    We don't use <APP_NAME> as package template name in order to be
+    We don't use <APP_SLUG> as package template name in order to be
     able to update all dependencies of the app template, so we change it here
   */
-  templatePackage.name = dataMap.get('<APP_NAME>')
+  templatePackage.name = dataMap.get('<APP_SLUG>')
   // merge generated app dependencies to template dependencies
   templatePackage.dependencies = Object.assign({}, templatePackage.dependencies, createdDeps)
   // remove private attribute (was used only for lerna)
