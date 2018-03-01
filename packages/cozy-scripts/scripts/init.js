@@ -16,7 +16,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
     <APP_NAME> application full name
     <USERNAME_GH> : github author (that will host the project) username
     <USER_EMAIL_GH> : github author (that will host the project) email
-    <USER_WEBSITE> : author website
   */
   const promptProperties = [
     {
@@ -61,13 +60,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
       pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       message: 'Must be valid github username',
       required: true
-    },
-    {
-      name: '<USER_WEBSITE>',
-      description: colorize.orange('Your website (optional)?'),
-      pattern: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/,
-      message: 'Must be valid url',
-      required: false
     }
   ]
 

@@ -15,7 +15,6 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
     <APP_NAME> application full name
     <SLUG_GH> : github project name (same as appName by default)
     <USERNAME_GH> : github author (that will host the project) username
-    <USER_WEBSITE> : author website
   */
 
   const promptProperties = [
@@ -54,13 +53,6 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
       pattern: /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i,
       message: 'Must be valid github username',
       required: true
-    },
-    {
-      name: '<USER_WEBSITE>',
-      description: colorize.orange('Your website (optional)?'),
-      pattern: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/,
-      message: 'Must be valid url',
-      required: false
     }
   ]
 

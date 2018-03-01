@@ -60,8 +60,7 @@ const overrideData = {
   '<SLUG_GH>': appName,
   '<APP_NAME>': appName,
   '<APP_SLUG>': appName,
-  '<USERNAME_GH>': 'foo',
-  '<USER_WEBSITE>': 'mock.example.test'
+  '<USERNAME_GH>': 'foo'
 }
 
 describe('App from cozy-scripts-vanilla', () => {
