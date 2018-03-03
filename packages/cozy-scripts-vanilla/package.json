@@ -14,7 +14,7 @@
     "url": "https://github.com/CPatchane/create-cozy-app/issues"
   },
   "dependencies": {
-    "chalk": "2.3.1",
+    "chalk": "2.3.2",
     "cross-spawn": "6.0.4",
     "fs-extra": "5.0.0",
     "prompt": "1.0.0",
