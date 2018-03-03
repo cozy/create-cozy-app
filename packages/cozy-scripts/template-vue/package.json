@@ -77,7 +77,7 @@
   "dependencies": {
     "cozy-bar": "4.8.9",
     "cozy-client-js": "0.7.2",
-    "cozy-ui": "7.6.0",
+    "cozy-ui": "7.7.0",
     "date-fns": "1.29.0",
     "node-polyglot": "2.2.2",
     "vue": "2.5.13",
