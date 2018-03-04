@@ -21,7 +21,7 @@
     "chalk": "2.3.2",
     "commander": "2.14.1",
     "copy-webpack-plugin": "4.5.0",
-    "cross-spawn": "6.0.4",
+    "cross-spawn": "6.0.5",
     "css-loader": "0.28.10",
     "css-mqpacker": "6.0.2",
     "csswring": "6.0.3",
