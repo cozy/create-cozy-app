@@ -52,6 +52,7 @@
   },
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
+    "@vue/test-utils": "1.0.0-beta.12",
     "babel-core": "6.26.0",
     "babel-jest": "22.4.1",
     "babel-polyfill": "6.26.0",
@@ -71,8 +72,7 @@
     "stylint": "1.5.9",
     "vue-jest": "2.1.0",
     "vue-loader": "14.1.1",
-    "vue-template-compiler": "2.5.13",
-    "vue-test-utils": "1.0.0-beta.11"
+    "vue-template-compiler": "2.5.13"
   },
   "dependencies": {
     "cozy-bar": "4.8.9",

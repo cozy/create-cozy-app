@@ -3,7 +3,7 @@
 /* eslint-env jest */
 
 import Vue from 'vue'
-import { shallow } from 'vue-test-utils'
+import { shallow } from '@vue/test-utils'
 
 import Hello1 from '../../../src/components/HelloViews/Hello1'
 import Hello2 from '../../../src/components/HelloViews/Hello2'

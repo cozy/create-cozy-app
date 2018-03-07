@@ -3,7 +3,7 @@
 /* eslint-env jest */
 
 import Vue from 'vue'
-import { shallow } from 'vue-test-utils'
+import { shallow } from '@vue/test-utils'
 
 import App from '../src/components/App'
 import I18nTestMixin from './lib/I18n'
