@@ -3,13 +3,15 @@ matrix:
   fast_finish: true
 node_js:
 - 6
+env:
+  matrix:
+  - TESTS_SUITE=cli
+  - TESTS_SUITE=cozy-scripts:default
+  - TESTS_SUITE=cozy-scripts:vue
+  - TESTS_SUITE=cozy-scripts-vanilla
 cache:
   yarn: true
   directories:
   - node_modules
-before_install:
-- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.3.2
-- export PATH="$HOME/.yarn/bin:$PATH"
 script:
-- lerna bootstrap
-- yarn test
+- yarn test:$TESTS_SUITE
