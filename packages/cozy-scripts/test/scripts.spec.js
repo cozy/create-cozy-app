@@ -166,7 +166,20 @@ describe('App from cozy-scripts', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
       const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
-      if (result.status === 1) throw new Error('The generated applciation tests failed')
+      // convert output buffers to string
+      result.output = result.output.map(b => {
+        if (b) return b.toString('utf8')
+        return null
+      })
+      // if exited with code different from 0/success
+      if (result.status !== 0) {
+        throw new Error('The generated application tests failed' + JSON.stringify({
+          output: result.output,
+          status: result.status,
+          signal: result.signal,
+          error: result.error
+        }, null, 2))
+      }
     }).not.toThrow()
   })
 
