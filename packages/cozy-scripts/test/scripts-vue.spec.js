@@ -154,20 +154,13 @@ describe('App from cozy-scripts with VueJS 2', () => {
   it('should pass all app tests with success', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
-      const result = spawn.sync('yarn', ['test'], { stdio: 'inherit' })
-      // convert output buffers to string
-      result.output = result.output.map(b => {
-        if (b) return b.toString('utf8')
-        return null
-      })
+      const result = spawn.sync('yarn', ['test'], { stdio: 'pipe' })
       // if exited with code different from 0/success
       if (result.status !== 0) {
-        throw new Error('The generated application tests failed' + JSON.stringify({
-          output: result.output,
-          status: result.status,
-          signal: result.signal,
-          error: result.error
-        }, null, 2))
+        if (result.stderr) {
+          console.log(colorize.red(result.stderr.toString('utf8')))
+        }
+        throw new Error('The generated application tests failed')
       }
     }).not.toThrow()
   })
