@@ -26,7 +26,7 @@
     "config:mobile:production": "NODE_ENV=mobile:production cozy-scripts --show-config",
     "config:mobile:development": "NODE_ENV=mobile:development cozy-scripts --show-config",
     "deploy": "git-directory-deploy --directory build/ --branch build --repo=https://github.com/<USERNAME_GH>/<SLUG_GH>.git",
-    "deploy:travis": "git-directory-deploy --username <USERNAME_GH> --email <USER_EMAIL_GH> --directory build/ --repo=https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git",
+    "deploy:travis": "git-directory-deploy --username <USERNAME_GH> --email deploy@travis-ci.org --directory build/ --repo=https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "jest --verbose --coverage",
     "stack:docker": "docker run --rm -it -p 8080:8080 -p 5984:5984 -v \"$(pwd)/build\":/data/cozy-app/app cozy/cozy-app-dev",
