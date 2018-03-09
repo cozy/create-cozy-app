@@ -2,7 +2,7 @@
 
 // standardJS
 module.exports = {
-  extends: ['standard', 'standard-jsx'],
+  extends: ['standard', 'standard-jsx', 'eslint-config-prettier'],
   parser: 'babel-eslint',
   parserOptions: { ecmaFeatures: { jsx: true } },
   env: {
