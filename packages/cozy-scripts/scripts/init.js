@@ -15,7 +15,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
     <APP_SLUG> slug of the app, must be unique for the apps registry
     <APP_NAME> application full name
     <USERNAME_GH> : github author (that will host the project) username
-    <USER_EMAIL_GH> : github author (that will host the project) email
   */
   const promptProperties = [
     {
@@ -51,13 +50,6 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
       name: '<USERNAME_GH>',
       description: colorize.orange('Your github username?'),
       pattern: /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i,
-      message: 'Must be valid github username',
-      required: true
-    },
-    {
-      name: '<USER_EMAIL_GH>',
-      description: colorize.orange('Your github email (for the application build deployment script)?'),
-      pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       message: 'Must be valid github username',
       required: true
     }

@@ -62,8 +62,7 @@ const overrideData = {
   '<SLUG_GH>': appName,
   '<APP_SLUG>': appName,
   '<APP_NAME>': appName,
-  '<USERNAME_GH>': 'foo',
-  '<USER_EMAIL_GH>': 'mock@example.test'
+  '<USERNAME_GH>': 'foo'
 }
 
 function getConfig () {
