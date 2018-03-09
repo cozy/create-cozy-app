@@ -2,32 +2,32 @@
 
 exports[`App component only should be mounted correctly 1`] = `
 <div class="app-wrapper o-layout--2panes">
-    <aside class="o-sidebar">
-        <nav>
-            <ul class="c-nav">
-                <li class="c-nav-item">
-                    <a href="#/viewhello1" class="c-nav-link router-link-exact-active is-active">
-                        <!---->
-                        First
-                    </a>
-                </li>
-                <li class="c-nav-item">
-                    <a href="#/viewhello2" class="c-nav-link">
-                        <!---->
-                        Second
-                    </a>
-                </li>
-                <li class="c-nav-item">
-                    <a href="#/viewhello3" class="c-nav-link">
-                        <!---->
-                        Third
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-    <main class="app-content">
-        <p style="margin-left: 2em;" class="view">Just... Hello world! This is View 1.</p>
-    </main>
+  <aside class="o-sidebar">
+    <nav>
+      <ul class="c-nav">
+        <li class="c-nav-item">
+          <a href="#/viewhello1" class="c-nav-link router-link-exact-active is-active">
+            <!---->
+            First
+          </a>
+        </li>
+        <li class="c-nav-item">
+          <a href="#/viewhello2" class="c-nav-link">
+            <!---->
+            Second
+          </a>
+        </li>
+        <li class="c-nav-item">
+          <a href="#/viewhello3" class="c-nav-link">
+            <!---->
+            Third
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="app-content">
+    <p style="margin-left: 2em;" class="view">Just... Hello world! This is View 1.</p>
+  </main>
 </div>
 `;
