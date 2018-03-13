@@ -31,10 +31,9 @@ module.exports = function (appPath, appName, cliOptions, gracefulRootExit, overr
       name: '<APP_NAME>',
       description: colorize.orange('Your app full name?'),
       pattern: /^[0-9A-Za-z\s-]{3,}$/i,
-
       message: 'Can contain (3 or more) letters, digits, hyphens and spaces.',
       required: false,
-      default: appName
+      default: appName[0].toUpperCase() + appName.replace('-', ' ').slice(1)
     },
     {
       name: '<SLUG_GH>',
@@ -163,22 +162,22 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   console.log()
   process.chdir(appPath)
   installDependencies(cliOptions.verbose)
-  .then(() => {
-    console.log()
-    console.log('App dependencies installed.')
-    console.log()
-    console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/. Enjoy it!`))
-    if (cliOptions.vue) {
-      console.log('You can use the `app.config.js` file if you want to customize the webpack configuration.')
-    } else {
-      console.log('You can also create an `app.config.js` file if you want to customize the webpack configuration.')
-    }
-    if (typeof successCallback === 'function') successCallback()
-  })
-  .catch(error => {
-    gracefulExit(appPath)
-    gracefulRootExit(error)
-  })
+    .then(() => {
+      console.log()
+      console.log('App dependencies installed.')
+      console.log()
+      console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/. Enjoy it!`))
+      if (cliOptions.vue) {
+        console.log('You can use the `app.config.js` file if you want to customize the webpack configuration.')
+      } else {
+        console.log('You can also create an `app.config.js` file if you want to customize the webpack configuration.')
+      }
+      if (typeof successCallback === 'function') successCallback()
+    })
+    .catch(error => {
+      gracefulExit(appPath)
+      gracefulRootExit(error)
+    })
 }
 
 function installDependencies (verbose) {
