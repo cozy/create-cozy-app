@@ -32,10 +32,9 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
       name: '<APP_NAME>',
       description: colorize.orange('Your app full name?'),
       pattern: /^[0-9A-Za-z\s-]{3,}$/i,
-
       message: 'Can contain (3 or more) letters, digits, hyphens and spaces.',
       required: false,
-      default: appName
+      default: appName[0].toUpperCase() + appName.replace('-', ' ').slice(1)
     },
     {
       name: '<SLUG_GH>',
