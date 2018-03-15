@@ -1739,6 +1739,7 @@ Array [
   ".github/ISSUE_TEMPLATE",
   ".github/PULL_REQUEST_TEMPLATE",
   ".gitignore",
+  ".prettierrc",
   ".stylintrc",
   ".transifexrc.tpl",
   ".travis.yml",
