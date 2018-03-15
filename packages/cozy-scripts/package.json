@@ -59,13 +59,7 @@
     "config",
     "scripts",
     "template",
-    "template/app/.github",
-    "template/app/.tx",
-    "template/app/.babelrc",
-    "template/app/.editorconfig",
-    "template/app/.eslintrc.json",
-    "template/app/.stylintrc",
-    "template/app/.travis.yml",
+    "template-vue",
     "utils"
   ]
 }
