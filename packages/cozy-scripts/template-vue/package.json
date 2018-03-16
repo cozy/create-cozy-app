@@ -7,7 +7,7 @@
     "tx": "tx pull --all || true",
     "lint": "npm-run-all --parallel 'lint:*'",
     "lint:js": "eslint '{src,test}/**/*.{js}'",
-    "prettier": "prettier --write '{src,test}/**/*.{js}' && eslint --fix '{src,test}/**/*.{js}'",
+    "format:js": "lint:js --fix'",
     "lint:styles": "stylint src/styles --config ./.stylintrc",
     "build": "yarn run build:browser",
     "commons:build": "cozy-scripts build",
