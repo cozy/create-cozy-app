@@ -29,16 +29,7 @@
     "deploy:travis": "git-directory-deploy --username <USERNAME_GH> --email deploy@travis-ci.org --directory build/ --repo=https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "jest --verbose --coverage",
-    "stack:docker": "docker run --rm -it -p 8080:8080 -p 5984:5984 -v \"$(pwd)/build\":/data/cozy-app/app cozy/cozy-app-dev",
-    "android:prepare": "(cd src/targets/mobile && cordova platform add android && cordova prepare)",
-    "android:run": "(cd src/targets/mobile && cordova run android --device)",
-    "android:run:emulator": "(cd src/targets/mobile && cordova run android --emulator)",
-    "android:release": "npm run build:mobile && (cd src/targets/mobile && cordova build android --release)",
-    "android:signed": "npm run android:release && (cd src/targets/mobile && apksigner sign --ks keys/android/<APP_SLUG>-release-key.jks --out build/android/<APP_SLUG>.apk platforms/android/build/outputs/apk/android-release-unsigned.apk)",
-    "android:publish": "npm run android:signed && (cd src/targets/mobile && fastlane supply)",
-    "ios:prepare": "(cd src/targets/mobile && cordova platform add ios && cordova prepare)",
-    "ios:run": "(cd src/targets/mobile && cordova run ios --device)",
-    "ios:run:emulator": "(cd src/targets/mobile && cordova run ios --emulator)"
+    "stack:docker": "docker run --rm -it -p 8080:8080 -p 5984:5984 -v \"$(pwd)/build\":/data/cozy-app/app cozy/cozy-app-dev"
   },
   "repository": {
     "type": "git",
