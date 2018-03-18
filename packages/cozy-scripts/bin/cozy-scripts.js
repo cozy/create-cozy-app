@@ -5,6 +5,7 @@
 const commander = require('commander')
 const pkg = require('../package.json')
 const colorize = require('../utils/_colorize.js')
+const getWebpackConfigs = require('./config')
 
 let actionName
 const program = new commander.Command(pkg.name)
@@ -25,8 +26,7 @@ if (program.debug) {
 }
 
 if (program.showConfig) {
-  const appConfig = require('../scripts/config.js')
-  console.log(JSON.stringify(appConfig, null, 2))
+  console.log(JSON.stringify(getWebpackConfigs(), null, 2))
   process.exit(0)
 }
 

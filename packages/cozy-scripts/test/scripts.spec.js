@@ -66,8 +66,8 @@ const overrideData = {
 }
 
 function getConfig () {
-  const configFromScriptPath = path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js')
-  let appConfig = require(configFromScriptPath)
+  const getWebpackConfigs = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js'))
+  let appConfig = getWebpackConfigs()
   // we replace path to avoid environment specific snapshots
   // ex: paths like `/me/test/${testFolder}/...` will be `${testFolder}/...`
   const pathReplaceRegex = new RegExp(`"\\S*/${testFolder}/${appName}`, 'g')
@@ -199,15 +199,16 @@ describe('App from cozy-scripts', () => {
   // Webpack running
   it('should run webpack.run correctly with build script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
-    process.env.NODE_ENV = 'browser:production'
+    // should be NODE_ENV = 'browser:production' by default here
     const build = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'build.js'))
     expect(() => build(done)).not.toThrow()
+    expect(process.env.NODE_ENV).toBe('browser:production')
   })
 
   // should be always at the end (due to cleanUp usage)
   it('should run webpack.watch correctly with watch script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts watch script...'))
-    process.env.NODE_ENV = 'browser:development'
+    // should be NODE_ENV = 'browser:development' by default here
     const watch = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'watch.js'))
     expect(() => watch(multiWatching => {
       multiWatching.close(() => {
@@ -224,5 +225,6 @@ describe('App from cozy-scripts', () => {
         done()
       })
     })).not.toThrow()
+    expect(process.env.NODE_ENV).toBe('browser:development')
   })
 })
