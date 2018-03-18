@@ -126,24 +126,48 @@ describe('App from cozy-scripts with VueJS 2', () => {
     expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
-  it('should have the correct config browser:development according to NODE_ENV=browser:development', () => {
+  it('should handle correctly the config browser:development', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'development',
+      target: 'browser'
+    })
     process.env.NODE_ENV = 'browser:development'
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config browser:production according to NODE_ENV=browser:production', () => {
+  it('should handle correctly the config browser:production', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'production',
+      target: 'browser'
+    })
     process.env.NODE_ENV = 'browser:production'
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config mobile:development according to NODE_ENV=mobile:development', () => {
+  it('should handle correctly the config mobile:development', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'development',
+      target: 'mobile'
+    })
     process.env.NODE_ENV = 'mobile:development'
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config mobile:production according to NODE_ENV=mobile:production', () => {
+  it('should handle correctly the config mobile:production', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'production',
+      target: 'mobile'
+    })
     process.env.NODE_ENV = 'mobile:production'
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
   it('should pass all app tests with success', () => {
