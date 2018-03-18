@@ -61,8 +61,9 @@ const overrideData = {
   '<USERNAME_GH>': 'foo'
 }
 
-function getConfig () {
-  let appConfig = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js'))
+function getConfig (options) {
+  const getWebpackConfigs = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js'))
+  let appConfig = getWebpackConfigs(options)
   // we replace path to avoid environment specific snapshots
   // ex: paths like `/me/test/${testFolder}/...` will be `${testFolder}/...`
   const pathReplaceRegex = new RegExp(`"\\S*/${testFolder}/${appName}`, 'g')
@@ -88,6 +89,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
   beforeEach(() => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
+    if (process.env.COZY_SCRIPTS_DEBUG) delete process.env.COZY_SCRIPTS_DEBUG
     jest.resetModules()
   })
 
@@ -116,38 +118,56 @@ describe('App from cozy-scripts with VueJS 2', () => {
 
   it('should have the correct config browser:development by default', () => {
     console.log(colorize.orange('Asserting configs...'))
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
   it('should have the correct config browser:development by default handling --debug mode', () => {
     process.env.COZY_SCRIPTS_DEBUG = 'true'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
-  it('should have the correct config browser:development according to NODE_ENV=browser:development', () => {
+  it('should handle correctly the config browser:development', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'development',
+      target: 'browser'
+    })
     process.env.NODE_ENV = 'browser:development'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config browser:production according to NODE_ENV=browser:production', () => {
+  it('should handle correctly the config browser:production', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'production',
+      target: 'browser'
+    })
     process.env.NODE_ENV = 'browser:production'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config mobile:development according to NODE_ENV=mobile:development', () => {
+  it('should handle correctly the config mobile:development', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'development',
+      target: 'mobile'
+    })
     process.env.NODE_ENV = 'mobile:development'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config mobile:production according to NODE_ENV=mobile:production', () => {
+  it('should handle correctly the config mobile:production', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'production',
+      target: 'mobile'
+    })
     process.env.NODE_ENV = 'mobile:production'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
   it('should pass all app tests with success', () => {
@@ -166,17 +186,18 @@ describe('App from cozy-scripts with VueJS 2', () => {
 
   it('should run webpack.run correctly with build script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
-    process.env.NODE_ENV = 'browser:production'
+    // should be NODE_ENV = 'browser:production' by default here
     const build = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'build.js'))
-    expect(() => build(done)).not.toThrow()
+    expect(() => build({}, done)).not.toThrow()
+    expect(process.env.NODE_ENV).toBe('browser:production')
   })
 
   // should be always at the end (due to cleanUp usage)
   it('should run webpack.watch correctly with watch script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts watch script...'))
-    process.env.NODE_ENV = 'browser:development'
+    // should be NODE_ENV = 'browser:development' by default here
     const watch = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'watch.js'))
-    expect(() => watch(multiWatching => {
+    expect(() => watch({}, multiWatching => {
       multiWatching.close(() => {
         let isClosed = true
         for (const watching of multiWatching.watchings) {
@@ -191,5 +212,6 @@ describe('App from cozy-scripts with VueJS 2', () => {
         done()
       })
     })).not.toThrow()
+    expect(process.env.NODE_ENV).toBe('browser:development')
   })
 })

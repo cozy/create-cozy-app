@@ -5,6 +5,7 @@
 const commander = require('commander')
 const pkg = require('../package.json')
 const colorize = require('../utils/_colorize.js')
+const getWebpackConfigs = require('./config')
 
 let actionName
 const program = new commander.Command(pkg.name)
@@ -16,17 +17,30 @@ const program = new commander.Command(pkg.name)
   })
   .option('--show-config', 'just print app final webpack config')
   .option('--debug', 'print more outputs for debugging')
+  .option('--development', 'specify development build mode')
+  .option('--production', 'specify production build mode')
+  .option('--browser', 'specify browser build target')
+  .option('--mobile', 'specify mobile build target')
   .parse(process.argv)
 
-if (program.debug) {
-  process.env.COZY_SCRIPTS_DEBUG = true
-} else {
-  process.env.COZY_SCRIPTS_DEBUG = false
+// build mode and target computing (overwritten by NODE_ENV)
+const buildOptions = {
+  mode:
+    (program.production && 'production') ||
+    (program.development && 'development') ||
+    (actionName === 'build' && 'production') ||
+    'development',
+  target:
+    (program.browser && 'browser') ||
+    (program.mobile && 'mobile') ||
+    'browser',
+  debugMode: program.debug
 }
 
 if (program.showConfig) {
-  const appConfig = require('../scripts/config.js')
-  console.log(JSON.stringify(appConfig, null, 2))
+  console.log(JSON.stringify(
+    getWebpackConfigs(buildOptions), null, 2)
+  )
   process.exit(0)
 }
 
@@ -35,7 +49,7 @@ const availableScripts = ['watch', 'build', 'standalone']
 if (availableScripts.includes(actionName)) {
   const scriptPath = `../scripts/${actionName}`
   const script = require(scriptPath)
-  script()
+  script(buildOptions)
 } else {
   console.log(`cozy-scripts: unknown command ${colorize.cyan(actionName)}`)
 }

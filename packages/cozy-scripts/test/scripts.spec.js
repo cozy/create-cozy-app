@@ -65,9 +65,9 @@ const overrideData = {
   '<USERNAME_GH>': 'foo'
 }
 
-function getConfig () {
-  const configFromScriptPath = path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js')
-  let appConfig = require(configFromScriptPath)
+function getConfig (options) {
+  const getWebpackConfigs = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js'))
+  let appConfig = getWebpackConfigs(options)
   // we replace path to avoid environment specific snapshots
   // ex: paths like `/me/test/${testFolder}/...` will be `${testFolder}/...`
   const pathReplaceRegex = new RegExp(`"\\S*/${testFolder}/${appName}`, 'g')
@@ -93,6 +93,7 @@ describe('App from cozy-scripts', () => {
   beforeEach(() => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
+    if (process.env.COZY_SCRIPTS_DEBUG) delete process.env.COZY_SCRIPTS_DEBUG
     jest.resetModules()
     if (fs.existsSync(customConfigPath)) {
       fs.removeSync(customConfigPath)
@@ -126,38 +127,56 @@ describe('App from cozy-scripts', () => {
   // Output configuration
   it('should have the correct config browser:development by default', () => {
     console.log(colorize.orange('Asserting configs...'))
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
   it('should have the correct config browser:development by default handling --debug mode', () => {
     process.env.COZY_SCRIPTS_DEBUG = 'true'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
-  it('should have the correct config browser:development according to NODE_ENV=browser:development', () => {
+  it('should handle correctly the config browser:development', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'development',
+      target: 'browser'
+    })
     process.env.NODE_ENV = 'browser:development'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config browser:production according to NODE_ENV=browser:production', () => {
+  it('should handle correctly the config browser:production', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'production',
+      target: 'browser'
+    })
     process.env.NODE_ENV = 'browser:production'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config mobile:development according to NODE_ENV=mobile:development', () => {
+  it('should handle correctly the config mobile:development', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'development',
+      target: 'mobile'
+    })
     process.env.NODE_ENV = 'mobile:development'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
-  it('should have the correct config mobile:production according to NODE_ENV=mobile:production', () => {
+  it('should handle correctly the config mobile:production', () => {
+    const appConfigFromParams = getConfig({
+      mode: 'production',
+      target: 'mobile'
+    })
     process.env.NODE_ENV = 'mobile:production'
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    const appConfigFromEnv = getConfig()
+    expect(appConfigFromParams).toEqual(appConfigFromEnv)
+    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
   // Generated app tests
@@ -178,38 +197,36 @@ describe('App from cozy-scripts', () => {
   // Custom app.config.js
   it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
     fs.copySync(ownTestConfig, customConfigPath)
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
   it('should return two separated configs if services config is used (also test app.config.js usage)', () => {
     fs.copySync(servicesTestConfig, customConfigPath)
     fs.ensureDirSync(path.join(appPath, 'src', 'targets', 'services'))
     fs.writeFileSync(path.join(appPath, 'src', 'targets', 'services', 'testservice.js'), '')
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
   it('should correctly use the webpack-merge strategy if a __mergeStrategy property is found', () => {
     fs.copySync(strategyTestConfig, customConfigPath)
-    const appConfig = getConfig()
-    expect(JSON.parse(appConfig)).toMatchSnapshot()
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
   // Webpack running
   it('should run webpack.run correctly with build script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
-    process.env.NODE_ENV = 'browser:production'
+    // should be NODE_ENV = 'browser:production' by default here
     const build = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'build.js'))
-    expect(() => build(done)).not.toThrow()
+    expect(() => build({}, done)).not.toThrow()
+    expect(process.env.NODE_ENV).toBe('browser:production')
   })
 
   // should be always at the end (due to cleanUp usage)
   it('should run webpack.watch correctly with watch script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts watch script...'))
-    process.env.NODE_ENV = 'browser:development'
+    // should be NODE_ENV = 'browser:development' by default here
     const watch = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'watch.js'))
-    expect(() => watch(multiWatching => {
+    expect(() => watch({}, multiWatching => {
       multiWatching.close(() => {
         let isClosed = true
         for (const watching of multiWatching.watchings) {
@@ -224,5 +241,6 @@ describe('App from cozy-scripts', () => {
         done()
       })
     })).not.toThrow()
+    expect(process.env.NODE_ENV).toBe('browser:development')
   })
 })

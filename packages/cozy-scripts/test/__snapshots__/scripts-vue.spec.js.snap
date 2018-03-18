@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App from cozy-scripts with VueJS 2 should have the correct config browser:development according to NODE_ENV=browser:development 1`] = `
+exports[`App from cozy-scripts with VueJS 2 should handle correctly the config browser:development 1`] = `
 Array [
   Object {
     "bail": true,
@@ -68,7 +68,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
-            "emitWarning": true,
+            "emitWarning": false,
             "extends": Array [
               "cozy-app",
             ],
@@ -176,7 +176,7 @@ Array [
       },
       Object {
         "options": Object {
-          "log": true,
+          "log": false,
           "plugins": Array [
             null,
             null,
@@ -270,6 +270,867 @@ Array [
         "fullBuildTimeout": 200,
         "options": Object {},
         "requestTimeout": 10000,
+      },
+    ],
+    "resolve": Object {
+      "extensions": Array [
+        ".js",
+        ".json",
+        ".css",
+        ".vue",
+        ".styl",
+      ],
+      "modules": Array [
+        ".tmp_test/test-app-vue/node_modules",
+        ".tmp_test/test-app-vue/src",
+      ],
+      "symlinks": false,
+    },
+  },
+]
+`;
+
+exports[`App from cozy-scripts with VueJS 2 should handle correctly the config browser:production 1`] = `
+Array [
+  Object {
+    "bail": true,
+    "entry": Object {
+      "app": ".tmp_test/test-app-vue/src/targets/browser/index.js",
+    },
+    "externals": Object {
+      "cozy-client-js": "cozy",
+    },
+    "module": Object {
+      "noParse": Array [
+        Object {},
+      ],
+      "rules": Array [
+        Object {
+          "exclude": Object {},
+          "loader": "babel-loader",
+          "options": Object {
+            "cacheDirectory": "node_modules/.cache/babel-loader",
+          },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
+          "test": Object {},
+        },
+        Object {
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "vue-loader",
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "stylus-loader",
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": "svg-sprite-loader",
+          "options": Object {
+            "name": "[name]_[hash]",
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "file-loader",
+          "options": Object {
+            "name": "[name].[hash].[ext]",
+            "outputPath": "/img/",
+          },
+          "test": Object {},
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name].js",
+      "path": ".tmp_test/test-app-vue/build",
+    },
+    "plugins": Array [
+      Object {
+        "options": Object {
+          "async": Object {
+            "test": Array [],
+          },
+          "custom": Array [],
+          "defaultAttribute": "defer",
+          "defer": Object {
+            "test": Array [],
+          },
+          "inline": Object {
+            "test": Array [],
+          },
+          "module": Object {
+            "test": Array [],
+          },
+          "prefetch": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "preload": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "removeInlinedAssets": true,
+          "sync": Object {
+            "test": Array [],
+          },
+        },
+      },
+      Object {
+        "filename": "[name].[hash].min.css",
+        "id": 1,
+        "options": Object {},
+      },
+      Object {
+        "options": Object {
+          "log": false,
+          "plugins": Array [
+            null,
+            null,
+            null,
+          ],
+          "test": Object {},
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
+      Object {
+        "options": Object {
+          "options": Object {
+            "stylus": Object {
+              "use": Array [
+                null,
+              ],
+            },
+          },
+          "test": Object {},
+        },
+      },
+      Object {},
+      Object {},
+      Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "chunks": Array [
+            "app",
+          ],
+          "compile": true,
+          "excludeChunks": Array [],
+          "favicon": false,
+          "filename": "index.html",
+          "hash": false,
+          "inject": false,
+          "minify": Object {
+            "collapseWhitespace": true,
+          },
+          "showErrors": true,
+          "template": ".tmp_test/test-app-vue/src/targets/browser/index.ejs",
+          "title": "test-app-vue",
+          "xhtml": false,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__TARGET__": "\\"browser\\"",
+        },
+      },
+      Object {},
+      Object {
+        "options": Object {
+          "compress": Object {
+            "warnings": false,
+          },
+          "mangle": true,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__DEVELOPMENT__": false,
+          "__DEVTOOLS__": false,
+          "__STACK_ASSETS__": true,
+          "process.env.NODE_ENV": "\\"production\\"",
+        },
+      },
+    ],
+    "resolve": Object {
+      "extensions": Array [
+        ".js",
+        ".json",
+        ".css",
+        ".vue",
+        ".styl",
+      ],
+      "modules": Array [
+        ".tmp_test/test-app-vue/node_modules",
+        ".tmp_test/test-app-vue/src",
+      ],
+      "symlinks": false,
+    },
+  },
+]
+`;
+
+exports[`App from cozy-scripts with VueJS 2 should handle correctly the config mobile:development 1`] = `
+Array [
+  Object {
+    "bail": true,
+    "devtool": "#source-map",
+    "entry": Array [
+      ".tmp_test/test-app-vue/src/targets/mobile/index.js",
+    ],
+    "externals": Array [
+      "cozy",
+    ],
+    "module": Object {
+      "noParse": Array [
+        Object {},
+      ],
+      "rules": Array [
+        Object {
+          "exclude": Object {},
+          "loader": "babel-loader",
+          "options": Object {
+            "cacheDirectory": "node_modules/.cache/babel-loader",
+          },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
+          "test": Object {},
+        },
+        Object {
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "vue-loader",
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "stylus-loader",
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": "svg-sprite-loader",
+          "options": Object {
+            "name": "[name]_[hash]",
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "file-loader",
+          "options": Object {
+            "name": "[name].[ext]",
+            "outputPath": "/img/",
+          },
+          "test": Object {},
+        },
+        Object {
+          "loader": "imports-loader",
+          "options": Object {
+            "css": ".tmp_test/test-app-vue/node_modules/cozy-bar/dist/cozy-bar.css",
+          },
+          "test": ".tmp_test/test-app-vue/node_modules/cozy-bar/dist/cozy-bar.js",
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name].js",
+      "path": ".tmp_test/test-app-vue/src/targets/mobile/www",
+    },
+    "plugins": Array [
+      Object {
+        "options": Object {
+          "async": Object {
+            "test": Array [],
+          },
+          "custom": Array [],
+          "defaultAttribute": "defer",
+          "defer": Object {
+            "test": Array [],
+          },
+          "inline": Object {
+            "test": Array [],
+          },
+          "module": Object {
+            "test": Array [],
+          },
+          "prefetch": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "preload": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "removeInlinedAssets": true,
+          "sync": Object {
+            "test": Array [],
+          },
+        },
+      },
+      Object {
+        "filename": "[name].css",
+        "id": 1,
+        "options": Object {},
+      },
+      Object {
+        "options": Object {
+          "log": false,
+          "plugins": Array [
+            null,
+            null,
+            null,
+          ],
+          "test": Object {},
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
+      Object {
+        "options": Object {
+          "options": Object {
+            "stylus": Object {
+              "use": Array [
+                null,
+              ],
+            },
+          },
+          "test": Object {},
+        },
+      },
+      Object {},
+      Object {},
+      Object {},
+      Object {
+        "definitions": Object {
+          "__ALLOW_HTTP__": true,
+          "__APP_VERSION__": "\\"0.1.0\\"",
+          "__TARGET__": "\\"mobile\\"",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "cozy.bar": "cozy-bar/dist/cozy-bar.mobile.js",
+          "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {
+        "options": Object {
+          "cache": true,
+          "chunks": Array [
+            "app",
+          ],
+          "compile": true,
+          "excludeChunks": Array [],
+          "favicon": false,
+          "filename": "index.html",
+          "hash": false,
+          "inject": "head",
+          "minify": Object {
+            "collapseWhitespace": true,
+          },
+          "showErrors": true,
+          "template": ".tmp_test/test-app-vue/src/targets/mobile/index.ejs",
+          "title": "test-app-vue",
+          "xhtml": false,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__DEVELOPMENT__": true,
+          "__STACK_ASSETS__": false,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "cozy.bar": "cozy-bar/dist/cozy-bar.js",
+          "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {
+        "options": Object {},
+      },
+      Object {
+        "fullBuildTimeout": 200,
+        "options": Object {},
+        "requestTimeout": 10000,
+      },
+    ],
+    "resolve": Object {
+      "extensions": Array [
+        ".js",
+        ".json",
+        ".css",
+        ".vue",
+        ".styl",
+      ],
+      "modules": Array [
+        ".tmp_test/test-app-vue/node_modules",
+        ".tmp_test/test-app-vue/src",
+      ],
+      "symlinks": false,
+    },
+  },
+]
+`;
+
+exports[`App from cozy-scripts with VueJS 2 should handle correctly the config mobile:production 1`] = `
+Array [
+  Object {
+    "bail": true,
+    "entry": Array [
+      ".tmp_test/test-app-vue/src/targets/mobile/index.js",
+    ],
+    "module": Object {
+      "noParse": Array [
+        Object {},
+      ],
+      "rules": Array [
+        Object {
+          "exclude": Object {},
+          "loader": "babel-loader",
+          "options": Object {
+            "cacheDirectory": "node_modules/.cache/babel-loader",
+          },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
+          "test": Object {},
+        },
+        Object {
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "vue-loader",
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": Array [
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
+              "options": Object {
+                "id": 1,
+                "omit": 1,
+                "remove": true,
+              },
+            },
+            Object {
+              "loader": "style-loader",
+            },
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "stylus-loader",
+            },
+          ],
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": "svg-sprite-loader",
+          "options": Object {
+            "name": "[name]_[hash]",
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": "file-loader",
+          "options": Object {
+            "name": "[name].[hash].[ext]",
+            "outputPath": "/img/",
+          },
+          "test": Object {},
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name].js",
+      "path": ".tmp_test/test-app-vue/src/targets/mobile/www",
+    },
+    "plugins": Array [
+      Object {
+        "options": Object {
+          "async": Object {
+            "test": Array [],
+          },
+          "custom": Array [],
+          "defaultAttribute": "defer",
+          "defer": Object {
+            "test": Array [],
+          },
+          "inline": Object {
+            "test": Array [],
+          },
+          "module": Object {
+            "test": Array [],
+          },
+          "prefetch": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "preload": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "removeInlinedAssets": true,
+          "sync": Object {
+            "test": Array [],
+          },
+        },
+      },
+      Object {
+        "filename": "[name].[hash].min.css",
+        "id": 1,
+        "options": Object {},
+      },
+      Object {
+        "options": Object {
+          "log": false,
+          "plugins": Array [
+            null,
+            null,
+            null,
+          ],
+          "test": Object {},
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
+      Object {
+        "options": Object {
+          "options": Object {
+            "stylus": Object {
+              "use": Array [
+                null,
+              ],
+            },
+          },
+          "test": Object {},
+        },
+      },
+      Object {},
+      Object {},
+      Object {},
+      Object {
+        "definitions": Object {
+          "__ALLOW_HTTP__": true,
+          "__APP_VERSION__": "\\"0.1.0\\"",
+          "__TARGET__": "\\"mobile\\"",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "cozy.bar": "cozy-bar/dist/cozy-bar.mobile.js",
+          "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {
+        "options": Object {
+          "cache": true,
+          "chunks": Array [
+            "app",
+          ],
+          "compile": true,
+          "excludeChunks": Array [],
+          "favicon": false,
+          "filename": "index.html",
+          "hash": false,
+          "inject": "head",
+          "minify": Object {
+            "collapseWhitespace": true,
+          },
+          "showErrors": true,
+          "template": ".tmp_test/test-app-vue/src/targets/mobile/index.ejs",
+          "title": "test-app-vue",
+          "xhtml": false,
+        },
+      },
+      Object {},
+      Object {
+        "options": Object {
+          "compress": Object {
+            "warnings": false,
+          },
+          "mangle": true,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__DEVELOPMENT__": false,
+          "__DEVTOOLS__": false,
+          "__STACK_ASSETS__": false,
+          "process.env.NODE_ENV": "\\"production\\"",
+        },
       },
     ],
     "resolve": Object {
@@ -648,7 +1509,7 @@ Array [
           "exclude": Object {},
           "loader": "eslint-loader",
           "options": Object {
-            "emitWarning": true,
+            "emitWarning": false,
             "extends": Array [
               "cozy-app",
             ],
@@ -756,7 +1617,7 @@ Array [
       },
       Object {
         "options": Object {
-          "log": true,
+          "log": false,
           "plugins": Array [
             null,
             null,
@@ -850,867 +1711,6 @@ Array [
         "fullBuildTimeout": 200,
         "options": Object {},
         "requestTimeout": 10000,
-      },
-    ],
-    "resolve": Object {
-      "extensions": Array [
-        ".js",
-        ".json",
-        ".css",
-        ".vue",
-        ".styl",
-      ],
-      "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
-        ".tmp_test/test-app-vue/src",
-      ],
-      "symlinks": false,
-    },
-  },
-]
-`;
-
-exports[`App from cozy-scripts with VueJS 2 should have the correct config browser:production according to NODE_ENV=browser:production 1`] = `
-Array [
-  Object {
-    "bail": true,
-    "entry": Object {
-      "app": ".tmp_test/test-app-vue/src/targets/browser/index.js",
-    },
-    "externals": Object {
-      "cozy-client-js": "cozy",
-    },
-    "module": Object {
-      "noParse": Array [
-        Object {},
-      ],
-      "rules": Array [
-        Object {
-          "exclude": Object {},
-          "loader": "babel-loader",
-          "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
-          },
-          "test": Object {},
-        },
-        Object {
-          "loader": "json-loader",
-          "test": Object {},
-        },
-        Object {
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "ident": "postcss",
-                "sourceMap": true,
-              },
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "vue-loader",
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": "eslint-loader",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
-              "cozy-app",
-            ],
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "stylus-loader",
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "include": Object {},
-          "loader": "svg-sprite-loader",
-          "options": Object {
-            "name": "[name]_[hash]",
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "file-loader",
-          "options": Object {
-            "name": "[name].[hash].[ext]",
-            "outputPath": "/img/",
-          },
-          "test": Object {},
-        },
-      ],
-    },
-    "output": Object {
-      "filename": "[name].js",
-      "path": ".tmp_test/test-app-vue/build",
-    },
-    "plugins": Array [
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
-        },
-      },
-      Object {
-        "filename": "[name].[hash].min.css",
-        "id": 1,
-        "options": Object {},
-      },
-      Object {
-        "options": Object {
-          "log": true,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
-      },
-      Object {
-        "config": Object {
-          "plainSprite": false,
-          "spriteAttrs": Object {},
-        },
-        "svgCompiler": Object {
-          "config": Object {
-            "rules": Array [
-              Object {
-                "test": Object {},
-                "value": "sprite.svg",
-              },
-            ],
-          },
-          "rules": Object {
-            "rules": Array [
-              Object {
-                "test": Object {},
-                "value": "sprite.svg",
-              },
-            ],
-          },
-          "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
-        },
-      },
-      Object {},
-      Object {},
-      Object {},
-      Object {
-        "options": Object {
-          "cache": true,
-          "chunks": Array [
-            "app",
-          ],
-          "compile": true,
-          "excludeChunks": Array [],
-          "favicon": false,
-          "filename": "index.html",
-          "hash": false,
-          "inject": false,
-          "minify": Object {
-            "collapseWhitespace": true,
-          },
-          "showErrors": true,
-          "template": ".tmp_test/test-app-vue/src/targets/browser/index.ejs",
-          "title": "test-app-vue",
-          "xhtml": false,
-        },
-      },
-      Object {
-        "definitions": Object {
-          "__TARGET__": "\\"browser\\"",
-        },
-      },
-      Object {},
-      Object {
-        "options": Object {
-          "compress": Object {
-            "warnings": false,
-          },
-          "mangle": true,
-        },
-      },
-      Object {
-        "definitions": Object {
-          "__DEVELOPMENT__": false,
-          "__DEVTOOLS__": false,
-          "__STACK_ASSETS__": true,
-          "process.env.NODE_ENV": "\\"production\\"",
-        },
-      },
-    ],
-    "resolve": Object {
-      "extensions": Array [
-        ".js",
-        ".json",
-        ".css",
-        ".vue",
-        ".styl",
-      ],
-      "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
-        ".tmp_test/test-app-vue/src",
-      ],
-      "symlinks": false,
-    },
-  },
-]
-`;
-
-exports[`App from cozy-scripts with VueJS 2 should have the correct config mobile:development according to NODE_ENV=mobile:development 1`] = `
-Array [
-  Object {
-    "bail": true,
-    "devtool": "#source-map",
-    "entry": Array [
-      ".tmp_test/test-app-vue/src/targets/mobile/index.js",
-    ],
-    "externals": Array [
-      "cozy",
-    ],
-    "module": Object {
-      "noParse": Array [
-        Object {},
-      ],
-      "rules": Array [
-        Object {
-          "exclude": Object {},
-          "loader": "babel-loader",
-          "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
-          },
-          "test": Object {},
-        },
-        Object {
-          "loader": "json-loader",
-          "test": Object {},
-        },
-        Object {
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "ident": "postcss",
-                "sourceMap": true,
-              },
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "vue-loader",
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": "eslint-loader",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
-              "cozy-app",
-            ],
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "stylus-loader",
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "include": Object {},
-          "loader": "svg-sprite-loader",
-          "options": Object {
-            "name": "[name]_[hash]",
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "file-loader",
-          "options": Object {
-            "name": "[name].[ext]",
-            "outputPath": "/img/",
-          },
-          "test": Object {},
-        },
-        Object {
-          "loader": "imports-loader",
-          "options": Object {
-            "css": ".tmp_test/test-app-vue/node_modules/cozy-bar/dist/cozy-bar.css",
-          },
-          "test": ".tmp_test/test-app-vue/node_modules/cozy-bar/dist/cozy-bar.js",
-        },
-      ],
-    },
-    "output": Object {
-      "filename": "[name].js",
-      "path": ".tmp_test/test-app-vue/src/targets/mobile/www",
-    },
-    "plugins": Array [
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
-        },
-      },
-      Object {
-        "filename": "[name].css",
-        "id": 1,
-        "options": Object {},
-      },
-      Object {
-        "options": Object {
-          "log": true,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
-      },
-      Object {
-        "config": Object {
-          "plainSprite": false,
-          "spriteAttrs": Object {},
-        },
-        "svgCompiler": Object {
-          "config": Object {
-            "rules": Array [
-              Object {
-                "test": Object {},
-                "value": "sprite.svg",
-              },
-            ],
-          },
-          "rules": Object {
-            "rules": Array [
-              Object {
-                "test": Object {},
-                "value": "sprite.svg",
-              },
-            ],
-          },
-          "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
-        },
-      },
-      Object {},
-      Object {},
-      Object {},
-      Object {
-        "definitions": Object {
-          "__ALLOW_HTTP__": true,
-          "__APP_VERSION__": "\\"0.1.0\\"",
-          "__TARGET__": "\\"mobile\\"",
-        },
-      },
-      Object {
-        "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.mobile.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
-        },
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "chunks": Array [
-            "app",
-          ],
-          "compile": true,
-          "excludeChunks": Array [],
-          "favicon": false,
-          "filename": "index.html",
-          "hash": false,
-          "inject": "head",
-          "minify": Object {
-            "collapseWhitespace": true,
-          },
-          "showErrors": true,
-          "template": ".tmp_test/test-app-vue/src/targets/mobile/index.ejs",
-          "title": "test-app-vue",
-          "xhtml": false,
-        },
-      },
-      Object {
-        "definitions": Object {
-          "__DEVELOPMENT__": true,
-          "__STACK_ASSETS__": false,
-        },
-      },
-      Object {
-        "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
-        },
-      },
-      Object {
-        "options": Object {},
-      },
-      Object {
-        "fullBuildTimeout": 200,
-        "options": Object {},
-        "requestTimeout": 10000,
-      },
-    ],
-    "resolve": Object {
-      "extensions": Array [
-        ".js",
-        ".json",
-        ".css",
-        ".vue",
-        ".styl",
-      ],
-      "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
-        ".tmp_test/test-app-vue/src",
-      ],
-      "symlinks": false,
-    },
-  },
-]
-`;
-
-exports[`App from cozy-scripts with VueJS 2 should have the correct config mobile:production according to NODE_ENV=mobile:production 1`] = `
-Array [
-  Object {
-    "bail": true,
-    "entry": Array [
-      ".tmp_test/test-app-vue/src/targets/mobile/index.js",
-    ],
-    "module": Object {
-      "noParse": Array [
-        Object {},
-      ],
-      "rules": Array [
-        Object {
-          "exclude": Object {},
-          "loader": "babel-loader",
-          "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
-          },
-          "test": Object {},
-        },
-        Object {
-          "loader": "json-loader",
-          "test": Object {},
-        },
-        Object {
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "ident": "postcss",
-                "sourceMap": true,
-              },
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "vue-loader",
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": "eslint-loader",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
-              "cozy-app",
-            ],
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "stylus-loader",
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "include": Object {},
-          "loader": "svg-sprite-loader",
-          "options": Object {
-            "name": "[name]_[hash]",
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "file-loader",
-          "options": Object {
-            "name": "[name].[hash].[ext]",
-            "outputPath": "/img/",
-          },
-          "test": Object {},
-        },
-      ],
-    },
-    "output": Object {
-      "filename": "[name].js",
-      "path": ".tmp_test/test-app-vue/src/targets/mobile/www",
-    },
-    "plugins": Array [
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
-        },
-      },
-      Object {
-        "filename": "[name].[hash].min.css",
-        "id": 1,
-        "options": Object {},
-      },
-      Object {
-        "options": Object {
-          "log": true,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
-      },
-      Object {
-        "config": Object {
-          "plainSprite": false,
-          "spriteAttrs": Object {},
-        },
-        "svgCompiler": Object {
-          "config": Object {
-            "rules": Array [
-              Object {
-                "test": Object {},
-                "value": "sprite.svg",
-              },
-            ],
-          },
-          "rules": Object {
-            "rules": Array [
-              Object {
-                "test": Object {},
-                "value": "sprite.svg",
-              },
-            ],
-          },
-          "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
-        },
-      },
-      Object {},
-      Object {},
-      Object {},
-      Object {
-        "definitions": Object {
-          "__ALLOW_HTTP__": true,
-          "__APP_VERSION__": "\\"0.1.0\\"",
-          "__TARGET__": "\\"mobile\\"",
-        },
-      },
-      Object {
-        "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.mobile.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
-        },
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "chunks": Array [
-            "app",
-          ],
-          "compile": true,
-          "excludeChunks": Array [],
-          "favicon": false,
-          "filename": "index.html",
-          "hash": false,
-          "inject": "head",
-          "minify": Object {
-            "collapseWhitespace": true,
-          },
-          "showErrors": true,
-          "template": ".tmp_test/test-app-vue/src/targets/mobile/index.ejs",
-          "title": "test-app-vue",
-          "xhtml": false,
-        },
-      },
-      Object {},
-      Object {
-        "options": Object {
-          "compress": Object {
-            "warnings": false,
-          },
-          "mangle": true,
-        },
-      },
-      Object {
-        "definitions": Object {
-          "__DEVELOPMENT__": false,
-          "__DEVTOOLS__": false,
-          "__STACK_ASSETS__": false,
-          "process.env.NODE_ENV": "\\"production\\"",
-        },
       },
     ],
     "resolve": Object {

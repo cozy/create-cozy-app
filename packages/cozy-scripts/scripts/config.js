@@ -17,55 +17,75 @@ function mergeWithOptions (options, configs, current) {
   }
 }
 
-// check if a custom config exists in the app source
-let appConfigs
-// app/node_modules/cozy-scripts/scripts
-if (fs.existsSync(path.join(process.cwd(), 'app.config.js'))) {
-  appConfigs = require(path.join(process.cwd(), 'app.config.js'))
-} else {
-  appConfigs = [require(path.join('../config/webpack.bundle.default.js'))]
-}
+function getWebpackConfigs (options = {}) {
+  // mode and target options should already be provided
+  const {
+    mode = 'development',
+    target = 'browser',
+    debugMode
+  } = options
 
-const mergedConfig = merge(
-  appConfigs.reduce(function (merged, config) {
-    if (config.__mergeStrategy) {
-      // merge with the previous configs using the provided strategy
-      const options = Object.assign({}, config.__mergeStrategy)
-      delete config.__mergeStrategy
-      return [mergeWithOptions(options, merged, config)]
-    } else {
-      merged.push(config)
-      return merged
-    }
-  }, [{}])
-)
-
-// the first position will always be the main app config
-// better for testing
-const configs = [{}]
-
-// configurations if multi-compiling
-if (mergedConfig.multiple) {
-  for (const config in mergedConfig.multiple) {
-    const configPart = Object.assign(
-      {}, mergedConfig.multiple[config]
-    )
-    delete mergedConfig.multiple[config]
-    let separateConfig = {}
-    if (configPart.__mergeStrategy) { // if merge strategy found
-      const options = Object.assign({}, configPart.__mergeStrategy)
-      delete configPart.__mergeStrategy
-      separateConfig = mergeWithOptions(options, [mergedConfig], configPart)
-    } else {
-      separateConfig = merge(mergedConfig, configPart)
-    }
-    if (separateConfig.multiple) delete separateConfig.multiple
-    configs.push(separateConfig)
+  if (debugMode) {
+    process.env.COZY_SCRIPTS_DEBUG = true
+  } else {
+    process.env.COZY_SCRIPTS_DEBUG = false
   }
-  delete mergedConfig.multiple
+
+  // NODE_ENV from environment overwrite options here
+  if (!process.env.NODE_ENV) process.env.NODE_ENV = `${target}:${mode}`
+
+  // check if a custom config exists in the app source
+  let appConfigs
+  // app/node_modules/cozy-scripts/scripts
+  if (fs.existsSync(path.join(process.cwd(), 'app.config.js'))) {
+    appConfigs = require(path.join(process.cwd(), 'app.config.js'))
+  } else {
+    appConfigs = [require(path.join('../config/webpack.bundle.default.js'))]
+  }
+
+  const mergedConfig = merge(
+    appConfigs.reduce(function (merged, config) {
+      if (config.__mergeStrategy) {
+        // merge with the previous configs using the provided strategy
+        const options = Object.assign({}, config.__mergeStrategy)
+        delete config.__mergeStrategy
+        return [mergeWithOptions(options, merged, config)]
+      } else {
+        merged.push(config)
+        return merged
+      }
+    }, [{}])
+  )
+
+  // the first position will always be the main app config
+  // better for testing
+  const configs = [{}]
+
+  // configurations if multi-compiling
+  if (mergedConfig.multiple) {
+    for (const config in mergedConfig.multiple) {
+      const configPart = Object.assign(
+        {}, mergedConfig.multiple[config]
+      )
+      delete mergedConfig.multiple[config]
+      let separateConfig = {}
+      if (configPart.__mergeStrategy) { // if merge strategy found
+        const options = Object.assign({}, configPart.__mergeStrategy)
+        delete configPart.__mergeStrategy
+        separateConfig = mergeWithOptions(options, [mergedConfig], configPart)
+      } else {
+        separateConfig = merge(mergedConfig, configPart)
+      }
+      if (separateConfig.multiple) delete separateConfig.multiple
+      configs.push(separateConfig)
+    }
+    delete mergedConfig.multiple
+  }
+
+  // replace the first position placeholder in the list
+  configs[0] = mergedConfig
+
+  return merge.multiple(configs)
 }
 
-// replace the first position placeholder in the list
-configs[0] = mergedConfig
-
-module.exports = merge.multiple(configs)
+module.exports = getWebpackConfigs
