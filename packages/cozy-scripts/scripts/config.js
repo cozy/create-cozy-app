@@ -17,7 +17,23 @@ function mergeWithOptions (options, configs, current) {
   }
 }
 
-function getWebpackConfigs () {
+function getWebpackConfigs (options = {}) {
+  // mode and target options should already be provided
+  const {
+    mode = 'development',
+    target = 'browser',
+    debugMode
+  } = options
+
+  if (debugMode) {
+    process.env.COZY_SCRIPTS_DEBUG = true
+  } else {
+    process.env.COZY_SCRIPTS_DEBUG = false
+  }
+
+  // NODE_ENV from environment overwrite options here
+  if (!process.env.NODE_ENV) process.env.NODE_ENV = `${target}:${mode}`
+
   // check if a custom config exists in the app source
   let appConfigs
   // app/node_modules/cozy-scripts/scripts
