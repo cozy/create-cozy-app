@@ -13,10 +13,12 @@ const production = environment === 'production'
 console.log(colorize.cyan(`Compiling for ${colorize.orange.bold(environment)} environment and ${colorize.orange.bold(target)} target...`))
 
 const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
+const addAnalyzer = process.env.COZY_SCRIPTS_ANALYZER === 'true'
 
 module.exports = {
   environment,
   target,
   isDebugMode,
+  addAnalyzer,
   extractor: new ExtractTextPlugin(`[name]${production ? '.[hash].min' : ''}.css`)
 }

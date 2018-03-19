@@ -21,6 +21,7 @@ const program = new commander.Command(pkg.name)
   .option('--production', 'specify production build mode')
   .option('--browser', 'specify browser build target')
   .option('--mobile', 'specify mobile build target')
+  .option('--analyzer', 'open an analyzer with an interactive treemap visualization of the contents of all builds')
   .parse(process.argv)
 
 // build mode and target computing (overwritten by NODE_ENV)
@@ -34,7 +35,8 @@ const buildOptions = {
     (program.browser && 'browser') ||
     (program.mobile && 'mobile') ||
     'browser',
-  debugMode: program.debug
+  debugMode: program.debug,
+  bundleAnalyzer: program.analyzer
 }
 
 if (program.showConfig) {
