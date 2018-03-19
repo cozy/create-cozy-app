@@ -61,8 +61,9 @@ const overrideData = {
   '<USERNAME_GH>': 'foo'
 }
 
-function getConfig (options) {
+function getConfig (options = {}) {
   const getWebpackConfigs = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'config.js'))
+  options.useVue = true
   let appConfig = getWebpackConfigs(options)
   // we replace path to avoid environment specific snapshots
   // ex: paths like `/me/test/${testFolder}/...` will be `${testFolder}/...`
@@ -188,7 +189,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
     // should be NODE_ENV = 'browser:production' by default here
     const build = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'build.js'))
-    expect(() => build({}, done)).not.toThrow()
+    expect(() => build({ useVue: true }, done)).not.toThrow()
     expect(process.env.NODE_ENV).toBe('browser:production')
   })
 
@@ -197,7 +198,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
     console.log(colorize.orange('Testing cozy-scripts watch script...'))
     // should be NODE_ENV = 'browser:development' by default here
     const watch = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'watch.js'))
-    expect(() => watch({}, multiWatching => {
+    expect(() => watch({ useVue: true }, multiWatching => {
       multiWatching.close(() => {
         let isClosed = true
         for (const watching of multiWatching.watchings) {
