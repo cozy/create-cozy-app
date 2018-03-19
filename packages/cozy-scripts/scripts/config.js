@@ -22,13 +22,20 @@ function getWebpackConfigs (options = {}) {
   const {
     mode = 'development',
     target = 'browser',
-    debugMode
+    debugMode,
+    bundleAnalyzer
   } = options
 
   if (debugMode) {
     process.env.COZY_SCRIPTS_DEBUG = true
   } else {
     process.env.COZY_SCRIPTS_DEBUG = false
+  }
+
+  if (bundleAnalyzer) {
+    process.env.COZY_SCRIPTS_ANALYZER = true
+  } else {
+    process.env.COZY_SCRIPTS_ANALYZER = false
   }
 
   // NODE_ENV from environment overwrite options here

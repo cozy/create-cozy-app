@@ -1,7 +1,11 @@
 'use strict'
 
 const merge = require('webpack-merge')
-const { environment, target } = require('./webpack.vars')
+const {
+  environment,
+  target,
+  addAnalyzer
+} = require('./webpack.vars')
 
 const configs = [
   require('./webpack.config.base'),
@@ -20,6 +24,10 @@ if (environment === 'production') {
   configs.push(require('./webpack.environment.prod'))
 } else {
   configs.push(require('./webpack.environment.dev'))
+}
+
+if (addAnalyzer) {
+  configs.push(require('./webpack.config.analyzer'))
 }
 
 module.exports = merge.apply(null, configs)
