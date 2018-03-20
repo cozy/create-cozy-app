@@ -23,7 +23,8 @@ function getWebpackConfigs (options = {}) {
     mode = 'development',
     target = 'browser',
     debugMode,
-    bundleAnalyzer
+    bundleAnalyzer,
+    useVue
   } = options
 
   if (debugMode) {
@@ -47,7 +48,9 @@ function getWebpackConfigs (options = {}) {
   if (fs.existsSync(path.join(process.cwd(), 'app.config.js'))) {
     appConfigs = require(path.join(process.cwd(), 'app.config.js'))
   } else {
-    appConfigs = [require(path.join('../config/webpack.bundle.default.js'))]
+    appConfigs = useVue
+      ? [require(path.join('../config/webpack.bundle.vue.js'))]
+      : [require(path.join('../config/webpack.bundle.default.js'))]
   }
 
   const mergedConfig = merge(

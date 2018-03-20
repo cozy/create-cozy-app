@@ -21,6 +21,7 @@ const program = new commander.Command(pkg.name)
   .option('--production', 'specify production build mode')
   .option('--browser', 'specify browser build target')
   .option('--mobile', 'specify mobile build target')
+  .option('--vue', 'to use scripts in a VueJS specific way (default (p)React)')
   .option('--analyzer', 'open an analyzer with an interactive treemap visualization of the contents of all builds')
   .parse(process.argv)
 
@@ -35,6 +36,7 @@ const options = {
     (program.browser && 'browser') ||
     (program.mobile && 'mobile') ||
     'browser',
+  useVue: program.vue,
   debugMode: program.debug,
   bundleAnalyzer: program.analyzer
 }

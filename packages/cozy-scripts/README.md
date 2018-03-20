@@ -177,6 +177,10 @@ The built files (destined to the Cozy) will be in `build/`.
 
 Do the same thing than the previous command with webpack in a watching mode but also run a server (`webpack-dev-server`) to serve your application (as a static application) on the url `http://localhost:8888`.
 
+##### - `--vue`
+
+Allow to use the VueJS webpack configuration as default opinionated configuration. You don't need an `app.config.js` to use the VueJS webpack bundle configuration (`wepack.bundle.vue.js`) with this option.
+
 ##### - `--production` or `--development` options
 
 Allow to pass the wanted build mode to `cozy-scripts`. This mode will be overwritten by `process.env.NODE_ENV` usage (ex: `browser:development` for development usage with browser target).
@@ -191,12 +195,15 @@ Use this option if you want to analyze your builds content using the webpack plu
 
 ### The `cozy-scripts` webpack configuration
 
-`cozy-scripts` is designed to used a default webpack configuration for a basic \(P\)React/Redux application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder. Here is an example to overload the default bundle config with a custom one:
+`cozy-scripts` is designed to used a default webpack configuration for a basic \(P\)React/Redux (or VueJS) application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder. Here is an example to overload the default bundle config with a custom one:
 
 ```javascript
 // myapp/app.config.js
 module.exports = [
+  // default for (p)React/Redux
   require('cozy-scripts/config/webpack.bundle.default.js'),
+  // here is the equivalent one for vue
+  // require('cozy-scripts/config/webpack.bundle.vue.js'),
   require('./config/webpack.myconfig.js')
 ]
 ```
