@@ -162,6 +162,10 @@ The built files (destined to the Cozy) will be in `build/`.
 
 > A `--debug` options is available if you want to ouput more informations about webpack building in your console.
 
+##### - `cozy-scripts test`
+
+Run all the application tests using internally Jest. This command handles all parameters than Jest does, like `--watch` for watch mode or `-u` to update snapshots.
+
 ##### - `cozy-scripts watch`
 
 Unlike the previous command, this will run webpack using the files watching mode. Each time you will modify a file, a new build will triggered. It's recommended for development build.
