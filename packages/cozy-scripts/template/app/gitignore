@@ -17,7 +17,7 @@ coverage/
 
 
 # transifex
-+.transifexrc
+.transifexrc
 
 
 # Coverage
