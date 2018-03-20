@@ -25,7 +25,7 @@ const program = new commander.Command(pkg.name)
   .parse(process.argv)
 
 // build mode and target computing (overwritten by NODE_ENV)
-const buildOptions = {
+const options = {
   mode:
     (program.production && 'production') ||
     (program.development && 'development') ||
@@ -39,19 +39,24 @@ const buildOptions = {
   bundleAnalyzer: program.analyzer
 }
 
+if (actionName === 'test') {
+  // all arguments passed to the test command
+  options.testArgs = process.argv.slice(3)
+}
+
 if (program.showConfig) {
   console.log(JSON.stringify(
-    getWebpackConfigs(buildOptions), null, 2)
+    getWebpackConfigs(options), null, 2)
   )
   process.exit(0)
 }
 
-const availableScripts = ['watch', 'build', 'standalone']
+const availableScripts = ['watch', 'build', 'standalone', 'test']
 
 if (availableScripts.includes(actionName)) {
   const scriptPath = `../scripts/${actionName}`
   const script = require(scriptPath)
-  script(buildOptions)
+  script(options)
 } else {
   console.log(`cozy-scripts: unknown command ${colorize.cyan(actionName)}`)
 }

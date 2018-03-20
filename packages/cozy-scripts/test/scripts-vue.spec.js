@@ -170,17 +170,14 @@ describe('App from cozy-scripts with VueJS 2', () => {
     expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
+  // Generated app tests
   it('should pass all app tests with success', () => {
     console.log(colorize.orange('Running app tests...'))
+    const testScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'test.js'))
     expect(() => {
-      const result = spawn.sync('yarn', ['test'], { stdio: 'pipe' })
-      // if exited with code different from 0/success
-      if (result.status !== 0) {
-        if (result.stderr) {
-          console.log(colorize.red(result.stderr.toString('utf8')))
-        }
-        throw new Error('The generated application tests failed')
-      }
+      testScript({
+        testArgs: ['--verbose', '--coverage']
+      })
     }).not.toThrow()
   })
 
