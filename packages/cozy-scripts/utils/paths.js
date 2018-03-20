@@ -28,6 +28,8 @@ module.exports = {
   appLocales: resolveApp('src/locales'),
   appVendorAssets: resolveApp('src/targets/vendor/assets'),
   appNodeModules: resolveApp('node_modules'),
+  // for tests
+  jestConfig: resolveApp('jest.config.js'),
   // for browser
   appBrowserHtmlTemplate: resolveApp('src/targets/browser/index.ejs'),
   appBrowserIndex: (ext) => resolveWithExtension('src/targets/browser/index', ext),
