@@ -7,6 +7,7 @@
     - [`webpack.bundle.default.js`](#webpackbundledefaultjs)
     - [`webpack.bundle.vue.js`](#webpackbundlevuejs)
 - __[Unit Configs](#unit-configs)__
+    - [`webpack.config.analyzer.js`](#webpackconfiganalyzerjs)
     - [`webpack.config.base.js`](#webpackconfigbasejs)
     - [`webpack.config.cozy-ui.js`](#webpackconfigcozy-uijs)
     - [`webpack.config.cozy-ui.react.js`](#webpackconfigcozy-uireactjs)
@@ -118,6 +119,12 @@ module.exports = [configs, myConfig]
 ```
 
 ## Unit Configs
+
+### `webpack.config.analyzer.js`
+
+This file will only add the plugin [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer) to be run on with the `--analyzer` option.
+
+It will run a server (on port `8889` to not be in conflict with the webpack dev server) and open an interactive treemap visualization of the contents of all your bundles in your browser.
 
 ### `webpack.config.base.js`
 
