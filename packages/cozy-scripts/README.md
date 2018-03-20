@@ -164,7 +164,7 @@ The built files (destined to the Cozy) will be in `build/`.
 
 ##### - `cozy-scripts test`
 
-Run all the application tests using internally Jest. This command handles all parameters than Jest does, like `--watch` for watch mode or `-u` to update snapshots.
+Run all the application tests using internally [Jest](https://facebook.github.io/jest/). This command handles all parameters than Jest does, like `--watch` for the watch mode or `-u` to update snapshots for example.
 
 ##### - `cozy-scripts watch`
 
