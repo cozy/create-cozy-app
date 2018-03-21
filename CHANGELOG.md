@@ -1,3 +1,13 @@
+## cozy-scripts@0.5.8 (2018-03-21)
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#409](https://github.com/CPatchane/create-cozy-app/pull/409) Update cozy-scripts files property in package.json. ([@CPatchane](https://github.com/CPatchane))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.5.7 (2018-03-21)
 
 #### :wrench: Chore:
