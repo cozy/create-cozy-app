@@ -1,3 +1,17 @@
+## cozy-scripts@0.5.7 (2018-03-21)
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#407](https://github.com/CPatchane/create-cozy-app/pull/407) Fix and update cozy-scripts .gitignore and .npmignore. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#406](https://github.com/CPatchane/create-cozy-app/pull/406) chore(deps): update dependency eslint-config-cozy-app to v0.5.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## create-cozy-app@0.5.9, cozy-scripts@0.5.6, eslint-config-cozy-app@0.5.0 (2018-03-21)
 
 #### :sparkles: New Features:
