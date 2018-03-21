@@ -62,7 +62,7 @@
     "bin",
     "config",
     "scripts",
-    "utils"
+    "utils",
     "template/app",
     "template/CONTRIBUTING.md",
     "template/manifest.webapp",
@@ -74,6 +74,6 @@
     "template-vue/manifest.webapp",
     "template-vue/package.json",
     "template-vue/README.md",
-    "template-vue/yarn.lock",
+    "template-vue/yarn.lock"
   ]
 }
