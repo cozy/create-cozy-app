@@ -55,7 +55,7 @@
     "stylint": "1.5.9",
     "vue-jest": "2.2.1",
     "vue-loader": "14.2.1",
-    "vue-template-compiler": "2.5.15"
+    "vue-template-compiler": "2.5.16"
   },
   "dependencies": {
     "cozy-bar": "4.9.3",
@@ -63,7 +63,7 @@
     "cozy-ui": "7.9.0",
     "date-fns": "1.29.0",
     "node-polyglot": "2.2.2",
-    "vue": "2.5.15",
+    "vue": "2.5.16",
     "vue-router": "3.0.1",
     "vuex": "3.0.1"
   }
