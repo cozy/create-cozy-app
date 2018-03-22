@@ -20,6 +20,7 @@ module.exports = {
     'prettier/prettier': ['error', {
       singleQuote: true,
       semi: false
-    }]
+    }],
+    'react/prop-types': 0
   }
 }
