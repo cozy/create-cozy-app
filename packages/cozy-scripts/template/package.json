@@ -43,7 +43,7 @@
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "eslint": "4.19.1",
-    "eslint-config-cozy-app": "0.5.0",
+    "eslint-config-cozy-app": "0.5.1",
     "git-directory-deploy": "1.5.1",
     "identity-obj-proxy": "3.0.0",
     "npm-run-all": "4.1.2",
