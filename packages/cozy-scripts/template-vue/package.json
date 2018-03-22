@@ -41,7 +41,7 @@
     "@vue/test-utils": "1.0.0-beta.12",
     "babel-polyfill": "6.26.0",
     "babel-preset-cozy-app": "0.3.2",
-    "eslint": "4.19.0",
+    "eslint": "4.19.1",
     "eslint-config-standard": "11.0.0",
     "eslint-plugin-import": "2.9.0",
     "eslint-plugin-node": "6.0.1",
