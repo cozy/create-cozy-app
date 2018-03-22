@@ -6,7 +6,7 @@ import Hello1 from './HelloViews/Hello1'
 import Hello2 from './HelloViews/Hello2'
 import Hello3 from './HelloViews/Hello3'
 
-const App = ({ children }) => (
+const App = () => (
   <HashRouter>
     <div className='app-wrapper o-layout--2panes'>
       <Sidebar />
