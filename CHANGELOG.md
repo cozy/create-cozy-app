@@ -1,3 +1,18 @@
+## cozy-scripts@0.5.10 (2018-03-22)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#417](https://github.com/CPatchane/create-cozy-app/pull/417) Fix minor lint issues in templates. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#416](https://github.com/CPatchane/create-cozy-app/pull/416) chore(deps): update dependency eslint-config-cozy-app to v0.5.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#414](https://github.com/CPatchane/create-cozy-app/pull/414) fix(deps): update dependency html-webpack-plugin to v3.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.5.9, eslint-config-cozy-app@0.5.1 (2018-03-22)
 
 #### :wrench: Chore:
