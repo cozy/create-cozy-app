@@ -53,7 +53,7 @@
     "prettier": "1.11.1",
     "standard": "11.0.1",
     "stylint": "1.5.9",
-    "vue-jest": "2.2.1",
+    "vue-jest": "2.3.0",
     "vue-loader": "14.2.1",
     "vue-template-compiler": "2.5.16"
   },
