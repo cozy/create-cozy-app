@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
-    "@vue/test-utils": "1.0.0-beta.12",
+    "@vue/test-utils": "1.0.0-beta.13",
     "babel-polyfill": "6.26.0",
     "babel-preset-cozy-app": "0.3.2",
     "eslint": "4.19.1",
