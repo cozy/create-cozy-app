@@ -177,6 +177,10 @@ The built files (destined to the Cozy) will be in `build/`.
 
 Do the same thing than the previous command with webpack in a watching mode but also run a server (`webpack-dev-server`) to serve your application (as a static application) on the url `http://localhost:8888`.
 
+##### - `cozy-scripts publish`
+
+This command will internally fetch and run the latest version of the [`cozy-app-publish` CLI](https://github.com/cozy/cozy-app-publish) to publish your application on a Cozy registry (by default the official and main Cozy Cloud applications registry on `https://apps-registry.cozycloud.cc`). The options and arguments are the same than in the [`cozy-app-publish` package documentation](https://github.com/cozy/cozy-app-publish).
+
 ##### - `--vue`
 
 Allow to use the VueJS webpack configuration as default opinionated configuration. You don't need an `app.config.js` to use the VueJS webpack bundle configuration (`wepack.bundle.vue.js`) with this option.
