@@ -50,7 +50,7 @@ if (program.showConfig) {
   process.exit(0)
 }
 
-const availableScripts = ['watch', 'build', 'standalone', 'test']
+const availableScripts = ['watch', 'build', 'standalone', 'test', 'publish']
 
 if (availableScripts.includes(actionName)) {
   const scriptPath = `../scripts/${actionName}`
