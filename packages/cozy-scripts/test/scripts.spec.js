@@ -190,6 +190,17 @@ describe('App from cozy-scripts', () => {
     }).not.toThrow()
   })
 
+  // the --help option should always be a working option of the publish CLI
+  it('should work correctly with publish --help option', () => {
+    console.log(colorize.orange('Running publish --help...'))
+    const publishScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'publish.js'))
+    expect(() => {
+      publishScript({
+        cliArgs: ['--help']
+      })
+    }).not.toThrow()
+  })
+
   // Custom app.config.js
   it('should use the custom app config if an `app.config.js` exists in the app directory', () => {
     fs.copySync(ownTestConfig, customConfigPath)

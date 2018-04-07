@@ -48,7 +48,6 @@ module.exports = function runGlobalPackageCLI (packageName, cliArguments = [], d
 
   if (runPackageProcess.status !== 0) {
     console.log()
-    console.log(colorize.red(`Something went wrong when running '${packageName}'. Process aborted.`))
-    process.exit(1)
+    throw colorize.red(`Something went wrong when running '${packageName}'. Process aborted.`)
   }
 }

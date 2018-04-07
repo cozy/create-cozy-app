@@ -182,6 +182,17 @@ describe('App from cozy-scripts with VueJS 2', () => {
     }).not.toThrow()
   })
 
+  // the --help option should always be a working option of the publish CLI
+  it('should work correctly with publish --help option', () => {
+    console.log(colorize.orange('Running publish --help...'))
+    const publishScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'publish.js'))
+    expect(() => {
+      publishScript({
+        cliArgs: ['--help']
+      })
+    }).not.toThrow()
+  })
+
   it('should run webpack.run correctly with build script', (done) => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
     // should be NODE_ENV = 'browser:production' by default here
