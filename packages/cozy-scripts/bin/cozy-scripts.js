@@ -38,12 +38,9 @@ const options = {
     'browser',
   useVue: program.vue,
   debugMode: program.debug,
-  bundleAnalyzer: program.analyzer
-}
-
-if (actionName === 'test') {
-  // all arguments passed to the test command
-  options.testArgs = process.argv.slice(3)
+  bundleAnalyzer: program.analyzer,
+  // all remaining arguments passed to the command
+  cliArgs: process.argv.slice(3)
 }
 
 if (program.showConfig) {

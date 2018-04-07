@@ -177,7 +177,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
     const testScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'test.js'))
     expect(() => {
       testScript({
-        testArgs: ['--verbose', '--coverage']
+        cliArgs: ['--verbose', '--coverage']
       })
     }).not.toThrow()
   })

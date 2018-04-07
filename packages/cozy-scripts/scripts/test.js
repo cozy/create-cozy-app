@@ -6,15 +6,13 @@ const paths = require('../utils/paths')
 
 function runJest (options) {
   const {
-    testArgs
+    cliArgs
   } = options
 
-  const cliArguments = testArgs
-
   if (fs.existsSync(paths.jestConfig)) {
-    cliArguments.push('--config', paths.jestConfig)
+    cliArgs.push('--config', paths.jestConfig)
   }
-  jestAPI.run(cliArguments)
+  jestAPI.run(cliArgs)
 }
 
 module.exports = runJest
