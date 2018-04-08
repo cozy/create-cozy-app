@@ -185,7 +185,18 @@ describe('App from cozy-scripts', () => {
     const testScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'test.js'))
     expect(() => {
       testScript({
-        testArgs: ['--verbose', '--coverage']
+        cliArgs: ['--verbose', '--coverage']
+      })
+    }).not.toThrow()
+  })
+
+  // the --help option should always be a working option of the publish CLI
+  it('should work correctly with publish --help option', () => {
+    console.log(colorize.orange('Running publish --help...'))
+    const publishScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'publish.js'))
+    expect(() => {
+      publishScript({
+        cliArgs: ['--help']
       })
     }).not.toThrow()
   })
