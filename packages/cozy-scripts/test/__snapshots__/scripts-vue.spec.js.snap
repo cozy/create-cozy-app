@@ -1751,6 +1751,7 @@ Array [
   "manifest.webapp",
   "node_modules",
   "package.json",
+  "renovate.json",
   "src/assets/icons/icon-bullet-point.svg",
   "src/components/App.vue",
   "src/components/HelloViews/Hello1.vue",
