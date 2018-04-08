@@ -16,7 +16,8 @@ module.exports = function runGlobalPackageCLI (packageName, cliArguments = [], d
     [
       'global',
       'add',
-      `${packageName}@latest`
+      `${packageName}@latest`,
+      '--prefer-offline'
     ],
     {
       stdio: debugMode ? 'inherit' : 'pipe'
