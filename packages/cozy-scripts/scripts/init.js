@@ -103,6 +103,7 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   const templateManifest = requireFileAsString(path.join(templatePath, 'manifest.webapp'))
   const templateContributing = requireFileAsString(path.join(templatePath, 'CONTRIBUTING.md'))
   const templateReadme = requireFileAsString(path.join(templatePath, 'README.md'))
+  const templateTravisYaml = requireFileAsString(path.join(templatePath, '.travis.yml'))
 
   console.log()
   console.log('Building files...')
@@ -128,6 +129,7 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   const newManifest = replaceDataIn(templateManifest)
   const newReadme = replaceDataIn(templateReadme)
   const newContributing = replaceDataIn(templateContributing)
+  const newTravisYaml = replaceDataIn(templateTravisYaml)
 
   console.log()
   console.log(`Copying in ${colorize.cyan(appPath)}`)
@@ -154,6 +156,8 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   console.log(`${colorize.cyan('README.md')} copied.`)
   fs.writeFileSync(path.join(appPath, 'CONTRIBUTING.md'), newContributing)
   console.log(`${colorize.cyan('CONTRIBUTING.md')} copied.`)
+  fs.writeFileSync(path.join(appPath, '.travis.yml'), newTravisYaml)
+  console.log(`${colorize.cyan('.travis.yml')} copied.`)
 
   // install all dependencies
   console.log()
