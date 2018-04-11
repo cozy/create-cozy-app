@@ -2,8 +2,8 @@
   "name": "cozy-scripts-template-vue",
   "version": "0.1.0",
   "scripts": {
-    "clean:browser": "find ./build -name '*' ! -name 'build' -print0 | xargs -0 -n 10 rm -rf",
-    "clean:mobile": "find ./mobile/www -name '*' ! -path './mobile/www' -print0 | xargs -0 -n 10 rm -rf",
+    "clean:browser": "rm -rf build/",
+    "clean:mobile": "rm -rf targets/mobile/www",
     "tx": "tx pull --all || true",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint '{src,test}/**/*.{js}'",
