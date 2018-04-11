@@ -231,12 +231,14 @@ Array [
           "chunks": Array [
             "app",
           ],
+          "chunksSortMode": "auto",
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
           "inject": false,
+          "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,
           },
@@ -513,12 +515,14 @@ Array [
           "chunks": Array [
             "app",
           ],
+          "chunksSortMode": "auto",
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
           "inject": false,
+          "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,
           },
@@ -813,12 +817,14 @@ Array [
           "chunks": Array [
             "app",
           ],
+          "chunksSortMode": "auto",
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
           "inject": "head",
+          "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,
           },
@@ -1100,12 +1106,14 @@ Array [
           "chunks": Array [
             "app",
           ],
+          "chunksSortMode": "auto",
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
           "inject": "head",
+          "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,
           },
@@ -1382,12 +1390,14 @@ Array [
           "chunks": Array [
             "app",
           ],
+          "chunksSortMode": "auto",
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
           "inject": false,
+          "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,
           },
@@ -1672,12 +1682,14 @@ Array [
           "chunks": Array [
             "app",
           ],
+          "chunksSortMode": "auto",
           "compile": true,
           "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
           "inject": false,
+          "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,
           },
