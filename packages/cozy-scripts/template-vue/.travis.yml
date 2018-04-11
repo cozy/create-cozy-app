@@ -39,6 +39,6 @@ deploy:
     repo: <USERNAME_GH>/<SLUG_GH>
     skip-cleanup: true
     # deploy the build on a build branch and publish to the Cozy registry
-    script: yarn deploy:travis --branch=build && BUILD_COMMIT=$(git rev-parse build) yarn cozyPublish
+    script: DEPLOY_BRANCH=build && yarn deploy && yarn cozyPublish
     on:
       branch: master
