@@ -1,3 +1,24 @@
+## cozy-scripts@0.6.1 (2018-04-16)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#460](https://github.com/CPatchane/create-cozy-app/pull/460) Fix missing .travis.yml in package.json files for publishing. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#455](https://github.com/CPatchane/create-cozy-app/pull/455) fix(deps): update dependency babel-eslint to v8.2.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#456](https://github.com/CPatchane/create-cozy-app/pull/456) chore(deps): update dependency @vue/test-utils to v1.0.0-beta.14 - autoclosed. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#457](https://github.com/CPatchane/create-cozy-app/pull/457) chore(deps): update dependency vue-jest to v2.5.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#459](https://github.com/CPatchane/create-cozy-app/pull/459) fix(deps): update dependency autoprefixer to v8.3.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#458](https://github.com/CPatchane/create-cozy-app/pull/458) fix(deps): update dependency postcss-loader to v2.1.4. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#454](https://github.com/CPatchane/create-cozy-app/pull/454) fix(deps): update dependency cozy-ui to v7.12.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#452](https://github.com/CPatchane/create-cozy-app/pull/452) chore(deps): update dependency eslint-plugin-import to v2.11.0 - autoclosed. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#451](https://github.com/CPatchane/create-cozy-app/pull/451) chore(deps): update dependency prettier to v1.12.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.6.0 (2018-04-11)
 
 #### :sparkles: New Features:
