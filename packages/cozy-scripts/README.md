@@ -199,7 +199,7 @@ Use this option if you want to analyze your builds content using the webpack plu
 
 ### The `cozy-scripts` webpack configuration
 
-`cozy-scripts` is designed to used a default webpack configuration for a basic \(P\)React/Redux (or VueJS) application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder. Here is an example to overload the default bundle config with a custom one:
+`cozy-scripts` is designed to use a default webpack configuration for a basic \(P\)React/Redux (or VueJS) application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder. Here is an example to overload the default bundle config with a custom one:
 
 ```javascript
 // myapp/app.config.js
