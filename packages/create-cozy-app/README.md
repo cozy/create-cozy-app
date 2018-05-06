@@ -34,7 +34,7 @@ By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/C
 
 #### Requirements
 
- - Node.js version 6 or higher;
+ - Node.js version 8 or higher;
  - [Yarn](https://yarnpkg.com). Yarn is a Node.js package manager, like `npm`;
  - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use standalone mode);
 

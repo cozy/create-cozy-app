@@ -9,10 +9,10 @@ var semver = currentNodeVersion.split('.')
 var major = semver[0]
 const execSync = require('child_process').execSync
 
-if (major < 6) {
+if (major < 8) {
   console.error(
     chalk.red(`You are running Node v${currentNodeVersion}.
-      create-cozy-app requires Node v6 minimum, please update you version of Node`
+      create-cozy-app requires Node v8 minimum, please use a more recent version of Node`
     )
   )
   process.exit(1)
