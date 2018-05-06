@@ -23,6 +23,7 @@
     "watch:mobile:standalone": "npm-run-all --serial clean:mobile 'commons:watch:standalone --browser --development'",
     "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git}",
     "test": "cozy-scripts test --verbose --coverage",
+    "reset:yarn": "rm -rf node_modules/ yarn.lock && yarn",
     "stack:docker": "docker run --rm -it -p 8080:8080 -p 5984:5984 -v \"$(pwd)/build\":/data/cozy-app/app cozy/cozy-app-dev",
     "cozyPublish": "git fetch origin ${DEPLOY_BRANCH:-build}:${DEPLOY_BRANCH:-build} && cozy-app-publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})"
   },
