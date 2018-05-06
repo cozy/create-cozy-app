@@ -42,3 +42,10 @@ deploy:
     script: DEPLOY_BRANCH=build && yarn deploy && yarn cozyPublish
     on:
       branch: master
+  - provider: script
+    repo: <USERNAME_GH>/<SLUG_GH>
+    skip-cleanup: true
+    # publish stable or beta versions using Github Releases (git tag)
+    script: DEPLOY_BRANCH=build && yarn cozyPublish
+    on:
+      tags: true
