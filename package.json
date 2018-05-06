@@ -7,7 +7,8 @@
 		"test:cozy-scripts": "yarn test:cozy-scripts:default && yarn test:cozy-scripts:vue",
 		"test:cozy-scripts:default": "jest packages/cozy-scripts/test/scripts.spec.js",
 		"test:cozy-scripts:vue": "jest packages/cozy-scripts/test/scripts-vue.spec.js",
-		"test:cozy-scripts-vanilla": "jest packages/cozy-scripts-vanilla/test/*.js"
+		"test:cozy-scripts-vanilla": "jest packages/cozy-scripts-vanilla/test/*.js",
+		"reset:yarn": "sh reset_yarn.sh"
 	},
 	"devDependencies": {
 		"jest": "22.4.3",
