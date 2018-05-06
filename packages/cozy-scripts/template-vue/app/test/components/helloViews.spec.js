@@ -5,10 +5,10 @@
 import Vue from 'vue'
 import { shallow } from '@vue/test-utils'
 
-import Hello1 from '../../../src/components/HelloViews/Hello1'
-import Hello2 from '../../../src/components/HelloViews/Hello2'
-import Hello3 from '../../../src/components/HelloViews/Hello3'
-import I18nTestMixin from '../../lib/I18n'
+import Hello1 from '../../src/components/HelloViews/Hello1'
+import Hello2 from '../../src/components/HelloViews/Hello2'
+import Hello3 from '../../src/components/HelloViews/Hello3'
+import I18nTestMixin from '../lib/I18n'
 Vue.mixin(I18nTestMixin)
 
 describe('Hello components:', () => {
