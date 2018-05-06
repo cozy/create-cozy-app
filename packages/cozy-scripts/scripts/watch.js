@@ -24,7 +24,7 @@ module.exports = (buildOptions, successCallback) => {
   let watcher
   watcher = compiler.watch({}, (err, stats) => {
     if (err) {
-      console.error(new Error(colorize.red(err)))
+      throw new Error(colorize.red(err))
     }
 
     if (stats) {
