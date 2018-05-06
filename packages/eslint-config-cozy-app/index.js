@@ -1,6 +1,5 @@
 'use strict'
 
-// standardJS
 module.exports = {
   plugins: ['prettier'],
   extends: [
