@@ -27,14 +27,16 @@ module.exports = (buildOptions, successCallback) => {
       console.error(new Error(colorize.red(err)))
     }
 
-    console.log(stats.toString({
-      // display modules in debug mode
-      modules: isDebugMode,
-      // display chunks in debug mode
-      chunks: isDebugMode,
-      // Shows colors in the console
-      colors: true
-    }))
+    if (stats) {
+      console.log(stats.toString({
+        // display modules in debug mode
+        modules: isDebugMode,
+        // display chunks in debug mode
+        chunks: isDebugMode,
+        // Shows colors in the console
+        colors: true
+      }))
+    }
 
     if (typeof successCallback === 'function') successCallback(watcher)
   })
