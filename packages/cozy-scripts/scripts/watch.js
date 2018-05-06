@@ -25,6 +25,7 @@ module.exports = (buildOptions, successCallback) => {
   watcher = compiler.watch({}, (err, stats) => {
     if (err) {
       console.error(new Error(colorize.red(err)))
+      return
     }
 
     if (stats) {
