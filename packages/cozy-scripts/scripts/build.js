@@ -2,7 +2,6 @@
 
 const webpack = require('webpack')
 const getWebpackConfigs = require('./config')
-const colorize = require('../utils/_colorize')
 
 // add a way to provide success callback for (at least) better tests
 module.exports = (buildOptions, successCallback) => {
@@ -21,19 +20,32 @@ module.exports = (buildOptions, successCallback) => {
   const compiler = webpack(configs)
 
   compiler.run((err, stats) => {
+    const isTestMode = typeof successCallback === 'function'
+
     if (err) {
-      throw new Error(colorize.red(err))
+      console.error(err.stack || err)
+      if (err.details) console.error(err.details)
+      throw new Error('The webpack build failed.')
     }
 
-    console.log(stats.toString({
-      // display modules in debug mode
-      modules: isDebugMode,
-      // display chunks in debug mode
-      chunks: isDebugMode,
-      // Shows colors in the console
-      colors: true
-    }))
+    const info = stats.toJson()
 
-    if (typeof successCallback === 'function') successCallback()
+    if (stats) {
+      console.log(stats.toString({
+        // display modules in debug mode
+        modules: isDebugMode,
+        // display chunks in debug mode
+        chunks: isDebugMode,
+        // Shows colors in the console
+        colors: true
+      }))
+    }
+
+    if (stats.hasErrors()) {
+      // errros should already displayed by stats just before
+      throw new Error('Webpack build errored.')
+    }
+
+    if (isTestMode) successCallback()
   })
 }
