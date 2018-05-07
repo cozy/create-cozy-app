@@ -20,6 +20,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
           <Icon
             className="c-nav-icon"
             icon="test-file-stub"
+            spin={false}
           />
           First
         </NavLink>
@@ -36,6 +37,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
           <Icon
             className="c-nav-icon"
             icon="test-file-stub"
+            spin={false}
           />
           Second
         </NavLink>
@@ -52,6 +54,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
           <Icon
             className="c-nav-icon"
             icon="test-file-stub"
+            spin={false}
           />
           Third
         </NavLink>
