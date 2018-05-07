@@ -2,7 +2,6 @@
 
 const webpack = require('webpack')
 const getWebpackConfigs = require('./config')
-const colorize = require('../utils/_colorize')
 
 // add a way to provide success callback for (at least) better tests
 // return a watcher to be able to close it programmatically
@@ -23,9 +22,16 @@ module.exports = (buildOptions, successCallback) => {
 
   let watcher
   watcher = compiler.watch({}, (err, stats) => {
+    const isTestMode = typeof successCallback === 'function'
+
     if (err) {
-      console.error(new Error(colorize.red(err)))
-      return
+      console.error(err.stack || err)
+      if (err.details) console.error(err.details)
+      if (isTestMode) {
+        throw new Error('Webpack build failed.')
+      } else {
+        return
+      }
     }
 
     if (stats) {
@@ -39,6 +45,11 @@ module.exports = (buildOptions, successCallback) => {
       }))
     }
 
-    if (typeof successCallback === 'function') successCallback(watcher)
+    if (stats.hasErrors()) {
+      // errros should already displayed by stats just before
+      if (isTestMode) throw new Error('Webpack build errored.')
+    }
+
+    if (isTestMode) successCallback(watcher)
   })
 }
