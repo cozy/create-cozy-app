@@ -1,3 +1,74 @@
+## cozy-scripts@0.7.0, cozy-scripts-vanilla@0.7.0, create-cozy-app@0.7.0, babel-preset-cozy-app@0.7.0, eslint-config-cozy-app@0.7.0 (2018-05-09)
+
+#### :boom: Breaking Changes:
+
+##### TL;DR
+* Drop Node < 8 support, now use Node 8+ only
+* `eslint-config-cozy-app` contains now two separate configs:
+    * For classical JS (__new default__): `"extends": ["cozy-app"]`
+    * For \(P\)React applications with JSX: `"extends": ["cozy-app/react"]`
+* `babel-preset-cozy-app` contains now two separate presets:
+    * For browsers targeting (__default__): `"presets": ["cozy-app"]`
+    * For Node targeting: `"presets": [ ["cozy-app", { "node": true }] ]`
+
+##### Details & PRs
+* `eslint-config-cozy-app`
+  * [#508](https://github.com/CPatchane/create-cozy-app/pull/508) Split configurations in eslint-config-cozy-app. ([@CPatchane](https://github.com/CPatchane))
+* `babel-preset-cozy-app`
+  * [#509](https://github.com/CPatchane/create-cozy-app/pull/509) Split presets in babel-preset-cozy-app. ([@CPatchane](https://github.com/CPatchane))
+* `create-cozy-app`
+  * [#501](https://github.com/CPatchane/create-cozy-app/pull/501) Use now node 8+ (drop v6 and v7 support). ([@CPatchane](https://github.com/CPatchane))
+* `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`
+  * [#488](https://github.com/CPatchane/create-cozy-app/pull/488) fix(deps): update dependency fs-extra to v6. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#505](https://github.com/CPatchane/create-cozy-app/pull/505) Better handling errors in watch/build scripts. ([@CPatchane](https://github.com/CPatchane))
+  * [#502](https://github.com/CPatchane/create-cozy-app/pull/502) Better imports in app tests. ([@CPatchane](https://github.com/CPatchane))
+  * [#503](https://github.com/CPatchane/create-cozy-app/pull/503) Add app script to reset yarn lockfile. ([@CPatchane](https://github.com/CPatchane))
+  * [#499](https://github.com/CPatchane/create-cozy-app/pull/499) App publishing using git tag (github releases). ([@CPatchane](https://github.com/CPatchane))
+  * [#498](https://github.com/CPatchane/create-cozy-app/pull/498) Directly return if error in watch script. ([@CPatchane](https://github.com/CPatchane))
+  * [#494](https://github.com/CPatchane/create-cozy-app/pull/494) Move app tests out of ducks/ folder. ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#495](https://github.com/CPatchane/create-cozy-app/pull/495) Display stats in watch script only if defined. ([@CPatchane](https://github.com/CPatchane))
+
+#### :wrench: Chore:
+* Other
+  * [#504](https://github.com/CPatchane/create-cozy-app/pull/504) Add global script to reset yarn lockfiles. ([@CPatchane](https://github.com/CPatchane))
+* `babel-preset-cozy-app`, `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`, `eslint-config-cozy-app`
+  * [#496](https://github.com/CPatchane/create-cozy-app/pull/496) Reset all yarn lockfiles. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#465](https://github.com/CPatchane/create-cozy-app/pull/465), [#506](https://github.com/CPatchane/create-cozy-app/pull/506) Update dependency cozy-bar to v4.10.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#497](https://github.com/CPatchane/create-cozy-app/pull/497) Update dependency npm-run-all to v4.1.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#476](https://github.com/CPatchane/create-cozy-app/pull/476) chore(deps): update dependency eslint-plugin-standard to v3.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#473](https://github.com/CPatchane/create-cozy-app/pull/473) chore(deps): update dependency @vue/test-utils to v1.0.0-beta.15. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#467](https://github.com/CPatchane/create-cozy-app/pull/467) fix(deps): update dependency redux to v4. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#493](https://github.com/CPatchane/create-cozy-app/pull/493) fix(deps): update dependency postcss-loader to v2.1.5. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#466](https://github.com/CPatchane/create-cozy-app/pull/466), [#469](https://github.com/CPatchane/create-cozy-app/pull/469), [#472](https://github.com/CPatchane/create-cozy-app/pull/472), [#489](https://github.com/CPatchane/create-cozy-app/pull/489) fix(deps): update dependency cozy-ui to v7.20.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#484](https://github.com/CPatchane/create-cozy-app/pull/484) fix(deps): update dependency autoprefixer to v8.4.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#486](https://github.com/CPatchane/create-cozy-app/pull/486) fix(deps): update dependency preact to v8.2.9. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#453](https://github.com/CPatchane/create-cozy-app/pull/453), [#470](https://github.com/CPatchane/create-cozy-app/pull/470), [#482](https://github.com/CPatchane/create-cozy-app/pull/482) fix(deps): update dependency cozy-client-js to v0.9.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#483](https://github.com/CPatchane/create-cozy-app/pull/483) fix(deps): update dependency postcss to v6.0.22. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#480](https://github.com/CPatchane/create-cozy-app/pull/480) fix(deps): update dependency babel-core to v6.26.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#471](https://github.com/CPatchane/create-cozy-app/pull/471) fix(deps): update dependency style-loader to v0.21.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#461](https://github.com/CPatchane/create-cozy-app/pull/461) chore(deps): update react monorepo to v16.3.2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#463](https://github.com/CPatchane/create-cozy-app/pull/463) chore(deps): update dependency prettier to v1.12.1. ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`
+  * [#488](https://github.com/CPatchane/create-cozy-app/pull/488) fix(deps): update dependency fs-extra to v6. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#464](https://github.com/CPatchane/create-cozy-app/pull/464), [#478](https://github.com/CPatchane/create-cozy-app/pull/478) fix(deps): update dependency chalk to v2.4.1. ([@renovate[bot]](https://github.com/apps/renovate))
+* `create-cozy-app`
+  * [#485](https://github.com/CPatchane/create-cozy-app/pull/485) fix(deps): update dependency ora to v2.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#462](https://github.com/CPatchane/create-cozy-app/pull/462), [#474](https://github.com/CPatchane/create-cozy-app/pull/474) chore(deps): update dependency lerna to v2.11.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.6.1 (2018-04-16)
 
 #### :bug: Bug Fixes:
