@@ -28,8 +28,6 @@ module.exports = (buildOptions, successCallback) => {
       throw new Error('The webpack build failed.')
     }
 
-    const info = stats.toJson()
-
     if (stats) {
       console.log(stats.toString({
         // display modules in debug mode
