@@ -20,9 +20,9 @@
 
 ### What's babel-preset-cozy-app?
 
-A shareable configuration for Cozy Application with React and JSX support.
+A shareable configuration for Cozy Applications or Scripts.
 
-This package is a Babel preset used by [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app).
+This package is a Babel preset already used by [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app).
 
 To install:
 
@@ -46,41 +46,21 @@ Then, in a file named `.babelrc` (the Babel configuration file), you can use the
 }
 ```
 
-### Content
+### Options
 
-#### Presets:
+#### `node` (boolean)
 
-- [`env`](https://github.com/babel/babel/tree/master/experimental/babel-preset-env) to add polyfills with the current configuration:
+By default, the babel preset targets browsers but you can target node by passing the option:
 
-    ```javascript
-    {
-      targets: {
-        chrome: 42,
-        ie: 10,
-        firefox: 40,
-        browsers: ['last 2 versions']
-      },
-      useBuiltIns: false
-    }
-    ```
-
-- [`react`](https://babeljs.io/docs/plugins/preset-react/) to support JSX and transform it to `createElement` calls.
-
-#### Plugins:
-
-- [`transform-object-rest-spread`](http://babeljs.io/docs/plugins/transform-object-rest-spread/) to transform rest properties for object destructuring assignment and spread properties for object literals. The `useBuiltIns` options is enable to directly use `Object.assign` considered as available or polyfilled.
-
-- [`transform-class-properties`](https://babeljs.io/docs/plugins/transform-class-properties/) to transform class attributes and methods with auto-binding to the class instance and no constructor needed.
-
-- [`transfor-runtime`](https://babeljs.io/docs/plugins/transform-runtime/) only to polyfill generators (for async/await) here:
-
-    ```js
-    {
-      helpers: false,
-      polyfill: false,
-      regenerator: true
-    }
-    ```
+```json
+{
+    "presets": [
+        ["cozy-app", {
+            "node": true
+        }]
+    ]
+}
+```
 
 ## Community
 
