@@ -20,9 +20,9 @@
 
 ### What's eslint-config-cozy-app?
 
-A shareable configuration for Cozy Application using Standard configs and `babel-eslint` parser with JSX support.
+Shareable configurations for Cozy Applications and scripts.
 
-This package is an ESLint shareable config used by [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app).
+> This package is an ESLint shareable config already used by [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app).
 
 To install:
 
@@ -32,17 +32,48 @@ yarn add --dev eslint-config-cozy-app
 
 ### Usage with a Create Cozy App projects
 
-If you started your project using [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app), you don't need to do anything, you should already have a `.eslintrc.json` configured to used this preset.
+If you started your project using [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app), you don't need to do anything, you should already have an `.eslintrc.json` configured to used this preset.
 
 ### Usage with other projects
 
-In a file named `.eslintrc.json` (the ESLint configuration file), you can use the config using the following way:
+In a file named `.eslintrc.json` (the ESLint configuration file), you can use the config by extending it. For example (see following available configurations documentation):
 
 ```json
 {
     "extends": ["cozy-app"]
 }
 ```
+
+### Available configurations
+
+#### Basics
+
+Basic configuration for common Javascript code, this is the default configuration. To use in your `.eslintrc.json`:
+
+```json
+{
+    "extends": ["cozy-app"]
+}
+```
+
+Or if you want to use it explicitely:
+
+```json
+{
+    "extends": ["cozy-app/basics"]
+}
+```
+
+#### React
+
+Configuration for React applications (basics configuration included). To use in your `.eslintrc.json`:
+
+```json
+{
+    "extends": ["cozy-app/react"]
+}
+```
+
 
 ## Community
 

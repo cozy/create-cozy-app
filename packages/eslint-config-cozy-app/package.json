@@ -13,7 +13,9 @@
     "url": "https://github.com/CPatchane/create-cozy-app/issues"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "basics.js",
+    "react.js"
   ],
   "dependencies": {
     "babel-eslint": "^8.0.1",
