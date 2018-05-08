@@ -11,9 +11,6 @@
   <a href="https://travis-ci.org/CPatchane/create-cozy-app">
     <img src="https://img.shields.io/travis/CPatchane/create-cozy-app.svg" alt="travis" />
   </a>
-  <a href="https://npmjs.org/package/create-cozy-app">
-    <img src="https://img.shields.io/npm/dm/create-cozy-app.svg" alt="downloads" />
-  </a>
   <a href="https://renovateapp.com/">
     <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="renovate" />
   </a>

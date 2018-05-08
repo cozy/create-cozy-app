@@ -7,7 +7,7 @@
   <a href="https://github.com/CPatchane/create-cozy-app/blob/master/packages/babel-preset-cozy-app/LICENSE">
     <img src="https://img.shields.io/npm/l/babel-preset-cozy-app.svg" alt="license" />
   </a>
-  <a href="https://npmjs.org/package/babel-preset-cozy-app">
+  <a href="https://npmcharts.com/compare/babel-preset-cozy-app">
     <img src="https://img.shields.io/npm/dm/babel-preset-cozy-app.svg" alt="npm downloads" />
   </a>
   <a href="https://david-dm.org/cpatchane/create-cozy-app?path=packages/babel-preset-cozy-app">
