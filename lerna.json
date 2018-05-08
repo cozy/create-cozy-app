@@ -4,9 +4,9 @@
   "changelog": {
     "repo": "CPatchane/create-cozy-app",
     "labels": {
+      "tag: breaking change": ":boom: Breaking Changes:",
       "tag: feature": ":sparkles: New Features:",
       "tag: enhancement": ":nail_care: Enhancements:",
-      "tag: breaking change": ":boom: Breaking Changes:",
       "tag: bug": ":bug: Bug Fixes:",
       "tag: chore": ":wrench: Chore:",
       "tag: documentation": ":memo: Documentations:",
