@@ -14,7 +14,7 @@
 
 _:pushpin: Note:_ we recommend to use [Yarn] instead of NPM for package management. Don't hesitate to [install][yarn-install] and use it for your Cozy projects, it's now our main node packages tool for Cozy official apps.
 
-### Install and run in dev mode
+### Install
 
 Hacking the Cozy <APP_NAME> app requires you to [setup a dev environment][setup].
 
