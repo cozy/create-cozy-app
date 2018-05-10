@@ -8,6 +8,14 @@ const path = require('path')
 const fs = require('fs')
 
 module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.webapp$/,
+        loader: 'json-loader'
+      }
+    ]
+  },
   plugins: [
     new CopyPlugin([
       { from: paths.appManifest, transform: transformManifest },
