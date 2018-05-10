@@ -241,7 +241,12 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
         Object {
@@ -575,7 +580,12 @@ Array [
           "options": Object {
             "name": "[name].[hash].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
       ],
@@ -900,7 +910,12 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
         Object {
@@ -1239,7 +1254,12 @@ Array [
           "options": Object {
             "name": "[name].[hash].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
       ],
@@ -1572,7 +1592,12 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
         Object {
@@ -1907,7 +1932,12 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
         Object {
@@ -2291,7 +2321,12 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
         Object {
@@ -2621,7 +2656,12 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "/img/",
+            "publicPath": "/",
           },
+          "test": Object {},
+        },
+        Object {
+          "loader": "json-loader",
           "test": Object {},
         },
         Object {

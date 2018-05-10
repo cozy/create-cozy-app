@@ -40,21 +40,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // default data will allow to display correctly the cozy-bar
   // in the standalone (without cozy-stack connexion)
-  const appIcon = getDataOrDefault(data.cozyIconPath, require('../vendor/assets/icon.svg'))
+  const appIcon = getDataOrDefault(
+    data.cozyIconPath,
+    require('../vendor/assets/icon.svg')
+  )
 
-  const appEditor = getDataOrDefault(data.cozyAppEditor, '')
+  const appNamePrefix = getDataOrDefault(
+    data.cozyAppNamePrefix || require('../../../manifest.webapp').name_prefix,
+    ''
+  )
 
-  const appName = getDataOrDefault(data.cozyAppName, require('../../../package.json').name)
+  const appName = getDataOrDefault(
+    data.cozyAppName,
+    require('../../../manifest.webapp').name
+  )
 
   appLocale = getDataOrDefault(data.cozyLocale, 'en')
 
+  const protocol = window.location ? window.location.protocol : 'https:'
+
   cozy.client.init({
-    cozyURL: '//' + data.cozyDomain,
+    cozyURL: `${protocol}//${data.cozyDomain}`,
     token: data.cozyToken
   })
   cozy.bar.init({
-    appEditor: appEditor,
     appName: appName,
+    appNamePrefix: appNamePrefix,
     iconPath: appIcon,
     lang: appLocale,
     replaceTitleOnMobile: true

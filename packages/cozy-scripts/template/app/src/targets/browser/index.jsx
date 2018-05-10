@@ -59,11 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
     require('../vendor/assets/icon.svg')
   )
 
-  const appEditor = getDataOrDefault(data.cozyAppEditor, '')
+  const appNamePrefix = getDataOrDefault(
+    data.cozyAppNamePrefix || require('../../../manifest.webapp').name_prefix,
+    ''
+  )
 
   const appName = getDataOrDefault(
     data.cozyAppName,
-    require('../../../package.json').name
+    require('../../../manifest.webapp').name
   )
 
   appLocale = getDataOrDefault(data.cozyLocale, 'en')
@@ -75,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     token: data.cozyToken
   })
   cozy.bar.init({
-    appEditor: appEditor,
     appName: appName,
+    appNamePrefix: appNamePrefix,
     iconPath: appIcon,
     lang: appLocale,
     replaceTitleOnMobile: true
