@@ -7,9 +7,9 @@ import { initFormat } from './format.js'
 
 export const DEFAULT_LANG = 'en'
 
-export function getI18nMixin (lang, dictRequire, defaultLang) {
+export function getI18nMixin(lang, dictRequire, defaultLang) {
   return {
-    data: function () {
+    data: function() {
       return { lang }
     },
     methods: {
