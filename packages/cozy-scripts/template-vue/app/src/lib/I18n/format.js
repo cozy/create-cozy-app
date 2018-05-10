@@ -9,9 +9,8 @@ export const initFormat = (lang, defaultLang = DEFAULT_LANG) => {
     try {
       locales[lang] = require(`date-fns/locale/${lang}/index`)
     } catch (e) {
-      console.warn(`The "${lang}" locale isn't supported by date-fns`)
+      // console.warn(`The "${lang}" locale isn't supported by date-fns`)
     }
   }
-  return (date, formatStr) =>
-    format(date, formatStr, { locale: locales[lang] })
+  return (date, formatStr) => format(date, formatStr, { locale: locales[lang] })
 }
