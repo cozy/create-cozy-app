@@ -160,6 +160,18 @@ Array [
           "test": Object {},
         },
         Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": Array [
             Object {
@@ -499,6 +511,18 @@ Array [
           "test": Object {},
         },
         Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": Array [
             Object {
@@ -824,6 +848,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
             ],
           },
           "test": Object {},
@@ -1173,6 +1209,18 @@ Array [
           "test": Object {},
         },
         Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": Array [
             Object {
@@ -1506,6 +1554,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
             ],
           },
           "test": Object {},
@@ -1846,6 +1906,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
             ],
           },
           "test": Object {},
@@ -2240,6 +2312,18 @@ Array [
           "test": Object {},
         },
         Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": Array [
             Object {
@@ -2570,6 +2654,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/react",
             ],
           },
           "test": Object {},

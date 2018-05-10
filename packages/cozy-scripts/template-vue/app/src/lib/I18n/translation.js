@@ -20,7 +20,7 @@ export const initTranslation = (
       _polyglot.extend(dict)
       _polyglot.locale(lang)
     } catch (e) {
-      console.warn(`The dict phrases for "${lang}" can't be loaded`)
+      // console.warn(`The dict phrases for "${lang}" can't be loaded`)
     }
   }
 

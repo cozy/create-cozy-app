@@ -9,12 +9,11 @@ import store from 'lib/store'
 import getI18nMixin from 'lib/I18n'
 
 let appLocale
-const renderApp = function () {
+const renderApp = function() {
   const App = require('components/App').default
-  Vue.mixin(getI18nMixin(
-    appLocale,
-    appLocale => require(`locales/${appLocale}`)
-  ))
+  Vue.mixin(
+    getI18nMixin(appLocale, appLocale => require(`locales/${appLocale}`))
+  )
   return new Vue({
     store, // inject store to all children
     el: '[role=application]',
@@ -23,13 +22,13 @@ const renderApp = function () {
 }
 
 if (module.hot) {
-  module.hot.accept('components/App', function () {
+  module.hot.accept('components/App', function() {
     renderApp()
   })
 }
 
 // return a defaultData if the template hasn't been replaced by cozy-stack
-const getDataOrDefault = function (toTest, defaultData) {
+const getDataOrDefault = function(toTest, defaultData) {
   const templateRegex = /^\{\{\.[a-zA-Z]*\}\}$/ // {{.Example}}
   return templateRegex.test(toTest) ? defaultData : toTest
 }
