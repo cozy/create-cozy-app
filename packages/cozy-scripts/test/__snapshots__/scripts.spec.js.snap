@@ -2592,60 +2592,7 @@ Array [
       "cozy",
     ],
     "module": Object {
-      "noParse": Array [
-        Object {},
-      ],
       "rules": Array [
-        Object {
-          "exclude": Object {},
-          "loader": "babel-loader",
-          "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
-          },
-          "test": Object {},
-        },
-        Object {
-          "loader": "json-loader",
-          "test": Object {},
-        },
-        Object {
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "ident": "postcss",
-                "sourceMap": true,
-              },
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "babel-loader",
-          "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
-          },
-          "test": Object {},
-        },
         Object {
           "enforce": "pre",
           "exclude": Object {},
@@ -2659,113 +2606,25 @@ Array [
           "test": Object {},
         },
         Object {
-          "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": "babel-loader",
           "options": Object {
-            "emitWarning": false,
-            "extends": Array [
-              "cozy-app/react",
+            "babelrc": false,
+            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "presets": Array [
+              Array [
+                "cozy-app",
+                Object {
+                  "node": true,
+                },
+              ],
             ],
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "stylus-loader",
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "include": Object {},
-          "loader": Array [
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
-              "options": Object {
-                "id": 1,
-                "omit": 1,
-                "remove": true,
-              },
-            },
-            Object {
-              "loader": "style-loader",
-            },
-            Object {
-              "loader": "css-loader",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "postcss-loader",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": "stylus-loader",
-            },
-          ],
-          "test": Object {},
-        },
-        Object {
-          "include": Object {},
-          "loader": "svg-sprite-loader",
-          "options": Object {
-            "name": "[name]_[hash]",
-          },
-          "test": Object {},
-        },
-        Object {
-          "exclude": Object {},
-          "loader": "file-loader",
-          "options": Object {
-            "name": "[name].[ext]",
-            "outputPath": "/img/",
-            "publicPath": "/",
           },
           "test": Object {},
         },
         Object {
           "loader": "json-loader",
           "test": Object {},
-        },
-        Object {
-          "loader": "imports-loader",
-          "options": Object {
-            "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
-          },
-          "test": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
         },
       ],
     },
