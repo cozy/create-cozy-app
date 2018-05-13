@@ -10,7 +10,7 @@
   <a href="https://travis-ci.org/CPatchane/create-cozy-app">
     <img src="https://img.shields.io/travis/CPatchane/create-cozy-app.svg" alt="travis" />
   </a>
-  <a href="https://npmjs.org/package/cozy-scripts">
+  <a href="https://npmcharts.com/compare/cozy-scripts">
     <img src="https://img.shields.io/npm/dm/cozy-scripts.svg" alt="npm downloads" />
   </a>
   <a href="https://david-dm.org/cpatchane/create-cozy-app?path=packages/cozy-scripts">

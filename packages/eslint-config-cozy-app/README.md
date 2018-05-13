@@ -7,7 +7,7 @@
   <a href="https://github.com/CPatchane/create-cozy-app/blob/master/packages/eslint-config-cozy-app/LICENSE">
     <img src="https://img.shields.io/npm/l/eslint-config-cozy-app.svg" alt="license" />
   </a>
-  <a href="https://npmjs.org/package/eslint-config-cozy-app">
+  <a href="https://npmcharts.com/compare/eslint-config-cozy-app">
     <img src="https://img.shields.io/npm/dm/eslint-config-cozy-app.svg" alt="npm downloads" />
   </a>
   <a href="https://david-dm.org/cpatchane/create-cozy-app?path=packages/eslint-config-cozy-app">
