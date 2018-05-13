@@ -48,15 +48,29 @@ Then, in a file named `.babelrc` (the Babel configuration file), you can use the
 
 ### Options
 
-#### `node` (boolean)
+#### `node` (boolean): `false` by default
 
-By default, the babel preset targets browsers but you can target node by passing the option:
+By default, this babel preset targets browsers but you can target node by using the `node` option:
 
 ```json
 {
     "presets": [
         ["cozy-app", {
             "node": true
+        }]
+    ]
+}
+```
+
+#### `react` (boolean): `true` by default
+
+By default, this babel preset uses the `react` preset ([`babel-preset-react`](https://babeljs.io/docs/plugins/preset-react/#top)) but you can disable this behaviour with the `react` option to `false` as following:
+
+```json
+{
+    "presets": [
+        ["cozy-app", {
+            "react": false
         }]
     ]
 }

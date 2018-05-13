@@ -22,7 +22,9 @@ const nodeEnv = {
 }
 
 module.exports = declare((api, options, dirname) => {
+  // default options
   let node = false
+  let react = true
 
   if (options) {
     if (options.node) {
@@ -30,6 +32,12 @@ module.exports = declare((api, options, dirname) => {
         throw new Error("Preset cozy-app 'node' option must be a boolean.")
       }
       node = options.node
+    }
+    if (options.react) {
+      if (typeof options.react !== 'boolean') {
+        throw new Error("Preset cozy-app 'react' option must be a boolean.")
+      }
+      react = options.react
     }
   }
 
@@ -44,8 +52,8 @@ module.exports = declare((api, options, dirname) => {
   }
 
   let presets = [env]
-  // JSX if app
-  if (!node) presets.push(require.resolve('babel-preset-react'))
+  // if (P)React app
+  if (!node && react) presets.push(require.resolve('babel-preset-react'))
   config.presets = presets
 
   const plugins = [
