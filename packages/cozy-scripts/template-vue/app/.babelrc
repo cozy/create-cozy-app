@@ -1,3 +1,5 @@
 {
-  "presets": ["cozy-app"]
+  "presets": [
+    ["cozy-app", { "react": false }]
+  ]
 }

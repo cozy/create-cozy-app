@@ -55,7 +55,7 @@ const config = {
           cacheDirectory: 'node_modules/.cache/babel-loader',
           babelrc: false,
           presets: [
-            ['cozy-app', { node: true }]
+            ['cozy-app', { node: true, react: false }]
           ]
         }
       },
