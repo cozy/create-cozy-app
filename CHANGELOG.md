@@ -1,3 +1,42 @@
+## cozy-scripts@0.7.1, cozy-scripts-vanilla@0.7.1, create-cozy-app@0.7.1, babel-preset-cozy-app@0.7.1, eslint-config-cozy-app@0.7.1 (2018-05-14)
+
+#### :sparkles: New Features:
+* `babel-preset-cozy-app`
+  * [#529](https://github.com/CPatchane/create-cozy-app/pull/529) Add `react` option to babel preset cozy-app. ([@CPatchane](https://github.com/CPatchane))
+* `cozy-scripts`
+  * [#522](https://github.com/CPatchane/create-cozy-app/pull/522) Better eslint usage and preloader + update eslint-config-cozy-app to v0.7.0. ([@CPatchane](https://github.com/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#500](https://github.com/CPatchane/create-cozy-app/pull/500) Use simpler babel config for services. ([@CPatchane](https://github.com/CPatchane))
+  * [#520](https://github.com/CPatchane/create-cozy-app/pull/520) Improve standalone mode + use app name prefix on init. ([@CPatchane](https://github.com/CPatchane))
+
+#### :memo: Documentations:
+* `cozy-scripts`, `create-cozy-app`
+  * [#530](https://github.com/CPatchane/create-cozy-app/pull/530) Documentation improvements. ([@CPatchane](https://github.com/CPatchane))
+* `babel-preset-cozy-app`, `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`, `eslint-config-cozy-app`
+  * [#512](https://github.com/CPatchane/create-cozy-app/pull/512) Use npmcharts links in READMEs as download shield. ([@CPatchane](https://github.com/CPatchane))
+* `cozy-scripts`
+  * [#519](https://github.com/CPatchane/create-cozy-app/pull/519) Fix typos in templates readme. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#516](https://github.com/CPatchane/create-cozy-app/pull/516), [#528](https://github.com/CPatchane/create-cozy-app/pull/528) Update dependency webpack-bundle-analyzer to v2.11.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#527](https://github.com/CPatchane/create-cozy-app/pull/527) Update dependency autoprefixer to v8.5.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#526](https://github.com/CPatchane/create-cozy-app/pull/526) Update dependency webpack to v3.12.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#515](https://github.com/CPatchane/create-cozy-app/pull/515) Update dependency cozy-ui to v7.22.0 - autoclosed. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#524](https://github.com/CPatchane/create-cozy-app/pull/524) Update dependency @vue/test-utils to v1.0.0-beta.16. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#517](https://github.com/CPatchane/create-cozy-app/pull/517), [#525](https://github.com/CPatchane/create-cozy-app/pull/525) Update dependency cozy-bar to v5. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#523](https://github.com/CPatchane/create-cozy-app/pull/523) Pin dependency eslint-config-cozy-app to v0.7.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#522](https://github.com/CPatchane/create-cozy-app/pull/522) Better eslint usage and preloader + update eslint-config-cozy-app to v0.7.0. ([@CPatchane](https://github.com/CPatchane))
+  * [#513](https://github.com/CPatchane/create-cozy-app/pull/513) Update dependency babel-preset-cozy-app to v0.7.0. ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`
+  * [#518](https://github.com/CPatchane/create-cozy-app/pull/518) Update dependency fs-extra to v6.0.1. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.7.0, cozy-scripts-vanilla@0.7.0, create-cozy-app@0.7.0, babel-preset-cozy-app@0.7.0, eslint-config-cozy-app@0.7.0 (2018-05-09)
 
 #### :boom: Breaking Changes:
