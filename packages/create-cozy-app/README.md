@@ -36,7 +36,7 @@ By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/C
 
  - Node.js version 8 or higher;
  - [Yarn](https://yarnpkg.com). Yarn is a Node.js package manager, like `npm`;
- - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use standalone mode);
+ - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use the standalone mode);
 
 
 ### Running it without installation via Yarn
@@ -49,7 +49,9 @@ yarn create cozy-app mycozyapp
 
 You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
 
-### Install the CLI
+### Running it using the CLI
+
+#### Install
 
 Just use `yarn` to download and globally install the `create-cozy-app` CLI;
 
@@ -102,6 +104,10 @@ Using this options, `create-cozy-app` will use the `cozy-scripts` package but wi
 ##### `--vanilla`
 
 Using this options, `create-cozy-app` will use the `cozy-scripts-vanilla` package (instead of the default one: `cozy-scripts`) and build a Cozy application in VanillaJS without any npm dependencies.
+
+##### `--verbose`
+
+Using this options, `create-cozy-app` will be run in a more verbose way, useful for debugging or understanding what the script does.
 
 
 ## Community

@@ -33,10 +33,10 @@ By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/C
 
  - Node.js version 8 or higher;
  - [Yarn](https://yarnpkg.com). Yarn is a Node.js package manager, like `npm`;
- - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use standalone mode);
+ - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use the standalone mode);
 
 
-### Running it without installation via Yarn
+### Running it without the CLI via Yarn
 
 You can use `create-cozy-app` without installing it globally by using the `yarn create cozy-app` command to bootstrap your application:
 
@@ -46,7 +46,9 @@ yarn create cozy-app mycozyapp
 
 You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
 
-### Install the CLI
+### Running it using the CLI
+
+#### Install
 
 Just use `yarn` to download and globally install the `create-cozy-app` CLI;
 
@@ -64,7 +66,7 @@ create-cozy-app mycozyapp
 
 ### Ready to go
 
-The script will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`
+The script will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`.
 
 That's all! You can start hacking:
 
@@ -74,6 +76,27 @@ yarn watch:standalone
 ```
 
 After the webpack build, your app should be available at http://localhost:8888
+
+### Run it inside a Cozy using Docker
+
+You can run your application (here `mycozyapp`) inside a Cozy thanks to the [cozy-stack docker image][cozy-stack-docker]:
+
+```sh
+# in a terminal, run your app in watch mode
+$ cd <SLUG_GH>
+$ yarn watch:browser
+```
+
+Then, in another terminal:
+
+```sh
+# in another terminal, run the docker container
+$ yarn stack:docker
+# or if you want the complete command
+$ docker run --rm -it -p 8080:8080 -v "$(pwd)/build":/data/cozy-app/mycozyapp cozy/cozy-app-dev
+```
+
+Your app is now available at http://mycozyapp.cozy.tools:8080.
 
 
 ### Known limitations
@@ -99,6 +122,10 @@ Using this options, `create-cozy-app` will use the `cozy-scripts` package but wi
 ##### `--vanilla`
 
 Using this options, `create-cozy-app` will use the `cozy-scripts-vanilla` package (instead of the default one: `cozy-scripts`) and build a Cozy application in VanillaJS without any npm dependencies.
+
+##### `--verbose`
+
+Using this options, `create-cozy-app` will be run in a more verbose way, useful for debugging or understanding what the script does.
 
 
 ## Community
