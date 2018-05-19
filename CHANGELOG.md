@@ -1,3 +1,26 @@
+## cozy-scripts@0.7.2, eslint-config-cozy-app@0.7.2 (2018-05-19)
+
+#### :sparkles: New Features:
+* `eslint-config-cozy-app`
+  * [#540](https://github.com/CPatchane/create-cozy-app/pull/540) Add eslint config for vue. ([@CPatchane](https://github.com/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#533](https://github.com/CPatchane/create-cozy-app/pull/533) Better usage of babel-preset cozy-app for `.js` files. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#534](https://github.com/CPatchane/create-cozy-app/pull/534) Update dependency webpack-bundle-analyzer to v2.12.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#536](https://github.com/CPatchane/create-cozy-app/pull/536) Update dependency cozy-ui to v9. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#537](https://github.com/CPatchane/create-cozy-app/pull/537) Update dependency vue-jest to v2.6.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#539](https://github.com/CPatchane/create-cozy-app/pull/539) Update jest monorepo to v22.4.4. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#532](https://github.com/CPatchane/create-cozy-app/pull/532) Update dependency eslint-config-cozy-app to v0.7.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#531](https://github.com/CPatchane/create-cozy-app/pull/531) Update dependency babel-preset-cozy-app to v0.7.1. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.7.1, cozy-scripts-vanilla@0.7.1, create-cozy-app@0.7.1, babel-preset-cozy-app@0.7.1, eslint-config-cozy-app@0.7.1 (2018-05-14)
 
 #### :sparkles: New Features:
