@@ -1,3 +1,10 @@
+## cozy-scripts@0.7.3, eslint-config-cozy-app@0.7.3 (2018-05-19)
+
+#### :bug: Bug Fixes:
+* `eslint-config-cozy-app`
+  * [#541](https://github.com/CPatchane/create-cozy-app/pull/541) Add missing vue.js in build. ([@CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.7.2, eslint-config-cozy-app@0.7.2 (2018-05-19)
 
 #### :sparkles: New Features:
