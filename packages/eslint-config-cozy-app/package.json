@@ -15,7 +15,8 @@
   "files": [
     "index.js",
     "basics.js",
-    "react.js"
+    "react.js",
+    "vue.js"
   ],
   "dependencies": {
     "babel-eslint": "^8.0.1",
