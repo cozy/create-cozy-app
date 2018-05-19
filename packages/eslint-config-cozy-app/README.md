@@ -74,6 +74,16 @@ Configuration for React applications (basics configuration included). To use in 
 }
 ```
 
+#### Vue
+
+Configuration for Vue applications (basics configuration included). To use in your `.eslintrc.json`:
+
+```json
+{
+    "extends": ["cozy-app/vue"]
+}
+```
+
 
 ## Community
 
