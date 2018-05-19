@@ -19,7 +19,8 @@ module.exports = {
       exclude: /node_modules\/(?!(cozy-ui))/,
       loader: 'babel-loader',
       options: {
-        cacheDirectory: 'node_modules/.cache/babel-loader'
+        cacheDirectory: 'node_modules/.cache/babel-loader/react',
+        presets: ['cozy-app']
       }
     }]
   }

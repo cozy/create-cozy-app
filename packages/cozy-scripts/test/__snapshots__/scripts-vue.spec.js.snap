@@ -20,7 +20,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -337,7 +337,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -645,7 +645,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -967,7 +967,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1283,7 +1283,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1601,7 +1601,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",

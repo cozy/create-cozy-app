@@ -101,7 +101,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -151,7 +151,10 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "presets": Array [
+              "cozy-app",
+            ],
           },
           "test": Object {},
         },
@@ -460,7 +463,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -510,7 +513,10 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "presets": Array [
+              "cozy-app",
+            ],
           },
           "test": Object {},
         },
@@ -810,7 +816,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -860,7 +866,10 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "presets": Array [
+              "cozy-app",
+            ],
           },
           "test": Object {},
         },
@@ -1174,7 +1183,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1224,7 +1233,10 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "presets": Array [
+              "cozy-app",
+            ],
           },
           "test": Object {},
         },
@@ -1532,7 +1544,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1582,7 +1594,10 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "presets": Array [
+              "cozy-app",
+            ],
           },
           "test": Object {},
         },
@@ -1892,7 +1907,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1942,7 +1957,10 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "presets": Array [
+              "cozy-app",
+            ],
           },
           "test": Object {},
         },
@@ -2301,7 +2319,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -2351,7 +2369,10 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "presets": Array [
+              "cozy-app",
+            ],
           },
           "test": Object {},
         },
@@ -2666,7 +2687,7 @@ Array [
           "loader": "babel-loader",
           "options": Object {
             "babelrc": false,
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/node",
             "presets": Array [
               Array [
                 "cozy-app",
