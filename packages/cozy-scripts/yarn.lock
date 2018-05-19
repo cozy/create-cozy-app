@@ -1953,9 +1953,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-cozy-app@0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-0.7.2.tgz#1610a76d5431b3012a9841538142bb4918d58aaf"
+eslint-config-cozy-app@0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-0.7.3.tgz#68e9b28dc7de81df86c8e4697cf569072bbcc5e2"
   dependencies:
     babel-eslint "^8.0.1"
     eslint "^4.9.0"
