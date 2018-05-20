@@ -52,7 +52,7 @@ const config = {
         exclude: /(node_modules|cozy-(bar|client-js))/,
         loader: 'babel-loader',
         options: {
-          cacheDirectory: 'node_modules/.cache/babel-loader',
+          cacheDirectory: 'node_modules/.cache/babel-loader/node',
           babelrc: false,
           presets: [
             ['cozy-app', { node: true, react: false }]

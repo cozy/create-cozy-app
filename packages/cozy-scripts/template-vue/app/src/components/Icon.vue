@@ -1,37 +1,49 @@
 <template>
   <svg
-    v-bind:class='iconClass'
-    v-bind:style='computedStyle'
-    v-bind:width='iconWidth'
-    v-bind:height='iconHeight'
+    :class="iconClass"
+    :style="computedStyle"
+    :width="iconWidth"
+    :height="iconHeight"
   >
-    <use v-bind:href='anchor' />
+    <use :href="anchor" />
   </svg>
 </template>
 
 <script>
   export default {
     props: {
-      icon: null,
+      icon: {
+        type: [String, Object],
+        default: null
+      },
       iconWidth: {
         type: String,
         default: '1em'
       },
-      color: String,
+      color: {
+        type: String,
+        default: ''
+      },
       iconHeight: {
         type: String,
         default: '1em'
       },
-      iconClass: String,
-      iconStyle: null
+      iconClass: {
+        type: String,
+        default: ''
+      },
+      iconStyle: {
+        type: Object,
+        default: null
+      },
     },
     computed: {
       computedStyle () {
         if (this.color) {
-          if (!this.iconStyle) this.iconStyle = {}
-          this.iconStyle['fill'] = this.color
+          return ({
+              fill: this.color
+          })
         }
-        return this.iconStyle
       },
       anchor () {
         let anchor

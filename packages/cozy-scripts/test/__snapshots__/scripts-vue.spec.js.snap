@@ -20,7 +20,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -79,6 +79,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/vue",
             ],
           },
           "test": Object {},
@@ -210,6 +222,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {
         "config": Object {
           "plainSprite": false,
@@ -336,7 +349,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -395,6 +408,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/vue",
             ],
           },
           "test": Object {},
@@ -519,6 +544,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {
         "config": Object {
           "plainSprite": false,
@@ -643,7 +669,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -702,6 +728,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/vue",
             ],
           },
           "test": Object {},
@@ -833,6 +871,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {
         "config": Object {
           "plainSprite": false,
@@ -964,7 +1003,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1023,6 +1062,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/vue",
             ],
           },
           "test": Object {},
@@ -1147,6 +1198,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {
         "config": Object {
           "plainSprite": false,
@@ -1279,7 +1331,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1338,6 +1390,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/vue",
             ],
           },
           "test": Object {},
@@ -1469,6 +1533,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {
         "config": Object {
           "plainSprite": false,
@@ -1596,7 +1661,7 @@ Array [
           "exclude": Object {},
           "loader": "babel-loader",
           "options": Object {
-            "cacheDirectory": "node_modules/.cache/babel-loader",
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
               Array [
                 "cozy-app",
@@ -1655,6 +1720,18 @@ Array [
             "emitWarning": false,
             "extends": Array [
               "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": "eslint-loader",
+          "options": Object {
+            "emitWarning": false,
+            "extends": Array [
+              "cozy-app/vue",
             ],
           },
           "test": Object {},
@@ -1786,6 +1863,7 @@ Array [
           "test": Object {},
         },
       },
+      Object {},
       Object {
         "config": Object {
           "plainSprite": false,

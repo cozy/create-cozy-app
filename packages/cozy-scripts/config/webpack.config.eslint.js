@@ -17,6 +17,16 @@ module.exports = {
       },
       {
         enforce: 'pre',
+        test: /\.vue$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+        options: {
+          extends: ['cozy-app/vue'],
+          emitWarning: isDebugMode
+        }
+      },
+      {
+        enforce: 'pre',
         test: /\.jsx$/,
         loader: 'eslint-loader',
         exclude: /node_modules/,
