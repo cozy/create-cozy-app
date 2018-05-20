@@ -1,31 +1,43 @@
 <template>
-  <div class='app-wrapper o-layout--2panes'>
-    <aside class='o-sidebar'>
+  <div class="app-wrapper o-layout--2panes">
+    <aside class="o-sidebar">
       <nav>
-        <ul class='c-nav'>
-          <li class='c-nav-item'>
-            <router-link class='c-nav-link' to='/viewhello1'>
-              <icon class='c-nav-icon' v-bind:icon='navIcon' />
+        <ul class="c-nav">
+          <li class="c-nav-item">
+            <router-link
+              class="c-nav-link"
+              to="/viewhello1">
+              <Icon
+                :icon="navIcon"
+                class="c-nav-icon" />
               {{ t('Nav.hello_nav_1') }}
             </router-link>
           </li>
-          <li class='c-nav-item'>
-            <router-link class='c-nav-link' to='/viewhello2'>
-              <icon class='c-nav-icon' v-bind:icon='navIcon' />
+          <li class="c-nav-item">
+            <router-link
+              class="c-nav-link"
+              to="/viewhello2">
+              <Icon
+                :icon="navIcon"
+                class="c-nav-icon" />
               {{ t('Nav.hello_nav_2') }}
             </router-link>
           </li>
-          <li class='c-nav-item'>
-            <router-link class='c-nav-link' to='/viewhello3'>
-              <icon class='c-nav-icon' v-bind:icon='navIcon' />
+          <li class="c-nav-item">
+            <router-link
+              class="c-nav-link"
+              to="/viewhello3">
+              <Icon
+                :icon="navIcon"
+                class="c-nav-icon" />
               {{ t('Nav.hello_nav_3') }}
             </router-link>
           </li>
         </ul>
       </nav>
     </aside>
-    <main class='app-content'>
-      <router-view class="view"></router-view>
+    <main class="app-content">
+      <router-view class="view"/>
     </main>
   </div>
 </template>
@@ -35,7 +47,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import navIcon from '../assets/icons/icon-bullet-point.svg'
 
-import icon from './Icon'
+import Icon from './Icon'
 
 import Hello1 from './HelloViews/Hello1.vue'
 import Hello2 from './HelloViews/Hello2.vue'
@@ -61,7 +73,7 @@ const router = new VueRouter({
 
 export default {
   router,
-  components: { icon },
+  components: { Icon },
   data () {
     return {
       navIcon
