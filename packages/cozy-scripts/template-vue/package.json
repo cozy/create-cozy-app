@@ -6,7 +6,7 @@
     "clean:mobile": "rm -rf targets/mobile/www",
     "tx": "tx pull --all || true",
     "lint": "npm-run-all --parallel lint:*",
-    "lint:js": "eslint '{src,test}/**/*.{js}'",
+    "lint:js": "eslint '{src,test}/**/*.{js,vue}'",
     "format:js": "yarn lint:js --fix",
     "lint:styles": "stylint src/styles --config ./.stylintrc",
     "build": "yarn build:browser",
