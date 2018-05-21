@@ -1,3 +1,25 @@
+## cozy-scripts@0.8.0, eslint-config-cozy-app@0.8.0 (2018-05-21)
+
+#### :boom: Breaking Changes:
+* `cozy-scripts`
+  * [#511](https://github.com/CPatchane/create-cozy-app/pull/511) Handling prettier + eslint-vue as linter/formatter for vue components + improve template vue linting + minor fixes ([@CPatchane](https://github.com/apps/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#511](https://github.com/CPatchane/create-cozy-app/pull/511) Better babel cache splitting ([@CPatchane](https://github.com/apps/CPatchane))
+
+#### :bug: Bug Fixes:
+* `eslint-config-cozy-app`
+  * [#547](https://github.com/CPatchane/create-cozy-app/pull/547) Remove spread operators from eslint config. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#546](https://github.com/CPatchane/create-cozy-app/pull/546) Update dependency cozy-bar to v5.0.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#545](https://github.com/CPatchane/create-cozy-app/pull/545) Update dependency webpack-bundle-analyzer to v2.13.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#543](https://github.com/CPatchane/create-cozy-app/pull/543) Update dependency vue-loader to v15.1.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#511](https://github.com/CPatchane/create-cozy-app/pull/511) Update vue-loader to v15.0.10 + eslint-config-cozy-app to 0.7.3 ([@CPatchane](https://github.com/apps/CPatchane))
+
+
 ## cozy-scripts@0.7.3, eslint-config-cozy-app@0.7.3 (2018-05-19)
 
 #### :bug: Bug Fixes:
