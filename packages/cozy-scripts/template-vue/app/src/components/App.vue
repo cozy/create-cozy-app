@@ -65,19 +65,19 @@ const router = new VueRouter({
     { path: '/viewhello1', component: Hello1 },
     { path: '/viewhello2', component: Hello2 },
     { path: '/viewhello3', component: Hello3 },
-    { path: '/', redirect: '/viewhello1'},
+    { path: '/', redirect: '/viewhello1' },
     // default, always at the end
-    { path: '*', redirect: '/viewhello1'}
+    { path: '*', redirect: '/viewhello1' }
   ]
 })
 
 export default {
   router,
   components: { Icon },
-  data () {
+  data() {
     return {
       navIcon
     }
-  },
+  }
 }
 </script>
