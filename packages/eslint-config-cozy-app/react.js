@@ -4,15 +4,13 @@ const basics = require('./basics')
 
 module.exports = {
   plugins: basics.plugins,
-  extends: [
-    ...basics.extends,
+  extends: basics.extends.concat([
     'plugin:react/recommended'
-  ],
+  ]),
   parser: basics.parser,
   parserOptions: { ecmaFeatures: { jsx: true } },
   env: basics.env,
-  rules: {
-    ...basics.rules,
+  rules: Object.assign({}, basics.rules, {
     'react/prop-types': 0
-  }
+  })
 }
