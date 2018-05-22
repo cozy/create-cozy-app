@@ -59,16 +59,16 @@ module.exports = declare((api, options, dirname) => {
   const plugins = [
     // transform class attributes and methods with auto-binding
     // to the class instance and no constructor needed
-    require.resolve('babel-plugin-transform-class-properties')
+    require.resolve('babel-plugin-transform-class-properties'),
+    // Transform rest properties for object destructuring assignment
+    // and spread properties for object literals
+    // useBuiltIns to directly use Object.assign instead of using Babel extends
+    [require.resolve('babel-plugin-transform-object-rest-spread'), {
+      useBuiltIns: false
+    }]
   ]
   if (!node) {
     plugins.push(
-      // Transform rest properties for object destructuring assignment
-      // and spread properties for object literals
-      // useBuiltIns to directly use Object.assign instead of using Babel extends
-      [require.resolve('babel-plugin-transform-object-rest-spread'), {
-        useBuiltIns: false
-      }],
       // Polyfills generator functions (for async/await usage)
       [require.resolve('babel-plugin-transform-runtime'), {
         helpers: false,
