@@ -83,7 +83,7 @@ You can run your application (here `mycozyapp`) inside a Cozy thanks to the [coz
 
 ```sh
 # in a terminal, run your app in watch mode
-$ cd <SLUG_GH>
+$ cd mycozyapp
 $ yarn watch:browser
 ```
 
