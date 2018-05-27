@@ -1,3 +1,26 @@
+## babel-preset-cozy-app@0.8.0,cozy-scripts@0.8.1 (2018-05-27)
+
+#### :bug: Bug Fixes:
+* `babel-preset-cozy-app`
+  * [#549](https://github.com/CPatchane/create-cozy-app/pull/549) Add babel transform spread for node. ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#559](https://github.com/CPatchane/create-cozy-app/pull/559) Update dependency vue-loader to v15.2.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#560](https://github.com/CPatchane/create-cozy-app/pull/560) Update dependency svg-sprite-loader to v3.8.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#558](https://github.com/CPatchane/create-cozy-app/pull/558) Update dependency autoprefixer to v8.5.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#553](https://github.com/CPatchane/create-cozy-app/pull/553) Update dependency webpack-bundle-analyzer to v2.13.1. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#555](https://github.com/CPatchane/create-cozy-app/pull/555) Update react monorepo to v16.4.0 - autoclosed. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#556](https://github.com/CPatchane/create-cozy-app/pull/556) Update dependency cozy-bar to v5.0.3. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#550](https://github.com/CPatchane/create-cozy-app/pull/550) Update dependency cozy-ui to v9.0.1 - autoclosed. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#552](https://github.com/CPatchane/create-cozy-app/pull/552) Update dependency vue-loader to v15.2.0. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#554](https://github.com/CPatchane/create-cozy-app/pull/554) Update dependency cozy-bar to v5.0.2. ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#548](https://github.com/CPatchane/create-cozy-app/pull/548) Update dependency eslint-config-cozy-app to v0.8.0. ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.8.0, eslint-config-cozy-app@0.8.0 (2018-05-21)
 
 #### :boom: Breaking Changes:
