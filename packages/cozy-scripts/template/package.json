@@ -40,7 +40,7 @@
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
     "babel-polyfill": "6.26.0",
-    "babel-preset-cozy-app": "0.7.1",
+    "babel-preset-cozy-app": "0.8.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "eslint": "4.19.1",
