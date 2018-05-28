@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodosList component: should be rendered correctly with todos 1`] = `
+<div>
+  <h2>
+    Todos list:
+  </h2>
+  <ul
+    className="todos-list"
+  >
+    <li
+      className="todo-item"
+    >
+      <span>
+        Todo 1
+      </span>
+      <WithMutations(TodoRemoveButton)
+        todo={
+          Object {
+            "_id": 1234,
+            "name": "Todo 1",
+          }
+        }
+      />
+    </li>
+    <li
+      className="todo-item"
+    >
+      <span>
+        Todo 2
+      </span>
+      <WithMutations(TodoRemoveButton)
+        todo={
+          Object {
+            "_id": 5678,
+            "name": "Todo 2",
+          }
+        }
+      />
+    </li>
+    <li
+      className="todo-item"
+    >
+      <span>
+        Todo 3
+      </span>
+      <WithMutations(TodoRemoveButton)
+        todo={
+          Object {
+            "_id": 9101,
+            "name": "Todo 3",
+          }
+        }
+      />
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`TodosList component: should be rendered correctly without todos 1`] = `null`;

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todos component: should be rendered correctly with todos 1`] = `
+<div
+  className="todos"
+>
+  <div>
+    <TodosList
+      todos={
+        Array [
+          Object {
+            "_id": 1234,
+            "name": "Todo 1",
+          },
+          Object {
+            "_id": 5678,
+            "name": "Todo 2",
+          },
+          Object {
+            "_id": 9101,
+            "name": "Todo 3",
+          },
+        ]
+      }
+    />
+    <WithMutations(TodoAdd) />
+  </div>
+</div>
+`;
+
+exports[`Todos component: should be rendered correctly without todos 1`] = `
+<div
+  className="todos"
+>
+  <div>
+    <TodosList
+      todos={Array []}
+    />
+    <WithMutations(TodoAdd) />
+  </div>
+</div>
+`;
+
+exports[`Todos component: should render a spinner if loading 1`] = `
+<div
+  className="todos"
+>
+  <Wrapper
+    middle={true}
+    size="xxlarge"
+  />
+</div>
+`;

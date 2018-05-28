@@ -1,0 +1,16 @@
+.todo-item {
+  max-width: 30rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  background-color: #F5F6F7;
+  padding-left: .5rem;
+}
+
+.todo-item .todo-remove-button {
+  margin-right: 0;
+}
