@@ -23,6 +23,10 @@
       "description": "Required by the cozy-bar to display the icons of the apps",
       "type": "io.cozy.apps",
       "verbs": ["GET"]
+    },
+    "mocks": {
+      "description": "TO REMOVE: only use as demonstration about Cozy interactions",
+      "type": "io.mocks.todos"
     }
   }
 }

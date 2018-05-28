@@ -10,17 +10,17 @@ export const Sidebar = ({ t }) => (
       <ul className="c-nav">
         <li className="c-nav-item">
           <NavLink
-            to="/viewhello1"
+            to="/todos"
             className="c-nav-link"
             activeClassName="is-active"
           >
             <Icon className="c-nav-icon" icon={NavIcon} />
-            {t('Nav.hello_nav_1')}
+            {t('Nav.todos')}
           </NavLink>
         </li>
         <li className="c-nav-item">
           <NavLink
-            to="/viewhello2"
+            to="/viewhello1"
             className="c-nav-link"
             activeClassName="is-active"
           >
@@ -30,7 +30,7 @@ export const Sidebar = ({ t }) => (
         </li>
         <li className="c-nav-item">
           <NavLink
-            to="/viewhello3"
+            to="/viewhello2"
             className="c-nav-link"
             activeClassName="is-active"
           >
@@ -43,4 +43,5 @@ export const Sidebar = ({ t }) => (
   </aside>
 )
 
+// translate() provide t() to use translations (ex: locales/en.json)
 export default translate()(Sidebar)

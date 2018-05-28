@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo component: should be rendered correctly 1`] = `
+<span
+  onDoubleClick={[Function]}
+>
+  Todo 1
+</span>
+`;
+
+exports[`Todo component: should handle isWorking correctly (display spinner) 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Todo
+    todo={
+      Object {
+        "_id": 1234,
+        "name": "Todo 1",
+      }
+    }
+    updateTodo={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Todo 1",
+      "onDoubleClick": [Function],
+    },
+    "ref": null,
+    "rendered": "Todo 1",
+    "type": "span",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Todo 1",
+        "onDoubleClick": [Function],
+      },
+      "ref": null,
+      "rendered": "Todo 1",
+      "type": "span",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

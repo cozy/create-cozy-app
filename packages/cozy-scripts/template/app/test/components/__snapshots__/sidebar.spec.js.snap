@@ -15,14 +15,14 @@ exports[`Sidebar component should be rendered correctly 1`] = `
           activeClassName="is-active"
           ariaCurrent="true"
           className="c-nav-link"
-          to="/viewhello1"
+          to="/todos"
         >
           <Icon
             className="c-nav-icon"
             icon="test-file-stub"
             spin={false}
           />
-          First
+          Todos
         </NavLink>
       </li>
       <li
@@ -32,7 +32,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
           activeClassName="is-active"
           ariaCurrent="true"
           className="c-nav-link"
-          to="/viewhello2"
+          to="/viewhello1"
         >
           <Icon
             className="c-nav-icon"
@@ -49,7 +49,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
           activeClassName="is-active"
           ariaCurrent="true"
           className="c-nav-link"
-          to="/viewhello3"
+          to="/viewhello2"
         >
           <Icon
             className="c-nav-icon"

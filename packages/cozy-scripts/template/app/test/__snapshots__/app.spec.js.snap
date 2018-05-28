@@ -12,25 +12,25 @@ exports[`App component only should be mounted correctly 1`] = `
       <Switch>
         <Route
           component={[Function]}
+          path="/todos"
+        />
+        <Route
+          component={[Function]}
           path="/viewhello1"
         />
         <Route
           component={[Function]}
           path="/viewhello2"
         />
-        <Route
-          component={[Function]}
-          path="/viewhello3"
-        />
         <Redirect
           from="/"
           push={false}
-          to="/viewhello1"
+          to="/todos"
         />
         <Redirect
           from="*"
           push={false}
-          to="/viewhello1"
+          to="/todos"
         />
       </Switch>
     </main>

@@ -5,11 +5,9 @@ import 'babel-polyfill'
 import 'styles'
 
 import React from 'react'
+import CozyClient, { CozyProvider } from 'cozy-client'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
 import { I18n } from 'cozy-ui/react/I18n'
-
-import store from 'lib/store'
 
 if (__DEVELOPMENT__) {
   // Enables React dev tools for Preact
@@ -21,16 +19,16 @@ if (__DEVELOPMENT__) {
 }
 
 let appLocale
-const renderApp = function() {
+const renderApp = function(client) {
   const App = require('components/App').default
   render(
     <I18n
       lang={appLocale}
       dictRequire={appLocale => require(`locales/${appLocale}`)}
     >
-      <Provider store={store}>
+      <CozyProvider client={client}>
         <App />
-      </Provider>
+      </CozyProvider>
     </I18n>,
     document.querySelector('[role=application]')
   )
@@ -48,6 +46,7 @@ const getDataOrDefault = function(toTest, defaultData) {
   return templateRegex.test(toTest) ? defaultData : toTest
 }
 
+// initial rendering of the application
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('[role=application]')
   const data = root.dataset
@@ -73,10 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const protocol = window.location ? window.location.protocol : 'https:'
 
-  cozy.client.init({
-    cozyURL: `${protocol}//${data.cozyDomain}`,
+  // initialize the client to interact with the cozy stack
+  const client = new CozyClient({
+    uri: `${protocol}//${data.cozyDomain}`,
     token: data.cozyToken
   })
+
+  // initialize the bar, common of all applications, it allows
+  // platform features like apps navigation without doing anything
   cozy.bar.init({
     appName: appName,
     appNamePrefix: appNamePrefix,
@@ -85,5 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
     replaceTitleOnMobile: true
   })
 
-  renderApp()
+  renderApp(client)
 })
