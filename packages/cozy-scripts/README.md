@@ -28,9 +28,9 @@
 
 ### What's cozy-scripts?
 
-`cozy-scripts` is a script bundle designed to be run by `create-cozy-app`. This latter will just create the root folder and then run the `node_modules/cozy-scripts/scripts/init.js` script inside it with some CLI options.
+`cozy-scripts` is a script bundle partially designed to be run by `create-cozy-app`. This latter will just create the root folder and then run the `node_modules/cozy-scripts/scripts/init.js` script inside it with some CLI options.
 
-All the application template outline is handled by `cozy-scripts`.
+All the application template outline is then handled by `cozy-scripts`.
 
 To install:
 
@@ -38,9 +38,11 @@ To install:
 yarn add --dev cozy-scripts
 ```
 
+> If your purpose is to create an new application from scratch, don't install `cozy-scripts` but see [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/create-cozy-app) instead.
+
 ### Default template (`template` folder)
 
-Using the default template, `cozy-scripts` will generate a \(P\)React/Redux application. After the initialisation, you should have the following folder structure:
+Using the default template, `cozy-scripts` will generate a \(P\)React application. After the initialisation, you should have the following folder structure:
 
 <details>
 
@@ -60,14 +62,10 @@ mycozyapp/
             App.jsx
             Sidebar.jsx
             HelloViews/
-                Hello1.jsx
-                Hello2.jsx
-                Hello3.jsx
-        lib/store.js
+            Todos/
+        connections/allTodos.js
         locales/en.json
         styles/
-            index.styl
-            nav.css
         targets/
             browser/
                 index.ejs
@@ -90,6 +88,8 @@ mycozyapp/
 ```
 
 </details>
+
+This application is more than a simple Hello World, it's a mini Todo application doing interactions and data handling (using our new [`cozy-client`](https://github.com/cozy/cozy-client)) with the stack. A good way to understand how the application works with the Cozy.
 
 ### VueJS 2+ template (`template-vue` folder)
 
@@ -114,16 +114,11 @@ mycozyapp/
             App.vue
             Icon.vue
             HelloViews/
-                Hello1.vue
-                Hello2.vue
-                Hello3.vue
         lib/
             store.js
             I18n/
         locales/en.json
         styles/
-            index.styl
-            nav.css
         targets/
             browser/
                 index.ejs
@@ -146,6 +141,42 @@ mycozyapp/
 ```
 
 </details>
+
+### Ready to go
+
+The script will download some dependencies (may take a while) and ask you a few questions, then create an application skeleton inside `mycozyapp`.
+
+That's all! You can start hacking:
+
+```
+cd mycozyapp
+yarn watch:standalone
+```
+
+After the webpack build, your app should be available at http://localhost:8888
+
+> You can change the host and the port of your application server here by using respectively the environment variables HOST and PORT
+
+### Run it inside a Cozy using Docker
+
+You can run your application (here `mycozyapp`) inside a Cozy thanks to the [cozy-stack docker image][cozy-stack-docker]:
+
+```sh
+# in a terminal, run your app in watch mode
+$ cd mycozyapp
+$ yarn watch:browser
+```
+
+Then, in another terminal:
+
+```sh
+# in another terminal, run the docker container
+$ yarn stack:docker
+# or if you want the complete command
+$ docker run --rm -it -p 8080:8080 -v "$(pwd)/build":/data/cozy-app/mycozyapp cozy/cozy-app-dev
+```
+
+Your app is now available at http://mycozyapp.cozy.tools:8080.
 
 ### The `cozy-scripts` CLI
 

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/cpatchane/create-cozy-app/raw/master/CreateCozyApp.png" alt="CCA illustration" />
+  <img src="docs/CCA_1920_1080.png" alt="CCA illustration" />
 </div>
 
 <h1 align="center">Create Cozy App</h1>
@@ -27,13 +27,13 @@
 
 This tool can be run as an installed CLI or by using `yarn create`, see below for more information.
 
-By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on Preact (tested on React) and Redux frameworks.
+By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on Preact (tested on React). But option for VueJS or Vanilla are also available, see below for more information.
 
 #### Requirements
 
- - Node.js version 8 or higher;
- - [Yarn](https://yarnpkg.com). Yarn is a Node.js package manager, like `npm`;
- - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just want to use the standalone mode);
+ - NodeJS version 8 or higher;
+ - [Yarn](https://yarnpkg.com): a NodeJS package manager, like `npm`;
+ - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just use the standalone mode);
 
 
 ### Running it without the CLI via Yarn
@@ -77,6 +77,8 @@ yarn watch:standalone
 
 After the webpack build, your app should be available at http://localhost:8888
 
+> You can change the host and the port of your application server here by using respectively the environment variables HOST and PORT
+
 ### Run it inside a Cozy using Docker
 
 You can run your application (here `mycozyapp`) inside a Cozy thanks to the [cozy-stack docker image][cozy-stack-docker]:
@@ -97,11 +99,6 @@ $ docker run --rm -it -p 8080:8080 -v "$(pwd)/build":/data/cozy-app/mycozyapp co
 ```
 
 Your app is now available at http://mycozyapp.cozy.tools:8080.
-
-
-### Known limitations
-
-For now, this project has only been tested on GNU/Linux and OS X.
 
 ### Options
 
