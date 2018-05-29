@@ -2720,9 +2720,9 @@ jest-docblock@^21.0.0:
   version "21.2.0"
   resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-21.2.0.tgz#51529c3b30d5fd159da60c27ceedc195faf8d414"
 
-jest-serializer-vue@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/jest-serializer-vue/-/jest-serializer-vue-1.0.0.tgz#82514e9b3d94a17fe618df3ede84046090f94815"
+jest-serializer-vue@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jest-serializer-vue/-/jest-serializer-vue-2.0.0.tgz#bf9fd77334e4bf0c5c2588e85fef11e569e6de29"
   dependencies:
     pretty "2.0.0"
 
@@ -3691,9 +3691,10 @@ postcss@^6.0.20:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-"pouchdb-adapter-cordova-sqlite@git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
+"pouchdb-adapter-cordova-sqlite@https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
   version "2.0.2"
-  resolved "git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
+  uid f3ee23009b70209c611435d57491aa77fb88802a
+  resolved "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
   dependencies:
     pouchdb-adapter-websql-core "^6.1.1"
 
