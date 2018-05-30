@@ -1265,9 +1265,9 @@ cozy-client-js@^0.3.19:
   version "0.3.21"
   resolved "https://registry.yarnpkg.com/cozy-client-js/-/cozy-client-js-0.3.21.tgz#d27d0288077ce95139333c41dfb537b8584ff254"
 
-cozy-ui@9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-9.0.1.tgz#b99f4f711ed163ab0ce24312b3721b1724b5e0d2"
+cozy-ui@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-9.1.0.tgz#479a7fba54614a62d6c2b4a94ae68ebc2b098a17"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     classnames "^2.2.5"
