@@ -11,7 +11,7 @@
 		"reset:yarn": "sh reset_yarn.sh"
 	},
 	"devDependencies": {
-		"jest": "22.4.4",
+		"jest": "23.1.0",
 		"lerna": "2.11.0",
 		"lerna-changelog": "0.7.0"
 	}
