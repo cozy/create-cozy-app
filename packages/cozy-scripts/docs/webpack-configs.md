@@ -265,6 +265,8 @@ This config will be used only if the webpack target is `browser`.
 
 A `copy-webpack-plugin` plugin usage to copy all files from the `vendors/assets/` folder to the output build folder.
 
+This config will also process the application icon and run [`svgo`](https://github.com/svg/svgo) to optimize it if this is a SVG file.
+
 ### `webpack.config.vue.js`
 
 A config to use the VueJS (v2+) framework.
