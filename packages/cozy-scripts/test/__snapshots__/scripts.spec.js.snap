@@ -87,7 +87,10 @@ Array [
     "bail": true,
     "devtool": "#source-map",
     "entry": Object {
-      "app": ".tmp_test/test-app/src/targets/browser/index.jsx",
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app/src/targets/browser/index.jsx",
+      ],
     },
     "externals": Array [
       "cozy",
@@ -461,7 +464,10 @@ Array [
   Object {
     "bail": true,
     "entry": Object {
-      "app": ".tmp_test/test-app/src/targets/browser/index.jsx",
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app/src/targets/browser/index.jsx",
+      ],
     },
     "externals": Object {
       "cozy-client-js": "cozy",
@@ -825,9 +831,12 @@ Array [
   Object {
     "bail": true,
     "devtool": "#source-map",
-    "entry": Array [
-      ".tmp_test/test-app/src/targets/mobile/index.jsx",
-    ],
+    "entry": Object {
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app/src/targets/mobile/index.jsx",
+      ],
+    },
     "externals": Array [
       "cozy",
     ],
@@ -1207,9 +1216,12 @@ exports[`App from cozy-scripts should handle correctly the config mobile:product
 Array [
   Object {
     "bail": true,
-    "entry": Array [
-      ".tmp_test/test-app/src/targets/mobile/index.jsx",
-    ],
+    "entry": Object {
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app/src/targets/mobile/index.jsx",
+      ],
+    },
     "module": Object {
       "noParse": Array [
         Object {},
@@ -1578,7 +1590,10 @@ Array [
     "bail": true,
     "devtool": "#source-map",
     "entry": Object {
-      "app": ".tmp_test/test-app/src/targets/browser/index.jsx",
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app/src/targets/browser/index.jsx",
+      ],
     },
     "externals": Array [
       "cozy",
@@ -1953,7 +1968,10 @@ Array [
     "bail": true,
     "devtool": "#source-map",
     "entry": Object {
-      "app": ".tmp_test/test-app/src/targets/browser/index.jsx",
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app/src/targets/browser/index.jsx",
+      ],
     },
     "externals": Array [
       "cozy",
@@ -2392,7 +2410,10 @@ Array [
     "bail": true,
     "devtool": "#source-map",
     "entry": Object {
-      "app": ".tmp_test/test-app/src/targets/browser/index.jsx",
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app/src/targets/browser/index.jsx",
+      ],
     },
     "externals": Array [
       "cozy",

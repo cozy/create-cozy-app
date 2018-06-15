@@ -198,7 +198,7 @@ A rule to preload all `.js/.jsx` files with `eslint-loader` (excluding `node_mod
 This is a specific configuration file to develop application intents for the Cozy platform.
 
 It will:
-- add a webpack entry: `src/targets/intents/intents.jsx`
+- add a webpack entry: the [`babel-polyfill`](https://babeljs.io/docs/en/babel-polyfill.html) import and the `src/targets/intents/intents.jsx` file
 - use `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/intents/` with options:
     - `title`: `name` property of the `package.json` + ` intents`
     - `filename`: `intents/index.html`, the output file
@@ -312,7 +312,7 @@ It will:
 ### `webpack.target.browser.js`
 
 ##### Properties
-- `entry`: `index.jsx` from `src/targets/browser/`
+- `entry`: the [`babel-polyfill`](https://babeljs.io/docs/en/babel-polyfill.html) import and the `index.jsx` from `src/targets/browser/`
 - `output`: `build/` path with `filename` to `[name].js`
 - `externals` with `{ 'cozy-client-js': 'cozy' }` to exclude `cozy-client-js` (via `cozy.*`) dependency from the output bundle
 
@@ -328,7 +328,7 @@ It will:
 ### `webpack.target.mobile.js`
 
 ##### Properties
-- `entry`: `index.jsx` from `src/targets/mobile`
+- `entry`: the [`babel-polyfill`](https://babeljs.io/docs/en/babel-polyfill.html) import and the `index.jsx` from `src/targets/mobile`
 - `output`: `src/targets/mobile/www` path
 
 ##### Plugins:
