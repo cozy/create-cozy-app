@@ -1,6 +1,5 @@
 /* global cozy */
 
-import 'babel-polyfill'
 import Vue from 'vue'
 
 import 'styles'

@@ -8,11 +8,11 @@ const {production} = require('./webpack.vars')
 const pkg = require(paths.appPackageJson)
 
 module.exports = {
-  entry: [
+  entry: {
     // since the file extension depends on the framework here
     // we get it from a function call
-    paths.appMobileIndex()
-  ],
+    app: [require.resolve('babel-polyfill'), paths.appMobileIndex()]
+  },
   output: {
     path: paths.appMobileWWW
   },

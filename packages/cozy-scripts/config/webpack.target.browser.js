@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     // since the file extension depends on the framework here
     // we get it from a function call
-    app: paths.appBrowserIndex()
+    app: [require.resolve('babel-polyfill'), paths.appBrowserIndex()]
   },
   output: {
     path: paths.appBuild,

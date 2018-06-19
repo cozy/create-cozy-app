@@ -6,7 +6,10 @@ Array [
     "bail": true,
     "devtool": "#source-map",
     "entry": Object {
-      "app": ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      "app": Array [
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      ],
     },
     "externals": Array [
       "cozy",
@@ -335,7 +338,10 @@ Array [
   Object {
     "bail": true,
     "entry": Object {
-      "app": ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      "app": Array [
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      ],
     },
     "externals": Object {
       "cozy-client-js": "cozy",
@@ -654,9 +660,12 @@ Array [
   Object {
     "bail": true,
     "devtool": "#source-map",
-    "entry": Array [
-      ".tmp_test/test-app-vue/src/targets/mobile/index.js",
-    ],
+    "entry": Object {
+      "app": Array [
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/src/targets/mobile/index.js",
+      ],
+    },
     "externals": Array [
       "cozy",
     ],
@@ -991,9 +1000,12 @@ exports[`App from cozy-scripts with VueJS 2 should handle correctly the config m
 Array [
   Object {
     "bail": true,
-    "entry": Array [
-      ".tmp_test/test-app-vue/src/targets/mobile/index.js",
-    ],
+    "entry": Object {
+      "app": Array [
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/src/targets/mobile/index.js",
+      ],
+    },
     "module": Object {
       "noParse": Array [
         Object {},
@@ -1317,7 +1329,10 @@ Array [
     "bail": true,
     "devtool": "#source-map",
     "entry": Object {
-      "app": ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      "app": Array [
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      ],
     },
     "externals": Array [
       "cozy",
@@ -1647,7 +1662,10 @@ Array [
     "bail": true,
     "devtool": "#source-map",
     "entry": Object {
-      "app": ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      "app": Array [
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/src/targets/browser/index.js",
+      ],
     },
     "externals": Array [
       "cozy",

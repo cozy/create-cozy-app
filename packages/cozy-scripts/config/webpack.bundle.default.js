@@ -18,6 +18,7 @@ const configs = [
   require('./webpack.config.vendors'),
   require('./webpack.config.manifest'),
   require('./webpack.config.progress'),
+  addAnalyzer ? require('./webpack.config.analyzer') : null,
   require(`./webpack.target.${target}`)
 ]
 
@@ -25,10 +26,6 @@ if (environment === 'production') {
   configs.push(require('./webpack.environment.prod'))
 } else {
   configs.push(require('./webpack.environment.dev'))
-}
-
-if (addAnalyzer) {
-  configs.push(require('./webpack.config.analyzer'))
 }
 
 module.exports = merge.apply(null, configs)
