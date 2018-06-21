@@ -41,7 +41,7 @@ export class TodoAdd extends Component {
     return (
       <div>
         <h2>Add a new Todo:</h2>
-        <Label> Todo name: </Label>
+        <Label>Todo name:</Label>
         <Input
           value={todoToAdd}
           onChange={this.handleChange}

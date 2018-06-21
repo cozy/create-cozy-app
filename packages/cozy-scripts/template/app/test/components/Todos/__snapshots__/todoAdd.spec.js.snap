@@ -8,9 +8,8 @@ exports[`TodoAdd component: should be rendered correctly 1`] = `
   <Label
     className=""
     error={false}
-    htmlFor=""
   >
-     Todo name: 
+    Todo name:
   </Label>
   <Input
     error={false}
@@ -56,9 +55,8 @@ ShallowWrapper {
         <Label
           className=""
           error={false}
-          htmlFor=""
         >
-           Todo name: 
+          Todo name:
         </Label>,
         <Input
           error={false}
@@ -95,13 +93,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": " Todo name: ",
+          "children": "Todo name:",
           "className": "",
           "error": false,
-          "htmlFor": "",
         },
         "ref": null,
-        "rendered": " Todo name: ",
+        "rendered": "Todo name:",
         "type": [Function],
       },
       Object {
@@ -151,9 +148,8 @@ ShallowWrapper {
           <Label
             className=""
             error={false}
-            htmlFor=""
           >
-             Todo name: 
+            Todo name:
           </Label>,
           <Input
             error={false}
@@ -190,13 +186,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": " Todo name: ",
+            "children": "Todo name:",
             "className": "",
             "error": false,
-            "htmlFor": "",
           },
           "ref": null,
-          "rendered": " Todo name: ",
+          "rendered": "Todo name:",
           "type": [Function],
         },
         Object {
