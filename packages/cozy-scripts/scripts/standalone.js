@@ -5,8 +5,8 @@ const WebpackDevServer = require('webpack-dev-server')
 const colorize = require('../utils/_colorize')
 const getWebpackConfigs = require('./config')
 
-const port = process.env.PORT || '8888'
-const host = process.env.HOST || 'localhost'
+const port = process.env.DEV_PORT || '8888'
+const host = process.env.DEV_HOST || 'localhost'
 
 // There is no callback available on compiler here,
 // it's not handled by webpack-dev-server 2.x
