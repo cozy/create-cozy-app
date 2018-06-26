@@ -22,7 +22,7 @@
     "babel-polyfill": "6.26.0",
     "chalk": "2.4.1",
     "commander": "2.15.1",
-    "copy-webpack-plugin": "4.5.1",
+    "copy-webpack-plugin": "4.5.2",
     "cross-spawn": "6.0.5",
     "css-loader": "0.28.11",
     "css-mqpacker": "6.0.2",
