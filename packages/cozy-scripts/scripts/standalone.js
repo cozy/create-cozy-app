@@ -22,10 +22,13 @@ module.exports = (buildOptions) => {
   // the main app config is at the first position
   const appConfig = configs[0]
   appConfig.bail = false // disable bail when watching
-  appConfig.output = {filename: '[name][hash].bundle.js'}
-  const compiler = webpack(appConfig)
+  appConfig.output = Object.assign({}, appConfig.output, {
+    filename: '[name][hash].bundle.js',
+    publicPath: `http://${host}:${port}/`
+  })
 
   const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
+  const useHotReload = process.env.HOT_RELOAD === 'true'
 
   const WebpackOptions = {
     stats: {
@@ -37,12 +40,19 @@ module.exports = (buildOptions) => {
       colors: true
     },
     inline: true,
-    hot: true,
+    hot: useHotReload,
     host,
-    port
+    port,
+    headers: useHotReload ? {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization'
+    } : {}
   }
 
   WebpackDevServer.addDevServerEntrypoints(appConfig, WebpackOptions)
+  const compiler = webpack(appConfig)
   const server = new WebpackDevServer(compiler, WebpackOptions)
 
   server.listen(port, host, err => {

@@ -17,6 +17,7 @@
     "commons:watch": "cozy-scripts watch",
     "watch:browser": "npm-run-all --serial clean:browser 'commons:watch --browser --development'",
     "watch:mobile": "npm-run-all --serial clean:mobile 'commons:watch --mobile --development'",
+    "watch:hot": "HOT_RELOAD=true yarn watch:browser:standalone",
     "watch:standalone": "yarn watch:browser:standalone",
     "commons:watch:standalone": "cozy-scripts standalone",
     "watch:browser:standalone": "npm-run-all --serial clean:mobile 'commons:watch:standalone --browser --development'",

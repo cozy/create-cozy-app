@@ -18,7 +18,7 @@ module.exports = {
         exclude: /(sprites|icons)/,
         loader: `file-loader`,
         options: {
-          outputPath: '/img/',
+          outputPath: 'img/',
           publicPath: '/', // for standalone mode
           name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }

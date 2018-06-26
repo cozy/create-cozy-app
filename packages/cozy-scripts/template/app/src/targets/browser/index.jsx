@@ -1,4 +1,4 @@
-/* global cozy, __DEVELOPMENT__ */
+/* global cozy */
 
 import 'styles'
 
@@ -6,15 +6,6 @@ import React from 'react'
 import CozyClient, { CozyProvider } from 'cozy-client'
 import { render } from 'react-dom'
 import { I18n } from 'cozy-ui/react/I18n'
-
-if (__DEVELOPMENT__) {
-  // Enables React dev tools for Preact
-  // Cannot use import as we are in a condition
-  require('preact/devtools')
-
-  // Export React to window for the devtools
-  window.React = React
-}
 
 let appLocale
 const renderApp = function(client) {
@@ -30,12 +21,6 @@ const renderApp = function(client) {
     </I18n>,
     document.querySelector('[role=application]')
   )
-}
-
-if (module.hot) {
-  module.hot.accept('components/App', function() {
-    renderApp()
-  })
 }
 
 // return a defaultData if the template hasn't been replaced by cozy-stack
@@ -88,3 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderApp(client)
 })
+
+// Hot reload
+if (module.hot) {
+  module.hot.accept('components/App', () =>
+    requestAnimationFrame(() => {
+      const root = document.querySelector('[role=application]')
+      const data = root.dataset
+      const protocol = window.location ? window.location.protocol : 'https:'
+      const client = new CozyClient({
+        uri: `${protocol}//${data.cozyDomain}`,
+        token: data.cozyToken
+      })
+      renderApp(client)
+    })
+  )
+}
