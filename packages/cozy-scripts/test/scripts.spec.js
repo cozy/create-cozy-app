@@ -10,6 +10,7 @@ const rootPath = process.cwd()
 const appName = 'test-app'
 const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
+const appCoveragePath = path.join(appPath, 'coverage/')
 const customConfigPath = path.join(appPath, 'app.config.js')
 const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
 const servicesTestConfig = path.join(__dirname, 'lib', 'services.config.js')
@@ -95,6 +96,11 @@ describe('App from cozy-scripts', () => {
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
     if (process.env.COZY_SCRIPTS_DEBUG) delete process.env.COZY_SCRIPTS_DEBUG
     jest.resetModules()
+    // rm coverage folder from tests if exists
+    if (fs.existsSync(appCoveragePath)) {
+      fs.removeSync(appCoveragePath)
+    }
+    // custom config test
     if (fs.existsSync(customConfigPath)) {
       fs.removeSync(customConfigPath)
     }

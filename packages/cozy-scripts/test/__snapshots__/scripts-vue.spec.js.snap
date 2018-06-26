@@ -156,7 +156,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img/",
+            "outputPath": "img/",
             "publicPath": "/",
           },
           "test": Object {},
@@ -212,7 +212,9 @@ Array [
       Object {
         "filename": "[name].css",
         "id": 1,
-        "options": Object {},
+        "options": Object {
+          "disable": false,
+        },
       },
       Object {
         "options": Object {
@@ -308,11 +310,6 @@ Array [
       },
       Object {
         "options": Object {},
-      },
-      Object {
-        "fullBuildTimeout": 200,
-        "options": Object {},
-        "requestTimeout": 10000,
       },
     ],
     "resolve": Object {
@@ -488,7 +485,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "/img/",
+            "outputPath": "img/",
             "publicPath": "/",
           },
           "test": Object {},
@@ -537,7 +534,9 @@ Array [
       Object {
         "filename": "[name].[hash].min.css",
         "id": 1,
-        "options": Object {},
+        "options": Object {
+          "disable": false,
+        },
       },
       Object {
         "options": Object {
@@ -811,7 +810,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img/",
+            "outputPath": "img/",
             "publicPath": "/",
           },
           "test": Object {},
@@ -867,7 +866,9 @@ Array [
       Object {
         "filename": "[name].css",
         "id": 1,
-        "options": Object {},
+        "options": Object {
+          "disable": false,
+        },
       },
       Object {
         "options": Object {
@@ -971,11 +972,6 @@ Array [
       },
       Object {
         "options": Object {},
-      },
-      Object {
-        "fullBuildTimeout": 200,
-        "options": Object {},
-        "requestTimeout": 10000,
       },
     ],
     "resolve": Object {
@@ -1148,7 +1144,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "/img/",
+            "outputPath": "img/",
             "publicPath": "/",
           },
           "test": Object {},
@@ -1197,7 +1193,9 @@ Array [
       Object {
         "filename": "[name].[hash].min.css",
         "id": 1,
-        "options": Object {},
+        "options": Object {
+          "disable": false,
+        },
       },
       Object {
         "options": Object {
@@ -1479,7 +1477,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img/",
+            "outputPath": "img/",
             "publicPath": "/",
           },
           "test": Object {},
@@ -1535,7 +1533,9 @@ Array [
       Object {
         "filename": "[name].css",
         "id": 1,
-        "options": Object {},
+        "options": Object {
+          "disable": false,
+        },
       },
       Object {
         "options": Object {
@@ -1631,11 +1631,6 @@ Array [
       },
       Object {
         "options": Object {},
-      },
-      Object {
-        "fullBuildTimeout": 200,
-        "options": Object {},
-        "requestTimeout": 10000,
       },
     ],
     "resolve": Object {
@@ -1812,7 +1807,7 @@ Array [
           "loader": "file-loader",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img/",
+            "outputPath": "img/",
             "publicPath": "/",
           },
           "test": Object {},
@@ -1868,7 +1863,9 @@ Array [
       Object {
         "filename": "[name].css",
         "id": 1,
-        "options": Object {},
+        "options": Object {
+          "disable": false,
+        },
       },
       Object {
         "options": Object {
@@ -1964,11 +1961,6 @@ Array [
       },
       Object {
         "options": Object {},
-      },
-      Object {
-        "fullBuildTimeout": 200,
-        "options": Object {},
-        "requestTimeout": 10000,
       },
     ],
     "resolve": Object {
