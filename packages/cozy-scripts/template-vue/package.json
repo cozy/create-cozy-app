@@ -21,7 +21,7 @@
     "watch:standalone": "yarn watch:browser:standalone",
     "commons:watch:standalone": "cozy-scripts standalone --vue",
     "watch:browser:standalone": "npm-run-all --serial clean:browser 'commons:watch:standalone --browser --development --vue'",
-    "watch:mobile:standalone": "npm-run-all --serial clean:mobile 'commons:watch:standalone --browser --development --vue'",
+    "watch:mobile:standalone": "npm-run-all --serial clean:mobile 'commons:watch:standalone --mobile --development --vue'",
     "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git}",
     "test": "cozy-scripts test --verbose --coverage",
     "reset:yarn": "rm -rf node_modules/ yarn.lock && yarn",
