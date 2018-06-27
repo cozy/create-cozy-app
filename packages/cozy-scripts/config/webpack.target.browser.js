@@ -1,10 +1,10 @@
 'use strict'
 
-const fs = require('fs')
+const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const manifest = JSON.parse(fs.readFileSync(paths.appManifest).toString())
+const manifest = fs.readJsonSync(paths.appManifest)
 
 module.exports = {
   entry: {
