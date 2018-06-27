@@ -13,7 +13,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
       >
         <NavLink
           activeClassName="is-active"
-          ariaCurrent="true"
+          aria-current="page"
           className="c-nav-link"
           to="/todos"
         >
@@ -30,7 +30,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
       >
         <NavLink
           activeClassName="is-active"
-          ariaCurrent="true"
+          aria-current="page"
           className="c-nav-link"
           to="/viewhello1"
         >
@@ -47,7 +47,7 @@ exports[`Sidebar component should be rendered correctly 1`] = `
       >
         <NavLink
           activeClassName="is-active"
-          ariaCurrent="true"
+          aria-current="page"
           className="c-nav-link"
           to="/viewhello2"
         >
