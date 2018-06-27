@@ -191,7 +191,7 @@ describe('App from cozy-scripts', () => {
     const testScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'test.js'))
     expect(() => {
       testScript({
-        cliArgs: ['--verbose', '--coverage']
+        cliArgs: ['--verbose', '--coverage', '--forceExit']
       })
     }).not.toThrow()
   })
