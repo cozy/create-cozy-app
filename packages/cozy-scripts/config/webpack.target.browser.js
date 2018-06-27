@@ -1,9 +1,10 @@
 'use strict'
 
+const fs = require('fs')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const pkg = require(paths.appPackageJson)
+const manifest = JSON.parse(fs.readFileSync(paths.appManifest).toString())
 
 module.exports = {
   entry: {
@@ -21,7 +22,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: paths.appBrowserHtmlTemplate,
-      title: pkg.name,
+      title: manifest.name,
       inject: false,
       chunks: ['app'],
       minify: {
