@@ -9,6 +9,7 @@ const rootPath = process.cwd()
 const appName = 'test-app-vue'
 const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
+const appCoveragePath = path.join(appPath, 'coverage/')
 const spawn = require('cross-spawn')
 
 process.on('SIGINT', () => {
@@ -91,6 +92,10 @@ describe('App from cozy-scripts with VueJS 2', () => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
     if (process.env.COZY_SCRIPTS_DEBUG) delete process.env.COZY_SCRIPTS_DEBUG
+    // rm coverage folder from tests if exists
+    if (fs.existsSync(appCoveragePath)) {
+      fs.removeSync(appCoveragePath)
+    }
     jest.resetModules()
   })
 

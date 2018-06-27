@@ -14,11 +14,16 @@ console.log(colorize.cyan(`Compiling for ${colorize.orange.bold(environment)} en
 
 const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 const addAnalyzer = process.env.COZY_SCRIPTS_ANALYZER === 'true'
+const useHotReload = process.env.HOT_RELOAD === 'true'
 
 module.exports = {
   environment,
   target,
   isDebugMode,
   addAnalyzer,
-  extractor: new ExtractTextPlugin(`[name]${production ? '.[hash].min' : ''}.css`)
+  useHotReload,
+  extractor: new ExtractTextPlugin({
+    disable: useHotReload,
+    filename: `[name]${production ? '.[hash].min' : ''}.css`
+  })
 }
