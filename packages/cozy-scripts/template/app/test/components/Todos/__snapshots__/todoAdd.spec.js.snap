@@ -8,7 +8,6 @@ exports[`TodoAdd component: should be rendered correctly 1`] = `
   <Label
     className=""
     error={false}
-    htmlFor=""
   >
      Todo name: 
   </Label>
@@ -56,7 +55,6 @@ ShallowWrapper {
         <Label
           className=""
           error={false}
-          htmlFor=""
         >
            Todo name: 
         </Label>,
@@ -98,7 +96,6 @@ ShallowWrapper {
           "children": " Todo name: ",
           "className": "",
           "error": false,
-          "htmlFor": "",
         },
         "ref": null,
         "rendered": " Todo name: ",
@@ -151,7 +148,6 @@ ShallowWrapper {
           <Label
             className=""
             error={false}
-            htmlFor=""
           >
              Todo name: 
           </Label>,
@@ -193,7 +189,6 @@ ShallowWrapper {
             "children": " Todo name: ",
             "className": "",
             "error": false,
-            "htmlFor": "",
           },
           "ref": null,
           "rendered": " Todo name: ",

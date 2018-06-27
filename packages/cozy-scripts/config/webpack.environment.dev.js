@@ -5,7 +5,7 @@ const paths = require('../utils/paths')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const { useHotReload } = require('./webpack.vars')
 
-const plugins = [
+let plugins = [
   new webpack.DefinePlugin({
     __DEVELOPMENT__: true,
     __STACK_ASSETS__: false
@@ -18,7 +18,7 @@ const plugins = [
 ]
 
 if (useHotReload) {
-  plugins.concat([
+  plugins = plugins.concat([
     new webpack.HotModuleReplacementPlugin(),
     /*
     Here is the trick about hot-reload:
