@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper o-layout--2panes">
+  <div class="app-wrapper o-layout-2panes">
     <aside class="o-sidebar">
       <nav>
         <ul class="c-nav">
@@ -36,8 +36,10 @@
         </ul>
       </nav>
     </aside>
-    <main class="app-content">
-      <router-view class="view"/>
+    <main>
+      <div class="app-content">
+        <router-view class="view"/>
+      </div>
     </main>
   </div>
 </template>
