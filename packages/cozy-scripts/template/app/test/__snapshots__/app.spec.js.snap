@@ -2,38 +2,40 @@
 
 exports[`App component only should be mounted correctly 1`] = `
 <HashRouter>
-  <div
-    className="app-wrapper o-layout--2panes"
+  <Layout
+    monoColumn={false}
   >
     <Wrapper />
-    <main
-      className="app-content"
-    >
-      <Switch>
-        <Route
-          component={[Function]}
-          path="/todos"
-        />
-        <Route
-          component={[Function]}
-          path="/viewhello1"
-        />
-        <Route
-          component={[Function]}
-          path="/viewhello2"
-        />
-        <Redirect
-          from="/"
-          push={false}
-          to="/todos"
-        />
-        <Redirect
-          from="*"
-          push={false}
-          to="/todos"
-        />
-      </Switch>
-    </main>
-  </div>
+    <Main>
+      <Content
+        className="app-content"
+      >
+        <Switch>
+          <Route
+            component={[Function]}
+            path="/todos"
+          />
+          <Route
+            component={[Function]}
+            path="/viewhello1"
+          />
+          <Route
+            component={[Function]}
+            path="/viewhello2"
+          />
+          <Redirect
+            from="/"
+            push={false}
+            to="/todos"
+          />
+          <Redirect
+            from="*"
+            push={false}
+            to="/todos"
+          />
+        </Switch>
+      </Content>
+    </Main>
+  </Layout>
 </HashRouter>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component only should be mounted correctly 1`] = `
-<div class="app-wrapper o-layout--2panes">
+<div class="app-wrapper o-layout-2panes">
   <aside class="o-sidebar">
     <nav>
       <ul class="c-nav">
@@ -26,8 +26,10 @@ exports[`App component only should be mounted correctly 1`] = `
       </ul>
     </nav>
   </aside>
-  <main class="app-content">
-    <p style="margin-left: 2em;" class="view">Just... Hello world! This is View 1.</p>
+  <main>
+    <div class="app-content">
+      <p style="margin-left: 2em;" class="view">Just... Hello world! This is View 1.</p>
+    </div>
   </main>
 </div>
 `;
