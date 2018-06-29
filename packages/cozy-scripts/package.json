@@ -21,7 +21,7 @@
     "babel-loader": "7.1.4",
     "babel-polyfill": "6.26.0",
     "chalk": "2.4.1",
-    "commander": "2.15.1",
+    "commander": "2.16.0",
     "copy-webpack-plugin": "4.5.2",
     "cross-spawn": "6.0.5",
     "css-loader": "0.28.11",
