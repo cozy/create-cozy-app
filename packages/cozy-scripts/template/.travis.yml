@@ -33,7 +33,7 @@ before_install:
 - echo "password = $TX_PASSWD" >> ~/.transifexrc
 script:
 - yarn test
-- yarn build:browser
+- yarn build
 deploy:
   - provider: script
     repo: <USERNAME_GH>/<SLUG_GH>
