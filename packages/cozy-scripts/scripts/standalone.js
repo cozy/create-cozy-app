@@ -3,6 +3,7 @@
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const colorize = require('../utils/_colorize')
+const cleanBuild = require('../utils/cleanBuild')
 const getWebpackConfigs = require('./config')
 
 const port = process.env.DEV_PORT || '8888'
@@ -12,10 +13,14 @@ const host = process.env.DEV_HOST || 'localhost'
 // it's not handled by webpack-dev-server 2.x
 // see https://github.com/webpack/webpack-dev-server/issues/818
 module.exports = (buildOptions) => {
+  const buildTarget = buildOptions.target || 'browser'
   const options = Object.assign({}, buildOptions, {
     mode: buildOptions.mode || 'development',
     target: buildOptions.target || 'browser'
   })
+
+  // remove build folder
+  cleanBuild(buildTarget)
 
   // webpack configurations
   const configs = getWebpackConfigs(options)

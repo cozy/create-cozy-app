@@ -5,9 +5,12 @@ const CONNECTION_NAME = 'allTodos'
 
 // Provides the client state data to the provided component
 export const withTodos = component =>
-  connect(client => client.all(DOCTYPE).UNSAFE_noLimit(), {
-    as: CONNECTION_NAME
-  })(component)
+  connect(
+    client => client.all(DOCTYPE).UNSAFE_noLimit(),
+    {
+      as: CONNECTION_NAME
+    }
+  )(component)
 
 // Provides the client mutations methods to the provided component
 export const withTodosMutations = component =>

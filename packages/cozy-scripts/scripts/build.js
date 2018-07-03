@@ -2,13 +2,18 @@
 
 const webpack = require('webpack')
 const getWebpackConfigs = require('./config')
+const cleanBuild = require('../utils/cleanBuild')
 
 // add a way to provide success callback for (at least) better tests
 module.exports = (buildOptions, successCallback) => {
+  const buildTarget = buildOptions.target || 'browser'
   const options = Object.assign({}, buildOptions, {
     mode: buildOptions.mode || 'production',
-    target: buildOptions.target || 'browser'
+    target: buildTarget
   })
+
+  // remove build folder
+  cleanBuild(buildTarget)
 
   const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 
