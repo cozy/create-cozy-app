@@ -1,6 +1,6 @@
 {
   "name": "cozy-scripts",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "css-mqpacker": "6.0.2",
     "csswring": "6.0.3",
     "eslint": "5.0.1",
-    "eslint-config-cozy-app": "^0.8.0",
+    "eslint-config-cozy-app": "^0.10.0",
     "eslint-loader": "2.0.0",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.11",
