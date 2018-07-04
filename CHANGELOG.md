@@ -1,3 +1,15 @@
+## cozy-scripts@0.10.1 (2018-07-04)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#640](https://github.com/CPatchane/create-cozy-app/pull/640) Add `require.resolve` to all loaders ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#639](https://github.com/CPatchane/create-cozy-app/pull/639) Update dependency eslint-config-cozy-app to v0.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#638](https://github.com/CPatchane/create-cozy-app/pull/638) Update dependency babel-preset-cozy-app to v0.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@0.10.0, create-cozy-app@0.10.0, babel-preset-cozy-app@0.10.0, eslint-config-cozy-app@0.10.0, cozy-scripts-vanilla@0.10.0 (2018-07-04)
 
 #### TL;DR
