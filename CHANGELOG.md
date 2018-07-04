@@ -1,3 +1,77 @@
+## cozy-scripts@0.10.0, create-cozy-app@0.10.0, babel-preset-cozy-app@0.10.0, eslint-config-cozy-app@0.10.0, cozy-scripts-vanilla@0.10.0 (2018-07-04)
+
+#### TL;DR
+
+- Now you can enable hot-module-reload by using `--hot` with the standalone mode (with `webpack-dev-server`). __You have to disable CSPs in the Cozy to use HMR with a Cozy for development.__
+- `cozy-scripts` now imports automatically `babel-polyfill` for you, you can remove it from your application (except maybe for testing). :boom: __Be sure to not import `babel-polyfill` twice since it could break your application.__
+- :boom: The environment variables `PORT` and `HOST` to define your standalone server port and host have been renamed to `DEV_PORT` and `DEV_HOST` to avoid variable conflicts.
+- The applicaiton icon is now automatically optimized using `svgo` if it's a SVG file.
+
+#### :boom: Breaking Changes:
+* `cozy-scripts`
+  * [#620](https://github.com/CPatchane/create-cozy-app/pull/620) Change PORT/HOST variables to DEV_PORT/DEV_HOST ([@CPatchane](https://github.com/CPatchane))
+  * [#604](https://github.com/CPatchane/create-cozy-app/pull/604) Handle `babel-polyfill` in cozy-scripts ([@CPatchane](https://github.com/CPatchane))
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#622](https://github.com/CPatchane/create-cozy-app/pull/622) Add hot-module-reload feature for React/Vue ([@CPatchane](https://github.com/CPatchane))
+  * [#604](https://github.com/CPatchane/create-cozy-app/pull/604) Handle `babel-polyfill` in cozy-scripts ([@CPatchane](https://github.com/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#633](https://github.com/CPatchane/create-cozy-app/pull/633) Make application scripts simpler ([@CPatchane](https://github.com/CPatchane))
+  * [#628](https://github.com/CPatchane/create-cozy-app/pull/628) feat: support iphonex meta ([@y-lohse](https://github.com/y-lohse))
+  * [#627](https://github.com/CPatchane/create-cozy-app/pull/627) feat: HTML title from manifest ([@ptbrowne](https://github.com/ptbrowne))
+  * [#590](https://github.com/CPatchane/create-cozy-app/pull/590) Optimize app icon (SVG) on build ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#630](https://github.com/CPatchane/create-cozy-app/pull/630) Fix app layout issue using new Cozy-UI ([@CPatchane](https://github.com/CPatchane))
+  * [#625](https://github.com/CPatchane/create-cozy-app/pull/625) `--hot` option + chore fixes ([@CPatchane](https://github.com/CPatchane))
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#631](https://github.com/CPatchane/create-cozy-app/pull/631) Add often missing eslint plugins into apps ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#636](https://github.com/CPatchane/create-cozy-app/pull/636) Update dependency node-polyglot to v2.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#608](https://github.com/CPatchane/create-cozy-app/pull/608), [#600](https://github.com/CPatchane/create-cozy-app/pull/600), [#591](https://github.com/CPatchane/create-cozy-app/pull/591) [#587](https://github.com/CPatchane/create-cozy-app/pull/587), [#583](https://github.com/CPatchane/create-cozy-app/pull/583) Update dependency cozy-client to v1.0.0-beta.14 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#635](https://github.com/CPatchane/create-cozy-app/pull/635), [#629](https://github.com/CPatchane/create-cozy-app/pull/629), [#619](https://github.com/CPatchane/create-cozy-app/pull/619), [#612](https://github.com/CPatchane/create-cozy-app/pull/612), [#607](https://github.com/CPatchane/create-cozy-app/pull/607), [#596](https://github.com/CPatchane/create-cozy-app/pull/596), [#592](https://github.com/CPatchane/create-cozy-app/pull/592), [#585](https://github.com/CPatchane/create-cozy-app/pull/585), [#582](https://github.com/CPatchane/create-cozy-app/pull/582), [#575](https://github.com/CPatchane/create-cozy-app/pull/575) Update dependency cozy-ui to v10.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#571](https://github.com/CPatchane/create-cozy-app/pull/571) chore(deps): update dependency prettier to v1.13.7 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#626](https://github.com/CPatchane/create-cozy-app/pull/626), [#618](https://github.com/CPatchane/create-cozy-app/pull/618), [#593](https://github.com/CPatchane/create-cozy-app/pull/593) Update dependency cozy-bar to v5.0.8 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#624](https://github.com/CPatchane/create-cozy-app/pull/624) Pin dependency write-file-webpack-plugin to v4.3.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#621](https://github.com/CPatchane/create-cozy-app/pull/621) Update dependency copy-webpack-plugin to v4.5.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#623](https://github.com/CPatchane/create-cozy-app/pull/623), [#602](https://github.com/CPatchane/create-cozy-app/pull/602), [#586](https://github.com/CPatchane/create-cozy-app/pull/586), [#577](https://github.com/CPatchane/create-cozy-app/pull/577), [#574](https://github.com/CPatchane/create-cozy-app/pull/574) Update dependency autoprefixer to v8.6.4 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#611](https://github.com/CPatchane/create-cozy-app/pull/611) Update dependency cozy-client-js to v0.11.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#616](https://github.com/CPatchane/create-cozy-app/pull/616), [#595](https://github.com/CPatchane/create-cozy-app/pull/595), [#588](https://github.com/CPatchane/create-cozy-app/pull/588) Update dependency @vue/test-utils to v1.0.0-beta.20 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#613](https://github.com/CPatchane/create-cozy-app/pull/613) Update dependency babel-eslint to v8.2.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#614](https://github.com/CPatchane/create-cozy-app/pull/614) Update dependency eslint-plugin-prettier to v2.6.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#609](https://github.com/CPatchane/create-cozy-app/pull/609) Update dependency postcss to v6.0.23 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#605](https://github.com/CPatchane/create-cozy-app/pull/605) Pin dependency babel-polyfill to v6.26.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#597](https://github.com/CPatchane/create-cozy-app/pull/597) Update dependency redux-mock-store to v1.5.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#598](https://github.com/CPatchane/create-cozy-app/pull/598) Update dependency webpack-merge to v4.1.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#599](https://github.com/CPatchane/create-cozy-app/pull/599) Update react monorepo to v16.4.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#594](https://github.com/CPatchane/create-cozy-app/pull/594) Pin dependency svgo to v1.0.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#589](https://github.com/CPatchane/create-cozy-app/pull/589) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#581](https://github.com/CPatchane/create-cozy-app/pull/581), [#573](https://github.com/CPatchane/create-cozy-app/pull/573) Update dependency jest-serializer-vue to v2.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#584](https://github.com/CPatchane/create-cozy-app/pull/584) Update dependency react-router-dom to v4.3.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#576](https://github.com/CPatchane/create-cozy-app/pull/576) Update dependency vue-loader to v15.2.4 ([@renovate[bot]](https://github.com/apps/renovate))
+* `babel-preset-cozy-app`, `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`, `eslint-config-cozy-app`
+  * [#637](https://github.com/CPatchane/create-cozy-app/pull/637), [#634](https://github.com/CPatchane/create-cozy-app/pull/634) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts`, `create-cozy-app`
+  * [#632](https://github.com/CPatchane/create-cozy-app/pull/632) Update dependency commander to v2.16.0 ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts`, `eslint-config-cozy-app`
+  * [#615](https://github.com/CPatchane/create-cozy-app/pull/615) Update dependency eslint to v5 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#606](https://github.com/CPatchane/create-cozy-app/pull/606) Update dependency lerna-changelog to v0.8.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 3
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+- Patrick Browne ([@ptbrowne](https://github.com/ptbrowne))
+- Yannick Lohse ([@y-lohse](https://github.com/y-lohse))
+
+
 ## cozy-scripts@0.9.0, create-cozy-app@0.9.0 (2018-05-29)
 
 #### :sparkles: New Features:
