@@ -40,7 +40,7 @@ const config = {
       {
         enforce: 'pre',
         test: /\.js$/,
-        loader: 'eslint-loader',
+        loader: require.resolve('eslint-loader'),
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app'],

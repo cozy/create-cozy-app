@@ -36,7 +36,7 @@ module.exports = {
     rules: [
       {
         test: require.resolve(paths.appCozyBarJs),
-        loader: 'imports-loader',
+        loader: require.resolve('imports-loader'),
         options: {
           css: paths.appCozyBarCss
         }

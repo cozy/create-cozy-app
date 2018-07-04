@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|cozy-(bar|client-js))/,
-        loader: 'babel-loader',
+        loader: require.resolve('babel-loader'),
         options: {
           cacheDirectory: 'node_modules/.cache/babel-loader/js',
           presets: [
@@ -32,22 +32,22 @@ module.exports = {
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        loader: require.resolve('json-loader')
       },
       {
         test: /\.css$/,
         loader: extractor.extract({
-          fallback: 'style-loader',
+          fallback: require.resolve('style-loader'),
           use: [
             {
-              loader: 'css-loader',
+              loader: require.resolve('css-loader'),
               options: {
                 sourceMap: true,
                 importLoaders: 1
               }
             },
             {
-              loader: 'postcss-loader',
+              loader: require.resolve('postcss-loader'),
               options: {
                 ident: 'postcss',
                 sourceMap: true,

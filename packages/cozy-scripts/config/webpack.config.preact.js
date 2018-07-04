@@ -33,7 +33,7 @@ module.exports = {
       {
         test: /\.jsx$/,
         exclude: /node_modules\/(?!(cozy-ui))/,
-        loader: 'babel-loader',
+        loader: require.resolve('babel-loader'),
         options: {
           cacheDirectory: 'node_modules/.cache/babel-loader/react',
           presets: ['cozy-app']
