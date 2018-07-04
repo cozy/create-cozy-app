@@ -8,7 +8,7 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.js$/,
-        loader: 'eslint-loader',
+        loader: require.resolve('eslint-loader'),
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app'],
@@ -18,7 +18,7 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.vue$/,
-        loader: 'eslint-loader',
+        loader: require.resolve('eslint-loader'),
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app/vue'],
@@ -28,7 +28,7 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.jsx$/,
-        loader: 'eslint-loader',
+        loader: require.resolve('eslint-loader'),
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app/react'],

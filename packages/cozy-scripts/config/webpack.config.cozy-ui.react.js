@@ -9,10 +9,10 @@ module.exports = {
         test: /\.styl$/,
         include: /(cozy-ui\/react)/,
         loader: extractor.extract({
-          fallback: 'style-loader',
+          fallback: require.resolve('style-loader'),
           use: [
             {
-              loader: 'css-loader',
+              loader: require.resolve('css-loader'),
               options: {
                 sourceMap: true,
                 importLoaders: 1,
@@ -21,7 +21,7 @@ module.exports = {
               }
             },
             {
-              loader: 'postcss-loader',
+              loader: require.resolve('postcss-loader'),
               options: {
                 sourceMap: true,
                 plugins: function () {
@@ -29,7 +29,7 @@ module.exports = {
                 }
               }
             },
-            'stylus-loader'
+            require.resolve('stylus-loader')
           ]
         })
       }

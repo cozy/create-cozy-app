@@ -8,7 +8,7 @@ module.exports = {
       {
         test: /\.svg$/,
         include: /(sprites|icons)/,
-        loader: 'svg-sprite-loader',
+        loader: require.resolve('svg-sprite-loader'),
         options: {
           name: '[name]_[hash]'
         }
@@ -16,7 +16,7 @@ module.exports = {
       {
         test: /\.(png|gif|jpe?g|svg)$/i,
         exclude: /(sprites|icons)/,
-        loader: `file-loader`,
+        loader: require.resolve('file-loader'),
         options: {
           outputPath: 'img/',
           publicPath: '/', // for standalone mode
