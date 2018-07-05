@@ -21,7 +21,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|cozy-(bar|client-js))/,
+        exclude: /(node_modules|cozy-(bar|client|client-js))/,
         loader: require.resolve('babel-loader'),
         options: {
           cacheDirectory: 'node_modules/.cache/babel-loader/js',
