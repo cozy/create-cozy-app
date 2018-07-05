@@ -3,7 +3,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
-const pkg = require(paths.appPackageJson)
+const manifest = fs.readJsonSync(paths.appManifest)
+
+const appName = manifest.name_prefix
+  ? `${manifest.name_prefix} ${manifest.name}`
+  : manifest.name
 
 function getConfig () {
   return (fs.existsSync(paths.appIntentsIndex()) &&
@@ -17,7 +21,7 @@ function getConfig () {
       plugins: [
         new HtmlWebpackPlugin({
           template: paths.appIntentsHtmlTemplate,
-          title: `${pkg.name} intents`,
+          title: `${appName} intents`,
           filename: 'intents/index.html',
           inject: false,
           chunks: ['intents'],
