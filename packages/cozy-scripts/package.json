@@ -39,7 +39,7 @@
     "jest": "22.4.4",
     "json-loader": "0.5.7",
     "postcss": "6.0.23",
-    "postcss-assets-webpack-plugin": "1.1.0",
+    "postcss-assets-webpack-plugin": "2.0.0",
     "postcss-discard-duplicates": "4.0.0",
     "postcss-loader": "2.1.5",
     "progress": "2.0.0",
