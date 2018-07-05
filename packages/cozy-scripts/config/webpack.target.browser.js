@@ -6,6 +6,10 @@ const paths = require('../utils/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const manifest = fs.readJsonSync(paths.appManifest)
 
+const appName = manifest.name_prefix
+  ? `${manifest.name_prefix} ${manifest.name}`
+  : manifest.name
+
 module.exports = {
   entry: {
     // since the file extension depends on the framework here
@@ -22,7 +26,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: paths.appBrowserHtmlTemplate,
-      title: manifest.name,
+      title: appName,
       inject: false,
       chunks: ['app'],
       minify: {

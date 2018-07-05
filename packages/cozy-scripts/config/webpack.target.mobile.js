@@ -1,11 +1,16 @@
 'use strict'
 
+const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const {production} = require('./webpack.vars')
-const pkg = require(paths.appPackageJson)
+const manifest = fs.readJsonSync(paths.appManifest)
+
+const appName = manifest.name_prefix
+  ? `${manifest.name_prefix} ${manifest.name}`
+  : manifest.name
 
 module.exports = {
   entry: {
@@ -20,7 +25,7 @@ module.exports = {
     new webpack.DefinePlugin({
       __ALLOW_HTTP__: !production,
       __TARGET__: JSON.stringify('mobile'),
-      __APP_VERSION__: JSON.stringify(pkg.version)
+      __APP_VERSION__: JSON.stringify(manifest.version)
     }),
     new webpack.ProvidePlugin({
       'cozy.client': production ? 'cozy-client-js/dist/cozy-client.min.js' : 'cozy-client-js/dist/cozy-client.js',
@@ -28,7 +33,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: paths.appMobileHtmlTemplate,
-      title: pkg.name,
+      title: appName,
       chunks: ['app'],
       inject: 'head',
       minify: {
