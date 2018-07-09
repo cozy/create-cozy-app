@@ -1,3 +1,25 @@
+## cozy-scripts@0.10.2 (2018-07-09)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#646](https://github.com/CPatchane/create-cozy-app/pull/646) fix: Docker unlink folder 🐛 ([@kosssi](https://github.com/kosssi))
+  * [#643](https://github.com/CPatchane/create-cozy-app/pull/643) Add pretest script in templates ([@CPatchane](https://github.com/CPatchane))
+  * [#642](https://github.com/CPatchane/create-cozy-app/pull/642) Use the correct app name for html titles ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#653](https://github.com/CPatchane/create-cozy-app/pull/653) fix(deps): update dependency cozy-ui to v10.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#651](https://github.com/CPatchane/create-cozy-app/pull/651) chore(deps): update dependency eslint to v5.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#649](https://github.com/CPatchane/create-cozy-app/pull/649) fix(deps): update dependency autoprefixer to v8.6.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#648](https://github.com/CPatchane/create-cozy-app/pull/648) Update dependency eslint-plugin-prettier to v2.6.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#647](https://github.com/CPatchane/create-cozy-app/pull/647) Update dependency babel-loader to v7.1.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#641](https://github.com/CPatchane/create-cozy-app/pull/641) Update dependency postcss-discard-duplicates to v4 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+- kosssi ([@kosssi](https://github.com/kosssi))
+
+
 ## cozy-scripts@0.10.1 (2018-07-04)
 
 #### :nail_care: Enhancements:
