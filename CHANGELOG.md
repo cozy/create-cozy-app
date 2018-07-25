@@ -1,3 +1,28 @@
+## cozy-scripts@0.10.3, cozy-scripts-vanilla@0.10.1, create-cozy-app@0.10.1 (2018-07-25)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#677](https://github.com/CPatchane/create-cozy-app/pull/677) Fix wrong images webpack publicPath ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#658](https://github.com/CPatchane/create-cozy-app/pull/658), [#673](https://github.com/CPatchane/create-cozy-app/pull/673), [#676](https://github.com/CPatchane/create-cozy-app/pull/676) Update dependency cozy-ui to v10.4.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#659](https://github.com/CPatchane/create-cozy-app/pull/659), [#674](https://github.com/CPatchane/create-cozy-app/pull/674) Update dependency eslint-plugin-vue to v4.7.1 - autoclosed ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#670](https://github.com/CPatchane/create-cozy-app/pull/670) Update dependency eslint to v5.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#668](https://github.com/CPatchane/create-cozy-app/pull/668) Update dependency eslint-loader to v2.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#666](https://github.com/CPatchane/create-cozy-app/pull/666) Update dependency vue-loader to v15.2.6 - autoclosed ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#657](https://github.com/CPatchane/create-cozy-app/pull/657) Update dependency babel-eslint to v8.2.6 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#654](https://github.com/CPatchane/create-cozy-app/pull/654), [#656](https://github.com/CPatchane/create-cozy-app/pull/656) Update dependency cozy-client to v1.0.0-beta.16 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#655](https://github.com/CPatchane/create-cozy-app/pull/655) Update dependency postcss-loader to v2.1.6 ([@renovate[bot]](https://github.com/apps/renovate))
+* `create-cozy-app`
+  * [#667](https://github.com/CPatchane/create-cozy-app/pull/667) Update dependency ora to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`
+  * [#663](https://github.com/CPatchane/create-cozy-app/pull/663) Update dependency fs-extra to v7 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@0.10.2 (2018-07-09)
 
 #### :nail_care: Enhancements:
