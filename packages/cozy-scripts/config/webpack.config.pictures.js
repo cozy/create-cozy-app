@@ -19,7 +19,7 @@ module.exports = {
         loader: require.resolve('file-loader'),
         options: {
           outputPath: 'img/',
-          publicPath: '/', // for standalone mode
+          publicPath: '/img', // for standalone mode
           name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }
       }

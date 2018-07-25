@@ -157,7 +157,7 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
-            "publicPath": "/",
+            "publicPath": "/img",
           },
           "test": Object {},
         },
@@ -486,7 +486,7 @@ Array [
           "options": Object {
             "name": "[name].[hash].[ext]",
             "outputPath": "img/",
-            "publicPath": "/",
+            "publicPath": "/img",
           },
           "test": Object {},
         },
@@ -811,7 +811,7 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
-            "publicPath": "/",
+            "publicPath": "/img",
           },
           "test": Object {},
         },
@@ -1145,7 +1145,7 @@ Array [
           "options": Object {
             "name": "[name].[hash].[ext]",
             "outputPath": "img/",
-            "publicPath": "/",
+            "publicPath": "/img",
           },
           "test": Object {},
         },
@@ -1478,7 +1478,7 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
-            "publicPath": "/",
+            "publicPath": "/img",
           },
           "test": Object {},
         },
@@ -1808,7 +1808,7 @@ Array [
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
-            "publicPath": "/",
+            "publicPath": "/img",
           },
           "test": Object {},
         },
