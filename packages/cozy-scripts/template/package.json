@@ -43,9 +43,9 @@
     "eslint-plugin-react": "7.10.0",
     "git-directory-deploy": "1.5.1",
     "prettier": "1.13.7",
-    "react": "16.4.1",
-    "react-dom": "16.4.1",
-    "react-test-renderer": "16.4.1",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "react-test-renderer": "16.4.2",
     "redux-mock-store": "1.5.3",
     "stylint": "1.5.9"
   },
