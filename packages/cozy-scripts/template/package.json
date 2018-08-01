@@ -54,7 +54,7 @@
     "cozy-ui": "10.4.3",
     "eslint-config-cozy-app": "0.10.0",
     "preact": "8.2.9",
-    "preact-compat": "3.18.0",
+    "preact-compat": "3.18.2",
     "react-router-dom": "4.3.1"
   }
 }
