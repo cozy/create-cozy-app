@@ -3045,7 +3045,17 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-preact-compat@3.18.0, preact-compat@^3.17.0:
+preact-compat@3.18.2:
+  version "3.18.2"
+  resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.18.2.tgz#dfae12f0c12edcd371a01c33773c3525899f6747"
+  dependencies:
+    immutability-helper "^2.1.2"
+    preact-render-to-string "^3.7.2"
+    preact-transition-group "^1.1.0"
+    prop-types "^15.5.8"
+    standalone-react-addons-pure-render-mixin "^0.1.1"
+
+preact-compat@^3.17.0:
   version "3.18.0"
   resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.18.0.tgz#ca430cc1f67193fb9feaf7c510832957b2ebe701"
   dependencies:
@@ -3062,6 +3072,12 @@ preact-portal@^1.1.2:
 preact-render-to-string@^3.6.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.7.0.tgz#7db4177454bc01395e0d01d6ac07bc5e838e31ee"
+  dependencies:
+    pretty-format "^3.5.1"
+
+preact-render-to-string@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.7.2.tgz#b2440694916dfc431729aa97cabb2de1bb6cd9b3"
   dependencies:
     pretty-format "^3.5.1"
 
