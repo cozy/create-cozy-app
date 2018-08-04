@@ -102,7 +102,7 @@ Array [
       "rules": Array [
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
@@ -117,7 +117,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -131,17 +131,17 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -152,7 +152,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
             "presets": Array [
@@ -164,7 +164,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -176,7 +176,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -188,7 +188,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -209,23 +209,23 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
@@ -242,10 +242,10 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "localIdentName": "[local]--[hash:base64:5]",
@@ -254,20 +254,20 @@ Array [
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
         },
         Object {
           "include": Object {},
-          "loader": "svg-sprite-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
             "name": "[name]_[hash]",
           },
@@ -275,7 +275,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "file-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
@@ -284,11 +284,11 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
-          "loader": "imports-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
           "options": Object {
             "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
           },
@@ -481,7 +481,7 @@ Array [
       "rules": Array [
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
@@ -496,7 +496,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -510,17 +510,17 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -531,7 +531,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
             "presets": Array [
@@ -543,7 +543,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -555,7 +555,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -567,7 +567,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -588,23 +588,23 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
@@ -621,10 +621,10 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "localIdentName": "[local]--[hash:base64:5]",
@@ -633,20 +633,20 @@ Array [
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
         },
         Object {
           "include": Object {},
-          "loader": "svg-sprite-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
             "name": "[name]_[hash]",
           },
@@ -654,7 +654,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "file-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[hash].[ext]",
             "outputPath": "img/",
@@ -663,7 +663,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
       ],
@@ -851,7 +851,7 @@ Array [
       "rules": Array [
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
@@ -866,7 +866,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -880,17 +880,17 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -901,7 +901,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
             "presets": Array [
@@ -913,7 +913,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -925,7 +925,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -937,7 +937,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -958,23 +958,23 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
@@ -991,10 +991,10 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "localIdentName": "[local]--[hash:base64:5]",
@@ -1003,20 +1003,20 @@ Array [
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
         },
         Object {
           "include": Object {},
-          "loader": "svg-sprite-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
             "name": "[name]_[hash]",
           },
@@ -1024,7 +1024,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "file-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
@@ -1033,11 +1033,11 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
-          "loader": "imports-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
           "options": Object {
             "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
           },
@@ -1235,7 +1235,7 @@ Array [
       "rules": Array [
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
@@ -1250,7 +1250,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -1264,17 +1264,17 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -1285,7 +1285,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
             "presets": Array [
@@ -1297,7 +1297,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -1309,7 +1309,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -1321,7 +1321,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -1342,23 +1342,23 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
@@ -1375,10 +1375,10 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "localIdentName": "[local]--[hash:base64:5]",
@@ -1387,20 +1387,20 @@ Array [
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
         },
         Object {
           "include": Object {},
-          "loader": "svg-sprite-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
             "name": "[name]_[hash]",
           },
@@ -1408,7 +1408,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "file-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[hash].[ext]",
             "outputPath": "img/",
@@ -1417,7 +1417,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
       ],
@@ -1613,7 +1613,7 @@ Array [
       "rules": Array [
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
@@ -1628,7 +1628,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -1642,17 +1642,17 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -1663,7 +1663,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
             "presets": Array [
@@ -1675,7 +1675,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -1687,7 +1687,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -1699,7 +1699,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -1720,23 +1720,23 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
@@ -1753,10 +1753,10 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "localIdentName": "[local]--[hash:base64:5]",
@@ -1765,20 +1765,20 @@ Array [
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
         },
         Object {
           "include": Object {},
-          "loader": "svg-sprite-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
             "name": "[name]_[hash]",
           },
@@ -1786,7 +1786,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "file-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
@@ -1795,11 +1795,11 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
-          "loader": "imports-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
           "options": Object {
             "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
           },
@@ -1993,7 +1993,7 @@ Array [
       "rules": Array [
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
@@ -2008,7 +2008,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -2022,17 +2022,17 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -2043,7 +2043,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
             "presets": Array [
@@ -2055,7 +2055,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -2067,7 +2067,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -2079,7 +2079,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -2100,23 +2100,23 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
@@ -2133,10 +2133,10 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "localIdentName": "[local]--[hash:base64:5]",
@@ -2145,20 +2145,20 @@ Array [
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
         },
         Object {
           "include": Object {},
-          "loader": "svg-sprite-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
             "name": "[name]_[hash]",
           },
@@ -2166,7 +2166,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "file-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
@@ -2175,11 +2175,11 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
-          "loader": "imports-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
           "options": Object {
             "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
           },
@@ -2396,13 +2396,11 @@ Array [
   "test/__snapshots__/app.spec.js.snap",
   "test/app.spec.js",
   "test/components/Todos/__snapshots__/index.spec.js.snap",
-  "test/components/Todos/__snapshots__/todo.spec.js.snap",
   "test/components/Todos/__snapshots__/todoAdd.spec.js.snap",
   "test/components/Todos/__snapshots__/todoRemoveButton.spec.js.snap",
   "test/components/Todos/__snapshots__/todosList.spec.js.snap",
   "test/components/Todos/_mocksTodos.json",
   "test/components/Todos/index.spec.js",
-  "test/components/Todos/todo.spec.js",
   "test/components/Todos/todoAdd.spec.js",
   "test/components/Todos/todoRemoveButton.spec.js",
   "test/components/Todos/todosList.spec.js",
@@ -2437,7 +2435,7 @@ Array [
       "rules": Array [
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/js",
             "presets": Array [
@@ -2452,7 +2450,7 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -2466,17 +2464,17 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -2487,7 +2485,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
             "presets": Array [
@@ -2499,7 +2497,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -2511,7 +2509,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -2523,7 +2521,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
@@ -2544,23 +2542,23 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
@@ -2577,10 +2575,10 @@ Array [
               },
             },
             Object {
-              "loader": "style-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/style-loader/index.js",
             },
             Object {
-              "loader": "css-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
                 "localIdentName": "[local]--[hash:base64:5]",
@@ -2589,20 +2587,20 @@ Array [
               },
             },
             Object {
-              "loader": "postcss-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
               "options": Object {
                 "sourceMap": true,
               },
             },
             Object {
-              "loader": "stylus-loader",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
             },
           ],
           "test": Object {},
         },
         Object {
           "include": Object {},
-          "loader": "svg-sprite-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
             "name": "[name]_[hash]",
           },
@@ -2610,7 +2608,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "file-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
             "outputPath": "img/",
@@ -2619,11 +2617,11 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": "json-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
-          "loader": "imports-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
           "options": Object {
             "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
           },
@@ -2807,7 +2805,7 @@ Array [
         Object {
           "enforce": "pre",
           "exclude": Object {},
-          "loader": "eslint-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
             "emitWarning": false,
             "extends": Array [
