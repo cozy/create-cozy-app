@@ -7,7 +7,7 @@ exports[`App component only should be mounted correctly 1`] = `
       <ul class="c-nav">
         <li class="c-nav-item">
           <a href="#/viewhello1" class="c-nav-link router-link-exact-active is-active">
-            <icon-stub class="c-nav-icon"></icon-stub>
+            <icon-stub class="c-nav-iconnnn"></icon-stub>
             First
           </a>
         </li>
