@@ -2816,7 +2816,7 @@ Array [
         },
         Object {
           "exclude": Object {},
-          "loader": "babel-loader",
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "babelrc": false,
             "cacheDirectory": "node_modules/.cache/babel-loader/node",
