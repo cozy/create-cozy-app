@@ -50,7 +50,7 @@ const config = {
       {
         test: /\.js$/,
         exclude: /(node_modules|cozy-(bar|client-js))/,
-        loader: 'babel-loader',
+        loader: require.resolve('babel-loader'),
         options: {
           cacheDirectory: 'node_modules/.cache/babel-loader/node',
           babelrc: false,
