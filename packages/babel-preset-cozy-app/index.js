@@ -23,23 +23,24 @@ const nodeEnv = {
 
 module.exports = declare((api, options, dirname) => {
   // default options
-  let node = false
-  let react = true
+  let presetOptions = {
+    node: false,
+    react: true,
+    transformRegenerator: true
+  }
 
   if (options) {
-    if (options.node) {
-      if (typeof options.node !== 'boolean') {
-        throw new Error("Preset cozy-app 'node' option must be a boolean.")
+    for (let option in presetOptions) {
+      if (options.hasOwnProperty(option)) {
+        if (typeof options[option] !== 'boolean') {
+          throw new Error(`Preset cozy-app '${option}' option must be a boolean.`)
+        }
+        presetOptions[option] = options[option]
       }
-      node = options.node
-    }
-    if (options.react) {
-      if (typeof options.react !== 'boolean') {
-        throw new Error("Preset cozy-app 'react' option must be a boolean.")
-      }
-      react = options.react
     }
   }
+
+  const { node, react, transformRegenerator } = presetOptions
 
   const config = {}
 
@@ -67,7 +68,7 @@ module.exports = declare((api, options, dirname) => {
       useBuiltIns: false
     }]
   ]
-  if (!node) {
+  if (!node && transformRegenerator) {
     plugins.push(
       // Polyfills generator functions (for async/await usage)
       [require.resolve('babel-plugin-transform-runtime'), {

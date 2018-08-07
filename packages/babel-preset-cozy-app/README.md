@@ -76,6 +76,20 @@ By default, this babel preset uses the `react` preset ([`babel-preset-react`](ht
 }
 ```
 
+#### `transformRegenerator` (boolean): `true` by default (for browsers only)
+
+By default, this babel preset uses [`babel-plugin-transform-runtime`](https://babeljs.io/docs/en/babel-plugin-transform-runtime.html) to transform regenerator functions on the runtime. But sometimes (not always) it could break CSPs due to some eval usage so you can disable this behaviour with the `transformRegenerator` option to `false` as following:
+
+```json
+{
+    "presets": [
+        ["cozy-app", {
+            "transformRegenerator": false
+        }]
+    ]
+}
+```
+
 ## Community
 
 ### What's Cozy?
