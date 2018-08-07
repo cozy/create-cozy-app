@@ -46,7 +46,7 @@
     "stylint": "1.5.9",
     "vue-jest": "2.6.0",
     "vue-loader": "15.2.7",
-    "vue-template-compiler": "2.5.16"
+    "vue-template-compiler": "2.5.17"
   },
   "dependencies": {
     "cozy-bar": "5.0.8",
