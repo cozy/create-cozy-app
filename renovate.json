@@ -2,7 +2,6 @@
   "assignees": ["CPatchane"],
   "labels": ["tag: up(deps)"],
   "automerge": false,
-  "lockFileMaintenance": { "enabled": true },
   "extends": [
     "config:js-lib"
   ],
