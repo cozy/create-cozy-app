@@ -42,7 +42,7 @@
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-react": "7.10.0",
     "git-directory-deploy": "1.5.1",
-    "prettier": "1.14.0",
+    "prettier": "1.14.2",
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-test-renderer": "16.4.2",
