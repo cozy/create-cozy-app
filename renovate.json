@@ -16,24 +16,6 @@
       }
     },
     {
-      "packageFile": "packages/babel-preset-cozy-app/package.json",
-      "devDependencies": {
-        "pinVersions": false
-      },
-      "dependencies": {
-        "pinVersions": false
-      }
-    },
-    {
-      "packageFile": "packages/eslint-config-cozy-app/package.json",
-      "devDependencies": {
-        "pinVersions": false
-      },
-      "dependencies": {
-        "pinVersions": false
-      }
-    },
-    {
       "packageFile": "packages/create-cozy-app/package.json",
       "devDependencies": {
         "pinVersions": true
