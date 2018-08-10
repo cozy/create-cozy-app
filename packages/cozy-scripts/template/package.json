@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
-    "babel-preset-cozy-app": "0.10.1",
+    "babel-preset-cozy-app": "1.1.0",
     "cozy-client": "1.0.0-beta.30",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
