@@ -1993,9 +1993,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-cozy-app@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-0.10.0.tgz#983e7a11e36386c785f43f06bdddde5397c704c3"
+eslint-config-cozy-app@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-1.1.0.tgz#98cb251736bb054fa588d5504bac4bfe791edcb9"
   dependencies:
     babel-eslint "^8.0.1"
     eslint "^5.0.0"
@@ -6603,9 +6603,9 @@ svg-baker@^1.2.0, svg-baker@^1.2.17:
     query-string "^4.3.2"
     traverse "^0.6.6"
 
-svg-sprite-loader@3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.8.0.tgz#22fa52b2ff19b01bdd98f3ff197e9801960faa64"
+svg-sprite-loader@3.9.2:
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.9.2.tgz#9208e58855504767a4cfc66f7fec8acf10b56a37"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
