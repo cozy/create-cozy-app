@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "cozy-bar": "5.0.8",
-    "cozy-ui": "10.6.2",
+    "cozy-ui": "10.8.0",
     "eslint-config-cozy-app": "1.1.0",
     "preact": "8.3.0",
     "preact-compat": "3.18.2",
