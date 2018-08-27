@@ -1539,9 +1539,9 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-cozy-app@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-1.1.0.tgz#98cb251736bb054fa588d5504bac4bfe791edcb9"
+eslint-config-cozy-app@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-1.1.1.tgz#21680241524bec774fe5bbba80cb9042dbcd2c25"
   dependencies:
     babel-eslint "^8.0.1"
     eslint "^5.0.0"
