@@ -5,7 +5,13 @@ const SvgoInstance = require('svgo')
 const paths = require('../utils/paths')
 const fs = require('fs')
 
-const svgo = new SvgoInstance()
+const svgo = new SvgoInstance({
+  plugins: [
+    {
+      removeViewBox: false
+    }
+  ]
+})
 
 let iconName
 try {
