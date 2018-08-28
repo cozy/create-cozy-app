@@ -12,7 +12,7 @@
 	},
 	"devDependencies": {
 		"jest": "23.5.0",
-		"lerna": "3.1.4",
+		"lerna": "3.2.1",
 		"lerna-changelog": "0.8.0"
 	}
 }
