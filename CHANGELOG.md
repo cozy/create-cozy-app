@@ -1,4 +1,4 @@
-## Unreleased (2018-08-29)
+## cozy-scripts@0.10.5 (2018-08-29)
 
 #### :bug: Bug Fixes:
 * `cozy-scripts`
