@@ -1,3 +1,40 @@
+## Unreleased (2018-08-29)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#732](https://github.com/CPatchane/create-cozy-app/pull/732) Disable removeViewBox from SVGO ([@gregorylegarec](https://github.com/gregorylegarec))
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#744](https://github.com/CPatchane/create-cozy-app/pull/744) Remove unused standardjs dependencies ([@CPatchane](https://github.com/CPatchane))
+* `babel-preset-cozy-app`, `eslint-config-cozy-app`
+  * [#716](https://github.com/CPatchane/create-cozy-app/pull/716) Move babel and eslint cozy-app packages to [cozy-libs](https://github.com/cozy/cozy-libs) ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#723](https://github.com/CPatchane/create-cozy-app/pull/723) fix(deps): update dependency autoprefixer to v9.1.3 - autoclosed ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#740](https://github.com/CPatchane/create-cozy-app/pull/740), [#724](https://github.com/CPatchane/create-cozy-app/pull/724) fix(deps): update dependency cozy-bar to v5.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#737](https://github.com/CPatchane/create-cozy-app/pull/737), [#709](https://github.com/CPatchane/create-cozy-app/pull/709) fix(deps): update dependency style-loader to v0.23.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#736](https://github.com/CPatchane/create-cozy-app/pull/736), [#713](https://github.com/CPatchane/create-cozy-app/pull/713) fix(deps): update dependency cozy-ui to v10.8.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#733](https://github.com/CPatchane/create-cozy-app/pull/733), [#718](https://github.com/CPatchane/create-cozy-app/pull/718), [#708](https://github.com/CPatchane/create-cozy-app/pull/708) chore(deps): update dependency babel-preset-cozy-app to v1.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#735](https://github.com/CPatchane/create-cozy-app/pull/735) fix(deps): update dependency webpack-dev-server to v2.11.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#734](https://github.com/CPatchane/create-cozy-app/pull/734), [#719](https://github.com/CPatchane/create-cozy-app/pull/719) fix(deps): update dependency eslint-config-cozy-app to v1.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#727](https://github.com/CPatchane/create-cozy-app/pull/727) fix(deps): update dependency preact-compat to v3.18.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#730](https://github.com/CPatchane/create-cozy-app/pull/730) chore(deps): update dependency eslint to v5.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#725](https://github.com/CPatchane/create-cozy-app/pull/725) chore(deps): update dependency eslint-plugin-react to v7.11.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#728](https://github.com/CPatchane/create-cozy-app/pull/728) fix(deps): update dependency svg-sprite-loader to v3.9.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#726](https://github.com/CPatchane/create-cozy-app/pull/726) fix(deps): update dependency preact to v8.3.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#721](https://github.com/CPatchane/create-cozy-app/pull/721) fix(deps): update dependency jest to v23.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#710](https://github.com/CPatchane/create-cozy-app/pull/710) chore(deps): update dependency vue-loader to v15.4.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#714](https://github.com/CPatchane/create-cozy-app/pull/714) chore(deps): update dependency prettier to v1.14.2 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#742](https://github.com/CPatchane/create-cozy-app/pull/742), [#722](https://github.com/CPatchane/create-cozy-app/pull/722), [#720](https://github.com/CPatchane/create-cozy-app/pull/720) chore(deps): update dependency lerna to v3.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+- Grégory Le Garec ([@gregorylegarec](https://github.com/gregorylegarec))
+
+
 ## cozy-scripts@0.10.4, create-cozy-app@0.10.2, babel-preset-cozy-app@0.10.1 (2018-08-07)
 
 #### :arrow_up: Dependencies:
