@@ -1373,9 +1373,9 @@ cozy-device-helper@^1.4.4:
   dependencies:
     lodash "4.17.10"
 
-cozy-ui@10.8.1:
-  version "10.8.1"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-10.8.1.tgz#4d7142a95621a4350f8b47e6f47a2c960ffcee79"
+cozy-ui@10.8.3:
+  version "10.8.3"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-10.8.3.tgz#accc9287af92c37e93f56efcf3fde0baa2b16a69"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     classnames "^2.2.5"
@@ -3509,9 +3509,10 @@ pouchdb-abstract-mapreduce@6.4.3:
     pouchdb-promise "6.4.3"
     pouchdb-utils "6.4.3"
 
-"pouchdb-adapter-cordova-sqlite@git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
+"pouchdb-adapter-cordova-sqlite@https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
   version "2.0.2"
-  resolved "git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
+  uid f3ee23009b70209c611435d57491aa77fb88802a
+  resolved "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
   dependencies:
     pouchdb-adapter-websql-core "^6.1.1"
 
