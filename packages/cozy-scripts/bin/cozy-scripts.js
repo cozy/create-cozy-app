@@ -9,6 +9,16 @@ const getWebpackConfigs = require('../scripts/config')
 
 let actionName
 const program = new commander.Command(pkg.name)
+  .description(
+    `
+    Available actions:
+    - build: build your application once (Webpack)
+    - watch: build your application and listen to changes to rebuild it automatically (Webpack)
+    - standalone: build your application and serve it using Webpack dev server
+    - test: run your tests using Jest
+    - publish: run cozy-app-publish package (cf cozy-app-publish documentation)
+    `
+  )
   .version(pkg.version)
   .arguments('<action-name>')
   .usage(`${colorize.blue('<action-name>')} [options]`)
