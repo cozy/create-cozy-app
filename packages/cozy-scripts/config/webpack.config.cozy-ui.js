@@ -1,8 +1,7 @@
 'use strict'
 
-const webpack = require('webpack')
-
 const paths = require('../utils/paths')
+const cozyUIPlugin = require(paths.appCozyUiStylus)
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const { getCSSLoader } = require('./webpack.vars')
 
@@ -33,19 +32,17 @@ module.exports = {
               }
             }
           },
-          require.resolve('stylus-loader')
+          {
+            loader: require.resolve('stylus-loader'),
+            options: {
+              use: [ cozyUIPlugin() ]
+            }
+          }
         ]
       }
     ]
   },
   plugins: [
-    new SpriteLoaderPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        stylus: {
-          use: [ require(paths.appCozyUiStylus)() ]
-        }
-      }
-    })
+    new SpriteLoaderPlugin()
   ]
 }
