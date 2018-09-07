@@ -303,6 +303,31 @@ Array [
           "symbols": Array [],
         },
       },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
       Object {},
       Object {},
       Object {},
@@ -605,6 +630,31 @@ Array [
             null,
           ],
           "test": Object {},
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
         },
       },
       Object {
@@ -970,6 +1020,31 @@ Array [
           "symbols": Array [],
         },
       },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
       Object {},
       Object {},
       Object {},
@@ -1277,6 +1352,31 @@ Array [
             null,
           ],
           "test": Object {},
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
         },
       },
       Object {
@@ -1650,6 +1750,31 @@ Array [
           "symbols": Array [],
         },
       },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
       Object {},
       Object {},
       Object {},
@@ -1964,6 +2089,31 @@ Array [
       Object {
         "definitions": Object {
           "window.React": "preact-compat",
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
         },
       },
       Object {
@@ -2367,6 +2517,31 @@ Array [
       Object {
         "definitions": Object {
           "window.React": "preact-compat",
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
         },
       },
       Object {
