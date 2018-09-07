@@ -1373,9 +1373,9 @@ cozy-device-helper@^1.4.4:
   dependencies:
     lodash "4.17.10"
 
-cozy-ui@10.8.3:
-  version "10.8.3"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-10.8.3.tgz#accc9287af92c37e93f56efcf3fde0baa2b16a69"
+cozy-ui@10.9.2:
+  version "10.9.2"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-10.9.2.tgz#bf1bbd0e2651acf150bee7b44d6b9e9156db4e0d"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     classnames "^2.2.5"
