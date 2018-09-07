@@ -118,10 +118,6 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
-          "test": Object {},
-        },
-        Object {
           "loader": Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
@@ -495,10 +491,6 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
-          "test": Object {},
-        },
-        Object {
           "loader": Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
@@ -854,10 +846,6 @@ Array [
               ],
             ],
           },
-          "test": Object {},
-        },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -1239,10 +1227,6 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
-          "test": Object {},
-        },
-        Object {
           "loader": Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
@@ -1606,10 +1590,6 @@ Array [
               ],
             ],
           },
-          "test": Object {},
-        },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -1984,10 +1964,6 @@ Array [
               ],
             ],
           },
-          "test": Object {},
-        },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
         Object {
@@ -2427,10 +2403,6 @@ Array [
           "test": Object {},
         },
         Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
-          "test": Object {},
-        },
-        Object {
           "loader": Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/extract-text-webpack-plugin/dist/loader.js",
@@ -2805,10 +2777,6 @@ Array [
               ],
             ],
           },
-          "test": Object {},
-        },
-        Object {
-          "loader": "json-loader",
           "test": Object {},
         },
       ],

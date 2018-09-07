@@ -31,10 +31,6 @@ module.exports = {
         }
       },
       {
-        test: /\.json$/,
-        loader: require.resolve('json-loader')
-      },
-      {
         test: /\.css$/,
         loader: extractor.extract({
           fallback: require.resolve('style-loader'),
