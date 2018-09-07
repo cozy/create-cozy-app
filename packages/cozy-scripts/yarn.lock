@@ -185,6 +185,12 @@ ansi-escapes@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.1.0.tgz#f73207bb81207d75fd6c83f125af26eea378ca30"
 
+ansi-gray@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-gray/-/ansi-gray-0.1.1.tgz#2962cf54ec9792c48510a3deb524436861ef7251"
+  dependencies:
+    ansi-wrap "0.1.0"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
@@ -206,6 +212,10 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
   dependencies:
     color-convert "^1.9.0"
+
+ansi-wrap@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ansi-wrap/-/ansi-wrap-0.1.0.tgz#a82250ddb0015e9a27ca82e82ea603bbfa45efaf"
 
 anymatch@^2.0.0:
   version "2.0.0"
@@ -1097,6 +1107,10 @@ color-string@^0.3.0:
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-0.3.0.tgz#27d46fb67025c5c2fa25993bfbf579e47841b991"
   dependencies:
     color-name "^1.0.0"
+
+color-support@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/color-support/-/color-support-1.1.3.tgz#93834379a1cc9a0c61f82f52f0d04322251bd5a2"
 
 color@^0.11.0:
   version "0.11.4"
@@ -2365,6 +2379,14 @@ eyes@0.1.x:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/eyes/-/eyes-0.1.8.tgz#62cf120234c683785d902348a800ef3e0cc20bc0"
 
+fancy-log@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/fancy-log/-/fancy-log-1.3.2.tgz#f41125e3d84f2e7d89a43d06d958c8f78be16be1"
+  dependencies:
+    ansi-gray "^0.1.1"
+    color-support "^1.1.3"
+    time-stamp "^1.0.0"
+
 fast-deep-equal@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
@@ -2991,6 +3013,10 @@ http-signature@~1.2.0:
 https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
+
+human-size@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/human-size/-/human-size-1.1.0.tgz#052562be999841c037022c20259990c56ea996f9"
 
 i@0.3.x:
   version "0.3.6"
@@ -4978,12 +5004,14 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
 
-postcss-assets-webpack-plugin@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-assets-webpack-plugin/-/postcss-assets-webpack-plugin-1.1.0.tgz#de367f5ed1feb0e5811227299f741033274fbec8"
+postcss-assets-webpack-plugin@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-assets-webpack-plugin/-/postcss-assets-webpack-plugin-3.0.0.tgz#cb15a748cc23a48b956e887d9a2b954c756a289c"
   dependencies:
-    postcss "^5.1.2"
-    webpack-sources "^0.1.2"
+    fancy-log "^1.3.2"
+    human-size "^1.1.0"
+    postcss "^7.0.0"
+    webpack-sources "^1.1.0"
 
 postcss-calc@^5.2.0:
   version "5.3.1"
@@ -5249,7 +5277,7 @@ postcss@7.0.2, postcss@^7.0.0, postcss@^7.0.2:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.1.2, postcss@^5.2.16, postcss@^5.2.17:
+postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16, postcss@^5.2.17:
   version "5.2.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
   dependencies:
@@ -6071,10 +6099,6 @@ source-list-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.0.tgz#aaa47403f7b245a92fbc97ea08f250d6087ed085"
 
-source-list-map@~0.1.7:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
-
 source-map-resolve@^0.5.0:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.2.tgz#72e2cc34095543e43b2c62b2c4c10d4a9054f259"
@@ -6108,7 +6132,7 @@ source-map@0.1.x:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.1, source-map@~0.5.3:
+source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.1:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
@@ -6512,6 +6536,10 @@ through@^2.3.6:
 thunky@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/thunky/-/thunky-1.0.2.tgz#a862e018e3fb1ea2ec3fce5d55605cf57f247371"
+
+time-stamp@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
 
 time-stamp@^2.0.0:
   version "2.1.0"
@@ -6955,14 +6983,7 @@ webpack-merge@4.1.4:
   dependencies:
     lodash "^4.17.5"
 
-webpack-sources@^0.1.2:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-0.1.5.tgz#aa1f3abf0f0d74db7111c40e500b84f966640750"
-  dependencies:
-    source-list-map "~0.1.7"
-    source-map "~0.5.3"
-
-webpack-sources@^1.0.1:
+webpack-sources@^1.0.1, webpack-sources@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.2.0.tgz#18181e0d013fce096faf6f8e6d41eeffffdceac2"
   dependencies:
