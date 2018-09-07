@@ -95,6 +95,7 @@ Array [
     "externals": Array [
       "cozy",
     ],
+    "mode": "development",
     "module": Object {
       "noParse": Array [
         Object {},
@@ -434,9 +435,6 @@ Array [
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
         },
       },
-      Object {
-        "options": Object {},
-      },
     ],
     "resolve": Object {
       "alias": Object {
@@ -474,6 +472,7 @@ Array [
     "externals": Object {
       "cozy-client-js": "cozy",
     },
+    "mode": "production",
     "module": Object {
       "noParse": Array [
         Object {},
@@ -791,19 +790,10 @@ Array [
       },
       Object {},
       Object {
-        "options": Object {
-          "compress": Object {
-            "warnings": false,
-          },
-          "mangle": true,
-        },
-      },
-      Object {
         "definitions": Object {
           "__DEVELOPMENT__": false,
           "__DEVTOOLS__": false,
           "__STACK_ASSETS__": true,
-          "process.env.NODE_ENV": "\\"production\\"",
         },
       },
     ],
@@ -844,6 +834,7 @@ Array [
     "externals": Array [
       "cozy",
     ],
+    "mode": "development",
     "module": Object {
       "noParse": Array [
         Object {},
@@ -1191,9 +1182,6 @@ Array [
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
         },
       },
-      Object {
-        "options": Object {},
-      },
     ],
     "resolve": Object {
       "alias": Object {
@@ -1228,6 +1216,7 @@ Array [
         ".tmp_test/test-app/src/targets/mobile/index.jsx",
       ],
     },
+    "mode": "production",
     "module": Object {
       "noParse": Array [
         Object {},
@@ -1553,19 +1542,10 @@ Array [
       },
       Object {},
       Object {
-        "options": Object {
-          "compress": Object {
-            "warnings": false,
-          },
-          "mangle": true,
-        },
-      },
-      Object {
         "definitions": Object {
           "__DEVELOPMENT__": false,
           "__DEVTOOLS__": false,
           "__STACK_ASSETS__": false,
-          "process.env.NODE_ENV": "\\"production\\"",
         },
       },
     ],
@@ -1606,6 +1586,7 @@ Array [
     "externals": Array [
       "cozy",
     ],
+    "mode": "development",
     "module": Object {
       "noParse": Array [
         Object {},
@@ -1944,9 +1925,6 @@ Array [
           "cozy.bar": "cozy-bar/dist/cozy-bar.js",
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
         },
-      },
-      Object {
-        "options": Object {},
       },
     ],
     "resolve": Object {
@@ -1986,6 +1964,7 @@ Array [
     "externals": Array [
       "cozy",
     ],
+    "mode": "development",
     "module": Object {
       "noParse": Array [
         Object {},
@@ -2324,9 +2303,6 @@ Array [
           "cozy.bar": "cozy-bar/dist/cozy-bar.js",
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
         },
-      },
-      Object {
-        "options": Object {},
       },
     ],
     "resolve": Object {
@@ -2428,6 +2404,7 @@ Array [
     "externals": Array [
       "cozy",
     ],
+    "mode": "development",
     "module": Object {
       "noParse": Array [
         Object {},
@@ -2767,9 +2744,6 @@ Array [
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
         },
       },
-      Object {
-        "options": Object {},
-      },
     ],
     "resolve": Object {
       "alias": Object {
@@ -2800,6 +2774,7 @@ Array [
     "externals": Array [
       "cozy",
     ],
+    "mode": "development",
     "module": Object {
       "rules": Array [
         Object {
