@@ -1,6 +1,7 @@
 'use strict'
 
 const { environment } = require('./webpack.vars')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
 module.exports = {
   module: {
@@ -24,5 +25,9 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    // In the extract mode, the loader must be configured with the plugin
+    new SpriteLoaderPlugin()
+  ]
 }
