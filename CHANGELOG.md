@@ -1,3 +1,23 @@
+## cozy-scripts@0.10.6, create-cozy-app@0.10.3 (2018-09-07)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#752](https://github.com/CPatchane/create-cozy-app/pull/752) Add better command description for cozy-scripts ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`, `create-cozy-app`
+  * [#757](https://github.com/CPatchane/create-cozy-app/pull/757) fix(deps): update dependency commander to v2.18.0 ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts`
+  * [#756](https://github.com/CPatchane/create-cozy-app/pull/756), [#749](https://github.com/CPatchane/create-cozy-app/pull/749) fix(deps): update dependency cozy-ui to v10.9.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#755](https://github.com/CPatchane/create-cozy-app/pull/755) chore(deps): update react monorepo to v16.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#754](https://github.com/CPatchane/create-cozy-app/pull/754) fix(deps): update dependency cozy-client-js to v0.12.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#748](https://github.com/CPatchane/create-cozy-app/pull/748), [#747](https://github.com/CPatchane/create-cozy-app/pull/747) fix(deps): update dependency autoprefixer to v9.1.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#750](https://github.com/CPatchane/create-cozy-app/pull/750) fix(deps): update dependency write-file-webpack-plugin to v4.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#745](https://github.com/CPatchane/create-cozy-app/pull/745) fix(deps): update dependency preact-compat to v3.18.4 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#751](https://github.com/CPatchane/create-cozy-app/pull/751) chore(deps): update dependency lerna to v3.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@0.10.5 (2018-08-29)
 
 #### :bug: Bug Fixes:
