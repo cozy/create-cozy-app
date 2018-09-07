@@ -115,7 +115,14 @@ Array [
                 "sourceMap": true,
               },
             },
-            ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "use": Array [
+                  null,
+                ],
+              },
+            },
           ],
         },
         Object {
@@ -195,18 +202,6 @@ Array [
             ],
           },
           "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
         },
       },
       Object {},
@@ -415,7 +410,14 @@ Array [
                 "sourceMap": true,
               },
             },
-            ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "use": Array [
+                  null,
+                ],
+              },
+            },
           ],
         },
         Object {
@@ -489,18 +491,6 @@ Array [
             ],
           },
           "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
         },
       },
       Object {},
@@ -707,7 +697,14 @@ Array [
                 "sourceMap": true,
               },
             },
-            ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "use": Array [
+                  null,
+                ],
+              },
+            },
           ],
         },
         Object {
@@ -787,18 +784,6 @@ Array [
             ],
           },
           "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
         },
       },
       Object {},
@@ -1012,7 +997,14 @@ Array [
                 "sourceMap": true,
               },
             },
-            ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "use": Array [
+                  null,
+                ],
+              },
+            },
           ],
         },
         Object {
@@ -1086,18 +1078,6 @@ Array [
             ],
           },
           "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
         },
       },
       Object {},
@@ -1312,7 +1292,14 @@ Array [
                 "sourceMap": true,
               },
             },
-            ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "use": Array [
+                  null,
+                ],
+              },
+            },
           ],
         },
         Object {
@@ -1392,18 +1379,6 @@ Array [
             ],
           },
           "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
         },
       },
       Object {},
@@ -1613,7 +1588,14 @@ Array [
                 "sourceMap": true,
               },
             },
-            ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+            Object {
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "use": Array [
+                  null,
+                ],
+              },
+            },
           ],
         },
         Object {
@@ -1693,18 +1675,6 @@ Array [
             ],
           },
           "symbols": Array [],
-        },
-      },
-      Object {
-        "options": Object {
-          "options": Object {
-            "stylus": Object {
-              "use": Array [
-                null,
-              ],
-            },
-          },
-          "test": Object {},
         },
       },
       Object {},
