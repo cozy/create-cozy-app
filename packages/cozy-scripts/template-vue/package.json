@@ -45,7 +45,7 @@
     "prettier": "1.14.2",
     "stylint": "1.5.9",
     "vue-jest": "2.6.0",
-    "vue-loader": "15.4.1",
+    "vue-loader": "15.4.2",
     "vue-template-compiler": "2.5.17"
   },
   "dependencies": {
