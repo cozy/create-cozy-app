@@ -107,7 +107,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -175,7 +175,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -205,7 +205,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -224,7 +224,7 @@ Array [
           "include": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
-            "name": "[name]_[hash]",
+            "symbolId": "[name]_[hash]",
           },
           "test": Object {},
         },
@@ -254,6 +254,7 @@ Array [
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
+      "pathinfo": false,
     },
     "plugins": Array [
       Object {
@@ -263,15 +264,12 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "log": false,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
+        "plugins": Array [
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
       },
       Object {
         "definitions": Object {
@@ -472,7 +470,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -540,7 +538,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -570,7 +568,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -589,7 +587,7 @@ Array [
           "include": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
-            "name": "[name]_[hash]",
+            "symbolId": "[name]_[hash]",
           },
           "test": Object {},
         },
@@ -612,6 +610,7 @@ Array [
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
+      "pathinfo": false,
     },
     "plugins": Array [
       Object {
@@ -621,16 +620,13 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "log": false,
-          "plugins": Array [
-            null,
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
+        "plugins": Array [
+          null,
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
       },
       Object {
         "config": Object {
@@ -824,7 +820,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -892,7 +888,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -922,7 +918,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -941,7 +937,7 @@ Array [
           "include": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
-            "name": "[name]_[hash]",
+            "symbolId": "[name]_[hash]",
           },
           "test": Object {},
         },
@@ -971,6 +967,7 @@ Array [
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/src/targets/mobile/www",
+      "pathinfo": false,
     },
     "plugins": Array [
       Object {
@@ -980,15 +977,12 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "log": false,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
+        "plugins": Array [
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
       },
       Object {
         "definitions": Object {
@@ -1194,7 +1188,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -1262,7 +1256,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -1292,7 +1286,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -1311,7 +1305,7 @@ Array [
           "include": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
-            "name": "[name]_[hash]",
+            "symbolId": "[name]_[hash]",
           },
           "test": Object {},
         },
@@ -1334,6 +1328,7 @@ Array [
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/src/targets/mobile/www",
+      "pathinfo": false,
     },
     "plugins": Array [
       Object {
@@ -1343,16 +1338,13 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "log": false,
-          "plugins": Array [
-            null,
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
+        "plugins": Array [
+          null,
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
       },
       Object {
         "config": Object {
@@ -1554,7 +1546,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -1622,7 +1614,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -1652,7 +1644,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -1671,7 +1663,7 @@ Array [
           "include": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
-            "name": "[name]_[hash]",
+            "symbolId": "[name]_[hash]",
           },
           "test": Object {},
         },
@@ -1701,6 +1693,7 @@ Array [
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
+      "pathinfo": false,
     },
     "plugins": Array [
       Object {
@@ -1710,15 +1703,12 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "log": false,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
+        "plugins": Array [
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
       },
       Object {
         "definitions": Object {
@@ -1920,7 +1910,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -1988,7 +1978,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -2018,7 +2008,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -2037,7 +2027,7 @@ Array [
           "include": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
-            "name": "[name]_[hash]",
+            "symbolId": "[name]_[hash]",
           },
           "test": Object {},
         },
@@ -2067,6 +2057,7 @@ Array [
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
+      "pathinfo": false,
     },
     "plugins": Array [
       Object {
@@ -2076,15 +2067,12 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "log": false,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
+        "plugins": Array [
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
       },
       Object {
         "definitions": Object {
@@ -2348,7 +2336,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "ident": "postcss",
                 "sourceMap": true,
@@ -2416,7 +2404,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -2446,7 +2434,7 @@ Array [
               },
             },
             Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/lib/index.js",
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
               "options": Object {
                 "sourceMap": true,
               },
@@ -2465,7 +2453,7 @@ Array [
           "include": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
           "options": Object {
-            "name": "[name]_[hash]",
+            "symbolId": "[name]_[hash]",
           },
           "test": Object {},
         },
@@ -2495,6 +2483,7 @@ Array [
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
+      "pathinfo": false,
     },
     "plugins": Array [
       Object {
@@ -2504,15 +2493,12 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "log": false,
-          "plugins": Array [
-            null,
-            null,
-            null,
-          ],
-          "test": Object {},
-        },
+        "plugins": Array [
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
       },
       Object {
         "definitions": Object {

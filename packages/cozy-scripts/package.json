@@ -24,13 +24,13 @@
     "commander": "2.18.0",
     "copy-webpack-plugin": "4.5.2",
     "cross-spawn": "6.0.5",
-    "css-loader": "0.28.11",
+    "css-loader": "1.0.0",
     "css-mqpacker": "7.0.0",
     "csswring": "7.0.0",
     "eslint": "5.4.0",
     "eslint-config-cozy-app": "1.1.1",
     "eslint-loader": "2.1.0",
-    "file-loader": "1.1.11",
+    "file-loader": "2.0.0",
     "fs-extra": "7.0.0",
     "html-webpack-plugin": "3.2.0",
     "identity-obj-proxy": "3.0.0",
@@ -39,9 +39,9 @@
     "json-loader": "0.5.7",
     "mini-css-extract-plugin": "0.4.2",
     "postcss": "7.0.2",
-    "postcss-assets-webpack-plugin": "1.1.0",
+    "postcss-assets-webpack-plugin": "3.0.0",
     "postcss-discard-duplicates": "4.0.0",
-    "postcss-loader": "2.1.6",
+    "postcss-loader": "3.0.0",
     "progress": "2.0.0",
     "prompt": "1.0.0",
     "script-ext-html-webpack-plugin": "2.0.1",
@@ -79,5 +79,8 @@
     "template-vue/package.json",
     "template-vue/README.md",
     "template-vue/yarn.lock"
-  ]
+  ],
+  "devDependencies": {
+    "postcss-discard-empty": "2.1.0"
+  }
 }
