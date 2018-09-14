@@ -11,7 +11,7 @@ module.exports = {
         include: /(sprites|icons)/,
         loader: require.resolve('svg-sprite-loader'),
         options: {
-          name: '[name]_[hash]'
+          symbolId: '[name]_[hash]'
         }
       },
       {
