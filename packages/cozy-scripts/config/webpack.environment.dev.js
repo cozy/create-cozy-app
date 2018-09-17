@@ -2,8 +2,12 @@
 
 const webpack = require('webpack')
 const paths = require('../utils/paths')
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const { useHotReload } = require('./webpack.vars')
+
+const buildCozyBarCss = `${paths.appBuild}/cozy-bar.css`
 
 let plugins = [
   new webpack.DefinePlugin({
@@ -13,6 +17,16 @@ let plugins = [
   new webpack.ProvidePlugin({
     'cozy.client': 'cozy-client-js/dist/cozy-client.js',
     'cozy.bar': 'cozy-bar/dist/cozy-bar.js'
+  }),
+  new CopyPlugin([
+    {
+      from: paths.appCozyBarCss,
+      to: buildCozyBarCss
+    }
+  ]),
+  new HtmlWebpackIncludeAssetsPlugin({
+    assets: [buildCozyBarCss],
+    append: false
   })
 ]
 
@@ -32,16 +46,5 @@ module.exports = {
   devtool: '#source-map',
   mode: 'development',
   externals: ['cozy'],
-  module: {
-    rules: [
-      {
-        test: require.resolve(paths.appCozyBarJs),
-        loader: require.resolve('imports-loader'),
-        options: {
-          css: paths.appCozyBarCss
-        }
-      }
-    ]
-  },
   plugins
 }
