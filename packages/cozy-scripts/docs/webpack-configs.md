@@ -31,6 +31,7 @@
 - __[Miscellaneous](#miscellaneous)__
     - [`webpack.vars.js`](#webpackvarsjs)
 
+
 ## Introduction
 
 To build a Cozy application, `cozy-scripts` uses `webpack` under the hood, and this documentation is dedicated to all webpack configuration files.
@@ -138,17 +139,14 @@ The default basic configuration of the application.
 
 ##### Rules
 - all `.js` (excluding `node_modules`, `cozy-bar` and `cozy-client-js`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
-- all `.json` files to be loaded using `json-loader`
-- all `.css` to be loaded using `extract-text-webpack-plugin` imported from `webpack.vars.js` with options:
-    - `style-loader` as fallback
+- all `.css` to be loaded using options:
+    - `mini-css-extract-plugin` extractor loader by default or `style-loader` for hot reloading
     - `css-loader` with `sourceMap`
     - `postcss-loader` to optimize css output code with `sourceMap` and `autoprefixer` plugin to `{ browsers: ['last 2 versions'] }`
 
 A specific `noParse` property is enabled on `/localforage/dist`.
 
 ##### Plugins:
-- `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading)
-- `extract-text-webpack-plugin` imported from `webpack.vars.js`
 - `postcss-assets-webpack-plugin` (logs from this plugin are shown only in `--debug` mode) to load all `.css` files with:
     - `css-mqpacker` (pack all CSS media query rules into one)
     - `postcss-discard-duplicates` (remove duplicates)
@@ -160,31 +158,29 @@ A specific `noParse` property is enabled on `/localforage/dist`.
 This configuration will allow to load styles from `cozy-ui`.
 
 It adds a rule for all `.styl` files excluding `node_modules` and `node_modules/cozy-ui/react` to be loaded using:
-- `style-loader` as fallback
+- `mini-css-extract-plugin` extractor loader by default or `style-loader` for hot reloading
 - `css-loader` with `sourceMap`
 - `postcss-loader` to optimize css output code with `sourceMap` and `autoprefixer` plugin to `{ browsers: ['last 2 versions'] }`
-- `stylus-loader`
+- `stylus-loader` using the custom stylus plugin from cozy-ui as option
 
-It uses two plugins:
-- `svg-sprite-loader/plugin` to merge the built svg sprite from `cozy-ui` into the application's one
-- `webpack.LoaderOptionsPlugin` to make the global stylus loader use the stylus from `cozy-ui`
+It also uses `svg-sprite-loader/plugin` to merge the built svg sprite from `cozy-ui` into the application's one
 
 ### `webpack.config.cozy-ui.react.js`
 
 This configuration is specific to `react` components usage from `cozy-ui`, since they currently need `css-modules`. This configuration file could be removed if this `cozy-ui` requirement disappear.
 
 It adds a rule for all `.styl` files from `cozy-ui/react` to be loaded using:
-- `style-loader` as fallback
+- `mini-css-extract-plugin` extractor loader by default or `style-loader` for hot reloading
 - `css-loader` with `modules`, `sourceMap` and `[local]--[hash:base64:5]` as `localIdentName`
 - `postcss-loader` to optimize css output code with `sourceMap` and `autoprefixer` plugin to `{ browsers: ['last 2 versions'] }`
-- `stylus-loader`
+- `stylus-loader` using the custom stylus plugin from cozy-ui as option
 
 ### `webpack.config.css-modules.js`
 
 This configuration will allow to use `css-modules` with stylus files. To overload previous stylus loaders, it uses the following `webpack-merge` `smartStrategy`: `{ 'modules.loaders': 'replace' }`.
 
 It adds a rule for all `.styl` files excluding `node_modules` and `node_modules/cozy-ui/react` to be loaded using:
-- `style-loader` as fallback
+- `mini-css-extract-plugin` extractor loader by default or `style-loader` for hot reloading
 - `css-loader` with `modules`, `sourceMap` and `[local]--[hash:base64:5]` as `localIdentName`
 - `postcss-loader` to optimize css output code with `sourceMap` and `autoprefixer` plugin to `{ browsers: ['last 2 versions'] }`
 - `stylus-loader`
@@ -226,7 +222,9 @@ It will add two rules:
 - all `.svg` files in `sprites/` and `icons/` folders will be loaded using `svg-sprite-loader` with output name to `[name]_[hash]`. This loader will merge all SVG content to one `.svg` file and replace their reference to the matching `id`. Only one `.svg` sprite file will be loaded by the ouput application.
 - all other `.svg`, `.png`, `.gif`, `.jpg`, `.jpeg` files will be loaded using `file-loader` with options:
     - `path` to `img`, the ouput folder
-    - `name` to `[name].[hash].[ext]` for production environment, `[name].[ext]` for other environments
+    - `symbolId` to `[name].[hash].[ext]` for production environment, `[name].[ext]` for other environments
+
+It also adds `svg-sprite-loader/plugin` as plugin to use it with the related loader.
 
 ### `webpack.config.preact.js`
 
@@ -275,6 +273,7 @@ It will:
 - resolve `.vue` extensions
 - add a rule for `.vue` files, excluding `node_modules`, to be loaded using `vue-loader`.
 
+
 ## Environments
 
 ### `webpack.environment.dev.js`
@@ -282,6 +281,7 @@ It will:
 ##### Properties
 - `devtool` to `#source-map`
 - `externals` with `['cozy']` to exclude all `cozy.*` dependencies from the output bundle (since it will be serve by `ProvidePlugin`)
+- `mode` to `development`
 
 ##### Rules
 - load `cozy-bar` js and css files using `imports-loader`
@@ -291,21 +291,20 @@ It will:
     - `__DEVELOPMENT__` to `true`
     - `__STACK_ASSETS__` to `false`
 - `webpack.ProvidePlugin` to provide `cozy-bar` and `cozy-client-js` from `node_modules` (in production, these modules will be provided to the application by the [`cozy-stack`](https://cozy.github.io/cozy-stack/client-app-dev.html#good-practices-for-your-application))
-- `webpack.NamedModulesPlugin` will cause the relative path of the module to be displayed for hot module replacement
 - `webpack.HotModuleReplacementPlugin` which allows all kinds of modules to be updated at runtime without the need for a full refresh
 
 ### `webpack.environment.prod.js`
 
 ##### Plugins:
 - `webpack.optimize.OccurrenceOrderPlugin`
-- `webpack.optimize.UglifyJsPlugin` with options:
-    - `mangle` to `true`
-    - `compress` with `warnings: false`
 - `webpack.DefinePlugin` to define globals variables at compiling time:
     - `process.env.NODE_ENV` to `production`
     - `__DEVELOPMENT__` to `false`
     - `__DEVTOOLS__` to `false`
-    - `__STACK_ASSETS__` to `true`
+    - `__STACK_ASSETS__` to `true` if `target` different from `mobile`
+
+In this production mode, webpack will automatically use the `UglifyJs` plugin to optimize the build (with default options).
+
 
 ## Targets
 
@@ -313,10 +312,11 @@ It will:
 
 ##### Properties
 - `entry`: the [`babel-polyfill`](https://babeljs.io/docs/en/babel-polyfill.html) import and the `index.jsx` from `src/targets/browser/`
-- `output`: `build/` path with `filename` to `[name].js`
+- `output`: `build/` path with `filename` to `[name].js` and `pathinfo` enabling only with the `COZY_SCRIPTS_DEBUG` mode
 - `externals` with `{ 'cozy-client-js': 'cozy' }` to exclude `cozy-client-js` (via `cozy.*`) dependency from the output bundle
 
 ##### Plugins:
+- `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading) and used with `html-webpack-plugin`
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/browser/` with options:
     - `title`: `name` property of the `package.json`
     - `inject` to `false`
@@ -329,9 +329,10 @@ It will:
 
 ##### Properties
 - `entry`: the [`babel-polyfill`](https://babeljs.io/docs/en/babel-polyfill.html) import and the `index.jsx` from `src/targets/mobile`
-- `output`: `src/targets/mobile/www` path
+- `output`: `src/targets/mobile/www` path and `pathinfo` enabling only with the `COZY_SCRIPTS_DEBUG` mode
 
 ##### Plugins:
+- `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading) and used with `html-webpack-plugin`
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/mobile/` with options:
     - `title`: `name` property of the `package.json`
     - `chunks`: ['app']
@@ -344,14 +345,16 @@ It will:
 - `webpack.ProvidePlugin` to provide `cozy-bar` and `cozy-client-js` from `node_modules` (since it's for the native application, it's not served by the `cozy-stack` unlike the browser version)
 
 
-
 ## Miscellaneous
 
 ### `webpack.vars.js`
 
 This file is used to get webpack variables. They are necessary to build correctly the application. It will export these following variables:
-- `target` according to `NODE_ENV` global variable (`target:environment`)
-- `environment` according to `NODE_ENV` global variable (`target:environment`)
-- `extractor` which is the `extract-text-webpack-plugin` plugin instance. It's configured to output css files using `[name].[hash].min.css` format in 'production' environment and `[name].css` format in other environments.
+- `addAnalyzer` according to the `COZY_SCRIPTS_ANALYZER` environment variable (used to get the `webpack-bundle-analyze` usage)
+- `environment` according to `NODE_ENV` environment variable (`target:environment`)
+- `getCSSLoader`, a function returing the correctly style lodaer to use (`mini-css-extract-plugin` loader by default and `style-loader` for hot reloading)
+- `isDebugMode` according to the `COZY_SCRIPTS_DEBUG` environment variable (used to get into a debug mode of `cozy-scripts`)
+- `target` according to `NODE_ENV` environment variable (`target:environment`)
+- `useHotReload` according to the `HOT_RELOAD` environment variable to use hot reloading feature or not
 
 > If no environment variable `NODE_ENV` is found, it will be `browser:development` by default.

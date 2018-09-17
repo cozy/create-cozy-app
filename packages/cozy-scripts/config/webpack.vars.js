@@ -20,10 +20,10 @@ const getCSSLoader = function () {
 }
 
 module.exports = {
-  environment,
-  target,
-  isDebugMode,
   addAnalyzer,
-  useHotReload,
-  getCSSLoader
+  environment,
+  getCSSLoader,
+  isDebugMode,
+  target,
+  useHotReload
 }
