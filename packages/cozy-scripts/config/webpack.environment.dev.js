@@ -13,8 +13,7 @@ let plugins = [
   new webpack.ProvidePlugin({
     'cozy.client': 'cozy-client-js/dist/cozy-client.js',
     'cozy.bar': 'cozy-bar/dist/cozy-bar.js'
-  }),
-  new webpack.NamedModulesPlugin()
+  })
 ]
 
 if (useHotReload) {
@@ -31,6 +30,7 @@ if (useHotReload) {
 
 module.exports = {
   devtool: '#source-map',
+  mode: 'development',
   externals: ['cozy'],
   module: {
     rules: [

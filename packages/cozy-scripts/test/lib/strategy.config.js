@@ -1,4 +1,4 @@
-const { extractor } = require('cozy-scripts/config/webpack.vars')
+const { getCSSLoader } = require('cozy-scripts/config/webpack.vars')
 
 const configs = [
   {
@@ -9,54 +9,50 @@ const configs = [
       rules: [
         {
           test: /\.css$/,
-          loader: extractor.extract({
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  sourceMap: true,
-                  importLoaders: 1
-                }
-              },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  ident: 'postcss',
-                  sourceMap: true,
-                  plugins: function () {
-                    return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
-                  }
+          use: [
+            getCSSLoader(),
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                importLoaders: 1
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                sourceMap: true,
+                plugins: function () {
+                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
                 }
               }
-            ]
-          })
+            }
+          ]
         },
         {
           test: /\.styl$/,
           exclude: /(node_modules|cozy-ui\/react)/,
-          loader: extractor.extract({
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  sourceMap: true,
-                  importLoaders: 1
+          use: [
+            getCSSLoader(),
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                importLoaders: 1
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                plugins: function () {
+                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
                 }
-              },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  sourceMap: true,
-                  plugins: function () {
-                    return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
-                  }
-                }
-              },
-              'stylus-loader'
-            ]
-          })
+              }
+            },
+            'stylus-loader'
+          ]
         }
       ]
     }
@@ -73,30 +69,28 @@ const configs = [
         {
           test: /\.styl$/,
           exclude: /(node_modules|cozy-ui\/react)/,
-          loader: extractor.extract({
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  sourceMap: true,
-                  importLoaders: 1,
-                  modules: true,
-                  localIdentName: '[local]--[hash:base64:5]'
+          use: [
+            getCSSLoader(),
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                importLoaders: 1,
+                modules: true,
+                localIdentName: '[local]--[hash:base64:5]'
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                plugins: function () {
+                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
                 }
-              },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  sourceMap: true,
-                  plugins: function () {
-                    return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
-                  }
-                }
-              },
-              'stylus-loader'
-            ]
-          })
+              }
+            },
+            'stylus-loader'
+          ]
         }
       ]
     }

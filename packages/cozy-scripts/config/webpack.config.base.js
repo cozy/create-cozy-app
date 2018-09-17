@@ -1,10 +1,11 @@
 'use strict'
 
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const paths = require('../utils/paths')
 
-const {extractor, production, isDebugMode} = require('./webpack.vars')
+const {environment, isDebugMode, getCSSLoader} = require('./webpack.vars')
+const production = environment === 'production'
 
 module.exports = {
   output: {
@@ -31,33 +32,27 @@ module.exports = {
         }
       },
       {
-        test: /\.json$/,
-        loader: require.resolve('json-loader')
-      },
-      {
         test: /\.css$/,
-        loader: extractor.extract({
-          fallback: require.resolve('style-loader'),
-          use: [
-            {
-              loader: require.resolve('css-loader'),
-              options: {
-                sourceMap: true,
-                importLoaders: 1
-              }
-            },
-            {
-              loader: require.resolve('postcss-loader'),
-              options: {
-                ident: 'postcss',
-                sourceMap: true,
-                plugins: function () {
-                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
-                }
+        use: [
+          getCSSLoader(),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          {
+            loader: require.resolve('postcss-loader'),
+            options: {
+              ident: 'postcss',
+              sourceMap: true,
+              plugins: function () {
+                return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
               }
             }
-          ]
-        })
+          }
+        ]
       }
     ],
     noParse: [
@@ -65,10 +60,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: `[name]${production ? '.[hash].min' : ''}.css`,
+      chunkFilename: `[name].[id]${production ? '.[hash].min' : ''}.css`
     }),
-    extractor,
     new PostCSSAssetsPlugin({
       test: /\.css$/,
       log: isDebugMode,

@@ -58,10 +58,6 @@ const config = {
             ['cozy-app', { node: true, react: false }]
           ]
         }
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
       }
     ]
   },

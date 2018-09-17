@@ -1,6 +1,7 @@
 'use strict'
 
 const { environment } = require('./webpack.vars')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
 module.exports = {
   module: {
@@ -10,7 +11,7 @@ module.exports = {
         include: /(sprites|icons)/,
         loader: require.resolve('svg-sprite-loader'),
         options: {
-          name: '[name]_[hash]'
+          symbolId: '[name]_[hash]'
         }
       },
       {
@@ -24,5 +25,9 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    // In the extract mode, the loader must be configured with the plugin
+    new SpriteLoaderPlugin()
+  ]
 }

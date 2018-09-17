@@ -247,6 +247,7 @@ You can find more information about webpack configuration files available via `c
 
 If you need more particular/complicated configurations and need to use the [`webpack-merge`](https://github.com/survivejs/webpack-merge#merging-with-strategies) smart mode or merge strategies, you can also find more information about in the dedicated [merge strategies documentation](docs/webpack-merge-strategies.md).
 
+> :warning: `cozy-scripts` internally uses __Webpack v4__, be sure to use Webpack 4 compatible configurations if you want to provide some custom __configurations in the `app.config.js`__
 
 ## Community
 

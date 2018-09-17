@@ -4,8 +4,9 @@ const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
-const {production} = require('./webpack.vars')
+const { production, isDebugMode } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest)
 
 const appName = manifest.name_prefix
@@ -19,7 +20,8 @@ module.exports = {
     app: [require.resolve('babel-polyfill'), paths.appMobileIndex()]
   },
   output: {
-    path: paths.appMobileWWW
+    path: paths.appMobileWWW,
+    pathinfo: isDebugMode
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -39,6 +41,9 @@ module.exports = {
       minify: {
         collapseWhitespace: true
       }
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'defer'
     })
   ]
 }

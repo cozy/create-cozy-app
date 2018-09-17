@@ -1,6 +1,6 @@
 'use strict'
 
-const { extractor } = require('./webpack.vars')
+const { getCSSLoader } = require('./webpack.vars')
 
 module.exports = {
   __mergeStrategy: {
@@ -15,30 +15,28 @@ module.exports = {
       {
         test: /\.styl$/,
         exclude: /(node_modules|cozy-ui\/react)/,
-        loader: extractor.extract({
-          fallback: require.resolve('style-loader'),
-          use: [
-            {
-              loader: require.resolve('css-loader'),
-              options: {
-                sourceMap: true,
-                importLoaders: 1,
-                modules: true,
-                localIdentName: '[local]--[hash:base64:5]'
+        use: [
+          getCSSLoader(),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[local]--[hash:base64:5]'
+            }
+          },
+          {
+            loader: require.resolve('postcss-loader'),
+            options: {
+              sourceMap: true,
+              plugins: function () {
+                return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
               }
-            },
-            {
-              loader: require.resolve('postcss-loader'),
-              options: {
-                sourceMap: true,
-                plugins: function () {
-                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
-                }
-              }
-            },
-            require.resolve('stylus-loader')
-          ]
-        })
+            }
+          },
+          require.resolve('stylus-loader')
+        ]
       }
     ]
   }
