@@ -205,6 +205,17 @@ describe('App from cozy-scripts', () => {
     }).not.toThrow()
   })
 
+  // the --help option should always be a working option of the release CLI
+  it('should work correctly with release --help option', () => {
+    console.log(colorize.orange('Running release --help...'))
+    const releaseScript = require(path.join(appPath, 'node_modules', 'cozy-scripts', 'scripts', 'release.js'))
+    expect(() => {
+      releaseScript({
+        cliArgs: ['--help']
+      })
+    }).not.toThrow()
+  })
+
   // Custom app.config.js, skipped because it caches for the next test
   xit('should use the custom app config if an `app.config.js` exists in the app directory', () => {
     fs.copySync(ownTestConfig, customConfigPath)
