@@ -242,13 +242,6 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
-          "options": Object {
-            "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
-          },
-          "test": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
-        },
       ],
     },
     "output": Object {
@@ -397,6 +390,23 @@ Array [
         "definitions": Object {
           "cozy.bar": "cozy-bar/dist/cozy-bar.js",
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {},
+      Object {
+        "options": Object {
+          "append": false,
+          "assets": Array [
+            ".tmp_test/test-app/build/cozy-bar.css",
+          ],
+          "cssExtensions": Array [
+            ".css",
+          ],
+          "hash": false,
+          "jsExtensions": Array [
+            ".js",
+          ],
+          "publicPath": true,
         },
       },
     ],
@@ -955,13 +965,6 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
-          "options": Object {
-            "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
-          },
-          "test": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
-        },
       ],
     },
     "output": Object {
@@ -1118,6 +1121,23 @@ Array [
         "definitions": Object {
           "cozy.bar": "cozy-bar/dist/cozy-bar.js",
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {},
+      Object {
+        "options": Object {
+          "append": false,
+          "assets": Array [
+            ".tmp_test/test-app/build/cozy-bar.css",
+          ],
+          "cssExtensions": Array [
+            ".css",
+          ],
+          "hash": false,
+          "jsExtensions": Array [
+            ".js",
+          ],
+          "publicPath": true,
         },
       },
     ],
@@ -1681,13 +1701,6 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
-          "options": Object {
-            "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
-          },
-          "test": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
-        },
       ],
     },
     "output": Object {
@@ -1836,6 +1849,23 @@ Array [
         "definitions": Object {
           "cozy.bar": "cozy-bar/dist/cozy-bar.js",
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {},
+      Object {
+        "options": Object {
+          "append": false,
+          "assets": Array [
+            ".tmp_test/test-app/build/cozy-bar.css",
+          ],
+          "cssExtensions": Array [
+            ".css",
+          ],
+          "hash": false,
+          "jsExtensions": Array [
+            ".js",
+          ],
+          "publicPath": true,
         },
       },
     ],
@@ -2045,13 +2075,6 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
-          "options": Object {
-            "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
-          },
-          "test": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
-        },
       ],
     },
     "output": Object {
@@ -2200,6 +2223,23 @@ Array [
         "definitions": Object {
           "cozy.bar": "cozy-bar/dist/cozy-bar.js",
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {},
+      Object {
+        "options": Object {
+          "append": false,
+          "assets": Array [
+            ".tmp_test/test-app/build/cozy-bar.css",
+          ],
+          "cssExtensions": Array [
+            ".css",
+          ],
+          "hash": false,
+          "jsExtensions": Array [
+            ".js",
+          ],
+          "publicPath": true,
         },
       },
     ],
@@ -2471,13 +2511,6 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
-        Object {
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/imports-loader/index.js",
-          "options": Object {
-            "css": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
-          },
-          "test": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
-        },
       ],
     },
     "output": Object {
@@ -2626,6 +2659,23 @@ Array [
         "definitions": Object {
           "cozy.bar": "cozy-bar/dist/cozy-bar.js",
           "cozy.client": "cozy-client-js/dist/cozy-client.js",
+        },
+      },
+      Object {},
+      Object {
+        "options": Object {
+          "append": false,
+          "assets": Array [
+            ".tmp_test/test-app/build/cozy-bar.css",
+          ],
+          "cssExtensions": Array [
+            ".css",
+          ],
+          "hash": false,
+          "jsExtensions": Array [
+            ".js",
+          ],
+          "publicPath": true,
         },
       },
     ],
