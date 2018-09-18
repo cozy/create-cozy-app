@@ -283,15 +283,17 @@ It will:
 - `externals` with `['cozy']` to exclude all `cozy.*` dependencies from the output bundle (since it will be serve by `ProvidePlugin`)
 - `mode` to `development`
 
-##### Rules
-- load `cozy-bar` js and css files using `imports-loader`
-
 ##### Plugins:
 - `webpack.DefinePlugin` to define globals variables at compiling time:
     - `__DEVELOPMENT__` to `true`
     - `__STACK_ASSETS__` to `false`
 - `webpack.ProvidePlugin` to provide `cozy-bar` and `cozy-client-js` from `node_modules` (in production, these modules will be provided to the application by the [`cozy-stack`](https://cozy.github.io/cozy-stack/client-app-dev.html#good-practices-for-your-application))
+- Copy (`copy-webpack-plugin`) the `cozy-bar.css` file from `node_modules` ot the app build to be able to develop on the `cozy-bar` using the app
+- Add the `cozy-bar` css to the main html file via `html-webpack-include-assets-plugin`
+
+Only in the hot reload mode:
 - `webpack.HotModuleReplacementPlugin` which allows all kinds of modules to be updated at runtime without the need for a full refresh
+- `write-file-webpack-plugin` to write all the build file from `webpack-dev-server` to the disk (necessary for the hot-reloading)
 
 ### `webpack.environment.prod.js`
 
