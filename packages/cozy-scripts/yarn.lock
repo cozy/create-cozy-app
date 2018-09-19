@@ -2896,7 +2896,7 @@ html-minifier@^3.2.3:
 
 html-webpack-include-assets-plugin@1.0.4:
   version "1.0.4"
-  resolved "https://registry.yarnpkg.com/html-webpack-include-assets-plugin/-/html-webpack-include-assets-plugin-1.0.4.tgz#279cfdf001301f5a945b2525f7f6394d48a3a157"
+  resolved "http://registry.npmjs.org/html-webpack-include-assets-plugin/-/html-webpack-include-assets-plugin-1.0.4.tgz#279cfdf001301f5a945b2525f7f6394d48a3a157"
   dependencies:
     glob "^7.1.2"
     minimatch "^3.0.4"
