@@ -50,7 +50,7 @@
     "stylint": "1.5.9"
   },
   "dependencies": {
-    "cozy-bar": "5.2.0",
+    "cozy-bar": "6.1.1",
     "cozy-ui": "11.1.1",
     "eslint-config-cozy-app": "1.1.1",
     "preact": "8.3.1",
