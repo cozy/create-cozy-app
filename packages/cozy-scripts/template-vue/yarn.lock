@@ -1347,9 +1347,9 @@ cosmiconfig@^5.0.5:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-cozy-bar@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-5.2.0.tgz#2372e2d555227c2288f82123b0faa5072fcf7191"
+cozy-bar@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.1.1.tgz#dbce5048786363a2dd54de789da57fb08b85f936"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     core-js "^2.5.3"
