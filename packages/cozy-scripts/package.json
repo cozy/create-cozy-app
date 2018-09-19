@@ -48,7 +48,7 @@
     "style-loader": "0.23.0",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",
-    "svg-sprite-loader": "3.9.2",
+    "svg-sprite-loader": "4.1.1",
     "svgo": "1.1.1",
     "validate-npm-package-name": "3.0.0",
     "webpack": "4.19.1",
