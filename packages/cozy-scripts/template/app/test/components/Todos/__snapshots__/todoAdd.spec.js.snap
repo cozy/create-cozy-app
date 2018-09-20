@@ -31,7 +31,6 @@ exports[`TodoAdd component: should be rendered correctly 1`] = `
 
 exports[`TodoAdd component: should handle isWorking correctly (display spinner) 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoAdd
     createTodo={[MockFunction]}
@@ -246,6 +245,8 @@ ShallowWrapper {
         },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;

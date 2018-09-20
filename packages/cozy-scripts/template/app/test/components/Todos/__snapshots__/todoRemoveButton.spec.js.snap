@@ -14,7 +14,6 @@ exports[`TodoRemoveButton component: should be rendered correctly 1`] = `
 
 exports[`TodoRemoveButton component: should handle isWorking correctly (display spinner) 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoRemoveButton
     deleteTodo={[MockFunction]}
@@ -85,6 +84,8 @@ ShallowWrapper {
         },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;
