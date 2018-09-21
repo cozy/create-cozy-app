@@ -881,9 +881,9 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-cozy-app@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.1.1.tgz#ca53c4b4b005008e8e96054a5a1bb9bb18cd5c51"
+babel-preset-cozy-app@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.1.2.tgz#78b9b5393be775d8c6666d239e1e2f1c25b867d9"
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0-beta.46"
     babel-plugin-transform-class-properties "^6.24.1"
