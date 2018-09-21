@@ -53,7 +53,7 @@
     "cozy-client-js": "0.13.0",
     "cozy-ui": "11.1.1",
     "date-fns": "1.29.0",
-    "eslint-config-cozy-app": "1.1.1",
+    "eslint-config-cozy-app": "1.1.2",
     "node-polyglot": "2.3.0",
     "vue": "2.5.17",
     "vue-router": "3.0.1",
