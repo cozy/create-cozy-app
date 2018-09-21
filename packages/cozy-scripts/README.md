@@ -210,7 +210,19 @@ Do the same thing than the previous command with webpack in a watching mode but 
 
 ##### - `cozy-scripts publish`
 
-This command will internally fetch and run the latest version of the [`cozy-app-publish` CLI](https://github.com/cozy/cozy-app-publish) to publish your application on a Cozy registry (by default the official and main Cozy Cloud applications registry on `https://apps-registry.cozycloud.cc`). The options and arguments are the same than in the [`cozy-app-publish` package documentation](https://github.com/cozy/cozy-app-publish).
+This command will internally fetch and run the latest version of the [`cozy-app-publish` CLI](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-app-publish) to publish your application on a Cozy registry (by default the official and main Cozy Cloud applications registry on `https://apps-registry.cozycloud.cc`). The options and arguments are the same than in the [`cozy-app-publish` package documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-app-publish).
+
+##### - `cozy-scripts release`
+
+This command will run a script to release a new version of the application.
+The first step is to start the release using `cozy-scripts release start`. It will make a new release branch according to your current version and it will bump the version on your master branch.
+Then you can release new versions (on your release branch) using `cozy-scripts release patch|beta|stable` according to your needs.
+
+By default, this script will push on your git `origin` remote but you can change by passing it to your script after the action name: `cozy-scripts release start cozy` to use the remote named `cozy`.
+
+__You can find more informations about this library and how to use it in [`cozy-release` documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-app-publish)__
+
+> :warning: __BE VERY CAREFUL__ using this script since __it will push directly to your remote repository__. A prompt will warn you before starting the release.
 
 ##### - `--vue`
 

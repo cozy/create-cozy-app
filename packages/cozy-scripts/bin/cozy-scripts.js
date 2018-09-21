@@ -17,6 +17,7 @@ const program = new commander.Command(pkg.name)
     - standalone: build your application and serve it using Webpack dev server
     - test: run your tests using Jest
     - publish: run cozy-app-publish package (cf cozy-app-publish documentation)
+    - release: run cozy-release to manage an app version release (cf cozy-release documentation)
     `
   )
   .version(pkg.version)
@@ -64,7 +65,14 @@ if (program.showConfig) {
   process.exit(0)
 }
 
-const availableScripts = ['watch', 'build', 'standalone', 'test', 'publish']
+const availableScripts = [
+  'build',
+  'watch',
+  'standalone',
+  'test',
+  'publish',
+  'release'
+]
 
 if (availableScripts.includes(actionName)) {
   const scriptPath = `../scripts/${actionName}`
