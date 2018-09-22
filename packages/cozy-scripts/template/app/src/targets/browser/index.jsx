@@ -73,19 +73,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderApp(client)
 })
-
-// Hot reload
-if (module.hot) {
-  module.hot.accept('components/App', () =>
-    requestAnimationFrame(() => {
-      const root = document.querySelector('[role=application]')
-      const data = root.dataset
-      const protocol = window.location ? window.location.protocol : 'https:'
-      const client = new CozyClient({
-        uri: `${protocol}//${data.cozyDomain}`,
-        token: data.cozyToken
-      })
-      renderApp(client)
-    })
-  )
-}

@@ -22,6 +22,9 @@ module.exports = (buildOptions) => {
   // remove build folder
   cleanBuild(buildTarget)
 
+  const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
+  const useHotReload = process.env.HOT_RELOAD === 'true'
+
   // webpack configurations
   const configs = getWebpackConfigs(options)
   // the main app config is at the first position
@@ -31,9 +34,24 @@ module.exports = (buildOptions) => {
     filename: '[name][hash].bundle.js',
     publicPath: `http://${host}:${port}/`
   })
-
-  const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
-  const useHotReload = process.env.HOT_RELOAD === 'true'
+  // related issue for HMR
+  // entry points https://github.com/webpack/webpack-dev-server/issues/1377
+  // WebpackDevServer.addDevServerEntrypoints seems to not working correctly
+  // with our configuration, so we add them manually
+  if (useHotReload && appConfig.entry) {
+    if (Array.isArray(appConfig.entry.app)) {
+      appConfig.entry.app = [
+        `webpack-dev-server/client?http://${host}:${port}/`,
+        'webpack/hot/dev-server'
+      ].concat(appConfig.entry.app)
+    }
+    if (Array.isArray(appConfig.entry.intents)) {
+      appConfig.entry.intents = [
+        `webpack-dev-server/client?http://${host}:${port}/`,
+        'webpack/hot/dev-server'
+      ].concat(appConfig.entry.intents)
+    }
+  }
 
   const WebpackOptions = {
     stats: {
@@ -44,6 +62,8 @@ module.exports = (buildOptions) => {
       // Shows colors in the console
       colors: true
     },
+    // should always be the same than the webpack config publicPath
+    publicPath: appConfig.output.publicPath,
     inline: true,
     hot: useHotReload,
     host,
@@ -56,7 +76,6 @@ module.exports = (buildOptions) => {
     } : {}
   }
 
-  WebpackDevServer.addDevServerEntrypoints(appConfig, WebpackOptions)
   const compiler = webpack(appConfig)
   const server = new WebpackDevServer(compiler, WebpackOptions)
 
