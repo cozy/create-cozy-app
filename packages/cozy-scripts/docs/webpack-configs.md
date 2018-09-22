@@ -5,6 +5,7 @@
 - __[Introduction](#introduction)__
 - __[Bundles](#bundles)__
     - [`webpack.bundle.default.js`](#webpackbundledefaultjs)
+    - [`webpack.bundle.preact.js`](#webpackbundlepreactjs)
     - [`webpack.bundle.vue.js`](#webpackbundlevuejs)
 - __[Unit Configs](#unit-configs)__
     - [`webpack.config.analyzer.js`](#webpackconfiganalyzerjs)
@@ -19,6 +20,7 @@
     - [`webpack.config.pictures.js`](#webpackconfigpicturesjs)
     - [`webpack.config.preact.js`](#webpackconfigpreactjs)
     - [`webpack.config.progress.js`](#webpackconfigprogressjs)
+    - [`webpack.config.react.js`](#webpackconfigreactjs)
     - [`webpack.config.services.js`](#webpackconfigservicesjs)
     - [`webpack.config.vendors.js`](#webpackconfigvendorsjs)
     - [`webpack.config.vue.js`](#webpackconfigvuejs)
@@ -60,7 +62,8 @@ This file is the default config bundle used for the application built from `cozy
 - `webpack.config.intents.js`
 - `webpack.config.manifest.js`
 - `webpack.config.pictures.js`
-- `webpack.config.preact.js`
+- `webpack.config.progress.js`
+- `webpack.config.react.js`
 - `webpack.config.vendors.js`
 - `webpack.environment.dev.js`
 - `webpack.environment.prod.js`
@@ -85,6 +88,44 @@ const myConfig = require('./config/webpack.myconfig.js')
 module.exports = [configs, myConfig]
 ```
 
+
+### `webpack.bundle.preact.js`
+
+This file is the same default bundle but using preact instead (previous default config bundle used for the application built from `cozy-scripts`). It uses all following configs files:
+- `webpack.config.base.js`
+- `webpack.config.cozy-ui.js`
+- `webpack.config.cozy-ui.react.js`
+- `webpack.config.eslint.js`
+- `webpack.config.intents.js`
+- `webpack.config.manifest.js`
+- `webpack.config.pictures.js`
+- __`webpack.config.preact.js`__
+- `webpack.config.progress.js`
+- `webpack.config.vendors.js`
+- `webpack.environment.dev.js`
+- `webpack.environment.prod.js`
+- `webpack.target.browser.js`
+- `webpack.target.mobile.js`
+- `webpack.vars.js`
+
+This config will replace `react` usage by `preact-compat` in a transparent manner (webpack aliases).
+__The `app.config.js` is needed to use this bundle since it's not the default one for `cozy-scripts`__. But you can still overload it using a custom config like the default bundle:
+
+```js
+// app.config.js
+
+// using ES Modules
+import configs from 'cozy-scripts/config/webpack.bundle.preact.js'
+import myConfig from './config/webpack.myconfig.js'
+// or using CommonJS
+const configs = require('cozy-scripts/config/webpack.bundle.preact.js')
+const myConfig = require('./config/webpack.myconfig.js')
+
+// it's possible to add many custom configurations using this way,
+// the last will overwrite the previous in case of conflicts
+module.exports = [configs, myConfig]
+```
+
 ### `webpack.bundle.vue.js`
 
 This file is the VueJS config bundle used for the application built from `cozy-scripts` with the option `--vue`. It uses all following configs files:
@@ -94,6 +135,7 @@ This file is the VueJS config bundle used for the application built from `cozy-s
 - `webpack.config.intents.js`
 - `webpack.config.manifest.js`
 - `webpack.config.pictures.js`
+- `webpack.config.progress.js`
 - `webpack.config.vendors.js`
 - `webpack.config.vue.js`
 - `webpack.environment.dev.js`
@@ -102,7 +144,7 @@ This file is the VueJS config bundle used for the application built from `cozy-s
 - `webpack.target.mobile.js`
 - `webpack.vars.js`
 
-The `app.config.js` is needed to use this bundle since it's not the default one for `cozy-scripts`. But you can still overload it using a custom config like the default bundle:
+You can still overload it using a custom config like the default bundle using the `app.config.js` file:
 
 ```js
 // app.config.js
@@ -259,6 +301,14 @@ This config will:
 - define the global variable `__TARGET__` to `services` using the plugin `webpack.DefinePlugin`
 
 This config will be used only if the webpack target is `browser`.
+
+### `webpack.config.react.js`
+
+A config to load `.jsx` using for React components.
+
+It will:
+- resolve `.jsx` extensions
+- add a rule for `.jsx` files excluding `node_modules` (exception for `node_modules/cozy-ui`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
 
 ### `webpack.config.vendors.js`
 
