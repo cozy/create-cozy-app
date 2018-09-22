@@ -1,6 +1,8 @@
 'use strict'
 
-const {isDebugMode} = require('./webpack.vars')
+const { environment, useHotReload } = require('./webpack.vars')
+
+const forceWarning = environment === 'production' || useHotReload
 
 module.exports = {
   module: {
@@ -12,7 +14,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app'],
-          emitWarning: isDebugMode
+          emitWarning: forceWarning
         }
       },
       {
@@ -22,7 +24,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app/vue'],
-          emitWarning: isDebugMode
+          emitWarning: forceWarning
         }
       },
       {
@@ -32,7 +34,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app/react'],
-          emitWarning: isDebugMode
+          emitWarning: forceWarning
         }
       }
     ]

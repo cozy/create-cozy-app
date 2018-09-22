@@ -188,6 +188,7 @@ It adds a rule for all `.styl` files excluding `node_modules` and `node_modules/
 ### `webpack.config.eslint.js`
 
 A rule to preload all `.js/.jsx` files with `eslint-loader` (excluding `node_modules`) extending [`babel-preset-cozy-app`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/babel-preset-cozy-app)
+The `emitWarning` option is set to true for production environment or if hot reload is enabled to force emitting warning and to avoid errors breaking the build.
 
 ### `webpack.config.intents.js`
 
