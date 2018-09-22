@@ -399,7 +399,7 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            ".tmp_test/test-app/build/cozy-bar.css",
+            "cozy-bar.css",
           ],
           "cssExtensions": Array [
             ".css",
@@ -506,7 +506,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -518,7 +518,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/vue",
             ],
@@ -530,7 +530,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/react",
             ],
@@ -1134,7 +1134,7 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            ".tmp_test/test-app/build/cozy-bar.css",
+            "cozy-bar.css",
           ],
           "cssExtensions": Array [
             ".css",
@@ -1238,7 +1238,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -1250,7 +1250,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/vue",
             ],
@@ -1262,7 +1262,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/react",
             ],
@@ -1866,7 +1866,7 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            ".tmp_test/test-app/build/cozy-bar.css",
+            "cozy-bar.css",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2242,7 +2242,7 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            ".tmp_test/test-app/build/cozy-bar.css",
+            "cozy-bar.css",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2680,7 +2680,7 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            ".tmp_test/test-app/build/cozy-bar.css",
+            "cozy-bar.css",
           ],
           "cssExtensions": Array [
             ".css",
