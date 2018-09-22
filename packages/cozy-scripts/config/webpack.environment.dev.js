@@ -25,8 +25,9 @@ let plugins = [
     }
   ]),
   new HtmlWebpackIncludeAssetsPlugin({
-    assets: [buildCozyBarCss],
-    append: false
+    assets: ['cozy-bar.css'],
+    append: false,
+    publicPath: true
   })
 ]
 
