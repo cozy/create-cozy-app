@@ -9,7 +9,7 @@ const {
 
 const configs = [
   require('./webpack.config.base'),
-  require('./webpack.config.react'),
+  require('./webpack.config.preact'),
   require('./webpack.config.eslint'),
   require('./webpack.config.cozy-ui'),
   require('./webpack.config.cozy-ui.react'),

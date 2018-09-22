@@ -265,11 +265,6 @@ Array [
         "test": Object {},
       },
       Object {
-        "definitions": Object {
-          "window.React": "preact-compat",
-        },
-      },
-      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -413,11 +408,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
@@ -764,11 +754,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
@@ -992,11 +977,6 @@ Array [
         "test": Object {},
       },
       Object {
-        "definitions": Object {
-          "window.React": "preact-compat",
-        },
-      },
-      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -1148,11 +1128,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
@@ -1504,11 +1479,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
@@ -1732,11 +1702,6 @@ Array [
         "test": Object {},
       },
       Object {
-        "definitions": Object {
-          "window.React": "preact-compat",
-        },
-      },
-      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -1880,11 +1845,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
@@ -2108,11 +2068,6 @@ Array [
         "test": Object {},
       },
       Object {
-        "definitions": Object {
-          "window.React": "preact-compat",
-        },
-      },
-      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -2256,11 +2211,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
@@ -2546,11 +2496,6 @@ Array [
         "test": Object {},
       },
       Object {
-        "definitions": Object {
-          "window.React": "preact-compat",
-        },
-      },
-      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -2694,11 +2639,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
@@ -2769,11 +2709,6 @@ Array [
       },
     ],
     "resolve": Object {
-      "alias": Object {
-        "preact-compat": "preact-compat/dist/preact-compat",
-        "react": "preact-compat",
-        "react-dom": "preact-compat",
-      },
       "extensions": Array [
         ".js",
         ".json",
