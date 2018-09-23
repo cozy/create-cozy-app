@@ -120,6 +120,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
             "presets": Array [
               "cozy-app",
             ],
@@ -485,6 +486,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
             "presets": Array [
               "cozy-app",
             ],
@@ -832,6 +834,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
             "presets": Array [
               "cozy-app",
             ],
@@ -1202,6 +1205,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
             "presets": Array [
               "cozy-app",
             ],
@@ -1557,6 +1561,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
             "presets": Array [
               "cozy-app",
             ],
@@ -1923,6 +1928,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
             "presets": Array [
               "cozy-app",
             ],
@@ -2351,6 +2357,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
             "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
             "presets": Array [
               "cozy-app",
             ],
