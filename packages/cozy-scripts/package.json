@@ -81,6 +81,6 @@
     "template-vue/yarn.lock"
   ],
   "devDependencies": {
-    "postcss-discard-empty": "4.0.0"
+    "postcss-discard-empty": "4.0.1"
   }
 }
