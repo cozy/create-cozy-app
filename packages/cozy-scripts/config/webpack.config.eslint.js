@@ -1,6 +1,6 @@
 'use strict'
 
-const { environment, useHotReload } = require('./webpack.vars')
+const { environment, useHotReload, eslintFix } = require('./webpack.vars')
 
 const forceWarning = environment === 'production' || useHotReload
 
@@ -14,6 +14,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app'],
+          fix: eslintFix,
           emitWarning: forceWarning
         }
       },
@@ -24,6 +25,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app/vue'],
+          fix: eslintFix,
           emitWarning: forceWarning
         }
       },
@@ -34,6 +36,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app/react'],
+          fix: eslintFix,
           emitWarning: forceWarning
         }
       }

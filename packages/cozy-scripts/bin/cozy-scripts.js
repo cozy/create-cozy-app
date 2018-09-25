@@ -28,6 +28,7 @@ const program = new commander.Command(pkg.name)
   })
   .option('--show-config', 'just print app final webpack config')
   .option('--debug', 'print more outputs for debugging')
+  .option('--fix', 'format automatically the code with eslint')
   .option('--development', 'specify development build mode')
   .option('--hot', 'enable hot module reload (only for development)')
   .option('--production', 'specify production build mode')
@@ -58,6 +59,10 @@ const options = {
 
 if (program.hot) {
   process.env.HOT_RELOAD = 'true'
+}
+
+if (program.fix) {
+  process.env.COZY_SCRIPTS_ESLINT_FIX = 'true'
 }
 
 if (program.showConfig) {

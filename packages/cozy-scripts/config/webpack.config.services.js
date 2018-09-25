@@ -4,7 +4,7 @@ const path = require('path')
 const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
-const { target, isDebugMode } = require('./webpack.vars')
+const { target, environment, eslintFix } = require('./webpack.vars')
 
 const servicesFolder = paths.appServicesFolder
 const servicesPaths = fs.readdirSync(servicesFolder)
@@ -44,7 +44,8 @@ const config = {
         exclude: /node_modules/,
         options: {
           extends: ['cozy-app'],
-          emitWarning: isDebugMode
+          fix: eslintFix,
+          emitWarning: environment === 'production'
         }
       },
       {

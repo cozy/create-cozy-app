@@ -150,7 +150,7 @@ That's all! You can start hacking:
 
 ```
 cd mycozyapp
-yarn watch:standalone
+yarn standalone
 ```
 
 After the webpack build, your app should be available at http://localhost:8888

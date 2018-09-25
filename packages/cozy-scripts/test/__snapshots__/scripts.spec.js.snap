@@ -136,6 +136,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -148,6 +149,7 @@ Array [
             "extends": Array [
               "cozy-app/vue",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -160,6 +162,7 @@ Array [
             "extends": Array [
               "cozy-app/react",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -502,6 +505,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -514,6 +518,7 @@ Array [
             "extends": Array [
               "cozy-app/vue",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -526,6 +531,7 @@ Array [
             "extends": Array [
               "cozy-app/react",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -850,6 +856,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -862,6 +869,7 @@ Array [
             "extends": Array [
               "cozy-app/vue",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -874,6 +882,7 @@ Array [
             "extends": Array [
               "cozy-app/react",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1221,6 +1230,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1233,6 +1243,7 @@ Array [
             "extends": Array [
               "cozy-app/vue",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1245,6 +1256,7 @@ Array [
             "extends": Array [
               "cozy-app/react",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1577,6 +1589,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1589,6 +1602,7 @@ Array [
             "extends": Array [
               "cozy-app/vue",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1601,6 +1615,7 @@ Array [
             "extends": Array [
               "cozy-app/react",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1944,6 +1959,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1956,6 +1972,7 @@ Array [
             "extends": Array [
               "cozy-app/vue",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -1968,6 +1985,7 @@ Array [
             "extends": Array [
               "cozy-app/react",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -2373,6 +2391,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -2385,6 +2404,7 @@ Array [
             "extends": Array [
               "cozy-app/vue",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -2397,6 +2417,7 @@ Array [
             "extends": Array [
               "cozy-app/react",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
@@ -2681,6 +2702,7 @@ Array [
             "extends": Array [
               "cozy-app",
             ],
+            "fix": false,
           },
           "test": Object {},
         },
