@@ -38,7 +38,7 @@
     "jest": "23.6.0",
     "json-loader": "0.5.7",
     "mini-css-extract-plugin": "0.4.3",
-    "postcss": "7.0.2",
+    "postcss": "7.0.3",
     "postcss-assets-webpack-plugin": "3.0.0",
     "postcss-discard-duplicates": "4.0.1",
     "postcss-loader": "3.0.0",
