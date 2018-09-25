@@ -14,6 +14,7 @@ console.log(colorize.cyan(`Compiling for ${colorize.orange.bold(environment)} en
 const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 const addAnalyzer = process.env.COZY_SCRIPTS_ANALYZER === 'true'
 const useHotReload = process.env.HOT_RELOAD === 'true'
+const eslintFix = process.env.COZY_SCRIPTS_ESLINT_FIX === 'true'
 
 const getCSSLoader = function () {
   return useHotReload ? require.resolve('style-loader') : MiniCssExtractPlugin.loader
@@ -22,6 +23,7 @@ const getCSSLoader = function () {
 module.exports = {
   addAnalyzer,
   environment,
+  eslintFix,
   getCSSLoader,
   isDebugMode,
   target,
