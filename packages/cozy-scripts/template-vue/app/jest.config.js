@@ -13,9 +13,11 @@ module.exports = {
     'node_modules',
     'src'
   ],
+  // jest modules installed by cozy-scripts
   transform: {
-    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
-    '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
+    '^.+\\.js$': 'babel-jest',
+    // for some weird reasons we have to specify the full path here
+    '.*\\.vue$': '<rootDir>/node_modules/cozy-scripts/node_modules/vue-jest'
   },
   moduleNameMapper: {
     '\\.(png|gif|jpe?g|svg)$': '<rootDir>/test/__mocks__/fileMock.js',
