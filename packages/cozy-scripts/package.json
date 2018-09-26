@@ -14,11 +14,12 @@
     "url": "https://github.com/CPatchane/create-cozy-app/issues"
   },
   "dependencies": {
+    "@babel/core": "7.1.0",
     "autoprefixer": "9.1.5",
-    "babel-core": "6.26.3",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
-    "babel-loader": "7.1.5",
+    "babel-loader": "8.0.2",
     "babel-polyfill": "6.26.0",
     "chalk": "2.4.1",
     "commander": "2.18.0",
@@ -51,6 +52,7 @@
     "svg-sprite-loader": "4.1.1",
     "svgo": "1.1.1",
     "validate-npm-package-name": "3.0.0",
+    "vue-jest": "2.6.0",
     "webpack": "4.20.0",
     "webpack-bundle-analyzer": "3.0.2",
     "webpack-dev-server": "3.1.9",

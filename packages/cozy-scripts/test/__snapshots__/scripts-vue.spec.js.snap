@@ -1979,7 +1979,6 @@ Array [
 
 exports[`App from cozy-scripts with VueJS 2 should have the correct files outline 1`] = `
 Array [
-  ".babelrc",
   ".editorconfig",
   ".eslintrc.json",
   ".github/ISSUE_TEMPLATE",
@@ -1993,6 +1992,7 @@ Array [
   "CONTRIBUTING.md",
   "LICENSE",
   "README.md",
+  "babel.config.js",
   "jest.config.js",
   "manifest.webapp",
   "node_modules",
