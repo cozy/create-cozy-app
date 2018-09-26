@@ -66,6 +66,7 @@
     "bin",
     "config",
     "scripts",
+    "stack",
     "utils",
     "template/app",
     "template/.travis.yml",
