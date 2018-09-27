@@ -1,0 +1,9 @@
+# This a config file for cozy-stack used to disable CSPs
+# in order to allow Hot Module Reloading using Webpack Dev Server
+# BE AWARE that is usable only using the dev version of cozy-stack
+# You will ALWAYS have CSPs working on a real Cozy
+# so your final application must work with them on
+disable_csp: true
+
+# You can find a complete example of the cozy-stack config file here:
+# https://github.com/cozy/cozy-stack/blob/master/cozy.example.yaml
