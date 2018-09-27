@@ -11,6 +11,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production'), // to compile on production mode (redux)
       __DEVELOPMENT__: false,
       __DEVTOOLS__: false,
+      __SSL__: true,
       __STACK_ASSETS__: target !== 'mobile'
     })
   ]

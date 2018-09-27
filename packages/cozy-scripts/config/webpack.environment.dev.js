@@ -12,6 +12,7 @@ const buildCozyBarCss = `${paths.appBuild}/cozy-bar.css`
 let plugins = [
   new webpack.DefinePlugin({
     __DEVELOPMENT__: true,
+    __SSL__: false,
     __STACK_ASSETS__: false
   }),
   new webpack.ProvidePlugin({
