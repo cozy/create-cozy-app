@@ -13,11 +13,6 @@ module.exports = {
     'node_modules',
     'src'
   ],
-  // jest modules installed by cozy-scripts
-  transform: {
-    '^.+\\.js$': 'babel-jest',
-    '.*\\.jsx$': 'babel-jest'
-  },
   moduleNameMapper: {
     '\\.(png|gif|jpe?g|svg)$': '<rootDir>/test/__mocks__/fileMock.js',
     // identity-obj-proxy module is installed by cozy-scripts
