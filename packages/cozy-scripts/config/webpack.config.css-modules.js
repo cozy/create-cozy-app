@@ -30,8 +30,10 @@ module.exports = {
             loader: require.resolve('postcss-loader'),
             options: {
               sourceMap: true,
-              plugins: function () {
-                return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
+              plugins: function() {
+                return [
+                  require('autoprefixer')({ browsers: ['last 2 versions'] })
+                ]
               }
             }
           },

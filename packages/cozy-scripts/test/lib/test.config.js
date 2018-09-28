@@ -15,4 +15,4 @@ const myConfig = {
   }
 }
 
-module.exports = [ myConfig ]
+module.exports = [myConfig]

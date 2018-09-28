@@ -4,7 +4,7 @@ const merge = require('webpack-merge')
 const path = require('path')
 const fs = require('fs-extra')
 
-function mergeWithOptions (options, configs, current) {
+function mergeWithOptions(options, configs, current) {
   // merge with the previous configs using the provided strategy
   if (options.strategy) {
     return options.smart
@@ -17,7 +17,7 @@ function mergeWithOptions (options, configs, current) {
   }
 }
 
-function getWebpackConfigs (options = {}) {
+function getWebpackConfigs(options = {}) {
   // mode and target options should already be provided
   const {
     mode = 'development',
@@ -54,17 +54,20 @@ function getWebpackConfigs (options = {}) {
   }
 
   const mergedConfig = merge(
-    appConfigs.reduce(function (merged, config) {
-      if (config.__mergeStrategy) {
-        // merge with the previous configs using the provided strategy
-        const options = Object.assign({}, config.__mergeStrategy)
-        delete config.__mergeStrategy
-        return [mergeWithOptions(options, merged, config)]
-      } else {
-        merged.push(config)
-        return merged
-      }
-    }, [{}])
+    appConfigs.reduce(
+      function(merged, config) {
+        if (config.__mergeStrategy) {
+          // merge with the previous configs using the provided strategy
+          const options = Object.assign({}, config.__mergeStrategy)
+          delete config.__mergeStrategy
+          return [mergeWithOptions(options, merged, config)]
+        } else {
+          merged.push(config)
+          return merged
+        }
+      },
+      [{}]
+    )
   )
 
   // the first position will always be the main app config
@@ -74,12 +77,11 @@ function getWebpackConfigs (options = {}) {
   // configurations if multi-compiling
   if (mergedConfig.multiple) {
     for (const config in mergedConfig.multiple) {
-      const configPart = Object.assign(
-        {}, mergedConfig.multiple[config]
-      )
+      const configPart = Object.assign({}, mergedConfig.multiple[config])
       delete mergedConfig.multiple[config]
       let separateConfig = {}
-      if (configPart.__mergeStrategy) { // if merge strategy found
+      if (configPart.__mergeStrategy) {
+        // if merge strategy found
         const options = Object.assign({}, configPart.__mergeStrategy)
         delete configPart.__mergeStrategy
         separateConfig = mergeWithOptions(options, [mergedConfig], configPart)

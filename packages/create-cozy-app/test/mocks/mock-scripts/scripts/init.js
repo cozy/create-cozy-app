@@ -5,9 +5,13 @@ const colors = {
   close: '\u001b[39m'
 }
 
-module.exports = function init () {
+module.exports = function init() {
   console.log()
-  console.log(`${colors.green}✔${colors.close} create-cozy-app scripts init(...) call test succeed.`)
+  console.log(
+    `${colors.green}✔${
+      colors.close
+    } create-cozy-app scripts init(...) call test succeed.`
+  )
   console.log()
   return true
 }

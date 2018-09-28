@@ -13,9 +13,7 @@ const servicesEntries = {}
 servicesPaths.forEach(file => {
   if (!file.match(/^[^.]*.js$/)) return
   var filename = file.match(/^([^.]*).js$/)[1]
-  servicesEntries[filename] = path.resolve(
-    path.join(servicesFolder, file)
-  )
+  servicesEntries[filename] = path.resolve(path.join(servicesFolder, file))
 })
 
 const config = {
@@ -55,9 +53,7 @@ const config = {
         options: {
           cacheDirectory: 'node_modules/.cache/babel-loader/node',
           babelrc: false,
-          presets: [
-            ['cozy-app', { node: true, react: false }]
-          ]
+          presets: [['cozy-app', { node: true, react: false }]]
         }
       }
     ]
@@ -70,6 +66,4 @@ const config = {
 }
 
 // only for browser target (services are usable only on cozy-stack)
-module.exports = target === 'browser'
-  ? { multiple: { services: config } }
-  : {}
+module.exports = target === 'browser' ? { multiple: { services: config } } : {}

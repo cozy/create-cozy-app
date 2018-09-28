@@ -2,11 +2,8 @@
 
 const runGlobalPackageCLI = require('../utils/runGlobalPackageCLI')
 
-function runCozyAppPublish (options) {
-  const {
-    cliArgs,
-    debugMode
-  } = options
+function runCozyAppPublish(options) {
+  const { cliArgs, debugMode } = options
 
   runGlobalPackageCLI('cozy-app-publish', cliArgs, debugMode)
 }

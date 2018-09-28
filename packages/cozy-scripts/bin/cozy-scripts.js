@@ -32,7 +32,10 @@ const program = new commander.Command(pkg.name)
   .option('--fix', 'format automatically the code with eslint')
   .option('--hot', 'enable hot module reload (only for development)')
   .option('--mobile', 'specify mobile build target')
-  .option('--no-stack', 'disable docker stack launch when using `cozy-scripts start`')
+  .option(
+    '--no-stack',
+    'disable docker stack launch when using `cozy-scripts start`'
+  )
   .option('--production', 'specify production build mode')
   .option('--show-config', 'just print app final webpack config')
   .option('--vue', 'to use scripts in a VueJS specific way (default (p)React)')
@@ -87,11 +90,18 @@ const availableScripts = [
 
 if (availableScripts.includes(actionName)) {
   if (actionName === 'standalone') {
-    console.log(colorize.orange('The `standalone` command is now deprecated and will be removed in next versions.'))
-    console.log(colorize.orange(`Please use the ${colorize.bold('`start`')} command.`))
+    console.log(
+      colorize.orange(
+        'The `standalone` command is now deprecated and will be removed in next versions.'
+      )
+    )
+    console.log(
+      colorize.orange(`Please use the ${colorize.bold('`start`')} command.`)
+    )
     actionName = 'start'
   }
-  if (actionName === 'start') { // specific to this action
+  if (actionName === 'start') {
+    // specific to this action
     options.stack = program.stack // specific behaviour of --no-* options
   }
   const scriptPath = `../scripts/${actionName}`

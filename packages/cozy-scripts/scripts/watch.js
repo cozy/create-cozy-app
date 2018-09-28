@@ -40,14 +40,16 @@ module.exports = (buildOptions, successCallback) => {
     }
 
     if (stats) {
-      console.log(stats.toString({
-        // display modules in debug mode
-        modules: isDebugMode,
-        // display chunks in debug mode
-        chunks: isDebugMode,
-        // Shows colors in the console
-        colors: true
-      }))
+      console.log(
+        stats.toString({
+          // display modules in debug mode
+          modules: isDebugMode,
+          // display chunks in debug mode
+          chunks: isDebugMode,
+          // Shows colors in the console
+          colors: true
+        })
+      )
     }
 
     if (stats.hasErrors()) {

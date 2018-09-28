@@ -1,11 +1,7 @@
 'use strict'
 
 const merge = require('webpack-merge')
-const {
-  environment,
-  target,
-  addAnalyzer
-} = require('./webpack.vars')
+const { environment, target, addAnalyzer } = require('./webpack.vars')
 
 const configs = [
   require('./webpack.config.base'),

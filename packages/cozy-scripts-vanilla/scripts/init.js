@@ -8,7 +8,14 @@ const validateProjectName = require('validate-npm-package-name')
 
 // override is used only for test to skip prompt (cf prompt.override)
 // successCallback is for now only used for the test assertions
-module.exports = function (appPath, appName, verbose, gracefulRootExit, override, successCallback) {
+module.exports = function(
+  appPath,
+  appName,
+  verbose,
+  gracefulRootExit,
+  override,
+  successCallback
+) {
   // informations needed to replace in templates
   /*
     <APP_SLUG> slug of the app, must be unique for the apps registry
@@ -21,10 +28,11 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
     {
       name: '<APP_SLUG>',
       description: colorize.orange('Your app slug?'),
-      conform: function (value) {
+      conform: function(value) {
         return validateProjectName(value).validForNewPackages
       },
-      message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements).',
+      message:
+        'Must be mainly lowercase letters, digits or dashes (see NPM name requirements).',
       required: false,
       default: appName
     },
@@ -39,10 +47,11 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
     {
       name: '<SLUG_GH>',
       description: colorize.orange('The Github project slug?'),
-      conform: function (value) {
+      conform: function(value) {
         return validateProjectName(value).validForNewPackages
       },
-      message: 'Must be mainly lowercase letters, digits or dashes (see NPM name requirements)',
+      message:
+        'Must be mainly lowercase letters, digits or dashes (see NPM name requirements)',
       required: false,
       default: appName
     },
@@ -60,7 +69,7 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
   prompt.start()
   prompt.message = colorize.bold('Question:')
   prompt.delimiter = ' '
-  prompt.get(promptProperties, function (err, received) {
+  prompt.get(promptProperties, function(err, received) {
     const dataMap = new Map()
     if (err) {
       console.log(colorize.red(err))
@@ -84,34 +93,41 @@ module.exports = function (appPath, appName, verbose, gracefulRootExit, override
   })
 }
 
-function requireFileAsString (filename) {
+function requireFileAsString(filename) {
   return fs.readFileSync(filename, 'utf8')
 }
 
-function run (appPath, dataMap, verbose, gracefulRootExit, successCallback) {
-  const ownPackageName = require(
-    path.join(__dirname, '..', 'package.json')
-  ).name
+function run(appPath, dataMap, verbose, gracefulRootExit, successCallback) {
+  const ownPackageName = require(path.join(__dirname, '..', 'package.json'))
+    .name
 
   // paths
   const ownPath = path.join(appPath, 'node_modules', ownPackageName)
   const templatePath = path.join(ownPath, 'template')
   const templateAppPath = path.join(templatePath, 'app')
   // templates
-  const templateManifest = requireFileAsString(path.join(templatePath, 'manifest.webapp'))
-  const templateReadme = requireFileAsString(path.join(templatePath, 'README.md'))
-  const templateIndexHtml = requireFileAsString(path.join(templatePath, 'index.html'))
-  const templateView2Html = requireFileAsString(path.join(templatePath, 'view2.html'))
+  const templateManifest = requireFileAsString(
+    path.join(templatePath, 'manifest.webapp')
+  )
+  const templateReadme = requireFileAsString(
+    path.join(templatePath, 'README.md')
+  )
+  const templateIndexHtml = requireFileAsString(
+    path.join(templatePath, 'index.html')
+  )
+  const templateView2Html = requireFileAsString(
+    path.join(templatePath, 'view2.html')
+  )
 
   console.log()
   console.log('Building files...')
   // Create files from template (manifest, package...)
   // utils
   const dataRegExp = new RegExp([...dataMap.keys()].join('|'), 'g')
-  function replaceDataIn (string) {
-    return string.replace(dataRegExp,
-      function (matched) { return dataMap.get(matched) }
-    )
+  function replaceDataIn(string) {
+    return string.replace(dataRegExp, function(matched) {
+      return dataMap.get(matched)
+    })
   }
   // replace data in all templates
   const newManifest = replaceDataIn(templateManifest)
@@ -151,14 +167,22 @@ function run (appPath, dataMap, verbose, gracefulRootExit, successCallback) {
   fs.removeSync(path.join(appPath, 'yarn.lock'))
 
   console.log()
-  console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/. Enjoy it!`))
+  console.log(
+    colorize.green(
+      `Great! Your application ${colorize.cyan(
+        dataMap.get('<APP_NAME>')
+      )} is ready! \\o/. Enjoy it!`
+    )
+  )
   if (typeof successCallback === 'function') successCallback()
 }
 
-function gracefulExit (appPath) {
+function gracefulExit(appPath) {
   console.log()
   console.log(colorize.orange('Cleaning generated app template elements'))
-  const templateAppPath = path.join(path.join(__dirname, '..', 'template', 'app'))
+  const templateAppPath = path.join(
+    path.join(__dirname, '..', 'template', 'app')
+  )
   const templateFiles = fs.readdirSync(templateAppPath)
   const expectedGeneratedElements = [
     'manifest.webapp',
@@ -168,7 +192,9 @@ function gracefulExit (appPath) {
   ].concat(templateFiles)
   const generatedElements = fs.readdirSync(path.join(appPath))
   if (generatedElements.length) {
-    console.log(`Deleting generated files/folders from ${colorize.cyan(appPath)}`)
+    console.log(
+      `Deleting generated files/folders from ${colorize.cyan(appPath)}`
+    )
   }
   generatedElements.forEach(element => {
     expectedGeneratedElements.forEach(expected => {
@@ -182,7 +208,8 @@ function gracefulExit (appPath) {
     console.log()
   }
   const remainingElements = fs.readdirSync(path.join(appPath))
-  if (remainingElements.length) { // folder empty, so we can delete it
+  if (remainingElements.length) {
+    // folder empty, so we can delete it
     console.log(`Some unexpected elements are remaining:`)
     remainingElements.forEach(element => {
       console.log(`\t- ${colorize.cyan(element)}`)

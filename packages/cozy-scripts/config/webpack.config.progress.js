@@ -4,18 +4,14 @@ const Progress = require('progress')
 const webpack = require('webpack')
 const colorize = require('../utils/_colorize')
 
-function CustomProgressPlugin () {
+function CustomProgressPlugin() {
   if (!process.stderr.isTTY) {
-    return function () {}
+    return function() {}
   }
 
   const progressBar = new Progress(
     // message template
-    [
-      ':bar',
-      colorize.blue(':percent'),
-      ':msg'
-    ].join(' '),
+    [':bar', colorize.blue(':percent'), ':msg'].join(' '),
     // progress bar options
     {
       complete: colorize.bgBlue(' '),
@@ -26,13 +22,11 @@ function CustomProgressPlugin () {
     }
   )
 
-  return new webpack.ProgressPlugin(function (percentage, msg) {
+  return new webpack.ProgressPlugin(function(percentage, msg) {
     progressBar.update(percentage, { msg: msg })
   })
 }
 
 module.exports = {
-  plugins: [
-    CustomProgressPlugin()
-  ]
+  plugins: [CustomProgressPlugin()]
 }

@@ -4,7 +4,7 @@ const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const paths = require('../utils/paths')
 
-const {environment, isDebugMode, getCSSLoader} = require('./webpack.vars')
+const { environment, isDebugMode, getCSSLoader } = require('./webpack.vars')
 const production = environment === 'production'
 
 module.exports = {
@@ -26,9 +26,7 @@ module.exports = {
         loader: require.resolve('babel-loader'),
         options: {
           cacheDirectory: 'node_modules/.cache/babel-loader/js',
-          presets: [
-            ['cozy-app', { react: false }]
-          ]
+          presets: [['cozy-app', { react: false }]]
         }
       },
       {
@@ -47,17 +45,17 @@ module.exports = {
             options: {
               ident: 'postcss',
               sourceMap: true,
-              plugins: function () {
-                return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
+              plugins: function() {
+                return [
+                  require('autoprefixer')({ browsers: ['last 2 versions'] })
+                ]
               }
             }
           }
         ]
       }
     ],
-    noParse: [
-      /localforage\/dist/
-    ]
+    noParse: [/localforage\/dist/]
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -74,7 +72,12 @@ module.exports = {
         require('postcss-discard-duplicates'),
         require('postcss-discard-empty')
       ].concat(
-        production ? require('csswring')({preservehacks: true, removeallcomments: true}) : []
+        production
+          ? require('csswring')({
+              preservehacks: true,
+              removeallcomments: true
+            })
+          : []
       )
     })
   ]
