@@ -248,6 +248,18 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendor": Object {
+            "chunks": "all",
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+        "chunks": "all",
+      },
+    },
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
@@ -256,8 +268,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[id].css",
-          "filename": "[name].css",
+          "chunkFilename": "[name].[contenthash].css",
+          "filename": "[name].[contenthash].css",
         },
       },
       Object {
@@ -267,6 +279,14 @@ Array [
           null,
         ],
         "test": Object {},
+      },
+      Object {
+        "options": Object {
+          "context": null,
+          "hashDigest": "base64",
+          "hashDigestLength": 4,
+          "hashFunction": "md4",
+        },
       },
       Object {
         "config": Object {
@@ -326,12 +346,12 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": Array [
-            "app",
-          ],
+          "chunks": "all",
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [],
+          "excludeChunks": Array [
+            "intents",
+          ],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -617,6 +637,18 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendor": Object {
+            "chunks": "all",
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+        "chunks": "all",
+      },
+    },
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
@@ -625,8 +657,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[id].[hash].min.css",
-          "filename": "[name].[hash].min.css",
+          "chunkFilename": "[name].[contenthash].[id].min.css",
+          "filename": "[name].[contenthash].min.css",
         },
       },
       Object {
@@ -637,6 +669,14 @@ Array [
           null,
         ],
         "test": Object {},
+      },
+      Object {
+        "options": Object {
+          "context": null,
+          "hashDigest": "base64",
+          "hashDigestLength": 4,
+          "hashFunction": "md4",
+        },
       },
       Object {
         "config": Object {
@@ -696,12 +736,12 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": Array [
-            "app",
-          ],
+          "chunks": "all",
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [],
+          "excludeChunks": Array [
+            "intents",
+          ],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -968,16 +1008,28 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendor": Object {
+            "chunks": "all",
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+        "chunks": "all",
+      },
+    },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "[name].[contenthash].js",
       "path": ".tmp_test/test-app/src/targets/mobile/www",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[id].css",
-          "filename": "[name].css",
+          "chunkFilename": "[name].[contenthash].css",
+          "filename": "[name].[contenthash].css",
         },
       },
       Object {
@@ -987,6 +1039,14 @@ Array [
           null,
         ],
         "test": Object {},
+      },
+      Object {
+        "options": Object {
+          "context": null,
+          "hashDigest": "base64",
+          "hashDigestLength": 4,
+          "hashFunction": "md4",
+        },
       },
       Object {
         "config": Object {
@@ -1059,12 +1119,12 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": Array [
-            "app",
-          ],
+          "chunks": "all",
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [],
+          "excludeChunks": Array [
+            "intents",
+          ],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -1342,16 +1402,28 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendor": Object {
+            "chunks": "all",
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+        "chunks": "all",
+      },
+    },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "[name].[contenthash].js",
       "path": ".tmp_test/test-app/src/targets/mobile/www",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[id].[hash].min.css",
-          "filename": "[name].[hash].min.css",
+          "chunkFilename": "[name].[contenthash].[id].min.css",
+          "filename": "[name].[contenthash].min.css",
         },
       },
       Object {
@@ -1362,6 +1434,14 @@ Array [
           null,
         ],
         "test": Object {},
+      },
+      Object {
+        "options": Object {
+          "context": null,
+          "hashDigest": "base64",
+          "hashDigestLength": 4,
+          "hashFunction": "md4",
+        },
       },
       Object {
         "config": Object {
@@ -1434,12 +1514,12 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": Array [
-            "app",
-          ],
+          "chunks": "all",
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [],
+          "excludeChunks": Array [
+            "intents",
+          ],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -1701,6 +1781,18 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendor": Object {
+            "chunks": "all",
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+        "chunks": "all",
+      },
+    },
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
@@ -1709,8 +1801,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[id].css",
-          "filename": "[name].css",
+          "chunkFilename": "[name].[contenthash].css",
+          "filename": "[name].[contenthash].css",
         },
       },
       Object {
@@ -1720,6 +1812,14 @@ Array [
           null,
         ],
         "test": Object {},
+      },
+      Object {
+        "options": Object {
+          "context": null,
+          "hashDigest": "base64",
+          "hashDigestLength": 4,
+          "hashFunction": "md4",
+        },
       },
       Object {
         "config": Object {
@@ -1779,12 +1879,12 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": Array [
-            "app",
-          ],
+          "chunks": "all",
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [],
+          "excludeChunks": Array [
+            "intents",
+          ],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -2071,6 +2171,18 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendor": Object {
+            "chunks": "all",
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+        "chunks": "all",
+      },
+    },
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
@@ -2079,8 +2191,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[id].css",
-          "filename": "[name].css",
+          "chunkFilename": "[name].[contenthash].css",
+          "filename": "[name].[contenthash].css",
         },
       },
       Object {
@@ -2090,6 +2202,14 @@ Array [
           null,
         ],
         "test": Object {},
+      },
+      Object {
+        "options": Object {
+          "context": null,
+          "hashDigest": "base64",
+          "hashDigestLength": 4,
+          "hashFunction": "md4",
+        },
       },
       Object {
         "config": Object {
@@ -2149,12 +2269,12 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": Array [
-            "app",
-          ],
+          "chunks": "all",
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [],
+          "excludeChunks": Array [
+            "intents",
+          ],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -2503,6 +2623,18 @@ Array [
         },
       ],
     },
+    "optimization": Object {
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendor": Object {
+            "chunks": "all",
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+        "chunks": "all",
+      },
+    },
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build",
@@ -2511,8 +2643,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[id].css",
-          "filename": "[name].css",
+          "chunkFilename": "[name].[contenthash].css",
+          "filename": "[name].[contenthash].css",
         },
       },
       Object {
@@ -2522,6 +2654,14 @@ Array [
           null,
         ],
         "test": Object {},
+      },
+      Object {
+        "options": Object {
+          "context": null,
+          "hashDigest": "base64",
+          "hashDigestLength": 4,
+          "hashFunction": "md4",
+        },
       },
       Object {
         "config": Object {
@@ -2581,12 +2721,12 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": Array [
-            "app",
-          ],
+          "chunks": "all",
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [],
+          "excludeChunks": Array [
+            "intents",
+          ],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -2726,6 +2866,7 @@ Array [
         },
       ],
     },
+    "optimization": Object {},
     "output": Object {
       "filename": "[name].js",
       "path": ".tmp_test/test-app/build/services",

@@ -40,7 +40,7 @@ module.exports = buildOptions => {
   const appConfig = configs[0]
   appConfig.bail = false // disable bail when watching
   appConfig.output = Object.assign({}, appConfig.output, {
-    filename: '[name][hash].bundle.js',
+    filename: '[name].[hash].js',
     publicPath: `http://${host}:${port}/`
   })
   // related issue for HMR

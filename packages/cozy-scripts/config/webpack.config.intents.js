@@ -24,7 +24,7 @@ function getConfig() {
             title: `${appName} intents`,
             filename: 'intents/index.html',
             inject: false,
-            chunks: ['intents'],
+            excludeChunks: ['app'],
             minify: {
               collapseWhitespace: true
             }
