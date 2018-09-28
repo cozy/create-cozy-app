@@ -1,13 +1,23 @@
 'use strict'
 
 const webpack = require('webpack')
+const spawn = require('cross-spawn')
+const fs = require('fs-extra')
 const WebpackDevServer = require('webpack-dev-server')
 const colorize = require('../utils/_colorize')
 const cleanBuild = require('../utils/cleanBuild')
+const paths = require('../utils/paths')
 const getWebpackConfigs = require('./config')
+
+let appManifest = null
+if (fs.pathExistsSync(paths.appManifest)) {
+  appManifest = fs.readJsonSync(paths.appManifest, { throws: false })
+}
 
 const port = process.env.DEV_PORT || '8888'
 const host = process.env.DEV_HOST || 'localhost'
+const cozyDomain = 'cozy.tools:8080'
+const appSlug = (appManifest && appManifest.slug) || 'app'
 
 // There is no callback available on compiler here,
 // it's not handled by webpack-dev-server 2.x
@@ -22,7 +32,6 @@ module.exports = (buildOptions) => {
   // remove build folder
   cleanBuild(buildTarget)
 
-  const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
   const useHotReload = process.env.HOT_RELOAD === 'true'
 
   // webpack configurations
@@ -56,9 +65,9 @@ module.exports = (buildOptions) => {
   const WebpackOptions = {
     stats: {
       // display modules
-      modules: isDebugMode,
+      modules: buildOptions.debugMode,
       // display chunks
-      chunks: isDebugMode,
+      chunks: buildOptions.debugMode,
       // Shows colors in the console
       colors: true
     },
@@ -79,12 +88,98 @@ module.exports = (buildOptions) => {
   const compiler = webpack(appConfig)
   const server = new WebpackDevServer(compiler, WebpackOptions)
 
+  let isFirstRun = true
+
+  function clearConsole () {
+    if (process.stdout.isTTY) process.stdout.write('\x1Bc')
+  }
+
+  // invalid here doesn't imply errors, it means 'bundle invalidated'
+  compiler.hooks.invalid.tap('Reste before next compiling', () => {
+    clearConsole()
+    console.log()
+    console.log('Compiling...')
+  })
+
+  let dockerProcess = null
+
+  compiler.hooks.done.tap('Very end hook', () => {
+    if (isFirstRun) {
+      clearConsole()
+      console.log()
+      console.log(colorize.green.bold('App successfully compiled !'))
+      console.log()
+    }
+    if (buildOptions.stack) {
+      console.log(`  ${colorize.bold('Your application:')}  http://${appSlug}.${cozyDomain}`)
+      console.log(`  ${colorize.bold('Your local Cozy:')}   http://${cozyDomain}`)
+      console.log(`  ${colorize.bold('Dev assets:')}        http://${host}:${port}`)
+      console.log()
+      if (isFirstRun) {
+        isFirstRun = false
+        // launch cozy-stack within docker cozy/cozy-app-dev
+        dockerProcess = spawn(
+          'docker',
+          [
+            'run',
+            '--rm',
+            '-p',
+            '8080:8080',
+            '-p',
+            '5984:5984',
+            '-v',
+            `${paths.appBuild}:/data/cozy-app/${appSlug}`,
+            '-v',
+            `${paths.csDisableCSPConfig}:/etc/cozy/cozy.yaml`,
+            'cozy/cozy-app-dev'
+          ],
+          {
+            cwd: paths.appPath
+          }
+        )
+        dockerProcess.stdout.on('data', (data) => {
+          process.stdout.write(`${colorize.blue.bold('Cozy stack (docker):')} ${data}`)
+        })
+
+        dockerProcess.stderr.on('data', (data) => {
+          process.stderr.write(`${colorize.red.bold('Cozy stack (docker):')} ${data}`)
+        })
+      }
+    } else {
+      console.log(`  ${colorize.bold('Dev assets:')}        http://${host}:${port}`)
+    }
+    if (!isFirstRun) {
+      clearConsole()
+      console.log()
+      console.log(colorize.green.bold('App successfully updated !'))
+      console.log()
+    }
+  })
+
   server.listen(port, host, err => {
     console.log()
     if (err) {
       server.close()
       throw new Error(colorize.red(err))
     }
-    console.log(colorize.green(`Your app is running at http://${host}:${port}`))
+  })
+
+  ;['SIGINT', 'SIGQUIT', 'SIGTERM'].forEach(sig => {
+    process.on(sig, () => {
+      server.close()
+      if (dockerProcess) {
+        console.log()
+        console.log(colorize.orange('Shutting down the stack...'))
+        console.log()
+        console.log(colorize.cyan('See you soon! 👋'))
+        dockerProcess.stdout.destroy()
+        dockerProcess.stderr.destroy()
+        spawn.sync('sh', ['-c', '-m', paths.csQuitStackScript], { stdio: 'inherit' })
+      } else {
+        console.log()
+        console.log(colorize.cyan('See you soon! 👋'))
+      }
+      process.exit(0)
+    })
   })
 }

@@ -26,14 +26,15 @@ const program = new commander.Command(pkg.name)
   .action(name => {
     actionName = name
   })
-  .option('--show-config', 'just print app final webpack config')
-  .option('--debug', 'print more outputs for debugging')
-  .option('--fix', 'format automatically the code with eslint')
-  .option('--development', 'specify development build mode')
-  .option('--hot', 'enable hot module reload (only for development)')
-  .option('--production', 'specify production build mode')
   .option('--browser', 'specify browser build target')
+  .option('--debug', 'print more outputs for debugging')
+  .option('--development', 'specify development build mode')
+  .option('--fix', 'format automatically the code with eslint')
+  .option('--hot', 'enable hot module reload (only for development)')
   .option('--mobile', 'specify mobile build target')
+  .option('--no-stack', 'disable docker stack launch when using `cozy-scripts standalone`')
+  .option('--production', 'specify production build mode')
+  .option('--show-config', 'just print app final webpack config')
   .option('--vue', 'to use scripts in a VueJS specific way (default (p)React)')
   .option(
     '--analyzer',
@@ -84,6 +85,9 @@ const availableScripts = [
 ]
 
 if (availableScripts.includes(actionName)) {
+  if (actionName === 'standalone') { // specific to this action
+    options.stack = program.stack // specific behaviour of --no-* options
+  }
   const scriptPath = `../scripts/${actionName}`
   const script = require(scriptPath)
   script(options)
