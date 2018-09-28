@@ -1982,9 +1982,9 @@ cozy-realtime@1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-1.1.9.tgz#733dedd299eacf24ceb1bc230f561817855c3e8d"
 
-cozy-ui@11.2.1:
-  version "11.2.1"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-11.2.1.tgz#d25c44d0258b87f18924aee3586a52d5d9b6f884"
+cozy-ui@11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-11.3.0.tgz#0f6461fb8ca4cd43c306c1d50cef1150eadd0608"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     classnames "^2.2.5"
