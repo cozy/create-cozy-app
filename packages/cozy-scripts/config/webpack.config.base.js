@@ -9,7 +9,7 @@ const production = environment === 'production'
 
 module.exports = {
   output: {
-    filename: '[name].js'
+    filename: '[name].[contenthash].js'
   },
   resolve: {
     modules: [paths.appNodeModules, paths.appSrc],
@@ -61,8 +61,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: `[name]${production ? '.[hash].min' : ''}.css`,
-      chunkFilename: `[name].[id]${production ? '.[hash].min' : ''}.css`
+      filename: `[name]${production ? '.[contenthash].min' : ''}.css`,
+      chunkFilename: `[name].[id]${production ? '.[contenthash].min' : ''}.css`
     }),
     new PostCSSAssetsPlugin({
       test: /\.css$/,
