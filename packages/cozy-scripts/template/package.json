@@ -13,14 +13,11 @@
     "watch": "yarn watch:browser",
     "watch:browser": "cozy-scripts watch --browser",
     "watch:mobile": "cozy-scripts watch --mobile",
-    "standalone": "yarn standalone:browser",
-    "standalone:browser": "cozy-scripts standalone --hot --browser",
-    "standalone:mobile": "cozy-scripts standalone --hot --mobile",
+    "start": "cozy-scripts start --hot --browser",
     "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git}",
     "pretest": "yarn lint",
     "test": "cozy-scripts test --verbose --coverage",
     "stack": "docker run --rm -it -p 8080:8080 -p 5984:5984 -v \"$(pwd)/build\":/data/cozy-app/app cozy/cozy-app-dev",
-    "stack:nocsp": "docker run --rm -it -p 8080:8080 -p 5984:5984 -v \"$(pwd)/build\":/data/cozy-app/app -v \"$(pwd)/node_modules/cozy-scripts/stack/disableCSP.yaml\":/etc/cozy/cozy.yaml cozy/cozy-app-dev",
     "cozyPublish": "git fetch origin ${DEPLOY_BRANCH:-build}:${DEPLOY_BRANCH:-build} && cozy-scripts publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})"
   },
   "repository": {

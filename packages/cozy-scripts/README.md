@@ -48,6 +48,7 @@ Using the default template, `cozy-scripts` will generate a \(P\)React applicatio
 
 ```
 mycozyapp/
+    babel.config.js
     CONTRIBUTING.md
     LICENSE
     README.md
@@ -74,7 +75,6 @@ mycozyapp/
             mobile/
             vendor/
     test/
-    .babelrc
     .editorconfig
     .eslintrc.json
     .github/
@@ -99,7 +99,7 @@ Using the VueJS template, `cozy-scripts` will generate a VueJS/Vuex application.
 
 ```
 mycozyapp/
-    app.config.js
+    babel.config.js
     CONTRIBUTING.md
     LICENSE
     README.md
@@ -127,7 +127,6 @@ mycozyapp/
             mobile/
             vendor/
     test/
-    .babelrc
     .editorconfig
     .eslintrc.json
     .github/
@@ -150,33 +149,10 @@ That's all! You can start hacking:
 
 ```
 cd mycozyapp
-yarn standalone
+yarn start
 ```
 
-After the webpack build, your app should be available at http://localhost:8888
-
-> You can change the host and the port of your application server here by using respectively the environment variables HOST and PORT
-
-### Run it inside a Cozy using Docker
-
-You can run your application (here `mycozyapp`) inside a Cozy thanks to the [cozy-stack docker image][cozy-stack-docker]:
-
-```sh
-# in a terminal, run your app in watch mode
-$ cd mycozyapp
-$ yarn watch:browser
-```
-
-Then, in another terminal:
-
-```sh
-# in another terminal, run the docker container
-$ yarn stack:docker
-# or if you want the complete command
-$ docker run --rm -it -p 8080:8080 -v "$(pwd)/build":/data/cozy-app/mycozyapp cozy/cozy-app-dev
-```
-
-Your app is now available at http://mycozyapp.cozy.tools:8080.
+After the webpack build and the docker environment ready, your app should be available at http://mycozyapp.cozy.tools:8080
 
 ### The `cozy-scripts` CLI
 
@@ -204,9 +180,15 @@ The built files (destined to the Cozy) will be in `build/`.
 
 > A `--debug` options is available if you want to ouput more informations about webpack building in your console.
 
-##### - `cozy-scripts standalone`
+##### - `cozy-scripts start`
 
-Do the same thing than the previous command with webpack in a watching mode but also run a server (`webpack-dev-server`) to serve your application (as a static application) on the url `http://localhost:8888`.
+This is the main way to launch your application for development.
+This command will run webpacking in a watching mode with a server (`webpack-dev-server`) to serve application assets.
+Then, it will launch a Cozy stack using Docker (the image `cozy/cozy-app-dev`) to serve your application inside it.
+
+Your application will be available at http://<MY_APP_SLUG>.cozy.tools:8080.
+
+> In this mode [HMR (Hot Module Replacement)](https://webpack.js.org/concepts/hot-module-replacement/) is available to help you with the application development.
 
 ##### - `cozy-scripts publish`
 
@@ -239,6 +221,11 @@ Allow to pass the wanted build target to `cozy-scripts`. This target will be ove
 ##### - `--analyzer`
 
 Use this option if you want to analyze your builds content using the webpack plugin [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer). It will open you browser with an interactive treemap visualization of the contents of all your bundles.
+
+##### - `--no-stack`
+
+Use this option if you want to run `cozy-scripts start` without launching the Cozy stack using docker. You will only have Webpack watching with `webpack-dev-server`.
+It could be useful if you already have a Cozy stack running elsewhere in your environment.
 
 ### The `cozy-scripts` webpack configuration
 

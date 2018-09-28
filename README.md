@@ -35,7 +35,7 @@ __:warning: The packages `babel-preset-cozy-app` and `eslint-config-cozy-app` ha
 
  - NodeJS version 8 or higher;
  - [Yarn](https://yarnpkg.com): a NodeJS package manager, like `npm`;
- - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just use the standalone mode);
+ - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment)
 
 
 ### Running it without the CLI via Yarn (highly recommended)
@@ -74,33 +74,10 @@ That's all! You can start hacking:
 
 ```
 cd mycozyapp
-yarn standalone
+yarn start
 ```
 
-After the webpack build, your app should be available at http://localhost:8888
-
-> You can change the host and the port of your application server here by using respectively the environment variables HOST and PORT
-
-### Run it inside a Cozy using Docker
-
-You can run your application (here `mycozyapp`) inside a Cozy thanks to the [cozy-stack docker image][cozy-stack-docker]:
-
-```sh
-# in a terminal, run your app in watch mode
-$ cd mycozyapp
-$ yarn watch:browser
-```
-
-Then, in another terminal:
-
-```sh
-# in another terminal, run the docker container
-$ yarn stack:docker
-# or if you want the complete command
-$ docker run --rm -it -p 8080:8080 -v "$(pwd)/build":/data/cozy-app/mycozyapp cozy/cozy-app-dev
-```
-
-Your app is now available at http://mycozyapp.cozy.tools:8080.
+After the webpack build and the docker environment ready, your app should be available at http://mycozyapp.cozy.tools:8080
 
 ### Options
 

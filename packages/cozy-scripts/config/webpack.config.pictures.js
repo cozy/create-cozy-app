@@ -20,7 +20,7 @@ module.exports = {
         loader: require.resolve('file-loader'),
         options: {
           outputPath: 'img/',
-          publicPath: '/img', // for standalone mode
+          publicPath: '/img', // for webpack dev server
           name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }
       }

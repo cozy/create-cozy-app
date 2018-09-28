@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('[role=application]')
   const data = root.dataset
 
-  // default data will allow to display correctly the cozy-bar
-  // in the standalone (without cozy-stack connexion)
   const appIcon = getDataOrDefault(
     data.cozyIconPath,
     require('../vendor/assets/icon.svg')

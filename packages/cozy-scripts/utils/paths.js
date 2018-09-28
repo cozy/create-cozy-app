@@ -5,7 +5,7 @@ const fs = require('fs')
 
 const appDirectory = fs.realpathSync(process.cwd())
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
-// const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
+const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
 
 // This must be used inside a function (called when needed)
 // to be sure to use the current process.env context
@@ -46,5 +46,9 @@ module.exports = {
   appCozyBarJs: resolveApp('node_modules/cozy-bar/dist/cozy-bar.js'),
   appCozyBarCss: resolveApp('node_modules/cozy-bar/dist/cozy-bar.css'),
   // cozy-ui
-  appCozyUiStylus: resolveApp('node_modules/cozy-ui/stylus')
+  appCozyUiStylus: resolveApp('node_modules/cozy-ui/stylus'),
+
+  // for cozy-scripts
+  csDisableCSPConfig: resolveOwn('stack/disableCSP.yaml'),
+  csQuitStackScript: resolveOwn('stack/quitStack.sh')
 }

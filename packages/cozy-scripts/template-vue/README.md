@@ -36,21 +36,12 @@ Cozy's apps use a standard set of _npm scripts_ to run common tasks, like watch,
 You can run your application inside a Cozy thanks to the [cozy-stack docker image][cozy-stack-docker]:
 
 ```sh
-# in a terminal, run your app in watch mode
+# in a terminal, run your app in watch mode with a docker running Cozy
 $ cd <SLUG_GH>
-$ yarn watch:browser
+$ yarn start
 ```
 
-Then, in another terminal:
-
-```sh
-# in another terminal, run the docker container
-$ yarn stack:docker
-# or if you want the complete command
-$ docker run --rm -it -p 8080:8080 -v "$(pwd)/build":/data/cozy-app/<SLUG_GH> cozy/cozy-app-dev
-```
-
-Your app is now available at http://<SLUG_GH>.cozy.tools:8080.
+After the build and the stack launched, your app is now available at http://<SLUG_GH>.cozy.tools:8080.
 
 
 ### Living on the edge

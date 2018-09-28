@@ -37,7 +37,6 @@ if (useHotReload) {
     /*
     Here is the trick about hot-reload:
     We launch a webpack-dev-server but we write the computed build files to the disk to allow running `cozy-stack server` on them.
-    This config file works with the script: /scripts/standalone.js
     */
     new WriteFilePlugin()
   ])
