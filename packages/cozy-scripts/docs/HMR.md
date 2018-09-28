@@ -31,9 +31,7 @@ To have a full HMR experience, you'll have to do two things here:
 * Run webpack watching your changes with a `webpack-dev-server` and `--hot` option
 * Disable CSPs in the target Cozy (the Cozy CSPs is blocking HMR script)
 
-#### Run webpack with HMR
-
-With cozy-scripts, the command to run a `webpack-dev-server` alongside your build is `cozy-scripts standalone`, so you just have to use it with the `--hot` option (here for browser target):
+But thanks to the last version of `cozy-scripts`, all of this are handled for you with the command `cozy-scripts standalone`:
 
 ``` sh
 yarn cozy-scripts standalone --hot --browser
@@ -41,9 +39,17 @@ yarn cozy-scripts standalone --hot --browser
 yarn standalone
 ```
 
-#### Disable CSPs in the target Cozy
+#### How can run my webpack and my stack in different terminals?
 
-To have your application running in a Cozy with HMR, your have to disable CSPs when running the stack. For that, `cozy-scripts` has a dedicated config file to pass to your Docker image in `cozy-scripts/stack/disableCSP.yaml`.
+First, you can pass an option to disable the stack handling by the `standalone` command:
+
+``` sh
+yarn cozy-scripts standalone --hot --browser --no-stack
+# or if you have the last package.json from CCA, you can do
+yarn standalone --no-stack
+```
+
+Then, as said, to have your application running in a Cozy with HMR, your have to disable CSPs when running the stack. For that, `cozy-scripts` has a dedicated config file to pass to your Docker image in `cozy-scripts/stack/disableCSP.yaml`.
 You can use this config by running your stack in another terminal like:
 
 ```sh
@@ -53,8 +59,6 @@ docker run --rm -it
   -v \"$(pwd)/build\":/data/cozy-app/app
   -v \"$(pwd)/node_modules/cozy-scripts/stack/disableCSP.yaml\":/etc/cozy/cozy.yaml
   cozy/cozy-app-dev
-# Or even better, if you have the last package.json from CCA, just do
-yarn stack:nocsp
 ```
 
 ### Make HMR available in my application
