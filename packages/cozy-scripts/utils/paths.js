@@ -32,15 +32,17 @@ module.exports = {
   jestConfig: resolveApp('jest.config.js'),
   // for browser
   appBrowserHtmlTemplate: resolveApp('src/targets/browser/index.ejs'),
-  appBrowserIndex: (ext) => resolveWithExtension('src/targets/browser/index', ext),
+  appBrowserIndex: ext =>
+    resolveWithExtension('src/targets/browser/index', ext),
   // for intents
   appIntentsHtmlTemplate: resolveApp('src/targets/intents/index.ejs'),
-  appIntentsIndex: (ext) => resolveWithExtension('src/targets/intents/index', ext),
+  appIntentsIndex: ext =>
+    resolveWithExtension('src/targets/intents/index', ext),
   // for services
   appServicesFolder: resolveApp('src/targets/services'),
   // for mobile
   appMobileHtmlTemplate: resolveApp('src/targets/mobile/index.ejs'),
-  appMobileIndex: (ext) => resolveWithExtension('src/targets/mobile/index', ext),
+  appMobileIndex: ext => resolveWithExtension('src/targets/mobile/index', ext),
   appMobileWWW: resolveApp('src/targets/mobile/www'),
   // for app local cozy-bar (dev only)
   appCozyBarJs: resolveApp('node_modules/cozy-bar/dist/cozy-bar.js'),

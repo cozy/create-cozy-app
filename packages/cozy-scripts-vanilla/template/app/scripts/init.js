@@ -1,7 +1,7 @@
 /* global cozy */
 
 // return a defaultData if the template hasn't been replaced by cozy-stack
-const getDataOrDefault = function (toTest, defaultData) {
+const getDataOrDefault = function(toTest, defaultData) {
   const templateRegex = /^\{\{\.[a-zA-Z]*\}\}$/ // {{.Example}}
   return templateRegex.test(toTest) ? defaultData : toTest
 }

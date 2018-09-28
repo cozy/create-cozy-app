@@ -8,24 +8,31 @@ const colorize = require('../utils/_colorize.js')
   cliArguments: arguments to pass the module CLI
   debugMode: more logs if debug mode
 */
-module.exports = function runGlobalPackageCLI (packageName, cliArguments = [], debugMode = null) {
+module.exports = function runGlobalPackageCLI(
+  packageName,
+  cliArguments = [],
+  debugMode = null
+) {
   // install the latest cozy-app-publish version globally
-  console.log(colorize.blue(`Fetching the latest version of ${packageName}... (please wait)`))
+  console.log(
+    colorize.blue(
+      `Fetching the latest version of ${packageName}... (please wait)`
+    )
+  )
   const yarnAddProcess = spawn.sync(
     'yarn',
-    [
-      'global',
-      'add',
-      `${packageName}@latest`,
-      '--prefer-offline'
-    ],
+    ['global', 'add', `${packageName}@latest`, '--prefer-offline'],
     {
       stdio: debugMode ? 'inherit' : 'pipe'
     }
   )
 
   if (yarnAddProcess.status !== 0) {
-    throw new Error(colorize.red(`Something went wrong when installing the latest version of '${packageName}'`))
+    throw new Error(
+      colorize.red(
+        `Something went wrong when installing the latest version of '${packageName}'`
+      )
+    )
   }
 
   console.log(colorize.green(`${colorize.bold(packageName)} fetched.`))
@@ -38,10 +45,7 @@ module.exports = function runGlobalPackageCLI (packageName, cliArguments = [], d
 
   const runPackageProcess = spawn.sync(
     'sh',
-    [
-      '-c',
-      `$(yarn global bin)/${packageName} ${argsAsString}`
-    ],
+    ['-c', `$(yarn global bin)/${packageName} ${argsAsString}`],
     {
       stdio: 'inherit'
     }
@@ -49,6 +53,8 @@ module.exports = function runGlobalPackageCLI (packageName, cliArguments = [], d
 
   if (runPackageProcess.status !== 0) {
     console.log()
-    throw colorize.red(`Something went wrong when running '${packageName}'. Process aborted.`)
+    throw colorize.red(
+      `Something went wrong when running '${packageName}'. Process aborted.`
+    )
   }
 }

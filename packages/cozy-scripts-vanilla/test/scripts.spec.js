@@ -23,7 +23,7 @@ process.on('SIGINT', () => {
 
 jest.setTimeout(120000) // 120s timeout
 
-function cleanUp () {
+function cleanUp() {
   console.log(colorize.orange('Cleaning up generated files'))
   process.chdir(rootPath)
   fs.removeSync(testPath)
@@ -39,7 +39,7 @@ const excludedFiles = [
   'Thumbs.db',
   'desktop.ini'
 ]
-var readDeepDirSync = function (dir, filelist, parentPath = '') {
+var readDeepDirSync = function(dir, filelist, parentPath = '') {
   const files = fs.readdirSync(dir)
   filelist = filelist || []
   files.forEach(file => {
@@ -68,9 +68,15 @@ describe('App from cozy-scripts-vanilla', () => {
     // create the app test folder
     fs.ensureDirSync(appPath)
     process.chdir(appPath)
-    fs.writeJsonSync('./package.json', {name: appName})
+    fs.writeJsonSync('./package.json', { name: appName })
     // install the scripts and run it, this part is normally handlded by create-cozy-app
-    const args = ['add', '--exact'].concat([`cozy-scripts-vanilla@file:${path.join(rootPath, 'packages', 'cozy-scripts-vanilla')}`])
+    const args = ['add', '--exact'].concat([
+      `cozy-scripts-vanilla@file:${path.join(
+        rootPath,
+        'packages',
+        'cozy-scripts-vanilla'
+      )}`
+    ])
     spawn.sync('yarn', args, { stdio: 'inherit' })
   })
 
@@ -85,20 +91,37 @@ describe('App from cozy-scripts-vanilla', () => {
     cleanUp()
   })
 
-  it('should have the correct files outline', (done) => {
-    const init = require(path.join(appPath, 'node_modules', 'cozy-scripts-vanilla', 'scripts', 'init.js'))
+  it('should have the correct files outline', done => {
+    const init = require(path.join(
+      appPath,
+      'node_modules',
+      'cozy-scripts-vanilla',
+      'scripts',
+      'init.js'
+    ))
     // run the initiallisation script
-    init(appPath, appName, false, (e) => {
-      console.log(colorize.red('The script exited for some reasons. The test failed.'))
-      cleanUp()
-      console.log(e)
-      throw new Error(colorize.red('Scripts tests failed.'))
-    }, overrideData, () => {
-      console.log(colorize.orange('Asserting created app content (files outline)...'))
-      const generatedElements = readDeepDirSync(appPath)
-      expect(generatedElements).toMatchSnapshot()
-      // we use done() here to force waiting this callback call
-      done()
-    })
+    init(
+      appPath,
+      appName,
+      false,
+      e => {
+        console.log(
+          colorize.red('The script exited for some reasons. The test failed.')
+        )
+        cleanUp()
+        console.log(e)
+        throw new Error(colorize.red('Scripts tests failed.'))
+      },
+      overrideData,
+      () => {
+        console.log(
+          colorize.orange('Asserting created app content (files outline)...')
+        )
+        const generatedElements = readDeepDirSync(appPath)
+        expect(generatedElements).toMatchSnapshot()
+        // we use done() here to force waiting this callback call
+        done()
+      }
+    )
   })
 })

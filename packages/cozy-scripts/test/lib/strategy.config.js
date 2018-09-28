@@ -23,8 +23,10 @@ const configs = [
               options: {
                 ident: 'postcss',
                 sourceMap: true,
-                plugins: function () {
-                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
+                plugins: function() {
+                  return [
+                    require('autoprefixer')({ browsers: ['last 2 versions'] })
+                  ]
                 }
               }
             }
@@ -46,8 +48,10 @@ const configs = [
               loader: 'postcss-loader',
               options: {
                 sourceMap: true,
-                plugins: function () {
-                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
+                plugins: function() {
+                  return [
+                    require('autoprefixer')({ browsers: ['last 2 versions'] })
+                  ]
                 }
               }
             },
@@ -84,8 +88,10 @@ const configs = [
               loader: 'postcss-loader',
               options: {
                 sourceMap: true,
-                plugins: function () {
-                  return [ require('autoprefixer')({ browsers: ['last 2 versions'] }) ]
+                plugins: function() {
+                  return [
+                    require('autoprefixer')({ browsers: ['last 2 versions'] })
+                  ]
                 }
               }
             },

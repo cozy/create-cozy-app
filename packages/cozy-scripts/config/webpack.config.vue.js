@@ -9,13 +9,13 @@ module.exports = {
     extensions: ['.vue']
   },
   module: {
-    rules: [{
-      test: /\.vue$/,
-      exclude: /node_modules/,
-      loader: require.resolve('vue-loader')
-    }]
+    rules: [
+      {
+        test: /\.vue$/,
+        exclude: /node_modules/,
+        loader: require.resolve('vue-loader')
+      }
+    ]
   },
-  plugins: [
-    new VueLoaderPlugin()
-  ]
+  plugins: [new VueLoaderPlugin()]
 }

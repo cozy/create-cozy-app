@@ -1,7 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
-const {target} = require('./webpack.vars')
+const { target } = require('./webpack.vars')
 
 module.exports = {
   mode: 'production',

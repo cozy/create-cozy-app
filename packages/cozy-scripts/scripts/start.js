@@ -22,7 +22,7 @@ const appSlug = (appManifest && appManifest.slug) || 'app'
 // There is no callback available on compiler here,
 // it's not handled by webpack-dev-server 2.x
 // see https://github.com/webpack/webpack-dev-server/issues/818
-module.exports = (buildOptions) => {
+module.exports = buildOptions => {
   const buildTarget = buildOptions.target || 'browser'
   const options = Object.assign({}, buildOptions, {
     mode: buildOptions.mode || 'development',
@@ -77,12 +77,15 @@ module.exports = (buildOptions) => {
     hot: useHotReload,
     host,
     port,
-    headers: useHotReload ? {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-      'Access-Control-Allow-Headers':
-        'X-Requested-With, content-type, Authorization'
-    } : {}
+    headers: useHotReload
+      ? {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods':
+            'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+          'Access-Control-Allow-Headers':
+            'X-Requested-With, content-type, Authorization'
+        }
+      : {}
   }
 
   const compiler = webpack(appConfig)
@@ -90,7 +93,7 @@ module.exports = (buildOptions) => {
 
   let isFirstRun = true
 
-  function clearConsole () {
+  function clearConsole() {
     if (process.stdout.isTTY) process.stdout.write('\x1Bc')
   }
 
@@ -111,9 +114,17 @@ module.exports = (buildOptions) => {
       console.log()
     }
     if (buildOptions.stack) {
-      console.log(`  ${colorize.bold('Your application:')}  http://${appSlug}.${cozyDomain}`)
-      console.log(`  ${colorize.bold('Your local Cozy:')}   http://${cozyDomain}`)
-      console.log(`  ${colorize.bold('Dev assets:')}        http://${host}:${port}`)
+      console.log(
+        `  ${colorize.bold(
+          'Your application:'
+        )}  http://${appSlug}.${cozyDomain}`
+      )
+      console.log(
+        `  ${colorize.bold('Your local Cozy:')}   http://${cozyDomain}`
+      )
+      console.log(
+        `  ${colorize.bold('Dev assets:')}        http://${host}:${port}`
+      )
       console.log()
       if (isFirstRun) {
         isFirstRun = false
@@ -137,16 +148,22 @@ module.exports = (buildOptions) => {
             cwd: paths.appPath
           }
         )
-        dockerProcess.stdout.on('data', (data) => {
-          process.stdout.write(`${colorize.blue.bold('Cozy stack (docker):')} ${data}`)
+        dockerProcess.stdout.on('data', data => {
+          process.stdout.write(
+            `${colorize.blue.bold('Cozy stack (docker):')} ${data}`
+          )
         })
 
-        dockerProcess.stderr.on('data', (data) => {
-          process.stderr.write(`${colorize.red.bold('Cozy stack (docker):')} ${data}`)
+        dockerProcess.stderr.on('data', data => {
+          process.stderr.write(
+            `${colorize.red.bold('Cozy stack (docker):')} ${data}`
+          )
         })
       }
     } else {
-      console.log(`  ${colorize.bold('Dev assets:')}        http://${host}:${port}`)
+      console.log(
+        `  ${colorize.bold('Dev assets:')}        http://${host}:${port}`
+      )
     }
     if (!isFirstRun) {
       clearConsole()
@@ -163,7 +180,6 @@ module.exports = (buildOptions) => {
       throw new Error(colorize.red(err))
     }
   })
-
   ;['SIGINT', 'SIGQUIT', 'SIGTERM'].forEach(sig => {
     process.on(sig, () => {
       server.close()
@@ -174,7 +190,9 @@ module.exports = (buildOptions) => {
         console.log(colorize.cyan('See you soon! 👋'))
         dockerProcess.stdout.destroy()
         dockerProcess.stderr.destroy()
-        spawn.sync('sh', ['-c', '-m', paths.csQuitStackScript], { stdio: 'inherit' })
+        spawn.sync('sh', ['-c', '-m', paths.csQuitStackScript], {
+          stdio: 'inherit'
+        })
       } else {
         console.log()
         console.log(colorize.cyan('See you soon! 👋'))

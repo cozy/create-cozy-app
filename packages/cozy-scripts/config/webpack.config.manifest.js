@@ -33,7 +33,7 @@ module.exports = {
 // For production, we grab informations from the locales: short_description,
 // long_description, name, changes... ('manifest' field in the local file)
 // It also computes the langs array according to the existing locales files
-function transformManifest (buffer) {
+function transformManifest(buffer) {
   const content = JSON.parse(buffer.toString())
   if (environment === 'production') {
     const locales = fs.readdirSync(paths.appLocales)

@@ -2,6 +2,7 @@
 	"scripts": {
 		"postinstall": "lerna bootstrap",
 		"changelog": "lerna-changelog",
+		"lint": "eslint --ignore-path .gitignore './**/*.{js,jsx}'",
 		"test": "yarn test:cli && yarn test:cozy-scripts && yarn test:cozy-scripts-vanilla",
 		"test:cli": "bash packages/create-cozy-app/test/create-cozy-app.sh",
 		"test:cozy-scripts": "yarn test:cozy-scripts:default && yarn test:cozy-scripts:vue",
@@ -11,6 +12,7 @@
 		"reset:yarn": "sh reset_yarn.sh"
 	},
 	"devDependencies": {
+		"eslint-config-cozy-app": "1.1.3",
 		"jest": "23.6.0",
 		"lerna": "3.4.0",
 		"lerna-changelog": "0.8.0"
