@@ -13,7 +13,7 @@
     "watch": "yarn watch:browser",
     "watch:browser": "cozy-scripts watch --browser",
     "watch:mobile": "cozy-scripts watch --mobile",
-    "standalone": "cozy-scripts standalone --hot --browser",
+    "start": "cozy-scripts start --hot --browser",
     "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git}",
     "pretest": "yarn lint",
     "test": "cozy-scripts test --verbose --coverage",

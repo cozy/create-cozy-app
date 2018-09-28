@@ -32,14 +32,16 @@ This tool can be run as an installed CLI or by using `yarn create`, see below fo
 
 By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on Preact (tested on React). But option for VueJS or Vanilla are also available, see below for more information.
 
+__:warning: The packages `babel-preset-cozy-app` and `eslint-config-cozy-app` have been moved to the [`cozy-libs`](https://github.com/cozy/cozy-libs) repository since their versions 1.0.0.__
+
 #### Requirements
 
  - NodeJS version 8 or higher;
  - [Yarn](https://yarnpkg.com): a NodeJS package manager, like `npm`;
- - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment) (optional if you just use the standalone mode);
+ - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment)
 
 
-### Running it without the CLI via Yarn
+### Running it without the CLI via Yarn (highly recommended)
 
 You can use `create-cozy-app` without installing it globally by using the `yarn create cozy-app` command to bootstrap your application:
 
@@ -67,9 +69,22 @@ If you installed the CLI as described before, use the `create-cozy-app` command 
 create-cozy-app mycozyapp
 ```
 
+### Ready to go
+
+The script will download some dependencies (may take a while) and ask you a few questions, then creates an application skeleton inside `mycozyapp`.
+
+That's all! You can start hacking:
+
+```
+cd mycozyapp
+yarn start
+```
+
+After the webpack build and the docker environment ready, your app should be available at http://mycozyapp.cozy.tools:8080
+
 ### Options
 
-##### `--scripts-source`
+##### `--scripts-source` (useful for hacking)
 
 You can pass a custom scripts package using the optional `--scripts-source` option, it can be one of:
 

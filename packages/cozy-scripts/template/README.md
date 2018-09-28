@@ -38,10 +38,10 @@ You can run your application inside a Cozy thanks to the [cozy-stack docker imag
 ```sh
 # in a terminal, run your app in watch mode with a docker running Cozy
 $ cd <SLUG_GH>
-$ yarn standalone
+$ yarn start
 ```
 
-Your app is now available at http://<SLUG_GH>.cozy.tools:8080.
+After the build and the stack launched, your app is now available at http://<SLUG_GH>.cozy.tools:8080.
 
 
 ### Living on the edge

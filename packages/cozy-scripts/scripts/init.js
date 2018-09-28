@@ -171,11 +171,7 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
       console.log('App dependencies installed.')
       console.log()
       console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/. Enjoy it!`))
-      if (cliOptions.vue) {
-        console.log('You can use the `app.config.js` file if you want to customize the webpack configuration.')
-      } else {
-        console.log('You can also create an `app.config.js` file if you want to customize the webpack configuration.')
-      }
+      console.log('You can also create an `app.config.js` file if you want to customize the webpack configuration.')
       if (typeof successCallback === 'function') successCallback()
     })
     .catch(error => {

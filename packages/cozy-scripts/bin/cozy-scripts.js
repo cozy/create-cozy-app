@@ -14,7 +14,7 @@ const program = new commander.Command(pkg.name)
     Available actions:
     - build: build your application once (Webpack)
     - watch: build your application and listen to changes to rebuild it automatically (Webpack)
-    - standalone: build your application and serve it using Webpack dev server
+    - start: build your application and serve it inside a Cozy using Docker (with HMR)
     - test: run your tests using Jest
     - publish: run cozy-app-publish package (cf cozy-app-publish documentation)
     - release: run cozy-release to manage an app version release (cf cozy-release documentation)
@@ -32,7 +32,7 @@ const program = new commander.Command(pkg.name)
   .option('--fix', 'format automatically the code with eslint')
   .option('--hot', 'enable hot module reload (only for development)')
   .option('--mobile', 'specify mobile build target')
-  .option('--no-stack', 'disable docker stack launch when using `cozy-scripts standalone`')
+  .option('--no-stack', 'disable docker stack launch when using `cozy-scripts start`')
   .option('--production', 'specify production build mode')
   .option('--show-config', 'just print app final webpack config')
   .option('--vue', 'to use scripts in a VueJS specific way (default (p)React)')
@@ -78,14 +78,20 @@ if (program.showConfig) {
 const availableScripts = [
   'build',
   'watch',
-  'standalone',
+  'start',
+  'standalone', // deprecated, will be removed
   'test',
   'publish',
   'release'
 ]
 
 if (availableScripts.includes(actionName)) {
-  if (actionName === 'standalone') { // specific to this action
+  if (actionName === 'standalone') {
+    console.log(colorize.orange('The `standalone` command is now deprecated and will be removed in next versions.'))
+    console.log(colorize.orange(`Please use the ${colorize.bold('`start`')} command.`))
+    actionName = 'start'
+  }
+  if (actionName === 'start') { // specific to this action
     options.stack = program.stack // specific behaviour of --no-* options
   }
   const scriptPath = `../scripts/${actionName}`
