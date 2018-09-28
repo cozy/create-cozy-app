@@ -79,7 +79,7 @@ You can reach the Cozy Community by:
 
 ## License
 
-`cozy-scripts` is distributed under the MIT license.
+`cozy-scripts-vanilla` is distributed under the MIT license.
 
 
 [cozy]: https://cozy.io "Cozy Cloud"

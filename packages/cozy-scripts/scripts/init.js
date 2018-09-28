@@ -172,6 +172,10 @@ function run (appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
       console.log()
       console.log(colorize.green(`Great! Your application ${colorize.cyan(dataMap.get('<APP_NAME>'))} is ready! \\o/. Enjoy it!`))
       console.log('You can also create an `app.config.js` file if you want to customize the webpack configuration.')
+      console.log()
+      console.log('Next step:')
+      console.log(`  $ cd ${dataMap.get('<SLUG_GH>')}`)
+      console.log(`  $ yarn start`)
       if (typeof successCallback === 'function') successCallback()
     })
     .catch(error => {
