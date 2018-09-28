@@ -65,6 +65,10 @@ if (program.fix) {
   process.env.COZY_SCRIPTS_ESLINT_FIX = 'true'
 }
 
+if (program.debug) {
+  process.env.COZY_SCRIPTS_DEBUG = 'true'
+}
+
 if (program.showConfig) {
   console.log(JSON.stringify(getWebpackConfigs(options), null, 2))
   process.exit(0)
