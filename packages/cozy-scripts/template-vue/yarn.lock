@@ -1932,9 +1932,9 @@ cosmiconfig@^5.0.5:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-cozy-bar@6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.3.0.tgz#14d57229772d3bb2a0224245fc01958cde73e990"
+cozy-bar@6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.3.1.tgz#83fc49ba13e50c85af05dbf207466a464ed9b649"
   dependencies:
     "@babel/core" "7.1.0"
     babel-core "7.0.0-bridge.0"
