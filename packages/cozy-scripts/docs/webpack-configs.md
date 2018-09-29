@@ -10,6 +10,7 @@
 - __[Unit Configs](#unit-configs)__
     - [`webpack.config.analyzer.js`](#webpackconfiganalyzerjs)
     - [`webpack.config.base.js`](#webpackconfigbasejs)
+    - [`webpack.config.chunks.js`](#webpackconfigchunksjs)
     - [`webpack.config.cozy-ui.js`](#webpackconfigcozy-uijs)
     - [`webpack.config.cozy-ui.react.js`](#webpackconfigcozy-uireactjs)
     - [`webpack.config.css-modules.js`](#webpackconfigcss-modulesjs)
@@ -56,6 +57,7 @@ __Target:__ A target means the one which will use the built. For now we only hav
 
 This file is the default config bundle used for the application built from `cozy-scripts`. It uses all following configs files:
 - `webpack.config.base.js`
+- `webpack.config.chunks.js`
 - `webpack.config.cozy-ui.js`
 - `webpack.config.cozy-ui.react.js`
 - `webpack.config.eslint.js`
@@ -93,6 +95,7 @@ module.exports = [configs, myConfig]
 
 This file is the same default bundle but using preact instead (previous default config bundle used for the application built from `cozy-scripts`). It uses all following configs files:
 - `webpack.config.base.js`
+- `webpack.config.chunks.js`
 - `webpack.config.cozy-ui.js`
 - `webpack.config.cozy-ui.react.js`
 - `webpack.config.eslint.js`
@@ -130,6 +133,7 @@ module.exports = [configs, myConfig]
 
 This file is the VueJS config bundle used for the application built from `cozy-scripts` with the option `--vue`. It uses all following configs files:
 - `webpack.config.base.js`
+- `webpack.config.chunks.js`
 - `webpack.config.cozy-ui.js`
 - `webpack.config.eslint.js`
 - `webpack.config.intents.js`
@@ -195,6 +199,14 @@ A specific `noParse` property is enabled on `/localforage/dist`.
     - `postcss-discard-empty` (remove empty definitions)
     - `csswring` only in `production` environment to minify and remove comments (`preservehacks` enabled)
 
+### `webpack.config.chunks.js`
+
+This configuration will use the `optimization` property with `splitChunks` in order to split the build into two chunks:
+    - The main one, it can be `app` or `intents`
+    - And the `vendors` chunk which will gather all stuff from node_modules
+
+Splitting chunks allow to decrease the size of the main chunk and optimize the build for caching (mainly the main chunk will change during development).
+
 ### `webpack.config.cozy-ui.js`
 
 This configuration will allow to load styles from `cozy-ui`.
@@ -241,7 +253,7 @@ It will:
 - use `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/intents/` with options:
     - `title`: `name` property of the `package.json` + ` intents`
     - `filename`: `intents/index.html`, the output file
-    - `chunks`: ['intents']
+    - `excludeChunks`: to exclude chunk `app`
     - `inject` to `false`
     - `minify` with `collapseWhitespace` to `true`
 
@@ -293,7 +305,7 @@ In this case, all services files (`.js` files in the `/src/targets/services/` fo
 This config will:
 - use `__mergeStrategy` to drive the [`webpack-merge` strategy](docs/webpack-merge-strategy.md):
     - disable smart merging
-    - use the `replace` mode `plugins`, `output` and `entry`
+    - use the `replace` mode `plugins`, `output`, `entry`, `optimization` and `module`
 - define as webpack entry an array of all `.js` files contained in `/src/target/services` folder
 - use as output the `/build/services` folder with `[name].js` as filename
 - define the target as `'node'`
@@ -373,7 +385,7 @@ In this production mode, webpack will automatically use the `UglifyJs` plugin to
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/browser/` with options:
     - `title`: `name` property of the `package.json`
     - `inject` to `false`
-    - `chunks`: ['app']
+    - `excludeChunks`: to exclude chunk `intents`
     - `minify` with `collapseWhitespace` to `true`
 - `webpack.DefinePlugin` to define globals variables at compile time:
     - `__TARGET__` to `browser`
@@ -388,7 +400,7 @@ In this production mode, webpack will automatically use the `UglifyJs` plugin to
 - `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading) and used with `html-webpack-plugin`
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/mobile/` with options:
     - `title`: `name` property of the `package.json`
-    - `chunks`: ['app']
+    - `excludeChunks`: to exclude chunk `intents`
     - `inject` to `head`
     - `minify` with `collapseWhitespace` to `true`
 - `webpack.DefinePlugin` to define globals variables at compile time:

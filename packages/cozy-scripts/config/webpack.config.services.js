@@ -23,6 +23,7 @@ const config = {
       plugins: 'replace',
       output: 'replace',
       entry: 'replace',
+      optimization: 'replace',
       module: 'replace'
     }
   },
@@ -32,6 +33,7 @@ const config = {
     filename: '[name].js'
   },
   target: 'node',
+  optimization: {}, // reset optimization property
   devtool: false,
   module: {
     rules: [

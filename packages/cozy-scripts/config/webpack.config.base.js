@@ -1,5 +1,6 @@
 'use strict'
 
+const webpack = require('webpack')
 const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const paths = require('../utils/paths')
@@ -9,7 +10,7 @@ const production = environment === 'production'
 
 module.exports = {
   output: {
-    filename: '[name].js'
+    filename: '[name].[contenthash].js'
   },
   resolve: {
     modules: [paths.appNodeModules, paths.appSrc],
@@ -61,8 +62,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: `[name]${production ? '.[hash].min' : ''}.css`,
-      chunkFilename: `[name].[id]${production ? '.[hash].min' : ''}.css`
+      filename: `[name].[contenthash]${production ? '.min' : ''}.css`,
+      chunkFilename: `[name].[contenthash]${production ? '.[id].min' : ''}.css`
     }),
     new PostCSSAssetsPlugin({
       test: /\.css$/,
@@ -79,6 +80,8 @@ module.exports = {
             })
           : []
       )
-    })
+    }),
+    // use a hash as chunk id to avoid id changes of not changing chunk
+    new webpack.HashedModuleIdsPlugin()
   ]
 }
