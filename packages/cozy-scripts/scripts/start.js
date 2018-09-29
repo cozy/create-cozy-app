@@ -107,12 +107,14 @@ module.exports = buildOptions => {
   let dockerProcess = null
 
   compiler.hooks.done.tap('Very end hook', () => {
-    if (isFirstRun) {
-      clearConsole()
-      console.log()
-      console.log(colorize.green.bold('App successfully compiled !'))
-      console.log()
-    }
+    clearConsole()
+    console.log()
+    console.log(
+      colorize.green.bold(
+        `App successfully ${isFirstRun ? 'compiled' : 'updated'}!`
+      )
+    )
+    console.log()
     if (buildOptions.stack) {
       console.log(
         `  ${colorize.bold(
@@ -164,12 +166,6 @@ module.exports = buildOptions => {
       console.log(
         `  ${colorize.bold('Dev assets:')}        http://${host}:${port}`
       )
-    }
-    if (!isFirstRun) {
-      clearConsole()
-      console.log()
-      console.log(colorize.green.bold('App successfully updated !'))
-      console.log()
     }
   })
 
