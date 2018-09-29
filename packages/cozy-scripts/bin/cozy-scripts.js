@@ -90,14 +90,18 @@ const availableScripts = [
 
 if (availableScripts.includes(actionName)) {
   if (actionName === 'standalone') {
+    console.log()
     console.log(
       colorize.orange(
-        'The `standalone` command is now deprecated and will be removed in next versions.'
+        '⚠️ `cozy-scripts standalone` is now deprecated and will be removed in next versions.'
       )
     )
     console.log(
-      colorize.orange(`Please use the ${colorize.bold('`start`')} command.`)
+      colorize.orange(
+        `Please use the ${colorize.bold('`cozy-scripts start`')} instead. ⚠️`
+      )
     )
+    console.log()
     actionName = 'start'
   }
   if (actionName === 'start') {
