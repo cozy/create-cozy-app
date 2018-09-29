@@ -13,7 +13,7 @@ module.exports = {
     filename: '[name].[contenthash].js'
   },
   resolve: {
-    modules: [paths.appNodeModules, paths.appSrc],
+    modules: [paths.appSrc, paths.appNodeModules],
     extensions: ['.js', '.json', '.css'],
     // linked package will still be see as a node_modules package
     symlinks: false

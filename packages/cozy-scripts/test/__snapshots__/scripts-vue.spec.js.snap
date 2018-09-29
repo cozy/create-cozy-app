@@ -345,8 +345,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
+        ".tmp_test/test-app-vue/node_modules",
       ],
       "symlinks": false,
     },
@@ -679,8 +679,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
+        ".tmp_test/test-app-vue/node_modules",
       ],
       "symlinks": false,
     },
@@ -1041,8 +1041,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
+        ".tmp_test/test-app-vue/node_modules",
       ],
       "symlinks": false,
     },
@@ -1380,8 +1380,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
+        ".tmp_test/test-app-vue/node_modules",
       ],
       "symlinks": false,
     },
@@ -1734,8 +1734,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
+        ".tmp_test/test-app-vue/node_modules",
       ],
       "symlinks": false,
     },
@@ -2088,8 +2088,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app-vue/node_modules",
         ".tmp_test/test-app-vue/src",
+        ".tmp_test/test-app-vue/node_modules",
       ],
       "symlinks": false,
     },

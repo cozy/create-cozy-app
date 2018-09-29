@@ -440,8 +440,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
@@ -810,8 +810,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
@@ -1208,8 +1208,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
@@ -1583,8 +1583,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
@@ -1973,8 +1973,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
@@ -2363,8 +2363,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
@@ -2815,8 +2815,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
@@ -2887,8 +2887,8 @@ Array [
         ".styl",
       ],
       "modules": Array [
-        ".tmp_test/test-app/node_modules",
         ".tmp_test/test-app/src",
+        ".tmp_test/test-app/node_modules",
       ],
       "symlinks": false,
     },
