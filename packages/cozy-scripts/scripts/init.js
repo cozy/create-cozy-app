@@ -202,9 +202,9 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
         'You can also create an `app.config.js` file if you want to customize the webpack configuration.'
       )
       console.log()
-      console.log('Next step:')
-      console.log(`  $ cd ${dataMap.get('<SLUG_GH>')}`)
-      console.log(`  $ yarn start`)
+      console.log('Next steps:')
+      console.log(`  $ ${colorize.bold(`cd ${dataMap.get('<SLUG_GH>')}`)}`)
+      console.log(`  $ ${colorize.bold('yarn start')}`)
       if (typeof successCallback === 'function') successCallback()
     })
     .catch(error => {

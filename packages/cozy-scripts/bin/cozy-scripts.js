@@ -82,24 +82,26 @@ const availableScripts = [
   'build',
   'watch',
   'start',
-  'standalone', // deprecated, will be removed
   'test',
   'publish',
   'release'
 ]
 
+// TODO: to remove in next major version
+if (actionName === 'standalone') {
+  console.log()
+  console.log(
+    colorize.orange('⚠️ `cozy-scripts standalone` has been replaced.')
+  )
+  console.log(
+    colorize.orange(
+      `Please use ${colorize.bold('`cozy-scripts start`')} instead. ⚠️`
+    )
+  )
+  console.log()
+}
+
 if (availableScripts.includes(actionName)) {
-  if (actionName === 'standalone') {
-    console.log(
-      colorize.orange(
-        'The `standalone` command is now deprecated and will be removed in next versions.'
-      )
-    )
-    console.log(
-      colorize.orange(`Please use the ${colorize.bold('`start`')} command.`)
-    )
-    actionName = 'start'
-  }
   if (actionName === 'start') {
     // specific to this action
     options.stack = program.stack // specific behaviour of --no-* options

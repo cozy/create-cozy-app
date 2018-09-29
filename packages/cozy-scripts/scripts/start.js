@@ -102,17 +102,21 @@ module.exports = buildOptions => {
     clearConsole()
     console.log()
     console.log('Compiling...')
+    console.log()
   })
 
   let dockerProcess = null
+  let knownDockerError = null
 
   compiler.hooks.done.tap('Very end hook', () => {
-    if (isFirstRun) {
-      clearConsole()
-      console.log()
-      console.log(colorize.green.bold('App successfully compiled !'))
-      console.log()
-    }
+    clearConsole()
+    console.log()
+    console.log(
+      colorize.green.bold(
+        `App successfully ${isFirstRun ? 'compiled' : 'updated'}!`
+      )
+    )
+    console.log()
     if (buildOptions.stack) {
       console.log(
         `  ${colorize.bold(
@@ -127,7 +131,6 @@ module.exports = buildOptions => {
       )
       console.log()
       if (isFirstRun) {
-        isFirstRun = false
         // launch cozy-stack within docker cozy/cozy-app-dev
         dockerProcess = spawn(
           'docker',
@@ -159,18 +162,39 @@ module.exports = buildOptions => {
             `${colorize.red.bold('Cozy stack (docker):')} ${data}`
           )
         })
+        dockerProcess.on('error', err => {
+          console.log()
+          process.stderr.write(
+            `${colorize.red.bold('Cozy stack (docker):')} ${err}\n`
+          )
+          console.log()
+          if (err.code === 'ENOENT') {
+            process.stderr.write(
+              colorize.red.bold('You seems to not having Docker installed.\n')
+            )
+            process.stderr.write(
+              colorize.red.bold(
+                'Be sure to have the `docker` CLI available in your environment.\n'
+              )
+            )
+            process.stderr.write(
+              colorize.red.bold(
+                "The Cozy in docker won't be available during this start session.\n"
+              )
+            )
+            process.stderr.write(
+              colorize.red.bold('Please install Docker and then start again.\n')
+            )
+            knownDockerError = err
+          }
+        })
       }
     } else {
       console.log(
         `  ${colorize.bold('Dev assets:')}        http://${host}:${port}`
       )
     }
-    if (!isFirstRun) {
-      clearConsole()
-      console.log()
-      console.log(colorize.green.bold('App successfully updated !'))
-      console.log()
-    }
+    isFirstRun = false
   })
 
   server.listen(port, host, err => {
@@ -183,7 +207,7 @@ module.exports = buildOptions => {
   ;['SIGINT', 'SIGQUIT', 'SIGTERM'].forEach(sig => {
     process.on(sig, () => {
       server.close()
-      if (dockerProcess) {
+      if (dockerProcess && !knownDockerError) {
         console.log()
         console.log(colorize.orange('Shutting down the stack...'))
         console.log()
