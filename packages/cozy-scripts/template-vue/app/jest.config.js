@@ -2,7 +2,7 @@ module.exports = {
   testURL: 'http://localhost/',
   moduleFileExtensions: ['js', 'vue', 'json', 'styl'],
   setupFiles: ['<rootDir>/test/jestLib/setup.js'],
-  moduleDirectories: ['node_modules', 'src'],
+  moduleDirectories: ['src', 'node_modules'],
   // jest modules installed by cozy-scripts
   transform: {
     '^.+\\.js$': 'babel-jest',
