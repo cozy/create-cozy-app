@@ -1,4 +1,4 @@
-# The `cozy-scripts` configurations
+# The `cozy-scripts` Webpack configurations
 
 ## Table of content
 

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/CCA_1920_1080.png" alt="CCA illustration" />
+  <img src="docs/assets/CCA_1920_1080.png" alt="CCA illustration" />
 </div>
 
 <h1 align="center">Create Cozy App</h1>
