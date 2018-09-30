@@ -1,4 +1,4 @@
-# Merge configs using strategies with `cozy-scripts`
+# Merge Webpack configurations using strategies with `cozy-scripts`
 
 `cozy-scripts` uses the [`webpack-merge`](https://github.com/survivejs/webpack-merge) module to merge all webpack config files provided by default or by the application. And that module can handle many merge options.
 
