@@ -198,7 +198,6 @@ module.exports = buildOptions => {
   })
 
   server.listen(port, host, err => {
-    console.log()
     if (err) {
       server.close()
       throw new Error(colorize.red(err))
