@@ -12,6 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.webapp$/,
+        exclude: /node_modules/,
         loader: require.resolve('json-loader')
       }
     ]
