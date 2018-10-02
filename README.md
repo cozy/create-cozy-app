@@ -27,7 +27,7 @@
 
 This tool can be run as an installed CLI or by using `yarn create`, see below for more information.
 
-By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on Preact (tested on React). But option for VueJS or Vanilla are also available, see below for more information.
+By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on React. But option for VueJS or Vanilla are also available, see below for more information.
 
 __:warning: The packages `babel-preset-cozy-app` and `eslint-config-cozy-app` have been moved to the [`cozy-libs`](https://github.com/cozy/cozy-libs) repository since their versions 1.0.0.__
 

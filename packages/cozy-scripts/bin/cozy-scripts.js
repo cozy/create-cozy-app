@@ -38,7 +38,7 @@ const program = new commander.Command(pkg.name)
   )
   .option('--production', 'specify production build mode')
   .option('--show-config', 'just print app final webpack config')
-  .option('--vue', 'to use scripts in a VueJS specific way (default (p)React)')
+  .option('--vue', 'to use scripts in a VueJS specific way (default React)')
   .option(
     '--analyzer',
     'open an analyzer with an interactive treemap visualization of the contents of all builds'
