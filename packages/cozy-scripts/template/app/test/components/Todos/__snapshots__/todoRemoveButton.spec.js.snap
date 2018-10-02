@@ -7,6 +7,8 @@ exports[`TodoRemoveButton component: should be rendered correctly 1`] = `
   disabled={false}
   extension="narrow"
   icon="delete"
+  iconOnly={true}
+  label="Delete"
   onClick={[Function]}
   theme="danger"
 />
@@ -16,7 +18,7 @@ exports[`TodoRemoveButton component: should handle isWorking correctly (display 
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoRemoveButton
-    deleteTodo={[MockFunction]}
+    deleteDocument={[MockFunction]}
     todo={
       Object {
         "_id": 1234,
@@ -42,6 +44,8 @@ ShallowWrapper {
       "disabled": true,
       "extension": "narrow",
       "icon": "delete",
+      "iconOnly": true,
+      "label": "Delete",
       "onClick": [Function],
       "theme": "danger",
     },
@@ -60,6 +64,8 @@ ShallowWrapper {
         "disabled": true,
         "extension": "narrow",
         "icon": "delete",
+        "iconOnly": true,
+        "label": "Delete",
         "onClick": [Function],
         "theme": "danger",
       },

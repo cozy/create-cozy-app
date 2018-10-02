@@ -3,16 +3,13 @@
 /* eslint-env jest */
 
 import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme'
 
 // we import the not connected component version for testing
 import { TodosList } from 'components/Todos/TodosList'
 
 // mock data for testing
 import mockTodos from './_mocksTodos.json'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe('TodosList component:', () => {
   it('should be rendered correctly without todos', () => {

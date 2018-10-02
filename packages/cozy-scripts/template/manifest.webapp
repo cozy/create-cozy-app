@@ -24,8 +24,8 @@
       "type": "io.cozy.apps",
       "verbs": ["GET"]
     },
-    "mocks": {
-      "description": "TO REMOVE: only use as demonstration about Cozy interactions",
+    "mocks todos": {
+      "description": "TO REMOVE: only used as demonstration about Cozy App data interactions",
       "type": "io.mocks.todos"
     }
   }

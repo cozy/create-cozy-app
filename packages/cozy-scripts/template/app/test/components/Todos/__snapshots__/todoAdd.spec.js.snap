@@ -5,27 +5,32 @@ exports[`TodoAdd component: should be rendered correctly 1`] = `
   <h2>
     Add a new Todo:
   </h2>
-  <Label
-    className=""
-    error={false}
+  <form
+    onSubmit={[Function]}
   >
-     Todo name: 
-  </Label>
-  <Input
-    error={false}
-    fullwidth={false}
-    onChange={[Function]}
-    onKeyUp={[Function]}
-    type="text"
-    value=""
-  />
-  <DefaultButton
-    busy={false}
-    extension="narrow"
-    label="add"
-    onClick={[Function]}
-    size="large"
-  />
+    <Label
+      className=""
+      error={false}
+      htmlFor="todo-add-input"
+    >
+       Todo name: 
+    </Label>
+    <Input
+      error={false}
+      fullwidth={false}
+      id="todo-add-input"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <DefaultButton
+      busy={false}
+      extension="narrow"
+      label="add"
+      size="large"
+      type="submit"
+    />
+  </form>
 </div>
 `;
 
@@ -33,7 +38,7 @@ exports[`TodoAdd component: should handle isWorking correctly (display spinner) 
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoAdd
-    createTodo={[MockFunction]}
+    createDocument={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -52,27 +57,32 @@ ShallowWrapper {
         <h2>
           Add a new Todo:
         </h2>,
-        <Label
-          className=""
-          error={false}
+        <form
+          onSubmit={[Function]}
         >
-           Todo name: 
-        </Label>,
-        <Input
-          error={false}
-          fullwidth={false}
-          onChange={[Function]}
-          onKeyUp={[Function]}
-          type="text"
-          value=""
-        />,
-        <DefaultButton
-          busy={true}
-          extension="narrow"
-          label="add"
-          onClick={[Function]}
-          size="large"
-        />,
+          <Label
+            className=""
+            error={false}
+            htmlFor="todo-add-input"
+          >
+             Todo name: 
+          </Label>
+          <Input
+            error={false}
+            fullwidth={false}
+            id="todo-add-input"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <DefaultButton
+            busy={true}
+            extension="narrow"
+            label="add"
+            size="large"
+            type="submit"
+          />
+        </form>,
       ],
     },
     "ref": null,
@@ -91,46 +101,84 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "children": " Todo name: ",
-          "className": "",
-          "error": false,
+          "children": Array [
+            <Label
+              className=""
+              error={false}
+              htmlFor="todo-add-input"
+            >
+               Todo name: 
+            </Label>,
+            <Input
+              error={false}
+              fullwidth={false}
+              id="todo-add-input"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />,
+            <DefaultButton
+              busy={true}
+              extension="narrow"
+              label="add"
+              size="large"
+              type="submit"
+            />,
+          ],
+          "onSubmit": [Function],
         },
         "ref": null,
-        "rendered": " Todo name: ",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "error": false,
-          "fullwidth": false,
-          "onChange": [Function],
-          "onKeyUp": [Function],
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "busy": true,
-          "extension": "narrow",
-          "label": "add",
-          "onClick": [Function],
-          "size": "large",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": " Todo name: ",
+              "className": "",
+              "error": false,
+              "htmlFor": "todo-add-input",
+            },
+            "ref": null,
+            "rendered": " Todo name: ",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "error": false,
+              "fullwidth": false,
+              "id": "todo-add-input",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "busy": true,
+              "extension": "narrow",
+              "label": "add",
+              "onClick": undefined,
+              "size": "large",
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "form",
       },
     ],
     "type": "div",
@@ -145,27 +193,32 @@ ShallowWrapper {
           <h2>
             Add a new Todo:
           </h2>,
-          <Label
-            className=""
-            error={false}
+          <form
+            onSubmit={[Function]}
           >
-             Todo name: 
-          </Label>,
-          <Input
-            error={false}
-            fullwidth={false}
-            onChange={[Function]}
-            onKeyUp={[Function]}
-            type="text"
-            value=""
-          />,
-          <DefaultButton
-            busy={true}
-            extension="narrow"
-            label="add"
-            onClick={[Function]}
-            size="large"
-          />,
+            <Label
+              className=""
+              error={false}
+              htmlFor="todo-add-input"
+            >
+               Todo name: 
+            </Label>
+            <Input
+              error={false}
+              fullwidth={false}
+              id="todo-add-input"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <DefaultButton
+              busy={true}
+              extension="narrow"
+              label="add"
+              size="large"
+              type="submit"
+            />
+          </form>,
         ],
       },
       "ref": null,
@@ -184,46 +237,84 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "children": " Todo name: ",
-            "className": "",
-            "error": false,
+            "children": Array [
+              <Label
+                className=""
+                error={false}
+                htmlFor="todo-add-input"
+              >
+                 Todo name: 
+              </Label>,
+              <Input
+                error={false}
+                fullwidth={false}
+                id="todo-add-input"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />,
+              <DefaultButton
+                busy={true}
+                extension="narrow"
+                label="add"
+                size="large"
+                type="submit"
+              />,
+            ],
+            "onSubmit": [Function],
           },
           "ref": null,
-          "rendered": " Todo name: ",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "error": false,
-            "fullwidth": false,
-            "onChange": [Function],
-            "onKeyUp": [Function],
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "busy": true,
-            "extension": "narrow",
-            "label": "add",
-            "onClick": [Function],
-            "size": "large",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": " Todo name: ",
+                "className": "",
+                "error": false,
+                "htmlFor": "todo-add-input",
+              },
+              "ref": null,
+              "rendered": " Todo name: ",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "error": false,
+                "fullwidth": false,
+                "id": "todo-add-input",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "busy": true,
+                "extension": "narrow",
+                "label": "add",
+                "onClick": undefined,
+                "size": "large",
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "form",
         },
       ],
       "type": "div",

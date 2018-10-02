@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Button from 'cozy-ui/react/Button'
-import { withTodosMutations } from 'connections/allTodos'
+import { withMutations } from 'cozy-client'
 
 export class TodoRemoveButton extends Component {
   constructor(props) {
@@ -12,11 +12,11 @@ export class TodoRemoveButton extends Component {
 
   // delete the related todo
   removeTodo = async () => {
-    const { deleteTodo, todo } = this.props
+    const { deleteDocument, todo } = this.props
     // display a spinner during the process
     this.setState(() => ({ isWorking: true }))
     // delete the todo in the Cozy : asynchronous
-    await deleteTodo(todo)
+    await deleteDocument(todo)
     // remove the spinner
     this.setState(() => ({ isWorking: false }))
   }
@@ -28,6 +28,8 @@ export class TodoRemoveButton extends Component {
         className="todo-remove-button"
         theme="danger"
         icon="delete"
+        iconOnly
+        label="Delete"
         busy={isWorking}
         disabled={isWorking}
         onClick={this.removeTodo}
@@ -37,5 +39,5 @@ export class TodoRemoveButton extends Component {
   }
 }
 
-// get mutations from the client to use deleteTodo
-export default withTodosMutations(TodoRemoveButton)
+// get mutations from the client to use deleteDocument
+export default withMutations()(TodoRemoveButton)
