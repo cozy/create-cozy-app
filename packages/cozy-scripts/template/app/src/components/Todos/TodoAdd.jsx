@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
+import { withMutations } from 'cozy-client'
 import Input from 'cozy-ui/react/Input'
 import Label from 'cozy-ui/react/Label'
 import Button from 'cozy-ui/react/Button'
-import { withTodosMutations } from 'connections/allTodos'
+
+import { TODOS_DOCTYPE } from 'doctypes'
 
 export class TodoAdd extends Component {
-  constructor(props) {
-    super(props)
+  constructor(props, context) {
+    super(props, context)
     // initial component state
     this.state = {
       todoToAdd: '',
@@ -16,22 +18,17 @@ export class TodoAdd extends Component {
   }
 
   // handle input value change
-  handleChange = e => {
-    this.setState(() => ({ todoToAdd: e.target.value }))
-  }
-
-  // handle update on Enter key
-  handleEnterKey = e => {
-    if (e.keyCode === 13) this.submit()
+  handleChange = event => {
+    this.setState({ todoToAdd: event.target.value })
   }
 
   // create the new todo
-  submit = async () => {
+  handleSubmit = async () => {
     const { todoToAdd } = this.state
-    const { createTodo } = this.props
+    const { createDocument } = this.props
     // reset the input and display a spinner during the process
     this.setState(() => ({ todoToAdd: '', isWorking: true }))
-    await createTodo({ name: todoToAdd })
+    await createDocument(TODOS_DOCTYPE, { name: todoToAdd })
     // remove the spinner
     this.setState(() => ({ isWorking: false }))
   }
@@ -41,23 +38,26 @@ export class TodoAdd extends Component {
     return (
       <div>
         <h2>Add a new Todo:</h2>
-        <Label> Todo name: </Label>
-        <Input
-          value={todoToAdd}
-          onChange={this.handleChange}
-          onKeyUp={this.handleEnterKey}
-        />
-        <Button
-          onClick={this.submit}
-          busy={isWorking}
-          label="add"
-          size="large"
-          extension="narrow"
-        />
+        <form onSubmit={this.handleSubmit}>
+          <Label htmlFor="todo-add-input"> Todo name: </Label>
+          <Input
+            value={todoToAdd}
+            onChange={this.handleChange}
+            id="todo-add-input"
+          />
+          <Button
+            onClick={this.submit}
+            type="submit"
+            busy={isWorking}
+            label="add"
+            size="large"
+            extension="narrow"
+          />
+        </form>
       </div>
     )
   }
 }
 
-// get mutations from the client to use createTodo
-export default withTodosMutations(TodoAdd)
+// get mutations from the client to use createDocument
+export default withMutations()(TodoAdd)
