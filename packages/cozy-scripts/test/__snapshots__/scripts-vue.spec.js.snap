@@ -66,7 +66,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -79,7 +79,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/vue",
             ],
@@ -92,7 +92,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/react",
             ],
@@ -147,6 +147,7 @@ Array [
           "test": Object {},
         },
         Object {
+          "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
@@ -500,6 +501,7 @@ Array [
           "test": Object {},
         },
         Object {
+          "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
@@ -754,7 +756,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -767,7 +769,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/vue",
             ],
@@ -780,7 +782,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/react",
             ],
@@ -835,6 +837,7 @@ Array [
           "test": Object {},
         },
         Object {
+          "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
@@ -1193,6 +1196,7 @@ Array [
           "test": Object {},
         },
         Object {
+          "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
@@ -1455,7 +1459,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -1468,7 +1472,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/vue",
             ],
@@ -1481,7 +1485,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/react",
             ],
@@ -1536,6 +1540,7 @@ Array [
           "test": Object {},
         },
         Object {
+          "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
@@ -1809,7 +1814,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app",
             ],
@@ -1822,7 +1827,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/vue",
             ],
@@ -1835,7 +1840,7 @@ Array [
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
           "options": Object {
-            "emitWarning": false,
+            "emitWarning": true,
             "extends": Array [
               "cozy-app/react",
             ],
@@ -1890,6 +1895,7 @@ Array [
           "test": Object {},
         },
         Object {
+          "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
         },
