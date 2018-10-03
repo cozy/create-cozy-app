@@ -16,6 +16,8 @@ if (fs.pathExistsSync(paths.appManifest)) {
 
 const port = process.env.DEV_PORT || '8888'
 const host = process.env.DEV_HOST || 'localhost'
+const coudhDBPort = '5984'
+const MailHogPort = '8025'
 const cozyDomain = 'cozy.tools:8080'
 const appSlug = (appManifest && appManifest.slug) || 'app'
 
@@ -124,10 +126,20 @@ module.exports = buildOptions => {
         )}  http://${appSlug}.${cozyDomain}`
       )
       console.log(
-        `  ${colorize.bold('Your local Cozy:')}   http://${cozyDomain}`
+        `  ${colorize.bold('Your local Cozy:')}     http://${cozyDomain}`
       )
       console.log(
-        `  ${colorize.bold('Dev assets:')}        http://${host}:${port}`
+        `  ${colorize.bold(
+          'CouchDB:'
+        )}             http://${host}:${coudhDBPort}/_utils`
+      )
+      console.log(
+        `  ${colorize.bold(
+          'MailHog:'
+        )}             http://${host}:${MailHogPort}`
+      )
+      console.log(
+        `  ${colorize.bold('Dev assets:')}          http://${host}:${port}`
       )
       console.log()
       if (isFirstRun) {
@@ -140,7 +152,9 @@ module.exports = buildOptions => {
             '-p',
             '8080:8080',
             '-p',
-            '5984:5984',
+            `${coudhDBPort}:5984`,
+            '-p',
+            `${MailHogPort}:8025`,
             '-v',
             `${paths.appBuild}:/data/cozy-app/${appSlug}`,
             '-v',

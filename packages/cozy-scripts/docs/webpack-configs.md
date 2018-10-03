@@ -44,7 +44,7 @@ These files are supposed to be enoughly independant to be usable upon request as
 
 #### Kind of config file:
 
-__Bundle:__ A bundle regroup many unit configuration for a specific use case like the default \(P\)React application or an VueJS application.
+__Bundle:__ A bundle regroup many unit configuration for a specific use case like the default React application or an VueJS application.
 
 __Environment:__ An environment config is in charge of provided variables and pluging specific to a compiling context (development or production for example).
 
