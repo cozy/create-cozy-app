@@ -65,10 +65,12 @@ module.exports = buildOptions => {
   }
 
   const WebpackOptions = {
+    // display build informations only in debug mode or if errors/warnings
+    noInfo: !buildOptions.debugMode,
     stats: {
-      // display modules
+      // display modules in debugMode (muted by noInfo)
       modules: buildOptions.debugMode,
-      // display chunks
+      // display chunks in debugMode (muted by noInfo)
       chunks: buildOptions.debugMode,
       // Shows colors in the console
       colors: true
@@ -123,7 +125,7 @@ module.exports = buildOptions => {
       console.log(
         `  ${colorize.bold(
           'Your application:'
-        )}  http://${appSlug}.${cozyDomain}`
+        )}    http://${appSlug}.${cozyDomain}`
       )
       console.log(
         `  ${colorize.bold('Your local Cozy:')}     http://${cozyDomain}`
