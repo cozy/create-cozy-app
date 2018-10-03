@@ -1,5 +1,3 @@
-## create-cozy-app@1.0.0, cozy-scripts@1.0.0, cozy-scripts-vanilla@1.0.0 (2018-10-03)
-
 ### Migrating from v0.10.6
 
 - With the __Webpack 4__, if you use `cozy-scripts` without custom configurations you don't need to do anything. But if you do use `app.config.js` to provided custom configurations, you'll need to update these configurations to be compatible with Webpack 4 and update related webpack packages/plugins/loaders.
@@ -14,6 +12,19 @@
 - `cozy-scripts` now installs `babel-jest` and `vue-jest` for you, you can remove them from your application and still use them (see [comment](https://github.com/CPatchane/create-cozy-app/pull/739#issuecomment-424646717))
 - The `cozy-scripts standalone` command is now named `cozy-scripts start` and does much more than its predecessor
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
+
+## cozy-scripts@1.0.1 (2018-10-04)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#841](https://github.com/CPatchane/create-cozy-app/pull/841) Add missing postcss-discard-empty dependency ([@CPatchane](https://github.com/CPatchane))
+  * [#840](https://github.com/CPatchane/create-cozy-app/pull/840) Fix: Exiting the script stops docker correctly ([@briced](https://github.com/briced))
+
+#### Committers: 2
+- Brice ([@briced](https://github.com/briced))
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+
+## create-cozy-app@1.0.0, cozy-scripts@1.0.0, cozy-scripts-vanilla@1.0.0 (2018-10-03)
 
 #### :boom: Breaking Changes:
 * `cozy-scripts`
