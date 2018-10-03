@@ -220,7 +220,7 @@ module.exports = buildOptions => {
     }
   })
   ;['SIGINT', 'SIGQUIT', 'SIGTERM'].forEach(sig => {
-    process.on(sig, () => {
+    process.once(sig, () => {
       server.close()
       if (dockerProcess && !knownDockerError) {
         console.log()
@@ -229,7 +229,7 @@ module.exports = buildOptions => {
         console.log(colorize.cyan('See you soon! 👋'))
         dockerProcess.stdout.destroy()
         dockerProcess.stderr.destroy()
-        spawn.sync('sh', ['-c', '-m', paths.csQuitStackScript], {
+        spawn.sync('sh', ['-c', paths.csQuitStackScript], {
           stdio: 'inherit'
         })
       } else {
