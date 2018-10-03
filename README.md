@@ -23,13 +23,15 @@
 
 ### What's create-cozy-app?
 
-`create-cozy-app` is a command line tool that create a skeleton of an application for Cozy, using Cozy libraries.
+`create-cozy-app` is a command line tool that creates a skeleton of an application for Cozy, using Cozy libraries.
 
 This tool can be run as an installed CLI or by using `yarn create`, see below for more information.
 
 By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on React. But option for VueJS or Vanilla are also available, see below for more information.
 
-__:warning: The packages `babel-preset-cozy-app` and `eslint-config-cozy-app` have been moved to the [`cozy-libs`](https://github.com/cozy/cozy-libs) repository since their versions 1.0.0.__
+__You can find a complete tutorial about creating a Cozy application using `create-cozy-app` in [the official documentation (docs.cozy.io)](https://docs.cozy.io/en/tutorials/app/).__
+
+> :information_source: The packages __`babel-preset-cozy-app`__ and __`eslint-config-cozy-app`__ have been moved to the [`cozy-libs`](https://github.com/cozy/cozy-libs) repository since their version 1.0.0.
 
 #### Requirements
 
@@ -38,7 +40,7 @@ __:warning: The packages `babel-preset-cozy-app` and `eslint-config-cozy-app` ha
  - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment)
 
 
-### Running it without the CLI via Yarn (highly recommended)
+### Running it via Yarn directly (highly recommended)
 
 You can use `create-cozy-app` without installing it globally by using the `yarn create cozy-app` command to bootstrap your application:
 
@@ -48,7 +50,9 @@ yarn create cozy-app mycozyapp
 
 You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
 
-### Running it using the CLI
+### Running it using the installed CLI
+
+By installed the CLI, you will have to update it regularly to keep the app template up to date. It is why we recommend to use directly `yarn` like above which will always uses the last version of the CLI.
 
 #### Install
 
@@ -60,7 +64,7 @@ yarn global add create-cozy-app
 
 #### CLI usage
 
-If you installed the CLI as described before, use the `create-cozy-app` command to bootstrap your application:
+Then, use the `create-cozy-app` command to bootstrap your application:
 
 ```
 create-cozy-app mycozyapp
@@ -70,14 +74,14 @@ create-cozy-app mycozyapp
 
 The script will download some dependencies (may take a while) and ask you a few questions, then creates an application skeleton inside `mycozyapp`.
 
-That's all! You can start hacking:
+That's it! You can already tart hacking:
 
 ```
 cd mycozyapp
 yarn start
 ```
 
-After the webpack build and the docker environment ready, your app should be available at http://mycozyapp.cozy.tools:8080
+After the webpack build and the docker environment ready, the `mycozyapp` app here will be available at http://mycozyapp.cozy.tools:8080
 
 ### Options
 
