@@ -1869,9 +1869,9 @@ cozy-client-js@^0.3.19:
   version "0.3.21"
   resolved "https://registry.yarnpkg.com/cozy-client-js/-/cozy-client-js-0.3.21.tgz#d27d0288077ce95139333c41dfb537b8584ff254"
 
-cozy-client@2.23.0:
-  version "2.23.0"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-2.23.0.tgz#e6a956f4d90a4a973db7eefb0eb9da3082ddc3f8"
+cozy-client@2.23.1:
+  version "2.23.1"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-2.23.1.tgz#4466bfe3652ac794a6ebdeeb8f141527360e5f62"
   dependencies:
     cozy-stack-client "^2.23.0"
     lodash "^4.17.5"
