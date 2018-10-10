@@ -1,5 +1,6 @@
 'use strict'
 
+const webpack = require('webpack')
 const { useHotReload } = require('./webpack.vars')
 
 process.env.__ENTRY_EXT__ = '.jsx'
@@ -21,5 +22,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  // Necessary for cozy-ui during Preact -> React apps transition
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        USE_REACT: 'true'
+      }
+    })
+  ]
 }
