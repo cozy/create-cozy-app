@@ -290,6 +290,13 @@ Array [
         },
       },
       Object {
+        "definitions": Object {
+          "process.env": Object {
+            "USE_REACT": "true",
+          },
+        },
+      },
+      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -682,6 +689,13 @@ Array [
         },
       },
       Object {
+        "definitions": Object {
+          "process.env": Object {
+            "USE_REACT": "true",
+          },
+        },
+      },
+      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -1050,6 +1064,13 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "process.env": Object {
+            "USE_REACT": "true",
+          },
         },
       },
       Object {
@@ -1450,6 +1471,13 @@ Array [
         },
       },
       Object {
+        "definitions": Object {
+          "process.env": Object {
+            "USE_REACT": "true",
+          },
+        },
+      },
+      Object {
         "config": Object {
           "plainSprite": false,
           "spriteAttrs": Object {},
@@ -1826,6 +1854,13 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "process.env": Object {
+            "USE_REACT": "true",
+          },
         },
       },
       Object {
@@ -2218,6 +2253,13 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "process.env": Object {
+            "USE_REACT": "true",
+          },
         },
       },
       Object {
@@ -2674,6 +2716,13 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "process.env": Object {
+            "USE_REACT": "true",
+          },
         },
       },
       Object {
