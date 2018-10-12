@@ -2052,9 +2052,9 @@ cozy-realtime@1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-1.1.9.tgz#733dedd299eacf24ceb1bc230f561817855c3e8d"
 
-cozy-ui@13.0.1:
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-13.0.1.tgz#050a0ac9e5194ba883ddae52e0f4483fdefad6ac"
+cozy-ui@13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-13.0.2.tgz#810b3faeaaf0a156a19bd6813821c0bd238a6e5d"
   dependencies:
     babel-preset-cozy-app "^0.3.1"
     body-scroll-lock "^2.5.8"
