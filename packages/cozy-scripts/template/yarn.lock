@@ -2047,12 +2047,12 @@ cozy-client-js@0.13.0:
     pouchdb-adapter-cordova-sqlite "git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
     pouchdb-find "6.4.3"
 
-cozy-client@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-3.0.2.tgz#e32a843938f5adba45f86e5a80670c3599660aa4"
+cozy-client@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-3.0.5.tgz#c83d3838660576fb5ed33287a4357f71d742173f"
   dependencies:
-    cozy-stack-client "^3.0.1"
-    lodash "4.17.10"
+    cozy-stack-client "^3.0.3"
+    lodash "4.17.11"
     prop-types "15.6.2"
     react "16.4.2"
     react-redux "5.0.7"
@@ -2068,11 +2068,11 @@ cozy-realtime@1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-1.1.9.tgz#733dedd299eacf24ceb1bc230f561817855c3e8d"
 
-cozy-stack-client@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-3.0.1.tgz#9b1a67af0d6ab7f0fa82e9cfea5815f30c48fc9c"
+cozy-stack-client@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-3.0.3.tgz#12f807a76ed710ac3b8c42aea3cb948135ad208f"
   dependencies:
-    mime-types "2.1.19"
+    mime-types "2.1.20"
 
 cozy-ui@13.0.1:
   version "13.0.1"
@@ -4055,7 +4055,7 @@ lodash@4.17.10:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
-lodash@^4.14.2, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
+lodash@4.17.11, lodash@^4.14.2, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -4171,21 +4171,11 @@ micromatch@^3.1.10:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-mime-db@~1.35.0:
-  version "1.35.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.35.0.tgz#0569d657466491283709663ad379a99b90d9ab47"
-
 mime-db@~1.36.0:
   version "1.36.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.36.0.tgz#5020478db3c7fe93aad7bbcc4dcf869c43363397"
 
-mime-types@2.1.19:
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.19.tgz#71e464537a7ef81c15f2db9d97e913fc0ff606f0"
-  dependencies:
-    mime-db "~1.35.0"
-
-mime-types@^2.1.12, mime-types@~2.1.17:
+mime-types@2.1.20, mime-types@^2.1.12, mime-types@~2.1.17:
   version "2.1.20"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.20.tgz#930cb719d571e903738520f8470911548ca2cc19"
   dependencies:
