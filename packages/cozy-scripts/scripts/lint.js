@@ -1,11 +1,9 @@
 'use strict'
 
-const { exec } = require('child_process')
+const spawn = require('cross-spawn')
 
 module.exports = () => {
   const argv = process.argv.slice(3)
 
-  exec(`eslint ${argv.join(' ')}`, (err, stdout) => {
-    console.log(stdout)
-  })
+  spawn.sync('eslint', argv, { stdio: 'inherit' })
 }
