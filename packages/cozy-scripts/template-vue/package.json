@@ -4,7 +4,7 @@
   "scripts": {
     "tx": "tx pull --all || true",
     "lint": "yarn lint:js && yarn lint:styles",
-    "lint:js": "eslint '{src,test}/**/*.{js,vue}'",
+    "lint:js": "cozy-scripts lint '{src,test}/**/*.{js,vue}'",
     "lint:styles": "stylint src/styles --config ./.stylintrc",
     "prebuild": "yarn lint",
     "build": "yarn build:browser",
@@ -34,7 +34,6 @@
     "@vue/test-utils": "1.0.0-beta.25",
     "babel-polyfill": "6.26.0",
     "babel-preset-cozy-app": "1.2.1",
-    "eslint": "5.7.0",
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-vue": "4.7.1",
     "git-directory-deploy": "1.5.1",

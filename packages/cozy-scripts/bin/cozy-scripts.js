@@ -84,7 +84,8 @@ const availableScripts = [
   'start',
   'test',
   'publish',
-  'release'
+  'release',
+  'lint'
 ]
 
 // TODO: to remove in next major version
