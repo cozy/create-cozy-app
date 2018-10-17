@@ -13,6 +13,29 @@
 - The `cozy-scripts standalone` command is now named `cozy-scripts start` and does much more than its predecessor
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
+
+## cozy-scripts@1.1.0 (2018-10-17)
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#869](https://github.com/CPatchane/create-cozy-app/pull/869) feat: Add lint script ([@drazik](https://github.com/drazik))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#874](https://github.com/CPatchane/create-cozy-app/pull/874), [#866](https://github.com/CPatchane/create-cozy-app/pull/866), [#864](https://github.com/CPatchane/create-cozy-app/pull/864) fix(deps): update dependency cozy-client to v3.0.6 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#876](https://github.com/CPatchane/create-cozy-app/pull/876), [#865](https://github.com/CPatchane/create-cozy-app/pull/865) fix(deps): update dependency cozy-bar to v6.4.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#872](https://github.com/CPatchane/create-cozy-app/pull/872), [#867](https://github.com/CPatchane/create-cozy-app/pull/867), [#862](https://github.com/CPatchane/create-cozy-app/pull/862) fix(deps): update dependency cozy-ui to v13.1.6 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#877](https://github.com/CPatchane/create-cozy-app/pull/877) fix(deps): update dependency progress to v2.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#875](https://github.com/CPatchane/create-cozy-app/pull/875), [#871](https://github.com/CPatchane/create-cozy-app/pull/871) fix(deps): update dependency autoprefixer to v9.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#873](https://github.com/CPatchane/create-cozy-app/pull/873) fix(deps): update dependency webpack-bundle-analyzer to v3.0.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#845](https://github.com/CPatchane/create-cozy-app/pull/845) chore(deps): update dependency enzyme to v3.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#870](https://github.com/CPatchane/create-cozy-app/pull/870) fix(deps): update dependency vue-jest to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#868](https://github.com/CPatchane/create-cozy-app/pull/868) chore(deps): update dependency eslint to v5.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cyrille Perois ([@drazik](https://github.com/drazik))
+
+
 ## cozy-scripts@1.0.2, create-cozy-app@1.0.1 (2018-10-10)
 
 #### :nail_care: Enhancements:
@@ -26,20 +49,16 @@
 #### :arrow_up: Dependencies:
 * Other
   * [#860](https://github.com/CPatchane/create-cozy-app/pull/860) chore(deps): update dependency lerna-changelog to v0.8.1 ([@renovate[bot]](https://github.com/apps/renovate))
-  * [#854](https://github.com/CPatchane/create-cozy-app/pull/854) chore(deps): update dependency lerna to v3.4.3 ([@renovate[bot]](https://github.com/apps/renovate))
-  * [#842](https://github.com/CPatchane/create-cozy-app/pull/842) chore(deps): update dependency lerna to v3.4.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#854](https://github.com/CPatchane/create-cozy-app/pull/854), [#842](https://github.com/CPatchane/create-cozy-app/pull/842) chore(deps): update dependency lerna to v3.4.3 ([@renovate[bot]](https://github.com/apps/renovate))
 * `cozy-scripts`
-  * [#852](https://github.com/CPatchane/create-cozy-app/pull/852) fix(deps): update dependency cozy-client to v2.24.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#852](https://github.com/CPatchane/create-cozy-app/pull/852), [#846](https://github.com/CPatchane/create-cozy-app/pull/846) fix(deps): update dependency cozy-client to v2.24.1 ([@renovate[bot]](https://github.com/apps/renovate))
   * [#859](https://github.com/CPatchane/create-cozy-app/pull/859) fix(deps): update dependency mini-css-extract-plugin to v0.4.4 ([@renovate[bot]](https://github.com/apps/renovate))
   * [#851](https://github.com/CPatchane/create-cozy-app/pull/851) fix(deps): update dependency cozy-bar to v6.3.3 ([@renovate[bot]](https://github.com/apps/renovate))
-  * [#856](https://github.com/CPatchane/create-cozy-app/pull/856) fix(deps): update dependency cozy-ui to v12.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#856](https://github.com/CPatchane/create-cozy-app/pull/856), [#850](https://github.com/CPatchane/create-cozy-app/pull/850), [#843](https://github.com/CPatchane/create-cozy-app/pull/843) fix(deps): update dependency cozy-ui to v12.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
   * [#858](https://github.com/CPatchane/create-cozy-app/pull/858) fix(deps): update dependency html-webpack-include-assets-plugin to v1.0.6 ([@renovate[bot]](https://github.com/apps/renovate))
   * [#855](https://github.com/CPatchane/create-cozy-app/pull/855) fix(deps): update dependency copy-webpack-plugin to v4.5.3 ([@renovate[bot]](https://github.com/apps/renovate))
-  * [#850](https://github.com/CPatchane/create-cozy-app/pull/850) fix(deps): update dependency cozy-ui to v12 ([@renovate[bot]](https://github.com/apps/renovate))
   * [#847](https://github.com/CPatchane/create-cozy-app/pull/847) fix(deps): update dependency style-loader to v0.23.1 ([@renovate[bot]](https://github.com/apps/renovate))
-  * [#846](https://github.com/CPatchane/create-cozy-app/pull/846) fix(deps): update dependency cozy-client to v2.23.1 ([@renovate[bot]](https://github.com/apps/renovate))
   * [#844](https://github.com/CPatchane/create-cozy-app/pull/844) chore(deps): update dependency enzyme-adapter-react-16 to v1.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
-  * [#843](https://github.com/CPatchane/create-cozy-app/pull/843) fix(deps): update dependency cozy-ui to v11.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
 * `cozy-scripts`, `create-cozy-app`
   * [#848](https://github.com/CPatchane/create-cozy-app/pull/848) fix(deps): update dependency commander to v2.19.0 ([@renovate[bot]](https://github.com/apps/renovate))
 
