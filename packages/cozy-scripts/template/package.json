@@ -39,7 +39,7 @@
     "git-directory-deploy": "1.5.1",
     "prettier": "1.14.3",
     "react-hot-loader": "4.3.11",
-    "react-test-renderer": "16.5.2",
+    "react-test-renderer": "16.6.0",
     "redux-mock-store": "1.5.3",
     "stylint": "1.5.9"
   },
@@ -48,8 +48,8 @@
     "cozy-client": "3.0.6",
     "cozy-ui": "13.2.1",
     "eslint-config-cozy-app": "1.1.4",
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
     "react-router-dom": "4.3.1"
   }
 }
