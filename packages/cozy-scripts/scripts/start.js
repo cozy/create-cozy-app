@@ -81,6 +81,16 @@ module.exports = buildOptions => {
     hot: useHotReload,
     host,
     port,
+    /*
+    Here is the trick about hot-reload:
+    We launch a webpack-dev-server but we write the computed build files to the disk to allow running `cozy-stack server` on them.
+    */
+    writeToDisk: filePath => {
+      // Copy only assets on disk, other files will be from memory (dev-server)
+      // .js and .css files are more likely to be changed
+      // than assets during development
+      return /(?!(\.js|\.css))$/.test(filePath)
+    },
     headers: useHotReload
       ? {
           'Access-Control-Allow-Origin': '*',
