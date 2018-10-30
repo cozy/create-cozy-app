@@ -14,6 +14,34 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.1.1 (2018-10-30)
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#893](https://github.com/CPatchane/create-cozy-app/pull/893) Use writeToDisk intead of webpack plugin ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#885](https://github.com/CPatchane/create-cozy-app/pull/885) fix(deps): update dependency autoprefixer to v9.3.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#889](https://github.com/CPatchane/create-cozy-app/pull/889) fix(deps): update dependency eslint to v5.8.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#891](https://github.com/CPatchane/create-cozy-app/pull/891) fix(deps): update dependency css-loader to v1.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#890](https://github.com/CPatchane/create-cozy-app/pull/890) fix(deps): update dependency svg-sprite-loader to v4.1.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#892](https://github.com/CPatchane/create-cozy-app/pull/892) fix(deps): update dependency script-ext-html-webpack-plugin to v2.0.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#886](https://github.com/CPatchane/create-cozy-app/pull/886) fix(deps): update dependency cozy-client to v3.6.4 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#887](https://github.com/CPatchane/create-cozy-app/pull/887) fix(deps): update react monorepo to v16.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#888](https://github.com/CPatchane/create-cozy-app/pull/888) fix(deps): update dependency webpack to v4.23.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#883](https://github.com/CPatchane/create-cozy-app/pull/883) fix(deps): update dependency webpack-dev-server to v3.1.10 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#879](https://github.com/CPatchane/create-cozy-app/pull/879) fix(deps): update dependency cozy-ui to v13.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#880](https://github.com/CPatchane/create-cozy-app/pull/880) fix(deps): update dependency webpack to v4.22.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#882](https://github.com/CPatchane/create-cozy-app/pull/882) fix(deps): update dependency copy-webpack-plugin to v4.5.4 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#878](https://github.com/CPatchane/create-cozy-app/pull/878) fix(deps): update dependency eslint-config-cozy-app to v1.1.4 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#881](https://github.com/CPatchane/create-cozy-app/pull/881) chore(deps): update dependency lerna-changelog to v0.8.2 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@1.1.0 (2018-10-17)
 
 #### :sparkles: New Features:
