@@ -1910,7 +1910,7 @@ date-now@^0.1.4:
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
-debug@*, debug@^4.0.1:
+debug@*, debug@^4.0.1, debug@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
   integrity sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
@@ -6645,12 +6645,12 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-script-ext-html-webpack-plugin@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-2.0.1.tgz#90ac3d77f1892ad9054c3752f0e4673607f6d9a3"
-  integrity sha512-kUH+XhpjG95ABMnWeKCguM7NCOqSrGlYEnJQKgvPIyq5+FzQuACMLzWOB/Lp7t0sKqKLWNLu8i6MmLRKRo1IUw==
+script-ext-html-webpack-plugin@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-2.0.3.tgz#907f95f135e6d5777d0e214e0ebf4a7046cca419"
+  integrity sha512-j922uet8hMeJM/QGiBl2567tQNs5ESZUONM0PJK2VdsdeqPhj06ueEOGzNTcz4SSnB0cqMJ9N6vhkeMQ/hWoiA==
   dependencies:
-    debug "^3.1.0"
+    debug "^4.1.0"
 
 select-hose@^2.0.0:
   version "2.0.0"
