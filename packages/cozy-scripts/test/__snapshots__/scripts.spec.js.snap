@@ -438,7 +438,6 @@ Array [
           "publicPath": true,
         },
       },
-      Object {},
     ],
     "resolve": Object {
       "extensions": Array [
@@ -1223,7 +1222,6 @@ Array [
           "publicPath": true,
         },
       },
-      Object {},
     ],
     "resolve": Object {
       "extensions": Array [
@@ -2005,7 +2003,6 @@ Array [
           "publicPath": true,
         },
       },
-      Object {},
     ],
     "resolve": Object {
       "extensions": Array [
@@ -2404,7 +2401,6 @@ Array [
           "publicPath": true,
         },
       },
-      Object {},
     ],
     "resolve": Object {
       "extensions": Array [
@@ -2867,7 +2863,6 @@ Array [
           "publicPath": true,
         },
       },
-      Object {},
     ],
     "resolve": Object {
       "extensions": Array [

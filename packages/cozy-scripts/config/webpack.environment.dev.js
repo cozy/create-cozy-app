@@ -4,7 +4,6 @@ const webpack = require('webpack')
 const paths = require('../utils/paths')
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const WriteFilePlugin = require('write-file-webpack-plugin')
 const { useHotReload } = require('./webpack.vars')
 
 const buildCozyBarCss = `${paths.appBuild}/cozy-bar.css`
@@ -28,17 +27,6 @@ let plugins = [
     assets: ['cozy-bar.css'],
     append: false,
     publicPath: true
-  }),
-  /*
-  Here is the trick about hot-reload:
-  We launch a webpack-dev-server but we write the computed build files to the disk to allow running `cozy-stack server` on them.
-  */
-  new WriteFilePlugin({
-    exitOnErrors: false,
-    // Copy only assets on disk, other files will be from memory (dev-server)
-    // .js and .css files are more likely to be changed
-    // than assets during development
-    test: /(?!(\.js|\.css))$/
   })
 ]
 
