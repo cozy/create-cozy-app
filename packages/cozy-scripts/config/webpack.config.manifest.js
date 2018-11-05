@@ -46,6 +46,20 @@ function transformManifest(buffer) {
       content.locales[lang] = localContent.manifest ? localContent.manifest : {}
       content.langs.push(lang)
     }
+
+    const manifestLocalesFileRegexp = /^manifest\.[a-zA-Z_-]{2,}.json$/
+    const manifestLocales =
+      fs
+        .readdirSync(paths.appPath)
+        .filter(file => manifestLocalesFileRegexp.test(file))
+    manifestLocales.forEach(file => {
+      const fileContent = require(path.join(paths.appPath, file))
+      const lang = file.match(manifestLocalesFileRegexp)
+      // Override existing locale data
+      content.locales[lang] = fileContent
+      if (!content.langs.includes(lang)) content.langs.push(lang)
+    })
+
   } else {
     content.slug = 'app'
   }
