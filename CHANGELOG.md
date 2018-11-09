@@ -14,6 +14,30 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.1.2, create-cozy-app@1.0.2, cozy-scripts-vanilla@1.0.1 (2018-11-09)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#914](https://github.com/CPatchane/create-cozy-app/pull/914) Exposes React for the cozy-bar ([@CPatchane](https://github.com/CPatchane))
+  * [#913](https://github.com/CPatchane/create-cozy-app/pull/913) Prefer Terser for optimization with Webpack ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#894](https://github.com/CPatchane/create-cozy-app/pull/894) fix(deps): update dependency cozy-bar to v6.7.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#915](https://github.com/CPatchane/create-cozy-app/pull/915) fix(deps): pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#910](https://github.com/CPatchane/create-cozy-app/pull/910) fix(deps): update dependency cozy-client-js to v0.14.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#900](https://github.com/CPatchane/create-cozy-app/pull/900), [#902](https://github.com/CPatchane/create-cozy-app/pull/902) Update dependency webpack to v4.25.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#907](https://github.com/CPatchane/create-cozy-app/pull/907) Update dependency @babel/core to v7.1.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#908](https://github.com/CPatchane/create-cozy-app/pull/908) Update dependency prettier to v1.15.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#909](https://github.com/CPatchane/create-cozy-app/pull/909) Update react monorepo to v16.6.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#912](https://github.com/CPatchane/create-cozy-app/pull/912) Update dependency enzyme-adapter-react-16 to v1.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#897](https://github.com/CPatchane/create-cozy-app/pull/897), [#901](https://github.com/CPatchane/create-cozy-app/pull/901), [#904](https://github.com/CPatchane/create-cozy-app/pull/904) Update dependency script-ext-html-webpack-plugin to v2.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#898](https://github.com/CPatchane/create-cozy-app/pull/898) Update dependency react-hot-loader to v4.3.12 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#896](https://github.com/CPatchane/create-cozy-app/pull/896) Update dependency copy-webpack-plugin to v4.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+* `cozy-scripts-vanilla`, `cozy-scripts`, `create-cozy-app`
+  * [#911](https://github.com/CPatchane/create-cozy-app/pull/911) Update dependency fs-extra to v7.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@1.1.1 (2018-10-30)
 
 #### :wrench: Chore:
