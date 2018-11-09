@@ -350,7 +350,13 @@ Array [
       },
       Object {},
       Object {},
-      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -764,7 +770,13 @@ Array [
       },
       Object {},
       Object {},
-      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -1142,7 +1154,13 @@ Array [
       },
       Object {},
       Object {},
-      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
       Object {
         "definitions": Object {
           "__ALLOW_HTTP__": true,
@@ -1561,7 +1579,13 @@ Array [
       },
       Object {},
       Object {},
-      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
       Object {
         "definitions": Object {
           "__ALLOW_HTTP__": true,
@@ -1947,7 +1971,13 @@ Array [
       },
       Object {},
       Object {},
-      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -2345,7 +2375,13 @@ Array [
       },
       Object {},
       Object {},
-      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -2807,7 +2843,13 @@ Array [
       },
       Object {},
       Object {},
-      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
       Object {
         "options": Object {
           "cache": true,
