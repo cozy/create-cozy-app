@@ -8,6 +8,7 @@ Array [
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/utils/exposer.js",
         ".tmp_test/test-app-vue/src/targets/browser/index.js",
       ],
     },
@@ -368,6 +369,7 @@ Array [
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/utils/exposer.js",
         ".tmp_test/test-app-vue/src/targets/browser/index.js",
       ],
     },
@@ -1457,6 +1459,7 @@ Array [
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/utils/exposer.js",
         ".tmp_test/test-app-vue/src/targets/browser/index.js",
       ],
     },
@@ -1818,6 +1821,7 @@ Array [
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
+        ".tmp_test/test-app-vue/node_modules/cozy-scripts/utils/exposer.js",
         ".tmp_test/test-app-vue/src/targets/browser/index.js",
       ],
     },

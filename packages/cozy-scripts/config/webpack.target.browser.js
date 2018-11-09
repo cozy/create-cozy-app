@@ -14,9 +14,15 @@ const appName = manifest.name_prefix
 
 module.exports = {
   entry: {
-    // since the file extension depends on the framework here
-    // we get it from a function call
-    app: [require.resolve('babel-polyfill'), paths.appBrowserIndex()]
+    app: [
+      // polyfills, avaid to import it in the application
+      require.resolve('babel-polyfill'),
+      // Exposed variables in global scope (needed for cozy-bar)
+      paths.csExposer,
+      // since the file extension depends on the framework here
+      // we get it from a function call
+      paths.appBrowserIndex()
+    ]
   },
   output: {
     path: paths.appBuild,
