@@ -1,6 +1,7 @@
 'use strict'
 
 process.env.__ENTRY_EXT__ = '.jsx'
+process.env.__USE_PREACT__ = true
 
 const webpack = require('webpack')
 const { environment } = require('./webpack.vars')
