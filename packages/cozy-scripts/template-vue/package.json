@@ -38,7 +38,7 @@
     "eslint-plugin-vue": "4.7.1",
     "git-directory-deploy": "1.5.1",
     "jest-serializer-vue": "2.0.2",
-    "prettier": "1.15.1",
+    "prettier": "1.15.2",
     "stylint": "1.5.9",
     "vue-loader": "15.4.2",
     "vue-template-compiler": "2.5.17"
