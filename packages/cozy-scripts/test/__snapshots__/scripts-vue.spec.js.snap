@@ -320,18 +320,14 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {
-        "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
-        },
-      },
       Object {},
       Object {
         "options": Object {
           "append": false,
           "assets": Array [
+            "cozy-bar.js",
             "cozy-bar.css",
+            "cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -1047,18 +1043,14 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {
-        "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
-        },
-      },
       Object {},
       Object {
         "options": Object {
           "append": false,
           "assets": Array [
+            "cozy-bar.js",
             "cozy-bar.css",
+            "cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -1771,18 +1763,14 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {
-        "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
-        },
-      },
       Object {},
       Object {
         "options": Object {
           "append": false,
           "assets": Array [
+            "cozy-bar.js",
             "cozy-bar.css",
+            "cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2133,18 +2121,14 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {
-        "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
-        },
-      },
       Object {},
       Object {
         "options": Object {
           "append": false,
           "assets": Array [
+            "cozy-bar.js",
             "cozy-bar.css",
+            "cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",

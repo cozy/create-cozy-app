@@ -47,6 +47,9 @@ module.exports = {
   // for app local cozy-bar (dev only)
   appCozyBarJs: resolveApp('node_modules/cozy-bar/dist/cozy-bar.js'),
   appCozyBarCss: resolveApp('node_modules/cozy-bar/dist/cozy-bar.css'),
+  appCozyClientJs: resolveApp(
+    'node_modules/cozy-client-js/dist/cozy-client.js'
+  ),
   // cozy-ui
   appCozyUiStylus: resolveApp('node_modules/cozy-ui/stylus'),
 
