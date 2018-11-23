@@ -56,6 +56,7 @@ module.exports = {
   // for cozy-scripts
   csDisableCSPConfig: resolveOwn('stack/disableCSP.yaml'),
   csEslintBinary: resolveOwn('node_modules/.bin/eslint'),
-  csExposer: resolveOwn('utils/exposer.js'),
+  csReactExposer: resolveOwn('utils/reactExposer.js'),
+  csPreactExposer: resolveOwn('utils/preactExposer.js'),
   csQuitStackScript: resolveOwn('stack/quitStack.sh')
 }
