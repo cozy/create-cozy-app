@@ -1,15 +1,11 @@
 'use strict'
 
 const webpack = require('webpack')
-const TerserPlugin = require('terser-webpack-plugin')
 
 const { target } = require('./webpack.vars')
 
 module.exports = {
   mode: 'production',
-  optimization: {
-    minimizer: [new TerserPlugin()]
-  },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
