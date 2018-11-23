@@ -512,22 +512,6 @@ Array [
       ],
     },
     "optimization": Object {
-      "minimizer": Array [
-        Object {
-          "options": Object {
-            "cache": false,
-            "extractComments": false,
-            "parallel": false,
-            "sourceMap": false,
-            "terserOptions": Object {
-              "output": Object {
-                "comments": Object {},
-              },
-            },
-            "test": Object {},
-          },
-        },
-      ],
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendor": Object {
@@ -1231,22 +1215,6 @@ Array [
       ],
     },
     "optimization": Object {
-      "minimizer": Array [
-        Object {
-          "options": Object {
-            "cache": false,
-            "extractComments": false,
-            "parallel": false,
-            "sourceMap": false,
-            "terserOptions": Object {
-              "output": Object {
-                "comments": Object {},
-              },
-            },
-            "test": Object {},
-          },
-        },
-      ],
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendor": Object {
