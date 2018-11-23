@@ -18,7 +18,7 @@ module.exports = {
       // polyfills, avaid to import it in the application
       require.resolve('babel-polyfill'),
       // Exposed variables in global scope (needed for cozy-bar)
-      paths.csExposer,
+      process.env.__USE_PREACT__ ? paths.csPreactExposer : paths.csReactExposer,
       // since the file extension depends on the framework here
       // we get it from a function call
       paths.appBrowserIndex()
