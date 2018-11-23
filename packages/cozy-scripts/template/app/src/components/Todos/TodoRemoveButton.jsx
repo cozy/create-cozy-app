@@ -18,7 +18,9 @@ export class TodoRemoveButton extends Component {
     // delete the todo in the Cozy : asynchronous
     await deleteDocument(todo)
     // remove the spinner
-    this.setState(() => ({ isWorking: false }))
+    // this.setState(() => ({ isWorking: false }))
+    // We can omit that since this component will be
+    // unmount after the document is deleted by the client
   }
 
   render() {
