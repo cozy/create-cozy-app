@@ -2,6 +2,9 @@
 
 const colorize = require('../utils/_colorize')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const fs = require('fs-extra')
+const paths = require('../utils/paths')
+const manifest = fs.readJsonSync(paths.appManifest)
 
 // default NODE_ENV to browser development
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'browser:development'
@@ -28,10 +31,17 @@ const getCSSLoader = function() {
     : MiniCssExtractPlugin.loader
 }
 
+const getFilename = function() {
+  return environment === 'production'
+    ? `${manifest.slug}.[name].[contenthash]`
+    : `${manifest.slug}.[name]`
+}
+
 module.exports = {
   addAnalyzer,
   environment,
   eslintFix,
+  getFilename,
   getCSSLoader,
   isDebugMode,
   target,

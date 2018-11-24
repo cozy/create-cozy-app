@@ -5,13 +5,15 @@ const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const paths = require('../utils/paths')
 
-const { environment, isDebugMode, getCSSLoader } = require('./webpack.vars')
+const {
+  environment,
+  isDebugMode,
+  getCSSLoader,
+  getFilename
+} = require('./webpack.vars')
 const production = environment === 'production'
 
 module.exports = {
-  output: {
-    filename: '[name].[contenthash].js'
-  },
   resolve: {
     modules: [paths.appSrc, paths.appNodeModules],
     extensions: ['.js', '.json', '.css'],
@@ -62,8 +64,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: `[name].[contenthash]${production ? '.min' : ''}.css`,
-      chunkFilename: `[name].[contenthash]${production ? '.[id].min' : ''}.css`
+      filename: `${getFilename()}${production ? '.min' : ''}.css`,
+      chunkFilename: `${getFilename()}${production ? '.[id].min' : ''}.css`
     }),
     new PostCSSAssetsPlugin({
       test: /\.css$/,
