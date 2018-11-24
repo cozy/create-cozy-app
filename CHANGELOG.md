@@ -14,6 +14,38 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.2.0 (2018-11-24)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#933](https://github.com/CPatchane/create-cozy-app/pull/933) Use app slug int output filename ([@CPatchane](https://github.com/CPatchane))
+  * [#924](https://github.com/CPatchane/create-cozy-app/pull/924) Better assets include for dev (bar,client-js) ([@CPatchane](https://github.com/CPatchane))
+  * [#923](https://github.com/CPatchane/create-cozy-app/pull/923) feat: Remove lint command on test ([@kosssi](https://github.com/kosssi))
+  * [#921](https://github.com/CPatchane/create-cozy-app/pull/921) chore: Use renovate cozy config ([@kosssi](https://github.com/kosssi))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#932](https://github.com/CPatchane/create-cozy-app/pull/932) Split React and Preact exposer into two exposers ([@CPatchane](https://github.com/CPatchane))
+  * [#931](https://github.com/CPatchane/create-cozy-app/pull/931) Don't change state of unmounted component in React template ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#930](https://github.com/CPatchane/create-cozy-app/pull/930) fix(deps): update dependency vue-router to v3.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#928](https://github.com/CPatchane/create-cozy-app/pull/928) fix(deps): update dependency cozy-ui to v17 + add <IconSprite /> ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#926](https://github.com/CPatchane/create-cozy-app/pull/926) fix(deps): update dependency webpack to v4.26.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#929](https://github.com/CPatchane/create-cozy-app/pull/929) fix(deps): update dependency mini-css-extract-plugin to v0.4.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#925](https://github.com/CPatchane/create-cozy-app/pull/925) fix(deps): update dependency postcss to v7.0.6 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#922](https://github.com/CPatchane/create-cozy-app/pull/922) fix(deps): update dependency @babel/core to v7.1.6 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#920](https://github.com/CPatchane/create-cozy-app/pull/920) fix(deps): update react monorepo to v16.6.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#916](https://github.com/CPatchane/create-cozy-app/pull/916) fix(deps): update dependency eslint to v5.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#917](https://github.com/CPatchane/create-cozy-app/pull/917) chore(deps): update dependency prettier to v1.15.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#918](https://github.com/CPatchane/create-cozy-app/pull/918) fix(deps): update dependency script-ext-html-webpack-plugin to v2.1.3 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+- kosssi ([@kosssi](https://github.com/kosssi))
+
+
 ## cozy-scripts@1.1.2, create-cozy-app@1.0.2, cozy-scripts-vanilla@1.0.1 (2018-11-09)
 
 #### :nail_care: Enhancements:
