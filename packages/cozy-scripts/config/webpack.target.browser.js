@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const paths = require('../utils/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
-const { isDebugMode } = require('./webpack.vars')
+const { getFilename, isDebugMode } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest)
 
 const appName = manifest.name_prefix
@@ -26,7 +26,7 @@ module.exports = {
   },
   output: {
     path: paths.appBuild,
-    filename: '[name].js',
+    filename: `${getFilename()}.js`,
     pathinfo: isDebugMode
   },
   externals: {

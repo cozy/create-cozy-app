@@ -167,15 +167,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app-vue.[name].js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app-vue.[name].css",
+          "filename": "test-app-vue.[name].css",
         },
       },
       Object {
@@ -524,15 +524,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app-vue.[name].[contenthash].js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].[id].min.css",
-          "filename": "[name].[contenthash].min.css",
+          "chunkFilename": "test-app-vue.[name].[contenthash].[id].min.css",
+          "filename": "test-app-vue.[name].[contenthash].min.css",
         },
       },
       Object {
@@ -866,15 +866,14 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].[contenthash].js",
       "path": ".tmp_test/test-app-vue/src/targets/mobile/www",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app-vue.[name].css",
+          "filename": "test-app-vue.[name].css",
         },
       },
       Object {
@@ -1227,15 +1226,14 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].[contenthash].js",
       "path": ".tmp_test/test-app-vue/src/targets/mobile/www",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].[id].min.css",
-          "filename": "[name].[contenthash].min.css",
+          "chunkFilename": "test-app-vue.[name].[contenthash].[id].min.css",
+          "filename": "test-app-vue.[name].[contenthash].min.css",
         },
       },
       Object {
@@ -1578,15 +1576,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app-vue.[name].js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app-vue.[name].css",
+          "filename": "test-app-vue.[name].css",
         },
       },
       Object {
@@ -1936,15 +1934,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app-vue.[name].js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app-vue.[name].css",
+          "filename": "test-app-vue.[name].css",
         },
       },
       Object {

@@ -263,15 +263,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app.[name].js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app.[name].css",
+          "filename": "test-app.[name].css",
         },
       },
       Object {
@@ -663,15 +663,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app.[name].[contenthash].js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].[id].min.css",
-          "filename": "[name].[contenthash].min.css",
+          "chunkFilename": "test-app.[name].[contenthash].[id].min.css",
+          "filename": "test-app.[name].[contenthash].min.css",
         },
       },
       Object {
@@ -1048,15 +1048,14 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].[contenthash].js",
       "path": ".tmp_test/test-app/src/targets/mobile/www",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app.[name].css",
+          "filename": "test-app.[name].css",
         },
       },
       Object {
@@ -1452,15 +1451,14 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].[contenthash].js",
       "path": ".tmp_test/test-app/src/targets/mobile/www",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].[id].min.css",
-          "filename": "[name].[contenthash].min.css",
+          "chunkFilename": "test-app.[name].[contenthash].[id].min.css",
+          "filename": "test-app.[name].[contenthash].min.css",
         },
       },
       Object {
@@ -1846,15 +1844,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app.[name].js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app.[name].css",
+          "filename": "test-app.[name].css",
         },
       },
       Object {
@@ -2247,15 +2245,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app.[name].js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app.[name].css",
+          "filename": "test-app.[name].css",
         },
       },
       Object {
@@ -2712,15 +2710,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app.[name].js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "[name].[contenthash].css",
-          "filename": "[name].[contenthash].css",
+          "chunkFilename": "test-app.[name].css",
+          "filename": "test-app.[name].css",
         },
       },
       Object {
@@ -2953,7 +2951,7 @@ Array [
     },
     "optimization": Object {},
     "output": Object {
-      "filename": "[name].js",
+      "filename": "test-app.[name].js",
       "path": ".tmp_test/test-app/build/services",
     },
     "plugins": Array [
