@@ -6,29 +6,29 @@ exports[`App component only should be mounted correctly 1`] = `
     <nav>
       <ul class="c-nav">
         <li class="c-nav-item">
-          <router-link-stub to="/viewhello1" tag="a" event="click" class="c-nav-link">
+          <routerlink-stub to="/viewhello1" tag="a" event="click" class="c-nav-link">
             <icon-stub icon="test-file-stub" iconwidth="1em" color="" iconheight="1em" iconclass="" class="c-nav-icon"></icon-stub>
             First
-          </router-link-stub>
+          </routerlink-stub>
         </li>
         <li class="c-nav-item">
-          <router-link-stub to="/viewhello2" tag="a" event="click" class="c-nav-link">
+          <routerlink-stub to="/viewhello2" tag="a" event="click" class="c-nav-link">
             <icon-stub icon="test-file-stub" iconwidth="1em" color="" iconheight="1em" iconclass="" class="c-nav-icon"></icon-stub>
             Second
-          </router-link-stub>
+          </routerlink-stub>
         </li>
         <li class="c-nav-item">
-          <router-link-stub to="/viewhello3" tag="a" event="click" class="c-nav-link">
+          <routerlink-stub to="/viewhello3" tag="a" event="click" class="c-nav-link">
             <icon-stub icon="test-file-stub" iconwidth="1em" color="" iconheight="1em" iconclass="" class="c-nav-icon"></icon-stub>
             Third
-          </router-link-stub>
+          </routerlink-stub>
         </li>
       </ul>
     </nav>
   </aside>
   <main>
     <div class="app-content">
-      <router-view-stub name="default" class="view"></router-view-stub>
+      <routerview-stub name="default" class="view"></routerview-stub>
     </div>
   </main>
 </div>
