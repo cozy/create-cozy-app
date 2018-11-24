@@ -203,7 +203,7 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
       )
       console.log()
       console.log('Next steps:')
-      console.log(`  $ ${colorize.bold(`cd ${dataMap.get('<SLUG_GH>')}`)}`)
+      console.log(`  $ ${colorize.bold(`cd ${path.basename(appPath)}`)}`)
       console.log(`  $ ${colorize.bold('yarn start')}`)
       if (typeof successCallback === 'function') successCallback()
     })
