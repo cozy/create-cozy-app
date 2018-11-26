@@ -20,7 +20,7 @@ Opening an issue is as easy as following [this link][issues] and filling out the
 - What did you try, step by step?
 - What did you expect?
 - What did happen instead?
-- What is the version of the Cozy <APP_NAME>?
+- What is the version of the <APP_NAME> app?
 
 
 ## Pull Requests
