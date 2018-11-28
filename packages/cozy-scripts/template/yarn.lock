@@ -1204,9 +1204,9 @@ binary-extensions@^1.0.0:
   integrity sha512-DYWGk01lDcxeS/K9IHPGWfT8PsJmbXRtRd2Sx72Tnb8pcYZQFF1oSDb8hJtS1vhp212q1Rzi5dUf9+nq0o9UIg==
 
 bindings@~1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
-  integrity sha512-DpLh5EzMR2kzvX1KIlVC0VkC3iZtHKTgdtZ0a3pglBZdaQFjt5S9g9xd1lE+YvXyfd6mtCeRnrUfOLYiTMlNSw==
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.1.tgz#21fc7c6d67c18516ec5aaa2815b145ff77b26ea5"
+  integrity sha512-i47mqjF9UbjxJhxGf+pZ6kSxrnI3wBLlnGI2ArWJ4r0VrvDS7ZYXkprq/pLaBWYq4GM0r4zdHY+NNRqEMU7uew==
 
 bl@^1.0.0:
   version "1.2.2"
@@ -1404,9 +1404,9 @@ camelcase@^4.1.0:
   integrity sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
 
 caniuse-lite@^1.0.30000899:
-  version "1.0.30000910"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000910.tgz#755d5181d4b006e5a2b59b1ffa05d0a0470039f5"
-  integrity sha512-u/nxtHGAzCGZzIxt3dA/tpSPOcirBZFWKwz1EPz4aaupnBI2XR0Rbr74g0zc6Hzy41OEM4uMoZ38k56TpYAWjQ==
+  version "1.0.30000912"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000912.tgz#08e650d4090a9c0ab06bfd2b46b7d3ad6dcaea28"
+  integrity sha512-M3zAtV36U+xw5mMROlTXpAHClmPAor6GPKAMD5Yi7glCB5sbMPFtnQ3rGpk4XqPdUrrTIaVYSJZxREZWNy8QJg==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -2041,9 +2041,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.82:
-  version "1.3.84"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.84.tgz#2e55df59e818f150a9f61b53471ebf4f0feecc65"
-  integrity sha512-IYhbzJYOopiTaNWMBp7RjbecUBsbnbDneOP86f3qvS0G0xfzwNSvMJpTrvi5/Y1gU7tg2NAgeg8a8rCYvW9Whw==
+  version "1.3.85"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.85.tgz#5c46f790aa96445cabc57eb9d17346b1e46476fe"
+  integrity sha512-kWSDVVF9t3mft2OHVZy4K85X2beP6c6mFm3teFS/mLSDJpQwuFIWHrULCX+w6H1E55ZYmFRlT+ATAFRwhrYzsw==
 
 emotion@^9.1.2:
   version "9.2.12"
@@ -2975,9 +2975,9 @@ hoist-non-react-statics@^2.5.0:
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
 hoist-non-react-statics@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.1.0.tgz#42414ccdfff019cd2168168be998c7b3bd5245c0"
-  integrity sha512-MYcYuROh7SBM69xHGqXEwQqDux34s9tz+sCnxJmN18kgWh6JFdTw/5YdZtqsOdZJXddE/wUpCzfEdDrJj8p0Iw==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.2.0.tgz#d21b9fc72b50fdc38c5d88f6e2c52f2c2dbe5ee2"
+  integrity sha512-3IascCRfaEkbmHjJnUxWSspIUE1okLPjGTMVXW8zraUo1t3yg1BadKAxAGILHwgoBzmMnzrgeeaDGBvpuPz6dA==
   dependencies:
     react-is "^16.3.2"
 
@@ -4690,10 +4690,9 @@ pouchdb-abstract-mapreduce@6.4.3:
     pouchdb-promise "6.4.3"
     pouchdb-utils "6.4.3"
 
-"pouchdb-adapter-cordova-sqlite@https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
+"pouchdb-adapter-cordova-sqlite@git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
   version "2.0.2"
-  uid f3ee23009b70209c611435d57491aa77fb88802a
-  resolved "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
+  resolved "git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
   dependencies:
     pouchdb-adapter-websql-core "^6.1.1"
 
@@ -5903,10 +5902,10 @@ string.prototype.trim@^1.1.2:
     es-abstract "^1.5.0"
     function-bind "^1.0.2"
 
-string_decoder@^1.1.1, string_decoder@~1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.1.1.tgz#9cf1611ba62685d7030ae9e4ba34149c3af03fc8"
-  integrity sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
+string_decoder@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.2.0.tgz#fe86e738b19544afe70469243b2a1ee9240eae8d"
+  integrity sha512-6YqyX6ZWEYguAxgZzHGL7SsCeGx3V2TtOTqZz1xSTSWnqsbWwbptafNyvf/ACquZUXV3DANr5BDIwNYe1mN42w==
   dependencies:
     safe-buffer "~5.1.0"
 
@@ -5914,6 +5913,13 @@ string_decoder@~0.10.x:
   version "0.10.31"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
   integrity sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
+
+string_decoder@~1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.1.1.tgz#9cf1611ba62685d7030ae9e4ba34149c3af03fc8"
+  integrity sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
+  dependencies:
+    safe-buffer "~5.1.0"
 
 stringstream@~0.0.5:
   version "0.0.6"

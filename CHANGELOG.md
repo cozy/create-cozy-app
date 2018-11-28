@@ -14,6 +14,26 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.2.1 (2018-11-28)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#942](https://github.com/CPatchane/create-cozy-app/pull/942) Don't automatically pass config to jest ([@CPatchane](https://github.com/CPatchane))
+  * [#935](https://github.com/CPatchane/create-cozy-app/pull/935) Send cookies when fetching manifest.json ([@CPatchane](https://github.com/CPatchane))
+
+#### :memo: Documentations:
+* `cozy-scripts`
+  * [#934](https://github.com/CPatchane/create-cozy-app/pull/934) Typos in contributing doc ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#939](https://github.com/CPatchane/create-cozy-app/pull/939) fix(deps): update dependency cozy-bar to v6.8.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#941](https://github.com/CPatchane/create-cozy-app/pull/941) fix(deps): update dependency cozy-ui to v17.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#936](https://github.com/CPatchane/create-cozy-app/pull/936) fix(deps): update dependency webpack to v4.26.1 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#943](https://github.com/CPatchane/create-cozy-app/pull/943) chore(deps): update dependency lerna to v3.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@1.2.0 (2018-11-24)
 
 #### :nail_care: Enhancements:
