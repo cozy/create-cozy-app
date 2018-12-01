@@ -57,21 +57,18 @@ const options = {
   useVue: program.vue,
   debugMode: program.debug,
   bundleAnalyzer: program.analyzer,
-  // all remaining arguments passed to the command
+  // all arguments passed to the command (we remove the main command name)
   cliArgs: process.argv.slice(3)
 }
+;[
+  // program property, environment variable name, content to set
+  ['hot', 'HOT_RELOAD', true],
+  ['fix', 'COZY_SCRIPTS_ESLINT_FIX', true],
+  ['debug', 'COZY_SCRIPTS_DEBUG', true]
+].map(toDefine => {
+  if (program[toDefine[0]]) process.env[toDefine[1]] = toDefine[2]
+})
 
-if (program.hot) {
-  process.env.HOT_RELOAD = 'true'
-}
-
-if (program.fix) {
-  process.env.COZY_SCRIPTS_ESLINT_FIX = 'true'
-}
-
-if (program.debug) {
-  process.env.COZY_SCRIPTS_DEBUG = 'true'
-}
 
 if (program.showConfig) {
   console.log(JSON.stringify(getWebpackConfigs(options), null, 2))
