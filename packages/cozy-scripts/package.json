@@ -86,5 +86,8 @@
     "template-vue/package.json",
     "template-vue/README.md",
     "template-vue/yarn.lock"
-  ]
+  ],
+  "devDependencies": {
+    "strip-ansi": "^5.0.0"
+  }
 }
