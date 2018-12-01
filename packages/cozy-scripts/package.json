@@ -63,7 +63,8 @@
     "webpack-merge": "4.1.4"
   },
   "bin": {
-    "cozy-scripts": "./bin/cozy-scripts.js"
+    "cozy-scripts": "./bin/cozy-scripts.js",
+    "cs": "./bin/cozy-scripts.js"
   },
   "files": [
     "bin",
