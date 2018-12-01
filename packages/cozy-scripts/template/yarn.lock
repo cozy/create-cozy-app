@@ -1666,10 +1666,10 @@ cosmiconfig@^5.0.5:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-cozy-bar@6.8.5:
-  version "6.8.5"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.8.5.tgz#766b9d69147858517998df5c4b1d22d5a98e2bb9"
-  integrity sha512-WsPtRBkCnt6RgjdW0d9brXFqIqPXzzJtnykebh18jBmP7OGuYS/ktIHPlvBzCJTtrKr1oP7yhUOaYkggGgcC+A==
+cozy-bar@6.8.7:
+  version "6.8.7"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.8.7.tgz#15589675709696b11f58d13cf0ef930562c3cfd8"
+  integrity sha512-1g/UE6I1g1hb46ZQHY3jx/plKIBSSM2Cvn1RtkSc0VFh0qA/9rgL9jxSEbC2GLUFqFvK6vszUY2yYIOORkVR7Q==
   dependencies:
     "@babel/core" "7.1.6"
     babel-core "7.0.0-bridge.0"
@@ -1677,7 +1677,7 @@ cozy-bar@6.8.5:
     core-js "2.5.7"
     cozy-client-js "0.13.0"
     cozy-device-helper "1.4.14"
-    cozy-realtime "1.2.0"
+    cozy-realtime "1.2.1"
     hammerjs "2.0.8"
     lerna-changelog "0.8.2"
     localforage "1.7.3"
@@ -1722,10 +1722,10 @@ cozy-device-helper@1.4.14:
   dependencies:
     lodash "4.17.11"
 
-cozy-realtime@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-1.2.0.tgz#8f0e5a2c02df94674f0a96381a51bce71d327602"
-  integrity sha512-VM03YzeWt0D3dlVeGFLFLgraDs78PS1OY9FxA7TVxt95Q17a0OaVqqUViwfYY84+DxzfFl1pzw2BSzhThAqYJw==
+cozy-realtime@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-1.2.1.tgz#767a6279895960f51d422be043fb001316abe290"
+  integrity sha512-ed4fYohePy/0kgfylgfIQ2wRlOCSzG8jXRpOi1gjPXWJY/NYCvGMibd2GMW7XrcGy13Wd5eFQD55RhozKy1mqw==
 
 cozy-stack-client@^3.4.0:
   version "3.4.0"
