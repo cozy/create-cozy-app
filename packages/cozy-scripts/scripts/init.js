@@ -240,12 +240,15 @@ function gracefulExit(appPath) {
   )
   const templateFiles = fs.readdirSync(templateAppPath)
   const expectedGeneratedElements = [
-    'package.json',
-    'manifest.webapp',
-    'README.md',
+    '.travis.yml',
+    '.gitignore',
     'CONTRIBUTING.md',
-    'yarn.lock',
-    'node_modules'
+    'manifest.webapp',
+    'node_modules',
+    'package.json',
+    'README.md',
+    'yarn-error.log',
+    'yarn.lock'
   ].concat(templateFiles)
   const generatedElements = fs.readdirSync(path.join(appPath))
   if (generatedElements.length) {
