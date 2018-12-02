@@ -227,6 +227,14 @@ Use this option if you want to analyze your builds content using the webpack plu
 Use this option if you want to run `cozy-scripts start` without launching the Cozy stack using docker. You will only have Webpack watching with `webpack-dev-server`.
 It could be useful if you already have a Cozy stack running elsewhere in your environment.
 
+##### - Custom paths providing options: `--src-dir`, `--build-dir`, `--manifest`
+
+Use these options if you want to `build`/`watch`/`start` your application with custom paths. These paths __must be relative to the application root directory__:
+
+- `--src-dir`: the `src` directory, the source files of your application
+- `--build-dir`: the directory to put the application build files into
+- `--manifest`: the path of your manifest file `manifest.webapp` (the `.webapp` extension must be provided)
+
 ### The `cozy-scripts` webpack configuration
 
 `cozy-scripts` is designed to use a default webpack configuration for a basic React/Redux (or VueJS) application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder. Here is an example to overload the default bundle config with a custom one:
