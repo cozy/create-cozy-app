@@ -18,3 +18,4 @@ desktop.ini
 
 # tests
 .tmp_test
+coverage

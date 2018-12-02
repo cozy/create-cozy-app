@@ -57,59 +57,63 @@ const options = {
   useVue: program.vue,
   debugMode: program.debug,
   bundleAnalyzer: program.analyzer,
-  // all remaining arguments passed to the command
+  // all arguments passed to the command (we remove the main command name)
   cliArgs: process.argv.slice(3)
 }
 
-if (program.hot) {
-  process.env.HOT_RELOAD = 'true'
-}
-
-if (program.fix) {
-  process.env.COZY_SCRIPTS_ESLINT_FIX = 'true'
-}
-
-if (program.debug) {
-  process.env.COZY_SCRIPTS_DEBUG = 'true'
-}
+// program property, environment variable name, content to set
+;[
+  ['hot', 'HOT_RELOAD', true],
+  ['fix', 'COZY_SCRIPTS_ESLINT_FIX', true],
+  ['debug', 'COZY_SCRIPTS_DEBUG', true]
+].map(toDefine => {
+  if (program[toDefine[0]]) process.env[toDefine[1]] = toDefine[2]
+})
 
 if (program.showConfig) {
   console.log(JSON.stringify(getWebpackConfigs(options), null, 2))
-  process.exit(0)
-}
-
-const availableScripts = [
-  'build',
-  'watch',
-  'start',
-  'test',
-  'publish',
-  'release',
-  'lint'
-]
-
-// TODO: to remove in next major version
-if (actionName === 'standalone') {
-  console.log()
-  console.log(
-    colorize.orange('⚠️ `cozy-scripts standalone` has been replaced.')
-  )
-  console.log(
-    colorize.orange(
-      `Please use ${colorize.bold('`cozy-scripts start`')} instead. ⚠️`
-    )
-  )
-  console.log()
-}
-
-if (availableScripts.includes(actionName)) {
-  if (actionName === 'start') {
-    // specific to this action
-    options.stack = program.stack // specific behaviour of --no-* options
-  }
-  const scriptPath = `../scripts/${actionName}`
-  const script = require(scriptPath)
-  script(options)
 } else {
-  console.log(`cozy-scripts: unknown command ${colorize.cyan(actionName)}`)
+  const availableScripts = [
+    'build',
+    'watch',
+    'start',
+    'test',
+    'publish',
+    'release',
+    'lint'
+  ]
+
+  // TODO: to remove in next major version
+  if (actionName === 'standalone') {
+    console.log()
+    console.log(
+      colorize.orange('⚠️ `cozy-scripts standalone` has been replaced.')
+    )
+    console.log(
+      colorize.orange(
+        `Please use ${colorize.bold('`cozy-scripts start`')} instead. ⚠️`
+      )
+    )
+    console.log()
+  }
+
+  if (availableScripts.includes(actionName)) {
+    if (actionName === 'start') {
+      // specific to this action
+      options.stack = program.stack // specific behaviour of --no-* options
+    }
+    const scriptPath = `../scripts/${actionName}`
+    const script = require(scriptPath)
+    script(options)
+  } else {
+    if (!actionName) {
+      console.error(
+        'Use `--help` option to get more informations about cozy-scripts usage.'
+      )
+    } else {
+      console.error(
+        `cozy-scripts: unknown command ${colorize.cyan(actionName)}`
+      )
+    }
+  }
 }

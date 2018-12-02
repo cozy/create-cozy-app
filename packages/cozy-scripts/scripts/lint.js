@@ -1,12 +1,12 @@
 'use strict'
 
 const spawn = require('cross-spawn')
-const colorize = require('../utils/_colorize')
 const paths = require('../utils/paths')
 
-module.exports = () => {
-  const argv = process.argv.slice(3)
+function runESLint(options) {
+  const { cliArgs } = options
 
-  console.info(colorize.orange(`eslint ${argv.join(' ')}`))
-  spawn.sync(paths.csEslintBinary, argv, { stdio: 'inherit' })
+  spawn.sync(paths.csEslintBinary, cliArgs, { stdio: 'inherit' })
 }
+
+module.exports = runESLint
