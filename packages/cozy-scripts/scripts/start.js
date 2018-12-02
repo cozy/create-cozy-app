@@ -10,8 +10,8 @@ const paths = require('../utils/paths')
 const getWebpackConfigs = require('./config')
 
 let appManifest = null
-if (fs.pathExistsSync(paths.appManifest)) {
-  appManifest = fs.readJsonSync(paths.appManifest, { throws: false })
+if (fs.pathExistsSync(paths.appManifest())) {
+  appManifest = fs.readJsonSync(paths.appManifest(), { throws: false })
 }
 
 const port = process.env.DEV_PORT || '8888'
@@ -168,13 +168,13 @@ module.exports = buildOptions => {
             '-p',
             `${MailHogPort}:8025`,
             '-v',
-            `${paths.appBuild}:/data/cozy-app/${appSlug}`,
+            `${paths.appBuild()}:/data/cozy-app/${appSlug}`,
             '-v',
-            `${paths.csDisableCSPConfig}:/etc/cozy/cozy.yaml`,
+            `${paths.csDisableCSPConfig()}:/etc/cozy/cozy.yaml`,
             'cozy/cozy-app-dev'
           ],
           {
-            cwd: paths.appPath
+            cwd: paths.appPath()
           }
         )
         dockerProcess.stdout.on('data', data => {
@@ -239,7 +239,7 @@ module.exports = buildOptions => {
         console.log(colorize.cyan('See you soon! 👋'))
         dockerProcess.stdout.destroy()
         dockerProcess.stderr.destroy()
-        spawn.sync('sh', ['-c', paths.csQuitStackScript], {
+        spawn.sync('sh', ['-c', paths.csQuitStackScript()], {
           stdio: 'inherit'
         })
       } else {

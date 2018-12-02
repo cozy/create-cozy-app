@@ -6,7 +6,7 @@ const webpack = require('webpack')
 const paths = require('../utils/paths')
 const { eslintFix, getFilename, target } = require('./webpack.vars')
 
-const servicesFolder = paths.appServicesFolder
+const servicesFolder = paths.appServicesFolder()
 const servicesPaths = fs.readdirSync(servicesFolder)
 
 const servicesEntries = {}
@@ -29,7 +29,7 @@ const config = {
   },
   entry: servicesEntries,
   output: {
-    path: paths.appServicesBuild,
+    path: paths.appServicesBuild(),
     filename: `${getFilename()}.js`
   },
   target: 'node',

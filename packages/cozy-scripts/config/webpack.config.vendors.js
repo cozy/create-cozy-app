@@ -15,7 +15,7 @@ const svgo = new SvgoInstance({
 
 let iconName
 try {
-  iconName = JSON.parse(fs.readFileSync(paths.appManifest, 'utf8')).icon
+  iconName = JSON.parse(fs.readFileSync(paths.appManifest(), 'utf8')).icon
   // we run optimize only on SVG
   if (!iconName.match(/\.svg$/)) iconName = null
 } catch (e) {
@@ -33,7 +33,7 @@ function optimizeSVGIcon(buffer, path) {
 module.exports = {
   plugins: [
     new CopyPlugin([
-      { from: paths.appVendorAssets, transform: optimizeSVGIcon }
+      { from: paths.appVendorAssets(), transform: optimizeSVGIcon }
     ])
   ]
 }

@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
 const { production, isDebugMode } = require('./webpack.vars')
-const manifest = fs.readJsonSync(paths.appManifest)
+const manifest = fs.readJsonSync(paths.appManifest())
 
 const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
@@ -20,7 +20,7 @@ module.exports = {
     app: [require.resolve('babel-polyfill'), paths.appMobileIndex()]
   },
   output: {
-    path: paths.appMobileWWW,
+    path: paths.appMobileWWW(),
     pathinfo: isDebugMode
   },
   plugins: [
@@ -38,7 +38,7 @@ module.exports = {
         : 'cozy-bar/dist/cozy-bar.mobile.js'
     }),
     new HtmlWebpackPlugin({
-      template: paths.appMobileHtmlTemplate,
+      template: paths.appMobileHtmlTemplate(),
       title: appName,
       excludeChunks: ['intents'],
       inject: 'head',

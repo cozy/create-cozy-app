@@ -40,6 +40,18 @@ const program = new commander.Command(pkg.name)
   .option('--show-config', 'just print app final webpack config')
   .option('--vue', 'to use scripts in a VueJS specific way (default React)')
   .option(
+    '--src-dir <pathToDirectory>',
+    'provide the application source (`src`) directory path (relative to the application root directory)'
+  )
+  .option(
+    '--build-dir <pathToDirectory>',
+    'provide the application `build` directory path (relative to the application root directory) to build the application into'
+  )
+  .option(
+    '--manifest <pathToFile>',
+    'provide the application manifest file path (relative to the application root directory)'
+  )
+  .option(
     '--analyzer',
     'open an analyzer with an interactive treemap visualization of the contents of all builds'
   )
@@ -65,7 +77,10 @@ const options = {
 ;[
   ['hot', 'HOT_RELOAD', true],
   ['fix', 'COZY_SCRIPTS_ESLINT_FIX', true],
-  ['debug', 'COZY_SCRIPTS_DEBUG', true]
+  ['debug', 'COZY_SCRIPTS_DEBUG', true],
+  ['srcDir', 'COZY_SCRIPTS_APP_SRC_DIR', program.srcDir],
+  ['buildDir', 'COZY_SCRIPTS_APP_BUILD_DIR', program.buildDir],
+  ['manifest', 'COZY_SCRIPTS_APP_MANIFEST', program.manifest]
 ].map(toDefine => {
   if (program[toDefine[0]]) process.env[toDefine[1]] = toDefine[2]
 })

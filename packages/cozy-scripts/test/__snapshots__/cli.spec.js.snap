@@ -87,6 +87,20 @@ Object {
 }
 `;
 
+exports[`cozy-scripts (cs) CLI should handle build directory path providing with --build-dir option 1`] = `
+Object {
+  "bundleAnalyzer": undefined,
+  "cliArgs": Array [
+    "--build-dir",
+    "custom/app/buildHere",
+  ],
+  "debugMode": undefined,
+  "mode": "development",
+  "target": "browser",
+  "useVue": undefined,
+}
+`;
+
 exports[`cozy-scripts (cs) CLI should handle debug mode with --debug option 1`] = `
 Object {
   "bundleAnalyzer": undefined,
@@ -115,6 +129,20 @@ Object {
 }
 `;
 
+exports[`cozy-scripts (cs) CLI should handle manifest path providing with --manifest option 1`] = `
+Object {
+  "bundleAnalyzer": undefined,
+  "cliArgs": Array [
+    "--manifest",
+    "custom/app/manifest.webapp",
+  ],
+  "debugMode": undefined,
+  "mode": "development",
+  "target": "browser",
+  "useVue": undefined,
+}
+`;
+
 exports[`cozy-scripts (cs) CLI should handle mobile target with --mobile option 1`] = `
 Object {
   "bundleAnalyzer": undefined,
@@ -129,6 +157,20 @@ Object {
 `;
 
 exports[`cozy-scripts (cs) CLI should handle previous \`standalone\` command to display a message to use \`start\` instead 1`] = `" ⚠️ \`cozy-scripts standalone\` has been replaced. Please use \`cozy-scripts start\` instead. ⚠️ "`;
+
+exports[`cozy-scripts (cs) CLI should handle src directory path providing with --src-dir option 1`] = `
+Object {
+  "bundleAnalyzer": undefined,
+  "cliArgs": Array [
+    "--src-dir",
+    "custom/app/src",
+  ],
+  "debugMode": undefined,
+  "mode": "development",
+  "target": "browser",
+  "useVue": undefined,
+}
+`;
 
 exports[`cozy-scripts (cs) CLI should run start script on \`start\` command with all passed options with development mode by default 1`] = `
 Object {

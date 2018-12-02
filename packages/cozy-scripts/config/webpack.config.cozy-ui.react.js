@@ -2,7 +2,7 @@
 
 const { getCSSLoader } = require('./webpack.vars')
 const paths = require('../utils/paths')
-const cozyUIPlugin = require(paths.appCozyUiStylus)
+const cozyUIPlugin = require(paths.appCozyUiStylus())
 
 module.exports = {
   module: {
