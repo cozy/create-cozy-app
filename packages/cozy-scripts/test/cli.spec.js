@@ -72,9 +72,12 @@ describe('cozy-scripts (cs) CLI', () => {
     // clean args list
     process.argv = [process.execPath, path.resolve('../bin/cozy-scripts')]
     // default env
-    process.env.HOT_RELOAD = 'false'
-    process.env.COZY_SCRIPTS_DEBUG = 'false'
-    process.env.COZY_SCRIPTS_ESLINT_FIX = 'false'
+    process.env.HOT_RELOAD = undefined
+    process.env.COZY_SCRIPTS_DEBUG = undefined
+    process.env.COZY_SCRIPTS_ESLINT_FIX = undefined
+    process.env.COZY_SCRIPTS_APP_SRC_DIR = undefined
+    process.env.COZY_SCRIPTS_APP_BUILD_DIR = undefined
+    process.env.COZY_SCRIPTS_APP_MANIFEST = undefined
   })
 
   afterAll(() => {
@@ -206,6 +209,36 @@ describe('cozy-scripts (cs) CLI', () => {
       callCLI()
     }).not.toThrow()
     expect(process.env.HOT_RELOAD).toBe('true')
+  })
+
+  it('should handle src directory path providing with --src-dir option', () => {
+    // add cli arguments
+    const customPath = 'custom/app/src'
+    addCLIArgs('watch', '--src-dir', customPath)
+    expect(() => {
+      callCLI()
+    }).not.toThrow()
+    expect(process.env.COZY_SCRIPTS_APP_SRC_DIR).toBe(customPath)
+  })
+
+  it('should handle build directory path providing with --build-dir option', () => {
+    // add cli arguments
+    const customPath = 'custom/app/buildHere'
+    addCLIArgs('watch', '--build-dir', 'custom/app/buildHere')
+    expect(() => {
+      callCLI()
+    }).not.toThrow()
+    expect(process.env.COZY_SCRIPTS_APP_BUILD_DIR).toBe(customPath)
+  })
+
+  it('should handle manifest path providing with --manifest option', () => {
+    // add cli arguments
+    const customPath = 'custom/app/manifest.webapp'
+    addCLIArgs('watch', '--manifest', 'custom/app/manifest.webapp')
+    expect(() => {
+      callCLI()
+    }).not.toThrow()
+    expect(process.env.COZY_SCRIPTS_APP_MANIFEST).toBe(customPath)
   })
 
   it('should handle --production option', () => {

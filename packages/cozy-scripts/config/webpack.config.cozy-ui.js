@@ -1,7 +1,7 @@
 'use strict'
 
 const paths = require('../utils/paths')
-const cozyUIPlugin = require(paths.appCozyUiStylus)
+const cozyUIPlugin = require(paths.appCozyUiStylus())
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const { getCSSLoader } = require('./webpack.vars')
 

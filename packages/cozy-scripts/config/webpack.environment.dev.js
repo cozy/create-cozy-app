@@ -6,9 +6,9 @@ const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plug
 const CopyPlugin = require('copy-webpack-plugin')
 const { useHotReload } = require('./webpack.vars')
 
-const buildCozyBarCss = `${paths.appBuild}/cozy-bar.css`
-const buildCozyBarJs = `${paths.appBuild}/cozy-bar.js`
-const buildCozyClientJs = `${paths.appBuild}/cozy-client-js.js`
+const buildCozyBarCss = `${paths.appBuild()}/cozy-bar.css`
+const buildCozyBarJs = `${paths.appBuild()}/cozy-bar.js`
+const buildCozyClientJs = `${paths.appBuild()}/cozy-client-js.js`
 
 let plugins = [
   new webpack.DefinePlugin({
@@ -17,15 +17,15 @@ let plugins = [
   }),
   new CopyPlugin([
     {
-      from: paths.appCozyBarJs,
+      from: paths.appCozyBarJs(),
       to: buildCozyBarJs
     },
     {
-      from: paths.appCozyBarCss,
+      from: paths.appCozyBarCss(),
       to: buildCozyBarCss
     },
     {
-      from: paths.appCozyClientJs,
+      from: paths.appCozyClientJs(),
       to: buildCozyClientJs
     }
   ]),

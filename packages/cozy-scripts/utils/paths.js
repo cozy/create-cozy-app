@@ -3,58 +3,71 @@
 const path = require('path')
 const fs = require('fs')
 
-const appDirectory = fs.realpathSync(process.cwd())
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
+const appDirectory = fs.realpathSync(process.cwd())
+const resolveApp = (relativePath = '.', fromDirectory = appDirectory) =>
+  path.resolve(fromDirectory, relativePath)
 
-// This must be used inside a function (called when needed)
+// Those must be used inside a function (called when needed)
 // to be sure to use the current process.env context
 // and not the one at the first loading of this file
-const resolveWithExtension = (path, extension) => {
-  const ext = extension || process.env.__ENTRY_EXT__ || '.js'
-  return resolveApp(`${path}${ext}`)
+const resolveAppSrc = (path = '.') => {
+  const appSrcDirectory = process.env.COZY_SCRIPTS_APP_SRC_DIR || 'src'
+  return resolveApp(path, resolveApp(appSrcDirectory))
 }
 
+const resolveWithExtension = (path, extension) => {
+  const ext = extension || process.env.__ENTRY_EXT__ || '.js'
+  return resolveAppSrc(`${path}${ext}`)
+}
+
+const resolveAppBuild = (path = '.') => {
+  const appBuildDirectory = process.env.COZY_SCRIPTS_APP_BUILD_DIR || 'build'
+  return resolveApp(path, resolveApp(appBuildDirectory))
+}
+
+const resolveAppManifest = () => {
+  const appManifest = process.env.COZY_SCRIPTS_APP_MANIFEST || 'manifest.webapp'
+  return resolveApp(appManifest)
+}
+
+// We use them as functions for all for more consistency
 module.exports = {
-  appPath: resolveApp('.'),
-  appBuild: resolveApp('build'),
-  appServicesBuild: resolveApp('build/services'),
-  appBuildAssetsJson: resolveApp('build/assets/json'),
-  appPackageJson: resolveApp('package.json'),
-  appManifest: resolveApp('manifest.webapp'),
-  appREADME: resolveApp('README.md'),
-  appLICENSE: resolveApp('LICENSE'),
-  appSrc: resolveApp('src'),
-  appLocales: resolveApp('src/locales'),
-  appVendorAssets: resolveApp('src/targets/vendor/assets'),
-  appNodeModules: resolveApp('node_modules'),
+  appPath: () => resolveApp(),
+  appBuild: () => resolveAppBuild(),
+  appServicesBuild: () => resolveAppBuild('services'),
+  appBuildAssetsJson: () => resolveAppBuild('assets/json'),
+  appManifest: () => resolveAppManifest(),
+  appREADME: () => resolveApp('README.md'),
+  appLICENSE: () => resolveApp('LICENSE'),
+  appSrc: () => resolveAppSrc(),
+  appLocales: () => resolveAppSrc('locales'),
+  appVendorAssets: () => resolveAppSrc('targets/vendor/assets'),
+  appNodeModules: () => resolveApp('node_modules'),
   // for browser
-  appBrowserHtmlTemplate: resolveApp('src/targets/browser/index.ejs'),
-  appBrowserIndex: ext =>
-    resolveWithExtension('src/targets/browser/index', ext),
+  appBrowserHtmlTemplate: () => resolveAppSrc('targets/browser/index.ejs'),
+  appBrowserIndex: ext => resolveWithExtension('targets/browser/index', ext),
   // for intents
-  appIntentsHtmlTemplate: resolveApp('src/targets/intents/index.ejs'),
-  appIntentsIndex: ext =>
-    resolveWithExtension('src/targets/intents/index', ext),
+  appIntentsHtmlTemplate: () => resolveAppSrc('targets/intents/index.ejs'),
+  appIntentsIndex: ext => resolveWithExtension('targets/intents/index', ext),
   // for services
-  appServicesFolder: resolveApp('src/targets/services'),
+  appServicesFolder: () => resolveAppSrc('targets/services'),
   // for mobile
-  appMobileHtmlTemplate: resolveApp('src/targets/mobile/index.ejs'),
-  appMobileIndex: ext => resolveWithExtension('src/targets/mobile/index', ext),
-  appMobileWWW: resolveApp('src/targets/mobile/www'),
+  appMobileHtmlTemplate: () => resolveAppSrc('targets/mobile/index.ejs'),
+  appMobileIndex: ext => resolveWithExtension('targets/mobile/index', ext),
+  appMobileWWW: () => resolveAppSrc('targets/mobile/www'),
   // for app local cozy-bar (dev only)
-  appCozyBarJs: resolveApp('node_modules/cozy-bar/dist/cozy-bar.js'),
-  appCozyBarCss: resolveApp('node_modules/cozy-bar/dist/cozy-bar.css'),
-  appCozyClientJs: resolveApp(
-    'node_modules/cozy-client-js/dist/cozy-client.js'
-  ),
+  appCozyBarJs: () => resolveApp('node_modules/cozy-bar/dist/cozy-bar.js'),
+  appCozyBarCss: () => resolveApp('node_modules/cozy-bar/dist/cozy-bar.css'),
+  appCozyClientJs: () =>
+    resolveApp('node_modules/cozy-client-js/dist/cozy-client.js'),
   // cozy-ui
-  appCozyUiStylus: resolveApp('node_modules/cozy-ui/stylus'),
+  appCozyUiStylus: () => resolveApp('node_modules/cozy-ui/stylus'),
 
   // for cozy-scripts
-  csDisableCSPConfig: resolveOwn('stack/disableCSP.yaml'),
-  csEslintBinary: resolveOwn('node_modules/.bin/eslint'),
-  csReactExposer: resolveOwn('utils/reactExposer.js'),
-  csPreactExposer: resolveOwn('utils/preactExposer.js'),
-  csQuitStackScript: resolveOwn('stack/quitStack.sh')
+  csDisableCSPConfig: () => resolveOwn('stack/disableCSP.yaml'),
+  csEslintBinary: () => resolveOwn('node_modules/.bin/eslint'),
+  csReactExposer: () => resolveOwn('utils/reactExposer.js'),
+  csPreactExposer: () => resolveOwn('utils/preactExposer.js'),
+  csQuitStackScript: () => resolveOwn('stack/quitStack.sh')
 }
