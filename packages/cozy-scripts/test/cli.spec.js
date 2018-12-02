@@ -72,12 +72,12 @@ describe('cozy-scripts (cs) CLI', () => {
     // clean args list
     process.argv = [process.execPath, path.resolve('../bin/cozy-scripts')]
     // default env
-    process.env.HOT_RELOAD = undefined
-    process.env.COZY_SCRIPTS_DEBUG = undefined
-    process.env.COZY_SCRIPTS_ESLINT_FIX = undefined
-    process.env.COZY_SCRIPTS_APP_SRC_DIR = undefined
-    process.env.COZY_SCRIPTS_APP_BUILD_DIR = undefined
-    process.env.COZY_SCRIPTS_APP_MANIFEST = undefined
+    delete process.env.HOT_RELOAD
+    delete process.env.COZY_SCRIPTS_DEBUG
+    delete process.env.COZY_SCRIPTS_ESLINT_FIX
+    delete process.env.COZY_SCRIPTS_APP_SRC_DIR
+    delete process.env.COZY_SCRIPTS_APP_BUILD_DIR
+    delete process.env.COZY_SCRIPTS_APP_MANIFEST
   })
 
   afterAll(() => {
