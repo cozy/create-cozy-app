@@ -88,6 +88,6 @@
     "template-vue/yarn.lock"
   ],
   "devDependencies": {
-    "strip-ansi": "^5.0.0"
+    "strip-ansi": "5.0.0"
   }
 }
