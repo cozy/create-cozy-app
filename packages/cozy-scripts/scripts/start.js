@@ -35,6 +35,7 @@ module.exports = buildOptions => {
   cleanBuild(buildTarget)
 
   const useHotReload = process.env.HOT_RELOAD === 'true'
+  const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
 
   // webpack configurations
   const configs = getWebpackConfigs(options)
@@ -66,12 +67,12 @@ module.exports = buildOptions => {
 
   const WebpackOptions = {
     // display build informations only in debug mode or if errors/warnings
-    noInfo: !buildOptions.debugMode,
+    noInfo: !isDebugMode,
     stats: {
       // display modules in debugMode (muted by noInfo)
-      modules: buildOptions.debugMode,
+      modules: isDebugMode,
       // display chunks in debugMode (muted by noInfo)
-      chunks: buildOptions.debugMode,
+      chunks: isDebugMode,
       // Shows colors in the console
       colors: true
     },

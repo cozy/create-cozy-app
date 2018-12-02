@@ -74,6 +74,7 @@ describe('cozy-scripts (cs) CLI', () => {
     // default env
     delete process.env.HOT_RELOAD
     delete process.env.COZY_SCRIPTS_DEBUG
+    delete process.env.COZY_SCRIPTS_ANALYZER
     delete process.env.COZY_SCRIPTS_ESLINT_FIX
     delete process.env.COZY_SCRIPTS_APP_SRC_DIR
     delete process.env.COZY_SCRIPTS_APP_BUILD_DIR
@@ -182,6 +183,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
+    expect(process.env.COZY_SCRIPTS_ANALYZER).toBe('true')
   })
 
   it('should handle debug mode with --debug option', () => {

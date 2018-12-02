@@ -67,8 +67,6 @@ const options = {
   target:
     (program.browser && 'browser') || (program.mobile && 'mobile') || 'browser',
   useVue: program.vue,
-  debugMode: program.debug,
-  bundleAnalyzer: program.analyzer,
   // all arguments passed to the command (we remove the main command name)
   cliArgs: process.argv.slice(3)
 }
@@ -78,6 +76,7 @@ const options = {
   ['hot', 'HOT_RELOAD', true],
   ['fix', 'COZY_SCRIPTS_ESLINT_FIX', true],
   ['debug', 'COZY_SCRIPTS_DEBUG', true],
+  ['analyzer', 'COZY_SCRIPTS_ANALYZER', true],
   ['srcDir', 'COZY_SCRIPTS_APP_SRC_DIR', program.srcDir],
   ['buildDir', 'COZY_SCRIPTS_APP_BUILD_DIR', program.buildDir],
   ['manifest', 'COZY_SCRIPTS_APP_MANIFEST', program.manifest]
