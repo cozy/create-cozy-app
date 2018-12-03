@@ -1,10 +1,10 @@
 'use strict'
 
-const { getCSSLoader } = require('./webpack.vars')
+const { getCSSLoader, cozyUIMajorVersion } = require('./webpack.vars')
 const paths = require('../utils/paths')
 const cozyUIPlugin = require(paths.appCozyUiStylus())
 
-module.exports = {
+const NonTranspiledConfig = {
   module: {
     rules: [
       {
@@ -43,3 +43,14 @@ module.exports = {
     ]
   }
 }
+
+const TranspiledConfig = {
+  resolve: {
+    alias: {
+      'cozy-ui/react': 'cozy-ui/transpiled/react'
+    }
+  }
+}
+
+module.exports =
+  cozyUIMajorVersion >= 15 ? TranspiledConfig : NonTranspiledConfig

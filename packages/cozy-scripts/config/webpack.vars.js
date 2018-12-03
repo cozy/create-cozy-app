@@ -38,13 +38,39 @@ const getFilename = function() {
     : `${manifest.slug}.[name]`
 }
 
+let cozyUIMajorVersion
+try {
+  const cozyUIPackageJson = fs.readJsonSync(paths.appCozyUiPackageJson())
+  cozyUIMajorVersion = cozyUIPackageJson.version.split('.')[0]
+} catch (e) {
+  cozyUIMajorVersion = '1' // default version
+}
+
+const getAppPreEntries = () => {
+  const preEntries = [
+    // polyfills, avoid to import it in the application
+    require.resolve('babel-polyfill'),
+    // Exposed variables in global scope (needed for cozy-bar)
+    process.env[CTS.USE_PREACT]
+      ? paths.csPreactExposer()
+      : paths.csReactExposer()
+  ]
+  // transpiled cozy-ui stylesheet if transpiled components used
+  if (cozyUIMajorVersion >= 15) {
+    preEntries.push(paths.appCozyUiTranspiledCss())
+  }
+  return preEntries
+}
+
 module.exports = {
   addAnalyzer,
+  cozyUIMajorVersion,
   environment,
   eslintFix,
   getFilename,
   getCSSLoader,
   isDebugMode,
+  getAppPreEntries,
   target,
   useHotReload
 }

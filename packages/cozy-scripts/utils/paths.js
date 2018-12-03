@@ -64,6 +64,9 @@ module.exports = {
     resolveApp('node_modules/cozy-client-js/dist/cozy-client.js'),
   // cozy-ui
   appCozyUiStylus: () => resolveApp('node_modules/cozy-ui/stylus'),
+  appCozyUiTranspiledCss: () =>
+    resolveApp('node_modules/cozy-ui/transpiled/stylesheet.css'),
+  appCozyUiPackageJson: () => resolveApp('node_modules/cozy-ui/package.json'),
 
   // for cozy-scripts
   csDisableCSPConfig: () => resolveOwn('stack/disableCSP.yaml'),

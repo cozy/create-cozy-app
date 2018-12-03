@@ -68,6 +68,7 @@ Array [
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
         ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/node_modules/cozy-ui/transpiled/stylesheet.css",
         ".tmp_test/test-app/src/targets/browser/index.jsx",
       ],
     },
@@ -176,36 +177,6 @@ Array [
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
-              "options": Object {
-                "use": Array [
-                  null,
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "include": Object {},
-          "test": Object {},
-          "use": Array [
-            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
                 "sourceMap": true,
               },
             },
@@ -443,6 +414,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
@@ -468,6 +442,7 @@ Array [
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
         ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/node_modules/cozy-ui/transpiled/stylesheet.css",
         ".tmp_test/test-app/src/targets/browser/index.jsx",
       ],
     },
@@ -576,36 +551,6 @@ Array [
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
-              "options": Object {
-                "use": Array [
-                  null,
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "include": Object {},
-          "test": Object {},
-          "use": Array [
-            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
                 "sourceMap": true,
               },
             },
@@ -828,6 +773,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
@@ -854,6 +802,7 @@ Array [
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
         ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/node_modules/cozy-ui/transpiled/stylesheet.css",
         ".tmp_test/test-app/src/targets/mobile/index.jsx",
       ],
     },
@@ -962,36 +911,6 @@ Array [
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
-              "options": Object {
-                "use": Array [
-                  null,
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "include": Object {},
-          "test": Object {},
-          "use": Array [
-            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
                 "sourceMap": true,
               },
             },
@@ -1236,6 +1155,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
@@ -1261,6 +1183,7 @@ Array [
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
         ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/node_modules/cozy-ui/transpiled/stylesheet.css",
         ".tmp_test/test-app/src/targets/mobile/index.jsx",
       ],
     },
@@ -1366,36 +1289,6 @@ Array [
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
-              "options": Object {
-                "use": Array [
-                  null,
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "include": Object {},
-          "test": Object {},
-          "use": Array [
-            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
                 "sourceMap": true,
               },
             },
@@ -1625,6 +1518,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
@@ -1651,6 +1547,7 @@ Array [
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
         ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/node_modules/cozy-ui/transpiled/stylesheet.css",
         ".tmp_test/test-app/src/targets/browser/index.jsx",
       ],
     },
@@ -1759,36 +1656,6 @@ Array [
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
-              "options": Object {
-                "use": Array [
-                  null,
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "include": Object {},
-          "test": Object {},
-          "use": Array [
-            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
                 "sourceMap": true,
               },
             },
@@ -2026,6 +1893,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
@@ -2052,6 +1922,7 @@ Array [
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
         ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/node_modules/cozy-ui/transpiled/stylesheet.css",
         ".tmp_test/test-app/src/targets/browser/index.jsx",
       ],
     },
@@ -2160,36 +2031,6 @@ Array [
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
-              "options": Object {
-                "use": Array [
-                  null,
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "include": Object {},
-          "test": Object {},
-          "use": Array [
-            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
                 "sourceMap": true,
               },
             },
@@ -2427,6 +2268,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
@@ -2517,6 +2361,7 @@ Array [
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
         ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/node_modules/cozy-ui/transpiled/stylesheet.css",
         ".tmp_test/test-app/src/targets/browser/index.jsx",
       ],
     },
@@ -2625,36 +2470,6 @@ Array [
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
               "options": Object {
                 "importLoaders": 1,
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
-              "options": Object {
-                "sourceMap": true,
-              },
-            },
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
-              "options": Object {
-                "use": Array [
-                  null,
-                ],
-              },
-            },
-          ],
-        },
-        Object {
-          "include": Object {},
-          "test": Object {},
-          "use": Array [
-            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
-            Object {
-              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/index.js",
-              "options": Object {
-                "importLoaders": 1,
-                "localIdentName": "[local]--[hash:base64:5]",
-                "modules": true,
                 "sourceMap": true,
               },
             },
@@ -2892,6 +2707,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
@@ -2964,6 +2782,9 @@ Array [
       },
     ],
     "resolve": Object {
+      "alias": Object {
+        "cozy-ui/react": "cozy-ui/transpiled/react",
+      },
       "extensions": Array [
         ".js",
         ".json",
