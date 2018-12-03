@@ -71,7 +71,6 @@ function getConfig(options = {}) {
     'scripts',
     'config.js'
   ))
-  options.useVue = true
   let appConfig = getWebpackConfigs(options)
   // we replace path to avoid environment specific snapshots
   // ex: paths like `/me/test/${testFolder}/...` will be `${testFolder}/...`
@@ -103,6 +102,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
     if (process.env[CTS.DEBUG]) delete process.env[CTS.DEBUG]
+    process.env[CTS.USE_VUE] = 'true'
     // rm coverage folder from tests if exists
     if (fs.existsSync(appCoveragePath)) {
       fs.removeSync(appCoveragePath)
@@ -262,7 +262,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
       'scripts',
       'build.js'
     ))
-    expect(() => build({ useVue: true }, done)).not.toThrow()
+    expect(() => build({}, done)).not.toThrow()
     expect(process.env.NODE_ENV).toBe('browser:production')
   })
 
@@ -278,7 +278,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
       'watch.js'
     ))
     expect(() =>
-      watch({ useVue: true }, multiWatching => {
+      watch({}, multiWatching => {
         multiWatching.close(() => {
           let isClosed = true
           for (const watching of multiWatching.watchings) {

@@ -18,7 +18,12 @@ const resolveAppSrc = (relativePath = '.') => {
 }
 
 const resolveSrcWithExtension = relativePath => {
-  const ext = process.env[CTS.ENTRY_EXT] || '.js'
+  let ext = '.js'
+  if (process.env[CTS.USE_VUE]) {
+    ext = '.js'
+  } else if (process.env[CTS.USE_REACT] || process.env[CTS.USE_PREACT]) {
+    ext = '.jsx'
+  }
   return resolveAppSrc(`${relativePath}${ext}`)
 }
 

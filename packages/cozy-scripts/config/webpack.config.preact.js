@@ -4,7 +4,6 @@ const webpack = require('webpack')
 const { environment } = require('./webpack.vars')
 const CTS = require('../utils/constants.js')
 
-process.env[CTS.ENTRY_EXT] = '.jsx'
 process.env[CTS.USE_PREACT] = true
 
 const development = environment === 'development'

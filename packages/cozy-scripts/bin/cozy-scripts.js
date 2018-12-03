@@ -67,7 +67,6 @@ const options = {
     'development',
   target:
     (program.browser && 'browser') || (program.mobile && 'mobile') || 'browser',
-  useVue: program.vue,
   // all arguments passed to the command (we remove the main command name)
   cliArgs: process.argv.slice(3)
 }
@@ -76,6 +75,7 @@ const options = {
 ;[
   ['hot', CTS.HOT, true],
   ['fix', CTS.ESLINT_FIX, true],
+  ['vue', CTS.USE_VUE, true],
   ['debug', CTS.DEBUG, true],
   ['analyzer', CTS.ANALYZER, true],
   ['srcDir', CTS.SRC_DIR, program.srcDir],

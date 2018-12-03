@@ -56,7 +56,7 @@ const getAppPreEntries = () => {
       : paths.csReactExposer()
   ]
   // transpiled cozy-ui stylesheet if transpiled components used
-  if (cozyUIMajorVersion >= 15) {
+  if (cozyUIMajorVersion >= 15 && !process.env[CTS.USE_VUE]) {
     preEntries.push(paths.appCozyUiTranspiledCss())
   }
   return preEntries

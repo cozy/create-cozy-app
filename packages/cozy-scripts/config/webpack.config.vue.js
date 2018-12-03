@@ -3,7 +3,7 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CTS = require('../utils/constants.js')
 
-process.env[CTS.ENTRY_EXT] = '.js'
+process.env[CTS.USE_VUE] = true
 
 module.exports = {
   resolve: {

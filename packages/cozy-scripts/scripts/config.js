@@ -3,6 +3,7 @@
 const merge = require('webpack-merge')
 const path = require('path')
 const fs = require('fs-extra')
+const CTS = require('../utils/constants')
 
 function mergeWithOptions(options, configs, current) {
   // merge with the previous configs using the provided strategy
@@ -19,10 +20,12 @@ function mergeWithOptions(options, configs, current) {
 
 function getWebpackConfigs(options = {}) {
   // mode and target options should already be provided
-  const { mode = 'development', target = 'browser', useVue } = options
+  const { mode = 'development', target = 'browser' } = options
 
   // NODE_ENV from environment overwrite options here
   if (!process.env.NODE_ENV) process.env.NODE_ENV = `${target}:${mode}`
+
+  const useVue = process.env[CTS.USE_VUE] === 'true'
 
   // check if a custom config exists in the app source
   let appConfigs

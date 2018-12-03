@@ -6,7 +6,9 @@ const CTS = require('../utils/constants.js')
 
 describe('Paths provider helper', () => {
   beforeEach(() => {
-    delete process.env[CTS.ENTRY_EXT]
+    delete process.env[CTS.USE_VUE]
+    delete process.env[CTS.USE_REACT]
+    delete process.env[CTS.USE_PREACT]
     delete process.env[CTS.SRC_DIR]
     delete process.env[CTS.BUILD_DIR]
     delete process.env[CTS.MANIFEST]
@@ -28,12 +30,14 @@ describe('Paths provider helper', () => {
 
   //environment variables handling for options
   ;[
-    [CTS.ENTRY_EXT, '.vue'],
+    [CTS.USE_VUE, 'true'],
+    [CTS.USE_REACT, 'true'],
+    [CTS.USE_PREACT, 'true'],
     [CTS.SRC_DIR, 'subfolder/src/myapp'],
     [CTS.BUILD_DIR, 'subfolder/build/myapp'],
     [CTS.MANIFEST, 'subfolder/src/myapp/manifest.webapp']
   ].map(params => {
-    it(`should provide all paths with custom ${params[0]}`, () => {
+    it(`should provide all paths with ${params[0]}`, () => {
       process.env[params[0]] = params[1]
       const pathsList = []
       for (let getter in paths) {

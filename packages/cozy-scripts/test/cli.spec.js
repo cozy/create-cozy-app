@@ -266,6 +266,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
+    expect(process.env[CTS.USE_VUE]).toBe('true')
   })
 
   it('should handle mobile target with --mobile option', () => {
