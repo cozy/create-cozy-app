@@ -5,7 +5,7 @@ node_js:
 - 8
 env:
   matrix:
-  - TESTS_SUITE=cli
+  - TESTS_SUITE=tools
   - TESTS_SUITE=cozy-scripts:default
   - TESTS_SUITE=cozy-scripts:vue
   - TESTS_SUITE=cozy-scripts-vanilla

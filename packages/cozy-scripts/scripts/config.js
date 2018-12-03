@@ -19,25 +19,7 @@ function mergeWithOptions(options, configs, current) {
 
 function getWebpackConfigs(options = {}) {
   // mode and target options should already be provided
-  const {
-    mode = 'development',
-    target = 'browser',
-    debugMode,
-    bundleAnalyzer,
-    useVue
-  } = options
-
-  if (debugMode) {
-    process.env.COZY_SCRIPTS_DEBUG = true
-  } else {
-    process.env.COZY_SCRIPTS_DEBUG = false
-  }
-
-  if (bundleAnalyzer) {
-    process.env.COZY_SCRIPTS_ANALYZER = true
-  } else {
-    process.env.COZY_SCRIPTS_ANALYZER = false
-  }
+  const { mode = 'development', target = 'browser', useVue } = options
 
   // NODE_ENV from environment overwrite options here
   if (!process.env.NODE_ENV) process.env.NODE_ENV = `${target}:${mode}`

@@ -3,6 +3,7 @@
 const webpack = require('webpack')
 const getWebpackConfigs = require('./config')
 const cleanBuild = require('../utils/cleanBuild')
+const CTS = require('../utils/constants.js')
 
 // add a way to provide success callback for (at least) better tests
 module.exports = (buildOptions, successCallback) => {
@@ -15,7 +16,7 @@ module.exports = (buildOptions, successCallback) => {
   // remove build folder
   cleanBuild(buildTarget)
 
-  const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
+  const isDebugMode = process.env[CTS.DEBUG] === 'true'
 
   // webpack configurations
   const configs = getWebpackConfigs(options)

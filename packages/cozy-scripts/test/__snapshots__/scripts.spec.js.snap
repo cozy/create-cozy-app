@@ -2247,7 +2247,7 @@ Array [
     "output": Object {
       "filename": "test-app.[name].js",
       "path": ".tmp_test/test-app/build",
-      "pathinfo": false,
+      "pathinfo": true,
     },
     "plugins": Array [
       Object {

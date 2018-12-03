@@ -4,6 +4,7 @@ const colorize = require('../utils/_colorize')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
+const CTS = require('../utils/constants.js')
 const manifest = fs.readJsonSync(paths.appManifest())
 
 // default NODE_ENV to browser development
@@ -20,10 +21,10 @@ console.log(
   )
 )
 
-const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
-const addAnalyzer = process.env.COZY_SCRIPTS_ANALYZER === 'true'
-const useHotReload = process.env.HOT_RELOAD === 'true'
-const eslintFix = process.env.COZY_SCRIPTS_ESLINT_FIX === 'true'
+const isDebugMode = process.env[CTS.DEBUG] === 'true'
+const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
+const useHotReload = process.env[CTS.HOT] === 'true'
+const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
 
 const getCSSLoader = function() {
   return useHotReload

@@ -1936,7 +1936,7 @@ Array [
     "output": Object {
       "filename": "test-app-vue.[name].js",
       "path": ".tmp_test/test-app-vue/build",
-      "pathinfo": false,
+      "pathinfo": true,
     },
     "plugins": Array [
       Object {

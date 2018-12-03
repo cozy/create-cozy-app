@@ -2,6 +2,7 @@
 
 const path = require('path')
 const fs = require('fs')
+const CTS = require('../utils/constants.js')
 
 const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
 const appDirectory = fs.realpathSync(process.cwd())
@@ -11,23 +12,23 @@ const resolveApp = (relativePath = '.', fromDirectory = appDirectory) =>
 // Those must be used inside a function (called when needed)
 // to be sure to use the current process.env context
 // and not the one at the first loading of this file
-const resolveAppSrc = (path = '.') => {
-  const appSrcDirectory = process.env.COZY_SCRIPTS_APP_SRC_DIR || 'src'
-  return resolveApp(path, resolveApp(appSrcDirectory))
+const resolveAppSrc = (relativePath = '.') => {
+  const appSrcDirectory = process.env[CTS.SRC_DIR] || 'src'
+  return resolveApp(relativePath, resolveApp(appSrcDirectory))
 }
 
-const resolveWithExtension = (path, extension) => {
-  const ext = extension || process.env.__ENTRY_EXT__ || '.js'
-  return resolveAppSrc(`${path}${ext}`)
+const resolveSrcWithExtension = relativePath => {
+  const ext = process.env[CTS.ENTRY_EXT] || '.js'
+  return resolveAppSrc(`${relativePath}${ext}`)
 }
 
-const resolveAppBuild = (path = '.') => {
-  const appBuildDirectory = process.env.COZY_SCRIPTS_APP_BUILD_DIR || 'build'
-  return resolveApp(path, resolveApp(appBuildDirectory))
+const resolveAppBuild = (relativePath = '.') => {
+  const appBuildDirectory = process.env[CTS.BUILD_DIR] || 'build'
+  return resolveApp(relativePath, resolveApp(appBuildDirectory))
 }
 
 const resolveAppManifest = () => {
-  const appManifest = process.env.COZY_SCRIPTS_APP_MANIFEST || 'manifest.webapp'
+  const appManifest = process.env[CTS.MANIFEST] || 'manifest.webapp'
   return resolveApp(appManifest)
 }
 
@@ -46,15 +47,15 @@ module.exports = {
   appNodeModules: () => resolveApp('node_modules'),
   // for browser
   appBrowserHtmlTemplate: () => resolveAppSrc('targets/browser/index.ejs'),
-  appBrowserIndex: ext => resolveWithExtension('targets/browser/index', ext),
+  appBrowserIndex: () => resolveSrcWithExtension('targets/browser/index'),
   // for intents
   appIntentsHtmlTemplate: () => resolveAppSrc('targets/intents/index.ejs'),
-  appIntentsIndex: ext => resolveWithExtension('targets/intents/index', ext),
+  appIntentsIndex: () => resolveSrcWithExtension('targets/intents/index'),
   // for services
   appServicesFolder: () => resolveAppSrc('targets/services'),
   // for mobile
   appMobileHtmlTemplate: () => resolveAppSrc('targets/mobile/index.ejs'),
-  appMobileIndex: ext => resolveWithExtension('targets/mobile/index', ext),
+  appMobileIndex: () => resolveSrcWithExtension('targets/mobile/index'),
   appMobileWWW: () => resolveAppSrc('targets/mobile/www'),
   // for app local cozy-bar (dev only)
   appCozyBarJs: () => resolveApp('node_modules/cozy-bar/dist/cozy-bar.js'),

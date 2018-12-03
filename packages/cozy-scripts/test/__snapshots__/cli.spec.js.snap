@@ -2,11 +2,9 @@
 
 exports[`cozy-scripts (cs) CLI should build on \`build\` command with all passed options with production mode by default 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--browser",
   ],
-  "debugMode": undefined,
   "mode": "production",
   "target": "browser",
   "useVue": undefined,
@@ -27,12 +25,10 @@ exports[`cozy-scripts (cs) CLI should display an help message if no args passed 
 
 exports[`cozy-scripts (cs) CLI should display the webpack config if option \`--show-config\` passed 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--browser",
     "--show-config",
   ],
-  "debugMode": undefined,
   "mode": "production",
   "target": "browser",
   "useVue": undefined,
@@ -47,12 +43,10 @@ exports[`cozy-scripts (cs) CLI should display the webpack config if option \`--s
 
 exports[`cozy-scripts (cs) CLI should handle --analyzer option 1`] = `
 Object {
-  "bundleAnalyzer": true,
   "cliArgs": Array [
     "--browser",
     "--analyzer",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,
@@ -61,12 +55,10 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should handle --development option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--browser",
     "--development",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,
@@ -75,12 +67,10 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should handle --production option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--browser",
     "--production",
   ],
-  "debugMode": undefined,
   "mode": "production",
   "target": "browser",
   "useVue": undefined,
@@ -89,12 +79,10 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should handle build directory path providing with --build-dir option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--build-dir",
     "custom/app/buildHere",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,
@@ -103,11 +91,9 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should handle debug mode with --debug option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--debug",
   ],
-  "debugMode": true,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,
@@ -118,11 +104,9 @@ exports[`cozy-scripts (cs) CLI should handle eslint fix mode with --fix option 1
 
 exports[`cozy-scripts (cs) CLI should handle hot reload mode with --hot option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--hot",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,
@@ -131,12 +115,10 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should handle manifest path providing with --manifest option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--manifest",
     "custom/app/manifest.webapp",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,
@@ -145,11 +127,9 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should handle mobile target with --mobile option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--mobile",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "mobile",
   "useVue": undefined,
@@ -160,12 +140,10 @@ exports[`cozy-scripts (cs) CLI should handle previous \`standalone\` command to 
 
 exports[`cozy-scripts (cs) CLI should handle src directory path providing with --src-dir option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--src-dir",
     "custom/app/src",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,
@@ -174,11 +152,9 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should run start script on \`start\` command with all passed options with development mode by default 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--no-stack",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "stack": false,
   "target": "browser",
@@ -188,11 +164,9 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should vue framework with --vue option 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--vue",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": true,
@@ -201,11 +175,9 @@ Object {
 
 exports[`cozy-scripts (cs) CLI should watch on \`watch\` command with all passed options with development mode by default 1`] = `
 Object {
-  "bundleAnalyzer": undefined,
   "cliArgs": Array [
     "--browser",
   ],
-  "debugMode": undefined,
   "mode": "development",
   "target": "browser",
   "useVue": undefined,

@@ -1,8 +1,9 @@
 'use strict'
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const CTS = require('../utils/constants.js')
 
-process.env.__ENTRY_EXT__ = '.js'
+process.env[CTS.ENTRY_EXT] = '.js'
 
 module.exports = {
   resolve: {
