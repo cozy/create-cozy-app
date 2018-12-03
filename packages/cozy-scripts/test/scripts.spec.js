@@ -4,6 +4,7 @@ const fs = require('fs-extra')
 const path = require('path')
 const colorize = require('../utils/_colorize.js')
 const spawn = require('cross-spawn')
+const CTS = require('../utils/constants.js')
 
 const testFolder = '.tmp_test'
 const rootPath = process.cwd()
@@ -104,7 +105,7 @@ describe('App from cozy-scripts', () => {
   beforeEach(() => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
-    if (process.env.COZY_SCRIPTS_DEBUG) delete process.env.COZY_SCRIPTS_DEBUG
+    if (process.env[CTS.DEBUG]) delete process.env[CTS.DEBUG]
     jest.resetModules()
     // rm coverage folder from tests if exists
     if (fs.existsSync(appCoveragePath)) {
@@ -164,7 +165,7 @@ describe('App from cozy-scripts', () => {
   })
 
   it('should have the correct config browser:development by default handling --debug mode', () => {
-    process.env.COZY_SCRIPTS_DEBUG = 'true'
+    process.env[CTS.DEBUG] = 'true'
     expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 

@@ -5,6 +5,7 @@
 const commander = require('commander')
 const pkg = require('../package.json')
 const colorize = require('../utils/_colorize.js')
+const CTS = require('../utils/constants.js')
 const getWebpackConfigs = require('../scripts/config')
 
 let actionName
@@ -73,13 +74,13 @@ const options = {
 
 // program property, environment variable name, content to set
 ;[
-  ['hot', 'HOT_RELOAD', true],
-  ['fix', 'COZY_SCRIPTS_ESLINT_FIX', true],
-  ['debug', 'COZY_SCRIPTS_DEBUG', true],
-  ['analyzer', 'COZY_SCRIPTS_ANALYZER', true],
-  ['srcDir', 'COZY_SCRIPTS_APP_SRC_DIR', program.srcDir],
-  ['buildDir', 'COZY_SCRIPTS_APP_BUILD_DIR', program.buildDir],
-  ['manifest', 'COZY_SCRIPTS_APP_MANIFEST', program.manifest]
+  ['hot', CTS.HOT, true],
+  ['fix', CTS.ESLINT_FIX, true],
+  ['debug', CTS.DEBUG, true],
+  ['analyzer', CTS.ANALYZER, true],
+  ['srcDir', CTS.SRC_DIR, program.srcDir],
+  ['buildDir', CTS.BUILD_DIR, program.buildDir],
+  ['manifest', CTS.MANIFEST, program.manifest]
 ].map(toDefine => {
   if (program[toDefine[0]]) process.env[toDefine[1]] = toDefine[2]
 })

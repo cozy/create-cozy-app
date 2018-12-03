@@ -3,6 +3,7 @@
 const fs = require('fs-extra')
 const path = require('path')
 const colorize = require('../utils/_colorize.js')
+const CTS = require('../utils/constants.js')
 
 const testFolder = '.tmp_test'
 const rootPath = process.cwd()
@@ -101,7 +102,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
   beforeEach(() => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
-    if (process.env.COZY_SCRIPTS_DEBUG) delete process.env.COZY_SCRIPTS_DEBUG
+    if (process.env[CTS.DEBUG]) delete process.env[CTS.DEBUG]
     // rm coverage folder from tests if exists
     if (fs.existsSync(appCoveragePath)) {
       fs.removeSync(appCoveragePath)
@@ -155,7 +156,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
   })
 
   it('should have the correct config browser:development by default handling --debug mode', () => {
-    process.env.COZY_SCRIPTS_DEBUG = 'true'
+    process.env[CTS.DEBUG] = 'true'
     expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 

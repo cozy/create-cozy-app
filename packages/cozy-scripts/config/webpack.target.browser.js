@@ -3,6 +3,7 @@
 const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
+const CTS = require('../utils/constants.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const { getFilename, isDebugMode } = require('./webpack.vars')
@@ -18,7 +19,7 @@ module.exports = {
       // polyfills, avaid to import it in the application
       require.resolve('babel-polyfill'),
       // Exposed variables in global scope (needed for cozy-bar)
-      process.env.__USE_PREACT__
+      process.env[CTS.USE_PREACT]
         ? paths.csPreactExposer()
         : paths.csReactExposer(),
       // since the file extension depends on the framework here

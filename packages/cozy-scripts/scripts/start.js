@@ -7,6 +7,7 @@ const WebpackDevServer = require('webpack-dev-server')
 const colorize = require('../utils/_colorize')
 const cleanBuild = require('../utils/cleanBuild')
 const paths = require('../utils/paths')
+const CTS = require('../utils/constants.js')
 const getWebpackConfigs = require('./config')
 
 let appManifest = null
@@ -14,8 +15,8 @@ if (fs.pathExistsSync(paths.appManifest())) {
   appManifest = fs.readJsonSync(paths.appManifest(), { throws: false })
 }
 
-const port = process.env.DEV_PORT || '8888'
-const host = process.env.DEV_HOST || 'localhost'
+const port = process.env[CTS.PORT] || '8888'
+const host = process.env[CTS.HOST] || 'localhost'
 const coudhDBPort = '5984'
 const MailHogPort = '8025'
 const cozyDomain = 'cozy.tools:8080'
@@ -34,8 +35,8 @@ module.exports = buildOptions => {
   // remove build folder
   cleanBuild(buildTarget)
 
-  const useHotReload = process.env.HOT_RELOAD === 'true'
-  const isDebugMode = process.env.COZY_SCRIPTS_DEBUG === 'true'
+  const useHotReload = process.env[CTS.HOT] === 'true'
+  const isDebugMode = process.env[CTS.DEBUG] === 'true'
 
   // webpack configurations
   const configs = getWebpackConfigs(options)

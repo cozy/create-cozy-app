@@ -1,10 +1,11 @@
 'use strict'
 
-process.env.__ENTRY_EXT__ = '.jsx'
-process.env.__USE_PREACT__ = true
-
 const webpack = require('webpack')
 const { environment } = require('./webpack.vars')
+const CTS = require('../utils/constants.js')
+
+process.env[CTS.ENTRY_EXT] = '.jsx'
+process.env[CTS.USE_PREACT] = true
 
 const development = environment === 'development'
 const entry = development ? ['preact/devtools'] : []

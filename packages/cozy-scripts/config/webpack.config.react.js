@@ -2,8 +2,9 @@
 
 const webpack = require('webpack')
 const { useHotReload } = require('./webpack.vars')
+const CTS = require('../utils/constants.js')
 
-process.env.__ENTRY_EXT__ = '.jsx'
+process.env[CTS.ENTRY_EXT] = '.jsx'
 
 module.exports = {
   resolve: {

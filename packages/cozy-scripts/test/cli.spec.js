@@ -3,6 +3,7 @@
 const path = require('path')
 // to remove chalk colors escape codes and handling all testing environments
 const stripAnsi = require('strip-ansi')
+const CTS = require('../utils/constants.js')
 
 const actualArgv = process.argv.slice(0) // a clone
 const actualLog = console.log
@@ -72,13 +73,13 @@ describe('cozy-scripts (cs) CLI', () => {
     // clean args list
     process.argv = [process.execPath, path.resolve('../bin/cozy-scripts')]
     // default env
-    delete process.env.HOT_RELOAD
-    delete process.env.COZY_SCRIPTS_DEBUG
-    delete process.env.COZY_SCRIPTS_ANALYZER
-    delete process.env.COZY_SCRIPTS_ESLINT_FIX
-    delete process.env.COZY_SCRIPTS_APP_SRC_DIR
-    delete process.env.COZY_SCRIPTS_APP_BUILD_DIR
-    delete process.env.COZY_SCRIPTS_APP_MANIFEST
+    delete process.env[CTS.HOT]
+    delete process.env[CTS.DEBUG]
+    delete process.env[CTS.ANALYZER]
+    delete process.env[CTS.ESLINT_FIX]
+    delete process.env[CTS.SRC_DIR]
+    delete process.env[CTS.BUILD_DIR]
+    delete process.env[CTS.MANIFEST]
   })
 
   afterAll(() => {
@@ -183,7 +184,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
-    expect(process.env.COZY_SCRIPTS_ANALYZER).toBe('true')
+    expect(process.env[CTS.ANALYZER]).toBe('true')
   })
 
   it('should handle debug mode with --debug option', () => {
@@ -192,7 +193,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
-    expect(process.env.COZY_SCRIPTS_DEBUG).toBe('true')
+    expect(process.env[CTS.DEBUG]).toBe('true')
   })
 
   it('should handle eslint fix mode with --fix option', () => {
@@ -201,7 +202,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
-    expect(process.env.COZY_SCRIPTS_ESLINT_FIX).toBe('true')
+    expect(process.env[CTS.ESLINT_FIX]).toBe('true')
   })
 
   it('should handle hot reload mode with --hot option', () => {
@@ -210,7 +211,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
-    expect(process.env.HOT_RELOAD).toBe('true')
+    expect(process.env[CTS.HOT]).toBe('true')
   })
 
   it('should handle src directory path providing with --src-dir option', () => {
@@ -220,7 +221,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
-    expect(process.env.COZY_SCRIPTS_APP_SRC_DIR).toBe(customPath)
+    expect(process.env[CTS.SRC_DIR]).toBe(customPath)
   })
 
   it('should handle build directory path providing with --build-dir option', () => {
@@ -230,7 +231,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
-    expect(process.env.COZY_SCRIPTS_APP_BUILD_DIR).toBe(customPath)
+    expect(process.env[CTS.BUILD_DIR]).toBe(customPath)
   })
 
   it('should handle manifest path providing with --manifest option', () => {
@@ -240,7 +241,7 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(() => {
       callCLI()
     }).not.toThrow()
-    expect(process.env.COZY_SCRIPTS_APP_MANIFEST).toBe(customPath)
+    expect(process.env[CTS.MANIFEST]).toBe(customPath)
   })
 
   it('should handle --production option', () => {

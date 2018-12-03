@@ -2,6 +2,7 @@
 
 const path = require('path')
 const fs = require('fs')
+const CTS = require('../utils/constants.js')
 
 const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
 const appDirectory = fs.realpathSync(process.cwd())
@@ -12,22 +13,22 @@ const resolveApp = (relativePath = '.', fromDirectory = appDirectory) =>
 // to be sure to use the current process.env context
 // and not the one at the first loading of this file
 const resolveAppSrc = (relativePath = '.') => {
-  const appSrcDirectory = process.env.COZY_SCRIPTS_APP_SRC_DIR || 'src'
+  const appSrcDirectory = process.env[CTS.SRC_DIR] || 'src'
   return resolveApp(relativePath, resolveApp(appSrcDirectory))
 }
 
 const resolveSrcWithExtension = relativePath => {
-  const ext = process.env.__ENTRY_EXT__ || '.js'
+  const ext = process.env[CTS.ENTRY_EXT] || '.js'
   return resolveAppSrc(`${relativePath}${ext}`)
 }
 
 const resolveAppBuild = (relativePath = '.') => {
-  const appBuildDirectory = process.env.COZY_SCRIPTS_APP_BUILD_DIR || 'build'
+  const appBuildDirectory = process.env[CTS.BUILD_DIR] || 'build'
   return resolveApp(relativePath, resolveApp(appBuildDirectory))
 }
 
 const resolveAppManifest = () => {
-  const appManifest = process.env.COZY_SCRIPTS_APP_MANIFEST || 'manifest.webapp'
+  const appManifest = process.env[CTS.MANIFEST] || 'manifest.webapp'
   return resolveApp(appManifest)
 }
 
