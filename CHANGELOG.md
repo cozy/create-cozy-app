@@ -14,6 +14,36 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.3.0 (2018-12-03)
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#952](https://github.com/CPatchane/create-cozy-app/pull/952) Use paths as functions + handle more CLI path options ([@CPatchane](https://github.com/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#950](https://github.com/CPatchane/create-cozy-app/pull/950) Add `cs` CLI alias and CLI tests + improve CLI ([@CPatchane](https://github.com/CPatchane))
+  * [#938](https://github.com/CPatchane/create-cozy-app/pull/938)  Use the correct folder name in finish logs ([@CPatchane](https://github.com/CPatchane))
+  * [#949](https://github.com/CPatchane/create-cozy-app/pull/949) Add more expected filenames for init error handling ([@CPatchane](https://github.com/CPatchane))
+
+#### :wrench: Chore:
+* `cozy-scripts`
+  * [#954](https://github.com/CPatchane/create-cozy-app/pull/954) Better environment variables handling code and paths testing ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#944](https://github.com/CPatchane/create-cozy-app/pull/944), [#945](https://github.com/CPatchane/create-cozy-app/pull/945), [#955](https://github.com/CPatchane/create-cozy-app/pull/955) fix(deps): update dependency cozy-ui to v17.4.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#956](https://github.com/CPatchane/create-cozy-app/pull/956) fix(deps): update dependency progress to v2.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#953](https://github.com/CPatchane/create-cozy-app/pull/953) fix(deps): update dependency autoprefixer to v9.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#951](https://github.com/CPatchane/create-cozy-app/pull/951) chore(deps): pin dependency strip-ansi to 5.0.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#940](https://github.com/CPatchane/create-cozy-app/pull/940) chore(deps): update dependency @vue/test-utils to v1.0.0-beta.26 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#946](https://github.com/CPatchane/create-cozy-app/pull/946) fix(deps): update dependency cozy-bar to v6.8.7 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#937](https://github.com/CPatchane/create-cozy-app/pull/937) fix(deps): update dependency vue-jest to v3.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#948](https://github.com/CPatchane/create-cozy-app/pull/948) chore(deps): update dependency prettier to v1.15.3 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#947](https://github.com/CPatchane/create-cozy-app/pull/947) chore(deps): update dependency lerna to v3.5.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@1.2.1 (2018-11-28)
 
 #### :bug: Bug Fixes:
