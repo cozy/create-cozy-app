@@ -14,7 +14,7 @@
     "url": "https://github.com/CPatchane/create-cozy-app/issues"
   },
   "dependencies": {
-    "@babel/core": "7.1.6",
+    "@babel/core": "7.2.0",
     "autoprefixer": "9.4.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
