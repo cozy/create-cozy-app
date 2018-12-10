@@ -46,7 +46,7 @@
     "cozy-bar": "6.8.7",
     "cozy-client": "3.6.4",
     "cozy-ui": "17.4.9",
-    "eslint-config-cozy-app": "1.1.4",
+    "eslint-config-cozy-app": "1.1.5",
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-router-dom": "4.3.1"
