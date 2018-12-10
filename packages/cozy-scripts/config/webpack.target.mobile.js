@@ -40,7 +40,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: paths.appMobileHtmlTemplate(),
       title: appName,
-      excludeChunks: ['intents'],
+      chunks: ['vendors', 'app'],
       inject: 'head',
       minify: {
         collapseWhitespace: true

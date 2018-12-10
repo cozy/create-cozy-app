@@ -40,7 +40,7 @@ module.exports = {
       template: paths.appBrowserHtmlTemplate(),
       title: appName,
       inject: false,
-      excludeChunks: ['intents'],
+      chunks: ['vendors', 'app'],
       minify: {
         collapseWhitespace: true
       }
