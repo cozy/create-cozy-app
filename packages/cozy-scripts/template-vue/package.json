@@ -40,7 +40,7 @@
     "prettier": "1.15.3",
     "stylint": "1.5.9",
     "vue-loader": "15.4.2",
-    "vue-template-compiler": "2.5.17"
+    "vue-template-compiler": "2.5.20"
   },
   "dependencies": {
     "cozy-bar": "6.8.7",
