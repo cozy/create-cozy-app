@@ -253,13 +253,12 @@ Array [
     "optimization": Object {
       "splitChunks": Object {
         "cacheGroups": Object {
-          "vendor": Object {
+          "vendors": Object {
             "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
         },
-        "chunks": "all",
       },
     },
     "output": Object {
@@ -361,12 +360,13 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [
-            "intents",
-          ],
+          "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -653,13 +653,12 @@ Array [
     "optimization": Object {
       "splitChunks": Object {
         "cacheGroups": Object {
-          "vendor": Object {
+          "vendors": Object {
             "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
         },
-        "chunks": "all",
       },
     },
     "output": Object {
@@ -762,12 +761,13 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [
-            "intents",
-          ],
+          "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -1038,13 +1038,12 @@ Array [
     "optimization": Object {
       "splitChunks": Object {
         "cacheGroups": Object {
-          "vendor": Object {
+          "vendors": Object {
             "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
         },
-        "chunks": "all",
       },
     },
     "output": Object {
@@ -1158,12 +1157,13 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [
-            "intents",
-          ],
+          "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -1441,13 +1441,12 @@ Array [
     "optimization": Object {
       "splitChunks": Object {
         "cacheGroups": Object {
-          "vendor": Object {
+          "vendors": Object {
             "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
         },
-        "chunks": "all",
       },
     },
     "output": Object {
@@ -1562,12 +1561,13 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [
-            "intents",
-          ],
+          "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -1834,13 +1834,12 @@ Array [
     "optimization": Object {
       "splitChunks": Object {
         "cacheGroups": Object {
-          "vendor": Object {
+          "vendors": Object {
             "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
         },
-        "chunks": "all",
       },
     },
     "output": Object {
@@ -1942,12 +1941,13 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [
-            "intents",
-          ],
+          "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -2235,13 +2235,12 @@ Array [
     "optimization": Object {
       "splitChunks": Object {
         "cacheGroups": Object {
-          "vendor": Object {
+          "vendors": Object {
             "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
         },
-        "chunks": "all",
       },
     },
     "output": Object {
@@ -2343,12 +2342,13 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [
-            "intents",
-          ],
+          "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
@@ -2700,13 +2700,12 @@ Array [
     "optimization": Object {
       "splitChunks": Object {
         "cacheGroups": Object {
-          "vendor": Object {
+          "vendors": Object {
             "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
         },
-        "chunks": "all",
       },
     },
     "output": Object {
@@ -2808,12 +2807,13 @@ Array [
       Object {
         "options": Object {
           "cache": true,
-          "chunks": "all",
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
           "chunksSortMode": "auto",
           "compile": true,
-          "excludeChunks": Array [
-            "intents",
-          ],
+          "excludeChunks": Array [],
           "favicon": false,
           "filename": "index.html",
           "hash": false,
