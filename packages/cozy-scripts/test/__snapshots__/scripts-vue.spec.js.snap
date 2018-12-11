@@ -58,6 +58,13 @@ Array [
           ],
         },
         Object {
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/vue-loader/lib/index.js",
           "test": Object {},
@@ -415,6 +422,13 @@ Array [
           ],
         },
         Object {
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/vue-loader/lib/index.js",
           "test": Object {},
@@ -755,6 +769,13 @@ Array [
               },
             },
           ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
         },
         Object {
           "exclude": Object {},
@@ -1117,6 +1138,13 @@ Array [
           ],
         },
         Object {
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/vue-loader/lib/index.js",
           "test": Object {},
@@ -1465,6 +1493,13 @@ Array [
               },
             },
           ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
         },
         Object {
           "exclude": Object {},
@@ -1823,6 +1858,13 @@ Array [
               },
             },
           ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
         },
         Object {
           "exclude": Object {},

@@ -117,6 +117,13 @@ Array [
           ],
         },
         Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
@@ -517,6 +524,13 @@ Array [
           ],
         },
         Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
@@ -900,6 +914,13 @@ Array [
               },
             },
           ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
         },
         Object {
           "exclude": Object {},
@@ -1305,6 +1326,13 @@ Array [
           ],
         },
         Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
           "options": Object {
@@ -1696,6 +1724,13 @@ Array [
               },
             },
           ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
         },
         Object {
           "exclude": Object {},
@@ -2097,6 +2132,13 @@ Array [
               },
             },
           ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
         },
         Object {
           "exclude": Object {},
@@ -2562,6 +2604,13 @@ Array [
               },
             },
           ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
         },
         Object {
           "exclude": Object {},
