@@ -1844,10 +1844,10 @@ cozy-realtime@1.2.1:
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-1.2.1.tgz#767a6279895960f51d422be043fb001316abe290"
   integrity sha512-ed4fYohePy/0kgfylgfIQ2wRlOCSzG8jXRpOi1gjPXWJY/NYCvGMibd2GMW7XrcGy13Wd5eFQD55RhozKy1mqw==
 
-cozy-ui@17.4.9:
-  version "17.4.9"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-17.4.9.tgz#7da25916aaf094fafe52374c45259e766bee07b8"
-  integrity sha512-i6giWMrPg4JiatpUIuGWfMBn4PhQBAdlHH6wV/2Yp5i2tTXl954jGt7RDqMV2iGZX21O8zAaz9zbaMjy25+NLw==
+cozy-ui@17.5.2:
+  version "17.5.2"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-17.5.2.tgz#8369a4c6a81294686028a989292b8b0421a44eaf"
+  integrity sha512-zx2LpgktO2bmUxQDbXnGTifbX4b2LHMjYTNfJicPQjLjw32jiIuPD795Sbx4lLAvL7oBXgBVwksh7ags0j+/vg==
   dependencies:
     body-scroll-lock "^2.5.8"
     classnames "^2.2.5"
