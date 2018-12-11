@@ -56,6 +56,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: require.resolve('file-loader'),
+        options: {
+          name: `[name].[ext]`
+        }
       }
     ],
     noParse: [/localforage\/dist/]
