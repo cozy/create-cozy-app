@@ -14,6 +14,42 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.4.0 (2018-12-11)
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#984](https://github.com/CPatchane/create-cozy-app/pull/984) Handling application public page if exists ([@CPatchane](https://github.com/CPatchane))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#981](https://github.com/CPatchane/create-cozy-app/pull/981) feat: Added loader for font files ([@y-lohse](https://github.com/y-lohse))
+  * [#982](https://github.com/CPatchane/create-cozy-app/pull/982) Use only one vendors chunk ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#957](https://github.com/CPatchane/create-cozy-app/pull/957) fix(deps): update dependency cozy-bar to v6.9.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#976](https://github.com/CPatchane/create-cozy-app/pull/976) chore(deps): update dependency enzyme to v3.8.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#974](https://github.com/CPatchane/create-cozy-app/pull/974) fix(deps): update dependency webpack-merge to v4.1.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#979](https://github.com/CPatchane/create-cozy-app/pull/979) fix(deps): update dependency date-fns to v1.30.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#967](https://github.com/CPatchane/create-cozy-app/pull/967) fix(deps): update dependency mini-css-extract-plugin to v0.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#973](https://github.com/CPatchane/create-cozy-app/pull/973) chore(deps): update dependency @vue/test-utils to v1.0.0-beta.27 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#975](https://github.com/CPatchane/create-cozy-app/pull/975) chore(deps): update dependency enzyme-adapter-react-16 to v1.7.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#978](https://github.com/CPatchane/create-cozy-app/pull/978) fix(deps): update dependency eslint-config-cozy-app to v1.1.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#977](https://github.com/CPatchane/create-cozy-app/pull/977) chore(deps): update dependency babel-preset-cozy-app to v1.2.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#959](https://github.com/CPatchane/create-cozy-app/pull/959) fix(deps): update dependency @babel/core to v7.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#963](https://github.com/CPatchane/create-cozy-app/pull/963) fix(deps): update dependency cozy-ui to v17.4.9 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#964](https://github.com/CPatchane/create-cozy-app/pull/964) fix(deps): update dependency progress to v2.0.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#962](https://github.com/CPatchane/create-cozy-app/pull/962), [#965](https://github.com/CPatchane/create-cozy-app/pull/965) fix(deps): update dependency webpack to v4.27.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#961](https://github.com/CPatchane/create-cozy-app/pull/961) fix(deps): update dependency autoprefixer to v9.4.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#958](https://github.com/CPatchane/create-cozy-app/pull/958) chore(deps): update dependency eslint-plugin-vue to v5 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#971](https://github.com/CPatchane/create-cozy-app/pull/971) chore(deps): update dependency lerna to v3.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+- Yannick Lohse ([@y-lohse](https://github.com/y-lohse))
+
+
 ## cozy-scripts@1.3.0 (2018-12-03)
 
 #### :sparkles: New Features:
