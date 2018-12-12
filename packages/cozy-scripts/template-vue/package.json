@@ -40,7 +40,7 @@
     "prettier": "1.15.3",
     "stylint": "1.5.9",
     "vue-loader": "15.4.2",
-    "vue-template-compiler": "2.5.20"
+    "vue-template-compiler": "2.5.21"
   },
   "dependencies": {
     "cozy-bar": "6.9.3",
@@ -49,7 +49,7 @@
     "date-fns": "1.30.1",
     "eslint-config-cozy-app": "1.1.5",
     "node-polyglot": "2.3.0",
-    "vue": "2.5.20",
+    "vue": "2.5.21",
     "vue-router": "3.0.2",
     "vuex": "3.0.1"
   }
