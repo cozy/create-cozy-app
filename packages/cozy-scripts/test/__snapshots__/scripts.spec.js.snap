@@ -1188,7 +1188,7 @@ Array [
           "favicon": false,
           "filename": "index.html",
           "hash": false,
-          "inject": "head",
+          "inject": false,
           "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,
@@ -1599,7 +1599,7 @@ Array [
           "favicon": false,
           "filename": "index.html",
           "hash": false,
-          "inject": "head",
+          "inject": false,
           "meta": Object {},
           "minify": Object {
             "collapseWhitespace": true,

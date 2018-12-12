@@ -41,7 +41,7 @@ module.exports = {
       template: paths.appMobileHtmlTemplate(),
       title: appName,
       chunks: ['vendors', 'app'],
-      inject: 'head',
+      inject: false,
       minify: {
         collapseWhitespace: true
       }
