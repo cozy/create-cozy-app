@@ -14,6 +14,27 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.5.0 (2018-12-12)
+
+#### :boom: Breaking Changes:
+* `cozy-scripts`
+  * [#991](https://github.com/CPatchane/create-cozy-app/pull/991) feat: BREAKING CHANGE don't auto-inject mobile chunks (mobile target only) ([@y-lohse](https://github.com/y-lohse))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#990](https://github.com/CPatchane/create-cozy-app/pull/990) fix: Expose react/preact on mobile ([@y-lohse](https://github.com/y-lohse))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#989](https://github.com/CPatchane/create-cozy-app/pull/989) fix(deps): update dependency vue-jest to v3.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#988](https://github.com/CPatchane/create-cozy-app/pull/988) fix(deps): update dependency cozy-bar to v6.9.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#966](https://github.com/CPatchane/create-cozy-app/pull/966), [#986](https://github.com/CPatchane/create-cozy-app/pull/986) fix(deps): update dependency cozy-ui to v17.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#985](https://github.com/CPatchane/create-cozy-app/pull/985), [#987](https://github.com/CPatchane/create-cozy-app/pull/987) fix(deps): update vue monorepo to v2.5.21 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Yannick Lohse ([@y-lohse](https://github.com/y-lohse))
+
+
 ## cozy-scripts@1.4.0 (2018-12-11)
 
 #### :sparkles: New Features:
