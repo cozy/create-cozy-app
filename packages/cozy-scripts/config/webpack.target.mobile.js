@@ -2,6 +2,7 @@
 
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
+const CTS = require('../utils/constants.js')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
@@ -17,7 +18,14 @@ module.exports = {
   entry: {
     // since the file extension depends on the framework here
     // we get it from a function call
-    app: [require.resolve('babel-polyfill'), paths.appMobileIndex()]
+    app: [
+      require.resolve('babel-polyfill'),
+      // Exposed variables in global scope (needed for cozy-bar)
+      process.env[CTS.USE_PREACT]
+        ? paths.csPreactExposer()
+        : paths.csReactExposer(),
+      paths.appMobileIndex()
+    ]
   },
   output: {
     path: paths.appMobileWWW(),
