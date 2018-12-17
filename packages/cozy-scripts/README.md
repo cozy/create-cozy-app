@@ -183,7 +183,7 @@ The built files (destined to the Cozy) will be in `build/`.
 ##### - `cozy-scripts start`
 
 This is the main way to launch your application for development.
-This command will run webpacking in a watching mode with a server (`webpack-dev-server`) to serve application assets.
+This command will run webpack in a watching mode with a server (`webpack-dev-server`) to serve application assets.
 Then, it will launch a Cozy stack using Docker (the image `cozy/cozy-app-dev`) to serve your application inside it.
 
 Your application will be available at http://<MY_APP_SLUG>.cozy.tools:8080.
