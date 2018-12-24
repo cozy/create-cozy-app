@@ -863,8 +863,8 @@ Array [
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
-            "publicPath": "/img",
+            "outputPath": "./img",
+            "publicPath": "./img",
           },
           "test": Object {},
         },
@@ -1231,8 +1231,8 @@ Array [
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "img/",
-            "publicPath": "/img",
+            "outputPath": "./img",
+            "publicPath": "./img",
           },
           "test": Object {},
         },

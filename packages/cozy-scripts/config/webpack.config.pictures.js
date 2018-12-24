@@ -1,8 +1,8 @@
 'use strict'
-
-const { environment } = require('./webpack.vars')
+const { environment, target } = require('./webpack.vars')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
+const isMobileApp = target === 'mobile'
 module.exports = {
   module: {
     rules: [
@@ -19,8 +19,8 @@ module.exports = {
         exclude: /(sprites|icons)/,
         loader: require.resolve('file-loader'),
         options: {
-          outputPath: 'img/',
-          publicPath: '/img', // for webpack dev server
+          outputPath: isMobileApp ? './img' : 'img/',
+          publicPath: isMobileApp ? './img' : '/img',
           name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }
       }
