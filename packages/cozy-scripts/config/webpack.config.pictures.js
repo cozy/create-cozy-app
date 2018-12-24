@@ -2,7 +2,7 @@
 const { environment, target } = require('./webpack.vars')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
-const isMobileApp = target === 'mobile' ? true : false
+const isMobileApp = target === 'mobile'
 module.exports = {
   module: {
     rules: [
