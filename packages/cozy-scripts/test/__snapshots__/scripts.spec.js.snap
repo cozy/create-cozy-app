@@ -1577,15 +1577,15 @@ Array [
       },
       Object {
         "definitions": Object {
-          "__ALLOW_HTTP__": true,
+          "__ALLOW_HTTP__": false,
           "__APP_VERSION__": "\\"0.1.0\\"",
           "__TARGET__": "\\"mobile\\"",
         },
       },
       Object {
         "definitions": Object {
-          "cozy.bar": "cozy-bar/dist/cozy-bar.mobile.js",
-          "cozy.client": "cozy-client-js/dist/cozy-client.js",
+          "cozy.bar": "cozy-bar/dist/cozy-bar.mobile.min.js",
+          "cozy.client": "cozy-client-js/dist/cozy-client.min.js",
         },
       },
       Object {

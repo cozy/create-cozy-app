@@ -7,9 +7,10 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
-const { production, isDebugMode } = require('./webpack.vars')
+const { environment, isDebugMode } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest())
 
+const production = environment === 'production'
 const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
   : manifest.name
