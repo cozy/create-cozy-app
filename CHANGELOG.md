@@ -14,6 +14,35 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.6.0 (2018-12-26)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#1011](https://github.com/CPatchane/create-cozy-app/pull/1011) fix: Use environment var instead of production ([@Crash--](https://github.com/Crash--))
+  * [#1000](https://github.com/CPatchane/create-cozy-app/pull/1000) fix: Use relativepath for mobile ([@Crash--](https://github.com/Crash--))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1012](https://github.com/CPatchane/create-cozy-app/pull/1012) chore(deps): update dependency babel-preset-cozy-app to v1.2.4 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1007](https://github.com/CPatchane/create-cozy-app/pull/1007) fix(deps): update dependency webpack to v4.28.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#999](https://github.com/CPatchane/create-cozy-app/pull/999) chore(deps): update dependency react-hot-loader to v4.6.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1009](https://github.com/CPatchane/create-cozy-app/pull/1009) fix(deps): update dependency webpack-dev-server to v3.1.14 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#998](https://github.com/CPatchane/create-cozy-app/pull/998) chore(deps): update dependency babel-preset-cozy-app to v1.2.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1001](https://github.com/CPatchane/create-cozy-app/pull/1001) fix(deps): update dependency cozy-bar to v6.9.7 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1002](https://github.com/CPatchane/create-cozy-app/pull/1002) fix(deps): update dependency webpack to v4.28.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1005](https://github.com/CPatchane/create-cozy-app/pull/1005) fix(deps): update react monorepo to v16.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#996](https://github.com/CPatchane/create-cozy-app/pull/996) fix(deps): update dependency autoprefixer to v9.4.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#997](https://github.com/CPatchane/create-cozy-app/pull/997) fix(deps): update dependency postcss to v7.0.7 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#995](https://github.com/CPatchane/create-cozy-app/pull/995) fix(deps): update dependency @babel/core to v7.2.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#993](https://github.com/CPatchane/create-cozy-app/pull/993) chore(deps): update dependency react-hot-loader to v4.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#1008](https://github.com/CPatchane/create-cozy-app/pull/1008) chore(deps): update dependency lerna to v3.8.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1004](https://github.com/CPatchane/create-cozy-app/pull/1004) chore(deps): update dependency lerna to v3.7.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Quentin Valmori ([@Crash--](https://github.com/Crash--))
+
+
 ## cozy-scripts@1.5.0 (2018-12-12)
 
 #### :boom: Breaking Changes:
