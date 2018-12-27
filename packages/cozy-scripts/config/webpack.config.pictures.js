@@ -1,8 +1,7 @@
 'use strict'
-const { environment, target } = require('./webpack.vars')
+const { environment } = require('./webpack.vars')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
-const isMobileApp = target === 'mobile'
 module.exports = {
   module: {
     rules: [
@@ -16,11 +15,25 @@ module.exports = {
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/i,
-        exclude: /(sprites|icons)/,
+        exclude: /(sprites|icons|public)/,
         loader: require.resolve('file-loader'),
         options: {
-          outputPath: isMobileApp ? './img' : 'img/',
-          publicPath: isMobileApp ? './img' : '/img',
+          outputPath: './img',
+          publicPath: './img',
+          name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
+        }
+      },
+      /*
+        For public pages, we need to have all used assets into the build/public
+        folder in order to be served by cozy-stack in the public pages
+      */
+      {
+        test: /\.(png|gif|jpe?g|svg)$/i,
+        include: /public/,
+        loader: require.resolve('file-loader'),
+        options: {
+          outputPath: './public/img',
+          publicPath: './public/img',
           name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }
       }
