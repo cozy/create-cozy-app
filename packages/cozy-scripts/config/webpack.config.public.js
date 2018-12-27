@@ -5,6 +5,8 @@ const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const manifest = fs.readJsonSync(paths.appManifest())
 
+const publicFolderName = 'public'
+
 const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
   : manifest.name
@@ -16,15 +18,18 @@ function getConfig() {
         entry: {
           // since the file extension depends on the framework here
           // we get it from a function call
-          public: [require.resolve('babel-polyfill'), paths.appPublicIndex()]
+          [publicFolderName]: [
+            require.resolve('babel-polyfill'),
+            paths.appPublicIndex()
+          ]
         },
         plugins: [
           new HtmlWebpackPlugin({
             template: paths.appPublicHtmlTemplate(),
             title: appName,
-            filename: 'public/index.html',
+            filename: `${publicFolderName}/index.html`,
             inject: false,
-            chunks: ['vendors', 'public'],
+            chunks: ['public'],
             minify: {
               collapseWhitespace: true
             }

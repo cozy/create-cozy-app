@@ -34,8 +34,8 @@ const getCSSLoader = function() {
 
 const getFilename = function() {
   return environment === 'production'
-    ? `${manifest.slug}.[name].[contenthash]`
-    : `${manifest.slug}.[name]`
+    ? `[name]/${manifest.slug}.[contenthash]`
+    : `[name]/${manifest.slug}`
 }
 
 module.exports = {

@@ -8,7 +8,9 @@ module.exports = {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all'
+          // exclude public chunk since public script must contains all
+          // modules itself
+          chunks: chunk => chunk.name !== 'public'
         }
       }
     }

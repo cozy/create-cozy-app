@@ -165,7 +165,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -173,15 +172,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app-vue.[name].js",
+      "filename": "[name]/test-app-vue.js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app-vue.[name].css",
-          "filename": "test-app-vue.[name].css",
+          "chunkFilename": "[name]/test-app-vue.css",
+          "filename": "[name]/test-app-vue.css",
         },
       },
       Object {
@@ -529,7 +528,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -537,15 +535,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app-vue.[name].[contenthash].js",
+      "filename": "[name]/test-app-vue.[contenthash].js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app-vue.[name].[contenthash].[id].min.css",
-          "filename": "test-app-vue.[name].[contenthash].min.css",
+          "chunkFilename": "[name]/test-app-vue.[contenthash].[id].min.css",
+          "filename": "[name]/test-app-vue.[contenthash].min.css",
         },
       },
       Object {
@@ -879,7 +877,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -893,8 +890,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app-vue.[name].css",
-          "filename": "test-app-vue.[name].css",
+          "chunkFilename": "[name]/test-app-vue.css",
+          "filename": "[name]/test-app-vue.css",
         },
       },
       Object {
@@ -1247,7 +1244,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1261,8 +1257,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app-vue.[name].[contenthash].[id].min.css",
-          "filename": "test-app-vue.[name].[contenthash].min.css",
+          "chunkFilename": "[name]/test-app-vue.[contenthash].[id].min.css",
+          "filename": "[name]/test-app-vue.[contenthash].min.css",
         },
       },
       Object {
@@ -1604,7 +1600,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1612,15 +1607,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app-vue.[name].js",
+      "filename": "[name]/test-app-vue.js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app-vue.[name].css",
-          "filename": "test-app-vue.[name].css",
+          "chunkFilename": "[name]/test-app-vue.css",
+          "filename": "[name]/test-app-vue.css",
         },
       },
       Object {
@@ -1969,7 +1964,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1977,15 +1971,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app-vue.[name].js",
+      "filename": "[name]/test-app-vue.js",
       "path": ".tmp_test/test-app-vue/build",
       "pathinfo": true,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app-vue.[name].css",
-          "filename": "test-app-vue.[name].css",
+          "chunkFilename": "[name]/test-app-vue.css",
+          "filename": "[name]/test-app-vue.css",
         },
       },
       Object {

@@ -261,7 +261,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -269,15 +268,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app.[name].js",
+      "filename": "[name]/test-app.js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app.[name].css",
-          "filename": "test-app.[name].css",
+          "chunkFilename": "[name]/test-app.css",
+          "filename": "[name]/test-app.css",
         },
       },
       Object {
@@ -668,7 +667,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -676,15 +674,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app.[name].[contenthash].js",
+      "filename": "[name]/test-app.[contenthash].js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app.[name].[contenthash].[id].min.css",
-          "filename": "test-app.[name].[contenthash].min.css",
+          "chunkFilename": "[name]/test-app.[contenthash].[id].min.css",
+          "filename": "[name]/test-app.[contenthash].min.css",
         },
       },
       Object {
@@ -1061,7 +1059,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1075,8 +1072,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app.[name].css",
-          "filename": "test-app.[name].css",
+          "chunkFilename": "[name]/test-app.css",
+          "filename": "[name]/test-app.css",
         },
       },
       Object {
@@ -1472,7 +1469,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1486,8 +1482,8 @@ Array [
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app.[name].[contenthash].[id].min.css",
-          "filename": "test-app.[name].[contenthash].min.css",
+          "chunkFilename": "[name]/test-app.[contenthash].[id].min.css",
+          "filename": "[name]/test-app.[contenthash].min.css",
         },
       },
       Object {
@@ -1872,7 +1868,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1880,15 +1875,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app.[name].js",
+      "filename": "[name]/test-app.js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app.[name].css",
-          "filename": "test-app.[name].css",
+          "chunkFilename": "[name]/test-app.css",
+          "filename": "[name]/test-app.css",
         },
       },
       Object {
@@ -2280,7 +2275,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -2288,15 +2282,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app.[name].js",
+      "filename": "[name]/test-app.js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": true,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app.[name].css",
-          "filename": "test-app.[name].css",
+          "chunkFilename": "[name]/test-app.css",
+          "filename": "[name]/test-app.css",
         },
       },
       Object {
@@ -2753,7 +2747,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -2761,15 +2754,15 @@ Array [
       },
     },
     "output": Object {
-      "filename": "test-app.[name].js",
+      "filename": "[name]/test-app.js",
       "path": ".tmp_test/test-app/build",
       "pathinfo": false,
     },
     "plugins": Array [
       Object {
         "options": Object {
-          "chunkFilename": "test-app.[name].css",
-          "filename": "test-app.[name].css",
+          "chunkFilename": "[name]/test-app.css",
+          "filename": "[name]/test-app.css",
         },
       },
       Object {
@@ -3003,7 +2996,7 @@ Array [
     },
     "optimization": Object {},
     "output": Object {
-      "filename": "test-app.[name].js",
+      "filename": "[name]/test-app.js",
       "path": ".tmp_test/test-app/build/services",
     },
     "plugins": Array [
