@@ -29,7 +29,7 @@ function getConfig() {
             title: appName,
             filename: `${publicFolderName}/index.html`,
             inject: false,
-            chunks: ['vendors', 'public'],
+            chunks: ['public'],
             minify: {
               collapseWhitespace: true
             }

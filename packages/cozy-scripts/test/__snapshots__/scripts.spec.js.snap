@@ -261,7 +261,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -668,7 +667,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1061,7 +1059,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1472,7 +1469,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -1872,7 +1868,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -2280,7 +2275,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
@@ -2753,7 +2747,6 @@ Array [
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
-            "chunks": "all",
             "name": "vendors",
             "test": Object {},
           },
