@@ -14,6 +14,23 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.7.0 (2018-12-28)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#1015](https://github.com/CPatchane/create-cozy-app/pull/1015) Better handling public assets ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#1013](https://github.com/CPatchane/create-cozy-app/pull/1013) Build intents and public chunks in specific folders ([@CPatchane](https://github.com/CPatchane))
+  * [#1014](https://github.com/CPatchane/create-cozy-app/pull/1014) Downgrade to DevServer 3.1.10 to avoid host checking bug ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1016](https://github.com/CPatchane/create-cozy-app/pull/1016) chore(deps): update dependency eslint-plugin-react to v7.12.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1017](https://github.com/CPatchane/create-cozy-app/pull/1017) chore(deps): update dependency eslint-plugin-prettier to v3.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@1.6.0 (2018-12-26)
 
 #### :bug: Bug Fixes:
