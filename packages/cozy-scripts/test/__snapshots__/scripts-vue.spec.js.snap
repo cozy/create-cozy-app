@@ -149,8 +149,18 @@ Array [
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
-            "publicPath": "/img",
+            "outputPath": "./img",
+            "publicPath": "./img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+            "outputPath": "./public/img",
+            "publicPath": "./public/img",
           },
           "test": Object {},
         },
@@ -512,8 +522,18 @@ Array [
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "img/",
-            "publicPath": "/img",
+            "outputPath": "./img",
+            "publicPath": "./img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[hash].[ext]",
+            "outputPath": "./public/img",
+            "publicPath": "./public/img",
           },
           "test": Object {},
         },
@@ -863,6 +883,16 @@ Array [
             "name": "[name].[ext]",
             "outputPath": "./img",
             "publicPath": "./img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+            "outputPath": "./public/img",
+            "publicPath": "./public/img",
           },
           "test": Object {},
         },
@@ -1234,6 +1264,16 @@ Array [
           "test": Object {},
         },
         Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[hash].[ext]",
+            "outputPath": "./public/img",
+            "publicPath": "./public/img",
+          },
+          "test": Object {},
+        },
+        Object {
           "exclude": Object {},
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/json-loader/index.js",
           "test": Object {},
@@ -1584,8 +1624,18 @@ Array [
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
-            "publicPath": "/img",
+            "outputPath": "./img",
+            "publicPath": "./img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+            "outputPath": "./public/img",
+            "publicPath": "./public/img",
           },
           "test": Object {},
         },
@@ -1948,8 +1998,18 @@ Array [
           "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "img/",
-            "publicPath": "/img",
+            "outputPath": "./img",
+            "publicPath": "./img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+            "outputPath": "./public/img",
+            "publicPath": "./public/img",
           },
           "test": Object {},
         },
