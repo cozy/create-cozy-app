@@ -1222,10 +1222,10 @@ babel-preset-cozy-app@1.2.2:
     "@babel/preset-react" "7.0.0"
     "@babel/runtime" "7.2.0"
 
-babel-preset-cozy-app@1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.2.4.tgz#416d206faacd1590a22ea32d291a3b0feebf51ce"
-  integrity sha512-ZKjMLBP/tfitSDubrvU2z66w7rbRUWNS6fJKU8B+kkisHiujXiNFGhMo6v8MHgxgcvqS/tN8kaWhuVvyD806kQ==
+babel-preset-cozy-app@1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.2.5.tgz#351ef75dfafddddaf314d84317c5a8166696ac5f"
+  integrity sha512-uMyaVpKhxBw42ejBNcojwJm7VNUht9bLdiWJ1UZ645q96Jjm4xnTp9jJq/RHMrW66YJIvDKiWmulXvTb/khHqQ==
   dependencies:
     "@babel/core" "7.2.2"
     "@babel/helper-plugin-utils" "7.0.0"
