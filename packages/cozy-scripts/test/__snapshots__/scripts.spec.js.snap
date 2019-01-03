@@ -307,6 +307,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -366,13 +371,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -724,6 +723,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -783,13 +787,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -1124,6 +1122,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -1183,13 +1186,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "definitions": Object {
           "__ALLOW_HTTP__": true,
@@ -1545,6 +1542,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -1604,13 +1606,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "definitions": Object {
           "__ALLOW_HTTP__": false,
@@ -1954,6 +1950,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -2013,13 +2014,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -2371,6 +2366,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -2430,13 +2430,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -2853,6 +2847,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -2912,13 +2911,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,

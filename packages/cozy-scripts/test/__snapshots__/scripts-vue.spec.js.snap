@@ -209,6 +209,11 @@ Array [
           "hashFunction": "md4",
         },
       },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
       Object {},
       Object {
         "config": Object {
@@ -264,13 +269,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -583,6 +582,11 @@ Array [
           "hashFunction": "md4",
         },
       },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
       Object {},
       Object {
         "config": Object {
@@ -638,13 +642,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -940,6 +938,11 @@ Array [
           "hashFunction": "md4",
         },
       },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
       Object {},
       Object {
         "config": Object {
@@ -995,13 +998,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "definitions": Object {
           "__ALLOW_HTTP__": true,
@@ -1318,6 +1315,11 @@ Array [
           "hashFunction": "md4",
         },
       },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
       Object {},
       Object {
         "config": Object {
@@ -1373,13 +1375,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "definitions": Object {
           "__ALLOW_HTTP__": false,
@@ -1684,6 +1680,11 @@ Array [
           "hashFunction": "md4",
         },
       },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
       Object {},
       Object {
         "config": Object {
@@ -1739,13 +1740,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,
@@ -2058,6 +2053,11 @@ Array [
           "hashFunction": "md4",
         },
       },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
       Object {},
       Object {
         "config": Object {
@@ -2113,13 +2113,7 @@ Array [
       },
       Object {},
       Object {},
-      Object {
-        "modulesCount": 500,
-        "profile": false,
-        "showActiveModules": true,
-        "showEntries": false,
-        "showModules": true,
-      },
+      Object {},
       Object {
         "options": Object {
           "cache": true,

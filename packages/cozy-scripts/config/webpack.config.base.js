@@ -9,7 +9,8 @@ const {
   environment,
   isDebugMode,
   getCSSLoader,
-  getFilename
+  getFilename,
+  getEnabledFlags
 } = require('./webpack.vars')
 const production = environment === 'production'
 
@@ -91,6 +92,9 @@ module.exports = {
       )
     }),
     // use a hash as chunk id to avoid id changes of not changing chunk
-    new webpack.HashedModuleIdsPlugin()
+    new webpack.HashedModuleIdsPlugin(),
+    new webpack.DefinePlugin({
+      __ENABLED_FLAGS__: JSON.stringify(getEnabledFlags())
+    })
   ]
 }

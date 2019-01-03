@@ -39,10 +39,19 @@ const getFilename = function(enableProductionHash = true) {
     : `[name]/${manifest.slug}`
 }
 
+const getEnabledFlags = function() {
+  if (typeof process.env.COZY_FLAGS !== 'string') {
+    return []
+  }
+
+  return process.env.COZY_FLAGS.split(',')
+}
+
 module.exports = {
   addAnalyzer,
   environment,
   eslintFix,
+  getEnabledFlags,
   getFilename,
   getCSSLoader,
   isDebugMode,
