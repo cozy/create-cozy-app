@@ -6,6 +6,7 @@ const commander = require('commander')
 const pkg = require('../package.json')
 const colorize = require('../utils/_colorize.js')
 const CTS = require('../utils/constants.js')
+const regexpReplacer = require('../utils/regexpReplacer')
 const getWebpackConfigs = require('../scripts/config')
 
 let actionName
@@ -86,7 +87,7 @@ const options = {
 })
 
 if (program.showConfig) {
-  console.log(JSON.stringify(getWebpackConfigs(options), null, 2))
+  console.log(JSON.stringify(getWebpackConfigs(options), regexpReplacer, 2))
 } else {
   const availableScripts = [
     'build',
