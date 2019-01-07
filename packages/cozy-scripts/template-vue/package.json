@@ -39,7 +39,7 @@
     "jest-serializer-vue": "2.0.2",
     "prettier": "1.15.3",
     "stylint": "1.5.9",
-    "vue-loader": "15.4.2",
+    "vue-loader": "15.5.0",
     "vue-template-compiler": "2.5.21"
   },
   "dependencies": {
