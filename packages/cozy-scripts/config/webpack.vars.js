@@ -32,8 +32,8 @@ const getCSSLoader = function() {
     : MiniCssExtractPlugin.loader
 }
 
-const getFilename = function() {
-  return environment === 'production'
+const getFilename = function(enableProductionHash = true) {
+  return environment === 'production' && enableProductionHash
     ? `[name]/${manifest.slug}.[contenthash]`
     : `[name]/${manifest.slug}`
 }
