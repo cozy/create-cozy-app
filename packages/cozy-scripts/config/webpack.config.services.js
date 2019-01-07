@@ -30,7 +30,7 @@ const config = {
   entry: servicesEntries,
   output: {
     path: paths.appServicesBuild(),
-    filename: `${getFilename()}.js`
+    filename: `${getFilename(false)}.js`
   },
   target: 'node',
   optimization: {}, // reset optimization property
