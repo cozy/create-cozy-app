@@ -24,7 +24,8 @@ const config = {
       output: 'replace',
       entry: 'replace',
       optimization: 'replace',
-      module: 'replace'
+      module: 'replace',
+      externals: 'replace'
     }
   },
   entry: servicesEntries,
@@ -35,6 +36,7 @@ const config = {
   target: 'node',
   optimization: {}, // reset optimization property
   devtool: false,
+  externals: [], // reset externals property
   module: {
     rules: [
       {

@@ -3025,9 +3025,7 @@ Array [
     "entry": Object {
       "testservice": ".tmp_test/test-app/src/targets/services/testservice.js",
     },
-    "externals": Array [
-      "cozy",
-    ],
+    "externals": Array [],
     "mode": "development",
     "module": Object {
       "rules": Array [
