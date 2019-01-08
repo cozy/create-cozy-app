@@ -443,9 +443,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "cozy-bar.js",
-            "cozy-bar.css",
-            "cozy-client-js.js",
+            "public/cozy-bar.js",
+            "public/cozy-bar.css",
+            "public/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -1268,9 +1268,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "cozy-bar.js",
-            "cozy-bar.css",
-            "cozy-client-js.js",
+            "public/cozy-bar.js",
+            "public/cozy-bar.css",
+            "public/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2090,9 +2090,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "cozy-bar.js",
-            "cozy-bar.css",
-            "cozy-client-js.js",
+            "public/cozy-bar.js",
+            "public/cozy-bar.css",
+            "public/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2507,9 +2507,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "cozy-bar.js",
-            "cozy-bar.css",
-            "cozy-client-js.js",
+            "public/cozy-bar.js",
+            "public/cozy-bar.css",
+            "public/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2989,9 +2989,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "cozy-bar.js",
-            "cozy-bar.css",
-            "cozy-client-js.js",
+            "public/cozy-bar.js",
+            "public/cozy-bar.css",
+            "public/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
