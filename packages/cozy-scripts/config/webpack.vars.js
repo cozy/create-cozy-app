@@ -25,6 +25,7 @@ const isDebugMode = process.env[CTS.DEBUG] === 'true'
 const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
 const useHotReload = process.env[CTS.HOT] === 'true'
 const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
+const publicFolderName = 'public'
 
 const getCSSLoader = function() {
   return useHotReload
@@ -46,5 +47,6 @@ module.exports = {
   getCSSLoader,
   isDebugMode,
   target,
-  useHotReload
+  useHotReload,
+  publicFolderName
 }

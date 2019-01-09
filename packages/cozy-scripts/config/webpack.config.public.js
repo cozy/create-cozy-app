@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const manifest = fs.readJsonSync(paths.appManifest())
-
-const publicFolderName = 'public'
+const { publicFolderName } = require('./webpack.vars')
 
 const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
@@ -29,7 +28,7 @@ function getConfig() {
             title: appName,
             filename: `${publicFolderName}/index.html`,
             inject: false,
-            chunks: ['public'],
+            chunks: [publicFolderName],
             minify: {
               collapseWhitespace: true
             }
