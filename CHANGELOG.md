@@ -14,6 +14,23 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.9.0 (2019-01-10)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#1042](https://github.com/CPatchane/create-cozy-app/pull/1042) Handling public assets ([@CPatchane](https://github.com/CPatchane))
+  * [#1039](https://github.com/CPatchane/create-cozy-app/pull/1039) Remove externals property for services build ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1006](https://github.com/CPatchane/create-cozy-app/pull/1006) fix(deps): update dependency file-loader to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1040](https://github.com/CPatchane/create-cozy-app/pull/1040) fix(deps): update dependency postcss to v7.0.8 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1044](https://github.com/CPatchane/create-cozy-app/pull/1044) fix(deps): update dependency cozy-bar to v6.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1038](https://github.com/CPatchane/create-cozy-app/pull/1038) chore(deps): update dependency vue-loader to v15.5.1 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#1037](https://github.com/CPatchane/create-cozy-app/pull/1037), [#1043](https://github.com/CPatchane/create-cozy-app/pull/1043) chore(deps): update dependency lerna to v3.10.2 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@1.8.0, create-cozy-app@1.1.0, cozy-scripts-vanilla@1.1.0 (2019-01-07)
 
 #### :nail_care: Enhancements:
