@@ -42,7 +42,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -114,7 +114,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -415,7 +415,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -487,7 +487,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -774,7 +774,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -846,7 +846,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -1151,7 +1151,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -1223,7 +1223,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -1517,7 +1517,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -1589,7 +1589,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -1891,7 +1891,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
@@ -1963,7 +1963,7 @@ Array [
           "use": Array [
             ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
             Object {
-              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/index.js",
+              "loader": ".tmp_test/test-app-vue/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
               "options": Object {
                 "importLoaders": 1,
                 "sourceMap": true,
