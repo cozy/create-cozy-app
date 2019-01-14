@@ -3060,6 +3060,37 @@ Array [
           },
           "test": Object {},
         },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
+          "options": Object {
+            "emitWarning": true,
+            "extends": Array [
+              "cozy-app",
+            ],
+            "fix": false,
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
+          "options": Object {
+            "babelrc": false,
+            "cacheDirectory": "node_modules/.cache/babel-loader/node",
+            "presets": Array [
+              Array [
+                "cozy-app",
+                Object {
+                  "node": true,
+                  "react": false,
+                },
+              ],
+            ],
+          },
+          "test": Object {},
+        },
       ],
     },
     "optimization": Object {},
@@ -3068,6 +3099,11 @@ Array [
       "path": ".tmp_test/test-app/build/services",
     },
     "plugins": Array [
+      Object {
+        "definitions": Object {
+          "__TARGET__": "\\"services\\"",
+        },
+      },
       Object {
         "definitions": Object {
           "__TARGET__": "\\"services\\"",
