@@ -7,7 +7,9 @@ const paths = require('../utils/paths')
 const { eslintFix, getFilename, target } = require('./webpack.vars')
 
 const servicesFolder = paths.appServicesFolder()
-const servicesPaths = fs.readdirSync(servicesFolder)
+const servicesPaths = fs.existsSync(servicesFolder)
+  ? fs.readdirSync(servicesFolder)
+  : []
 
 const servicesEntries = {}
 servicesPaths.forEach(file => {
@@ -69,5 +71,9 @@ const config = {
   ]
 }
 
+/* We don't build services if no services and if on mobile build */
+const addServicesConfig =
+  target === 'browser' && Object.keys(servicesEntries).length
+
 // only for browser target (services are usable only on cozy-stack)
-module.exports = target === 'browser' ? { multiple: { services: config } } : {}
+module.exports = addServicesConfig ? { multiple: { services: config } } : {}
