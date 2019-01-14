@@ -14,6 +14,31 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.10.0 (2019-01-14)
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#1028](https://github.com/CPatchane/create-cozy-app/pull/1028) feat(cozy-scripts): Handle flags at build time ([@drazik](https://github.com/drazik))
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#1052](https://github.com/CPatchane/create-cozy-app/pull/1052) Handle services by default + build public/intents only for browser target ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1048](https://github.com/CPatchane/create-cozy-app/pull/1048) fix(deps): update dependency postcss to v7.0.11 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1050](https://github.com/CPatchane/create-cozy-app/pull/1050) fix(deps): update vue monorepo to v2.5.22 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1051](https://github.com/CPatchane/create-cozy-app/pull/1051) fix(deps): update dependency autoprefixer to v9.4.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1046](https://github.com/CPatchane/create-cozy-app/pull/1046) fix(deps): update dependency webpack to v4.28.4 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#968](https://github.com/CPatchane/create-cozy-app/pull/968) fix(deps): update dependency css-loader to v2 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#1047](https://github.com/CPatchane/create-cozy-app/pull/1047) chore(deps): update dependency lerna to v3.10.5 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Cyrille Perois ([@drazik](https://github.com/drazik))
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@1.9.0 (2019-01-10)
 
 #### :bug: Bug Fixes:
