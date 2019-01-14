@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const manifest = fs.readJsonSync(paths.appManifest())
+const { target } = require('./webpack.vars')
 
 const intentsFolderName = 'intents'
 
@@ -11,9 +12,14 @@ const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
   : manifest.name
 
+/* We don't build intents if no intents and if on mobile build */
+const addIntentsConfig =
+  target === 'browser' &&
+  fs.existsSync(paths.appIntentsIndex()) &&
+  fs.existsSync(paths.appIntentsHtmlTemplate())
+
 function getConfig() {
-  return fs.existsSync(paths.appIntentsIndex()) &&
-    fs.existsSync(paths.appIntentsHtmlTemplate())
+  return addIntentsConfig
     ? {
         entry: {
           // since the file extension depends on the framework here
