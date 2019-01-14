@@ -307,6 +307,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -724,6 +729,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -1120,6 +1130,11 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
         },
       },
       Object {
@@ -1545,6 +1560,11 @@ Array [
       },
       Object {
         "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "definitions": Object {
           "process.env": Object {
             "USE_REACT": "true",
           },
@@ -1950,6 +1970,11 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
         },
       },
       Object {
@@ -2367,6 +2392,11 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
         },
       },
       Object {
@@ -2849,6 +2879,11 @@ Array [
           "hashDigest": "base64",
           "hashDigestLength": 4,
           "hashFunction": "md4",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
         },
       },
       Object {
