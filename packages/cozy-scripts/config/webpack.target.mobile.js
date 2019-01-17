@@ -2,12 +2,11 @@
 
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
-const CTS = require('../utils/constants.js')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
-const { environment, isDebugMode } = require('./webpack.vars')
+const { environment, isDebugMode, getReactExposer } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest())
 
 const production = environment === 'production'
@@ -22,9 +21,7 @@ module.exports = {
     app: [
       require.resolve('babel-polyfill'),
       // Exposed variables in global scope (needed for cozy-bar)
-      process.env[CTS.USE_PREACT]
-        ? paths.csPreactExposer()
-        : paths.csReactExposer(),
+      getReactExposer(),
       paths.appMobileIndex()
     ]
   },

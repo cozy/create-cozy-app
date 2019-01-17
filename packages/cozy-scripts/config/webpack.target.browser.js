@@ -3,10 +3,9 @@
 const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
-const CTS = require('../utils/constants.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
-const { getFilename, isDebugMode } = require('./webpack.vars')
+const { getFilename, isDebugMode, getReactExposer } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest())
 
 const appName = manifest.name_prefix
@@ -19,9 +18,7 @@ module.exports = {
       // polyfills, avaid to import it in the application
       require.resolve('babel-polyfill'),
       // Exposed variables in global scope (needed for cozy-bar)
-      process.env[CTS.USE_PREACT]
-        ? paths.csPreactExposer()
-        : paths.csReactExposer(),
+      getReactExposer(),
       // since the file extension depends on the framework here
       // we get it from a function call
       paths.appBrowserIndex()
