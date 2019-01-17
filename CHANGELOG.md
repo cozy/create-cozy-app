@@ -14,6 +14,23 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.11.0 (2019-01-17)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#1056](https://github.com/CPatchane/create-cozy-app/pull/1056) fix(public/intent): React / Preact config ([@Crash--](https://github.com/Crash--))
+  * [#1054](https://github.com/CPatchane/create-cozy-app/pull/1054) fix: Downgrade webpack-dev-server to avoid host checking bug ([@cedricmessiant](https://github.com/cedricmessiant))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1055](https://github.com/CPatchane/create-cozy-app/pull/1055) chore(deps): update dependency eslint-plugin-react to v7.12.4 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1053](https://github.com/CPatchane/create-cozy-app/pull/1053) fix(deps): update dependency postcss to v7.0.13 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Cédric Messiant ([@cedricmessiant](https://github.com/cedricmessiant))
+- Quentin Valmori ([@Crash--](https://github.com/Crash--))
+
+
 ## cozy-scripts@1.10.0 (2019-01-14)
 
 #### :sparkles: New Features:
