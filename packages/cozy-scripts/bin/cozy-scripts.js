@@ -33,6 +33,14 @@ const program = new commander.Command(pkg.name)
   .option('--development', 'specify development build mode')
   .option('--fix', 'format automatically the code with eslint')
   .option('--hot', 'enable hot module reload (only for development)')
+  .option(
+    '--port  <portNumber>',
+    'change the webpack dev server port (default 8888) (only for development)'
+  )
+  .option(
+    '--host  <hostName>',
+    'change the webpack dev server host name (default localhost) (only for development)'
+  )
   .option('--mobile', 'specify mobile build target')
   .option(
     '--no-stack',
@@ -41,6 +49,10 @@ const program = new commander.Command(pkg.name)
   .option('--production', 'specify production build mode')
   .option('--show-config', 'just print app final webpack config')
   .option('--vue', 'to use scripts in a VueJS specific way (default React)')
+  .option(
+    '--config <pathToFile>',
+    'provide a custom cozy-scripts build config file path (relative to the application root directory). Use it only if you need custom build configuration using app.config.js with a custom location.'
+  )
   .option(
     '--src-dir <pathToDirectory>',
     'provide the application source (`src`) directory path (relative to the application root directory)'
@@ -76,9 +88,12 @@ const options = {
 // program property, environment variable name, content to set
 ;[
   ['hot', CTS.HOT, true],
+  ['port', CTS.PORT, program.port],
+  ['host', CTS.HOST, program.host],
   ['fix', CTS.ESLINT_FIX, true],
   ['debug', CTS.DEBUG, true],
   ['analyzer', CTS.ANALYZER, true],
+  ['config', CTS.CONFIG, program.config],
   ['srcDir', CTS.SRC_DIR, program.srcDir],
   ['buildDir', CTS.BUILD_DIR, program.buildDir],
   ['manifest', CTS.MANIFEST, program.manifest]

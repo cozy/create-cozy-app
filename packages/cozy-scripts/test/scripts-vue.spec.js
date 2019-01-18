@@ -11,6 +11,7 @@ const appName = 'test-app-vue'
 const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
 const appCoveragePath = path.join(appPath, 'coverage/')
+const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
 const spawn = require('cross-spawn')
 
 process.on('SIGINT', () => {
@@ -103,6 +104,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
     if (process.env[CTS.DEBUG]) delete process.env[CTS.DEBUG]
+    if (process.env[CTS.CONFIG]) delete process.env[CTS.CONFIG]
     // rm coverage folder from tests if exists
     if (fs.existsSync(appCoveragePath)) {
       fs.removeSync(appCoveragePath)
@@ -202,6 +204,21 @@ describe('App from cozy-scripts with VueJS 2', () => {
     const appConfigFromEnv = getConfig()
     expect(appConfigFromParams).toEqual(appConfigFromEnv)
     expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
+  })
+
+  it('should use custom app.config.js from the app root if exists', () => {
+    const tempConfigPath = path.join(appPath, 'app.config.js')
+    fs.copySync(ownTestConfig, tempConfigPath)
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    fs.removeSync(tempConfigPath)
+  })
+
+  it('should use the custom config path if exists as environment variable', () => {
+    const tempConfigPath = path.join(appPath, './src/custom.config.js')
+    fs.copySync(ownTestConfig, tempConfigPath)
+    process.env[CTS.CONFIG] = 'src/custom.config.js'
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    fs.removeSync(tempConfigPath)
   })
 
   // Generated app tests
