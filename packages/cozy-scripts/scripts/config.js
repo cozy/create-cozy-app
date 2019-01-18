@@ -3,6 +3,7 @@
 const merge = require('webpack-merge')
 const path = require('path')
 const fs = require('fs-extra')
+const CTS = require('../utils/constants.js')
 
 function mergeWithOptions(options, configs, current) {
   // merge with the previous configs using the provided strategy
@@ -26,13 +27,16 @@ function getWebpackConfigs(options = {}) {
 
   // check if a custom config exists in the app source
   let appConfigs
-  // app/node_modules/cozy-scripts/scripts
-  if (fs.existsSync(path.join(process.cwd(), 'app.config.js'))) {
-    appConfigs = require(path.join(process.cwd(), 'app.config.js'))
+  const configPath = path.join(
+    process.cwd(),
+    process.env[CTS.CONFIG] || 'app.config.js'
+  )
+  if (fs.existsSync(configPath)) {
+    appConfigs = require(configPath)
   } else {
     appConfigs = useVue
-      ? [require(path.join('../config/webpack.bundle.vue.js'))]
-      : [require(path.join('../config/webpack.bundle.default.js'))]
+      ? [require('../config/webpack.bundle.vue.js')]
+      : [require('../config/webpack.bundle.default.js')]
   }
 
   const mergedConfig = merge(

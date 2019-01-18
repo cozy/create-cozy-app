@@ -245,7 +245,7 @@ describe('cozy-scripts (cs) CLI', () => {
   it('should handle build directory path providing with --build-dir option', () => {
     // add cli arguments
     const customPath = 'custom/app/buildHere'
-    addCLIArgs('watch', '--build-dir', 'custom/app/buildHere')
+    addCLIArgs('watch', '--build-dir', customPath)
     expect(() => {
       callCLI()
     }).not.toThrow()
@@ -255,11 +255,21 @@ describe('cozy-scripts (cs) CLI', () => {
   it('should handle manifest path providing with --manifest option', () => {
     // add cli arguments
     const customPath = 'custom/app/manifest.webapp'
-    addCLIArgs('watch', '--manifest', 'custom/app/manifest.webapp')
+    addCLIArgs('watch', '--manifest', customPath)
     expect(() => {
       callCLI()
     }).not.toThrow()
     expect(process.env[CTS.MANIFEST]).toBe(customPath)
+  })
+
+  it('should handle config path providing with --config option', () => {
+    // add cli arguments
+    const customPath = 'custom/app/app.config.js'
+    addCLIArgs('watch', '--config', customPath)
+    expect(() => {
+      callCLI()
+    }).not.toThrow()
+    expect(process.env[CTS.CONFIG]).toBe(customPath)
   })
 
   it('should handle --production option', () => {

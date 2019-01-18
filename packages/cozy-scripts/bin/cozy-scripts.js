@@ -50,6 +50,10 @@ const program = new commander.Command(pkg.name)
   .option('--show-config', 'just print app final webpack config')
   .option('--vue', 'to use scripts in a VueJS specific way (default React)')
   .option(
+    '--config <pathToFile>',
+    'provide a custom cozy-scripts build config file path (relative to the application root directory). Use it only if you need custom build configuration using app.config.js with a custom location.'
+  )
+  .option(
     '--src-dir <pathToDirectory>',
     'provide the application source (`src`) directory path (relative to the application root directory)'
   )
@@ -89,6 +93,7 @@ const options = {
   ['fix', CTS.ESLINT_FIX, true],
   ['debug', CTS.DEBUG, true],
   ['analyzer', CTS.ANALYZER, true],
+  ['config', CTS.CONFIG, program.config],
   ['srcDir', CTS.SRC_DIR, program.srcDir],
   ['buildDir', CTS.BUILD_DIR, program.buildDir],
   ['manifest', CTS.MANIFEST, program.manifest]

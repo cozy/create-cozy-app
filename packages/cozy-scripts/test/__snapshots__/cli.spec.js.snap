@@ -113,6 +113,18 @@ Object {
 }
 `;
 
+exports[`cozy-scripts (cs) CLI should handle config path providing with --config option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--config",
+    "custom/app/app.config.js",
+  ],
+  "mode": "development",
+  "target": "browser",
+  "useVue": undefined,
+}
+`;
+
 exports[`cozy-scripts (cs) CLI should handle debug mode with --debug option 1`] = `
 Object {
   "cliArgs": Array [
