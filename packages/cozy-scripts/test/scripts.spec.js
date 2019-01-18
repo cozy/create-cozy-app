@@ -106,7 +106,7 @@ describe('App from cozy-scripts', () => {
     // reset NODE_ENV
     if (process.env.NODE_ENV) delete process.env.NODE_ENV
     if (process.env[CTS.DEBUG]) delete process.env[CTS.DEBUG]
-    jest.resetModules()
+    if (process.env[CTS.CONFIG]) delete process.env[CTS.CONFIG]
     // rm coverage folder from tests if exists
     if (fs.existsSync(appCoveragePath)) {
       fs.removeSync(appCoveragePath)
@@ -115,6 +115,7 @@ describe('App from cozy-scripts', () => {
     if (fs.existsSync(customConfigPath)) {
       fs.removeSync(customConfigPath)
     }
+    jest.resetModules()
   })
 
   afterAll(() => {
@@ -213,6 +214,21 @@ describe('App from cozy-scripts', () => {
     expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
   })
 
+  it('should use custom app.config.js from the app root if exists', () => {
+    const tempConfigPath = path.join(appPath, 'app.config.js')
+    fs.copySync(ownTestConfig, tempConfigPath)
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    fs.removeSync(tempConfigPath)
+  })
+
+  it('should use the custom config path if exists as environment variable', () => {
+    const tempConfigPath = path.join(appPath, './src/custom.config.js')
+    fs.copySync(ownTestConfig, tempConfigPath)
+    process.env[CTS.CONFIG] = 'src/custom.config.js'
+    expect(JSON.parse(getConfig())).toMatchSnapshot()
+    fs.removeSync(tempConfigPath)
+  })
+
   // Generated app tests
   it('should pass all app tests with success', () => {
     console.log(colorize.orange('Running app tests...'))
@@ -259,12 +275,6 @@ describe('App from cozy-scripts', () => {
         cliArgs: ['--help']
       })
     }).not.toThrow()
-  })
-
-  // Custom app.config.js, skipped because it caches for the next test
-  xit('should use the custom app config if an `app.config.js` exists in the app directory', () => {
-    fs.copySync(ownTestConfig, customConfigPath)
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
   })
 
   it('should return two separated configs if services config is used (also test app.config.js usage)', () => {
