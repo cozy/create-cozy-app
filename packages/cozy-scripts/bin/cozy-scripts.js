@@ -33,6 +33,14 @@ const program = new commander.Command(pkg.name)
   .option('--development', 'specify development build mode')
   .option('--fix', 'format automatically the code with eslint')
   .option('--hot', 'enable hot module reload (only for development)')
+  .option(
+    '--port  <portNumber>',
+    'change the webpack dev server port (default 8888) (only for development)'
+  )
+  .option(
+    '--host  <hostName>',
+    'change the webpack dev server host name (default localhost) (only for development)'
+  )
   .option('--mobile', 'specify mobile build target')
   .option(
     '--no-stack',
@@ -76,6 +84,8 @@ const options = {
 // program property, environment variable name, content to set
 ;[
   ['hot', CTS.HOT, true],
+  ['port', CTS.PORT, program.port],
+  ['host', CTS.HOST, program.host],
   ['fix', CTS.ESLINT_FIX, true],
   ['debug', CTS.DEBUG, true],
   ['analyzer', CTS.ANALYZER, true],

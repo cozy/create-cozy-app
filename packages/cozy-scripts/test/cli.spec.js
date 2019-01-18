@@ -214,6 +214,24 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(process.env[CTS.HOT]).toBe('true')
   })
 
+  it('should handle changing dev server port with --port option', () => {
+    // add cli arguments
+    addCLIArgs('watch', '--port', '9999')
+    expect(() => {
+      callCLI()
+    }).not.toThrow()
+    expect(process.env[CTS.PORT]).toBe('9999')
+  })
+
+  it('should handle changing dev server host with --host option', () => {
+    // add cli arguments
+    addCLIArgs('watch', '--host', 'cozy.tools')
+    expect(() => {
+      callCLI()
+    }).not.toThrow()
+    expect(process.env[CTS.HOST]).toBe('cozy.tools')
+  })
+
   it('should handle src directory path providing with --src-dir option', () => {
     // add cli arguments
     const customPath = 'custom/app/src'
