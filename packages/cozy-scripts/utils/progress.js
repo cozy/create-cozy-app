@@ -154,9 +154,14 @@ ProgressBar.prototype.render = function(tokens, force) {
     .replace(':rate', Math.round(rate))
 
   /* compute the available space (non-zero) for the bar */
+  var clean = str.replace(
+    // eslint-disable-next-line no-control-regex
+    /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g,
+    ''
+  )
   var availableSpace = Math.max(
     0,
-    this.stream.columns - str.replace(':bar', '').length
+    this.stream.columns - clean.replace(':bar', '').length
   )
   if (availableSpace && process.platform === 'win32') {
     availableSpace = availableSpace - 1
