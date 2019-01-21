@@ -12,7 +12,7 @@ const configs = [
   require('./webpack.config.intents'),
   require('./webpack.config.public'),
   require('./webpack.config.pictures'),
-  require('./webpack.config.vendors'),
+  require('./webpack.config.assets'),
   require('./webpack.config.manifest'),
   require('./webpack.config.progress'),
   addAnalyzer ? require('./webpack.config.analyzer') : null,
