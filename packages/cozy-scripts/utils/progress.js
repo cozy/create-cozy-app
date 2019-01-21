@@ -63,6 +63,8 @@ function ProgressBar(fmt, options) {
   this.curr = options.curr || 0
   this.total = options.total
   this.width = options.width || this.total
+  // to have offset at the right of the progress bar
+  this.offset = options.offset
   this.clear = options.clear
   this.chars = {
     complete: options.complete || '=',
@@ -161,7 +163,7 @@ ProgressBar.prototype.render = function(tokens, force) {
   )
   var availableSpace = Math.max(
     0,
-    this.stream.columns - clean.replace(':bar', '').length
+    this.stream.columns - clean.replace(':bar', '').length - this.offset
   )
   if (availableSpace && process.platform === 'win32') {
     availableSpace = availableSpace - 1
