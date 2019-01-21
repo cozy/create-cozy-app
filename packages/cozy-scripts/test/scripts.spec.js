@@ -230,9 +230,12 @@ describe('App from cozy-scripts', () => {
   })
 
   // Generated app tests
-  it('should pass all app tests with success', () => {
+  it('should pass all app tests and lint with success', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
+      const lintProcess = spawn.sync('yarn', ['lint'], { stdio: 'inherit' })
+      if (lintProcess.status !== 0)
+        throw new Error('Created application linting failed.')
       const testProcess = spawn.sync(
         'yarn',
         ['test', '--verbose', '--coverage'],
