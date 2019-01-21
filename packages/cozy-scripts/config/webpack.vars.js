@@ -25,7 +25,13 @@ const isDebugMode = process.env[CTS.DEBUG] === 'true'
 const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
 const useHotReload = process.env[CTS.HOT] === 'true'
 const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
+
+const hasPublic =
+  fs.existsSync(paths.appPublicIndex()) &&
+  fs.existsSync(paths.appPublicHtmlTemplate())
 const publicFolderName = 'public'
+
+const assetsFolderName = 'assets'
 
 const getCSSLoader = function() {
   return useHotReload
@@ -55,11 +61,13 @@ const getReactExposer = function() {
 
 module.exports = {
   addAnalyzer,
+  assetsFolderName,
   environment,
   eslintFix,
   getEnabledFlags,
   getFilename,
   getCSSLoader,
+  hasPublic,
   isDebugMode,
   target,
   useHotReload,
