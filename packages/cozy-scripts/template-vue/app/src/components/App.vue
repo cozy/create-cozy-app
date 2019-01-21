@@ -4,32 +4,20 @@
       <nav>
         <ul class="c-nav">
           <li class="c-nav-item">
-            <router-link
-              class="c-nav-link"
-              to="/viewhello1">
-              <Icon
-                :icon="navIcon"
-                class="c-nav-icon" />
+            <router-link class="c-nav-link" to="/viewhello1">
+              <Icon :icon="navIcon" class="c-nav-icon" />
               {{ t('Nav.hello_nav_1') }}
             </router-link>
           </li>
           <li class="c-nav-item">
-            <router-link
-              class="c-nav-link"
-              to="/viewhello2">
-              <Icon
-                :icon="navIcon"
-                class="c-nav-icon" />
+            <router-link class="c-nav-link" to="/viewhello2">
+              <Icon :icon="navIcon" class="c-nav-icon" />
               {{ t('Nav.hello_nav_2') }}
             </router-link>
           </li>
           <li class="c-nav-item">
-            <router-link
-              class="c-nav-link"
-              to="/viewhello3">
-              <Icon
-                :icon="navIcon"
-                class="c-nav-icon" />
+            <router-link class="c-nav-link" to="/viewhello3">
+              <Icon :icon="navIcon" class="c-nav-icon" />
               {{ t('Nav.hello_nav_3') }}
             </router-link>
           </li>
@@ -37,9 +25,7 @@
       </nav>
     </aside>
     <main>
-      <div class="app-content">
-        <router-view class="view"/>
-      </div>
+      <div class="app-content"><router-view class="view" /></div>
     </main>
   </div>
 </template>

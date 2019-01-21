@@ -44,6 +44,7 @@ export default {
           fill: this.color
         }
       }
+      return {}
     },
     anchor() {
       let anchor
