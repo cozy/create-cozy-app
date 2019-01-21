@@ -370,6 +370,29 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+        "tags": Object {
+          "promise": Object {},
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -448,9 +471,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -792,6 +815,29 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+        "tags": Object {
+          "promise": Object {},
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -1197,6 +1243,29 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+        "tags": Object {
+          "promise": Object {},
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -1283,9 +1352,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -1623,6 +1692,29 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+        "tags": Object {
+          "promise": Object {},
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -2037,6 +2129,29 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+        "tags": Object {
+          "promise": Object {},
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -2115,9 +2230,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2459,6 +2574,29 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+        "tags": Object {
+          "promise": Object {},
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -2537,9 +2675,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2606,12 +2744,12 @@ Array [
   "src/styles/index.styl",
   "src/styles/nav.css",
   "src/styles/todos.css",
+  "src/targets/assets/icon.svg",
   "src/targets/browser/index.ejs",
   "src/targets/browser/index.jsx",
   "src/targets/intents/.gitkeep",
   "src/targets/mobile/DOCS.md",
   "src/targets/mobile/config.xml",
-  "src/targets/vendor/assets/icon.svg",
   "test/__mocks__/fileMock.js",
   "test/__snapshots__/app.spec.js.snap",
   "test/app.spec.js",
@@ -2946,6 +3084,29 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+        "tags": Object {
+          "promise": Object {},
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -3024,9 +3185,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
