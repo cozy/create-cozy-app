@@ -45,7 +45,6 @@
     "postcss-discard-duplicates": "4.0.2",
     "postcss-discard-empty": "4.0.1",
     "postcss-loader": "3.0.0",
-    "progress": "2.0.3",
     "prompt": "1.0.0",
     "react": "16.7.0",
     "react-dom": "16.7.0",

@@ -1,8 +1,8 @@
 'use strict'
 
-const Progress = require('progress')
 const webpack = require('webpack')
 const colorize = require('../utils/_colorize')
+const Progress = require('../utils/progress')
 
 function CustomProgressPlugin() {
   if (!process.stderr.isTTY) {
