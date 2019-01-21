@@ -1,8 +1,8 @@
 'use strict'
 
-const Progress = require('progress')
 const webpack = require('webpack')
 const colorize = require('../utils/_colorize')
+const Progress = require('../utils/progress')
 
 function CustomProgressPlugin() {
   if (!process.stderr.isTTY) {
@@ -17,6 +17,7 @@ function CustomProgressPlugin() {
       complete: colorize.bgBlue(' '),
       incomplete: colorize.bgWhite(' '),
       width: 2000, // exceed length is handled
+      offset: 40, // right offset to have enough space for webpack message
       total: 100,
       clear: false
     }
