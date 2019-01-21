@@ -15,7 +15,7 @@
 		"reset:yarn": "sh reset_yarn.sh"
 	},
 	"devDependencies": {
-		"eslint-config-cozy-app": "1.1.7",
+		"eslint-config-cozy-app": "1.1.8",
 		"jest": "23.6.0",
 		"lerna": "3.10.6",
 		"lerna-changelog": "0.8.2"
