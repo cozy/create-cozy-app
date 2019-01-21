@@ -14,6 +14,30 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.12.0 (2019-01-21)
+
+#### :sparkles: New Features:
+* `cozy-scripts`
+  * [#1058](https://github.com/CPatchane/create-cozy-app/pull/1058) Add cli more options (--port, --host and --config) ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#1065](https://github.com/CPatchane/create-cozy-app/pull/1065) Make lint script failed correctly + fix vue app linting issues ([@CPatchane](https://github.com/CPatchane))
+  * [#1061](https://github.com/CPatchane/create-cozy-app/pull/1061) Better handling img path for mobile and browser ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1064](https://github.com/CPatchane/create-cozy-app/pull/1064) fix(deps): update dependency eslint-config-cozy-app to v1.1.8 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1063](https://github.com/CPatchane/create-cozy-app/pull/1063) fix(deps): update dependency webpack to v4.29.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1062](https://github.com/CPatchane/create-cozy-app/pull/1062) fix(deps): update dependency html-webpack-include-assets-plugin to v1.0.7 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1057](https://github.com/CPatchane/create-cozy-app/pull/1057) fix(deps): update dependency vuex to v3.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#1059](https://github.com/CPatchane/create-cozy-app/pull/1059) chore(deps): update dependency lerna to v3.10.6 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@1.11.0 (2019-01-17)
 
 #### :bug: Bug Fixes:
