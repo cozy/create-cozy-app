@@ -16,7 +16,7 @@ const production = environment === 'production'
 
 module.exports = {
   resolve: {
-    modules: [paths.appSrc(), paths.appNodeModules()],
+    modules: [paths.appSrc(), 'node_modules'],
     extensions: ['.js', '.json', '.css'],
     // linked package will still be see as a node_modules package
     symlinks: false
