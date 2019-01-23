@@ -245,7 +245,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img",
+            "outputPath": "img/",
             "publicPath": "/img",
           },
           "test": Object {},
@@ -255,7 +255,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/public/img",
+            "outputPath": "public/img",
             "publicPath": "/public/img",
           },
           "test": Object {},
@@ -666,7 +666,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "/img",
+            "outputPath": "img/",
             "publicPath": "/img",
           },
           "test": Object {},
@@ -676,7 +676,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[hash].[ext]",
-            "outputPath": "/public/img",
+            "outputPath": "public/img",
             "publicPath": "/public/img",
           },
           "test": Object {},
@@ -1912,7 +1912,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img",
+            "outputPath": "img/",
             "publicPath": "/img",
           },
           "test": Object {},
@@ -1922,7 +1922,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/public/img",
+            "outputPath": "public/img",
             "publicPath": "/public/img",
           },
           "test": Object {},
@@ -2334,7 +2334,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img",
+            "outputPath": "img/",
             "publicPath": "/img",
           },
           "test": Object {},
@@ -2344,7 +2344,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/public/img",
+            "outputPath": "public/img",
             "publicPath": "/public/img",
           },
           "test": Object {},
@@ -2821,7 +2821,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/img",
+            "outputPath": "img/",
             "publicPath": "/img",
           },
           "test": Object {},
@@ -2831,7 +2831,7 @@ Array [
           "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
           "options": Object {
             "name": "[name].[ext]",
-            "outputPath": "/public/img",
+            "outputPath": "public/img",
             "publicPath": "/public/img",
           },
           "test": Object {},

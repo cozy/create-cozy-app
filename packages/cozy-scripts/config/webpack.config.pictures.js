@@ -21,7 +21,7 @@ module.exports = {
         loader: require.resolve('file-loader'),
         options: {
           // mobile app needs relative path since it uses file://
-          outputPath: isMobile ? './img' : '/img',
+          outputPath: isMobile ? './img' : 'img/',
           publicPath: isMobile ? './img' : '/img',
           name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }
@@ -36,7 +36,7 @@ module.exports = {
         loader: require.resolve('file-loader'),
         options: {
           // mobile app needs relative path since it uses file://
-          outputPath: isMobile ? './public/img' : '/public/img',
+          outputPath: isMobile ? './public/img' : 'public/img',
           publicPath: isMobile ? './public/img' : '/public/img',
           name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
         }
