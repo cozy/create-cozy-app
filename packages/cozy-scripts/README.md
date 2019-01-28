@@ -250,6 +250,22 @@ module.exports = [
 ]
 ```
 
+### `cozy-scripts` & `cozy-flags`
+`cozy-scripts` works well with [cozy-flags](https://www.npmjs.com/package/cozy-flags). You can specify a few flags on build time : 
+
+```
+COZY_FLAGS=flag1,flag2 yarn build
+```
+
+```js
+import flag from 'cozy-flags'
+ 
+if (flag('flag1') || flag('flag2')) {
+  enableMyFeature()
+}
+```
+
+
 You can find more information about webpack configuration files available via `cozy-scripts` in the dedicated [webpack configs documentation](docs/webpack-configs.md).
 
 If you need more particular/complicated configurations and need to use the [`webpack-merge`](https://github.com/survivejs/webpack-merge#merging-with-strategies) smart mode or merge strategies, you can also find more information about in the dedicated [merge strategies documentation](docs/webpack-merge-strategies.md).
