@@ -37,7 +37,7 @@
     "eslint-plugin-react": "7.12.4",
     "git-directory-deploy": "1.5.1",
     "prettier": "1.15.3",
-    "react-hot-loader": "4.6.3",
+    "react-hot-loader": "4.6.5",
     "react-test-renderer": "16.7.0",
     "redux-mock-store": "1.5.3",
     "stylint": "1.5.9"
