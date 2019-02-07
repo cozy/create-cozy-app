@@ -1642,10 +1642,10 @@ cosmiconfig@^5.0.5:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-cozy-bar@6.10.4:
-  version "6.10.4"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.10.4.tgz#0c39afd78d59bcc6ddd48bb67393386f891026f1"
-  integrity sha512-+8TO6voxJeVwTEXyBew/QPW7b5mifiIDAvid4gActxK7Ci0Pa6F3ifVuxh+TRlFjNOvvsXGc/OhsrB5/Yd6gtg==
+cozy-bar@6.11.2:
+  version "6.11.2"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.11.2.tgz#d42c2fd3f4e77d233f38f1459af0752964f116db"
+  integrity sha512-FLy2BeERWcF+8K5TMHCC0cUMXc14f1pn6vuq0LWOh5mefP4ZTEqzApxfZ0myHZ0RcZrnZ1PVpm1D/lW/G4FOHw==
   dependencies:
     "@babel/core" "7.2.2"
     babel-core "7.0.0-bridge.0"
@@ -1653,14 +1653,13 @@ cozy-bar@6.10.4:
     core-js "2.6.3"
     cozy-client-js "0.14.2"
     cozy-device-helper "1.6.3"
-    cozy-realtime "1.2.7"
+    cozy-realtime "2.0.1"
     enzyme-to-json "3.3.5"
     hammerjs "2.0.8"
     lerna-changelog "0.8.2"
     localforage "1.7.3"
     lodash.debounce "4.0.8"
     lodash.unionwith "4.6.0"
-    node-polyglot "2.3.0"
     piwik-react-router "0.12.1"
     react-autosuggest "9.4.3"
     react-redux "5.1.1"
@@ -1699,10 +1698,10 @@ cozy-device-helper@1.6.3:
   dependencies:
     lodash "4.17.11"
 
-cozy-realtime@1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-1.2.7.tgz#2e9e137bea8d3175d485db4accd49ad088426f0e"
-  integrity sha512-b7sh37BEQ9hPefjkFcLzQ3JZEHjwoDF+z19VHLV9udlG90wo3FaUyXFM+dkX5WJP8qym/6zBHqiTnMYqB7LE2Q==
+cozy-realtime@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-2.0.1.tgz#bf1e300bf0945295743809717bb1955bb9e6f47f"
+  integrity sha512-/F+sgo5z6NPWKsB1YiF4KFX/poIKPsSYTUAM8qcpI5HElAp5y2peUVY6QSZUSSVNUhsmI2Mgd7P/Zgxpz5nj5w==
 
 cozy-stack-client@^3.4.0:
   version "3.4.0"
@@ -4153,7 +4152,7 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-polyglot@2.3.0, node-polyglot@^2.2.2:
+node-polyglot@^2.2.2:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/node-polyglot/-/node-polyglot-2.3.0.tgz#e97cc9354e87e648f04858647c6e3be38ad36ce1"
   integrity sha512-9cF870GdUW72lCaZiaahS3PyYy3M9pRw+qYx5jMvQMww8VQ3Oz7fIVUtrPpPWtXz1+mC2GAuqmYucXCs/H/VWQ==
