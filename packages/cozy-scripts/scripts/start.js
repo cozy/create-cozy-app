@@ -44,7 +44,6 @@ module.exports = buildOptions => {
   const appConfig = configs[0]
   appConfig.bail = false // disable bail when watching
   appConfig.output = Object.assign({}, appConfig.output, {
-    filename: '[name].[hash].js',
     publicPath: `http://${host}:${port}/`
   })
   // related issue for HMR
@@ -69,6 +68,7 @@ module.exports = buildOptions => {
   const WebpackOptions = {
     // display build informations only in debug mode or if errors/warnings
     noInfo: !isDebugMode,
+    contentBase: paths.appBuild(),
     stats: {
       // display modules in debugMode (muted by noInfo)
       modules: isDebugMode,
