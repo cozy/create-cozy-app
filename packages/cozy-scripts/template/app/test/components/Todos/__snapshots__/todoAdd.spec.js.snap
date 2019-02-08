@@ -35,307 +35,35 @@ exports[`TodoAdd component: should be rendered correctly 1`] = `
 `;
 
 exports[`TodoAdd component: should handle isWorking correctly (display spinner) 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TodoAdd
-    createDocument={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <h2>
-          Add a new Todo:
-        </h2>,
-        <form
-          onSubmit={[Function]}
-        >
-          <Label
-            className=""
-            error={false}
-            htmlFor="todo-add-input"
-          >
-             Todo name: 
-          </Label>
-          <Input
-            error={false}
-            fullwidth={false}
-            id="todo-add-input"
-            onChange={[Function]}
-            type="text"
-            value=""
-          />
-          <DefaultButton
-            busy={true}
-            extension="narrow"
-            label="add"
-            size="large"
-            type="submit"
-          />
-        </form>,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Add a new Todo:",
-        },
-        "ref": null,
-        "rendered": "Add a new Todo:",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <Label
-              className=""
-              error={false}
-              htmlFor="todo-add-input"
-            >
-               Todo name: 
-            </Label>,
-            <Input
-              error={false}
-              fullwidth={false}
-              id="todo-add-input"
-              onChange={[Function]}
-              type="text"
-              value=""
-            />,
-            <DefaultButton
-              busy={true}
-              extension="narrow"
-              label="add"
-              size="large"
-              type="submit"
-            />,
-          ],
-          "onSubmit": [Function],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": " Todo name: ",
-              "className": "",
-              "error": false,
-              "htmlFor": "todo-add-input",
-            },
-            "ref": null,
-            "rendered": " Todo name: ",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "error": false,
-              "fullwidth": false,
-              "id": "todo-add-input",
-              "onChange": [Function],
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "busy": true,
-              "extension": "narrow",
-              "label": "add",
-              "onClick": undefined,
-              "size": "large",
-              "type": "submit",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "form",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <h2>
-            Add a new Todo:
-          </h2>,
-          <form
-            onSubmit={[Function]}
-          >
-            <Label
-              className=""
-              error={false}
-              htmlFor="todo-add-input"
-            >
-               Todo name: 
-            </Label>
-            <Input
-              error={false}
-              fullwidth={false}
-              id="todo-add-input"
-              onChange={[Function]}
-              type="text"
-              value=""
-            />
-            <DefaultButton
-              busy={true}
-              extension="narrow"
-              label="add"
-              size="large"
-              type="submit"
-            />
-          </form>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Add a new Todo:",
-          },
-          "ref": null,
-          "rendered": "Add a new Todo:",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <Label
-                className=""
-                error={false}
-                htmlFor="todo-add-input"
-              >
-                 Todo name: 
-              </Label>,
-              <Input
-                error={false}
-                fullwidth={false}
-                id="todo-add-input"
-                onChange={[Function]}
-                type="text"
-                value=""
-              />,
-              <DefaultButton
-                busy={true}
-                extension="narrow"
-                label="add"
-                size="large"
-                type="submit"
-              />,
-            ],
-            "onSubmit": [Function],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": " Todo name: ",
-                "className": "",
-                "error": false,
-                "htmlFor": "todo-add-input",
-              },
-              "ref": null,
-              "rendered": " Todo name: ",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "error": false,
-                "fullwidth": false,
-                "id": "todo-add-input",
-                "onChange": [Function],
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "busy": true,
-                "extension": "narrow",
-                "label": "add",
-                "onClick": undefined,
-                "size": "large",
-                "type": "submit",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": "form",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<div>
+  <h2>
+    Add a new Todo:
+  </h2>
+  <form
+    onSubmit={[Function]}
+  >
+    <Label
+      className=""
+      error={false}
+      htmlFor="todo-add-input"
+    >
+       Todo name: 
+    </Label>
+    <Input
+      error={false}
+      fullwidth={false}
+      id="todo-add-input"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <DefaultButton
+      busy={true}
+      extension="narrow"
+      label="add"
+      size="large"
+      type="submit"
+    />
+  </form>
+</div>
 `;
