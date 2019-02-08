@@ -36,7 +36,7 @@ describe('TodoAdd component:', () => {
 
     expect(component.state().isWorking).toBe(false)
     component.setState({ isWorking: true })
-    expect(component).toMatchSnapshot()
+    expect(component.getElement()).toMatchSnapshot()
   })
 
   it('should handle createDocument correctly on button click', async () => {
