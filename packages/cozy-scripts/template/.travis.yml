@@ -4,49 +4,55 @@ matrix:
 node_js:
 - '8'
 branches:
-  except:
-  - build
+  only:
+  - master
 env:
   global:
-  - CXX=g++-4.8
   # GITHUB_TOKEN for yarn deploy script
   # to generate yours : travis encrypt GITHUB_TOKEN=<your_GITHUB_TOKEN> -r <USERNAME_GH>/<SLUG_GH> --org
   # REGISTRY_TOKEN for yarn cozyPublish script
   # to generate yours : travis encrypt REGISTRY_TOKEN=<your_REGISTRY_TOKEN> -r <USERNAME_GH>/<SLUG_GH> --org
   # N.B.: the --org option is needed only for public repositories
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    - deadsnakes
-    packages:
-    - g++-4.8
-    - python3.5
 cache:
   yarn: true
   directories:
   - node_modules
 before_install:
-- curl -fsSL https://bootstrap.pypa.io/get-pip.py | python3.5 - --user
-- travis_retry pip3.5 install --user transifex-client
+- curl -fsSL https://bootstrap.pypa.io/get-pip.py | python - --user
+- travis_retry pip install --user transifex-client==0.12.5
 - install -m0644 .transifexrc.tpl ~/.transifexrc
 - echo "password = $TX_PASSWD" >> ~/.transifexrc
-script:
-- yarn lint
-- yarn test
-- yarn build
-deploy:
-  - provider: script
-    repo: <USERNAME_GH>/<SLUG_GH>
-    skip-cleanup: true
-    # deploy the build on a build branch and publish to the Cozy registry
-    script: DEPLOY_BRANCH=build && yarn deploy && yarn cozyPublish
-    on:
-      branch: master
-  - provider: script
-    repo: <USERNAME_GH>/<SLUG_GH>
-    skip-cleanup: true
-    # publish stable or beta versions using Github Releases (git tag)
-    script: DEPLOY_BRANCH=build && yarn cozyPublish
-    on:
-      tags: true
+stages:
+  - prebuild
+  - build
+jobs:
+  include:
+    - name: 'Lint'
+      stage: 'prebuild'
+      script: yarn lint
+    - name: 'Tests'
+      stage: 'prebuild'
+      script: yarn test
+    - name: 'Build app'
+      stage: 'build'
+      before_install:
+        - curl -fsSL https://bootstrap.pypa.io/get-pip.py | python - --user
+        - travis_retry pip install --user transifex-client==0.12.5
+        - install -m0644 .transifexrc.tpl ~/.transifexrc
+        - echo "password = $TX_PASSWD" >> ~/.transifexrc
+      script: yarn build
+      deploy:
+        - provider: script
+          repo: <USERNAME_GH>/<SLUG_GH>
+          skip-cleanup: true
+          # deploy the build on a build branch and publish to the Cozy registry
+          script: DEPLOY_BRANCH=build && yarn deploy && yarn cozyPublish
+          on:
+            branch: master
+        - provider: script
+          repo: <USERNAME_GH>/<SLUG_GH>
+          skip-cleanup: true
+          # publish stable or beta versions using Github Releases (git tag)
+          script: DEPLOY_BRANCH=build && yarn cozyPublish
+          on:
+            tags: true
