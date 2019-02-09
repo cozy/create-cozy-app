@@ -4,17 +4,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const manifest = fs.readJsonSync(paths.appManifest())
-const { publicFolderName, target, getReactExposer } = require('./webpack.vars')
+const {
+  publicFolderName,
+  target,
+  getReactExposer,
+  hasPublic
+} = require('./webpack.vars')
 
 const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
   : manifest.name
 
 /* We don't build public if no public and if on mobile build */
-const addPublicConfig =
-  target === 'browser' &&
-  fs.existsSync(paths.appPublicIndex()) &&
-  fs.existsSync(paths.appPublicHtmlTemplate())
+const addPublicConfig = hasPublic && target === 'browser'
 
 function getConfig() {
   return addPublicConfig

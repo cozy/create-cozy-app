@@ -43,7 +43,7 @@ module.exports = {
   appLICENSE: () => resolveApp('LICENSE'),
   appSrc: () => resolveAppSrc(),
   appLocales: () => resolveAppSrc('locales'),
-  appVendorAssets: () => resolveAppSrc('targets/vendor/assets'),
+  appAssets: () => resolveAppSrc('targets/assets'),
   appNodeModules: () => resolveApp('node_modules'),
   // for browser
   appBrowserHtmlTemplate: () => resolveAppSrc('targets/browser/index.ejs'),

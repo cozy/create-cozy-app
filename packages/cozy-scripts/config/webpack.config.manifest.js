@@ -2,7 +2,7 @@
 
 const CopyPlugin = require('copy-webpack-plugin')
 
-const { environment } = require('./webpack.vars')
+const { environment, hasPublic, publicFolderName } = require('./webpack.vars')
 const paths = require('../utils/paths')
 const path = require('path')
 const fs = require('fs')
@@ -28,9 +28,6 @@ module.exports = {
 
 // Method to modify the manifest:
 //
-// For dev builds we use the generic "app" slug to share the same application
-// domain for each applications.
-//
 // For production, we grab informations from the locales: short_description,
 // long_description, name, changes... ('manifest' field in the local file)
 // It also computes the langs array according to the existing locales files
@@ -46,8 +43,14 @@ function transformManifest(buffer) {
       content.locales[lang] = localContent.manifest ? localContent.manifest : {}
       content.langs.push(lang)
     }
-  } else {
-    content.slug = 'app'
+  }
+  // icon will be stored in public folder for app with public page
+  if (
+    hasPublic &&
+    content.icon &&
+    !content.icon.match(new RegExp(`${publicFolderName}/`))
+  ) {
+    content.icon = path.join(publicFolderName, content.icon)
   }
   return JSON.stringify(content, null, '  ')
 }

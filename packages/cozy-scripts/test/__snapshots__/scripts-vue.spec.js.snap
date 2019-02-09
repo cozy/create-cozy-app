@@ -268,6 +268,26 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app-vue",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -346,9 +366,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -647,6 +667,26 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app-vue",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -1009,6 +1049,26 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app-vue",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -1095,9 +1155,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -1392,6 +1452,26 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app-vue",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -1763,6 +1843,26 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app-vue",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -1841,9 +1941,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2142,6 +2242,26 @@ Array [
         },
       },
       Object {},
+      Object {
+        "options": Object {
+          "cache": true,
+          "favicons": Object {
+            "appDescription": null,
+            "appName": "test-app-vue",
+            "developerName": "foo",
+            "developerURL": "",
+            "icons": Object {
+              "coast": false,
+              "yandex": false,
+            },
+            "loadManifestWithCredentials": true,
+            "theme_color": "#ffffff",
+          },
+          "inject": "force",
+          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+          "prefix": "assets",
+        },
+      },
       Object {},
       Object {
         "modulesCount": 500,
@@ -2220,9 +2340,9 @@ Array [
         "options": Object {
           "append": false,
           "assets": Array [
-            "public/cozy-bar.js",
-            "public/cozy-bar.css",
-            "public/cozy-client-js.js",
+            "assets/cozy-bar.js",
+            "assets/cozy-bar.css",
+            "assets/cozy-client-js.js",
           ],
           "cssExtensions": Array [
             ".css",
@@ -2287,11 +2407,11 @@ Array [
   "src/locales/en.json",
   "src/styles/index.styl",
   "src/styles/nav.css",
+  "src/targets/assets/icon.svg",
   "src/targets/browser/index.ejs",
   "src/targets/browser/index.js",
   "src/targets/intents/.gitkeep",
   "src/targets/mobile/DOCS.md",
-  "src/targets/vendor/assets/icon.svg",
   "test/__mocks__/fileMock.js",
   "test/__snapshots__/app.spec.js.snap",
   "test/app.spec.js",
