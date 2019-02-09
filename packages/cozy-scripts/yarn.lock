@@ -8816,7 +8816,7 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webapp-webpack-plugin@^2.5.0:
+webapp-webpack-plugin@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/webapp-webpack-plugin/-/webapp-webpack-plugin-2.6.0.tgz#287406c816156bd617a86d4cd27aaea840830724"
   integrity sha512-EznuGJIqZg9ZdSaXZ+W0paWVdcQIXyWsFHj0cN/LJihwtgw0Ozvix2KgdZcrJ9Ndn+3pChhx0okycmHr4sZJwg==
