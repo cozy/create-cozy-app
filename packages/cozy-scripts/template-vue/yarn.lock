@@ -1723,10 +1723,10 @@ cozy-realtime@2.0.1:
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-2.0.1.tgz#bf1e300bf0945295743809717bb1955bb9e6f47f"
   integrity sha512-/F+sgo5z6NPWKsB1YiF4KFX/poIKPsSYTUAM8qcpI5HElAp5y2peUVY6QSZUSSVNUhsmI2Mgd7P/Zgxpz5nj5w==
 
-cozy-ui@17.6.0:
-  version "17.6.0"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-17.6.0.tgz#9b8f2143ea56c6b77b37f311bffbcb1c5fec1a71"
-  integrity sha512-NQwWxjhGS8SV2HE2CLtjKNzFjBQywQ2VDKb5noPGtx8AWQMxozDh+c6nyEKZUTNRfDH2oTmZD5+3HvdUAjma2Q==
+cozy-ui@17.17.2:
+  version "17.17.2"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-17.17.2.tgz#f57a7fd4ce3d413a71fd77654488156ba9a9daab"
+  integrity sha512-oyrKYb5vMKboFYHgtHpBF3DLu0lb3jooY3LGyWicsotv7oed5ayWPbO7zxHq2meeC397emctz6Y2rHanY9bJXQ==
   dependencies:
     body-scroll-lock "^2.5.8"
     classnames "^2.2.5"
@@ -4480,9 +4480,10 @@ pouchdb-abstract-mapreduce@6.4.3:
     pouchdb-promise "6.4.3"
     pouchdb-utils "6.4.3"
 
-"pouchdb-adapter-cordova-sqlite@git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
+"pouchdb-adapter-cordova-sqlite@https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a":
   version "2.0.2"
-  resolved "git+https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
+  uid f3ee23009b70209c611435d57491aa77fb88802a
+  resolved "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
   dependencies:
     pouchdb-adapter-websql-core "^6.1.1"
 
