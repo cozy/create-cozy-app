@@ -117,7 +117,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
     cleanUp()
   })
 
-  fit('should have the correct files outline', done => {
+  it('should have the correct files outline', done => {
     const init = require(path.join(
       appPath,
       'node_modules',
@@ -222,7 +222,7 @@ describe('App from cozy-scripts with VueJS 2', () => {
   })
 
   // Generated app tests
-  fit('should pass all app tests and lint with success', () => {
+  it('should pass all app tests and lint with success', () => {
     console.log(colorize.orange('Running app tests...'))
     expect(() => {
       const lintProcess = spawn.sync('yarn', ['lint'], { stdio: 'inherit' })
