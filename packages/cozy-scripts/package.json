@@ -58,7 +58,7 @@
     "vue-jest": "3.0.3",
     "webapp-webpack-plugin": "2.6.0",
     "webpack": "4.29.3",
-    "webpack-bundle-analyzer": "3.0.3",
+    "webpack-bundle-analyzer": "3.0.4",
     "webpack-dev-server": "3.1.10",
     "webpack-merge": "4.2.1"
   },
