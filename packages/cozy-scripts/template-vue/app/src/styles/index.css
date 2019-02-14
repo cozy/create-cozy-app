@@ -1,0 +1,4 @@
+/* Cozy UI utilities classes */
+@import '~cozy-ui/dist/cozy-ui.min.css';
+/* App styles */
+@import './nav.css';
