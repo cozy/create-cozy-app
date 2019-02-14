@@ -1,0 +1,11 @@
+/* Cozy UI utilities classes */
+@import '~cozy-ui/dist/cozy-ui.min.css';
+/* Cozy UI React components styles */
+@import '~cozy-ui/react/stylesheet.css';
+/* App styles */
+@import './nav.css';
+@import './todos.css';
+
+.app-content {
+    margin: 1rem 0 2rem 2rem;
+}

@@ -20,6 +20,7 @@ exports[`TodoAdd component: should be rendered correctly 1`] = `
       fullwidth={false}
       id="todo-add-input"
       onChange={[Function]}
+      size="large"
       type="text"
       value=""
     />
@@ -54,6 +55,7 @@ exports[`TodoAdd component: should handle isWorking correctly (display spinner) 
       fullwidth={false}
       id="todo-add-input"
       onChange={[Function]}
+      size="large"
       type="text"
       value=""
     />
