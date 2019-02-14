@@ -44,7 +44,6 @@ module.exports = {
   appSrc: () => resolveAppSrc(),
   appLocales: () => resolveAppSrc('locales'),
   appAssets: () => resolveAppSrc('targets/assets'),
-  appNodeModules: () => resolveApp('node_modules'),
   // for browser
   appBrowserHtmlTemplate: () => resolveAppSrc('targets/browser/index.ejs'),
   appBrowserIndex: () => resolveSrcWithExtension('targets/browser/index'),
