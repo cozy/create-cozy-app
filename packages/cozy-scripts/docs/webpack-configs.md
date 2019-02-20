@@ -381,7 +381,6 @@ In this production mode, webpack will automatically use the `UglifyJs` plugin to
 - `externals` with `{ 'cozy-client-js': 'cozy' }` to exclude `cozy-client-js` (via `cozy.*`) dependency from the output bundle
 
 ##### Plugins:
-- `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading) and used with `html-webpack-plugin`
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/browser/` with options:
     - `title`: `name` property of the `package.json`
     - `inject` to `false`
@@ -397,11 +396,9 @@ In this production mode, webpack will automatically use the `UglifyJs` plugin to
 - `output`: `src/targets/mobile/www` path and `pathinfo` enabling only with the `COZY_SCRIPTS_DEBUG` mode
 
 ##### Plugins:
-- `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading) and used with `html-webpack-plugin`
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/mobile/` with options:
     - `title`: `name` property of the `package.json`
     - `excludeChunks`: to exclude chunk `intents`
-    - `inject` to `head`
     - `minify` with `collapseWhitespace` to `true`
 - `webpack.DefinePlugin` to define globals variables at compile time:
     - `__ALLOW_HTTP__` to `false` if `production` environment, `true` for other environments
