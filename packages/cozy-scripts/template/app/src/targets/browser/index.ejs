@@ -8,17 +8,12 @@
   <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
   <link rel="manifest" href="/site.webmanifest" crossOrigin="use-credentials">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#297EF2">
-  <% if (__TARGET__ !== 'mobile') { %>
-  <link rel="stylesheet" type="text/css" href="//{{.Domain}}/assets/fonts/fonts.css">
-  <% } %>
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, viewport-fit=cover">
   <% _.forEach(htmlWebpackPlugin.files.css, function(file) { %>
       <link rel="stylesheet" href="<%- file %>">
   <% }); %>
-  <% _.forEach(htmlWebpackPlugin.files.js, function(file) { %>
-      <script src="<%- file %>" defer></script>
-  <% }); %>
+  {{.ThemeCSS}}
   <% if (__TARGET__ === 'mobile') { %>
   <meta name="format-detection" content="telephone=no">
   <script src="cordova.js" defer></script>
@@ -37,3 +32,6 @@
   data-cozy-app-editor="{{.AppEditor}}"
   data-cozy-icon-path="{{.IconPath}}"
 >
+<% _.forEach(htmlWebpackPlugin.files.js, function(file) { %>
+    <script src="<%- file %>"></script>
+<% }); %>

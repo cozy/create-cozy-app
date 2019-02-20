@@ -13,9 +13,7 @@
   <% _.forEach(htmlWebpackPlugin.files.css, function(file) { %>
       <link rel="stylesheet" href="<%- file %>">
   <% }); %>
-  <% _.forEach(htmlWebpackPlugin.files.js, function(file) { %>
-      <script src="<%- file %>" defer></script>
-  <% }); %>
+  {{.ThemeCSS}}
   <% if (__TARGET__ === 'mobile') { %>
   <meta name="format-detection" content="telephone=no">
   <script src="cordova.js" defer></script>
@@ -35,3 +33,6 @@
   data-cozy-app-editor="{{.AppEditor}}"
   data-cozy-icon-path="{{.IconPath}}"
 >
+<% _.forEach(htmlWebpackPlugin.files.js, function(file) { %>
+    <script src="<%- file %>"></script>
+<% }); %>
