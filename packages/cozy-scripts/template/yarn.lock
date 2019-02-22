@@ -1623,20 +1623,20 @@ cozy-client-js@0.14.2:
     pouchdb-adapter-cordova-sqlite "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
     pouchdb-find "6.4.3"
 
-cozy-client@6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.3.1.tgz#e2dfbcd561fe4d2e8935e801301dd2bca17b426d"
-  integrity sha512-t8b4daopMVGFSXTa7xFpXP3XmF4YCokMA6fusD1ptMkq5c1S3rZm0fnEAQ8feM/wPysQMirax+CSYWM0p0eNDA==
+cozy-client@6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.4.1.tgz#218cc02232a6c4ed6eca8356bbac1c6d390f5093"
+  integrity sha512-OPByZ4O7FQb3pHnrlW7WwpXT4/hvunbBXb7jWaSNgI2V5brCFZlPuIK1b+ucNzdygZ4dCW4YprtxI3rF2A313g==
   dependencies:
     cozy-device-helper "1.6.3"
-    cozy-stack-client "^6.3.1"
+    cozy-stack-client "^6.3.3"
     lodash "4.17.11"
     prop-types "15.6.2"
     react "16.7.0"
     react-redux "5.0.7"
     redux "3.7.2"
     redux-thunk "2.3.0"
-    sift "7.0.1"
+    sift "6.0.0"
 
 cozy-device-helper@1.6.3:
   version "1.6.3"
@@ -1657,10 +1657,10 @@ cozy-realtime@2.0.3:
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-2.0.3.tgz#7c02e19833f8061d32f8f72529a94d2277a8aee1"
   integrity sha512-Ad/l2wWYyvaKvLSOrSVALBdk+utqm6MJIIDDcpPLcT092ynmbSROC4JtG6dEfbzirVqKAM5H44oTtPgGT/e2mg==
 
-cozy-stack-client@^6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.3.1.tgz#49f05bae977ed10ce4a184d8ddd57395e5530424"
-  integrity sha512-iE2mWUemGYa1n+UvcfWrJgc5H3VRhuRy+LIrxzm/QwFZRjXhQCdVgr9TCrAnCLpYT9t2+RfQgkQ/FbrBAWcucA==
+cozy-stack-client@^6.3.3:
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.3.3.tgz#0111763fc2164518e64f27a259aaec3d9ddaf513"
+  integrity sha512-x2zZu1j+QA52jMyNFzJsB2wvaI167xJvILnt7N0Q/+YAiTH+GKKzpF3ZqO13qaeI6COdXt8maQj3myV9NQMj9A==
   dependencies:
     detect-node "2.0.4"
     mime-types "2.1.20"
@@ -5546,10 +5546,10 @@ shebang-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   integrity sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=
 
-sift@7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/sift/-/sift-7.0.1.tgz#47d62c50b159d316f1372f8b53f9c10cd21a4b08"
-  integrity sha512-oqD7PMJ+uO6jV9EQCl0LrRw1OwsiPsiFQR5AR30heR+4Dl7jBBbDLnNvWiak20tzZlSE1H7RB30SX/1j/YYT7g==
+sift@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/sift/-/sift-6.0.0.tgz#f93a778e5cbf05a5024ebc391e6b32511a6d1f82"
+  integrity sha1-+Tp3jly/BaUCTrw5HmsyURptH4I=
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
