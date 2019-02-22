@@ -396,36 +396,6 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
-        },
-      },
-      Object {
         "definitions": Object {
           "__TARGET__": "\\"browser\\"",
         },
@@ -814,36 +784,6 @@ Array [
         },
       },
       Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
-        },
-      },
-      Object {
         "definitions": Object {
           "__TARGET__": "\\"browser\\"",
         },
@@ -1225,36 +1165,6 @@ Array [
           "template": ".tmp_test/test-app/src/targets/mobile/index.ejs",
           "title": "test-app",
           "xhtml": false,
-        },
-      },
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
         },
       },
       Object {
@@ -1649,36 +1559,6 @@ Array [
           "xhtml": false,
         },
       },
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
-        },
-      },
       Object {},
       Object {
         "definitions": Object {
@@ -2044,36 +1924,6 @@ Array [
           "template": ".tmp_test/test-app/src/targets/browser/index.ejs",
           "title": "test-app",
           "xhtml": false,
-        },
-      },
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
         },
       },
       Object {
@@ -2462,36 +2312,6 @@ Array [
           "template": ".tmp_test/test-app/src/targets/browser/index.ejs",
           "title": "test-app",
           "xhtml": false,
-        },
-      },
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
         },
       },
       Object {
@@ -2945,36 +2765,6 @@ Array [
           "template": ".tmp_test/test-app/src/targets/browser/index.ejs",
           "title": "test-app",
           "xhtml": false,
-        },
-      },
-      Object {
-        "options": Object {
-          "async": Object {
-            "test": Array [],
-          },
-          "custom": Array [],
-          "defaultAttribute": "defer",
-          "defer": Object {
-            "test": Array [],
-          },
-          "inline": Object {
-            "test": Array [],
-          },
-          "module": Object {
-            "test": Array [],
-          },
-          "prefetch": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "preload": Object {
-            "chunks": "initial",
-            "test": Array [],
-          },
-          "removeInlinedAssets": true,
-          "sync": Object {
-            "test": Array [],
-          },
         },
       },
       Object {

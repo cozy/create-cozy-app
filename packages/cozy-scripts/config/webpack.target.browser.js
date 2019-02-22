@@ -4,7 +4,6 @@ const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const { getFilename, isDebugMode, getReactExposer } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest())
 
@@ -41,9 +40,6 @@ module.exports = {
       minify: {
         collapseWhitespace: true
       }
-    }),
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
     }),
     new webpack.DefinePlugin({
       __TARGET__: JSON.stringify('browser')
