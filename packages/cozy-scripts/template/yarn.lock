@@ -1665,10 +1665,10 @@ cozy-stack-client@^6.3.1:
     detect-node "2.0.4"
     mime-types "2.1.20"
 
-cozy-ui@19.0.1:
-  version "19.0.1"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-19.0.1.tgz#ead2a9140d652b0cf749dd0a2a7d028cfd63ed7f"
-  integrity sha512-DdMSnJeaosCaW8xE1TmOjbHcoJW3acBLkxl797Cx+AooOkXXuvSahRsMPUVmL19ii5+f91Jhal1LbBE+iteLNw==
+cozy-ui@19.2.0:
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-19.2.0.tgz#ef5e3035a37c38c9c7ac206a8caee54ac1c01f46"
+  integrity sha512-ubh0DcChCZ72Ljix7iGhPt/vSrmQJl6w66/R0YRSGj8TC8Ljetz4+SM+ea0P+LFgwdf2OIaG2HPtHHEKhT7mpA==
   dependencies:
     body-scroll-lock "^2.5.8"
     classnames "^2.2.5"
