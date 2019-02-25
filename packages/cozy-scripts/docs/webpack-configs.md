@@ -368,7 +368,7 @@ Only in the hot reload mode:
     - `__DEVTOOLS__` to `false`
     - `__STACK_ASSETS__` to `true` if `target` different from `mobile`
 
-In this production mode, webpack will automatically use the `UglifyJs` plugin to optimize the build (with default options).
+In this production mode, webpack will automatically use the `Terser` plugin to optimize the build (with `parallel: true` to speedup the build).
 
 
 ## Targets
