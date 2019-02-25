@@ -339,7 +339,21 @@ Array [
           "symbols": Array [],
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "to": ".tmp_test/test-app/build/icon.svg",
+          },
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets",
+            "ignore": Array [
+              ".tmp_test/test-app/src/targets/assets/icon.svg",
+            ],
+          },
+        ],
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -363,7 +377,20 @@ Array [
           "promise": Object {},
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/manifest.webapp",
+          },
+          Object {
+            "from": ".tmp_test/test-app/README.md",
+          },
+          Object {
+            "from": ".tmp_test/test-app/LICENSE",
+          },
+        ],
+      },
       Object {
         "modulesCount": 500,
         "profile": false,
@@ -406,7 +433,23 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.js",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.css",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-client-js/dist/cozy-client.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-client-js.js",
+          },
+        ],
+      },
       Object {
         "options": Object {
           "append": false,
@@ -727,7 +770,21 @@ Array [
           "symbols": Array [],
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "to": ".tmp_test/test-app/build/icon.svg",
+          },
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets",
+            "ignore": Array [
+              ".tmp_test/test-app/src/targets/assets/icon.svg",
+            ],
+          },
+        ],
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -751,7 +808,20 @@ Array [
           "promise": Object {},
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/manifest.webapp",
+          },
+          Object {
+            "from": ".tmp_test/test-app/README.md",
+          },
+          Object {
+            "from": ".tmp_test/test-app/LICENSE",
+          },
+        ],
+      },
       Object {
         "modulesCount": 500,
         "profile": false,
@@ -1098,7 +1168,21 @@ Array [
           "symbols": Array [],
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "to": ".tmp_test/test-app/build/icon.svg",
+          },
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets",
+            "ignore": Array [
+              ".tmp_test/test-app/src/targets/assets/icon.svg",
+            ],
+          },
+        ],
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -1122,7 +1206,20 @@ Array [
           "promise": Object {},
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/manifest.webapp",
+          },
+          Object {
+            "from": ".tmp_test/test-app/README.md",
+          },
+          Object {
+            "from": ".tmp_test/test-app/LICENSE",
+          },
+        ],
+      },
       Object {
         "modulesCount": 500,
         "profile": false,
@@ -1173,7 +1270,23 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.js",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.css",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-client-js/dist/cozy-client.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-client-js.js",
+          },
+        ],
+      },
       Object {
         "options": Object {
           "append": false,
@@ -1490,7 +1603,21 @@ Array [
           "symbols": Array [],
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "to": ".tmp_test/test-app/build/icon.svg",
+          },
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets",
+            "ignore": Array [
+              ".tmp_test/test-app/src/targets/assets/icon.svg",
+            ],
+          },
+        ],
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -1514,7 +1641,20 @@ Array [
           "promise": Object {},
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/manifest.webapp",
+          },
+          Object {
+            "from": ".tmp_test/test-app/README.md",
+          },
+          Object {
+            "from": ".tmp_test/test-app/LICENSE",
+          },
+        ],
+      },
       Object {
         "modulesCount": 500,
         "profile": false,
@@ -1870,7 +2010,21 @@ Array [
           "symbols": Array [],
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "to": ".tmp_test/test-app/build/icon.svg",
+          },
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets",
+            "ignore": Array [
+              ".tmp_test/test-app/src/targets/assets/icon.svg",
+            ],
+          },
+        ],
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -1894,7 +2048,20 @@ Array [
           "promise": Object {},
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/manifest.webapp",
+          },
+          Object {
+            "from": ".tmp_test/test-app/README.md",
+          },
+          Object {
+            "from": ".tmp_test/test-app/LICENSE",
+          },
+        ],
+      },
       Object {
         "modulesCount": 500,
         "profile": false,
@@ -1937,7 +2104,23 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.js",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.css",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-client-js/dist/cozy-client.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-client-js.js",
+          },
+        ],
+      },
       Object {
         "options": Object {
           "append": false,
@@ -2258,7 +2441,21 @@ Array [
           "symbols": Array [],
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "to": ".tmp_test/test-app/build/icon.svg",
+          },
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets",
+            "ignore": Array [
+              ".tmp_test/test-app/src/targets/assets/icon.svg",
+            ],
+          },
+        ],
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -2282,7 +2479,20 @@ Array [
           "promise": Object {},
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/manifest.webapp",
+          },
+          Object {
+            "from": ".tmp_test/test-app/README.md",
+          },
+          Object {
+            "from": ".tmp_test/test-app/LICENSE",
+          },
+        ],
+      },
       Object {
         "modulesCount": 500,
         "profile": false,
@@ -2325,7 +2535,23 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.js",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.css",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-client-js/dist/cozy-client.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-client-js.js",
+          },
+        ],
+      },
       Object {
         "options": Object {
           "append": false,
@@ -2711,7 +2937,21 @@ Array [
           "symbols": Array [],
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "to": ".tmp_test/test-app/build/icon.svg",
+          },
+          Object {
+            "from": ".tmp_test/test-app/src/targets/assets",
+            "ignore": Array [
+              ".tmp_test/test-app/src/targets/assets/icon.svg",
+            ],
+          },
+        ],
+      },
       Object {
         "options": Object {
           "cache": true,
@@ -2735,7 +2975,20 @@ Array [
           "promise": Object {},
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/manifest.webapp",
+          },
+          Object {
+            "from": ".tmp_test/test-app/README.md",
+          },
+          Object {
+            "from": ".tmp_test/test-app/LICENSE",
+          },
+        ],
+      },
       Object {
         "modulesCount": 500,
         "profile": false,
@@ -2778,7 +3031,23 @@ Array [
           "__STACK_ASSETS__": false,
         },
       },
-      Object {},
+      Object {
+        "options": Object {},
+        "patterns": Array [
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.js",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-bar/dist/cozy-bar.css",
+            "to": ".tmp_test/test-app/build/assets/cozy-bar.css",
+          },
+          Object {
+            "from": ".tmp_test/test-app/node_modules/cozy-client-js/dist/cozy-client.js",
+            "to": ".tmp_test/test-app/build/assets/cozy-client-js.js",
+          },
+        ],
+      },
       Object {
         "options": Object {
           "append": false,
