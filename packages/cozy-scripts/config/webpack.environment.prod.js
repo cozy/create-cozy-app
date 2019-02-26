@@ -1,6 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const { target } = require('./webpack.vars')
 
@@ -14,5 +15,12 @@ module.exports = {
       __DEVTOOLS__: false,
       __STACK_ASSETS__: target !== 'mobile'
     })
-  ]
+  ],
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        parallel: true
+      })
+    ]
+  }
 }

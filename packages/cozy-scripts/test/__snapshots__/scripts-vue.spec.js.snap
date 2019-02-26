@@ -586,6 +586,22 @@ Array [
       ],
     },
     "optimization": Object {
+      "minimizer": Array [
+        Object {
+          "options": Object {
+            "cache": false,
+            "extractComments": false,
+            "parallel": true,
+            "sourceMap": false,
+            "terserOptions": Object {
+              "output": Object {
+                "comments": Object {},
+              },
+            },
+            "test": Object {},
+          },
+        },
+      ],
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
@@ -1388,6 +1404,22 @@ Array [
       ],
     },
     "optimization": Object {
+      "minimizer": Array [
+        Object {
+          "options": Object {
+            "cache": false,
+            "extractComments": false,
+            "parallel": true,
+            "sourceMap": false,
+            "terserOptions": Object {
+              "output": Object {
+                "comments": Object {},
+              },
+            },
+            "test": Object {},
+          },
+        },
+      ],
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
