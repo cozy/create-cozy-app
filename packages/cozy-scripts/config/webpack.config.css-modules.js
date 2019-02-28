@@ -37,7 +37,12 @@ module.exports = {
               }
             }
           },
-          require.resolve('stylus-loader')
+          {
+            loader: require.resolve('stylus-loader'),
+            options: {
+              preferPathResolver: 'webpack'
+            }
+          }
         ]
       }
     ]
