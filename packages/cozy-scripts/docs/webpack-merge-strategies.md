@@ -65,7 +65,12 @@ module.exports = [configs,
                   }
                 }
               },
-              'stylus-loader'
+              {
+                loader: 'stylus-loader',
+                options: {
+                  preferPathResolver: 'webpack'
+                }
+              }
             ]
           })
         }
