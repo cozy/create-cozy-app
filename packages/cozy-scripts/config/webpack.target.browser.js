@@ -15,7 +15,7 @@ const appName = manifest.name_prefix
 module.exports = {
   entry: {
     app: [
-      // polyfills, avaid to import it in the application
+      // polyfills, avoid to import it in the application
       require.resolve('babel-polyfill'),
       // Exposed variables in global scope (needed for cozy-bar)
       getReactExposer(),
