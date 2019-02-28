@@ -6,6 +6,8 @@ node_js:
 branches:
   only:
   - master
+  # tags
+  - /^\d+\.\d+\.\d+(\-beta.\d+)?$/
 env:
   global:
   # GITHUB_TOKEN for yarn deploy script
