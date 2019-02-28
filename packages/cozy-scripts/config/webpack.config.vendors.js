@@ -8,6 +8,11 @@ const fs = require('fs')
 const svgo = new SvgoInstance({
   plugins: [
     {
+      removeDimensions: true,
+      // inline styles are blocked by Cozy CSPs
+      inlineStyles: {
+        onlyMatchedOnce: false
+      },
       removeViewBox: false
     }
   ]
