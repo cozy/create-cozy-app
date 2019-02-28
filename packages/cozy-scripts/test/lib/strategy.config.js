@@ -55,7 +55,12 @@ const configs = [
                 }
               }
             },
-            'stylus-loader'
+            {
+              loader: 'stylus-loader',
+              options: {
+                preferPathResolver: 'webpack'
+              }
+            }
           ]
         }
       ]
@@ -95,7 +100,12 @@ const configs = [
                 }
               }
             },
-            'stylus-loader'
+            {
+              loader: 'stylus-loader',
+              options: {
+                preferPathResolver: 'webpack'
+              }
+            }
           ]
         }
       ]
