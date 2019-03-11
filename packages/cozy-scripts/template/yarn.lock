@@ -1623,13 +1623,13 @@ cozy-client-js@0.14.2:
     pouchdb-adapter-cordova-sqlite "https://github.com/SnceGroup/pouchdb-adapter-cordova-sqlite.git#f3ee23009b70209c611435d57491aa77fb88802a"
     pouchdb-find "6.4.3"
 
-cozy-client@6.4.1:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.4.1.tgz#218cc02232a6c4ed6eca8356bbac1c6d390f5093"
-  integrity sha512-OPByZ4O7FQb3pHnrlW7WwpXT4/hvunbBXb7jWaSNgI2V5brCFZlPuIK1b+ucNzdygZ4dCW4YprtxI3rF2A313g==
+cozy-client@6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.9.0.tgz#e84caf6a541e68792257442e73ad2ac549374236"
+  integrity sha512-H+rEFRXKCpYDMRBccO/TsFUjRkbWOeUZy/71mXv0G+/Zk8jOn1Js2eliRaetSTYTvIleIohT/sKzRLx9xUR7uA==
   dependencies:
     cozy-device-helper "1.6.3"
-    cozy-stack-client "^6.3.3"
+    cozy-stack-client "^6.7.0"
     lodash "4.17.11"
     prop-types "15.6.2"
     react "16.7.0"
@@ -1657,13 +1657,14 @@ cozy-realtime@2.0.3:
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-2.0.3.tgz#7c02e19833f8061d32f8f72529a94d2277a8aee1"
   integrity sha512-Ad/l2wWYyvaKvLSOrSVALBdk+utqm6MJIIDDcpPLcT092ynmbSROC4JtG6dEfbzirVqKAM5H44oTtPgGT/e2mg==
 
-cozy-stack-client@^6.3.3:
-  version "6.3.3"
-  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.3.3.tgz#0111763fc2164518e64f27a259aaec3d9ddaf513"
-  integrity sha512-x2zZu1j+QA52jMyNFzJsB2wvaI167xJvILnt7N0Q/+YAiTH+GKKzpF3ZqO13qaeI6COdXt8maQj3myV9NQMj9A==
+cozy-stack-client@^6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.7.0.tgz#cf8963b5cdbbaac92abdaeb302f723f9e3cd9612"
+  integrity sha512-OcqIQ5MEqr5vNL3AnGXceehOMLsbCcfF4Wydf39bqk9fA1LODL4dBNaExgd42A/FxwZ5dfBHarhkkfk/6EAyvw==
   dependencies:
     detect-node "2.0.4"
     mime-types "2.1.20"
+    qs "6.6.0"
 
 cozy-ui@19.2.0:
   version "19.2.0"
@@ -4867,6 +4868,11 @@ punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+qs@6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.6.0.tgz#a99c0f69a8d26bf7ef012f871cdabb0aee4424c2"
+  integrity sha512-KIJqT9jQJDQx5h5uAVPimw6yVg2SekOKu959OCtktD3FjzbpvaPr8i4zzg07DOMz+igA4W/aNM7OV8H37pFYfA==
 
 qs@~6.5.1:
   version "6.5.2"
