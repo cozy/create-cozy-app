@@ -17,7 +17,8 @@ const svgo = new SvgoInstance({
   plugins: [
     {
       removeViewBox: false,
-      // inlince styles are blocked by Cozy CSPs
+      removeDimensions: true,
+      // inline styles are blocked by Cozy CSPs
       inlineStyles: {
         onlyMatchedOnce: false
       }
