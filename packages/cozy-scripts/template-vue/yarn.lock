@@ -1615,7 +1615,7 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-core-js@2.6.4, core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.3:
+core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.3:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.4.tgz#b8897c062c4d769dd30a0ac5c73976c47f92ea0d"
   integrity sha512-05qQ5hXShcqGkPZpXEFLIpxayZscVD2kuMBZewxiIPPEagukO4mqgPA9CWhUvFBJfy3ODdK2p9xyHh7FTU9/7A==
@@ -1625,15 +1625,14 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cozy-bar@6.13.1:
-  version "6.13.1"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.13.1.tgz#28372a675c937d3455c8976a326848e2b892e7ee"
-  integrity sha512-dAL+PUB/hUhjA/E4Fad9/GN3KUR1tS387aav6ilix15fhbywMx3FF6mCrqB+YRgXQVaOgv+JwwnVEBdOCtBMbg==
+cozy-bar@6.15.1:
+  version "6.15.1"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.15.1.tgz#69c854e49c1c4f037c1dbb8e768d89d7aa5a54a2"
+  integrity sha512-PgErwfZfK5+MpKYsmAwnad0JGRlFblyc9bSRbXdQlDGlhrpSEmWUTqIJ839h6BMgkA6OK8OkuN/WBnxuF6NZ+g==
   dependencies:
     "@babel/core" "7.2.2"
     babel-core "7.0.0-bridge.0"
     babel-preset-cozy-app "1.3.2"
-    core-js "2.6.4"
     cozy-client-js "0.14.2"
     cozy-device-helper "1.6.5"
     cozy-realtime "2.0.3"
