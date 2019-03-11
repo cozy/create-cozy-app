@@ -1685,11 +1685,6 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
   integrity sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
 
-camelcase@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.0.0.tgz#03295527d58bd3cd4aa75363f35b2e8d97be2f42"
-  integrity sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==
-
 camelcase@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.2.0.tgz#e7522abda5ed94cc0489e1b8466610e88404cf45"
@@ -8855,13 +8850,13 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webapp-webpack-plugin@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/webapp-webpack-plugin/-/webapp-webpack-plugin-2.6.0.tgz#287406c816156bd617a86d4cd27aaea840830724"
-  integrity sha512-EznuGJIqZg9ZdSaXZ+W0paWVdcQIXyWsFHj0cN/LJihwtgw0Ozvix2KgdZcrJ9Ndn+3pChhx0okycmHr4sZJwg==
+webapp-webpack-plugin@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/webapp-webpack-plugin/-/webapp-webpack-plugin-2.6.1.tgz#45eadf5335e7c9c541c0e44b62c6426b23b00526"
+  integrity sha512-8IcNS4yAxfpDaJyOpiZK1MvuCNVDHsCs5Z475r44+vVfsPNGaMi9OwEnHRJGoM2yt+kzKcL/5+PLlXq1fWHDGg==
   dependencies:
     cache-loader "^2.0.1"
-    camelcase "^5.0.0"
+    camelcase "^5.2.0"
     favicons "5.3.0"
     find-cache-dir "^2.0.0"
     find-root "^1.1.0"
