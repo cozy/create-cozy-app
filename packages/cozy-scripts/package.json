@@ -54,7 +54,7 @@
     "svg-sprite-loader": "4.1.3",
     "svgo": "1.2.0",
     "validate-npm-package-name": "3.0.0",
-    "vue-jest": "3.0.3",
+    "vue-jest": "3.0.4",
     "webapp-webpack-plugin": "2.6.0",
     "webpack": "4.29.6",
     "webpack-bundle-analyzer": "3.0.4",
