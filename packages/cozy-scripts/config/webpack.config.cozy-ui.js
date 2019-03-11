@@ -37,6 +37,7 @@ module.exports = {
           {
             loader: require.resolve('stylus-loader'),
             options: {
+              preferPathResolver: 'webpack',
               use: [cozyUIPlugin()]
             }
           }

@@ -45,7 +45,12 @@ Array [
                 "sourceMap": true,
               },
             },
-            "stylus-loader",
+            Object {
+              "loader": "stylus-loader",
+              "options": Object {
+                "preferPathResolver": "webpack",
+              },
+            },
           ],
         },
       ],
@@ -195,6 +200,7 @@ Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
               "options": Object {
+                "preferPathResolver": "webpack",
                 "use": Array [
                   null,
                 ],
@@ -625,6 +631,7 @@ Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
               "options": Object {
+                "preferPathResolver": "webpack",
                 "use": Array [
                   null,
                 ],
@@ -1041,6 +1048,7 @@ Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
               "options": Object {
+                "preferPathResolver": "webpack",
                 "use": Array [
                   null,
                 ],
@@ -1475,6 +1483,7 @@ Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
               "options": Object {
+                "preferPathResolver": "webpack",
                 "use": Array [
                   null,
                 ],
@@ -1898,6 +1907,7 @@ Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
               "options": Object {
+                "preferPathResolver": "webpack",
                 "use": Array [
                   null,
                 ],
@@ -2329,6 +2339,7 @@ Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
               "options": Object {
+                "preferPathResolver": "webpack",
                 "use": Array [
                   null,
                 ],
@@ -2825,6 +2836,7 @@ Array [
             Object {
               "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
               "options": Object {
+                "preferPathResolver": "webpack",
                 "use": Array [
                   null,
                 ],
