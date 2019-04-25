@@ -43,7 +43,7 @@
     "vue-template-compiler": "2.6.10"
   },
   "dependencies": {
-    "cozy-bar": "6.15.1",
+    "cozy-bar": "6.21.9",
     "cozy-client-js": "0.15.1",
     "cozy-ui": "19.24.3",
     "date-fns": "1.30.1",
