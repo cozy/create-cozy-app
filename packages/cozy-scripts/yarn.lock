@@ -1511,7 +1511,7 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
   integrity sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
 
-camelcase@^5.2.0:
+camelcase@^5.2.0, camelcase@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
@@ -7936,7 +7936,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tapable@^1.0.0, tapable@^1.1.0, tapable@^1.1.1:
+tapable@^1.0.0, tapable@^1.1.0, tapable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
   integrity sha512-4WK/bYZmj8xLr+HUCODHGF1ZFzsYffasLUgEiMBY4fgtltdO6B4WJtlSbPaDTLpYTcGVwM2qLnFTICEcNxs3kA==
@@ -8518,20 +8518,20 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webapp-webpack-plugin@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/webapp-webpack-plugin/-/webapp-webpack-plugin-2.6.1.tgz#45eadf5335e7c9c541c0e44b62c6426b23b00526"
-  integrity sha512-8IcNS4yAxfpDaJyOpiZK1MvuCNVDHsCs5Z475r44+vVfsPNGaMi9OwEnHRJGoM2yt+kzKcL/5+PLlXq1fWHDGg==
+webapp-webpack-plugin@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/webapp-webpack-plugin/-/webapp-webpack-plugin-2.7.0.tgz#06d83339d779c6dd293f922fca5bcb2a1df691bd"
+  integrity sha512-qlpiikCu4CjEJ4s+MLw88L49eg1JXW3svsJ4ZnmADvxlzn3gu4yCCYluQFyMPEyy2l/vlmv8sKjfkjaBUxcq9g==
   dependencies:
     cache-loader "^2.0.1"
-    camelcase "^5.2.0"
+    camelcase "^5.3.1"
     favicons "5.3.0"
     find-cache-dir "^2.0.0"
     find-root "^1.1.0"
     loader-utils "^1.2.3"
     msgpack-lite "^0.1.26"
     parse-author "^2.0.0"
-    tapable "^1.1.1"
+    tapable "^1.1.3"
 
 webidl-conversions@^4.0.2:
   version "4.0.2"
