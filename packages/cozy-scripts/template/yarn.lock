@@ -1467,14 +1467,15 @@ cozy-client@6.21.0:
     redux-thunk "2.3.0"
     sift "6.0.0"
 
-cozy-client@6.9.0:
-  version "6.9.0"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.9.0.tgz#e84caf6a541e68792257442e73ad2ac549374236"
-  integrity sha512-H+rEFRXKCpYDMRBccO/TsFUjRkbWOeUZy/71mXv0G+/Zk8jOn1Js2eliRaetSTYTvIleIohT/sKzRLx9xUR7uA==
+cozy-client@6.24.2:
+  version "6.24.2"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.24.2.tgz#c056e1cccf17d30fe5153c8c03da717493a5858a"
+  integrity sha512-lPqEdAY+m78V7jXL47p505CF8sGpLQJS7CTWQ3733TFr06icvK+j90b8AeFNwR1cdv+yAFk88Fm1jYYYeFe6xQ==
   dependencies:
     cozy-device-helper "1.6.3"
-    cozy-stack-client "^6.7.0"
+    cozy-stack-client "^6.24.2"
     lodash "4.17.11"
+    microee "0.0.6"
     prop-types "15.6.2"
     react "16.7.0"
     react-redux "5.0.7"
@@ -1520,7 +1521,7 @@ cozy-realtime@2.0.8, cozy-realtime@^2.0.8:
   resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-2.0.8.tgz#e2e9abfaeff8b610c2bbd1bf9cb5898484df2ef1"
   integrity sha512-L0PAaZXT6u1ixmdMIaSsPwcX1edLZ+8AdiqdOKL+olPaMDgNseyyjr4Vlnnsr7Sx5f6BpcWQFUQr+do+yX9i+w==
 
-cozy-stack-client@^6.20.0, cozy-stack-client@^6.21.0, cozy-stack-client@^6.7.0:
+cozy-stack-client@^6.20.0, cozy-stack-client@^6.21.0:
   version "6.21.0"
   resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.21.0.tgz#209550adcd13ffa6fe6fa54dd7e0327b94720898"
   integrity sha512-ha8MmU9v73SX/IeT+Kzvf86HzrfUys4pGxvyVfNL80TPfM9rNj3mRvkx3/pJTV5TM2K25Jx5iRZbLiI5trj9vw==
@@ -1528,6 +1529,15 @@ cozy-stack-client@^6.20.0, cozy-stack-client@^6.21.0, cozy-stack-client@^6.7.0:
     detect-node "2.0.4"
     mime-types "2.1.20"
     qs "6.6.0"
+
+cozy-stack-client@^6.24.2:
+  version "6.24.2"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.24.2.tgz#49a0e19c6381adb981b9cad94be3b9a1f4514a70"
+  integrity sha512-xGKAtyOTgJjpxGObq3yUMTFR1R+exPzaInrHdpaIUdddT5HIu51xn5Vfw+ZmqxXQQeRosCdw0JJpAryZKygbhQ==
+  dependencies:
+    detect-node "2.0.4"
+    mime-types "2.1.24"
+    qs "6.7.0"
 
 cozy-ui@19.21.2:
   version "19.21.2"
@@ -3374,6 +3384,11 @@ micromatch@^3.1.10:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+mime-db@1.40.0:
+  version "1.40.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.40.0.tgz#a65057e998db090f732a68f6c276d387d4126c32"
+  integrity sha512-jYdeOMPy9vnxEqFRRo6ZvTZ8d9oPb+k18PKoYNYUe2stVEBPPwsln/qWzdbmaIvnhZ9v2P+CuecK+fpUfsV2mA==
+
 mime-db@~1.36.0:
   version "1.36.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.36.0.tgz#5020478db3c7fe93aad7bbcc4dcf869c43363397"
@@ -3385,6 +3400,13 @@ mime-types@2.1.20:
   integrity sha512-HrkrPaP9vGuWbLK1B1FfgAkbqNjIuy4eHlIYnFi7kamZyLLrGlo2mpcx0bBmNpKqBtYtAfGbodDddIgddSJC2A==
   dependencies:
     mime-db "~1.36.0"
+
+mime-types@2.1.24:
+  version "2.1.24"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.24.tgz#b6f8d0b3e951efb77dedeca194cff6d16f676f81"
+  integrity sha512-WaFHS3MCl5fapm3oLxU4eYDw77IQM2ACcxQ9RIxfaC3ooc6PFuBMGZZsYpvoXS5D5QTWPieo1jjLdAm3TBP3cQ==
+  dependencies:
+    mime-db "1.40.0"
 
 mimic-fn@^1.0.0:
   version "1.2.0"
@@ -4150,6 +4172,11 @@ qs@6.6.0:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.6.0.tgz#a99c0f69a8d26bf7ef012f871cdabb0aee4424c2"
   integrity sha512-KIJqT9jQJDQx5h5uAVPimw6yVg2SekOKu959OCtktD3FjzbpvaPr8i4zzg07DOMz+igA4W/aNM7OV8H37pFYfA==
+
+qs@6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
+  integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
 raf@^3.4.0:
   version "3.4.1"
