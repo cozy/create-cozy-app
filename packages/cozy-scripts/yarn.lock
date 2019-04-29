@@ -7904,10 +7904,10 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-svg-baker-runtime@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/svg-baker-runtime/-/svg-baker-runtime-1.4.0.tgz#eb53a5447856b824095f8344e969663b002b4149"
-  integrity sha512-wrv8ivS2MlkKKl9CLULEevxOSLXtCkQuwZaF9stFnvSQRp/Xexh2R5MOWpMQr+px0JMOy4I1dAXm50hq75Asrg==
+svg-baker-runtime@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/svg-baker-runtime/-/svg-baker-runtime-1.4.1.tgz#d3f77dffdf1f1a8b8f1e84ef67d2c1b53d60d770"
+  integrity sha512-4HLs8dU5kP4+zWix3MoZUge7kSVO6VCg14dLJWVIRWZx1vik21k/h5T620VXRoIyn0nw8g1R8Qk+VvW9BLOOPA==
   dependencies:
     deepmerge "1.3.2"
     mitt "1.1.2"
@@ -7932,10 +7932,29 @@ svg-baker@^1.4.0:
     query-string "^4.3.2"
     traverse "^0.6.6"
 
-svg-sprite-loader@4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-4.1.3.tgz#d25cfa75a5c4e499f7b5282281db6eb3bda13fe0"
-  integrity sha512-lOLDSJoyriYnOeGYc7nhxTDYj2vfdBVKpxIS/XK70//kA3VB55H89T1lct2OEClY4w5kQLZJAvDGQ41g3YTogQ==
+svg-baker@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.4.1.tgz#6071edef6e99b12af87e655024c154d066e1ad2f"
+  integrity sha512-Y14nrVtN8IMYZ5K8yNlepdGwfAi0GClqaoSMTtYsQxFfaobtyDTM816lTWMA5tbbXDbih1frv7AGil54dtX6YA==
+  dependencies:
+    bluebird "^3.5.0"
+    clone "^2.1.1"
+    he "^1.1.1"
+    image-size "^0.5.1"
+    loader-utils "^1.1.0"
+    merge-options "1.0.1"
+    micromatch "3.1.0"
+    postcss "^5.2.17"
+    postcss-prefix-selector "^1.6.0"
+    posthtml-rename-id "^1.0"
+    posthtml-svg-mode "^1.0.3"
+    query-string "^4.3.2"
+    traverse "^0.6.6"
+
+svg-sprite-loader@4.1.6:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-4.1.6.tgz#ca03d51201e326c1c018389c81d5b0eb78dc01de"
+  integrity sha512-fVLDJ36GUfLmeZEB+RFq/OmiEThifZsQQ+8YSmbpOtyvlkLBbnGydYG6IHJehgbpy58898JyoHk+krd6C+6dXg==
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
@@ -7943,8 +7962,8 @@ svg-sprite-loader@4.1.3:
     escape-string-regexp "1.0.5"
     html-webpack-plugin "^3.2.0"
     loader-utils "^1.1.0"
-    svg-baker "^1.4.0"
-    svg-baker-runtime "^1.4.0"
+    svg-baker "^1.4.1"
+    svg-baker-runtime "1.4.1"
     url-slug "2.0.0"
 
 svg2png@^4.1.1:
