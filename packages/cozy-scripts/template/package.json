@@ -45,7 +45,7 @@
   "dependencies": {
     "cozy-bar": "6.21.9",
     "cozy-client": "6.24.2",
-    "cozy-ui": "19.24.3",
+    "cozy-ui": "19.30.2",
     "eslint-config-cozy-app": "1.1.12",
     "react": "16.8.6",
     "react-dom": "16.8.6",
