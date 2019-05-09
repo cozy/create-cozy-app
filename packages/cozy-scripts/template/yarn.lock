@@ -1554,10 +1554,10 @@ cozy-ui@19.21.2:
     react-hot-loader "^4.3.11"
     react-select "2.2.0"
 
-cozy-ui@19.24.3:
-  version "19.24.3"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-19.24.3.tgz#a6cad17b6e668c269c7da0f3bb38d5cf9bd5e19c"
-  integrity sha512-yK61AT2k3eQRu6Uhet1amPGkiYLmBtJHonv8bCKVZWr1H/yKjJKjbrHKPK5guun0MlWiBjcZUQyNwYL2Ab371g==
+cozy-ui@19.30.2:
+  version "19.30.2"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-19.30.2.tgz#9e10d4a687c6db0de91b386d1cc9d1ea9176341d"
+  integrity sha512-U7B2eyw1CahlmDN7JfxqSK6MVrEvLPgu0sMRZaaevLMn2ymutPxPKz3TLgmQHFSRiPgUzRdMM52ifRZt4p3uBg==
   dependencies:
     "@babel/runtime" "^7.3.4"
     body-scroll-lock "^2.5.8"
