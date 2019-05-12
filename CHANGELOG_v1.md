@@ -14,6 +14,22 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.12.3, cozy-scripts-vanilla@1.1.1 (2019-05-12)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#1145](https://github.com/CPatchane/create-cozy-app/pull/1145) feat: Don't use the slow stylus resolver ([@nono](https://github.com/nono))
+  * [#1142](https://github.com/CPatchane/create-cozy-app/pull/1142) feat: Make SVGO optimize a bit more the SVGs ([@nono](https://github.com/nono))
+  * [#1135](https://github.com/CPatchane/create-cozy-app/pull/1135) feat: Make the minification faster ([@nono](https://github.com/nono))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts-vanilla`, `cozy-scripts`
+  * [#1122](https://github.com/CPatchane/create-cozy-app/pull/1122) Avoid the glitch while loading the app ([@nono](https://github.com/nono))
+
+#### Committers: 1
+- Bruno Michel ([@nono](https://github.com/nono))
+
+
 ## cozy-scripts@1.13.0 (2019-02-08)
 
 #### :nail_care: Enhancements:
