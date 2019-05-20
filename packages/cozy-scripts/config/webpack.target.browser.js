@@ -26,7 +26,8 @@ module.exports = {
   output: {
     path: paths.appBuild(),
     filename: `${getFilename()}.js`,
-    pathinfo: isDebugMode
+    pathinfo: isDebugMode,
+    globalObject: 'this'
   },
   externals: {
     'cozy-client-js': 'cozy'
