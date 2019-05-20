@@ -51,13 +51,16 @@ let plugins = [
   })
 ]
 
+let output = {}
 if (useHotReload) {
   plugins = plugins.concat([new webpack.HotModuleReplacementPlugin()])
+  output.globalObject = 'this'
 }
 
 module.exports = {
   devtool: '#source-map',
   mode: 'development',
   externals: ['cozy'],
-  plugins
+  plugins,
+  output
 }
