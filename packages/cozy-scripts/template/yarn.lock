@@ -1467,13 +1467,13 @@ cozy-client@6.21.0:
     redux-thunk "2.3.0"
     sift "6.0.0"
 
-cozy-client@6.29.0:
-  version "6.29.0"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.29.0.tgz#70101cdc6aa22b98182f73faeddd3a120966f894"
-  integrity sha512-+L9XVftaU2B8duWflBztLE9a8KC4n2aJ9Axn46+G2u0PzPX8AKmze+UJXmOndn0GBSrl6AdlsxSS5LELzPXerw==
+cozy-client@6.37.1:
+  version "6.37.1"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-6.37.1.tgz#f18a6312003e9e0f1db6de8029476bf22631defb"
+  integrity sha512-4Vwwwr552Csq2TzspgVi3Z+V/RdzAD63GpMAkeUW+9JXrKU96SNwLfBDddlNj+1e3BA1zlZS7oW/tkWiTpQwzg==
   dependencies:
     cozy-device-helper "1.6.3"
-    cozy-stack-client "^6.25.0"
+    cozy-stack-client "^6.33.0"
     lodash "4.17.11"
     microee "0.0.6"
     prop-types "15.6.2"
@@ -1482,6 +1482,7 @@ cozy-client@6.29.0:
     redux "3.7.2"
     redux-thunk "2.3.0"
     sift "6.0.0"
+    url-search-params-polyfill "^6.0.0"
 
 cozy-device-helper@1.6.3:
   version "1.6.3"
@@ -1530,10 +1531,10 @@ cozy-stack-client@^6.20.0, cozy-stack-client@^6.21.0:
     mime-types "2.1.20"
     qs "6.6.0"
 
-cozy-stack-client@^6.25.0:
-  version "6.25.0"
-  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.25.0.tgz#4fc50087d900be4b0976ceca3606c77703cf5f52"
-  integrity sha512-SY7450Yg9n9HDcPsMaNgfTcId5rXOR7hpzyCo1OUZoLINOGlG9Crd10p01aiOLSbvw8z1piKJnGyxYSSrmBOXA==
+cozy-stack-client@^6.33.0:
+  version "6.33.0"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-6.33.0.tgz#62eca6b63f1d7202ae5032b28b47461be5e85199"
+  integrity sha512-7S8xPcd03BoEd/VFhBv/vxB/2P0U2SLK/wgFoLor7lPHJ00Al8q/pFFgDIb8r1eoK247augH/JrcDUGbSIhVQA==
   dependencies:
     detect-node "2.0.4"
     mime-types "2.1.24"
@@ -5399,6 +5400,11 @@ url-join@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-1.1.0.tgz#741c6c2f4596c4830d6718460920d0c92202dc78"
   integrity sha1-dBxsL0WWxIMNZxhGCSDQySIC3Hg=
+
+url-search-params-polyfill@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-6.0.0.tgz#f5e5fc230d56125f5b0ba67d9cbcd6555fa347e3"
+  integrity sha512-69Bl5s3SiEgcHe8SMpzLGOyag27BQeTeSaP/CfVHkKc/VdUHtNjaP2PnhshFVC021221ItueOzuMMGofZ/HDmQ==
 
 use@^3.1.0:
   version "3.1.1"
