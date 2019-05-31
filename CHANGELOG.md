@@ -14,6 +14,16 @@
 - If you want to have the __Hot Module Replacement__ working with your React application, you may need to use `react-hot-loader` in your main App component as in the [template](https://github.com/CPatchane/create-cozy-app/blob/cozy-scripts%401.0.0/packages/cozy-scripts/template/app/src/components/App.jsx)
 
 
+## cozy-scripts@1.12.4 (2019-05-31)
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#1222](https://github.com/CPatchane/create-cozy-app/pull/1222) fix: Support window in HMR env ([@Crash--](https://github.com/Crash--))
+
+#### Committers: 1
+- Quentin Valmori ([@Crash--](https://github.com/Crash--))
+
+
 ## cozy-scripts@1.12.3, cozy-scripts-vanilla@1.1.1 (2019-05-12)
 
 #### :nail_care: Enhancements:
