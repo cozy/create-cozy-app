@@ -19,7 +19,11 @@ module.exports = {
   optimization: {
     minimizer: [
       new TerserPlugin({
-        parallel: true
+        parallel: true,
+        //To fix a SAfari 10 bug : https://github.com/zeit/next.js/issues/5630
+        terserOptions: {
+          safari10: true
+        }
       })
     ]
   }
