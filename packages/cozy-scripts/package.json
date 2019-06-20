@@ -56,7 +56,7 @@
     "validate-npm-package-name": "3.0.0",
     "vue-jest": "3.0.4",
     "webapp-webpack-plugin": "2.7.0",
-    "webpack": "4.32.2",
+    "webpack": "4.35.0",
     "webpack-bundle-analyzer": "3.3.2",
     "webpack-dev-server": "3.4.1",
     "webpack-merge": "4.2.1"
