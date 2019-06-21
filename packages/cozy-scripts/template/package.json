@@ -31,7 +31,7 @@
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
     "babel-preset-cozy-app": "1.5.1",
-    "enzyme": "3.9.0",
+    "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.13.0",
