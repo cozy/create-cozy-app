@@ -43,7 +43,7 @@
     "stylint": "1.5.9"
   },
   "dependencies": {
-    "cozy-bar": "6.28.6",
+    "cozy-bar": "7.3.4",
     "cozy-client": "6.45.2",
     "cozy-ui": "19.30.2",
     "eslint-config-cozy-app": "1.1.12",
