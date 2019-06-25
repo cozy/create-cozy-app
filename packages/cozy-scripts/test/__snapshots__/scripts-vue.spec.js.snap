@@ -272,39 +272,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app-vue/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+              ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app-vue",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -704,39 +681,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app-vue/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+              ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app-vue",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -1087,39 +1041,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app-vue/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+              ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app-vue",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -1523,39 +1454,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app-vue/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+              ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app-vue",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -1915,39 +1823,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app-vue/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+              ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app-vue",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -2331,39 +2216,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app-vue/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app-vue/src/targets/assets",
+            "from": ".tmp_test/test-app-vue/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
+              ".tmp_test/test-app-vue/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app-vue",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app-vue/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -2509,11 +2371,11 @@ Array [
   "src/locales/en.json",
   "src/styles/index.css",
   "src/styles/nav.css",
-  "src/targets/assets/icon.svg",
   "src/targets/browser/index.ejs",
   "src/targets/browser/index.js",
   "src/targets/intents/.gitkeep",
   "src/targets/mobile/DOCS.md",
+  "src/targets/vendor/assets/icon.svg",
   "test/__mocks__/fileMock.js",
   "test/__snapshots__/app.spec.js.snap",
   "test/app.spec.js",
