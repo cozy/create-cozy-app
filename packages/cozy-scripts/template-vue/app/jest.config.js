@@ -12,7 +12,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.(png|gif|jpe?g|svg)$': '<rootDir>/test/__mocks__/fileMock.js',
     // identity-obj-proxy module is installed by cozy-scripts
-    styles: 'identity-obj-proxy'
+    '\\.(css|styl)$': 'identity-obj-proxy'
   },
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   transformIgnorePatterns: ['node_modules/(?!cozy-ui)'],
