@@ -40,7 +40,7 @@ module.exports = function runGlobalPackageCLI(
   // the debug option is specific to cozy-scripts, we use --verbose instead here
   const argsAsString = cliArguments.join(' ').replace('--debug', '--verbose ')
 
-  console.log()
+  console.log('')
   console.log(`$ ${packageName} ${argsAsString}`)
 
   const runPackageProcess = spawn.sync(
@@ -52,7 +52,7 @@ module.exports = function runGlobalPackageCLI(
   )
 
   if (runPackageProcess.status !== 0) {
-    console.log()
+    console.log('')
     throw colorize.red(
       `Something went wrong when running '${packageName}'. Process aborted.`
     )

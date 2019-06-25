@@ -15,8 +15,8 @@ const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
 const spawn = require('cross-spawn')
 
 process.on('SIGINT', () => {
-  console.log()
-  console.log()
+  console.log('')
+  console.log('')
   console.log(colorize.red('Kill signal detected. Graceful exit...'))
   cleanUp()
   process.exit(1)

@@ -6,12 +6,12 @@ const colors = {
 }
 
 module.exports = function init() {
-  console.log()
+  console.log('')
   console.log(
     `${colors.green}✔${
       colors.close
     } create-cozy-app scripts init(...) call test succeed.`
   )
-  console.log()
+  console.log('')
   return true
 }

@@ -13,8 +13,8 @@ const pkg = require('./package.json')
 let projectName = null
 
 process.on('SIGINT', () => {
-  console.log()
-  console.log()
+  console.log('')
+  console.log('')
   console.log(colorize.red('Kill signal detected. Graceful exit...'))
   const rootPath = path.resolve('.')
   const appName = path.parse(rootPath).name
@@ -40,16 +40,16 @@ const program = new commander.Command(pkg.name)
     'use a specific package of scripts package (see --help)'
   )
   .on('--help', () => {
-    console.log()
+    console.log('')
     console.log(`\t--- ${colorize.bold('USAGE INFORMATIONS')} ---`)
-    console.log()
+    console.log('')
     console.log(`\tOnly ${colorize.blue('<project-name>')} is required.`)
     console.log(
       `\tThis command will automatically create the project, in a new folder or in a empty existing folder ('.git' allowed). It will use cozy-scripts package by default.`
     )
-    console.log()
+    console.log('')
     console.log('\t---')
-    console.log()
+    console.log('')
     console.log(
       `\tYou can pass a custom scripts package using the optional ${colorize.cyan(
         '--scripts-source'
@@ -82,9 +82,9 @@ const program = new commander.Command(pkg.name)
         'git://github.com/CPatchane/cozy-scripts.git#master'
       )}`
     )
-    console.log()
+    console.log('')
     console.log('\t---')
-    console.log()
+    console.log('')
     console.log(
       `\t${colorize.orange('Any issue?')} Do not hesitate to let us know:`
     )
@@ -93,7 +93,7 @@ const program = new commander.Command(pkg.name)
         'https://github.com/CPatchane/create-cozy-app/issues/new'
       )}`
     )
-    console.log()
+    console.log('')
   })
   .parse(process.argv)
 
@@ -102,12 +102,12 @@ if (!projectName) {
   console.log(
     `\t${colorize.cyan(program.name())} ${colorize.blue('<project-name>')}`
   )
-  console.log()
+  console.log('')
   console.log('Here is an example of usage:')
   console.log(
     `\t${colorize.cyan(program.name())} ${colorize.blue('my-cozy-app')}`
   )
-  console.log()
+  console.log('')
   process.exit(1)
 }
 
@@ -127,7 +127,7 @@ function createApp(name, cliOptions) {
 
   console.log(colorize.blue(cozyAscii))
   console.log(`Let's create the Cozy Application in ${colorize.bold(rootPath)}`)
-  console.log()
+  console.log('')
 
   // move to project directory
   process.chdir(rootPath)
@@ -204,7 +204,7 @@ function bootstrapApp(rootPath, appName, cliOptions) {
   if (cliOptions.scriptsSource)
     console.log(`Specific scripts source provided: ${cliOptions.scriptsSource}`)
 
-  console.log()
+  console.log('')
   if (cliOptions.verbose) {
     console.log(
       `Installing ${colorize.cyan(scriptsPkgName)}... (may take a while)`
@@ -255,11 +255,11 @@ function bootstrapApp(rootPath, appName, cliOptions) {
     .then(() => {
       installingSpinner &&
         installingSpinner.succeed(`${colorize.cyan(scriptsPkgName)} installed.`)
-      console.log()
+      console.log('')
       console.log(
         `Starting the application ${colorize.cyan(appName)} bootstrap`
       )
-      console.log()
+      console.log('')
       // use the init script from scripts package for taking over
       const initScriptPath = path.resolve(
         process.cwd(),
@@ -310,7 +310,7 @@ function install(dependencies, verbose) {
 }
 
 function gracefulExit(rootPath, appName, error) {
-  console.log()
+  console.log('')
   console.log(colorize.orange('Cleaning remaining generated elements'))
   const expectedGeneratedElements = [
     'package.json',
@@ -335,7 +335,7 @@ function gracefulExit(rootPath, appName, error) {
     })
   })
   if (generatedElements.length) {
-    console.log()
+    console.log('')
   }
   const remainingElements = fs.readdirSync(path.join(rootPath))
   if (!remainingElements.length) {
@@ -354,7 +354,7 @@ function gracefulExit(rootPath, appName, error) {
     })
   }
   if (error) {
-    console.log()
+    console.log('')
     console.log(colorize.red('ERROR:'))
     throw error
   }

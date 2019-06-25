@@ -116,9 +116,9 @@ module.exports = buildOptions => {
   // invalid here doesn't imply errors, it means 'bundle invalidated'
   compiler.hooks.invalid.tap('Reste before next compiling', () => {
     clearConsole()
-    console.log()
+    console.log('')
     console.log('Compiling...')
-    console.log()
+    console.log('')
   })
 
   let dockerProcess = null
@@ -126,13 +126,13 @@ module.exports = buildOptions => {
 
   compiler.hooks.done.tap('Very end hook', () => {
     clearConsole()
-    console.log()
+    console.log('')
     console.log(
       colorize.green.bold(
         `App successfully ${isFirstRun ? 'compiled' : 'updated'}!`
       )
     )
-    console.log()
+    console.log('')
     if (buildOptions.stack) {
       console.log(
         `  ${colorize.bold(
@@ -155,7 +155,7 @@ module.exports = buildOptions => {
       console.log(
         `  ${colorize.bold('Dev assets:')}          http://${host}:${port}`
       )
-      console.log()
+      console.log('')
       if (isFirstRun) {
         // launch cozy-stack within docker cozy/cozy-app-dev
         dockerProcess = spawn(
@@ -191,11 +191,11 @@ module.exports = buildOptions => {
           )
         })
         dockerProcess.on('error', err => {
-          console.log()
+          console.log('')
           process.stderr.write(
             `${colorize.red.bold('Cozy stack (docker):')} ${err}\n`
           )
-          console.log()
+          console.log('')
           if (err.code === 'ENOENT') {
             process.stderr.write(
               colorize.red.bold('You seems to not having Docker installed.\n')
@@ -235,9 +235,9 @@ module.exports = buildOptions => {
     process.once(sig, () => {
       server.close()
       if (dockerProcess && !knownDockerError) {
-        console.log()
+        console.log('')
         console.log(colorize.orange('Shutting down the stack...'))
-        console.log()
+        console.log('')
         console.log(colorize.cyan('See you soon! 👋'))
         dockerProcess.stdout.destroy()
         dockerProcess.stderr.destroy()
@@ -245,7 +245,7 @@ module.exports = buildOptions => {
           stdio: 'inherit'
         })
       } else {
-        console.log()
+        console.log('')
         console.log(colorize.cyan('See you soon! 👋'))
       }
       process.exit(0)
