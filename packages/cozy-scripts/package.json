@@ -55,7 +55,7 @@
     "svgo": "1.2.2",
     "validate-npm-package-name": "3.0.0",
     "vue-jest": "3.0.4",
-    "webapp-webpack-plugin": "2.7.0",
+    "webapp-webpack-plugin": "2.7.1",
     "webpack": "4.35.0",
     "webpack-bundle-analyzer": "3.3.2",
     "webpack-dev-server": "3.7.2",
