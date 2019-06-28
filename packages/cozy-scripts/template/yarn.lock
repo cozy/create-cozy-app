@@ -2162,18 +2162,18 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-cozy-bar@6.28.6:
-  version "6.28.6"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-6.28.6.tgz#3e7ecb8610d8ed01d0056d663e13b203983b6163"
-  integrity sha512-IktLm4s+1HdY+MCKTpfmGkuMdi+gK4QXQQaNU5YAPXP+FTKRWGIcqshKIPJF/h0MiDYsn5Mcxf7cUCOlZVtsmA==
+cozy-bar@7.3.4:
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-7.3.4.tgz#031b6afaa8ccd0ba5f027581084cfd85a3bd7ebb"
+  integrity sha512-IVZBOhk25S/te8rToK0gXjJsqeUBokIH4xc3w6l4pZIgWCMtUJzdeaPFb3URA9mpN/5lRz7djOfKL7WsGlBong==
   dependencies:
     "@babel/core" "7.3.4"
     babel-core "7.0.0-bridge.0"
     babel-preset-cozy-app "1.5.1"
-    cozy-device-helper "1.7.1"
+    cozy-device-helper "1.7.2"
     cozy-interapp "0.4.5"
-    cozy-realtime "3.0.0-beta.11"
-    cozy-ui "20.7.0"
+    cozy-realtime "3.1.0"
+    cozy-ui "20.24.0"
     enzyme-to-json "3.3.5"
     hammerjs "2.0.8"
     lerna-changelog "0.8.2"
@@ -2214,10 +2214,10 @@ cozy-device-helper@1.6.3:
   dependencies:
     lodash "4.17.11"
 
-cozy-device-helper@1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.7.1.tgz#56c57a14b423de2700a0a695c3f7710cf6a2383d"
-  integrity sha512-CTEJOzRK+AtrGN/Wqjj5n0DM1mMMvNGSZDxKlTCvY0FNYYko05vX5qIEb9vFVm7UhH7GFZjZ+S73g3Kwq/hF4Q==
+cozy-device-helper@1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.7.2.tgz#940d03351002702865a1b710ec6f61e1dc159d12"
+  integrity sha512-kObApQRfAHfWu+F+OhoeLhiMU1MGGRUACWymKW6ybhyHtsFB97nxtHtelg6QoIPEfF6CSJDfIdvEsTZhE1qMfA==
   dependencies:
     lodash "4.17.11"
 
@@ -2226,10 +2226,10 @@ cozy-interapp@0.4.5:
   resolved "https://registry.yarnpkg.com/cozy-interapp/-/cozy-interapp-0.4.5.tgz#115912a389448ebb8dc532972270b46e15010063"
   integrity sha512-CuiZ4PIrDj+jcK1sCizFNCC9r8+/sgKXLtDgkpKHRHk+q0lhvqz/fQAVPWiIsZAr9WdbfxaBfsJCoHP/41+G1Q==
 
-cozy-realtime@3.0.0-beta.11:
-  version "3.0.0-beta.11"
-  resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-3.0.0-beta.11.tgz#1c3d4b4e145e0cdec7026696d7a00dd107382019"
-  integrity sha512-NwD3oKCIjec5WA/s4bOWP96F3CTge+cvH6kgR8f9r3+8hDf4MCZ2lsJITXmsCJevJn2DYr5dpeCinAAQD41M0Q==
+cozy-realtime@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/cozy-realtime/-/cozy-realtime-3.1.0.tgz#ae06ef1c8174408aae70f5171820275880a4a587"
+  integrity sha512-4rLsIFAGlUQWSiMm1jgkzoPqnbH4iSDndeNLFCLhVmM93eJBztWIfXSwFQ2utvOuIvMjHeT5iw7v6GQvwzfBFA==
   dependencies:
     minilog "3.1.0"
 
@@ -2257,10 +2257,10 @@ cozy-ui@19.30.2:
     react-hot-loader "^4.3.11"
     react-select "2.2.0"
 
-cozy-ui@20.7.0:
-  version "20.7.0"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-20.7.0.tgz#f6704e0ae9702b6b3dc8dbf21ad8c0165111513d"
-  integrity sha512-xNznm8SQFkQzi0dkaLPaZCRWLXxJe/71SSfagokOuhHr3z0sZXybgVfPiHulha7cx230UFTe8nxMAKd1j4s15A==
+cozy-ui@20.24.0:
+  version "20.24.0"
+  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-20.24.0.tgz#bdda2123fb75ecdc671985f383b7029a43c20852"
+  integrity sha512-er4MDKg1yanMoFd/eU7aH2goFNnRDA2N/gZfUol593d/x4XyNSMWSaxwVzTK6rPv8ksUa/2BYI+r975H3Umz2A==
   dependencies:
     "@babel/runtime" "^7.3.4"
     body-scroll-lock "^2.5.8"
