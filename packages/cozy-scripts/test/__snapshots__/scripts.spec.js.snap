@@ -663,6 +663,7 @@ Array [
               "output": Object {
                 "comments": Object {},
               },
+              "safari10": true,
             },
             "test": Object {},
           },
@@ -1469,6 +1470,7 @@ Array [
               "output": Object {
                 "comments": Object {},
               },
+              "safari10": true,
             },
             "test": Object {},
           },
