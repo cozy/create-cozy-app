@@ -75,7 +75,7 @@ module.exports = function(
       gracefulRootExit(err)
     } else {
       if (cliOptions.verbose) {
-        console.log()
+        console.log('')
         console.log('Informations received:')
       }
       for (const propName in received) {
@@ -122,7 +122,7 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
     path.join(templatePath, '.travis.yml')
   )
 
-  console.log()
+  console.log('')
   console.log('Building files...')
   // Create files from template (manifest, package...)
   /*
@@ -152,7 +152,7 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   const newContributing = replaceDataIn(templateContributing)
   const newTravisYaml = replaceDataIn(templateTravisYaml)
 
-  console.log()
+  console.log('')
   console.log(`Copying in ${colorize.cyan(appPath)}`)
   // Copy app outline from template (template/app)
   const templateFiles = fs.readdirSync(templateAppPath)
@@ -181,16 +181,16 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   console.log(`${colorize.cyan('.travis.yml')} copied.`)
 
   // install all dependencies
-  console.log()
+  console.log('')
   console.log('Installing app dependencies using Yarn...')
   console.log('(May take a while)')
-  console.log()
+  console.log('')
   process.chdir(appPath)
   installDependencies(cliOptions.verbose)
     .then(() => {
-      console.log()
+      console.log('')
       console.log('App dependencies installed.')
-      console.log()
+      console.log('')
       console.log(
         colorize.green(
           `Great! Your application ${colorize.cyan(
@@ -201,7 +201,7 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
       console.log(
         'You can also create an `app.config.js` file if you want to customize the webpack configuration.'
       )
-      console.log()
+      console.log('')
       console.log('Next steps:')
       console.log(`  $ ${colorize.bold(`cd ${path.basename(appPath)}`)}`)
       console.log(`  $ ${colorize.bold('yarn start')}`)
@@ -219,8 +219,8 @@ function installDependencies(verbose) {
     const args = ['install', '--prefer-offline']
     if (!verbose) {
       args.push('--silent')
-      console.log()
-      console.log()
+      console.log('')
+      console.log('')
     }
 
     const installProcess = spawn(command, args, { stdio: 'inherit' })
@@ -233,7 +233,7 @@ function installDependencies(verbose) {
 }
 
 function gracefulExit(appPath) {
-  console.log()
+  console.log('')
   console.log(colorize.orange('Cleaning generated app template elements'))
   const templateAppPath = path.join(
     path.join(__dirname, '..', 'template', 'app')
@@ -265,7 +265,7 @@ function gracefulExit(appPath) {
     })
   })
   if (generatedElements.length) {
-    console.log()
+    console.log('')
   }
   const remainingElements = fs.readdirSync(path.join(appPath))
   if (remainingElements.length) {

@@ -18,8 +18,8 @@ const servicesTestConfig = path.join(__dirname, 'lib', 'services.config.js')
 const strategyTestConfig = path.join(__dirname, 'lib', 'strategy.config.js')
 
 process.on('SIGINT', () => {
-  console.log()
-  console.log()
+  console.log('')
+  console.log('')
   console.log(colorize.red('Kill signal detected. Graceful exit...'))
   cleanUp()
   process.exit(1)

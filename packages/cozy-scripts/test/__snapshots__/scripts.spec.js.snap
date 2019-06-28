@@ -349,39 +349,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app/src/targets/assets/icon.svg",
+              ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -797,39 +774,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app/src/targets/assets/icon.svg",
+              ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -1196,39 +1150,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app/src/targets/assets/icon.svg",
+              ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -1648,39 +1579,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app/src/targets/assets/icon.svg",
+              ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -2056,39 +1964,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app/src/targets/assets/icon.svg",
+              ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -2488,39 +2373,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app/src/targets/assets/icon.svg",
+              ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},
@@ -2671,12 +2533,12 @@ Array [
   "src/styles/index.css",
   "src/styles/nav.css",
   "src/styles/todos.css",
-  "src/targets/assets/icon.svg",
   "src/targets/browser/index.ejs",
   "src/targets/browser/index.jsx",
   "src/targets/intents/.gitkeep",
   "src/targets/mobile/DOCS.md",
   "src/targets/mobile/config.xml",
+  "src/targets/vendor/assets/icon.svg",
   "test/__mocks__/fileMock.js",
   "test/__snapshots__/app.spec.js.snap",
   "test/app.spec.js",
@@ -2985,39 +2847,16 @@ Array [
         "options": Object {},
         "patterns": Array [
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets/icon.svg",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             "to": ".tmp_test/test-app/build/icon.svg",
           },
           Object {
-            "from": ".tmp_test/test-app/src/targets/assets",
+            "from": ".tmp_test/test-app/src/targets/vendor/assets",
             "ignore": Array [
-              ".tmp_test/test-app/src/targets/assets/icon.svg",
+              ".tmp_test/test-app/src/targets/vendor/assets/icon.svg",
             ],
           },
         ],
-      },
-      Object {
-        "options": Object {
-          "cache": true,
-          "favicons": Object {
-            "appDescription": null,
-            "appName": "test-app",
-            "developerName": "foo",
-            "developerURL": "",
-            "icons": Object {
-              "coast": false,
-              "yandex": false,
-            },
-            "loadManifestWithCredentials": true,
-            "theme_color": "#ffffff",
-          },
-          "inject": "force",
-          "logo": ".tmp_test/test-app/src/targets/assets/icon.svg",
-          "prefix": "assets",
-        },
-        "tags": Object {
-          "promise": Object {},
-        },
       },
       Object {
         "options": Object {},

@@ -76,7 +76,7 @@ module.exports = function(
       gracefulRootExit(err)
     } else {
       if (verbose) {
-        console.log()
+        console.log('')
         console.log('Informations received:')
       }
       for (const propName in received) {
@@ -119,7 +119,7 @@ function run(appPath, dataMap, verbose, gracefulRootExit, successCallback) {
     path.join(templatePath, 'view2.html')
   )
 
-  console.log()
+  console.log('')
   console.log('Building files...')
   // Create files from template (manifest, package...)
   // utils
@@ -135,7 +135,7 @@ function run(appPath, dataMap, verbose, gracefulRootExit, successCallback) {
   const newIndexHtml = replaceDataIn(templateIndexHtml)
   const newView2Html = replaceDataIn(templateView2Html)
 
-  console.log()
+  console.log('')
   console.log(`Copying in ${colorize.cyan(appPath)}`)
   // Copy app outline from template (template/app)
   const templateFiles = fs.readdirSync(templateAppPath)
@@ -166,7 +166,7 @@ function run(appPath, dataMap, verbose, gracefulRootExit, successCallback) {
   fs.removeSync(path.join(appPath, 'node_modules'))
   fs.removeSync(path.join(appPath, 'yarn.lock'))
 
-  console.log()
+  console.log('')
   console.log(
     colorize.green(
       `Great! Your application ${colorize.cyan(
@@ -178,7 +178,7 @@ function run(appPath, dataMap, verbose, gracefulRootExit, successCallback) {
 }
 
 function gracefulExit(appPath) {
-  console.log()
+  console.log('')
   console.log(colorize.orange('Cleaning generated app template elements'))
   const templateAppPath = path.join(
     path.join(__dirname, '..', 'template', 'app')
@@ -205,7 +205,7 @@ function gracefulExit(appPath) {
     })
   })
   if (generatedElements.length) {
-    console.log()
+    console.log('')
   }
   const remainingElements = fs.readdirSync(path.join(appPath))
   if (remainingElements.length) {

@@ -51,7 +51,9 @@ module.exports = {
               sourceMap: true,
               plugins: function() {
                 return [
-                  require('autoprefixer')({ browsers: ['last 2 versions'] })
+                  require('autoprefixer')({
+                    overrideBrowserslist: ['extends browserslist-config-cozy']
+                  })
                 ]
               }
             }

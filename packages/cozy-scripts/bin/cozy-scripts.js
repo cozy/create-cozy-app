@@ -116,7 +116,7 @@ if (program.showConfig) {
 
   // TODO: to remove in next major version
   if (actionName === 'standalone') {
-    console.log()
+    console.log('')
     console.log(
       colorize.orange('⚠️ `cozy-scripts standalone` has been replaced.')
     )
@@ -125,7 +125,7 @@ if (program.showConfig) {
         `Please use ${colorize.bold('`cozy-scripts start`')} instead. ⚠️`
       )
     )
-    console.log()
+    console.log('')
   }
 
   if (availableScripts.includes(actionName)) {

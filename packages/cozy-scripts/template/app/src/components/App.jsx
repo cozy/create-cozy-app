@@ -9,7 +9,7 @@ import Todos from './Todos'
 import Hello1 from './HelloViews/Hello1'
 import Hello2 from './HelloViews/Hello2'
 
-const App = () => (
+export const App = () => (
   <HashRouter>
     <Layout>
       <Sidebar />

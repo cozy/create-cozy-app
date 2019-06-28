@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const appIcon = getDataOrDefault(
     data.cozyIconPath,
-    require('../assets/icon.svg')
+    require('../vendor/assets/icon.svg')
   )
 
   const appNamePrefix = getDataOrDefault(
