@@ -9,6 +9,7 @@ exports[`TodoAdd component: should be rendered correctly 1`] = `
     onSubmit={[Function]}
   >
     <Label
+      block={true}
       className=""
       error={false}
       htmlFor="todo-add-input"
@@ -44,6 +45,7 @@ exports[`TodoAdd component: should handle isWorking correctly (display spinner) 
     onSubmit={[Function]}
   >
     <Label
+      block={true}
       className=""
       error={false}
       htmlFor="todo-add-input"
