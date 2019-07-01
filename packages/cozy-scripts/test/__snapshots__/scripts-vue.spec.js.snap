@@ -364,6 +364,7 @@ Array [
             "assets/cozy-bar.css",
             "assets/cozy-client-js.js",
           ],
+          "cssAssets": Array [],
           "cssExtensions": Array [
             ".css",
           ],
@@ -1142,6 +1143,7 @@ Array [
             "assets/cozy-bar.css",
             "assets/cozy-client-js.js",
           ],
+          "cssAssets": Array [],
           "cssExtensions": Array [
             ".css",
           ],
@@ -1917,6 +1919,7 @@ Array [
             "assets/cozy-bar.css",
             "assets/cozy-client-js.js",
           ],
+          "cssAssets": Array [],
           "cssExtensions": Array [
             ".css",
           ],
@@ -2310,6 +2313,7 @@ Array [
             "assets/cozy-bar.css",
             "assets/cozy-client-js.js",
           ],
+          "cssAssets": Array [],
           "cssExtensions": Array [
             ".css",
           ],
