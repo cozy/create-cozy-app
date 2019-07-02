@@ -8,6 +8,7 @@ const {
   assetsFolderName,
   hasPublic,
   useHotReload,
+  useClientJS,
   publicFolderName
 } = require('./webpack.vars')
 
@@ -19,6 +20,30 @@ const buildPublicCozyBarCss = `${paths.appBuild()}/${devAssetFolder}/cozy-bar.cs
 const buildPublicCozyBarJs = `${paths.appBuild()}/${devAssetFolder}/cozy-bar.js`
 const buildPublicCozyClientJs = `${paths.appBuild()}/${devAssetFolder}/cozy-client-js.js`
 
+const htmlAssets = [
+  `${devAssetFolder}/cozy-bar.js`,
+  `${devAssetFolder}/cozy-bar.css`
+]
+
+const toCopy = [
+  {
+    from: paths.appCozyBarJs(),
+    to: buildPublicCozyBarJs
+  },
+  {
+    from: paths.appCozyBarCss(),
+    to: buildPublicCozyBarCss
+  }
+]
+
+if (useClientJS) {
+  toCopy.push({
+    from: paths.appCozyClientJs(),
+    to: buildPublicCozyClientJs
+  })
+  htmlAssets.push(`${devAssetFolder}/cozy-client-js.js`)
+}
+
 let plugins = [
   new webpack.DefinePlugin({
     __DEVELOPMENT__: true,
@@ -26,26 +51,9 @@ let plugins = [
   }),
   // We need to put all assets in the public build folder since
   // public pages will need to have them public
-  new CopyPlugin([
-    {
-      from: paths.appCozyBarJs(),
-      to: buildPublicCozyBarJs
-    },
-    {
-      from: paths.appCozyBarCss(),
-      to: buildPublicCozyBarCss
-    },
-    {
-      from: paths.appCozyClientJs(),
-      to: buildPublicCozyClientJs
-    }
-  ]),
+  new CopyPlugin(toCopy),
   new HtmlWebpackIncludeAssetsPlugin({
-    assets: [
-      `${devAssetFolder}/cozy-bar.js`,
-      `${devAssetFolder}/cozy-bar.css`,
-      `${devAssetFolder}/cozy-client-js.js`
-    ],
+    assets: htmlAssets,
     append: false,
     publicPath: true
   })

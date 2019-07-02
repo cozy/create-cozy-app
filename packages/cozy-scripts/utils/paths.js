@@ -41,6 +41,7 @@ module.exports = {
   appManifest: () => resolveAppManifest(),
   appREADME: () => resolveApp('README.md'),
   appLICENSE: () => resolveApp('LICENSE'),
+  appPackage: () => resolveApp('package.json'),
   appSrc: () => resolveAppSrc(),
   appLocales: () => resolveAppSrc('locales'),
   appAssets: () => resolveAppSrc('targets/vendor/assets'),
