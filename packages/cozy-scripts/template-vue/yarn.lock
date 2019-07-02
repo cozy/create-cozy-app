@@ -2175,10 +2175,10 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-cozy-bar@7.3.4:
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-7.3.4.tgz#031b6afaa8ccd0ba5f027581084cfd85a3bd7ebb"
-  integrity sha512-IVZBOhk25S/te8rToK0gXjJsqeUBokIH4xc3w6l4pZIgWCMtUJzdeaPFb3URA9mpN/5lRz7djOfKL7WsGlBong==
+cozy-bar@7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/cozy-bar/-/cozy-bar-7.4.0.tgz#1cacfe49384fd9808460aa1d0ed312650eb866af"
+  integrity sha512-DtAiG6n1F4NzrnwOso1ElEOsrgCNbbDjghe0SMX31OyUro9GRZGDrFFvBBkldOYJmco+SGt7niqBcO/NuCAFsw==
   dependencies:
     "@babel/core" "7.3.4"
     babel-core "7.0.0-bridge.0"
@@ -2186,7 +2186,7 @@ cozy-bar@7.3.4:
     cozy-device-helper "1.7.2"
     cozy-interapp "0.4.5"
     cozy-realtime "3.1.0"
-    cozy-ui "20.24.0"
+    cozy-ui "21.4.1"
     enzyme-to-json "3.3.5"
     hammerjs "2.0.8"
     lerna-changelog "0.8.2"
@@ -2231,23 +2231,6 @@ cozy-realtime@3.1.0:
   integrity sha512-4rLsIFAGlUQWSiMm1jgkzoPqnbH4iSDndeNLFCLhVmM93eJBztWIfXSwFQ2utvOuIvMjHeT5iw7v6GQvwzfBFA==
   dependencies:
     minilog "3.1.0"
-
-cozy-ui@20.24.0:
-  version "20.24.0"
-  resolved "https://registry.yarnpkg.com/cozy-ui/-/cozy-ui-20.24.0.tgz#bdda2123fb75ecdc671985f383b7029a43c20852"
-  integrity sha512-er4MDKg1yanMoFd/eU7aH2goFNnRDA2N/gZfUol593d/x4XyNSMWSaxwVzTK6rPv8ksUa/2BYI+r975H3Umz2A==
-  dependencies:
-    "@babel/runtime" "^7.3.4"
-    body-scroll-lock "^2.5.8"
-    classnames "^2.2.5"
-    date-fns "^1.28.5"
-    hammerjs "^2.0.8"
-    node-polyglot "^2.2.2"
-    normalize.css "^7.0.0"
-    react-hot-loader "^4.3.11"
-    react-markdown "^4.0.8"
-    react-pdf "^4.0.5"
-    react-select "2.2.0"
 
 cozy-ui@21.4.1:
   version "21.4.1"
