@@ -6,6 +6,7 @@ const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const CTS = require('../utils/constants.js')
 const manifest = fs.readJsonSync(paths.appManifest())
+const pkg = fs.readJsonSync(paths.appPackage())
 
 // default NODE_ENV to browser development
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'browser:development'
@@ -25,6 +26,9 @@ const isDebugMode = process.env[CTS.DEBUG] === 'true'
 const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
 const useHotReload = process.env[CTS.HOT] === 'true'
 const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
+const useClientJS =
+  !!(pkg.dependencies && pkg.dependencies['cozy-client-js']) ||
+  !!(pkg.devDependencies && pkg.devDependencies['cozy-client-js'])
 
 const hasPublic =
   fs.existsSync(paths.appPublicIndex()) &&
@@ -71,6 +75,7 @@ module.exports = {
   isDebugMode,
   target,
   useHotReload,
+  useClientJS,
   publicFolderName,
   getReactExposer
 }
