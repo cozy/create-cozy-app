@@ -9,6 +9,10 @@ module.exports = {
     '\\.(css|styl)$': 'identity-obj-proxy'
   },
   transformIgnorePatterns: ['node_modules/(?!cozy-ui)'],
+  transform: {
+    // babel-jest module is installed by cozy-scripts
+    '^.+\\.jsx?$': 'babel-jest'
+  },
   globals: {
     __ALLOW_HTTP__: false,
     __TARGET__: 'browser',
