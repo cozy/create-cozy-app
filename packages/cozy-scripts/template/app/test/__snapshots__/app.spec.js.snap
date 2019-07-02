@@ -25,12 +25,10 @@ exports[`App component only should be mounted correctly 1`] = `
           />
           <Redirect
             from="/"
-            push={false}
             to="/todos"
           />
           <Redirect
             from="*"
-            push={false}
             to="/todos"
           />
         </Switch>
