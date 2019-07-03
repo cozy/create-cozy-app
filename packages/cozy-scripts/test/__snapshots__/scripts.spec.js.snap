@@ -2461,6 +2461,11 @@ Array [
           "publicPath": true,
         },
       },
+      Object {
+        "options": Object {},
+        "smpPluginAdded": true,
+        "timeEventData": Object {},
+      },
     ],
     "resolve": Object {
       "alias": Object {

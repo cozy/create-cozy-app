@@ -1,9 +1,12 @@
 'use strict'
 
 const merge = require('webpack-merge')
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin')
 const path = require('path')
 const fs = require('fs-extra')
 const CTS = require('../utils/constants.js')
+
+const smp = new SpeedMeasurePlugin()
 
 function mergeWithOptions(options, configs, current) {
   // merge with the previous configs using the provided strategy
@@ -24,6 +27,7 @@ function getWebpackConfigs(options = {}) {
 
   // NODE_ENV from environment overwrite options here
   if (!process.env.NODE_ENV) process.env.NODE_ENV = `${target}:${mode}`
+  const isDebugMode = process.env[CTS.DEBUG] === 'true'
 
   // check if a custom config exists in the app source
   let appConfigs
@@ -75,13 +79,13 @@ function getWebpackConfigs(options = {}) {
         separateConfig = merge(mergedConfig, configPart)
       }
       if (separateConfig.multiple) delete separateConfig.multiple
-      configs.push(separateConfig)
+      configs.push(isDebugMode ? smp.wrap(separateConfig) : separateConfig)
     }
     delete mergedConfig.multiple
   }
 
   // replace the first position placeholder in the list
-  configs[0] = mergedConfig
+  configs[0] = isDebugMode ? smp.wrap(mergedConfig) : mergedConfig
 
   return merge.multiple(configs)
 }
