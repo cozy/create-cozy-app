@@ -19,7 +19,8 @@ const port = process.env[CTS.PORT] || '8888'
 const host = process.env[CTS.HOST] || 'localhost'
 const coudhDBPort = '5984'
 const MailHogPort = '8025'
-const cozyDomain = 'cozy.tools:8080'
+const cozyHost = 'cozy.tools'
+const cozyDomain = `${cozyHost}:8080`
 const appSlug = (appManifest && appManifest.slug) || 'app'
 
 // There is no callback available on compiler here,
@@ -66,6 +67,10 @@ module.exports = buildOptions => {
   }
 
   const WebpackOptions = {
+    // We have to declare allowed hosts that will served the application
+    // during development to enable HMR (without disabling host checking)
+    // .host here means all subdomains like www.host, sub.host...
+    allowedHosts: [`.${cozyHost}`, `.${host}`],
     // display build informations only in debug mode or if errors/warnings
     noInfo: !isDebugMode,
     contentBase: paths.appBuild(),
