@@ -6,7 +6,7 @@ exports[`TodoRemoveButton component: should be rendered correctly 1`] = `
   className="todo-remove-button"
   disabled={false}
   extension="narrow"
-  icon="delete"
+  icon="trash"
   iconOnly={true}
   label="Delete"
   onClick={[Function]}
@@ -20,7 +20,7 @@ exports[`TodoRemoveButton component: should handle isWorking correctly (display 
   className="todo-remove-button"
   disabled={true}
   extension="narrow"
-  icon="delete"
+  icon="trash"
   iconOnly={true}
   label="Delete"
   onClick={[Function]}
