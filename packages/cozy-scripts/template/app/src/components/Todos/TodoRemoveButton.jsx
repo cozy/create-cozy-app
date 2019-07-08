@@ -29,7 +29,7 @@ export class TodoRemoveButton extends Component {
       <Button
         className="todo-remove-button"
         theme="danger"
-        icon="delete"
+        icon="trash"
         iconOnly
         label="Delete"
         busy={isWorking}
