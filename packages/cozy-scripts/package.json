@@ -57,7 +57,7 @@
     "svgo": "1.2.2",
     "validate-npm-package-name": "3.0.0",
     "vue-jest": "3.0.4",
-    "webpack": "4.35.2",
+    "webpack": "4.35.3",
     "webpack-bundle-analyzer": "3.3.2",
     "webpack-dev-server": "3.7.2",
     "webpack-merge": "4.2.1"
