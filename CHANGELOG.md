@@ -13,6 +13,31 @@
 - The `webpack.config.vendors` has been renamed to `webpack.config.assets`
 - `cozy-scripts` now use Jest v24 for tests and eslint v6 for linting, some issues __could__ be due to those upgrade. Please refer to the [Jest changelog](https://github.com/facebook/jest/blob/master/CHANGELOG.md) or [ESlint changelog](https://github.com/eslint/eslint/blob/master/CHANGELOG.md) for more informations.
 
+
+## cozy-scripts@2.0.1 (2019-07-08)
+
+#### :nail_care: Enhancements:
+* `cozy-scripts`
+  * [#1266](https://github.com/CPatchane/create-cozy-app/pull/1266) Add speead measure webpack plugin on debug mode ([@CPatchane](https://github.com/CPatchane))
+
+#### :bug: Bug Fixes:
+* `cozy-scripts`
+  * [#1265](https://github.com/CPatchane/create-cozy-app/pull/1265) Fix todo delete button icon due to ui update ([@CPatchane](https://github.com/CPatchane))
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1273](https://github.com/CPatchane/create-cozy-app/pull/1273) fix(deps): update dependency webpack to v4.35.3 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1270](https://github.com/CPatchane/create-cozy-app/pull/1270) fix(deps): update dependency @babel/core to v7.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1271](https://github.com/CPatchane/create-cozy-app/pull/1271) fix(deps): update dependency cozy-ui to v21.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1267](https://github.com/CPatchane/create-cozy-app/pull/1267) fix(deps): update dependency eslint-loader to v2.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1268](https://github.com/CPatchane/create-cozy-app/pull/1268) fix(deps): update dependency vue-router to v3.0.7 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1269](https://github.com/CPatchane/create-cozy-app/pull/1269) chore(deps): update dependency react-hot-loader to v4.12.5 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1272](https://github.com/CPatchane/create-cozy-app/pull/1272) fix(deps): update dependency autoprefixer to v9.6.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Cédric Patchane ([@CPatchane](https://github.com/CPatchane))
+
+
 ## cozy-scripts@2.0.0, cozy-scripts-vanilla@2.0.0, create-cozy-app@2.0.0 (2019-07-02)
 
 #### :rewind: Aborted works
