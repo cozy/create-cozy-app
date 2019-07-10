@@ -1,5 +1,11 @@
 ### Migrate an application from last v1.x.x
 
+To upgrade `cozy-scripts` package in your application, just run:
+```shell
+yarn upgrade cozy-scripts --latest
+```
+
+Changes to do or watch:
 - `cozy-scripts` will now resolve via Webpack using `node_modules` relative path instead of an absolute one. It shouldn't break your application but please check your build about modules not found.
 - Now  `cozy-scripts` will use transpiled components from `cozy-ui`, so you will have to __import manually the stylesheet__ like following (example in [the template](https://github.com/CPatchane/create-cozy-app/blob/master/packages/cozy-scripts/template/app/src/styles/index.css)):
   ```css
