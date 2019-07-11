@@ -20,6 +20,18 @@ Changes to do or watch:
 - `cozy-scripts` now use Jest v24 for tests and eslint v6 for linting, some issues __could__ be due to those upgrade. Please refer to the [Jest changelog](https://github.com/facebook/jest/blob/master/CHANGELOG.md) or [ESlint changelog](https://github.com/eslint/eslint/blob/master/CHANGELOG.md) for more informations.
 
 
+## cozy-scripts@2.0.2, cozy-scripts-vanilla@2.0.1, create-cozy-app@2.0.1 (2019-07-11)
+
+:tada: First release of CCA by [@cozy](https://github.com/CPatchane)
+
+#### :arrow_up: Dependencies:
+* `cozy-scripts`
+  * [#1277](https://github.com/CPatchane/create-cozy-app/pull/1277) chore(deps): update dependency react-hot-loader to v4.12.6 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1278](https://github.com/CPatchane/create-cozy-app/pull/1278) chore(deps): update dependency babel-preset-cozy-app to v1.5.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1276](https://github.com/CPatchane/create-cozy-app/pull/1276) fix(deps): update dependency @babel/core to v7.5.4 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#1274](https://github.com/CPatchane/create-cozy-app/pull/1274) fix(deps): update dependency cozy-client to v6.49.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+
 ## cozy-scripts@2.0.1 (2019-07-08)
 
 #### :nail_care: Enhancements:
