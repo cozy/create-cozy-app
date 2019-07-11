@@ -137,6 +137,10 @@ You can reach the Cozy Community by:
 
 CCA logo by [@CPatchane](https://github.com/CPatchane).
 
+### Credits
+
+A big thanks to [@CPatchane](https://github.com/CPatchane), the original author of Create-Cozy-App (CCA) tools.
+
 
 [cozy]: https://cozy.io "Cozy Cloud"
 [freenode]: http://webchat.freenode.net/?randomnick=1&channels=%23cozycloud&uio=d4
