@@ -1,23 +1,23 @@
 {
-	"scripts": {
-		"postinstall": "lerna bootstrap",
-		"changelog": "lerna-changelog",
-		"lint": "eslint --ignore-path .gitignore './**/*.{js,jsx}'",
-		"test": "yarn test:tools && yarn test:cozy-scripts && yarn test:cozy-scripts-vanilla",
-		"test:tools": "yarn test:cca && yarn test:cozy-scripts:cli --coverage && yarn test:cozy-scripts:utils --coverage",
-		"test:cca": "bash packages/create-cozy-app/test/create-cozy-app.sh",
-		"test:cozy-scripts": "yarn test:cozy-scripts:cli && yarn test:cozy-scripts:default && yarn test:cozy-scripts:vue",
-		"test:cozy-scripts:cli": "jest packages/cozy-scripts/test/cli.spec.js",
-		"test:cozy-scripts:utils": "jest packages/cozy-scripts/test/utils.spec.js",
-		"test:cozy-scripts:default": "jest packages/cozy-scripts/test/scripts.spec.js",
-		"test:cozy-scripts:vue": "jest packages/cozy-scripts/test/scripts-vue.spec.js",
-		"test:cozy-scripts-vanilla": "jest packages/cozy-scripts-vanilla/test/*.js",
-		"reset:yarn": "sh reset_yarn.sh"
-	},
-	"devDependencies": {
-		"eslint-config-cozy-app": "1.1.8",
-		"jest": "23.6.0",
-		"lerna": "3.11.0",
-		"lerna-changelog": "0.8.2"
-	}
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "changelog": "lerna-changelog",
+    "lint": "eslint --ignore-path .gitignore './**/*.{js,jsx}'",
+    "test": "yarn test:tools && yarn test:cozy-scripts && yarn test:cozy-scripts-vanilla",
+    "test:tools": "yarn test:cca && yarn test:cozy-scripts:cli --coverage && yarn test:cozy-scripts:utils --coverage",
+    "test:cca": "bash packages/create-cozy-app/test/create-cozy-app.sh",
+    "test:cozy-scripts": "yarn test:cozy-scripts:cli && yarn test:cozy-scripts:default && yarn test:cozy-scripts:vue",
+    "test:cozy-scripts:cli": "jest packages/cozy-scripts/test/cli.spec.js",
+    "test:cozy-scripts:utils": "jest packages/cozy-scripts/test/utils.spec.js",
+    "test:cozy-scripts:default": "jest packages/cozy-scripts/test/scripts.spec.js",
+    "test:cozy-scripts:vue": "jest packages/cozy-scripts/test/scripts-vue.spec.js",
+    "test:cozy-scripts-vanilla": "jest packages/cozy-scripts-vanilla/test/*.js",
+    "reset:yarn": "sh reset_yarn.sh"
+  },
+  "devDependencies": {
+    "eslint-config-cozy-app": "1.1.8",
+    "jest": "23.6.0",
+    "lerna": "3.11.0",
+    "lerna-changelog": "0.8.2"
+  }
 }

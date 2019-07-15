@@ -3,6 +3,7 @@
 const webpack = require('webpack')
 const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { WebpackPluginRamdisk } = require('webpack-plugin-ramdisk')
 const paths = require('../utils/paths')
 
 const {
@@ -69,6 +70,7 @@ module.exports = {
     noParse: [/localforage\/dist/]
   },
   plugins: [
+    new WebpackPluginRamdisk({}),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
