@@ -50,6 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
     require('../../../manifest.webapp').name
   )
 
+  const appSlug = getDataOrDefault(
+    data.cozyAppSlug,
+    require('../../../manifest.webapp').slug
+  )
+
+  const appVersion = require('../../../manifest.webapp').version
+
   appLocale = getDataOrDefault(data.cozyLocale, 'en')
 
   const protocol = window.location ? window.location.protocol : 'https:'
@@ -58,6 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const client = new CozyClient({
     uri: `${protocol}//${data.cozyDomain}`,
     token: data.cozyToken,
+    appMetadata: {
+      slug: appSlug,
+      version: appVersion
+    },
     schema
   })
 
