@@ -8,6 +8,8 @@ import { render } from 'react-dom'
 import { I18n } from 'cozy-ui/react/I18n'
 import schema from 'doctypes'
 
+const manifest = require('../../../manifest.webapp')
+
 let appLocale
 const renderApp = function(client) {
   const App = require('components/App').default
@@ -41,21 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
   )
 
   const appNamePrefix = getDataOrDefault(
-    data.cozyAppNamePrefix || require('../../../manifest.webapp').name_prefix,
+    data.cozyAppNamePrefix || manifest.name_prefix,
     ''
   )
 
-  const appName = getDataOrDefault(
-    data.cozyAppName,
-    require('../../../manifest.webapp').name
-  )
+  const appName = getDataOrDefault(data.cozyAppName, manifest.name)
 
-  const appSlug = getDataOrDefault(
-    data.cozyAppSlug,
-    require('../../../manifest.webapp').slug
-  )
+  const appSlug = getDataOrDefault(data.cozyAppSlug, manifest.slug)
 
-  const appVersion = require('../../../manifest.webapp').version
+  const appVersion = manifest.version
 
   appLocale = getDataOrDefault(data.cozyLocale, 'en')
 
