@@ -46,7 +46,7 @@ function transformManifest(buffer) {
   }
   // icon will be stored in public folder for app with public page
   if (
-    hasPublic &&
+    hasPublic() &&
     content.icon &&
     !content.icon.match(new RegExp(`${publicFolderName}/`))
   ) {

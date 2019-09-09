@@ -28,7 +28,7 @@ module.exports = {
     new CopyPlugin([
       {
         from: appIconPath,
-        to: hasPublic
+        to: hasPublic()
           ? path.join(paths.appBuild(), publicFolderName, manifest.icon)
           : path.join(paths.appBuild(), manifest.icon),
         transform: buffer => svgo.optimize(buffer).then(resp => resp.data)
