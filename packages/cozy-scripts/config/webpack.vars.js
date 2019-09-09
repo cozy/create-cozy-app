@@ -30,9 +30,10 @@ const useClientJS =
   !!(pkg.dependencies && pkg.dependencies['cozy-client-js']) ||
   !!(pkg.devDependencies && pkg.devDependencies['cozy-client-js'])
 
-const hasPublic =
+const hasPublic = () =>
   fs.existsSync(paths.appPublicIndex()) &&
   fs.existsSync(paths.appPublicHtmlTemplate())
+
 const publicFolderName = 'public'
 
 const assetsFolderName = 'assets'

@@ -15,11 +15,8 @@ const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
   : manifest.name
 
-/* We don't build public if no public and if on mobile build */
-const addPublicConfig = hasPublic && target === 'browser'
-
 function getConfig() {
-  return addPublicConfig
+  return hasPublic() && target === 'browser'
     ? {
         entry: {
           // since the file extension depends on the framework here

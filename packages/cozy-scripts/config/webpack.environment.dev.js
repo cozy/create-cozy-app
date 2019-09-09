@@ -12,7 +12,7 @@ const {
   publicFolderName
 } = require('./webpack.vars')
 
-const devAssetFolder = hasPublic
+const devAssetFolder = hasPublic()
   ? `${publicFolderName}/${assetsFolderName}`
   : assetsFolderName
 
