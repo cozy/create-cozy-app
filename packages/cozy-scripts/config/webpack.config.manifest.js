@@ -26,6 +26,21 @@ module.exports = {
   ]
 }
 
+/**
+ * Merges content from locales JSON files into manifest
+ */
+const insertLocalesIntoManifest = content => {
+  const locales = fs.readdirSync(paths.appLocales())
+  content.locales = {}
+  content.langs = []
+  for (const idx in locales) {
+    const localContent = require(path.join(paths.appLocales(), locales[idx]))
+    const lang = locales[idx].match(/^([^.]*).json$/)[1]
+    content.locales[lang] = localContent.manifest ? localContent.manifest : {}
+    content.langs.push(lang)
+  }
+}
+
 // Method to modify the manifest:
 //
 // For dev builds we use the generic "app" slug to share the same application
@@ -37,15 +52,7 @@ module.exports = {
 function transformManifest(buffer) {
   const content = JSON.parse(buffer.toString())
   if (environment === 'production') {
-    const locales = fs.readdirSync(paths.appLocales())
-    content.locales = {}
-    content.langs = []
-    for (const idx in locales) {
-      const localContent = require(path.join(paths.appLocales(), locales[idx]))
-      const lang = locales[idx].match(/^([^.]*).json$/)[1]
-      content.locales[lang] = localContent.manifest ? localContent.manifest : {}
-      content.langs.push(lang)
-    }
+    insertLocalesIntoManifest(content)
   } else {
     content.slug = 'app'
   }
