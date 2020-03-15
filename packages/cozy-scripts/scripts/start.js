@@ -117,7 +117,7 @@ module.exports = buildOptions => {
   // remove build folder
   cleanBuild(buildTarget)
 
-  const useHotReload = process.env[CTS.HOT] === 'true'
+  const useHotReload = process.env[CTS.HOT] !== 'false'
   const isDebugMode = process.env[CTS.DEBUG] === 'true'
 
   // webpack configurations

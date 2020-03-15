@@ -32,7 +32,7 @@ const program = new commander.Command(pkg.name)
   .option('--debug', 'print more outputs for debugging')
   .option('--development', 'specify development build mode')
   .option('--fix', 'format automatically the code with eslint')
-  .option('--hot', 'enable hot module reload (only for development)')
+  .option('--no-hot', 'disables hot module reload (only for development)')
   .option(
     '--port  <portNumber>',
     'change the webpack dev server port (default 8888) (only for development)'
@@ -96,7 +96,9 @@ const options = {
   ['buildDir', CTS.BUILD_DIR, program.buildDir],
   ['manifest', CTS.MANIFEST, program.manifest]
 ].map(toDefine => {
-  if (program[toDefine[0]]) process.env[toDefine[1]] = toDefine[2]
+  if (program[toDefine[0]] !== undefined) {
+    process.env[toDefine[1]] = toDefine[2]
+  }
 })
 
 if (program.showConfig) {
