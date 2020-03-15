@@ -77,14 +77,7 @@
     "template/manifest.webapp",
     "template/package.json",
     "template/README.md",
-    "template/yarn.lock",
-    "template-vue/app",
-    "template-vue/.travis.yml",
-    "template-vue/CONTRIBUTING.md",
-    "template-vue/manifest.webapp",
-    "template-vue/package.json",
-    "template-vue/README.md",
-    "template-vue/yarn.lock"
+    "template/yarn.lock"
   ],
   "devDependencies": {
     "strip-ansi": "5.0.0"

@@ -48,7 +48,6 @@ const program = new commander.Command(pkg.name)
   )
   .option('--production', 'specify production build mode')
   .option('--show-config', 'just print app final webpack config')
-  .option('--vue', 'to use scripts in a VueJS specific way (default React)')
   .option(
     '--config <pathToFile>',
     'provide a custom cozy-scripts build config file path (relative to the application root directory). Use it only if you need custom build configuration using app.config.js with a custom location.'
@@ -80,7 +79,6 @@ const options = {
     'development',
   target:
     (program.browser && 'browser') || (program.mobile && 'mobile') || 'browser',
-  useVue: program.vue,
   // all arguments passed to the command (we remove the main command name)
   cliArgs: process.argv.slice(3)
 }

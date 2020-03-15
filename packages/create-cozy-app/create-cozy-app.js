@@ -31,7 +31,6 @@ const program = new commander.Command(pkg.name)
   })
   .option('--verbose', 'print additional logs')
   .option(
-  .option('--vue', 'build a VueJS 2+ application instead of the default one')
     '--scripts-source <scritps-source>',
     'use a specific package of scripts package (see --help)'
   )
@@ -109,7 +108,6 @@ if (!projectName) {
 
 createApp(projectName, {
   verbose: program.verbose,
-  vue: program.vue,
   scriptsSource: program.scriptsSource
 })
 

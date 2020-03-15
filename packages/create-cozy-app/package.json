@@ -1,13 +1,15 @@
 {
   "name": "create-cozy-app",
-  "version": "1.1.0",
+  "version": "1.13.3",
   "description": "A tool to create cozy applications",
-  "author": "CPatchane <code@patchane.com>",
+  "author": "Cozy",
+  "contributors": [
+    "CPatchane <code@patchane.com>"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CPatchane/create-cozy-app.git"
+    "url": "git+https://github.com/cozy/create-cozy-app.git"
   },
-  "homepage": "https://github.com/CPatchane/create-cozy-app/tree/master/packages/create-cozy-app",
   "license": "MIT",
   "bin": {
     "create-cozy-app": "./index.js"

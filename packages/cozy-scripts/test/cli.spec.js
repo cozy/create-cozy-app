@@ -288,14 +288,6 @@ describe('cozy-scripts (cs) CLI', () => {
     }).not.toThrow()
   })
 
-  it('should vue framework with --vue option', () => {
-    // add cli arguments
-    addCLIArgs('watch', '--vue')
-    expect(() => {
-      callCLI()
-    }).not.toThrow()
-  })
-
   it('should handle mobile target with --mobile option', () => {
     // add cli arguments
     addCLIArgs('watch', '--mobile')
