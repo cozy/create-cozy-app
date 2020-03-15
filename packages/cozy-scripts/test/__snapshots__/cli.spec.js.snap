@@ -159,8 +159,6 @@ Object {
 }
 `;
 
-exports[`cozy-scripts (cs) CLI should handle previous \`standalone\` command to display a message to use \`start\` instead 1`] = `" ⚠️ \`cozy-scripts standalone\` has been replaced. Please use \`cozy-scripts start\` instead. ⚠️ "`;
-
 exports[`cozy-scripts (cs) CLI should handle src directory path providing with --src-dir option 1`] = `
 Object {
   "cliArgs": Array [

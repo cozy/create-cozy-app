@@ -112,20 +112,6 @@ if (program.showConfig) {
     'lint'
   ]
 
-  // TODO: to remove in next major version
-  if (actionName === 'standalone') {
-    console.log()
-    console.log(
-      colorize.orange('⚠️ `cozy-scripts standalone` has been replaced.')
-    )
-    console.log(
-      colorize.orange(
-        `Please use ${colorize.bold('`cozy-scripts start`')} instead. ⚠️`
-      )
-    )
-    console.log()
-  }
-
   if (availableScripts.includes(actionName)) {
     if (actionName === 'start') {
       // specific to this action

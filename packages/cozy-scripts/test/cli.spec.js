@@ -114,16 +114,6 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(stripAnsi(console.log.mock.calls[0][0])).toMatchSnapshot()
   })
 
-  it('should handle previous `standalone` command to display a message to use `start` instead', () => {
-    console.log = jest.fn()
-    console.error = jest.fn() // mute this log channel
-    addCLIArgs('standalone', '--browser')
-    expect(() => {
-      callCLI()
-    }).not.toThrow()
-    expect(stripAnsi(console.log.mock.calls.join(' '))).toMatchSnapshot()
-  })
-
   it('should call jest on `test` command and pass remaining args to jest', () => {
     // add cli arguments
     addCLIArgs('test', '--watch', '--runInBand', '--config', 'undefile.js')
