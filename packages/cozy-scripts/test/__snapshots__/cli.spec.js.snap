@@ -173,10 +173,10 @@ Object {
 exports[`cozy-scripts (cs) CLI should run start script on \`start\` command with all passed options with development mode by default 1`] = `
 Object {
   "cliArgs": Array [
-    "--no-stack",
+    "--stack",
   ],
   "mode": "development",
-  "stack": false,
+  "stack": true,
   "target": "browser",
 }
 `;

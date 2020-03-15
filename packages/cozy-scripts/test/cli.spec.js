@@ -288,7 +288,7 @@ describe('cozy-scripts (cs) CLI', () => {
 
   it('should run start script on `start` command with all passed options with development mode by default', () => {
     // add cli arguments
-    addCLIArgs('start', '--no-stack')
+    addCLIArgs('start', '--stack')
     expect(() => {
       callCLI()
     }).not.toThrow()

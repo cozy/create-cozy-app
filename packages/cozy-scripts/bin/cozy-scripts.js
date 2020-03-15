@@ -34,6 +34,11 @@ const program = new commander.Command(pkg.name)
   .option('--fix', 'format automatically the code with eslint')
   .option('--no-hot', 'disables hot module reload (only for development)')
   .option(
+    '--stack',
+    'use cozy-stack with docker launch when using `cozy-scripts start`',
+    false
+  )
+  .option(
     '--port  <portNumber>',
     'change the webpack dev server port (default 8888) (only for development)'
   )
@@ -42,10 +47,6 @@ const program = new commander.Command(pkg.name)
     'change the webpack dev server host name (default localhost) (only for development)'
   )
   .option('--mobile', 'specify mobile build target')
-  .option(
-    '--no-stack',
-    'disable docker stack launch when using `cozy-scripts start`'
-  )
   .option('--production', 'specify production build mode')
   .option('--show-config', 'just print app final webpack config')
   .option(
