@@ -5,7 +5,6 @@
 - __[Introduction](#introduction)__
 - __[Bundles](#bundles)__
     - [`webpack.bundle.default.js`](#webpackbundledefaultjs)
-    - [`webpack.bundle.preact.js`](#webpackbundlepreactjs)
 - __[Unit Configs](#unit-configs)__
     - [`webpack.config.analyzer.js`](#webpackconfiganalyzerjs)
     - [`webpack.config.base.js`](#webpackconfigbasejs)
@@ -79,48 +78,6 @@ By default `cozy-scripts` uses this bundle in an opinionated way, but you can ov
 // using ES Modules
 import configs from 'cozy-scripts/config/webpack.bundle.default.js'
 import myConfig from './config/webpack.myconfig.js'
-// or using CommonJS
-const configs = require('cozy-scripts/config/webpack.bundle.default.js')
-const myConfig = require('./config/webpack.myconfig.js')
-
-// it's possible to add many custom configurations using this way,
-// the last will overwrite the previous in case of conflicts
-module.exports = [configs, myConfig]
-```
-
-
-### `webpack.bundle.preact.js`
-
-This file is the same default bundle but using preact instead (previous default config bundle used for the application built from `cozy-scripts`). It uses all following configs files:
-- `webpack.config.base.js`
-- `webpack.config.chunks.js`
-- `webpack.config.cozy-ui.js`
-- `webpack.config.cozy-ui.react.js`
-- `webpack.config.eslint.js`
-- `webpack.config.intents.js`
-- `webpack.config.manifest.js`
-- `webpack.config.pictures.js`
-- __`webpack.config.preact.js`__
-- `webpack.config.progress.js`
-- `webpack.config.vendors.js`
-- `webpack.environment.dev.js`
-- `webpack.environment.prod.js`
-- `webpack.target.browser.js`
-- `webpack.target.mobile.js`
-- `webpack.vars.js`
-
-This config will replace `react` usage by `preact-compat` in a transparent manner (webpack aliases).
-__The `app.config.js` is needed to use this bundle since it's not the default one for `cozy-scripts`__. But you can still overload it using a custom config like the default bundle:
-
-```js
-// app.config.js
-
-// using ES Modules
-import configs from 'cozy-scripts/config/webpack.bundle.preact.js'
-import myConfig from './config/webpack.myconfig.js'
-// or using CommonJS
-const configs = require('cozy-scripts/config/webpack.bundle.preact.js')
-const myConfig = require('./config/webpack.myconfig.js')
 
 // it's possible to add many custom configurations using this way,
 // the last will overwrite the previous in case of conflicts

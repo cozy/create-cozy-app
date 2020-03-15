@@ -30,7 +30,6 @@ Array [
   "/Custom/Path/To/App/packages/cozy-scripts/stack/disableCSP.yaml",
   "/Custom/Path/To/App/packages/cozy-scripts/node_modules/.bin/eslint",
   "/Custom/Path/To/App/packages/cozy-scripts/utils/reactExposer.js",
-  "/Custom/Path/To/App/packages/cozy-scripts/utils/preactExposer.js",
   "/Custom/Path/To/App/packages/cozy-scripts/stack/quitStack.sh",
 ]
 `;
@@ -65,7 +64,6 @@ Array [
   "/Custom/Path/To/App/packages/cozy-scripts/stack/disableCSP.yaml",
   "/Custom/Path/To/App/packages/cozy-scripts/node_modules/.bin/eslint",
   "/Custom/Path/To/App/packages/cozy-scripts/utils/reactExposer.js",
-  "/Custom/Path/To/App/packages/cozy-scripts/utils/preactExposer.js",
   "/Custom/Path/To/App/packages/cozy-scripts/stack/quitStack.sh",
 ]
 `;
@@ -100,7 +98,6 @@ Array [
   "/Custom/Path/To/App/packages/cozy-scripts/stack/disableCSP.yaml",
   "/Custom/Path/To/App/packages/cozy-scripts/node_modules/.bin/eslint",
   "/Custom/Path/To/App/packages/cozy-scripts/utils/reactExposer.js",
-  "/Custom/Path/To/App/packages/cozy-scripts/utils/preactExposer.js",
   "/Custom/Path/To/App/packages/cozy-scripts/stack/quitStack.sh",
 ]
 `;
@@ -135,7 +132,6 @@ Array [
   "/Custom/Path/To/App/packages/cozy-scripts/stack/disableCSP.yaml",
   "/Custom/Path/To/App/packages/cozy-scripts/node_modules/.bin/eslint",
   "/Custom/Path/To/App/packages/cozy-scripts/utils/reactExposer.js",
-  "/Custom/Path/To/App/packages/cozy-scripts/utils/preactExposer.js",
   "/Custom/Path/To/App/packages/cozy-scripts/stack/quitStack.sh",
 ]
 `;
@@ -170,7 +166,6 @@ Array [
   "/Custom/Path/To/App/packages/cozy-scripts/stack/disableCSP.yaml",
   "/Custom/Path/To/App/packages/cozy-scripts/node_modules/.bin/eslint",
   "/Custom/Path/To/App/packages/cozy-scripts/utils/reactExposer.js",
-  "/Custom/Path/To/App/packages/cozy-scripts/utils/preactExposer.js",
   "/Custom/Path/To/App/packages/cozy-scripts/stack/quitStack.sh",
 ]
 `;

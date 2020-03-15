@@ -72,6 +72,5 @@ module.exports = {
   csDisableCSPConfig: () => resolveOwn('stack/disableCSP.yaml'),
   csEslintBinary: () => resolveOwn('node_modules/.bin/eslint'),
   csReactExposer: () => resolveOwn('utils/reactExposer.js'),
-  csPreactExposer: () => resolveOwn('utils/preactExposer.js'),
   csQuitStackScript: () => resolveOwn('stack/quitStack.sh')
 }
