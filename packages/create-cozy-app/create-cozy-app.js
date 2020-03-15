@@ -7,7 +7,6 @@ const fs = require('fs-extra')
 const spawn = require('cross-spawn')
 const ora = require('ora')
 const colorize = require('./_colorize.js')
-const cozyAscii = require('./_cozyIoAscii.js')
 
 const pkg = require('./package.json')
 let projectName = null
@@ -118,8 +117,7 @@ function createApp(name, cliOptions) {
   checkAppName(appName)
   ensureProjectFolder(rootPath)
 
-  console.log(colorize.blue(cozyAscii))
-  console.log(`Let's create the Cozy Application in ${colorize.bold(rootPath)}`)
+  console.log(`Creating Cozy application in ${colorize.bold(rootPath)}...`)
   console.log()
 
   // move to project directory

@@ -25,7 +25,6 @@
   "files": [
     "index.js",
     "create-cozy-app.js",
-    "_colorize.js",
-    "_cozyIoAscii.js"
+    "_colorize.js"
   ]
 }
