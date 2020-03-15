@@ -99,10 +99,6 @@ You can pass a custom scripts package using the optional `--scripts-source` opti
 
 Using this options, `create-cozy-app` will use the `cozy-scripts` package but with the `template-vue` template folder in order to build a Cozy application using the [VueJS 2+ framework](https://vuejs.org).
 
-##### `--vanilla`
-
-Using this options, `create-cozy-app` will use the `cozy-scripts-vanilla` package (instead of the default one: `cozy-scripts`) and build a Cozy application in VanillaJS without any npm dependencies.
-
 ##### `--verbose`
 
 Using this options, `create-cozy-app` will be run in a more verbose way, useful for debugging or understanding what the script does.
