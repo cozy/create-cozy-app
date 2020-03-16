@@ -7,8 +7,6 @@ env:
   matrix:
   - TESTS_SUITE=tools
   - TESTS_SUITE=cozy-scripts:default
-  - TESTS_SUITE=cozy-scripts:vue
-  - TESTS_SUITE=cozy-scripts-vanilla
 cache:
   yarn: true
   directories:
