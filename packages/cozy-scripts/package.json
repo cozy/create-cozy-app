@@ -55,7 +55,6 @@
     "svg-sprite-loader": "4.1.3",
     "svgo": "1.1.1",
     "validate-npm-package-name": "3.0.0",
-    "vue-jest": "3.0.3",
     "webpack": "4.29.3",
     "webpack-bundle-analyzer": "3.0.3",
     "webpack-dev-server": "3.1.10",
@@ -77,14 +76,7 @@
     "template/manifest.webapp",
     "template/package.json",
     "template/README.md",
-    "template/yarn.lock",
-    "template-vue/app",
-    "template-vue/.travis.yml",
-    "template-vue/CONTRIBUTING.md",
-    "template-vue/manifest.webapp",
-    "template-vue/package.json",
-    "template-vue/README.md",
-    "template-vue/yarn.lock"
+    "template/yarn.lock"
   ],
   "devDependencies": {
     "strip-ansi": "5.0.0"

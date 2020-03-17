@@ -7,7 +7,6 @@ const fs = require('fs-extra')
 const spawn = require('cross-spawn')
 const ora = require('ora')
 const colorize = require('./_colorize.js')
-const cozyAscii = require('./_cozyIoAscii.js')
 
 const pkg = require('./package.json')
 let projectName = null
@@ -30,11 +29,6 @@ const program = new commander.Command(pkg.name)
     projectName = name
   })
   .option('--verbose', 'print additional logs')
-  .option(
-    '--vanilla',
-    'build a vanilla JS application instead of the default one'
-  )
-  .option('--vue', 'build a VueJS 2+ application instead of the default one')
   .option(
     '--scripts-source <scritps-source>',
     'use a specific package of scripts package (see --help)'
@@ -113,8 +107,6 @@ if (!projectName) {
 
 createApp(projectName, {
   verbose: program.verbose,
-  vanilla: program.vanilla,
-  vue: program.vue,
   scriptsSource: program.scriptsSource
 })
 
@@ -125,8 +117,7 @@ function createApp(name, cliOptions) {
   checkAppName(appName)
   ensureProjectFolder(rootPath)
 
-  console.log(colorize.blue(cozyAscii))
-  console.log(`Let's create the Cozy Application in ${colorize.bold(rootPath)}`)
+  console.log(`Creating Cozy application in ${colorize.bold(rootPath)}...`)
   console.log()
 
   // move to project directory
@@ -154,11 +145,7 @@ function checkAppName(appName) {
     printErrorsList(validationResult.warnings)
     process.exit(1)
   }
-  if (
-    appName === 'create-cozy-app' ||
-    appName === 'cozy-scripts' ||
-    appName === 'cozy-scripts-vanilla'
-  ) {
+  if (appName === 'create-cozy-app' || appName === 'cozy-scripts') {
     console.log(
       `Could not create a project called ${colorize.red(
         `"${appName}"`
@@ -197,7 +184,6 @@ function ensureProjectFolder(folderPath) {
 function bootstrapApp(rootPath, appName, cliOptions) {
   // chose the correct scritps package
   let scriptsPkgName = 'cozy-scripts'
-  if (cliOptions.vanilla) scriptsPkgName = 'cozy-scripts-vanilla'
   // the loading spinner reference
   let installingSpinner
   // notice if a specific source is provided

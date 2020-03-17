@@ -30,13 +30,13 @@
 
 This tool can be run as an installed CLI or by using `yarn create`, see below for more information.
 
-By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on React. But option for VueJS or Vanilla are also available, see below for more information.
+By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on React. 
 
 __You can find a complete tutorial about creating a Cozy application using `create-cozy-app` in [the official documentation (docs.cozy.io)](https://docs.cozy.io/en/tutorials/app/).__
 
 #### Requirements
 
- - NodeJS version 8 or higher;
+ - NodeJS version 10 or higher;
  - [Yarn](https://yarnpkg.com): a NodeJS package manager, like `npm`;
  - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment)
 
@@ -75,14 +75,24 @@ create-cozy-app mycozyapp
 
 The script will download some dependencies (may take a while) and ask you a few questions, then creates an application skeleton inside `mycozyapp`.
 
-That's it! You can already tart hacking:
+#### With stack from docker 
+
+That's it! You can already start hacking:
+
+```
+cd mycozyapp
+yarn start --stack
+```
+
+After the webpack build and the docker environment ready, the `mycozyapp` app here will be available at http://mycozyapp.cozy.tools:8080
+
+#### With stack built from source
 
 ```
 cd mycozyapp
 yarn start
 ```
 
-After the webpack build and the docker environment ready, the `mycozyapp` app here will be available at http://mycozyapp.cozy.tools:8080
 
 ### Options
 
@@ -96,13 +106,6 @@ You can pass a custom scripts package using the optional `--scripts-source` opti
 - a specific __npm version__ (`version:` prefix): `version:0.1.5`
 - a specific __git commit/branch__ with name provided after the '#' (`git:` prefix): `git://github.com/CPatchane/cozy-scripts.git#master`
 
-##### `--vue`
-
-Using this options, `create-cozy-app` will use the `cozy-scripts` package but with the `template-vue` template folder in order to build a Cozy application using the [VueJS 2+ framework](https://vuejs.org).
-
-##### `--vanilla`
-
-Using this options, `create-cozy-app` will use the `cozy-scripts-vanilla` package (instead of the default one: `cozy-scripts`) and build a Cozy application in VanillaJS without any npm dependencies.
 
 ##### `--verbose`
 

@@ -18,17 +18,6 @@ module.exports = {
       },
       {
         enforce: 'pre',
-        test: /\.vue$/,
-        loader: require.resolve('eslint-loader'),
-        exclude: /node_modules/,
-        options: {
-          extends: ['cozy-app/vue'],
-          fix: eslintFix,
-          emitWarning: true
-        }
-      },
-      {
-        enforce: 'pre',
         test: /\.jsx$/,
         loader: require.resolve('eslint-loader'),
         exclude: /node_modules/,

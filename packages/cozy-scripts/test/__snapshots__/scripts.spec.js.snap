@@ -160,19 +160,6 @@ Array [
           "options": Object {
             "emitWarning": true,
             "extends": Array [
-              "cozy-app/vue",
-            ],
-            "fix": false,
-          },
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
               "cozy-app/react",
             ],
             "fix": false,
@@ -570,19 +557,6 @@ Array [
             "emitWarning": true,
             "extends": Array [
               "cozy-app",
-            ],
-            "fix": false,
-          },
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
-              "cozy-app/vue",
             ],
             "fix": false,
           },
@@ -1007,19 +981,6 @@ Array [
           "options": Object {
             "emitWarning": true,
             "extends": Array [
-              "cozy-app/vue",
-            ],
-            "fix": false,
-          },
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
               "cozy-app/react",
             ],
             "fix": false,
@@ -1421,19 +1382,6 @@ Array [
             "emitWarning": true,
             "extends": Array [
               "cozy-app",
-            ],
-            "fix": false,
-          },
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
-              "cozy-app/vue",
             ],
             "fix": false,
           },
@@ -1865,19 +1813,6 @@ Array [
           "options": Object {
             "emitWarning": true,
             "extends": Array [
-              "cozy-app/vue",
-            ],
-            "fix": false,
-          },
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
               "cozy-app/react",
             ],
             "fix": false,
@@ -2276,19 +2211,6 @@ Array [
             "emitWarning": true,
             "extends": Array [
               "cozy-app",
-            ],
-            "fix": false,
-          },
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
-              "cozy-app/vue",
             ],
             "fix": false,
           },
@@ -2764,19 +2686,6 @@ Array [
             "emitWarning": true,
             "extends": Array [
               "cozy-app",
-            ],
-            "fix": false,
-          },
-          "test": Object {},
-        },
-        Object {
-          "enforce": "pre",
-          "exclude": Object {},
-          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
-          "options": Object {
-            "emitWarning": true,
-            "extends": Array [
-              "cozy-app/vue",
             ],
             "fix": false,
           },

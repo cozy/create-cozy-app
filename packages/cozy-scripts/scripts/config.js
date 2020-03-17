@@ -20,7 +20,7 @@ function mergeWithOptions(options, configs, current) {
 
 function getWebpackConfigs(options = {}) {
   // mode and target options should already be provided
-  const { mode = 'development', target = 'browser', useVue } = options
+  const { mode = 'development', target = 'browser' } = options
 
   // NODE_ENV from environment overwrite options here
   if (!process.env.NODE_ENV) process.env.NODE_ENV = `${target}:${mode}`
@@ -34,9 +34,7 @@ function getWebpackConfigs(options = {}) {
   if (fs.existsSync(configPath)) {
     appConfigs = require(configPath)
   } else {
-    appConfigs = useVue
-      ? [require('../config/webpack.bundle.vue.js')]
-      : [require('../config/webpack.bundle.default.js')]
+    appConfigs = [require('../config/webpack.bundle.default.js')]
   }
 
   const mergedConfig = merge(

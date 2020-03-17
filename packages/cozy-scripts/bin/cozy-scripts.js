@@ -32,7 +32,12 @@ const program = new commander.Command(pkg.name)
   .option('--debug', 'print more outputs for debugging')
   .option('--development', 'specify development build mode')
   .option('--fix', 'format automatically the code with eslint')
-  .option('--hot', 'enable hot module reload (only for development)')
+  .option('--no-hot', 'disables hot module reload (only for development)')
+  .option(
+    '--stack',
+    'use cozy-stack with docker launch when using `cozy-scripts start`',
+    false
+  )
   .option(
     '--port  <portNumber>',
     'change the webpack dev server port (default 8888) (only for development)'
@@ -42,13 +47,8 @@ const program = new commander.Command(pkg.name)
     'change the webpack dev server host name (default localhost) (only for development)'
   )
   .option('--mobile', 'specify mobile build target')
-  .option(
-    '--no-stack',
-    'disable docker stack launch when using `cozy-scripts start`'
-  )
   .option('--production', 'specify production build mode')
   .option('--show-config', 'just print app final webpack config')
-  .option('--vue', 'to use scripts in a VueJS specific way (default React)')
   .option(
     '--config <pathToFile>',
     'provide a custom cozy-scripts build config file path (relative to the application root directory). Use it only if you need custom build configuration using app.config.js with a custom location.'
@@ -80,7 +80,6 @@ const options = {
     'development',
   target:
     (program.browser && 'browser') || (program.mobile && 'mobile') || 'browser',
-  useVue: program.vue,
   // all arguments passed to the command (we remove the main command name)
   cliArgs: process.argv.slice(3)
 }
@@ -98,7 +97,9 @@ const options = {
   ['buildDir', CTS.BUILD_DIR, program.buildDir],
   ['manifest', CTS.MANIFEST, program.manifest]
 ].map(toDefine => {
-  if (program[toDefine[0]]) process.env[toDefine[1]] = toDefine[2]
+  if (program[toDefine[0]] !== undefined) {
+    process.env[toDefine[1]] = toDefine[2]
+  }
 })
 
 if (program.showConfig) {
@@ -113,20 +114,6 @@ if (program.showConfig) {
     'release',
     'lint'
   ]
-
-  // TODO: to remove in next major version
-  if (actionName === 'standalone') {
-    console.log()
-    console.log(
-      colorize.orange('⚠️ `cozy-scripts standalone` has been replaced.')
-    )
-    console.log(
-      colorize.orange(
-        `Please use ${colorize.bold('`cozy-scripts start`')} instead. ⚠️`
-      )
-    )
-    console.log()
-  }
 
   if (availableScripts.includes(actionName)) {
     if (actionName === 'start') {

@@ -100,7 +100,7 @@ function requireFileAsString(filename) {
 function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   const ownPackageName = require(path.join(__dirname, '..', 'package.json'))
     .name
-  const templateName = cliOptions.vue ? 'template-vue' : 'template'
+  const templateName = 'template'
   // paths
   const ownPath = path.join(appPath, 'node_modules', ownPackageName)
   const templatePath = path.join(ownPath, templateName)

@@ -47,11 +47,7 @@ const getEnabledFlags = function() {
   return process.env.COZY_FLAGS.split(',')
 }
 
-const getReactExposer = function() {
-  return process.env[CTS.USE_PREACT]
-    ? paths.csPreactExposer()
-    : paths.csReactExposer()
-}
+const getReactExposer = () => paths.csReactExposer()
 
 module.exports = {
   addAnalyzer,

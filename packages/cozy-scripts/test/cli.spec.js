@@ -114,16 +114,6 @@ describe('cozy-scripts (cs) CLI', () => {
     expect(stripAnsi(console.log.mock.calls[0][0])).toMatchSnapshot()
   })
 
-  it('should handle previous `standalone` command to display a message to use `start` instead', () => {
-    console.log = jest.fn()
-    console.error = jest.fn() // mute this log channel
-    addCLIArgs('standalone', '--browser')
-    expect(() => {
-      callCLI()
-    }).not.toThrow()
-    expect(stripAnsi(console.log.mock.calls.join(' '))).toMatchSnapshot()
-  })
-
   it('should call jest on `test` command and pass remaining args to jest', () => {
     // add cli arguments
     addCLIArgs('test', '--watch', '--runInBand', '--config', 'undefile.js')
@@ -288,14 +278,6 @@ describe('cozy-scripts (cs) CLI', () => {
     }).not.toThrow()
   })
 
-  it('should vue framework with --vue option', () => {
-    // add cli arguments
-    addCLIArgs('watch', '--vue')
-    expect(() => {
-      callCLI()
-    }).not.toThrow()
-  })
-
   it('should handle mobile target with --mobile option', () => {
     // add cli arguments
     addCLIArgs('watch', '--mobile')
@@ -306,7 +288,7 @@ describe('cozy-scripts (cs) CLI', () => {
 
   it('should run start script on `start` command with all passed options with development mode by default', () => {
     // add cli arguments
-    addCLIArgs('start', '--no-stack')
+    addCLIArgs('start', '--stack')
     expect(() => {
       callCLI()
     }).not.toThrow()

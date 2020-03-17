@@ -1,79 +1,74 @@
 # The `cozy-scripts` Webpack configurations
 
-## Table of content
+<!-- MarkdownTOC autolink=True -->
 
-- __[Introduction](#introduction)__
-- __[Bundles](#bundles)__
-    - [`webpack.bundle.default.js`](#webpackbundledefaultjs)
-    - [`webpack.bundle.preact.js`](#webpackbundlepreactjs)
-    - [`webpack.bundle.vue.js`](#webpackbundlevuejs)
-- __[Unit Configs](#unit-configs)__
+- [Introduction](#introduction)
+- [Config file types](#config-file-types)
+    - [Bundles](#bundles)
+        - [`webpack.bundle.default.js`](#webpackbundledefaultjs)
+- [Unit Configs](#unit-configs)
     - [`webpack.config.analyzer.js`](#webpackconfiganalyzerjs)
     - [`webpack.config.base.js`](#webpackconfigbasejs)
+        - [Properties](#properties)
+        - [Rules](#rules)
+        - [Plugins](#plugins)
     - [`webpack.config.chunks.js`](#webpackconfigchunksjs)
     - [`webpack.config.cozy-ui.js`](#webpackconfigcozy-uijs)
     - [`webpack.config.cozy-ui.react.js`](#webpackconfigcozy-uireactjs)
     - [`webpack.config.css-modules.js`](#webpackconfigcss-modulesjs)
     - [`webpack.config.eslint.js`](#webpackconfigeslintjs)
-    - [`webpack.config.hash.js`](#webpackconfighashjs)
     - [`webpack.config.intents.js`](#webpackconfigintentsjs)
+    - [`webpack.config.hash.js`](#webpackconfighashjs)
     - [`webpack.config.manifest.js`](#webpackconfigmanifestjs)
     - [`webpack.config.pictures.js`](#webpackconfigpicturesjs)
-    - [`webpack.config.preact.js`](#webpackconfigpreactjs)
     - [`webpack.config.progress.js`](#webpackconfigprogressjs)
-    - [`webpack.config.react.js`](#webpackconfigreactjs)
     - [`webpack.config.services.js`](#webpackconfigservicesjs)
+    - [`webpack.config.react.js`](#webpackconfigreactjs)
     - [`webpack.config.vendors.js`](#webpackconfigvendorsjs)
-    - [`webpack.config.vue.js`](#webpackconfigvuejs)
-- __[Environments](#environments)__
+- [Environments](#environments)
     - [`webpack.environment.dev.js`](#webpackenvironmentdevjs)
+        - [Properties](#properties-1)
+        - [Plugins](#plugins-1)
     - [`webpack.environment.prod.js`](#webpackenvironmentprodjs)
-- __[Targets](#targets)__
+        - [Plugins](#plugins-2)
+- [Targets](#targets)
     - [`webpack.target.browser.js`](#webpacktargetbrowserjs)
+        - [Properties](#properties-2)
+        - [Plugins](#plugins-3)
     - [`webpack.target.mobile.js`](#webpacktargetmobilejs)
-- __[Miscellaneous](#miscellaneous)__
+        - [Properties](#properties-3)
+        - [Plugins:](#plugins-4)
+- [Miscellaneous](#miscellaneous)
     - [`webpack.vars.js`](#webpackvarsjs)
+
+<!-- /MarkdownTOC -->
+
 
 
 ## Introduction
 
 To build a Cozy application, `cozy-scripts` uses `webpack` under the hood, and this documentation is dedicated to all webpack configuration files.
-In order to organize all these webpack configurations, they are classified in many files according to the concern.
-Having many unit files for the configuration will also allow to support specific application needs without 'ejecting' (removing `cozy-scripts` dependency and copy all webpack configurations and dependencies to the application repository).
-These files are supposed to be enoughly independant to be usable upon request as far as possible without conflicts.
+The webpack config is split to facilitate understanding.
+Having many unit files for the configuration allows to support specific application needs without 'ejecting' (removing `cozy-scripts` dependency and copy all webpack configurations and dependencies to the application repository).
+These files should be independent enough to be usable upon request as far as possible without conflicts.
 
-#### Kind of config file:
+## Config file types
 
-__Bundle:__ A bundle regroup many unit configuration for a specific use case like the default React application or an VueJS application.
+__Bundle:__ A bundle regroups many unit configuration for a specific use case like the default React application.
 
-__Environment:__ An environment config is in charge of provided variables and pluging specific to a compiling context (development or production for example).
+__Environment:__ An environment config is in charge of providing variables and plugins specific to a compiling context (development or production for example).
 
-__Target:__ A target means the one which will use the built. For now we only have to targets, `browser` for the default web application and `mobile` for the native mobile application using Cordova (in progress).
+__Target:__ For now we only have two targets, `browser` for the default web application and `mobile` for native mobile applications using Cordova (in progress).
 
 
-## Bundles
+### Bundles
 
-### `webpack.bundle.default.js`
+#### `webpack.bundle.default.js`
 
-This file is the default config bundle used for the application built from `cozy-scripts`. It uses all following configs files:
-- `webpack.config.base.js`
-- `webpack.config.chunks.js`
-- `webpack.config.cozy-ui.js`
-- `webpack.config.cozy-ui.react.js`
-- `webpack.config.eslint.js`
-- `webpack.config.intents.js`
-- `webpack.config.manifest.js`
-- `webpack.config.pictures.js`
-- `webpack.config.progress.js`
-- `webpack.config.react.js`
-- `webpack.config.vendors.js`
-- `webpack.environment.dev.js`
-- `webpack.environment.prod.js`
-- `webpack.target.browser.js`
-- `webpack.target.mobile.js`
-- `webpack.vars.js`
+This file is the default config bundle used for the application built from `cozy-scripts`.
 
-By default `cozy-scripts` uses this bundle in an opinionated way, but you can overload this configuration by creating a custom `app.config.js` in your application root directory:
+If you wish to customize a behavior, you can overload this configuration by creating a
+custom `app.config.js` in your application root directory:
 
 ```js
 // app.config.js
@@ -81,84 +76,6 @@ By default `cozy-scripts` uses this bundle in an opinionated way, but you can ov
 // using ES Modules
 import configs from 'cozy-scripts/config/webpack.bundle.default.js'
 import myConfig from './config/webpack.myconfig.js'
-// or using CommonJS
-const configs = require('cozy-scripts/config/webpack.bundle.default.js')
-const myConfig = require('./config/webpack.myconfig.js')
-
-// it's possible to add many custom configurations using this way,
-// the last will overwrite the previous in case of conflicts
-module.exports = [configs, myConfig]
-```
-
-
-### `webpack.bundle.preact.js`
-
-This file is the same default bundle but using preact instead (previous default config bundle used for the application built from `cozy-scripts`). It uses all following configs files:
-- `webpack.config.base.js`
-- `webpack.config.chunks.js`
-- `webpack.config.cozy-ui.js`
-- `webpack.config.cozy-ui.react.js`
-- `webpack.config.eslint.js`
-- `webpack.config.intents.js`
-- `webpack.config.manifest.js`
-- `webpack.config.pictures.js`
-- __`webpack.config.preact.js`__
-- `webpack.config.progress.js`
-- `webpack.config.vendors.js`
-- `webpack.environment.dev.js`
-- `webpack.environment.prod.js`
-- `webpack.target.browser.js`
-- `webpack.target.mobile.js`
-- `webpack.vars.js`
-
-This config will replace `react` usage by `preact-compat` in a transparent manner (webpack aliases).
-__The `app.config.js` is needed to use this bundle since it's not the default one for `cozy-scripts`__. But you can still overload it using a custom config like the default bundle:
-
-```js
-// app.config.js
-
-// using ES Modules
-import configs from 'cozy-scripts/config/webpack.bundle.preact.js'
-import myConfig from './config/webpack.myconfig.js'
-// or using CommonJS
-const configs = require('cozy-scripts/config/webpack.bundle.preact.js')
-const myConfig = require('./config/webpack.myconfig.js')
-
-// it's possible to add many custom configurations using this way,
-// the last will overwrite the previous in case of conflicts
-module.exports = [configs, myConfig]
-```
-
-### `webpack.bundle.vue.js`
-
-This file is the VueJS config bundle used for the application built from `cozy-scripts` with the option `--vue`. It uses all following configs files:
-- `webpack.config.base.js`
-- `webpack.config.chunks.js`
-- `webpack.config.cozy-ui.js`
-- `webpack.config.eslint.js`
-- `webpack.config.intents.js`
-- `webpack.config.manifest.js`
-- `webpack.config.pictures.js`
-- `webpack.config.progress.js`
-- `webpack.config.vendors.js`
-- `webpack.config.vue.js`
-- `webpack.environment.dev.js`
-- `webpack.environment.prod.js`
-- `webpack.target.browser.js`
-- `webpack.target.mobile.js`
-- `webpack.vars.js`
-
-You can still overload it using a custom config like the default bundle using the `app.config.js` file:
-
-```js
-// app.config.js
-
-// ES Modules
-import configs from 'cozy-scripts/config/webpack.bundle.vue.js'
-import myConfig from './config/webpack.myconfig.js'
-// or CommonJS
-const configs = require('cozy-scripts/config/webpack.bundle.vue.js')
-const myConfig = require('./config/webpack.myconfig.js')
 
 // it's possible to add many custom configurations using this way,
 // the last will overwrite the previous in case of conflicts
@@ -177,13 +94,13 @@ It will run a server (on port `8889` to not be in conflict with the webpack dev 
 
 The default basic configuration of the application.
 
-##### Properties
+#### Properties
 - `output` to `[name].js` filename
 - resolve:
     -  `modules` to `['node_modules', 'src']`
     - extensions: `.js`, `.json` and `.css`
 
-##### Rules
+#### Rules
 - all `.js` (excluding `node_modules`, `cozy-bar` and `cozy-client-js`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
 - all `.css` to be loaded using options:
     - `mini-css-extract-plugin` extractor loader by default or `style-loader` for hot reloading
@@ -192,7 +109,8 @@ The default basic configuration of the application.
 
 A specific `noParse` property is enabled on `/localforage/dist`.
 
-##### Plugins:
+#### Plugins
+
 - `postcss-assets-webpack-plugin` (logs from this plugin are shown only in `--debug` mode) to load all `.css` files with:
     - `css-mqpacker` (pack all CSS media query rules into one)
     - `postcss-discard-duplicates` (remove duplicates)
@@ -281,17 +199,6 @@ It will add two rules:
 
 It also adds `svg-sprite-loader/plugin` as plugin to use it with the related loader.
 
-### `webpack.config.preact.js`
-
-A config to resolve all `react` aliases using [`Preact`](https://preactjs.com) instead.
-
-It will:
-- resolve `.jsx` extensions
-- add aliases:
-    - `react` to `preact-compat`
-    - `react-dom` to `preact-compat`
-    - Due to [an HMR issue](https://github.com/developit/preact-compat/issues/392), `preact-compat` to `preact-compat/dist/preact-compat`
-- add a rule for `.jsx` files excluding `node_modules` (exception for `node_modules/cozy-ui`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
 
 ### `webpack.config.progress.js`
 
@@ -328,25 +235,19 @@ A `copy-webpack-plugin` plugin usage to copy all files from the `vendors/assets/
 
 This config will also process the application icon and run [`svgo`](https://github.com/svg/svgo) to optimize it if this is a SVG file.
 
-### `webpack.config.vue.js`
-
-A config to use the VueJS (v2+) framework.
-
-It will:
-- resolve `.vue` extensions
-- add a rule for `.vue` files, excluding `node_modules`, to be loaded using `vue-loader`.
-
 
 ## Environments
 
 ### `webpack.environment.dev.js`
 
-##### Properties
+#### Properties
+
 - `devtool` to `#source-map`
 - `externals` with `['cozy']` to exclude all `cozy.*` dependencies from the output bundle (since it will be serve by `ProvidePlugin`)
 - `mode` to `development`
 
-##### Plugins:
+#### Plugins
+
 - `webpack.DefinePlugin` to define globals variables at compiling time:
     - `__DEVELOPMENT__` to `true`
     - `__STACK_ASSETS__` to `false`
@@ -360,7 +261,8 @@ Only in the hot reload mode:
 
 ### `webpack.environment.prod.js`
 
-##### Plugins:
+#### Plugins
+
 - `webpack.optimize.OccurrenceOrderPlugin`
 - `webpack.DefinePlugin` to define globals variables at compiling time:
     - `process.env.NODE_ENV` to `production`
@@ -375,12 +277,12 @@ In this production mode, webpack will automatically use the `Terser` plugin to o
 
 ### `webpack.target.browser.js`
 
-##### Properties
+#### Properties
 - `entry`: the [`babel-polyfill`](https://babeljs.io/docs/en/babel-polyfill.html) import and the `index.jsx` from `src/targets/browser/`
 - `output`: `build/` path with `filename` to `[name].js` and `pathinfo` enabling only with the `COZY_SCRIPTS_DEBUG` mode
 - `externals` with `{ 'cozy-client-js': 'cozy' }` to exclude `cozy-client-js` (via `cozy.*`) dependency from the output bundle
 
-##### Plugins:
+#### Plugins
 - `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading) and used with `html-webpack-plugin`
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/browser/` with options:
     - `title`: `name` property of the `package.json`
@@ -392,11 +294,11 @@ In this production mode, webpack will automatically use the `Terser` plugin to o
 
 ### `webpack.target.mobile.js`
 
-##### Properties
+#### Properties
 - `entry`: the [`babel-polyfill`](https://babeljs.io/docs/en/babel-polyfill.html) import and the `index.jsx` from `src/targets/mobile`
 - `output`: `src/targets/mobile/www` path and `pathinfo` enabling only with the `COZY_SCRIPTS_DEBUG` mode
 
-##### Plugins:
+#### Plugins:
 - `script-ext-html-webpack-plugin` to load the main application `.js` file using the `defer` attribute (to be loaded after the initial loading) and used with `html-webpack-plugin`
 - `html-webpack-plugin` configured to use `index.ejs` HTML template from `src/targets/mobile/` with options:
     - `title`: `name` property of the `package.json`
