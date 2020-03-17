@@ -21,12 +21,10 @@
     - [`webpack.config.hash.js`](#webpackconfighashjs)
     - [`webpack.config.manifest.js`](#webpackconfigmanifestjs)
     - [`webpack.config.pictures.js`](#webpackconfigpicturesjs)
-    - [`webpack.config.preact.js`](#webpackconfigpreactjs)
     - [`webpack.config.progress.js`](#webpackconfigprogressjs)
     - [`webpack.config.services.js`](#webpackconfigservicesjs)
     - [`webpack.config.react.js`](#webpackconfigreactjs)
     - [`webpack.config.vendors.js`](#webpackconfigvendorsjs)
-    - [`webpack.config.vue.js`](#webpackconfigvuejs)
 - [Environments](#environments)
     - [`webpack.environment.dev.js`](#webpackenvironmentdevjs)
         - [Properties](#properties-1)
@@ -201,17 +199,6 @@ It will add two rules:
 
 It also adds `svg-sprite-loader/plugin` as plugin to use it with the related loader.
 
-### `webpack.config.preact.js`
-
-A config to resolve all `react` aliases using [`Preact`](https://preactjs.com) instead.
-
-It will:
-- resolve `.jsx` extensions
-- add aliases:
-    - `react` to `preact-compat`
-    - `react-dom` to `preact-compat`
-    - Due to [an HMR issue](https://github.com/developit/preact-compat/issues/392), `preact-compat` to `preact-compat/dist/preact-compat`
-- add a rule for `.jsx` files excluding `node_modules` (exception for `node_modules/cozy-ui`) to be loaded using `babel-loader` (with `cacheDirectory` option for caching in `node_modules/.cache/babel-loader`)
 
 ### `webpack.config.progress.js`
 
@@ -247,14 +234,6 @@ It will:
 A `copy-webpack-plugin` plugin usage to copy all files from the `vendors/assets/` folder to the output build folder.
 
 This config will also process the application icon and run [`svgo`](https://github.com/svg/svgo) to optimize it if this is a SVG file.
-
-### `webpack.config.vue.js`
-
-A config to use the VueJS (v2+) framework.
-
-It will:
-- resolve `.vue` extensions
-- add a rule for `.vue` files, excluding `node_modules`, to be loaded using `vue-loader`.
 
 
 ## Environments

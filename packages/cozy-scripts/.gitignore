@@ -1,13 +1,10 @@
 # NPM
 node_modules/
 template/node_modules/
-template-vue/node_modules/
 npm-debug.log
 template/npm-debug.log
-template-vue/npm-debug.log
 yarn-error.log
 template/yarn-error.log
-template-vue/yarn-error.log
 
 # Locales
 **/locales/*

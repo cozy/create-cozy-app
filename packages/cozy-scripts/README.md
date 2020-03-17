@@ -91,55 +91,6 @@ mycozyapp/
 
 This application is more than a simple Hello World, it's a mini Todo application doing interactions and data handling (using our new [`cozy-client`](https://github.com/cozy/cozy-client)) with the stack. A good way to understand how the application works with the Cozy.
 
-### VueJS 2+ template (`template-vue` folder)
-
-Using the VueJS template, `cozy-scripts` will generate a VueJS/Vuex application. After the initialisation, you should have the following folder structure:
-
-<details>
-
-```
-mycozyapp/
-    babel.config.js
-    CONTRIBUTING.md
-    LICENSE
-    README.md
-    jest.config.js
-    manifest.webapp
-    node_modules/
-    package.json
-    yarn.lock
-    src/
-        assets/
-        components/
-            App.vue
-            Icon.vue
-            HelloViews/
-        lib/
-            store.js
-            I18n/
-        locales/en.json
-        styles/
-        targets/
-            browser/
-                index.ejs
-                index.js
-            intents/
-            mobile/
-            vendor/
-    test/
-    .editorconfig
-    .eslintrc.json
-    .github/
-        .ISSUE_TEMPLATE
-        .PULL_REQUEST_TEMPLATE
-    .gitignore
-    .stylintrc
-    .travis.yml
-    .tx/
-        config
-```
-
-</details>
 
 ### Ready to go
 
@@ -206,9 +157,6 @@ __You can find more informations about this library and how to use it in [`cozy-
 
 > :warning: __BE VERY CAREFUL__ using this script since __it will push directly to your remote repository__. A prompt will warn you before starting the release.
 
-##### - `--vue`
-
-Allow to use the VueJS webpack configuration as default opinionated configuration. You don't need an `app.config.js` to use the VueJS webpack bundle configuration (`wepack.bundle.vue.js`) with this option.
 
 ##### - `--production` or `--development` options
 
@@ -222,10 +170,9 @@ Allow to pass the wanted build target to `cozy-scripts`. This target will be ove
 
 Use this option if you want to analyze your builds content using the webpack plugin [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer). It will open you browser with an interactive treemap visualization of the contents of all your bundles.
 
-##### - `--no-stack`
+##### - `--stack`
 
-Use this option if you want to run `cozy-scripts start` without launching the Cozy stack using docker. You will only have Webpack watching with `webpack-dev-server`.
-It could be useful if you already have a Cozy stack running elsewhere in your environment.
+Use this option if you want to run `cozy-scripts start` with launching the Cozy stack using docker. 
 
 ##### - Custom paths providing options: `--src-dir`, `--build-dir`, `--manifest`
 
@@ -237,15 +184,13 @@ Use these options if you want to `build`/`watch`/`start` your application with c
 
 ### The `cozy-scripts` webpack configuration
 
-`cozy-scripts` is designed to use a default webpack configuration for a basic React/Redux (or VueJS) application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder. Here is an example to overload the default bundle config with a custom one:
+`cozy-scripts` is designed to use a default webpack configuration for a basic React/Redux application which uses `cozy-ui` and `cozy-client-js`. But you can override or use your custom configuration files by creating a new `app.config.js` file in your application root folder. Here is an example to overload the default bundle config with a custom one:
 
 ```javascript
 // myapp/app.config.js
 module.exports = [
   // default for React/Redux
   require('cozy-scripts/config/webpack.bundle.default.js'),
-  // here is the equivalent one for vue
-  // require('cozy-scripts/config/webpack.bundle.vue.js'),
   require('./config/webpack.myconfig.js')
 ]
 ```

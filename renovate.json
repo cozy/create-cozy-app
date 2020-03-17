@@ -41,24 +41,6 @@
       "dependencies": {
         "pinVersions": true
       }
-    },
-    {
-      "packageFile": "packages/cozy-scripts/template-vue/package.json",
-      "devDependencies": {
-        "pinVersions": true
-      },
-      "dependencies": {
-        "pinVersions": true
-      }
-    },
-    {
-      "packageFile": "packages/cozy-scripts-vanilla/package.json",
-      "devDependencies": {
-        "pinVersions": true
-      },
-      "dependencies": {
-        "pinVersions": true
-      }
     }
   ]
 }
