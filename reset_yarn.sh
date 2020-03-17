@@ -6,8 +6,6 @@ CS_NAME="cozy-scripts"
 if [[ $UPDATED_LIST =~ (^|[[:space:]])$CS_NAME($|[[:space:]]) ]]; then
     echo "Cleaning cozy-scripts template yarn lockfile..."
     (cd packages/cozy-scripts/template && rm -rf node_modules/ yarn.lock && yarn)
-    echo "Cleaning cozy-scripts template-vue yarn lockfile..."
-    (cd packages/cozy-scripts/template-vue && rm -rf node_modules/ yarn.lock && yarn)
 fi
 
 for package in $UPDATED_LIST
