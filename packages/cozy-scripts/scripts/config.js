@@ -4,19 +4,7 @@ const merge = require('webpack-merge')
 const path = require('path')
 const fs = require('fs-extra')
 const CTS = require('../utils/constants.js')
-
-function mergeWithOptions(options, configs, current) {
-  // merge with the previous configs using the provided strategy
-  if (options.strategy) {
-    return options.smart
-      ? merge.smartStrategy(options.strategy)(...configs, current)
-      : merge.strategy(options.strategy)(...configs, current)
-  } else {
-    return options.smart
-      ? merge.smart(...configs, current)
-      : merge(...configs, current)
-  }
-}
+const { mergeWithOptions, mergeAppConfigs } = require('../utils/merge')
 
 function getWebpackConfigs(options = {}) {
   // mode and target options should already be provided
@@ -37,22 +25,7 @@ function getWebpackConfigs(options = {}) {
     appConfigs = [require('../config/webpack.bundle.default.js')]
   }
 
-  const mergedConfig = merge(
-    appConfigs.reduce(
-      function(merged, config) {
-        if (config.__mergeStrategy) {
-          // merge with the previous configs using the provided strategy
-          const options = Object.assign({}, config.__mergeStrategy)
-          delete config.__mergeStrategy
-          return [mergeWithOptions(options, merged, config)]
-        } else {
-          merged.push(config)
-          return merged
-        }
-      },
-      [{}]
-    )
-  )
+  const mergedConfig = mergeAppConfigs(appConfigs)
 
   // the first position will always be the main app config
   // better for testing
