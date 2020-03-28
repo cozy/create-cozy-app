@@ -197,6 +197,8 @@ Array [
       ],
     },
     "optimization": Object {
+      "removeAvailableModules": false,
+      "removeEmptyChunks": false,
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
@@ -1018,6 +1020,8 @@ Array [
       ],
     },
     "optimization": Object {
+      "removeAvailableModules": false,
+      "removeEmptyChunks": false,
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
@@ -1850,6 +1854,8 @@ Array [
       ],
     },
     "optimization": Object {
+      "removeAvailableModules": false,
+      "removeEmptyChunks": false,
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {
@@ -2260,6 +2266,8 @@ Array [
       ],
     },
     "optimization": Object {
+      "removeAvailableModules": false,
+      "removeEmptyChunks": false,
       "splitChunks": Object {
         "cacheGroups": Object {
           "vendors": Object {

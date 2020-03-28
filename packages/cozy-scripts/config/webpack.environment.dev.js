@@ -53,5 +53,9 @@ module.exports = {
   mode: 'development',
   externals: ['cozy'],
   plugins,
-  output
+  output,
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false
+  }
 }
