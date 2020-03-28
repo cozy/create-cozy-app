@@ -49,7 +49,7 @@ if (useHotReload) {
 }
 
 module.exports = {
-  devtool: '#source-map',
+  devtool: 'cheap-module-eval-source-map',
   mode: 'development',
   externals: ['cozy'],
   plugins,

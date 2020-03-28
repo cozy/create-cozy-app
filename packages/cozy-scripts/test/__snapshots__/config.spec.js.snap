@@ -4,7 +4,7 @@ exports[`App from cozy-scripts should handle correctly the config browser:develo
 Array [
   Object {
     "bail": true,
-    "devtool": "#source-map",
+    "devtool": "cheap-module-eval-source-map",
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
@@ -825,7 +825,7 @@ exports[`App from cozy-scripts should handle correctly the config mobile:develop
 Array [
   Object {
     "bail": true,
-    "devtool": "#source-map",
+    "devtool": "cheap-module-eval-source-map",
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
@@ -1657,7 +1657,7 @@ exports[`App from cozy-scripts should have the correct config browser:developmen
 Array [
   Object {
     "bail": true,
-    "devtool": "#source-map",
+    "devtool": "cheap-module-eval-source-map",
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
@@ -2067,7 +2067,7 @@ exports[`App from cozy-scripts should have the correct config browser:developmen
 Array [
   Object {
     "bail": true,
-    "devtool": "#source-map",
+    "devtool": "cheap-module-eval-source-map",
     "entry": Object {
       "app": Array [
         ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-polyfill/lib/index.js",
