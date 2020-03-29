@@ -8,6 +8,7 @@ const APP_PATH = fs.realpathSync(path.join(__dirname, '../template'))
 const APP_NODE_MODULES = fs.realpathSync(
   path.join(__dirname, '../../../node_modules')
 )
+
 function getConfig(options) {
   let appConfig = getWebpackConfigs(options)
 
@@ -92,5 +93,26 @@ describe('App from cozy-scripts', () => {
     const appConfigFromEnv = getConfig()
     expect(appConfigFromParams).toEqual(appConfigFromEnv)
     expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
+  })
+
+  describe('public', () => {
+    beforeEach(() => {
+      process.env[CTS.FORCE_PUBLIC] = 'true'
+    })
+
+    afterEach(() => {
+      delete process.env[CTS.FORCE_PUBLIC]
+    })
+
+    it('should handle correctly the config browser:production with public files', () => {
+      const appConfigFromParams = getConfig({
+        mode: 'production',
+        target: 'browser'
+      })
+      process.env.NODE_ENV = 'browser:production'
+      const appConfigFromEnv = getConfig()
+      expect(appConfigFromParams).toEqual(appConfigFromEnv)
+      expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
+    })
   })
 })
