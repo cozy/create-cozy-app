@@ -13,9 +13,11 @@
 		"reset:yarn": "sh reset_yarn.sh"
 	},
 	"devDependencies": {
+		"cozy-ui": "^33.7.0",
 		"eslint-config-cozy-app": "1.1.8",
 		"jest": "23.6.0",
 		"lerna": "3.11.0",
-		"lerna-changelog": "0.8.2"
+		"lerna-changelog": "0.8.2",
+		"stylus": "^0.54.7"
 	}
 }
