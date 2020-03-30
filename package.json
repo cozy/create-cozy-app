@@ -4,7 +4,7 @@
 		"changelog": "lerna-changelog",
 		"lint": "eslint --ignore-path .gitignore './**/*.{js,jsx}'",
 		"test": "yarn test:tools && yarn test:cozy-scripts",
-		"test:tools": "yarn test:cca && yarn test:cozy-scripts:cli --coverage && yarn test:cozy-scripts:utils --coverage",
+		"test:tools": "yarn test:cca && yarn test:cozy-scripts:cli && yarn test:cozy-scripts:utils",
 		"test:cca": "bash packages/create-cozy-app/test/create-cozy-app.sh",
 		"test:cozy-scripts": "yarn test:cozy-scripts:cli && yarn test:cozy-scripts:default",
 		"test:cozy-scripts:cli": "jest packages/cozy-scripts/test/cli.spec.js",
