@@ -1,8 +1,20 @@
 {
   "lerna": "2.4.0",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
   "npmClient": "yarn",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "createRelease": "github"
+    },
+    "publish": {
+      "conventionalCommits": true
+    }
+  },
   "changelog": {
-    "repo": "CPatchane/create-cozy-app",
     "labels": {
       "tag: breaking change": ":boom: Breaking Changes:",
       "tag: feature": ":sparkles: New Features:",
@@ -15,9 +27,5 @@
     "cacheDir": ".changelog",
     "ignoreCommitters": ["renovate"],
     "nextVersion": "Unreleased"
-  },
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+  }
 }
