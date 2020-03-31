@@ -5,9 +5,15 @@ const fs = require('fs')
 const CTS = require('../utils/constants.js')
 
 const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
-const appDirectory = fs.realpathSync(process.cwd())
-const resolveApp = (relativePath = '.', fromDirectory = appDirectory) =>
-  path.resolve(fromDirectory, relativePath)
+const appDirectory = () => {
+  return fs.realpathSync(process.env[CTS.APP_PATH] || process.cwd())
+}
+const resolveApp = (relativePath = '.', fromDirectory) => {
+  if (fromDirectory === undefined) {
+    fromDirectory = appDirectory()
+  }
+  return path.resolve(fromDirectory, relativePath)
+}
 
 // Those must be used inside a function (called when needed)
 // to be sure to use the current process.env context
@@ -32,6 +38,12 @@ const resolveAppManifest = () => {
   return resolveApp(appManifest)
 }
 
+const resolveAppModule = modulePath => {
+  const nodeModules =
+    process.env[CTS.APP_NODE_MODULES] || resolveApp('node_modules')
+  return path.resolve(nodeModules, modulePath)
+}
+
 // We use them as functions for all for more consistency
 module.exports = {
   appPath: () => resolveApp(),
@@ -44,7 +56,8 @@ module.exports = {
   appSrc: () => resolveAppSrc(),
   appLocales: () => resolveAppSrc('locales'),
   appVendorAssets: () => resolveAppSrc('targets/vendor/assets'),
-  appNodeModules: () => resolveApp('node_modules'),
+  appNodeModules: () =>
+    process.env[CTS.APP_NODE_MODULES] || resolveApp('node_modules'),
   // for browser
   appBrowserHtmlTemplate: () => resolveAppSrc('targets/browser/index.ejs'),
   appBrowserIndex: () => resolveSrcWithExtension('targets/browser/index'),
@@ -61,12 +74,11 @@ module.exports = {
   appMobileIndex: () => resolveSrcWithExtension('targets/mobile/index'),
   appMobileWWW: () => resolveAppSrc('targets/mobile/www'),
   // for app local cozy-bar (dev only)
-  appCozyBarJs: () => resolveApp('node_modules/cozy-bar/dist/cozy-bar.js'),
-  appCozyBarCss: () => resolveApp('node_modules/cozy-bar/dist/cozy-bar.css'),
-  appCozyClientJs: () =>
-    resolveApp('node_modules/cozy-client-js/dist/cozy-client.js'),
+  appCozyBarJs: () => resolveAppModule('cozy-bar/dist/cozy-bar.js'),
+  appCozyBarCss: () => resolveAppModule('cozy-bar/dist/cozy-bar.css'),
+  appCozyClientJs: () => resolveAppModule('cozy-client-js/dist/cozy-client.js'),
   // cozy-ui
-  appCozyUiStylus: () => resolveApp('node_modules/cozy-ui/stylus'),
+  appCozyUiStylus: () => resolveAppModule('cozy-ui/stylus'),
 
   // for cozy-scripts
   csDisableCSPConfig: () => resolveOwn('stack/disableCSP.yaml'),

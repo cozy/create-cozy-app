@@ -13,7 +13,6 @@ const testPath = path.join(rootPath, testFolder)
 const appPath = path.join(testPath, appName)
 const appCoveragePath = path.join(appPath, 'coverage/')
 const customConfigPath = path.join(appPath, 'app.config.js')
-const ownTestConfig = path.join(__dirname, 'lib', 'test.config.js')
 const servicesTestConfig = path.join(__dirname, 'lib', 'services.config.js')
 const strategyTestConfig = path.join(__dirname, 'lib', 'strategy.config.js')
 
@@ -124,7 +123,7 @@ describe('App from cozy-scripts', () => {
   })
 
   // Files outline
-  it('should have the correct files outline', done => {
+  fit('should have the correct files outline', done => {
     const init = require(path.join(
       appPath,
       'node_modules',
@@ -157,76 +156,6 @@ describe('App from cozy-scripts', () => {
         done()
       }
     )
-  })
-
-  // Output configuration
-  it('should have the correct config browser:development by default', () => {
-    console.log(colorize.orange('Asserting configs...'))
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
-  })
-
-  it('should have the correct config browser:development by default handling --debug mode', () => {
-    process.env[CTS.DEBUG] = 'true'
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
-  })
-
-  it('should handle correctly the config browser:development', () => {
-    const appConfigFromParams = getConfig({
-      mode: 'development',
-      target: 'browser'
-    })
-    process.env.NODE_ENV = 'browser:development'
-    const appConfigFromEnv = getConfig()
-    expect(appConfigFromParams).toEqual(appConfigFromEnv)
-    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
-  })
-
-  it('should handle correctly the config browser:production', () => {
-    const appConfigFromParams = getConfig({
-      mode: 'production',
-      target: 'browser'
-    })
-    process.env.NODE_ENV = 'browser:production'
-    const appConfigFromEnv = getConfig()
-    expect(appConfigFromParams).toEqual(appConfigFromEnv)
-    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
-  })
-
-  it('should handle correctly the config mobile:development', () => {
-    const appConfigFromParams = getConfig({
-      mode: 'development',
-      target: 'mobile'
-    })
-    process.env.NODE_ENV = 'mobile:development'
-    const appConfigFromEnv = getConfig()
-    expect(appConfigFromParams).toEqual(appConfigFromEnv)
-    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
-  })
-
-  it('should handle correctly the config mobile:production', () => {
-    const appConfigFromParams = getConfig({
-      mode: 'production',
-      target: 'mobile'
-    })
-    process.env.NODE_ENV = 'mobile:production'
-    const appConfigFromEnv = getConfig()
-    expect(appConfigFromParams).toEqual(appConfigFromEnv)
-    expect(JSON.parse(appConfigFromParams)).toMatchSnapshot()
-  })
-
-  it('should use custom app.config.js from the app root if exists', () => {
-    const tempConfigPath = path.join(appPath, 'app.config.js')
-    fs.copySync(ownTestConfig, tempConfigPath)
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
-    fs.removeSync(tempConfigPath)
-  })
-
-  it('should use the custom config path if exists as environment variable', () => {
-    const tempConfigPath = path.join(appPath, './src/custom.config.js')
-    fs.copySync(ownTestConfig, tempConfigPath)
-    process.env[CTS.CONFIG] = 'src/custom.config.js'
-    expect(JSON.parse(getConfig())).toMatchSnapshot()
-    fs.removeSync(tempConfigPath)
   })
 
   // Generated app tests
@@ -296,7 +225,7 @@ describe('App from cozy-scripts', () => {
   })
 
   // Webpack running
-  it('should run webpack.run correctly with build script', done => {
+  fit('should run webpack.run correctly with build script', done => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
     // should be NODE_ENV = 'browser:production' by default here
     const build = require(path.join(
