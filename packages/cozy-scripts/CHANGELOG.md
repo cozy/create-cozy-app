@@ -1,0 +1,30 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [1.14.0](https://github.com/CPatchane/create-cozy-app/compare/cozy-scripts@1.13.2...cozy-scripts@1.14.0) (2020-03-31)
+
+
+### Bug Fixes
+
+* Consider full parts of path when including pictures ([3800cf3](https://github.com/CPatchane/create-cozy-app/commit/3800cf3))
+* Do not override manifest content from locales ([1a1f1db](https://github.com/CPatchane/create-cozy-app/commit/1a1f1db))
+* Remove vue ref ([272860b](https://github.com/CPatchane/create-cozy-app/commit/272860b))
+
+
+### Features
+
+* A stack is not started by default ([bc79e9d](https://github.com/CPatchane/create-cozy-app/commit/bc79e9d))
+* Add config snap ([6f697d8](https://github.com/CPatchane/create-cozy-app/commit/6f697d8))
+* Add VersionPlugin ([cc895a6](https://github.com/CPatchane/create-cozy-app/commit/cc895a6))
+* Hot reload defaults to true ([11e8b5b](https://github.com/CPatchane/create-cozy-app/commit/11e8b5b))
+* Remove deprecated standalone in favor of start ([491ddf7](https://github.com/CPatchane/create-cozy-app/commit/491ddf7))
+* Remove preact specific configs ([7fb443e](https://github.com/CPatchane/create-cozy-app/commit/7fb443e))
+* Remove vue option ([5a25d25](https://github.com/CPatchane/create-cozy-app/commit/5a25d25))
+
+
+### Performance Improvements
+
+* Speed up webpack dev ([e7f4b14](https://github.com/CPatchane/create-cozy-app/commit/e7f4b14))
+* Use cheaper source maps for development ([e4e91bc](https://github.com/CPatchane/create-cozy-app/commit/e4e91bc))
