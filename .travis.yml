@@ -7,11 +7,17 @@ cache:
   - node_modules
 jobs:
   include:
-    - stage: lint
-      script: yarn lint
-    - stage: test
-      script: yarn test:tools
-    - script: yarn test:cozy-scripts:default
-    - stage: deploy
-      if: branch = master AND type = push AND fork = false
-      script: ./scripts/deploy.sh
+  - stage: lint
+    script: yarn lint
+  - stage: test
+    script: yarn test:tools
+  - script: yarn test:cozy-scripts:default
+  - stage: deploy
+    if: branch = master AND type = push AND fork = false
+    script: "./scripts/deploy.sh"
+env:
+  global:
+  # GITHUB_TOKEN (logged in as cozy-bot, token: create-cozy-app publication)
+  - secure: NvQcDS1rHENm3hd22IWAVxvS0arpNCymOPDlL7yDG1qsp3XS4MR+gsJzgwvLfHm1gbF6gHYTKyfxcRDwCMfm6m+HagLg2cu9+//jajX65NE5tf+SeZTLs64DE2T+W0tkwvrMFqiDGS7bVZAF53GwkWyd5KgvpiUZfe+M+uyN2+7cNfs3gGbaX6GcRxOrSx13AbYyMosnA2gRv0tuAnqPSDxprsW9oXlas9ixfFHBqS8VQsnyJfuGhh2xJ5VOzk+aFvx8sD7WbwV8PCAaHJqf+mt1/lv4Pjtmbu2/kCo/yNTTaFLxdkErGHHy6TjbUyyOXZbgGXoDhnnWr7/SfddBT2jWmEfVsE9m4Kz6AmTduUpKV4L/nUSLXhOoRh3mqUpqWBbL6R8DEAoNYwDcHICQCUd2UtxZmUp+iCFC48HEo32cbIWju1ZdSbM7++QGxBwkxyNF1eq/tqC1TicBpyI0V5AELEdTQniLgwWuYFaeb6roQ1phVgzIy43jH95cJdMBIoCI2HMhEb2zpIZ0crLrOqeyilz8aMGx2CKeXBltIr1B4b3PavoT0/+jf9m1EUXwv6cZCBRjlVmOgHoUW3jkv+dX/SHk272osmRSvSD+4u0VsedpNIiEYct0sGdxchUXkV0Ff5pOf/o6RKABtc7/hPG3OCt8Fdo5ml0Ao0Olpd4=
+  # NPM_TOKEN (logged in as mycozycloud, token: 9048...9d89)
+  - secure: IZsZ+vWMI6sK7nUmyGIhSl8lLVAvqbEwqEuUUz7Ix3vWis11Ikgr1AyIpqywNn1qad1oUvoXKjekbrsh0s9j7Kix0+2UUbuN+PIZPx2nsJavLjceDDJ/2xzi9s4c30XV7DTUSasQNE1CjwNFvKXAgYsoTgVAHSveQQVB9hSlrVHVmSVHhpFfH+O9RSV+eUqQKFkcORZnvqp98ZvtG+kn1eJquKr62LI+gAuhNRBKzkOhNE7lpcPhXIs4vXPAF447ODh+GaFPsyRt3mbsbbuoxhwMp0qyh7udo2Oz/2HQ6q9FzEGBeLUILBcljNZdSS0VBdSGBCqnO730pMR1fVPV4LSn+MiU30srY4G//jaamXnj1+7VjL4DosV+MMA2p3ltAczETHaSk6coBnhDKcFCEBjfpkzSyLiOY8Hyj2veL0Duy3k9tekSy0F1dFALTz4oWCJwfrUm3jKHMOFJI517w8PWKbaQ504ZUZ5ZC/nOcNqIV9qbp88yAwRJrMbEdhRu6ci2BHN3SWeZlFl43yb1WXwFyrIUipFXqkT7c3sEXERNonxidSMrK3YSTpfgTi1TSbGFD8fdg5ALXMVr/3+nQYIGLT0fppX8dAbT5rtA05deTunb2e2ROXCznEkyd2FCDiLeABS53gNqi4FC92VAdeQOsxz8BAQr3STwrkn54QI=
