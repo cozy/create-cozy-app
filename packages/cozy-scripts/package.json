@@ -4,14 +4,16 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CPatchane/create-cozy-app.git"
+    "url": "git+https://github.com/cozy/create-cozy-app.git"
   },
-  "homepage": "https://github.com/CPatchane/create-cozy-app#readme",
-  "author": "CPatchane <code@patchane.com>",
-  "contributors": [],
+  "homepage": "https://github.com/cozy/create-cozy-app#readme",
+  "author": "Cozy <contact@cozycloud.cc>",
+  "contributors": [
+    "CPatchane <code@patchane.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CPatchane/create-cozy-app/issues"
+    "url": "https://github.com/cozy/create-cozy-app/issues"
   },
   "dependencies": {
     "@babel/core": "7.2.2",
@@ -29,6 +31,8 @@
     "css-mqpacker": "7.0.0",
     "csswring": "7.0.0",
     "eslint": "5.9.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
     "eslint-config-cozy-app": "1.1.8",
     "eslint-loader": "2.1.2",
     "expose-loader": "0.7.5",
