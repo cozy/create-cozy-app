@@ -4,14 +4,16 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CPatchane/create-cozy-app.git"
+    "url": "git+https://github.com/cozy/create-cozy-app.git"
   },
-  "homepage": "https://github.com/CPatchane/create-cozy-app#readme",
-  "author": "CPatchane <code@patchane.com>",
-  "contributors": [],
+  "homepage": "https://github.com/cozy/create-cozy-app#readme",
+  "author": "Cozy <contact@cozycloud.cc>",
+  "contributors": [
+    "CPatchane <code@patchane.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CPatchane/create-cozy-app/issues"
+    "url": "https://github.com/cozy/create-cozy-app/issues"
   },
   "dependencies": {
     "@babel/core": "7.2.2",
