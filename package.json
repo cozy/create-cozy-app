@@ -10,6 +10,7 @@
 		"test:cozy-scripts:cli": "jest packages/cozy-scripts/test/cli.spec.js",
 		"test:cozy-scripts:utils": "jest packages/cozy-scripts/test/utils.spec.js",
 		"test:cozy-scripts:default": "jest packages/cozy-scripts/test/scripts.spec.js",
+		"test:integration": "./scripts/integration-test.sh",
 		"reset:yarn": "sh reset_yarn.sh"
 	},
 	"devDependencies": {
