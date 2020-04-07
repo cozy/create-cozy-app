@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@1.15.0...cozy-scripts@2.0.0) (2020-04-07)
+
+
+### Features
+
+* Update dependencies ([1dbf5fa](https://github.com/cozy/create-cozy-app/commit/1dbf5fa))
+
+
+### BREAKING CHANGES
+
+* Jest is updated from v23 to v24
+
+
+
+
+
 # [1.15.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@1.14.1...cozy-scripts@1.15.0) (2020-04-01)
 
 
