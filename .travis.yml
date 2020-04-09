@@ -12,6 +12,7 @@ jobs:
   - stage: test
     script: yarn test:tools
   - script: yarn test:cozy-scripts:default
+  - script: yarn test:integration
   - stage: deploy
     if: branch = master AND type = push AND fork = false
     script: "./scripts/deploy.sh"
