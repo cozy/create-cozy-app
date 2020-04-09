@@ -5,7 +5,7 @@ set -euo pipefail
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 APP_DIR=${1:-"/tmp/cs-app-dir"}
 REPO=${INTEGRATION_REPO:-https://github.com/cozy/cozy-banks.git}
-BUILD_CMD=${INTEGRATION_BUILD_CMD:-"yarn build"}
+BUILD_CMD=${INTEGRATION_BUILD_CMD:-"yarn build; yarn build:mobile"}
 
 echo "Preparing app dir (repo: $REPO)..."
 if [[ "$(ls -A $APP_DIR)" ]]; then
@@ -23,7 +23,7 @@ pushd $APP_DIR
 yarn add $COZY_SCRIPTS_DIR
 
 echo "Building..."
-$BUILD_CMD
+eval $BUILD_CMD
 popd
 
 echo "Successfully built app with cozy-scripts !"
