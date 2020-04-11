@@ -4,7 +4,7 @@ module.exports = {
     ident: 'postcss',
     sourceMap: true,
     plugins: function() {
-      return [require('autoprefixer')({ browsers: ['last 2 versions'] })]
+      return [require('autoprefixer')()]
     }
   }
 }
