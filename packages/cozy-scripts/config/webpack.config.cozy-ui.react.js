@@ -3,6 +3,7 @@
 const { getCSSLoader } = require('./webpack.vars')
 const paths = require('../utils/paths')
 const cozyUIPlugin = require(paths.appCozyUiStylus())
+const postCSSLoaderConfig = require('./postcss-loader-config')
 
 module.exports = {
   module: {
@@ -21,17 +22,7 @@ module.exports = {
               localIdentName: '[local]--[hash:base64:5]'
             }
           },
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              sourceMap: true,
-              plugins: function() {
-                return [
-                  require('autoprefixer')({ browsers: ['last 2 versions'] })
-                ]
-              }
-            }
-          },
+          postCSSLoaderConfig,
           {
             loader: require.resolve('stylus-loader'),
             options: {

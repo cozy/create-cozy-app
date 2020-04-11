@@ -4,6 +4,7 @@ const paths = require('../utils/paths')
 const cozyUIPlugin = require(paths.appCozyUiStylus())
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const { getCSSLoader } = require('./webpack.vars')
+const postCSSLoaderConfig = require('./postcss-loader-config')
 
 module.exports = {
   resolve: {
@@ -23,17 +24,7 @@ module.exports = {
               importLoaders: 1
             }
           },
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              sourceMap: true,
-              plugins: function() {
-                return [
-                  require('autoprefixer')({ browsers: ['last 2 versions'] })
-                ]
-              }
-            }
-          },
+          postCSSLoaderConfig,
           {
             loader: require.resolve('stylus-loader'),
             options: {
