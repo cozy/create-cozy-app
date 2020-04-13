@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const paths = require('../utils/paths')
+const postCSSLoaderConfig = require('./postcss-loader-config')
 
 const {
   environment,
@@ -44,18 +45,7 @@ module.exports = {
               importLoaders: 1
             }
           },
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              ident: 'postcss',
-              sourceMap: true,
-              plugins: function() {
-                return [
-                  require('autoprefixer')({ browsers: ['last 2 versions'] })
-                ]
-              }
-            }
-          }
+          postCSSLoaderConfig
         ]
       },
       {

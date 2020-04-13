@@ -1,6 +1,7 @@
 'use strict'
 
 const { getCSSLoader } = require('./webpack.vars')
+const postCSSLoaderConfig = require('./postcss-loader-config')
 
 module.exports = {
   __mergeStrategy: {
@@ -26,17 +27,7 @@ module.exports = {
               localIdentName: '[local]--[hash:base64:5]'
             }
           },
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              sourceMap: true,
-              plugins: function() {
-                return [
-                  require('autoprefixer')({ browsers: ['last 2 versions'] })
-                ]
-              }
-            }
-          },
+          postCSSLoaderConfig,
           {
             loader: require.resolve('stylus-loader'),
             options: {
