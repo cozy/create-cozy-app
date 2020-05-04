@@ -28,7 +28,6 @@
     "copy-webpack-plugin": "4.6.0",
     "cross-spawn": "6.0.5",
     "css-loader": "2.1.0",
-    "css-mqpacker": "7.0.0",
     "csswring": "7.0.0",
     "eslint": "5.9.0",
     "eslint-config-cozy-app": "1.5.0",

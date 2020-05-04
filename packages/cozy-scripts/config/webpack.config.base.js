@@ -69,7 +69,6 @@ module.exports = {
       test: /\.css$/,
       log: isDebugMode,
       plugins: [
-        require('css-mqpacker'),
         require('postcss-discard-duplicates'),
         require('postcss-discard-empty')
       ].concat(
