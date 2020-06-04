@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@3.0.0...cozy-scripts@4.0.0) (2020-06-04)
+
+
+### Bug Fixes
+
+* No browser option passed to autoprefixer ([8c8ac64](https://github.com/cozy/create-cozy-app/commit/8c8ac64))
+
+
+### BREAKING CHANGES
+
+* Apps must declare a .browserslistrc
+
+Put the content below in `.browserslistrc`:
+
+```
+["extends browserslist-config-cozy"]
+```
+
+
+
+
+
 # [3.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@1.15.0...cozy-scripts@3.0.0) (2020-04-07)
 
 
