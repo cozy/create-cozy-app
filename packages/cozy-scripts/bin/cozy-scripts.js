@@ -69,6 +69,10 @@ const program = new commander.Command(pkg.name)
     '--analyzer',
     'open an analyzer with an interactive treemap visualization of the contents of all builds'
   )
+  .option(
+    '--devtool',
+    'Configure the devtool used. Use false to deactivate completely'
+  )
   .parse(process.argv)
 
 // build mode and target computing (overwritten by NODE_ENV)
@@ -97,7 +101,8 @@ const getEnvVarsFromCLIArgs = program => {
     ['config', CTS.CONFIG, program.config],
     ['srcDir', CTS.SRC_DIR, program.srcDir],
     ['buildDir', CTS.BUILD_DIR, program.buildDir],
-    ['manifest', CTS.MANIFEST, program.manifest]
+    ['manifest', CTS.MANIFEST, program.manifest],
+    ['devtool', CTS.DEVTOOL, program.devtool]
   ].map(toDefine => {
     if (program[toDefine[0]] !== undefined) {
       env[toDefine[1]] = toDefine[2]
