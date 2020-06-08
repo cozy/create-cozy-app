@@ -1,7 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
-const { useHotReload } = require('./webpack.vars')
+const { useHotReload, devtool } = require('./webpack.vars')
 
 let plugins = [
   new webpack.DefinePlugin({
@@ -17,7 +17,7 @@ if (useHotReload) {
 }
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: devtool || 'cheap-module-eval-source-map',
   mode: 'development',
   externals: ['cozy'],
   plugins,

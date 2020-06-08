@@ -69,6 +69,10 @@ const program = new commander.Command(pkg.name)
     '--analyzer',
     'open an analyzer with an interactive treemap visualization of the contents of all builds'
   )
+  .option(
+    '--devtool',
+    'Configure the devtool used. Use false to deactivate completely'
+  )
   .parse(process.argv)
 
 // build mode and target computing (overwritten by NODE_ENV)
@@ -84,23 +88,31 @@ const options = {
   cliArgs: process.argv.slice(3)
 }
 
-// program property, environment variable name, content to set
-;[
-  ['hot', CTS.HOT, true],
-  ['port', CTS.PORT, program.port],
-  ['host', CTS.HOST, program.host],
-  ['fix', CTS.ESLINT_FIX, true],
-  ['debug', CTS.DEBUG, true],
-  ['analyzer', CTS.ANALYZER, true],
-  ['config', CTS.CONFIG, program.config],
-  ['srcDir', CTS.SRC_DIR, program.srcDir],
-  ['buildDir', CTS.BUILD_DIR, program.buildDir],
-  ['manifest', CTS.MANIFEST, program.manifest]
-].map(toDefine => {
-  if (program[toDefine[0]] !== undefined) {
-    process.env[toDefine[1]] = toDefine[2]
-  }
-})
+const getEnvVarsFromCLIArgs = program => {
+  const env = {}
+  // program property, environment variable name, content to set
+  ;[
+    ['hot', CTS.HOT, true],
+    ['port', CTS.PORT, program.port],
+    ['host', CTS.HOST, program.host],
+    ['fix', CTS.ESLINT_FIX, true],
+    ['debug', CTS.DEBUG, true],
+    ['analyzer', CTS.ANALYZER, true],
+    ['config', CTS.CONFIG, program.config],
+    ['srcDir', CTS.SRC_DIR, program.srcDir],
+    ['buildDir', CTS.BUILD_DIR, program.buildDir],
+    ['manifest', CTS.MANIFEST, program.manifest],
+    ['devtool', CTS.DEVTOOL, program.devtool]
+  ].map(toDefine => {
+    if (program[toDefine[0]] !== undefined) {
+      env[toDefine[1]] = toDefine[2]
+    }
+  })
+  return env
+}
+
+const envVars = getEnvVarsFromCLIArgs(program)
+Object.assign(process.env, envVars)
 
 if (program.showConfig) {
   console.log(JSON.stringify(getWebpackConfigs(options), regexpReplacer, 2))

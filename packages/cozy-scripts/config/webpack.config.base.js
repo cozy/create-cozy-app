@@ -41,7 +41,6 @@ module.exports = {
           {
             loader: require.resolve('css-loader'),
             options: {
-              sourceMap: true,
               importLoaders: 1
             }
           },
@@ -81,8 +80,6 @@ module.exports = {
           : []
       )
     }),
-    // use a hash as chunk id to avoid id changes of not changing chunk
-    new webpack.HashedModuleIdsPlugin(),
     new webpack.DefinePlugin({
       __ENABLED_FLAGS__: JSON.stringify(getEnabledFlags())
     })
