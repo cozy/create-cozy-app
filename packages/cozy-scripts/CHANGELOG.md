@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.0.0...cozy-scripts@4.1.0) (2020-06-08)
+
+
+### Bug Fixes
+
+* Having sourcemap to true here broke cozy-ui ([3e5235a](https://github.com/cozy/create-cozy-app/commit/3e5235a))
+
+
+### Features
+
+* Add devtool flag to CLI ([1e2e41d](https://github.com/cozy/create-cozy-app/commit/1e2e41d))
+* Add eslint-plugin-react-hooks as dependency ([010dcf1](https://github.com/cozy/create-cozy-app/commit/010dcf1))
+* Use HashModuleIds only in production ([157e723](https://github.com/cozy/create-cozy-app/commit/157e723))
+
+
+
+
+
 # [4.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@3.0.0...cozy-scripts@4.0.0) (2020-06-04)
 
 
