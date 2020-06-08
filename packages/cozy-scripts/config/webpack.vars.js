@@ -25,7 +25,8 @@ const isDebugMode = process.env[CTS.DEBUG] === 'true'
 const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
 const useHotReload = process.env[CTS.HOT] === 'true'
 const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
-const devtool = process.env[CTS.DEVTOOL] === 'false' ? false : process.env[CTS.DEVTOOL]
+const devtool =
+  process.env[CTS.DEVTOOL] === 'false' ? false : process.env[CTS.DEVTOOL]
 const publicFolderName = 'public'
 
 const getCSSLoader = function() {
