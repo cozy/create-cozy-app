@@ -34,7 +34,7 @@ __You can find a complete tutorial about creating a Cozy application using `crea
 
 #### Requirements
 
- - NodeJS version 10 or higher;
+ - NodeJS version 10 (doesn't work with [Node 12](https://github.com/cozy/create-cozy-app/issues/1323) yet);
  - [Yarn](https://yarnpkg.com): a NodeJS package manager, like `npm`;
  - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment)
 
