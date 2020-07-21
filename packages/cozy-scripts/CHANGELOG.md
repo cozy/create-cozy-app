@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.1.0...cozy-scripts@4.2.0) (2020-07-21)
+
+
+### Features
+
+* Automatically provide the bar via ProvidePlugin if used through cozy.bar ([f30bef4](https://github.com/cozy/create-cozy-app/commit/f30bef4))
+
+
+
+
+
 # [4.1.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.0.0...cozy-scripts@4.1.0) (2020-06-08)
 
 
