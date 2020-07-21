@@ -10,7 +10,7 @@ let plugins = [
   })
 ]
 
-// In development, the bar and cozyclientjs are provided automatically. We use the ProvidePlugin
+// In development, the bar and cozy-client-js are provided automatically. We use the ProvidePlugin
 // since it allows us to use in production the cozy.bar and cozy.client declared by the <script />
 // line injected by the stack, while in developement to have it "served" from
 // our node_modules
