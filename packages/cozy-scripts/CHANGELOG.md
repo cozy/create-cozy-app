@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.2.0...cozy-scripts@4.2.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* Provide cozyclientjs in dev mode ([#1334](https://github.com/cozy/create-cozy-app/issues/1334)) ([9d6b6e5](https://github.com/cozy/create-cozy-app/commit/9d6b6e5))
+
+
+
+
+
 # [4.2.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.1.0...cozy-scripts@4.2.0) (2020-07-21)
 
 
