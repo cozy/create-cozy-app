@@ -16,7 +16,7 @@ module.exports = {
   entry: {
     app: [
       // polyfills, avoid to import it in the application
-      require.resolve('babel-polyfill'),
+      require.resolve('@babel/polyfill'),
       // Exposed variables in global scope (needed for cozy-bar)
       getReactExposer(),
       // since the file extension depends on the framework here
