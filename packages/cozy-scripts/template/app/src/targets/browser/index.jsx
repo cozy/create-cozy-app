@@ -6,7 +6,10 @@ import React from 'react'
 import CozyClient, { CozyProvider } from 'cozy-client'
 import { render } from 'react-dom'
 import { I18n } from 'cozy-ui/react/I18n'
+import { BreakpointsProvider } from 'cozy-ui/react/hooks/useBreakpoints'
 import schema from 'doctypes'
+import 'cozy-ui/transpiled/react/stylesheet.css'
+import 'cozy-ui/dist/cozy-ui.utils.min.css'
 
 let appLocale
 const renderApp = function(client) {
@@ -17,7 +20,9 @@ const renderApp = function(client) {
       dictRequire={appLocale => require(`locales/${appLocale}`)}
     >
       <CozyProvider client={client}>
-        <App />
+        <BreakpointsProvider>
+          <App />
+        </BreakpointsProvider>
       </CozyProvider>
     </I18n>,
     document.querySelector('[role=application]')

@@ -31,6 +31,7 @@
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
     "babel-preset-cozy-app": "1.2.5",
+    "cozy-scripts": "4",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.9.1",
     "git-directory-deploy": "1.5.1",
@@ -41,9 +42,9 @@
     "stylint": "1.5.9"
   },
   "dependencies": {
-    "cozy-bar": "6.12.0",
-    "cozy-client": "6.0.0",
-    "cozy-ui": "17.6.0",
+    "cozy-bar": "7.12.3",
+    "cozy-client": "13.16.0",
+    "cozy-ui": "35.23.0",
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "react-router-dom": "4.3.1"

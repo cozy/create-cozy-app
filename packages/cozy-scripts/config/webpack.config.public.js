@@ -32,7 +32,7 @@ function getConfig() {
           // since the file extension depends on the framework here
           // we get it from a function call
           [publicFolderName]: [
-            require.resolve('babel-polyfill'),
+            require.resolve('@babel/polyfill'),
             // Exposed variables in global scope (needed for cozy-bar)
             getReactExposer(),
             paths.appPublicIndex()
