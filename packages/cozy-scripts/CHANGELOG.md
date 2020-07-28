@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.2.1...cozy-scripts@4.3.0) (2020-07-28)
+
+
+### Features
+
+* Add babel-preset-cozy-app ([c1b0f64](https://github.com/cozy/create-cozy-app/commit/c1b0f64))
+* Add BreakpointsProvider ([14ce917](https://github.com/cozy/create-cozy-app/commit/14ce917))
+* Have babel-jest and jest at the same version ([3e021fa](https://github.com/cozy/create-cozy-app/commit/3e021fa))
+* Import stylesheet and utilities ([805ed45](https://github.com/cozy/create-cozy-app/commit/805ed45))
+* Update deps inside app template package.json ([b616b63](https://github.com/cozy/create-cozy-app/commit/b616b63))
+* Use the newer [@babel](https://github.com/babel)/polyfill ([659644f](https://github.com/cozy/create-cozy-app/commit/659644f))
+
+
+
+
+
 ## [4.2.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.2.0...cozy-scripts@4.2.1) (2020-07-21)
 
 
