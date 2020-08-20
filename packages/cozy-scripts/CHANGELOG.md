@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.3.0...cozy-scripts@4.3.1) (2020-08-20)
+
+
+### Bug Fixes
+
+* Add allowed hosts to fix "Invalid Host Header" error ([69093d6](https://github.com/cozy/create-cozy-app/commit/69093d6))
+
+
+
+
+
 # [4.3.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.2.1...cozy-scripts@4.3.0) (2020-07-28)
 
 
