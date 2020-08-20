@@ -162,13 +162,19 @@ module.exports = buildOptions => {
     // should always be the same than the webpack config publicPath
     publicPath: appConfig.output.publicPath,
     inline: true,
+
+    // Necessary since we use the stack to serve our pages; otherwise
+    // we have an "Invalid Host Header" error, and the hot reload does
+    // not work
+    allowedHosts: ['.cozy.tools'],
+
     hot: useHotReload,
     host,
     port,
-    /*
-    Here is the trick about hot-reload:
-    We launch a webpack-dev-server but we write the computed build files to the disk to allow running `cozy-stack server` on them.
-    */
+
+    // Here is the trick about hot-reload:
+    // We launch a webpack-dev-server but we write the computed build files to the disk to allow
+    // the cozy-stack to serve them.
     writeToDisk: filePath => {
       // Copy only assets on disk, other files will be from memory (dev-server)
       // .js and .css files are more likely to be changed
