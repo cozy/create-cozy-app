@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.3.1...cozy-scripts@4.3.2) (2020-08-25)
+
+
+### Bug Fixes
+
+* Deactivate hot reload for production ([d65fb1c](https://github.com/cozy/create-cozy-app/commit/d65fb1c))
+
+
+
+
+
 ## [4.3.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.3.0...cozy-scripts@4.3.1) (2020-08-20)
 
 
