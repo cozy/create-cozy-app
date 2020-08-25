@@ -23,7 +23,8 @@ console.log(
 
 const isDebugMode = process.env[CTS.DEBUG] === 'true'
 const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
-const useHotReload = process.env[CTS.HOT] === 'true'
+const useHotReload =
+  process.env[CTS.HOT] === 'true' && environment === 'development'
 const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
 const devtool =
   process.env[CTS.DEVTOOL] === 'false' ? false : process.env[CTS.DEVTOOL]
