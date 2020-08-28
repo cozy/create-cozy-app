@@ -9,7 +9,7 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        include: /\/(sprites|icons)\//,
+        include: /(\/|\\)(sprites|icons)(\/|\\)/,
         loader: require.resolve('svg-sprite-loader'),
         options: {
           symbolId: '[name]_[hash]'
@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/i,
-        exclude: /\/(sprites|icons|public)\//,
+        exclude: /(\/|\\)(sprites|icons|public)(\/|\\)/,
         loader: require.resolve('file-loader'),
         options: {
           // mobile app needs relative path since it uses file://

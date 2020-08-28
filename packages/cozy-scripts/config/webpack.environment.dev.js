@@ -27,7 +27,7 @@ const stackProvidedLibsConfig = {
   module: {
     rules: [
       {
-        test: /cozy-bar\/dist\/cozy-bar\.min\.js$/,
+        test: /cozy-bar(\/|\\)dist(\/|\\)cozy-bar\.min\.js$/,
         // Automatically import the CSS if the JS is imported.
         // imports-loader@0.8.0 works but imports-loader@1.0.0 does not
         loader: 'imports-loader?css=./cozy-bar.min.css'

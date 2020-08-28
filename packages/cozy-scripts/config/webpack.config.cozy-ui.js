@@ -14,7 +14,7 @@ module.exports = {
     rules: [
       {
         test: /\.styl$/,
-        exclude: /(node_modules|cozy-ui\/react)/,
+        exclude: /(node_modules|cozy-ui(\/|\\)react)/,
         use: [
           getCSSLoader(),
           {

@@ -10,7 +10,7 @@ module.exports = {
     rules: [
       {
         test: /\.styl$/,
-        include: /(cozy-ui\/react)/,
+        include: /(cozy-ui(\/|\\)react)/,
         use: [
           getCSSLoader(),
           {
