@@ -124,7 +124,8 @@ if (program.showConfig) {
     'test',
     'publish',
     'release',
-    'lint'
+    'lint',
+    'check-locales'
   ]
 
   if (availableScripts.includes(actionName)) {
