@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.3.3...cozy-scripts@4.4.0) (2020-08-31)
+
+
+### Features
+
+* Add check-locales script ([88e9d9e](https://github.com/cozy/create-cozy-app/commit/88e9d9e))
+
+
+
+
+
 ## [4.3.3](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.3.2...cozy-scripts@4.3.3) (2020-08-31)
 
 **Note:** Version bump only for package cozy-scripts
