@@ -33,19 +33,27 @@
 - common command used by Cozy developers during application development
 - common webpack configs
 
+## Installation
+
+```
+yarn add cozy-scripts
+```
+
+After installation, the `cozy-scripts` is available.
+
 ## CLI commands
 
 `cozy-scripts` has commands to be used inside your application (used by
 default in applications created from `create-cozy-app`):
 
-##### - `cozy-scripts --show-config`
+### - `cozy-scripts --show-config`
 
-This command outputs the webpack config computed according your current global
+Outputs the webpack config computed according your current global
 variable `NODE_ENV`. By default, the application will have `yarn` scripts (in
 the `package.json`) to show the configurations according to different
 environments (dev, browser, mobile, prod...).
 
-##### - `cozy-scripts build`
+### - `cozy-scripts build`
 
 Runs webpack for production builds. Built files (destined to the Cozy) will be
 in the `build/` directory.
@@ -53,23 +61,18 @@ in the `build/` directory.
 > A `--debug` option is available if you want to ouput more information about
 > webpack building in your console.
 
-##### - `cozy-scripts test`
 
-Runs the application tests using [Jest](https://facebook.github.io/jest/).
-This command handles all parameters than Jest does, like `--watch` for the
-watch mode or `-u` to update snapshots for example.
+### - `cozy-scripts watch`
 
-##### - `cozy-scripts watch`
-
-Unlike the previous command, this will run webpack using the files watching
-mode. Each time you will modify a file, a new build will be triggered. It's
+Unlike the previous command, this will run webpack in watch mode: each time you
+modify a file, a new build will be triggered. It's
 recommended for development build. The built files (destined to the Cozy) will
 be in `build/`.
 
-> A `--debug` options is available if you want to ouput more informations
+> A `--debug` options is available if you want to ouput more information
 > about webpack building in your console.
 
-##### - `cozy-scripts start`
+### - `cozy-scripts start`
 
 Launches the application for development. Its runs webpack in watch mode with
 a server (`webpack-dev-server`) to serve application assets. Then, it will
@@ -82,7 +85,47 @@ Your application will be available at http://<MY_APP_SLUG>.cozy.tools:8080.
 > Replacement)](https://webpack.js.org/concepts/hot-module-replacement/) is
 > available to help you with the application development.
 
-##### - `cozy-scripts publish`
+### Common flags for `build` / `watch` / `start`
+
+#### `--production` / `--development`
+
+Configures the build mode.
+
+This mode will be overwritten by `process.env.NODE_ENV` (ex:
+`browser:development` for development usage with browser target).
+
+#### `--browser` / `--mobile`
+
+Configures the build target.
+
+This target will be overwritten by `process.env.NODE_ENV` (ex:
+`browser:development` for development usage with browser target).
+
+#### `--analyzer`
+
+Use this option if you want to analyze your builds content using the webpack
+plugin
+[`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer).
+It will open you browser with an interactive treemap visualization of the
+contents of all your bundles.
+
+##### `--src-dir`, `--build-dir`, `--manifest`
+
+Use these options if you want to `build`/`watch`/`start` your application with
+custom paths. These paths __must be relative to the application root
+directory__:
+
+- `--src-dir`: the `src` directory, the source files of your application
+- `--build-dir`: the directory to put the application build files into
+- `--manifest`: the path of your manifest file `manifest.webapp` (the `.webapp` extension must be provided)
+
+### - `cozy-scripts test`
+
+Runs the application tests using [Jest](https://facebook.github.io/jest/).
+This command handles all parameters than Jest does, like `--watch` for the
+watch mode or `-u` to update snapshots for example.
+
+### - `cozy-scripts publish`
 
 Fetches and runs the latest version of the [`cozy-app-publish`
 CLI](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-app-publish)
@@ -92,7 +135,7 @@ main Cozy Cloud applications registry on
 than in the [`cozy-app-publish` package
 documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-app-publish).
 
-##### - `cozy-scripts release`
+### - `cozy-scripts release`
 
 Releases a new version of the application. The first step is to start the
 release using `cozy-scripts release start`. It will create a new release
@@ -113,42 +156,12 @@ documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-app-p
 >     starting the release.
 
 
-##### - `--production` or `--development` options
-
-Allow to pass the wanted build mode to `cozy-scripts`. This mode will be
-overwritten by `process.env.NODE_ENV` usage (ex: `browser:development` for
-development usage with browser target).
-
-##### - `--browser` or `--mobile` options
-
-Allow to pass the wanted build target to `cozy-scripts`. This target will be
-overwritten by `process.env.NODE_ENV` usage (ex: `browser:development` for
-development usage with browser target).
-
-##### - `--analyzer`
-
-Use this option if you want to analyze your builds content using the webpack
-plugin
-[`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer).
-It will open you browser with an interactive treemap visualization of the
-contents of all your bundles.
-
 ##### - `--stack`
 
 Use this option if you want to run `cozy-scripts start` with launching the
 Cozy stack using docker.
 
-##### - Custom paths providing options: `--src-dir`, `--build-dir`, `--manifest`
-
-Use these options if you want to `build`/`watch`/`start` your application with
-custom paths. These paths __must be relative to the application root
-directory__:
-
-- `--src-dir`: the `src` directory, the source files of your application
-- `--build-dir`: the directory to put the application build files into
-- `--manifest`: the path of your manifest file `manifest.webapp` (the `.webapp` extension must be provided)
-
-### The `cozy-scripts` webpack configuration
+### Webpack configurations
 
 `cozy-scripts` is designed to use a default webpack configuration for a basic
 React/Redux application which uses `cozy-ui` and `cozy-client-js`. But you can
@@ -165,7 +178,7 @@ module.exports = [
 ]
 ```
 
-### `cozy-scripts` & `cozy-flags`
+### `cozy-flags`
 
 `cozy-scripts` works well with
 [cozy-flags](https://www.npmjs.com/package/cozy-flags). You can specify a few
@@ -188,14 +201,14 @@ You can find more information about webpack configuration files available via
 `cozy-scripts` in the dedicated [webpack configs
 documentation](docs/webpack-configs.md).
 
-If you need more particular/complicated configurations and need to use the
+If you need more custom configurations and need to use the
 [`webpack-merge`](https://github.com/survivejs/webpack-merge#merging-with-strategies)
 smart mode or merge strategies, you can also find more information about in
 the dedicated [merge strategies
 documentation](docs/webpack-merge-strategies.md).
 
 > :warning: `cozy-scripts` internally uses __Webpack v4__, be sure to use
->     Webpack 4 compatible configurations if you want to provide some custom
+>     Webpack 4 compatible configurations if you want to provide custom
 >     __configurations in the `app.config.js`__
 
 ## Community
