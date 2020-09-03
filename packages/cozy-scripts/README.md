@@ -1,30 +1,29 @@
 # Cozy Scripts
 
-<div align="center">
-  <a href="https://www.npmjs.com/package/cozy-scripts">
-    <img src="https://img.shields.io/npm/v/cozy-scripts.svg" alt="npm version" />
-  </a>
-  <a href="https://github.com/CPatchane/create-cozy-app/blob/master/packages/cozy-scripts/LICENSE">
-    <img src="https://img.shields.io/npm/l/cozy-scripts.svg" alt="license" />
-  </a>
-  <a href="https://travis-ci.org/CPatchane/create-cozy-app">
-    <img src="https://img.shields.io/travis/CPatchane/create-cozy-app.svg" alt="travis" />
-  </a>
-  <a href="https://npmcharts.com/compare/cozy-scripts">
-    <img src="https://img.shields.io/npm/dm/cozy-scripts.svg" alt="npm downloads" />
-  </a>
-  <a href="https://david-dm.org/cpatchane/create-cozy-app?path=packages/cozy-scripts">
-    <img src="https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/cozy-scripts" alt="david-dm" />
-  </a>
-  <a href="https://renovateapp.com/">
-    <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="renovate" />
-  </a>
-  <a href="https://github.com/facebook/jest">
-    <img src="https://facebook.github.io/jest/img/jest-badge.svg" alt="tested with jest" />
-  </a>
-</div>
+<a href="https://www.npmjs.com/package/cozy-scripts">
+  <img src="https://img.shields.io/npm/v/cozy-scripts.svg" alt="npm version" />
+</a>
+<a href="https://github.com/CPatchane/create-cozy-app/blob/master/packages/cozy-scripts/LICENSE">
+  <img src="https://img.shields.io/npm/l/cozy-scripts.svg" alt="license" />
+</a>
+<a href="https://travis-ci.org/CPatchane/create-cozy-app">
+  <img src="https://img.shields.io/travis/CPatchane/create-cozy-app.svg" alt="travis" />
+</a>
+<a href="https://npmcharts.com/compare/cozy-scripts">
+  <img src="https://img.shields.io/npm/dm/cozy-scripts.svg" alt="npm downloads" />
+</a>
+<a href="https://david-dm.org/cpatchane/create-cozy-app?path=packages/cozy-scripts">
+  <img src="https://david-dm.org/cpatchane/create-cozy-app/status.svg?path=packages/cozy-scripts" alt="david-dm" />
+</a>
+<a href="https://renovateapp.com/">
+  <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="renovate" />
+</a>
+<a href="https://github.com/facebook/jest">
+  <img src="https://facebook.github.io/jest/img/jest-badge.svg" alt="tested with jest" />
+</a>
 
-</br>
+<br/>
+<br/>
 
 <!-- MarkdownTOC autolink=true levels=1,2 -->
 
