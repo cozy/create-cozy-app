@@ -1,8 +1,6 @@
 'use strict'
 
 const webpack = require('webpack')
-const spawn = require('cross-spawn')
-const fs = require('fs-extra')
 const WebpackDevServer = require('webpack-dev-server')
 const colorize = require('../utils/_colorize')
 const cleanBuild = require('../utils/cleanBuild')
@@ -10,99 +8,8 @@ const paths = require('../utils/paths')
 const CTS = require('../utils/constants.js')
 const getWebpackConfigs = require('./config')
 
-let appManifest = null
-if (fs.pathExistsSync(paths.appManifest())) {
-  appManifest = fs.readJsonSync(paths.appManifest(), { throws: false })
-}
-
 const port = process.env[CTS.PORT] || '8888'
 const host = process.env[CTS.HOST] || 'localhost'
-const coudhDBPort = '5984'
-const MailHogPort = '8025'
-const cozyDomain = 'cozy.tools:8080'
-const appSlug = (appManifest && appManifest.slug) || 'app'
-
-const launchStack = ({ isFirstRun }) => {
-  let dockerProcess, knownDockerError
-  console.log(
-    `  ${colorize.bold('Your application:')}    http://${appSlug}.${cozyDomain}`
-  )
-  console.log(`  ${colorize.bold('Your local Cozy:')}     http://${cozyDomain}`)
-  console.log(
-    `  ${colorize.bold(
-      'CouchDB:'
-    )}             http://${host}:${coudhDBPort}/_utils`
-  )
-  console.log(
-    `  ${colorize.bold('MailHog:')}             http://${host}:${MailHogPort}`
-  )
-  console.log(
-    `  ${colorize.bold('Dev assets:')}          http://${host}:${port}`
-  )
-  console.log()
-  if (isFirstRun) {
-    // launch cozy-stack within docker cozy/cozy-app-dev
-    dockerProcess = spawn(
-      'docker',
-      [
-        'run',
-        '--rm',
-        '-p',
-        '8080:8080',
-        '-p',
-        `${coudhDBPort}:5984`,
-        '-p',
-        `${MailHogPort}:8025`,
-        '-v',
-        `${paths.appBuild()}:/data/cozy-app/${appSlug}`,
-        '-v',
-        `${paths.csDisableCSPConfig()}:/etc/cozy/cozy.yaml`,
-        'cozy/cozy-app-dev'
-      ],
-      {
-        cwd: paths.appPath()
-      }
-    )
-    dockerProcess.stdout.on('data', data => {
-      process.stdout.write(
-        `${colorize.blue.bold('Cozy stack (docker):')} ${data}`
-      )
-    })
-
-    dockerProcess.stderr.on('data', data => {
-      process.stderr.write(
-        `${colorize.red.bold('Cozy stack (docker):')} ${data}`
-      )
-    })
-    dockerProcess.on('error', err => {
-      console.log()
-      process.stderr.write(
-        `${colorize.red.bold('Cozy stack (docker):')} ${err}\n`
-      )
-      console.log()
-      if (err.code === 'ENOENT') {
-        process.stderr.write(
-          colorize.red.bold('You seems to not having Docker installed.\n')
-        )
-        process.stderr.write(
-          colorize.red.bold(
-            'Be sure to have the `docker` CLI available in your environment.\n'
-          )
-        )
-        process.stderr.write(
-          colorize.red.bold(
-            "The Cozy in docker won't be available during this start session.\n"
-          )
-        )
-        process.stderr.write(
-          colorize.red.bold('Please install Docker and then start again.\n')
-        )
-        knownDockerError = err
-      }
-    })
-  }
-  return { knownDockerError, dockerProcess }
-}
 
 // There is no callback available on compiler here,
 // it's not handled by webpack-dev-server 2.x
@@ -209,9 +116,6 @@ module.exports = buildOptions => {
     console.log()
   })
 
-  let dockerProcess = null
-  let knownDockerError = null
-
   compiler.hooks.done.tap('Very end hook', () => {
     clearConsole()
     console.log()
@@ -221,15 +125,10 @@ module.exports = buildOptions => {
       )
     )
     console.log()
-    if (buildOptions.stack) {
-      const res = launchStack()
-      dockerProcess = res.dockerProcess
-      knownDockerError = res.knownDockerError
-    } else {
-      console.log(
-        `  ${colorize.bold('Dev assets:')}        http://${host}:${port}`
-      )
-    }
+
+    console.log(
+      `  ${colorize.bold('Dev assets:')}        http://${host}:${port}`
+    )
     isFirstRun = false
   })
 
@@ -242,20 +141,7 @@ module.exports = buildOptions => {
   ;['SIGINT', 'SIGQUIT', 'SIGTERM'].forEach(sig => {
     process.once(sig, () => {
       server.close()
-      if (dockerProcess && !knownDockerError) {
-        console.log()
-        console.log(colorize.orange('Shutting down the stack...'))
-        console.log()
-        console.log(colorize.cyan('See you soon! 👋'))
-        dockerProcess.stdout.destroy()
-        dockerProcess.stderr.destroy()
-        spawn.sync('sh', ['-c', paths.csQuitStackScript()], {
-          stdio: 'inherit'
-        })
-      } else {
-        console.log()
-        console.log(colorize.cyan('See you soon! 👋'))
-      }
+      console.log(colorize.cyan('See you soon! 👋'))
       process.exit(0)
     })
   })

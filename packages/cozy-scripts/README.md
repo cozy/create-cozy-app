@@ -166,11 +166,6 @@ documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-app-p
 >     starting the release.
 
 
-##### - `--stack`
-
-Use this option if you want to run `cozy-scripts start` with launching the
-Cozy stack using docker.
-
 ### Webpack configurations
 
 `cozy-scripts` is designed to use a default webpack configuration for a basic
