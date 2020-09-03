@@ -26,6 +26,17 @@
 
 </br>
 
+<!-- MarkdownTOC autolink=true levels=1,2 -->
+
+- [What's cozy-scripts?](#whats-cozy-scripts)
+- [Installation](#installation)
+- [CLI commands](#cli-commands)
+- [Community](#community)
+- [License](#license)
+
+<!-- /MarkdownTOC -->
+
+
 ## What's cozy-scripts?
 
 `cozy-scripts` contains
@@ -222,7 +233,10 @@ documentation](docs/webpack-merge-strategies.md).
  </div>
  </br>
 
-[Cozy] is a platform that brings all your web services in the same private space.  With it, your webapps and your devices can share data easily, providing you with a new experience. You can install Cozy on your own hardware where no one's tracking you.
+[Cozy] is a platform that brings all your web services in the same private
+space.  With it, your webapps and your devices can share data easily,
+providing you with a new experience. You can install Cozy on your own hardware
+where no one's tracking you.
 
 ### Get in touch
 
