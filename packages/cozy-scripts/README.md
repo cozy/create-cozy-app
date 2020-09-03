@@ -1,4 +1,4 @@
-<h1 align="center">Cozy Scripts</h1>
+# Cozy Scripts
 
 <div align="center">
   <a href="https://www.npmjs.com/package/cozy-scripts">
@@ -26,98 +26,14 @@
 
 </br>
 
-### What's cozy-scripts?
+## What's cozy-scripts?
 
-`cozy-scripts` is a script bundle partially designed to be run by
-`create-cozy-app`. This latter will just create the root folder and then run
-the `node_modules/cozy-scripts/scripts/init.js` script inside it with some CLI
-options.
+`cozy-scripts` contains
 
-All the application template outline is then handled by `cozy-scripts`.
+- common command used by Cozy developers during application development
+- common webpack configs
 
-To install:
-
-```
-yarn add --dev cozy-scripts
-```
-
-> If your purpose is to create an new application from scratch, don't install
-> `cozy-scripts` but see
-> [`create-cozy-app`](https://github.com/CPatchane/create-cozy-app/tree/master/packages/create-cozy-app)
-> instead.
-
-### Default template (`template` folder)
-
-Using the default template, `cozy-scripts` will generate a React application.
-After the initialisation, you should have the following folder structure:
-
-<details>
-
-```
-mycozyapp/
-    babel.config.js
-    CONTRIBUTING.md
-    LICENSE
-    README.md
-    jest.config.js
-    manifest.webapp
-    node_modules/
-    package.json
-    yarn.lock
-    src/
-        assets/
-        components/
-            App.jsx
-            Sidebar.jsx
-            HelloViews/
-            Todos/
-        connections/allTodos.js
-        locales/en.json
-        styles/
-        targets/
-            browser/
-                index.ejs
-                index.jsx
-            intents/
-            mobile/
-            vendor/
-    test/
-    .editorconfig
-    .eslintrc.json
-    .github/
-        .ISSUE_TEMPLATE
-        .PULL_REQUEST_TEMPLATE
-    .gitignore
-    .stylintrc
-    .travis.yml
-    .tx/
-        config
-```
-
-</details>
-
-This application is more than a simple Hello World, it's a mini Todo
-application doing interactions and data handling (using
-[`cozy-client`](https://github.com/cozy/cozy-client)) with the stack. A good
-way to understand how the application works with the Cozy.
-
-
-### Ready to go
-
-The script will download dependencies (may take a while) and ask you a few
-questions, then create an application skeleton inside `mycozyapp`.
-
-That's all! You can start developing:
-
-```
-cd mycozyapp
-yarn start
-```
-
-After the webpack build and the docker environment is ready, your app should
-be available at http://mycozyapp.cozy.tools:8080
-
-### The `cozy-scripts` CLI
+## CLI commands
 
 `cozy-scripts` has commands to be used inside your application (used by
 default in applications created from `create-cozy-app`):
