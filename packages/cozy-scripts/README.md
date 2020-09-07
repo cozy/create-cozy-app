@@ -40,7 +40,7 @@
 
 `cozy-scripts` contains
 
-- common command used by Cozy developers during application development
+- common commands used by Cozy developers during application development
 - common webpack configs
 
 ## Installation
