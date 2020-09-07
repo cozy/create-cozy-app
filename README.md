@@ -39,59 +39,62 @@ __You can find a complete tutorial about creating a Cozy application using `crea
  - a running [Cozy development environment](https://docs.cozy.io/en/dev/app/#install-the-development-environment)
 
 
-### Running it via Yarn directly (highly recommended)
+### Bootstrap an application
 
-You can use `create-cozy-app` without installing it globally by using the `yarn create cozy-app` command to bootstrap your application:
+You can use `create-cozy-app` without installing it globally using `yarn create`
+([yarn create documentation](https://yarnpkg.com/lang/en/docs/cli/create/)):
 
 ```
 yarn create cozy-app mycozyapp
 ```
 
-You can find more information about `yarn create` in the [yarnpkg documentation](https://yarnpkg.com/lang/en/docs/cli/create/).
+<details>
+  <summary>
+    You can also install the package globally.
 
-### Running it using the installed CLI
-
-By installed the CLI, you will have to update it regularly to keep the app template up to date. It is why we recommend to use directly `yarn` like above which will always uses the last version of the CLI.
-
-#### Install
-
-Just use `yarn` to download and globally install the `create-cozy-app` CLI;
+  </summary>
 
 ```
 yarn global add create-cozy-app
-```
-
-#### CLI usage
-
-Then, use the `create-cozy-app` command to bootstrap your application:
-
-```
 create-cozy-app mycozyapp
 ```
 
-### Ready to go
+⚠️ By using a locally installed CLI, you will have to update it regularly to keep the app
+template up to date. It is why we recommend to use directly `yarn create` which will always uses
+the latest version of the CLI.
 
-The script will download some dependencies (may take a while) and ask you a few questions, then creates an application skeleton inside `mycozyapp`.
+</details>
 
-#### With stack from docker
+It will 
 
-That's it! You can already start hacking:
+* download dependencies (it may take a while, you can go grab a coffee)
+* ask you a few questions
+* then create an application skeleton inside `mycozyapp`.
 
-```
-cd mycozyapp
-yarn start --stack
-```
+### Start developing
 
-After the webpack build and the docker environment ready, the `mycozyapp` app here will be available at http://mycozyapp.cozy.tools:8080
+ℹ️ See [this tutorial](https://docs.cozy.io/en/tutorials/app/) for more information on
+how to develop a cozy-app. Below, you'll find just the essential.
 
-#### With stack from source
-
-That's it! You can already start hacking:
+You can start developing with:
 
 ```
 cd mycozyapp
 yarn start
 ```
+
+This starts a `webpack-dev-server` that continuously builds the application
+into the `build` folder.
+
+If not already started, you should start a `cozy-stack` serving this folder:
+
+```bash
+touch ~/cozy.yaml # You can edit this file to configure the stack
+docker run -ti --rm -p 8080:8080 -p 5984:5984 -p 8025:8025 -v (pwd)/build:/data/cozy-app/mycozyapp -v ~/cozy.yaml:/etc/cozy/cozy.yaml cozy/cozy-app-dev
+```
+
+You app should now be available at `http://mycozyapp.cozy.tools:8080`.
+
 
 ### Options
 
