@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.4.0...cozy-scripts@5.0.0) (2020-09-08)
+
+
+### Features
+
+* Removes the stack in docker option ([e89ad78](https://github.com/cozy/create-cozy-app/commit/e89ad78))
+
+
+### BREAKING CHANGES
+
+* The --stack flag is no longer supported. As an
+alternative, it's possible to directly run the stack either from source
+or with Docker. The command to run the docker image is in the README.
+
+
+
+
+
 # [4.4.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.3.3...cozy-scripts@4.4.0) (2020-08-31)
 
 
