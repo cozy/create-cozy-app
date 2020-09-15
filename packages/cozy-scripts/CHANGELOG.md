@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.0.0...cozy-scripts@5.0.1) (2020-09-15)
+
+
+### Bug Fixes
+
+* Prevent flaky builds ([fc95ebc](https://github.com/cozy/create-cozy-app/commit/fc95ebc))
+
+
+
+
+
 # [5.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@4.4.0...cozy-scripts@5.0.0) (2020-09-08)
 
 
