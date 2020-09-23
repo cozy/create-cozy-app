@@ -44,7 +44,7 @@
   "dependencies": {
     "cozy-bar": "7.12.3",
     "cozy-client": "13.16.0",
-    "cozy-ui": "35.23.0",
+    "cozy-ui": "37.2.0",
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "react-router-dom": "4.3.1"
