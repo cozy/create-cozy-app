@@ -23,7 +23,7 @@ exports[`Todos component: should be rendered correctly with todos 1`] = `
         ]
       }
     />
-    <WithMutations(TodoAdd) />
+    <withClient(TodoAdd) />
   </div>
 </div>
 `;
@@ -36,7 +36,7 @@ exports[`Todos component: should be rendered correctly without todos 1`] = `
     <TodosList
       todos={Array []}
     />
-    <WithMutations(TodoAdd) />
+    <withClient(TodoAdd) />
   </div>
 </div>
 `;
@@ -45,7 +45,7 @@ exports[`Todos component: should render a spinner if loading 1`] = `
 <div
   className="todos"
 >
-  <Wrapper
+  <withI18n(Spinner)
     middle={true}
     size="xxlarge"
   />
