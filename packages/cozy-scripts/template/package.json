@@ -5,7 +5,7 @@
     "tx": "tx pull --all || true",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "cs lint '{src,test}/**/*.{js,jsx}'",
-    "lint:styles": "stylint src/styles --config ./.stylintrc",
+    "lint:styles": "stylint src/styles --config node_modules/cozy-scripts/config/.stylintrc",
     "prebuild": "yarn lint",
     "build": "yarn build:browser",
     "build:browser": "cs build --browser",
