@@ -1,3 +1,7 @@
+.todos-list {
+  padding-left: 0;
+}
+
 .todo-item {
   max-width: 30rem;
   list-style: none;
