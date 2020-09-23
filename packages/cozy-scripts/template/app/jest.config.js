@@ -6,7 +6,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.(png|gif|jpe?g|svg)$': '<rootDir>/src/__mocks__/fileMock.js',
     // identity-obj-proxy module is installed by cozy-scripts
-    styles: 'identity-obj-proxy'
+    '\\.styl$': 'identity-obj-proxy'
   },
   transformIgnorePatterns: ['node_modules/(?!cozy-ui)'],
   globals: {
