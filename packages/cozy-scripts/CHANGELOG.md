@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.0.2...cozy-scripts@5.1.0) (2020-09-23)
+
+
+### Features
+
+* Cozy-scripts installs the stylint dependency ([83d96d5](https://github.com/cozy/create-cozy-app/commit/83d96d5))
+* Share .stylintrc ([067a883](https://github.com/cozy/create-cozy-app/commit/067a883))
+
+
+
+
+
 ## [5.0.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.0.1...cozy-scripts@5.0.2) (2020-09-23)
 
 
