@@ -4,6 +4,7 @@ module.exports = {
   setupFiles: ['<rootDir>/src/jest.setup.js'],
   moduleDirectories: ['src', 'node_modules'],
   moduleNameMapper: {
+    'cozy-client': 'cozy-client/dist/index.js',
     '\\.(png|gif|jpe?g|svg)$': '<rootDir>/src/__mocks__/fileMock.js',
     // identity-obj-proxy module is installed by cozy-scripts
     '\\.styl$': 'identity-obj-proxy'
