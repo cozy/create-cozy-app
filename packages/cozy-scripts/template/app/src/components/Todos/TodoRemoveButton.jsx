@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
 import Button from 'cozy-ui/react/Button'
-import { withMutations } from 'cozy-client'
+import Icon from 'cozy-ui/react/Icon'
+import { withClient } from 'cozy-client'
 
 export class TodoRemoveButton extends Component {
   constructor(props) {
@@ -12,15 +13,14 @@ export class TodoRemoveButton extends Component {
 
   // delete the related todo
   removeTodo = async () => {
-    const { deleteDocument, todo } = this.props
-    // display a spinner during the process
-    this.setState(() => ({ isWorking: true }))
-    // delete the todo in the Cozy : asynchronous
-    await deleteDocument(todo)
-    // remove the spinner
-    // this.setState(() => ({ isWorking: false }))
-    // We can omit that since this component will be
-    // unmount after the document is deleted by the client
+    const { client, todo } = this.props
+    this.setState({ isWorking: true })
+
+    try {
+      await client.destroy(todo)
+    } finally {
+      this.setState({ isWorking: false })
+    }
   }
 
   render() {
@@ -29,17 +29,18 @@ export class TodoRemoveButton extends Component {
       <Button
         className="todo-remove-button"
         theme="danger"
-        icon="delete"
         iconOnly
         label="Delete"
         busy={isWorking}
         disabled={isWorking}
         onClick={this.removeTodo}
         extension="narrow"
-      />
+      >
+        {!isWorking ? <Icon icon="trash" /> : null}
+      </Button>
     )
   }
 }
 
 // get mutations from the client to use deleteDocument
-export default withMutations()(TodoRemoveButton)
+export default withClient(TodoRemoveButton)
