@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.1.0...cozy-scripts@5.1.1) (2020-09-28)
+
+
+### Bug Fixes
+
+* Add relative node_modules in resolve.modules ([cb72c06](https://github.com/cozy/create-cozy-app/commit/cb72c06))
+
+
+
+
+
 # [5.1.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.0.2...cozy-scripts@5.1.0) (2020-09-23)
 
 
