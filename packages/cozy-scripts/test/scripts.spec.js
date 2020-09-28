@@ -85,7 +85,12 @@ function getConfig(options) {
 }
 
 describe('App from cozy-scripts', () => {
+  let originalIsTTY = process.stderr.isTTY
   beforeAll(() => {
+    // Force TTY to true so that tests behave the same on Travis and locally
+    // isTTY is false normally on Travis
+    process.stderr.isTTY = true
+
     // create the app test folder
     fs.ensureDirSync(appPath)
     process.chdir(appPath)
@@ -118,6 +123,7 @@ describe('App from cozy-scripts', () => {
   })
 
   afterAll(() => {
+    process.stderr.isTTY = originalIsTTY
     // clean up all
     cleanUp()
   })
