@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.1.1...cozy-scripts@5.1.2) (2020-09-29)
+
+
+### Bug Fixes
+
+* Font from CSS could not be loaded ([84242d9](https://github.com/cozy/create-cozy-app/commit/84242d9))
+
+
+
+
+
 ## [5.1.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.1.0...cozy-scripts@5.1.1) (2020-09-28)
 
 
