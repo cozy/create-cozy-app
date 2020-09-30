@@ -7,7 +7,7 @@ export const TodosList = props => {
   if (!todos || !todos.length) return null
   return (
     <div>
-      <h2>Todos list:</h2>
+      <h2>Todos list</h2>
       <ul className="todos-list">
         {todos.map(todo => (
           <li key={todo._id} className="todo-item">

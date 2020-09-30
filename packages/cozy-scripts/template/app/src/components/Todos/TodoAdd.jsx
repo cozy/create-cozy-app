@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { withMutations } from 'cozy-client'
+import { withClient } from 'cozy-client'
 import Input from 'cozy-ui/react/Input'
 import Label from 'cozy-ui/react/Label'
 import Button from 'cozy-ui/react/Button'
@@ -25,21 +25,26 @@ export class TodoAdd extends Component {
   // create the new todo
   handleSubmit = async () => {
     const { todoToAdd } = this.state
-    const { createDocument } = this.props
+    const { client } = this.props
     // reset the input and display a spinner during the process
-    this.setState(() => ({ todoToAdd: '', isWorking: true }))
-    await createDocument(TODOS_DOCTYPE, { name: todoToAdd })
-    // remove the spinner
-    this.setState(() => ({ isWorking: false }))
+    this.setState({ todoToAdd: '' })
+
+    try {
+      this.setState({ isWorking: true })
+      const newDoc = { _type: TODOS_DOCTYPE, name: todoToAdd }
+      await client.save(newDoc)
+    } finally {
+      this.setState(() => ({ isWorking: false }))
+    }
   }
 
   render() {
     const { todoToAdd, isWorking } = this.state
     return (
       <div>
-        <h2>Add a new Todo:</h2>
+        <h2 className="u-mt-2 u-mb-half">Add a new Todo</h2>
         <form onSubmit={this.handleSubmit}>
-          <Label htmlFor="todo-add-input"> Todo name: </Label>
+          <Label htmlFor="todo-add-input">Todo name</Label>
           <Input
             value={todoToAdd}
             onChange={this.handleChange}
@@ -60,4 +65,4 @@ export class TodoAdd extends Component {
 }
 
 // get mutations from the client to use createDocument
-export default withMutations()(TodoAdd)
+export default withClient(TodoAdd)

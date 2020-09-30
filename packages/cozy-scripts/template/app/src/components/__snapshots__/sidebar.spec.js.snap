@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar component should be rendered correctly 1`] = `
+<Sidebar>
+  <Nav>
+    <NavItem>
+      <Unknown
+        to="/todos"
+      >
+        <NavIcon
+          icon="test-file-stub"
+        />
+        <NavText>
+          Todos
+        </NavText>
+      </Unknown>
+    </NavItem>
+    <NavItem>
+      <Unknown
+        to="/viewhello1"
+      >
+        <NavIcon
+          icon="test-file-stub"
+        />
+        <NavText>
+          Second
+        </NavText>
+      </Unknown>
+    </NavItem>
+    <NavItem>
+      <Unknown
+        to="/viewhello2"
+      >
+        <NavIcon
+          icon="test-file-stub"
+        />
+        <NavText>
+          Third
+        </NavText>
+      </Unknown>
+    </NavItem>
+  </Nav>
+</Sidebar>
+`;

@@ -8,7 +8,6 @@ import { shallow } from 'enzyme'
 // we import the not connected component version for testing
 import { TodoAdd } from 'components/Todos/TodoAdd'
 import { TODOS_DOCTYPE } from 'doctypes'
-// import Button from 'cozy-ui/react/Button'
 import Input from 'cozy-ui/react/Input'
 
 // mock data for testing
@@ -24,15 +23,21 @@ describe('TodoAdd component:', () => {
     jest.resetAllMocks()
   })
 
+  const setup = () => {
+    const client = {
+      save: mockCreateTodo
+    }
+    const component = shallow(<TodoAdd client={client} />)
+    return { component }
+  }
+
   it('should be rendered correctly', () => {
-    const component = shallow(
-      <TodoAdd createDocument={mockCreateTodo} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    const { component } = setup()
+    expect(component.getElement()).toMatchSnapshot()
   })
 
   it('should handle isWorking correctly (display spinner)', () => {
-    const component = shallow(<TodoAdd createDocument={mockCreateTodo} />)
+    const { component } = setup()
 
     expect(component.state().isWorking).toBe(false)
     component.setState({ isWorking: true })
@@ -40,7 +45,7 @@ describe('TodoAdd component:', () => {
   })
 
   it('should handle createDocument correctly on button click', async () => {
-    const component = shallow(<TodoAdd createDocument={mockCreateTodo} />)
+    const { component } = setup()
     // set a todo name value
     component.setState({ todoToAdd: created.name })
 
@@ -48,12 +53,14 @@ describe('TodoAdd component:', () => {
     await addButton.simulate('submit')
 
     expect(mockCreateTodo.mock.calls.length).toBe(1)
-    expect(mockCreateTodo.mock.calls[0][0]).toEqual(TODOS_DOCTYPE)
-    expect(mockCreateTodo.mock.calls[0][1]).toEqual({ name: created.name })
+    expect(mockCreateTodo.mock.calls[0][0]).toEqual({
+      _type: TODOS_DOCTYPE,
+      name: 'Todo 1'
+    })
   })
 
   it('should update the state on input value change', () => {
-    const component = shallow(<TodoAdd createDocument={mockCreateTodo} />)
+    const { component } = setup()
     const input = component.find(Input)
 
     expect(component.state().todoToAdd).toBe('')

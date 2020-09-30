@@ -5,7 +5,7 @@ exports[`App component only should be mounted correctly 1`] = `
   <Layout
     monoColumn={false}
   >
-    <Wrapper />
+    <withI18n(Sidebar) />
     <Main>
       <Content
         className="app-content"

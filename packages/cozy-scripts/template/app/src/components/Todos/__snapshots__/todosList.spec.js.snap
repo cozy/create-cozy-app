@@ -3,7 +3,7 @@
 exports[`TodosList component: should be rendered correctly with todos 1`] = `
 <div>
   <h2>
-    Todos list:
+    Todos list
   </h2>
   <ul
     className="todos-list"
@@ -14,7 +14,7 @@ exports[`TodosList component: should be rendered correctly with todos 1`] = `
       <span>
         Todo 1
       </span>
-      <WithMutations(TodoRemoveButton)
+      <withClient(TodoRemoveButton)
         todo={
           Object {
             "_id": 1234,
@@ -29,7 +29,7 @@ exports[`TodosList component: should be rendered correctly with todos 1`] = `
       <span>
         Todo 2
       </span>
-      <WithMutations(TodoRemoveButton)
+      <withClient(TodoRemoveButton)
         todo={
           Object {
             "_id": 5678,
@@ -44,7 +44,7 @@ exports[`TodosList component: should be rendered correctly with todos 1`] = `
       <span>
         Todo 3
       </span>
-      <WithMutations(TodoRemoveButton)
+      <withClient(TodoRemoveButton)
         todo={
           Object {
             "_id": 9101,

@@ -5,7 +5,7 @@
     "tx": "tx pull --all || true",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "cs lint '{src,test}/**/*.{js,jsx}'",
-    "lint:styles": "stylint src/styles --config ./.stylintrc",
+    "lint:styles": "stylint src/styles --config node_modules/cozy-scripts/config/.stylintrc",
     "prebuild": "yarn lint",
     "build": "yarn build:browser",
     "build:browser": "cs build --browser",
@@ -15,7 +15,7 @@
     "watch:mobile": "cs watch --mobile",
     "start": "cs start --hot --browser",
     "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git}",
-    "test": "cs test --verbose --coverage",
+    "test": "cs test",
     "cozyPublish": "git fetch origin ${DEPLOY_BRANCH:-build}:${DEPLOY_BRANCH:-build} && cs publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})"
   },
   "repository": {
@@ -44,7 +44,7 @@
   "dependencies": {
     "cozy-bar": "7.12.3",
     "cozy-client": "13.16.0",
-    "cozy-ui": "35.23.0",
+    "cozy-ui": "37.2.0",
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "react-router-dom": "4.3.1"
