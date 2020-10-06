@@ -41,8 +41,15 @@ $ cd <SLUG_GH>
 $ yarn start
 ```
 
-After the build and the stack launched, your app is now available at http://<SLUG_GH>.cozy.tools:8080.
+```sh
+# in an other terminal, run the docker image 
+$ cd <SLUG_GH>
+$ yarn stack:docker:dev
+``` 
 
+After the build and the docker image launched, your app is now available at http://<SLUG_GH>.cozy.tools:8080.
+
+Note: By default, HMR (Hot Module Replacement) is enabled on your front application. To have it working, we have disabled our CSP (Content Security Policy) when running `yarn stack:docker:dev`. This is not the configuration we'll have in a production environnement. To test our app in real conditions, build your application by running `yarn build` and launch the docker image with the `yarn stack:docker:prod` command.
 
 ### Living on the edge
 

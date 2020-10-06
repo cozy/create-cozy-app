@@ -125,7 +125,8 @@ if (program.showConfig) {
     'publish',
     'release',
     'lint',
-    'check-locales'
+    'check-locales',
+    'stackDocker'
   ]
 
   if (availableScripts.includes(actionName)) {

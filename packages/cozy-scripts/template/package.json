@@ -13,10 +13,12 @@
     "watch": "yarn watch:browser",
     "watch:browser": "cs watch --browser",
     "watch:mobile": "cs watch --mobile",
-    "start": "cs start --hot --browser",
+    "start": "cs start --browser",
     "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git}",
     "test": "cs test --verbose --coverage",
-    "cozyPublish": "git fetch origin ${DEPLOY_BRANCH:-build}:${DEPLOY_BRANCH:-build} && cs publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})"
+    "cozyPublish": "git fetch origin ${DEPLOY_BRANCH:-build}:${DEPLOY_BRANCH:-build} && cs publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})",
+    "stack:docker:dev": "cs stackDocker",
+    "stack:docker:prod": "cs stackDocker --prod"
   },
   "repository": {
     "type": "git",
