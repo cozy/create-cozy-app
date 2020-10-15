@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.2.0...cozy-scripts@5.3.0) (2020-10-15)
+
+
+### Bug Fixes
+
+* Don't be too strict in the version ([68af134](https://github.com/cozy/create-cozy-app/commit/68af134))
+
+
+### Features
+
+* Upgrade cozy's lib ([7f6e744](https://github.com/cozy/create-cozy-app/commit/7f6e744))
+* Upgrade react ([52dbca7](https://github.com/cozy/create-cozy-app/commit/52dbca7))
+
+
+
+
+
 # [5.2.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.1.3...cozy-scripts@5.2.0) (2020-10-15)
 
 
