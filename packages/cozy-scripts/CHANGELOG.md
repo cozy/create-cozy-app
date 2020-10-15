@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.1.3...cozy-scripts@5.2.0) (2020-10-15)
+
+
+### Features
+
+* Add deploy command using git-directory-deploy ([d153f3c](https://github.com/cozy/create-cozy-app/commit/d153f3c))
+
+
+
+
+
 ## [5.1.3](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.1.2...cozy-scripts@5.1.3) (2020-10-06)
 
 **Note:** Version bump only for package cozy-scripts
