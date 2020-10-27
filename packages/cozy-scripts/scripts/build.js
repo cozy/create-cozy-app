@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const getWebpackConfigs = require('./config')
 const cleanBuild = require('../utils/cleanBuild')
 const CTS = require('../utils/constants.js')
+const flatMap = require('lodash/flatMap')
 
 // add a way to provide success callback for (at least) better tests
 module.exports = (buildOptions, successCallback) => {
@@ -48,8 +49,11 @@ module.exports = (buildOptions, successCallback) => {
     }
 
     if (stats.hasErrors()) {
-      // errros should already displayed by stats just before
-      throw new Error('Webpack build errored.')
+      const errors = flatMap(stats, stat => stat.compilation.errors)
+      for (const error of errors) {
+        console.error(error)
+      }
+      throw new Error(stats[0])
     }
 
     if (isTestMode) successCallback()
