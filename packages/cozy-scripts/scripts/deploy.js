@@ -26,7 +26,7 @@ function runDeploy(options) {
     'env',
     [
       'HUSKY_SKIP_HOOKS=1',
-      'git-directory-deploy',
+      './node_modules/.bin/git-directory-deploy',
       '--directory',
       args.directory,
       '--branch',
