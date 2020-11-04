@@ -1,13 +1,10 @@
 'use strict'
 
-const runGlobalPackageCLI = require('../utils/runGlobalPackageCLI')
-const CTS = require('../utils/constants.js')
+const { spawnSync } = require('child_process')
 
 function runCozyRelease(options) {
   const { cliArgs } = options
-  const isDebugMode = process.env[CTS.DEBUG] === 'true'
-
-  runGlobalPackageCLI('cozy-release', cliArgs, isDebugMode)
+  spawnSync('npx', ['cozy-release', ...cliArgs], { stdio: 'inherit' })
 }
 
 module.exports = runCozyRelease
