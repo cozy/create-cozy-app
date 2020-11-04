@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.3.1...cozy-scripts@5.4.0) (2020-11-04)
+
+
+### Features
+
+* Add git-directory-deploy since it is necessary for cs deploy ([e8994dc](https://github.com/cozy/create-cozy-app/commit/e8994dc))
+* Error were not correctly logged ([852055d](https://github.com/cozy/create-cozy-app/commit/852055d))
+* Execute cozy-app-publish from local node_modules via npx ([cf38d80](https://github.com/cozy/create-cozy-app/commit/cf38d80)), closes [#1362](https://github.com/cozy/create-cozy-app/issues/1362)
+* Execute cozy-release from local node_modules via npx ([bf1d560](https://github.com/cozy/create-cozy-app/commit/bf1d560))
+
+
+
+
+
 ## [5.3.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.3.0...cozy-scripts@5.3.1) (2020-10-23)
 
 **Note:** Version bump only for package cozy-scripts
