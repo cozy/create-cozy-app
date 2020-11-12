@@ -71,6 +71,7 @@
     "webpack-merge": "4.2.2"
   },
   "devDependencies": {
+    "react-hot-loader": "^4.13.0",
     "strip-ansi": "5.0.0"
   },
   "peerDependencies": {
