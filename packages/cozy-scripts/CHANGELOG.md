@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.0...cozy-scripts@5.4.1) (2020-11-13)
+
+
+### Bug Fixes
+
+* ReactHotLoader is used in webpack config react ([87eccab](https://github.com/cozy/create-cozy-app/commit/87eccab))
+
+
+
+
+
 # [5.4.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.3.1...cozy-scripts@5.4.0) (2020-11-04)
 
 
