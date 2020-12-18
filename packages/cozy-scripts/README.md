@@ -71,29 +71,31 @@ in the `build/` directory.
 > A `--debug` option is available if you want to ouput more information about
 > webpack building in your console.
 
-
-### - `cozy-scripts watch`
-
-Unlike the previous command, this will run webpack in watch mode: each time you
-modify a file, a new build will be triggered. It's
-recommended for development build. The built files (destined to the Cozy) will
-be in `build/`.
-
-> A `--debug` options is available if you want to ouput more information
-> about webpack building in your console.
-
 ### - `cozy-scripts start`
 
 Launches the application for development. Its runs webpack in watch mode with
 a server (`webpack-dev-server`) to serve application assets. Then, it will
 launch a Cozy stack using Docker (the image `cozy/cozy-app-dev`) to serve your
-application inside it.
+application inside it. This is the preferred method to build a Cozy app during development.
 
 Your application will be available at http://<MY_APP_SLUG>.cozy.tools:8080.
+
+:warning: If you want to build a [service](https://docs.cozy.io/en/howTos/dev/services/),
+you should use `cozy-scripts watch` (see below).
 
 > In this mode [HMR (Hot Module
 > Replacement)](https://webpack.js.org/concepts/hot-module-replacement/) is
 > available to help you with the application development.
+
+### - `cozy-scripts watch`
+
+Run webpack in watch mode: each time you modify a file, a new build will be triggered. 
+This is only recommended for [service](https://docs.cozy.io/en/howTos/dev/services/) build.
+The built files (destined to the Cozy) will be in `build/`.
+
+> A `--debug` options is available if you want to ouput more information
+> about webpack building in your console.
+
 
 ### Common flags for `build` / `watch` / `start`
 
