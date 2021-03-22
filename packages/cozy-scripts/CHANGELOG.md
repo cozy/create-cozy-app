@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.3](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.2...cozy-scripts@5.4.3) (2021-03-22)
+
+
+### Bug Fixes
+
+* Import cozy-ui CSS as early as possible ([6e32796](https://github.com/cozy/create-cozy-app/commit/6e32796)), closes [/github.com/cozy/cozy-ui/issues/1774#issuecomment-803967934](https://github.com//github.com/cozy/cozy-ui/issues/1774/issues/issuecomment-803967934)
+
+
+
+
+
 ## [5.4.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.1...cozy-scripts@5.4.2) (2020-12-22)
 
 **Note:** Version bump only for package cozy-scripts
