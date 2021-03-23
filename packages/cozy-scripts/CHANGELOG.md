@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.4](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.3...cozy-scripts@5.4.4) (2021-03-23)
+
+
+### Bug Fixes
+
+* Add settings permission  ([fe962f4](https://github.com/cozy/create-cozy-app/commit/fe962f4))
+
+
+
+
+
 ## [5.4.3](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.2...cozy-scripts@5.4.3) (2021-03-22)
 
 
