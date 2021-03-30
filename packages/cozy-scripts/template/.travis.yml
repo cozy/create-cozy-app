@@ -1,17 +1,15 @@
 language: node_js
-matrix:
-  fast_finish: true
 node_js:
-- '8'
+- '10'
 branches:
   only:
   - master
 env:
   global:
   # GITHUB_TOKEN for yarn deploy script
-  # to generate yours : travis encrypt GITHUB_TOKEN=<your_GITHUB_TOKEN> -r <USERNAME_GH>/<SLUG_GH> --org
+  # to generate yours : travis encrypt GITHUB_TOKEN=<your_GITHUB_TOKEN> -r <USERNAME_GH>/<SLUG_GH> 
   # REGISTRY_TOKEN for yarn cozyPublish script
-  # to generate yours : travis encrypt REGISTRY_TOKEN=<your_REGISTRY_TOKEN> -r <USERNAME_GH>/<SLUG_GH> --org
+  # to generate yours : travis encrypt REGISTRY_TOKEN=<your_REGISTRY_TOKEN> -r <USERNAME_GH>/<SLUG_GH>
   # N.B.: the --org option is needed only for public repositories
 cache:
   yarn: true
