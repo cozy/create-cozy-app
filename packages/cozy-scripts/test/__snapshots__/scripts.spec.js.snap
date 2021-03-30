@@ -73,7 +73,6 @@ Array [
   ".gitignore",
   ".prettierrc",
   ".stylintrc",
-  ".transifexrc.tpl",
   ".travis.yml",
   "CONTRIBUTING.md",
   "LICENSE",
