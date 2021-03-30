@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.6.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.5.0...cozy-scripts@5.6.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* Be more precise on styles mock ([4b77c2c](https://github.com/cozy/create-cozy-app/commit/4b77c2c))
+
+
+### Features
+
+* Remove transifex template ([d058c6f](https://github.com/cozy/create-cozy-app/commit/d058c6f))
+
+
+
+
+
 # [5.5.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.4...cozy-scripts@5.5.0) (2021-03-30)
 
 
