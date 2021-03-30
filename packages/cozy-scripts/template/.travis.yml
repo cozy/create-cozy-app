@@ -17,11 +17,6 @@ cache:
   yarn: true
   directories:
   - node_modules
-before_install:
-- curl -fsSL https://bootstrap.pypa.io/get-pip.py | python - --user
-- travis_retry pip install --user transifex-client==0.12.5
-- install -m0644 .transifexrc.tpl ~/.transifexrc
-- echo "password = $TX_PASSWD" >> ~/.transifexrc
 stages:
   - prebuild
   - build
@@ -35,11 +30,6 @@ jobs:
       script: yarn test
     - name: 'Build app'
       stage: 'build'
-      before_install:
-        - curl -fsSL https://bootstrap.pypa.io/get-pip.py | python - --user
-        - travis_retry pip install --user transifex-client==0.12.5
-        - install -m0644 .transifexrc.tpl ~/.transifexrc
-        - echo "password = $TX_PASSWD" >> ~/.transifexrc
       script: yarn build
       deploy:
         - provider: script
