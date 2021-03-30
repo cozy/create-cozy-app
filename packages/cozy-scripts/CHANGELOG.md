@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.5.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.4...cozy-scripts@5.5.0) (2021-03-30)
+
+
+### Features
+
+* Remove tx installation ([2ae2eb8](https://github.com/cozy/create-cozy-app/commit/2ae2eb8))
+* Upgrade node, remove fastfinish and travisorg ([6f2eff1](https://github.com/cozy/create-cozy-app/commit/6f2eff1))
+
+
+
+
+
 ## [5.4.4](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.4.3...cozy-scripts@5.4.4) (2021-03-23)
 
 
