@@ -1,19 +1,21 @@
 import React from 'react'
 
-import Spinner from 'cozy-ui/react/Spinner'
-import { queryConnect } from 'cozy-client'
-import { todosQuery } from 'doctypes'
+import { useQuery, isQueryLoading } from 'cozy-client'
+import Spinner from 'cozy-ui/transpiled/react/Spinner'
 
-import TodoAdd from './TodoAdd'
-import TodosList from './TodosList'
+import { getAllTodos } from '../../utils/queries'
+import TodoAdd from './TodoAdd/TodoAdd'
+import TodosList from './TodoList/TodosList'
 
-export const Todos = props => {
-  const { data, fetchStatus } = props.todos
-  // cozy-client statuses
-  const isLoading = fetchStatus === 'loading' || fetchStatus === 'pending'
+export const Todos = () => {
+  const { data, ...rest } = useQuery(
+    getAllTodos.definition,
+    getAllTodos.options
+  )
+
   return (
     <div className="todos">
-      {isLoading ? (
+      {isQueryLoading(rest) ? (
         <Spinner size="xxlarge" middle />
       ) : (
         <div>
@@ -25,10 +27,4 @@ export const Todos = props => {
   )
 }
 
-// get data from the client state: data, fetchStatus
-export default queryConnect({
-  todos: {
-    query: todosQuery,
-    as: 'todos'
-  }
-})(Todos)
+export default Todos
