@@ -1,65 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar component should be rendered correctly 1`] = `
-<aside
-  className="o-sidebar"
->
-  <nav>
-    <ul
-      className="c-nav"
-    >
-      <li
-        className="c-nav-item"
+<div>
+  <aside
+    class="o-sidebar"
+  >
+    <nav>
+      <ul
+        class="c-nav"
       >
-        <NavLink
-          activeClassName="is-active"
-          aria-current="page"
-          className="c-nav-link"
-          to="/todos"
+        <li
+          class="c-nav-item"
         >
-          <Icon
-            className="c-nav-icon"
-            icon="test-file-stub"
-            spin={false}
-          />
-          Todos
-        </NavLink>
-      </li>
-      <li
-        className="c-nav-item"
-      >
-        <NavLink
-          activeClassName="is-active"
-          aria-current="page"
-          className="c-nav-link"
-          to="/viewhello1"
+          <a
+            class="c-nav-link"
+            href="#/todos"
+          >
+            <svg
+              class="c-nav-icon icon"
+              height="16"
+              width="16"
+            >
+              <use
+                xlink:href="#test-file-stub"
+              />
+            </svg>
+            Todos
+          </a>
+        </li>
+        <li
+          class="c-nav-item"
         >
-          <Icon
-            className="c-nav-icon"
-            icon="test-file-stub"
-            spin={false}
-          />
-          Second
-        </NavLink>
-      </li>
-      <li
-        className="c-nav-item"
-      >
-        <NavLink
-          activeClassName="is-active"
-          aria-current="page"
-          className="c-nav-link"
-          to="/viewhello2"
+          <a
+            class="c-nav-link"
+            href="#/viewhello1"
+          >
+            <svg
+              class="c-nav-icon icon"
+              height="16"
+              width="16"
+            >
+              <use
+                xlink:href="#test-file-stub"
+              />
+            </svg>
+            Second
+          </a>
+        </li>
+        <li
+          class="c-nav-item"
         >
-          <Icon
-            className="c-nav-icon"
-            icon="test-file-stub"
-            spin={false}
-          />
-          Third
-        </NavLink>
-      </li>
-    </ul>
-  </nav>
-</aside>
+          <a
+            class="c-nav-link"
+            href="#/viewhello2"
+          >
+            <svg
+              class="c-nav-icon icon"
+              height="16"
+              width="16"
+            >
+              <use
+                xlink:href="#test-file-stub"
+              />
+            </svg>
+            Third
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+</div>
 `;
