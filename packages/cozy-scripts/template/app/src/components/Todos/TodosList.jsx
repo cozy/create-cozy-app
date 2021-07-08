@@ -1,10 +1,9 @@
 import React from 'react'
-
 import TodoRemoveButton from './TodoRemoveButton'
 
-export const TodosList = props => {
-  const { todos } = props
+export const TodosList = ({ todos }) => {
   if (!todos || !todos.length) return null
+
   return (
     <div>
       <h2>Todos list:</h2>
