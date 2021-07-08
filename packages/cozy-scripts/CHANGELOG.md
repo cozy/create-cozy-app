@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.8.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.7.0...cozy-scripts@5.8.0) (2021-07-08)
+
+
+### Features
+
+* Support cozy.localhost ([6fccd13](https://github.com/cozy/create-cozy-app/commit/6fccd13))
+
+
+
+
+
 # [5.7.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.6.0...cozy-scripts@5.7.0) (2021-05-10)
 
 
