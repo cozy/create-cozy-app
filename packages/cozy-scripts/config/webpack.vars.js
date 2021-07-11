@@ -52,8 +52,6 @@ const getEnabledFlags = function() {
 
 const getReactExposer = () => paths.csReactExposer()
 
-const hasTypescript = process.env[CTS.ESLINT_FIX] === 'true'
-
 module.exports = {
   addAnalyzer,
   environment,
@@ -66,6 +64,5 @@ module.exports = {
   useHotReload,
   publicFolderName,
   getReactExposer,
-  devtool,
-  hasTypescript
+  devtool
 }
