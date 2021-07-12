@@ -29,6 +29,7 @@ const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
 const devtool =
   process.env[CTS.DEVTOOL] === 'false' ? false : process.env[CTS.DEVTOOL]
 const publicFolderName = 'public'
+const hasTypescript = !!process.env[CTS.TYPESCRIPT]
 
 const getCSSLoader = function() {
   return useHotReload
@@ -64,5 +65,6 @@ module.exports = {
   useHotReload,
   publicFolderName,
   getReactExposer,
-  devtool
+  devtool,
+  hasTypescript
 }

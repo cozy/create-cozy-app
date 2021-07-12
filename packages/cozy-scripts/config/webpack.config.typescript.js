@@ -3,10 +3,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: require.resolve('babel-loader'),
-        options: {
-          presets: ['cozy-app', '@babel/typescript']
-        }
+        loader: require.resolve('babel-loader')
       }
     ]
   }

@@ -10,6 +10,7 @@ const {
 
 const configs = [
   require('./webpack.config.base'),
+  hasTypescript ? require('./webpack.config.typescript') : null,
   require('./webpack.config.chunks'),
   require('./webpack.config.react'),
   require('./webpack.config.eslint'),
@@ -25,7 +26,6 @@ const configs = [
   addAnalyzer ? require('./webpack.config.analyzer') : null,
   require('./webpack.config.services'),
   require(`./webpack.target.${target}`),
-  hasTypescript ? require('./webpack.config.typescript') : null
 ]
 
 if (environment === 'production') {
