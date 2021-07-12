@@ -16,8 +16,6 @@ const {
 } = require('./webpack.vars')
 const production = environment === 'production'
 
-console.log(hasTypescript)
-
 module.exports = {
   resolve: {
     // It's important that node_modules here is kept relative so that
