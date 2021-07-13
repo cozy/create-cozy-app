@@ -1,1 +1,1 @@
-{ "presets": ["@babel/typescript"] }
+{ "presets": ["@babel/env", "@babel/typescript"] }
