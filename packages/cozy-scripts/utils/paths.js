@@ -23,6 +23,11 @@ const resolveAppSrc = (relativePath = '.') => {
   return resolveApp(relativePath, resolveApp(appSrcDirectory))
 }
 
+const resolveAppTest = (relativePath = '.') => {
+  const appTestDirectory = process.env[CTS.TEST_DIR] || 'test'
+  return resolveApp(relativePath, resolveApp(appTestDirectory))
+}
+
 const resolveSrcWithExtension = relativePath => {
   const ext = process.env[CTS.ENTRY_EXT] || '.js'
   return resolveAppSrc(`${relativePath}${ext}`)
@@ -54,6 +59,7 @@ module.exports = {
   appREADME: () => resolveApp('README.md'),
   appLICENSE: () => resolveApp('LICENSE'),
   appSrc: () => resolveAppSrc(),
+  appTest: () => resolveAppTest(),
   appLocales: () => resolveAppSrc('locales'),
   appVendorAssets: () => resolveAppSrc('targets/vendor/assets'),
   appNodeModules: () =>
