@@ -22,7 +22,11 @@ module.exports = {
     modules: [paths.appSrc(), 'node_modules', paths.appNodeModules()],
     extensions: ['.js', '.json', '.css'],
     // linked package will still be see as a node_modules package
-    symlinks: false
+    symlinks: false,
+    alias: {
+      src: paths.appSrc(),
+      test: paths.appTest()
+    }
   },
   bail: true,
   module: {

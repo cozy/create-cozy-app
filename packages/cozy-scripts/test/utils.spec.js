@@ -8,6 +8,7 @@ describe('Paths provider helper', () => {
   beforeEach(() => {
     delete process.env[CTS.ENTRY_EXT]
     delete process.env[CTS.SRC_DIR]
+    delete process.env[CTS.TEST_DIR]
     delete process.env[CTS.BUILD_DIR]
     delete process.env[CTS.MANIFEST]
   })
@@ -30,6 +31,7 @@ describe('Paths provider helper', () => {
   ;[
     [CTS.ENTRY_EXT, '.vue'],
     [CTS.SRC_DIR, 'subfolder/src/myapp'],
+    [CTS.TEST_DIR, 'subfolder/test/mytests'],
     [CTS.BUILD_DIR, 'subfolder/build/myapp'],
     [CTS.MANIFEST, 'subfolder/src/myapp/manifest.webapp']
   ].map(params => {
