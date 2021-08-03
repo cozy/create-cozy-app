@@ -185,6 +185,20 @@ module.exports = [
 ]
 ```
 
+### TypeScript
+
+TypeScript is lightly supported: type checking and linting are disabled, but files can be compiled.
+In order to use this feature your application needs to have
+`@babel/preset-env` and `@babel/preset-typescript` installed.
+Your babel config also needs to declare those presets, for instance: 
+
+```javascript
+// myapp/babel.config.js
+module.exports = {
+  presets: ['cozy-app', '@babel/typescript', '@babel/env']
+}
+```
+
 ### `cozy-flags`
 
 `cozy-scripts` works well with

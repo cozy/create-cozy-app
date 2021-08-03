@@ -5,6 +5,7 @@ const { environment, target, addAnalyzer } = require('./webpack.vars')
 
 const configs = [
   require('./webpack.config.base'),
+  require('./webpack.config.typescript'),
   require('./webpack.config.chunks'),
   require('./webpack.config.react'),
   require('./webpack.config.eslint'),
