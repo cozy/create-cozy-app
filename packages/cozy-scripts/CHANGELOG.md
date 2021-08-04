@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.10.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.9.0...cozy-scripts@5.10.0) (2021-08-04)
+
+
+### Features
+
+* add typescript compilation ([621d2b4](https://github.com/cozy/create-cozy-app/commit/621d2b4))
+
+
+
+
+
 # [5.9.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.8.0...cozy-scripts@5.9.0) (2021-08-04)
 
 
