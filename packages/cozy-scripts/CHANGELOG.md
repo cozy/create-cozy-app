@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.9.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.8.0...cozy-scripts@5.9.0) (2021-08-04)
+
+
+### Features
+
+* Add aliases ([3608730](https://github.com/cozy/create-cozy-app/commit/3608730))
+
+
+
+
+
 # [5.8.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.7.0...cozy-scripts@5.8.0) (2021-07-08)
 
 
