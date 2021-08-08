@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.11.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.10.0...cozy-scripts@5.11.0) (2021-08-08)
+
+
+### Bug Fixes
+
+* **deps:** Upgrade packages ([28d655d](https://github.com/cozy/create-cozy-app/commit/28d655d))
+
+
+### Features
+
+* Update template ([0079f7b](https://github.com/cozy/create-cozy-app/commit/0079f7b))
+
+
+
+
+
 # [5.10.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.9.0...cozy-scripts@5.10.0) (2021-08-04)
 
 
