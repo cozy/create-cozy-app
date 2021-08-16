@@ -14,7 +14,7 @@ import BarTitle from 'cozy-ui/transpiled/react/BarTitle'
 import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 import Sidebar from 'src/components/Sidebar'
-import Todos from 'src/components/Todos'
+import TodoWrapper from 'src/components/Todos/TodoWrapper'
 import Hello1 from 'src/components/HelloViews/Hello1'
 import Hello2 from 'src/components/HelloViews/Hello2'
 
@@ -43,7 +43,7 @@ const App = () => {
             })}
           >
             <Switch>
-              <Route path="/todos" component={Todos} />
+              <Route path="/todos" component={TodoWrapper} />
               <Route path="/viewhello1" component={Hello1} />
               <Route path="/viewhello2" component={Hello2} />
               <Redirect from="/" to="/todos" />

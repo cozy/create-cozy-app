@@ -123,7 +123,7 @@ describe('App from cozy-scripts', () => {
   })
 
   // Files outline
-  it('should have the correct files outline', done => {
+  fit('should have the correct files outline', done => {
     const init = require(path.join(
       appPath,
       'node_modules',
@@ -225,7 +225,7 @@ describe('App from cozy-scripts', () => {
   })
 
   // Webpack running
-  it('should run webpack.run correctly with build script', done => {
+  fit('should run webpack.run correctly with build script', done => {
     console.log(colorize.orange('Testing cozy-scripts build script...'))
     // should be NODE_ENV = 'browser:production' by default here
     const build = require(path.join(
