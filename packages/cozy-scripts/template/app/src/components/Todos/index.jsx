@@ -3,9 +3,9 @@ import React from 'react'
 import { useQuery, isQueryLoading } from 'cozy-client'
 import Spinner from 'cozy-ui/transpiled/react/Spinner'
 
-import { getAllTodos } from '../../utils/queries'
-import TodoAdd from './TodoAdd/TodoAdd'
-import TodosList from './TodoList/TodosList'
+import { getAllTodos } from 'src/utils/queries'
+import TodoAdd from 'src/components/Todos/TodoAdd/TodoAdd'
+import TodoList from 'src/components/Todos/TodoList/TodoList'
 
 export const Todos = () => {
   const { data, ...rest } = useQuery(
@@ -13,17 +13,13 @@ export const Todos = () => {
     getAllTodos.options
   )
 
-  return (
-    <div className="todos">
-      {isQueryLoading(rest) ? (
-        <Spinner size="xxlarge" middle />
-      ) : (
-        <div>
-          <TodosList todos={data} />
-          <TodoAdd />
-        </div>
-      )}
-    </div>
+  return isQueryLoading(rest) ? (
+    <Spinner size="xxlarge" className="u-flex u-flex-justify-center" />
+  ) : (
+    <>
+      <TodoList todos={data} />
+      <TodoAdd />
+    </>
   )
 }
 
