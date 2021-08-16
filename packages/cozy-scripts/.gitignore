@@ -6,11 +6,6 @@ template/npm-debug.log
 yarn-error.log
 template/yarn-error.log
 
-# Locales
-**/locales/*
-!**/locales/en.json
-
-
 # transifex
 .transifexrc
 
@@ -24,11 +19,9 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
-
 # Editors / IDEs
 .floo
 .flooignore
-
 
 # Mobile
 mobile/hooks
@@ -37,14 +30,12 @@ mobile/plugins
 mobile/www
 mobile/keys
 
-
 # fastlane
 mobile/fastlane/README.md
 mobile/fastlane/report.xml
 mobile/fastlane/Error*.png
 mobile/fastlane/Preview.html
 mobile/Preview.html
-
 
 # Default
 # /!\ KEEP THIS SECTION THE LAST ONE
