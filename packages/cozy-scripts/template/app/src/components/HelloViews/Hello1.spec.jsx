@@ -2,8 +2,8 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import { Hello1 } from './Hello1'
-import AppLike from '../../../test/AppLike'
+import { Hello1 } from 'src/components/HelloViews/Hello1'
+import AppLike from 'test/AppLike'
 
 const setup = () => {
   return render(

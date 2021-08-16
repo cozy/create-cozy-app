@@ -2,14 +2,14 @@
 import React from 'react'
 import { render, waitFor } from '@testing-library/react'
 
-import { TodosList } from './TodosList'
-import AppLike from '../../../../test/AppLike'
-import mockTodos from '../__mocks__/todos.mocks.json'
+import TodoList from 'src/components/Todos/TodoList/TodoList'
+import AppLike from 'test/AppLike'
+import mockTodos from 'src/components/Todos/__mocks__/todos.mocks.json'
 
 const setup = todos => {
   return render(
     <AppLike>
-      <TodosList todos={todos} />
+      <TodoList todos={todos} />
     </AppLike>
   )
 }

@@ -5,9 +5,9 @@ import { render, waitFor } from '@testing-library/react'
 import { isQueryLoading } from 'cozy-client'
 
 // we import the not connected component version for testing
-import { Todos } from '.'
-import AppLike from '../../../test/AppLike'
-import mockTodos from './__mocks__/todos.mocks.json'
+import Todos from 'src/components/Todos'
+import AppLike from 'test/AppLike'
+import mockTodos from 'src/components/Todos/__mocks__/todos.mocks.json'
 
 jest.mock('cozy-client/dist/hooks/useQuery', () =>
   jest.fn(() => ({
