@@ -5,9 +5,9 @@ import { render, fireEvent, waitFor } from '@testing-library/react'
 import { createMockClient } from 'cozy-client'
 
 // we import the not connected component version for testing
-import { TodoAdd } from './TodoAdd'
-import AppLike from '../../../../test/AppLike'
-import mockTodos from '../__mocks__/todos.mocks.json'
+import TodoAdd from 'src/components/Todos/TodoAdd/TodoAdd'
+import AppLike from 'test/AppLike'
+import mockTodos from 'src/components/Todos/__mocks__/todos.mocks.json'
 
 const targetValue = value => ({
   target: {

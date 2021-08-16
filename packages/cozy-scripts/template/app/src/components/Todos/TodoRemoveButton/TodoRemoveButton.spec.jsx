@@ -4,9 +4,9 @@ import { render, fireEvent, waitFor } from '@testing-library/react'
 
 import { createMockClient } from 'cozy-client'
 
-import { TodoRemoveButton } from './TodoRemoveButton'
-import mockTodos from '../__mocks__/todos.mocks.json'
-import AppLike from '../../../../test/AppLike'
+import TodoRemoveButton from 'src/components/Todos/TodoRemoveButton/TodoRemoveButton'
+import AppLike from 'test/AppLike'
+import mockTodos from 'src/components/Todos/__mocks__/todos.mocks.json'
 
 describe('TodoRemoveButton component:', () => {
   const todo = mockTodos[0]
@@ -35,7 +35,7 @@ describe('TodoRemoveButton component:', () => {
 
   it('should handle isWorking correctly (display spinner)', () => {
     const { container } = setup()
-    const button = container.querySelector('button.todo-remove-button')
+    const button = container.querySelector('button[type="submit"]')
 
     expect(button).toBeDefined()
     expect(button.getAttribute('aria-busy')).toEqual(null)
@@ -47,7 +47,7 @@ describe('TodoRemoveButton component:', () => {
 
   it('should handle removeTodo correctly on button click', async () => {
     const { container } = setup()
-    const button = container.querySelector('button.todo-remove-button')
+    const button = container.querySelector('button[type="submit"]')
 
     expect(button).toBeDefined()
     fireEvent.click(button)
