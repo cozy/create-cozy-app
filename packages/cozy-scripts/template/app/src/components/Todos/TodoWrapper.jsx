@@ -7,7 +7,7 @@ import { getAllTodos } from 'src/utils/queries'
 import TodoAdd from 'src/components/Todos/TodoAdd/TodoAdd'
 import TodoList from 'src/components/Todos/TodoList/TodoList'
 
-export const Todos = () => {
+export const TodoWrapper = () => {
   const { data, ...rest } = useQuery(
     getAllTodos.definition,
     getAllTodos.options
@@ -23,4 +23,4 @@ export const Todos = () => {
   )
 }
 
-export default Todos
+export default TodoWrapper

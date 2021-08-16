@@ -5,7 +5,7 @@ import { render, waitFor } from '@testing-library/react'
 import { isQueryLoading } from 'cozy-client'
 
 // we import the not connected component version for testing
-import Todos from 'src/components/Todos'
+import TodoWrapper from 'src/components/Todos/TodoWrapper'
 import AppLike from 'test/AppLike'
 import mockTodos from 'src/components/Todos/__mocks__/todos.mocks.json'
 
@@ -23,7 +23,7 @@ const setup = (isLoading = true) => {
   isQueryLoading.mockReturnValue(isLoading)
   return render(
     <AppLike>
-      <Todos />
+      <TodoWrapper />
     </AppLike>
   )
 }
