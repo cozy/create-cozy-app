@@ -112,6 +112,9 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   const templateManifest = requireFileAsString(
     path.join(templatePath, 'manifest.webapp')
   )
+  const templateManifestJSON = requireFileAsString(
+    path.join(templatePath, 'manifest.json')
+  )
   const templateContributing = requireFileAsString(
     path.join(templatePath, 'CONTRIBUTING.md')
   )
@@ -148,6 +151,7 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   // replace data in all templates
   const newPkg = replaceDataIn(JSON.stringify(templatePackage, null, 2))
   const newManifest = replaceDataIn(templateManifest)
+  const newManifestJSON = replaceDataIn(templateManifestJSON)
   const newReadme = replaceDataIn(templateReadme)
   const newContributing = replaceDataIn(templateContributing)
   const newTravisYaml = replaceDataIn(templateTravisYaml)
@@ -173,6 +177,11 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
   console.log(`${colorize.cyan('package.json')} copied.`)
   fs.writeFileSync(path.join(appPath, 'manifest.webapp'), newManifest)
   console.log(`${colorize.cyan('manifest.webapp')} copied.`)
+  fs.writeFileSync(
+    path.join(appPath, 'src', 'targets', 'vendor', 'assets', 'manifest.json'),
+    newManifestJSON
+  )
+  console.log(`${colorize.cyan('manifest.json')} copied.`)
   fs.writeFileSync(path.join(appPath, 'README.md'), newReadme)
   console.log(`${colorize.cyan('README.md')} copied.`)
   fs.writeFileSync(path.join(appPath, 'CONTRIBUTING.md'), newContributing)

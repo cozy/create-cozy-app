@@ -30,7 +30,7 @@ const program = new commander.Command(pkg.name)
   })
   .option('--verbose', 'print additional logs')
   .option(
-    '--scripts-source <scritps-source>',
+    '--scripts-source <scripts-source>',
     'use a specific package of scripts package (see --help)'
   )
   .on('--help', () => {
@@ -182,7 +182,7 @@ function ensureProjectFolder(folderPath) {
 }
 
 function bootstrapApp(rootPath, appName, cliOptions) {
-  // chose the correct scritps package
+  // chose the correct scripts package
   let scriptsPkgName = 'cozy-scripts'
   // the loading spinner reference
   let installingSpinner
