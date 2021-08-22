@@ -111,6 +111,7 @@ Array [
   "src/targets/mobile/DOCS.md",
   "src/targets/mobile/config.xml",
   "src/targets/vendor/assets/icon.svg",
+  "src/targets/vendor/assets/manifest.json",
   "src/utils/bar.js",
   "src/utils/client.js",
   "src/utils/queries.js",
