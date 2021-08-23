@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.13.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.12.0...cozy-scripts@5.13.0) (2021-08-23)
+
+
+### Features
+
+* Add manifest.json to template ([10b0849](https://github.com/cozy/create-cozy-app/commit/10b0849))
+
+
+
+
+
 # [5.12.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.11.0...cozy-scripts@5.12.0) (2021-08-17)
 
 
