@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.13.0...cozy-scripts@6.0.0) (2021-10-01)
+
+
+### Features
+
+* Bump eslint from v5 to v7 ([16d8ef2](https://github.com/cozy/create-cozy-app/commit/16d8ef2))
+
+
+### BREAKING CHANGES
+
+* this will introduce linting errors in code that was previously error-free. Please refer to https://eslint.org/docs/user-guide/migrating-to-6.0.0 and https://eslint.org/docs/user-guide/migrating-to-7.0.0 for in depth information
+
+
+
+
+
 # [5.13.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.12.0...cozy-scripts@5.13.0) (2021-08-23)
 
 
