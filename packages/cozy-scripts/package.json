@@ -93,6 +93,7 @@
     "template/app",
     "template/.travis.yml",
     "template/CONTRIBUTING.md",
+    "template/manifest.json",
     "template/manifest.webapp",
     "template/package.json",
     "template/README.md",
