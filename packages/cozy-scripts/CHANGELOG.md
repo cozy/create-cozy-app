@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.0.0...cozy-scripts@6.0.1) (2021-10-20)
+
+
+### Bug Fixes
+
+* Added manifest.json path to package.json ([a5b29db](https://github.com/cozy/create-cozy-app/commit/a5b29db))
+
+
+
+
+
 # [6.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@5.13.0...cozy-scripts@6.0.0) (2021-10-01)
 
 
