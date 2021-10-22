@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.0.1...cozy-scripts@6.1.0) (2021-10-22)
+
+
+### Features
+
+* Update cozy-app-publish from 0.25 to 0.27 ([7ae8564](https://github.com/cozy/create-cozy-app/commit/7ae8564))
+
+
+
+
+
 ## [6.0.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.0.0...cozy-scripts@6.0.1) (2021-10-20)
 
 
