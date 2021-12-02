@@ -210,7 +210,7 @@ This config will provide a separate config to build app services using [Webpack 
 In this case, all services files (`.js` files in the `/src/targets/services/` folder) will be built using this separate webpack config.
 
 This config will:
-- use `__mergeStrategy` to drive the [`webpack-merge` strategy](docs/webpack-merge-strategy.md):
+- use `__mergeStrategy` to drive the [`webpack-merge` strategy](./webpack-merge-strategies.md):
     - disable smart merging
     - use the `replace` mode `plugins`, `output`, `entry`, `optimization` and `module`
 - define as webpack entry an array of all `.js` files contained in `/src/target/services` folder
