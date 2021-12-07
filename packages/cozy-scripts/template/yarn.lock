@@ -3588,10 +3588,10 @@ cozy-release@1.10.0:
   dependencies:
     exec-sh "0.3.2"
 
-cozy-scripts@5.11.0:
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-5.11.0.tgz#51750b332f2a48f10144f287de7c079021f96ad6"
-  integrity sha512-pSiM/3YTBtJcaPuOcvuHfWJRKePhevajUNJKsSl/n8Xb8k+jiU5ShMOFA6NajE4r24jqB7YI3NohOqz52/Lr/Q==
+cozy-scripts@5.13.0:
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-5.13.0.tgz#a7f18dff151ebdc11ef9cb71b6d641a17e90d20a"
+  integrity sha512-2Z9cnliIxnRh5hcnpe6nIfHOxGNSNUlEWa9Q607PNUPmvMj6OP2xAYKg5knyc4RjtNBPafbsJgaGdtf+Rj0EoQ==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/polyfill" "^7.10.4"
@@ -11255,9 +11255,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
