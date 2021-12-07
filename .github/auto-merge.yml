@@ -5,3 +5,5 @@ requiredLabels:
 reportStatus: true
 blockingChecks:
   status: 'pending'
+mergeMethod: rebase
+deleteBranchAfterMerge: true
