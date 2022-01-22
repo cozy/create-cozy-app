@@ -3588,10 +3588,10 @@ cozy-release@1.10.0:
   dependencies:
     exec-sh "0.3.2"
 
-cozy-scripts@5.11.0:
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-5.11.0.tgz#51750b332f2a48f10144f287de7c079021f96ad6"
-  integrity sha512-pSiM/3YTBtJcaPuOcvuHfWJRKePhevajUNJKsSl/n8Xb8k+jiU5ShMOFA6NajE4r24jqB7YI3NohOqz52/Lr/Q==
+cozy-scripts@5.13.0:
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-5.13.0.tgz#a7f18dff151ebdc11ef9cb71b6d641a17e90d20a"
+  integrity sha512-2Z9cnliIxnRh5hcnpe6nIfHOxGNSNUlEWa9Q607PNUPmvMj6OP2xAYKg5knyc4RjtNBPafbsJgaGdtf+Rj0EoQ==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/polyfill" "^7.10.4"
@@ -8069,9 +8069,9 @@ nan@^2.12.1:
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
 nanoid@^3.1.23:
-  version "3.1.25"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.25.tgz#09ca32747c0e543f0e1814b7d3793477f9c8e152"
-  integrity sha512-rdwtIXaXCLFAQbnfqDRnI6jaRHp9fTcYBjtFKE8eezcZ7LuLjhUaQGNeMXf1HmRoCH32CLz6XwX0TtxEOS/A3Q==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
+  integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
 
 nanomatch@^1.2.1, nanomatch@^1.2.9:
   version "1.2.13"
