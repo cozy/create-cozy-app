@@ -3588,10 +3588,10 @@ cozy-release@1.10.0:
   dependencies:
     exec-sh "0.3.2"
 
-cozy-scripts@5.11.0:
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-5.11.0.tgz#51750b332f2a48f10144f287de7c079021f96ad6"
-  integrity sha512-pSiM/3YTBtJcaPuOcvuHfWJRKePhevajUNJKsSl/n8Xb8k+jiU5ShMOFA6NajE4r24jqB7YI3NohOqz52/Lr/Q==
+cozy-scripts@5.13.0:
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-5.13.0.tgz#a7f18dff151ebdc11ef9cb71b6d641a17e90d20a"
+  integrity sha512-2Z9cnliIxnRh5hcnpe6nIfHOxGNSNUlEWa9Q607PNUPmvMj6OP2xAYKg5knyc4RjtNBPafbsJgaGdtf+Rj0EoQ==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/polyfill" "^7.10.4"
@@ -5325,9 +5325,9 @@ flush-write-stream@^1.0.0:
     readable-stream "^2.3.6"
 
 follow-redirects@^1.0.0:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.1.tgz#d9114ded0a1cfdd334e164e6662ad02bfd91ff43"
-  integrity sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==
+  version "1.14.7"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
+  integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
 
 for-each@^0.3.3:
   version "0.3.3"
