@@ -1,32 +1,23 @@
 'use strict'
 
 const { eslintFix } = require('./webpack.vars')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const cozyApp = require('eslint-config-cozy-app')
+const cozyAppReact = require('eslint-config-cozy-app/react')
+
+const options = {
+  emitWarning: true,
+  baseConfig: cozyApp,
+  extensions: ['js', 'ts'],
+  fix: eslintFix
+}
+
+const reactOptions = {
+  ...options,
+  baseConfig: cozyAppReact,
+  extension: ['jsx', 'tsx']
+}
 
 module.exports = {
-  module: {
-    rules: [
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        loader: require.resolve('eslint-loader'),
-        exclude: /node_modules/,
-        options: {
-          extends: ['cozy-app'],
-          fix: eslintFix,
-          emitWarning: true
-        }
-      },
-      {
-        enforce: 'pre',
-        test: /\.jsx$/,
-        loader: require.resolve('eslint-loader'),
-        exclude: /node_modules/,
-        options: {
-          extends: ['cozy-app/react'],
-          fix: eslintFix,
-          emitWarning: true
-        }
-      }
-    ]
-  }
+  plugins: [new ESLintPlugin(options), new ESLintPlugin(reactOptions)]
 }

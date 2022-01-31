@@ -1,22 +1,25 @@
 'use strict'
 
 const CopyPlugin = require('copy-webpack-plugin')
-const SvgoInstance = require('svgo')
+const { optimize } = require('svgo')
 const paths = require('../utils/paths')
 const fs = require('fs')
 
-const svgo = new SvgoInstance({
+const svgoOptions = {
   plugins: [
+    { name: 'removeDimensions', active: true },
     {
-      removeDimensions: true,
-      // inline styles are blocked by Cozy CSPs
-      inlineStyles: {
+      name: 'inlineStyles',
+      params: {
         onlyMatchedOnce: false
-      },
-      removeViewBox: false
+      }
+    },
+    {
+      name: 'removeViewBox',
+      active: false
     }
   ]
-})
+}
 
 let iconName
 try {
@@ -29,7 +32,8 @@ try {
 
 function optimizeSVGIcon(buffer, path) {
   if (iconName && path.match(new RegExp(`[^/]*/${iconName}`))) {
-    return svgo.optimize(buffer).then(resp => resp.data)
+    const result = optimize(buffer, svgoOptions)
+    return result.data
   } else {
     return buffer
   }

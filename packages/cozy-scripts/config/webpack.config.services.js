@@ -5,6 +5,8 @@ const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
 const { eslintFix, getFilename, target } = require('./webpack.vars')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const cozyApp = require('eslint-config-cozy-app')
 
 const servicesFolder = paths.appServicesFolder()
 const servicesPaths = fs.existsSync(servicesFolder)
@@ -42,17 +44,6 @@ const config = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.js$/,
-        loader: require.resolve('eslint-loader'),
-        exclude: /node_modules/,
-        options: {
-          extends: ['cozy-app'],
-          fix: eslintFix,
-          emitWarning: true
-        }
-      },
-      {
         test: /\.js$/,
         exclude: /(node_modules|cozy-(bar|client-js))/,
         loader: require.resolve('babel-loader'),
@@ -67,6 +58,12 @@ const config = {
   plugins: [
     new webpack.DefinePlugin({
       __TARGET__: JSON.stringify('services')
+    }),
+    new ESLintPlugin({
+      emitWarning: true,
+      baseConfig: cozyApp,
+      extensions: ['js'],
+      fix: eslintFix
     })
   ]
 }
