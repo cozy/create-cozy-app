@@ -15,8 +15,8 @@
 	},
 	"devDependencies": {
 		"cozy-ui": "^33.7.0",
-		"eslint-config-cozy-app": "1.1.8",
-		"jest": "23.6.0",
+		"eslint-config-cozy-app": "^4.0.0",
+		"jest": "^27.5.1",
 		"lerna": "3.11.0",
 		"lerna-changelog": "0.8.2",
 		"stylus": "^0.54.7"
