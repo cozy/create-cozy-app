@@ -3,6 +3,7 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const { useHotReload, devtool } = require('./webpack.vars')
+const bar = require('cozy-bar/package.json')
 
 let plugins = [
   new webpack.DefinePlugin({
@@ -24,16 +25,21 @@ const stackProvidedLibsConfig = {
       'cozy.client': 'cozy-client-js/dist/cozy-client.min.js'
     })
   ],
-  module: {
-    rules: [
-      {
-        test: /cozy-bar(\/|\\)dist(\/|\\)cozy-bar\.min\.js$/,
-        // Automatically import the CSS if the JS is imported.
-        // imports-loader@0.8.0 works but imports-loader@1.0.0 does not
-        loader: 'imports-loader?css=./cozy-bar.min.css'
+  // cozy-bar v8 will throw when trying to resolve cozy-bar.min.css because it doesn't exist in this version
+  ...(bar.version[0] < 8
+    ? {
+        module: {
+          rules: [
+            {
+              test: /cozy-bar(\/|\\)dist(\/|\\)cozy-bar\.min\.js$/,
+              // Automatically import the CSS if the JS is imported.
+              // imports-loader@0.8.0 works but imports-loader@1.0.0 does not
+              loader: 'imports-loader?css=./cozy-bar.min.css'
+            }
+          ]
+        }
       }
-    ]
-  }
+    : {})
 }
 
 let output = {}
