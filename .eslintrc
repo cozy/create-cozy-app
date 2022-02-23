@@ -1,0 +1,6 @@
+{
+    "extends": ["./packages/cozy-scripts/.eslintrc"],
+    "rules": {
+      "no-console": 0
+    }
+}

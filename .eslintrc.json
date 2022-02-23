@@ -1,6 +1,0 @@
-{
-    "extends": ["cozy-app"],
-    "rules": {
-      "no-console": 0
-    }
-}
