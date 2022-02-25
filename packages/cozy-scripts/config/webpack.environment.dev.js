@@ -3,7 +3,13 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const { useHotReload, devtool } = require('./webpack.vars')
-const bar = require('cozy-bar/package.json')
+let bar
+
+try {
+  bar = require('cozy-bar/package.json')
+} catch {
+  bar = null
+}
 
 let plugins = [
   new webpack.DefinePlugin({
@@ -20,13 +26,15 @@ const stackProvidedLibsConfig = {
     new webpack.DefinePlugin({
       __STACK_ASSETS__: false
     }),
-    new webpack.ProvidePlugin({
-      'cozy.bar': 'cozy-bar/dist/cozy-bar.min.js',
-      'cozy.client': 'cozy-client-js/dist/cozy-client.min.js'
-    })
+    ...(bar && bar
+      ? new webpack.ProvidePlugin({
+          'cozy.bar': 'cozy-bar/dist/cozy-bar.min.js',
+          'cozy.client': 'cozy-client-js/dist/cozy-client.min.js'
+        })
+      : [])
   ],
   // cozy-bar v8 will throw when trying to resolve cozy-bar.min.css because it doesn't exist in this version
-  ...(bar.version[0] < 8
+  ...(bar && bar.version[0] < 8
     ? {
         module: {
           rules: [
