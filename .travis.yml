@@ -2,10 +2,7 @@ language: node_js
 node_js:
 - 16
 - 12
-cache:
-  yarn: true
-  directories:
-  - node_modules
+cache: false
 jobs:
   include:
   - stage: lint
