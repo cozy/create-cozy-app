@@ -21,33 +21,39 @@ let plugins = [
 // since it allows us to use in production the cozy.bar and cozy.client declared by the <script />
 // line injected by the stack, while in developement to have it "served" from
 // our node_modules
-const stackProvidedLibsConfig = {
+let stackProvidedLibsConfig = {
   plugins: [
     new webpack.DefinePlugin({
       __STACK_ASSETS__: false
     }),
-    ...(bar && bar
-      ? new webpack.ProvidePlugin({
-          'cozy.bar': 'cozy-bar/dist/cozy-bar.min.js',
-          'cozy.client': 'cozy-client-js/dist/cozy-client.min.js'
-        })
-      : [])
-  ],
+    new webpack.ProvidePlugin({
+      'cozy.client': 'cozy-client-js/dist/cozy-client.min.js'
+    })
+  ]
+}
+
+if (bar) {
+  const newProvidePlugin = new webpack.ProvidePlugin({
+    'cozy.bar': 'cozy-bar/dist/cozy-bar.min.js'
+  })
+  stackProvidedLibsConfig.plugins.push(newProvidePlugin)
+
   // cozy-bar v8 will throw when trying to resolve cozy-bar.min.css because it doesn't exist in this version
-  ...(bar && bar.version[0] < 8
-    ? {
-        module: {
-          rules: [
-            {
-              test: /cozy-bar(\/|\\)dist(\/|\\)cozy-bar\.min\.js$/,
-              // Automatically import the CSS if the JS is imported.
-              // imports-loader@0.8.0 works but imports-loader@1.0.0 does not
-              loader: 'imports-loader?css=./cozy-bar.min.css'
-            }
-          ]
-        }
+  if (bar.version[0] < 8) {
+    const newModule = {
+      module: {
+        rules: [
+          {
+            test: /cozy-bar(\/|\\)dist(\/|\\)cozy-bar\.min\.js$/,
+            // Automatically import the CSS if the JS is imported.
+            // imports-loader@0.8.0 works but imports-loader@1.0.0 does not
+            loader: 'imports-loader?css=./cozy-bar.min.css'
+          }
+        ]
       }
-    : {})
+    }
+    stackProvidedLibsConfig = { ...stackProvidedLibsConfig, ...newModule }
+  }
 }
 
 let output = {}
