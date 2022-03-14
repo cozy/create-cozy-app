@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.6](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.1.5...cozy-scripts@6.1.6) (2022-03-14)
+
+
+### Bug Fixes
+
+* Crashes in dev mode ([109d85d](https://github.com/cozy/create-cozy-app/commit/109d85d))
+
+
+
+
+
 ## [6.1.5](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.1.4...cozy-scripts@6.1.5) (2022-02-28)
 
 
