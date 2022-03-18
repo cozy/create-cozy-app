@@ -54,6 +54,7 @@ module.exports = {
   appPath: () => resolveApp(),
   appBuild: () => resolveAppBuild(),
   appServicesBuild: () => resolveAppBuild('services'),
+  appServicesWorkersBuild: () => resolveAppBuild('serviceWorker'),
   appBuildAssetsJson: () => resolveAppBuild('assets/json'),
   appManifest: () => resolveAppManifest(),
   appREADME: () => resolveApp('README.md'),
@@ -75,6 +76,8 @@ module.exports = {
   appPublicIndex: () => resolveSrcWithExtension('targets/public/index'),
   // for services
   appServicesFolder: () => resolveAppSrc('targets/services'),
+  // for services-workers
+  appServicesWorkersFolder: () => resolveAppSrc('serviceWorker'),
   // for mobile
   appMobileHtmlTemplate: () => resolveAppSrc('targets/mobile/index.ejs'),
   appMobileIndex: () => resolveSrcWithExtension('targets/mobile/index'),

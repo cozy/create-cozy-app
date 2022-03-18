@@ -20,6 +20,7 @@ const configs = [
   require('./webpack.config.duplicates'),
   addAnalyzer ? require('./webpack.config.analyzer') : null,
   require('./webpack.config.services'),
+  require('./webpack.config.workers'),
   require(`./webpack.target.${target}`)
 ]
 
