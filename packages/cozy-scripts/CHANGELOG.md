@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.2.2...cozy-scripts@6.3.0) (2022-03-23)
+
+
+### Features
+
+* **scripts:** start allows hosts from nip.io ([641b843](https://github.com/cozy/create-cozy-app/commit/641b843))
+
+
+
+
+
 ## [6.2.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.2.1...cozy-scripts@6.2.2) (2022-03-23)
 
 
