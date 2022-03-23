@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.2.1...cozy-scripts@6.2.2) (2022-03-23)
+
+
+### Bug Fixes
+
+* **service-worker:** don't build service-workers when no service-worker found ([578bbde](https://github.com/cozy/create-cozy-app/commit/578bbde))
+
+
+
+
+
 ## [6.2.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.2.0...cozy-scripts@6.2.1) (2022-03-23)
 
 **Note:** Version bump only for package cozy-scripts
