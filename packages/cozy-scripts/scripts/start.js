@@ -73,7 +73,7 @@ module.exports = buildOptions => {
     // Necessary since we use the stack to serve our pages; otherwise
     // we have an "Invalid Host Header" error, and the hot reload does
     // not work
-    allowedHosts: ['.cozy.tools', '.cozy.localhost'],
+    allowedHosts: ['.cozy.tools', '.cozy.localhost', '.nip.io'],
 
     hot: useHotReload,
     host,
