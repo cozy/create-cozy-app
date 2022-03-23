@@ -4,7 +4,7 @@ const path = require('path')
 const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
-const { getFilename } = require('./webpack.vars')
+const { getFilename, target } = require('./webpack.vars')
 
 const servicesWorkersFolder = paths.appServicesWorkersFolder()
 const servicesWorkersPaths = fs.existsSync(servicesWorkersFolder)
@@ -62,5 +62,11 @@ const config = {
   ]
 }
 
+/* We don't build services workers if no services workers and if on mobile build */
+const addServicesWorkersConfig =
+  target === 'browser' && Object.keys(servicesWorkersEntries).length
+
 // only for browser target (servicesWorkers are usable only on cozy-stack)
-module.exports = { multiple: { servicesWorkers: config } }
+module.exports = addServicesWorkersConfig
+  ? { multiple: { servicesWorkers: config } }
+  : {}
