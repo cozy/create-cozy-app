@@ -65,11 +65,14 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
+      filename: `${getFilename()}${production ? '.min' : ''}.css`,
+      chunkFilename: `${getFilename()}${production ? '.[id].min' : ''}.css`
+    }),
+    new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional.
-      // Slashes in filename are replaced otherwise it causes problemes since the stylesheet
-      // is generated in a nested directory, and it prevents fonts from loading as
-      // fonts are expected to be in the same directory as the CSS stylesheet.
+      // Slashes in filename are replaced since mobile needs
+      // fonts to be in the same directory as the CSS stylesheet.
       filename: `${getFilename().replace(/\//g, '-')}${
         production ? '.min' : ''
       }.css`,
