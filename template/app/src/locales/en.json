@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "todos": "Todos",
+    "hello_nav_2": "Hello 1",
+    "hello_nav_3": "Hello 2"
+  },
+  "todoAdd": {
+    "title": "Add a new Todo:",
+    "label": "Todo name:",
+    "button": {
+      "label": "Add"
+    }
+  },
+  "todoList": {
+    "title": "Todos list:"
+  },
+  "todoRemoveButton": {
+    "label": "Delete"
+  }
+}

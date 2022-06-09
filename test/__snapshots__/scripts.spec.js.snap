@@ -1,0 +1,652 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App from cozy-scripts should correctly use the webpack-merge strategy if a __mergeStrategy property is found 1`] = `
+Array [
+  Object {
+    "module": Object {
+      "rules": Array [
+        Object {
+          "test": Object {},
+          "use": Array [
+            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+          ],
+        },
+        Object {
+          "exclude": Object {},
+          "test": Object {},
+          "use": Array [
+            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
+            Object {
+              "loader": "css-loader",
+              "options": Object {
+                "importLoaders": 1,
+                "localIdentName": "[local]--[hash:base64:5]",
+                "modules": true,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "postcss-loader",
+              "options": Object {
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": "stylus-loader",
+              "options": Object {
+                "preferPathResolver": "webpack",
+              },
+            },
+          ],
+        },
+      ],
+    },
+    "resolve": Object {
+      "extensions": Array [
+        ".styl",
+      ],
+    },
+  },
+]
+`;
+
+exports[`App from cozy-scripts should have the correct files outline 1`] = `
+Array [
+  ".editorconfig",
+  ".eslintrc.json",
+  ".github/ISSUE_TEMPLATE",
+  ".github/PULL_REQUEST_TEMPLATE",
+  ".gitignore",
+  ".stylintrc",
+  ".travis.yml",
+  "CONTRIBUTING.md",
+  "LICENSE",
+  "README.md",
+  "babel.config.js",
+  "jest.config.js",
+  "manifest.webapp",
+  "node_modules",
+  "package.json",
+  "renovate.json",
+  "src/assets/icons/icon-bullet-point.svg",
+  "src/components/App.jsx",
+  "src/components/HelloViews/Hello1.jsx",
+  "src/components/HelloViews/Hello1.spec.jsx",
+  "src/components/HelloViews/Hello2.jsx",
+  "src/components/HelloViews/Hello2.spec.jsx",
+  "src/components/Sidebar.jsx",
+  "src/components/Sidebar.spec.jsx",
+  "src/components/Todos/TodoAdd/TodoAdd.jsx",
+  "src/components/Todos/TodoAdd/TodoAdd.spec.jsx",
+  "src/components/Todos/TodoList/TodoList.jsx",
+  "src/components/Todos/TodoList/TodoList.spec.jsx",
+  "src/components/Todos/TodoRemoveButton/TodoRemoveButton.jsx",
+  "src/components/Todos/TodoRemoveButton/TodoRemoveButton.spec.jsx",
+  "src/components/Todos/TodoWrapper.jsx",
+  "src/components/Todos/TodoWrapper.spec.jsx",
+  "src/components/Todos/__mocks__/todos.mocks.json",
+  "src/doctypes/index.js",
+  "src/doctypes/todos.js",
+  "src/locales/en.json",
+  "src/locales/fr.json",
+  "src/serviceWorker/service-worker.js",
+  "src/styles/index.styl",
+  "src/targets/browser/index.ejs",
+  "src/targets/browser/index.jsx",
+  "src/targets/browser/setupApp.jsx",
+  "src/targets/intents/.gitkeep",
+  "src/targets/mobile/DOCS.md",
+  "src/targets/mobile/config.xml",
+  "src/targets/vendor/assets/icon.svg",
+  "src/targets/vendor/assets/manifest.json",
+  "src/utils/bar.js",
+  "src/utils/client.js",
+  "src/utils/queries.js",
+  "test/AppLike.jsx",
+  "test/__mocks__/fileMock.js",
+  "test/jestLib/setup.js",
+  "test/lib/I18n.js",
+  "yarn.lock",
+]
+`;
+
+exports[`App from cozy-scripts should return two separated configs if services config is used (also test app.config.js usage) 1`] = `
+Array [
+  Object {
+    "bail": true,
+    "devtool": "cheap-module-eval-source-map",
+    "entry": Object {
+      "app": Array [
+        ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/@babel/polyfill/lib/index.js",
+        ".tmp_test/test-app/node_modules/cozy-scripts/utils/reactExposer.js",
+        ".tmp_test/test-app/src/targets/browser/index.jsx",
+      ],
+    },
+    "externals": Array [
+      "cozy",
+    ],
+    "mode": "development",
+    "module": Object {
+      "noParse": Array [
+        Object {},
+      ],
+      "rules": Array [
+        Object {
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
+          "options": Object {
+            "cacheDirectory": "node_modules/.cache/babel-loader/js",
+            "presets": Array [
+              Array [
+                "cozy-app",
+                Object {
+                  "react": false,
+                },
+              ],
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "test": Object {},
+          "use": Array [
+            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
+              "options": Object {
+                "importLoaders": 1,
+              },
+            },
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+          ],
+        },
+        Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+          },
+          "test": Object {},
+        },
+        Object {
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
+          "options": Object {
+            "cacheDirectory": "node_modules/.cache/babel-loader/react",
+            "plugins": Array [],
+            "presets": Array [
+              "cozy-app",
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
+          "options": Object {
+            "emitWarning": true,
+            "extends": Array [
+              "cozy-app",
+            ],
+            "fix": false,
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
+          "options": Object {
+            "emitWarning": true,
+            "extends": Array [
+              "cozy-app/react",
+            ],
+            "fix": false,
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "test": Object {},
+          "use": Array [
+            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
+              "options": Object {
+                "importLoaders": 1,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "preferPathResolver": "webpack",
+                "use": Array [
+                  null,
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "include": Object {},
+          "test": Object {},
+          "use": Array [
+            ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/mini-css-extract-plugin/dist/loader.js",
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/css-loader/dist/cjs.js",
+              "options": Object {
+                "importLoaders": 1,
+                "localIdentName": "[local]--[hash:base64:5]",
+                "modules": true,
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/postcss-loader/src/index.js",
+              "options": Object {
+                "ident": "postcss",
+                "sourceMap": true,
+              },
+            },
+            Object {
+              "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/stylus-loader/index.js",
+              "options": Object {
+                "use": Array [
+                  null,
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/svg-sprite-loader/lib/loader.js",
+          "options": Object {
+            "symbolId": "[name]_[hash]",
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+            "outputPath": "img/",
+            "publicPath": "/img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "include": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/file-loader/dist/cjs.js",
+          "options": Object {
+            "name": "[name].[ext]",
+            "outputPath": "public/img",
+            "publicPath": "/public/img",
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/json-loader/index.js",
+          "test": Object {},
+        },
+        Object {
+          "loader": "imports-loader?css=./cozy-bar.min.css",
+          "test": Object {},
+        },
+      ],
+    },
+    "optimization": Object {
+      "removeAvailableModules": false,
+      "removeEmptyChunks": false,
+      "splitChunks": Object {
+        "cacheGroups": Object {
+          "vendors": Object {
+            "name": "vendors",
+            "test": Object {},
+          },
+        },
+      },
+    },
+    "output": Object {
+      "filename": "[name]/test-app.js",
+      "path": ".tmp_test/test-app/build",
+      "pathinfo": false,
+    },
+    "plugins": Array [
+      Object {
+        "options": Object {
+          "chunkFilename": "[name]-test-app.css",
+          "filename": "[name]-test-app.css",
+        },
+      },
+      Object {
+        "plugins": Array [
+          null,
+          null,
+          null,
+        ],
+        "test": Object {},
+      },
+      Object {
+        "definitions": Object {
+          "__ENABLED_FLAGS__": "[]",
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "rules": Object {},
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
+      Object {
+        "config": Object {
+          "plainSprite": false,
+          "spriteAttrs": Object {},
+        },
+        "rules": Object {},
+        "svgCompiler": Object {
+          "config": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "rules": Object {
+            "rules": Array [
+              Object {
+                "test": Object {},
+                "value": "sprite.svg",
+              },
+            ],
+          },
+          "symbols": Array [],
+        },
+      },
+      Object {},
+      Object {},
+      Object {
+        "modulesCount": 500,
+        "profile": false,
+        "showActiveModules": true,
+        "showEntries": false,
+        "showModules": true,
+      },
+      Object {
+        "options": Object {
+          "emitError": false,
+          "exclude": null,
+          "showHelp": true,
+          "strict": true,
+          "verbose": false,
+        },
+      },
+      Object {
+        "options": Object {
+          "cache": true,
+          "chunks": Array [
+            "vendors",
+            "app",
+          ],
+          "chunksSortMode": "auto",
+          "compile": true,
+          "excludeChunks": Array [],
+          "favicon": false,
+          "filename": "index.html",
+          "hash": false,
+          "inject": false,
+          "meta": Object {},
+          "minify": Object {
+            "collapseWhitespace": true,
+          },
+          "showErrors": true,
+          "template": ".tmp_test/test-app/src/targets/browser/index.ejs",
+          "title": "test-app",
+          "xhtml": false,
+        },
+      },
+      Object {
+        "options": Object {
+          "async": Object {
+            "test": Array [],
+          },
+          "custom": Array [],
+          "defaultAttribute": "defer",
+          "defer": Object {
+            "test": Array [],
+          },
+          "inline": Object {
+            "test": Array [],
+          },
+          "module": Object {
+            "test": Array [],
+          },
+          "prefetch": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "preload": Object {
+            "chunks": "initial",
+            "test": Array [],
+          },
+          "removeInlinedAssets": true,
+          "sync": Object {
+            "test": Array [],
+          },
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__TARGET__": "\\"browser\\"",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__DEVELOPMENT__": true,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__STACK_ASSETS__": false,
+        },
+      },
+      Object {
+        "definitions": Object {
+          "cozy.bar": "cozy-bar/dist/cozy-bar.min.js",
+          "cozy.client": "cozy-client-js/dist/cozy-client.min.js",
+        },
+      },
+    ],
+    "resolve": Object {
+      "alias": Object {
+        "src": ".tmp_test/test-app/src",
+        "test": ".tmp_test/test-app/test",
+      },
+      "extensions": Array [
+        ".ts",
+        ".tsx",
+        ".js",
+        ".json",
+        ".css",
+        ".jsx",
+        ".styl",
+      ],
+      "modules": Array [
+        ".tmp_test/test-app/src",
+        "node_modules",
+        ".tmp_test/test-app/node_modules",
+      ],
+      "symlinks": false,
+    },
+  },
+  Object {
+    "bail": true,
+    "devtool": false,
+    "entry": Object {
+      "testservice": ".tmp_test/test-app/src/targets/services/testservice.js",
+    },
+    "externals": Array [],
+    "mode": "development",
+    "module": Object {
+      "rules": Array [
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
+          "options": Object {
+            "emitWarning": true,
+            "extends": Array [
+              "cozy-app",
+            ],
+            "fix": false,
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
+          "options": Object {
+            "babelrc": false,
+            "cacheDirectory": "node_modules/.cache/babel-loader/node",
+            "presets": Array [
+              Array [
+                "cozy-app",
+                Object {
+                  "node": true,
+                  "react": false,
+                },
+              ],
+            ],
+          },
+          "test": Object {},
+        },
+        Object {
+          "enforce": "pre",
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/eslint-loader/index.js",
+          "options": Object {
+            "emitWarning": true,
+            "extends": Array [
+              "cozy-app",
+            ],
+            "fix": false,
+          },
+          "test": Object {},
+        },
+        Object {
+          "exclude": Object {},
+          "loader": ".tmp_test/test-app/node_modules/cozy-scripts/node_modules/babel-loader/lib/index.js",
+          "options": Object {
+            "babelrc": false,
+            "cacheDirectory": "node_modules/.cache/babel-loader/node",
+            "presets": Array [
+              Array [
+                "cozy-app",
+                Object {
+                  "node": true,
+                  "react": false,
+                },
+              ],
+            ],
+          },
+          "test": Object {},
+        },
+      ],
+    },
+    "optimization": Object {},
+    "output": Object {
+      "filename": "[name]/test-app.js",
+      "path": ".tmp_test/test-app/build/services",
+    },
+    "plugins": Array [
+      Object {
+        "definitions": Object {
+          "__TARGET__": "\\"services\\"",
+        },
+      },
+      Object {
+        "definitions": Object {
+          "__TARGET__": "\\"services\\"",
+        },
+      },
+    ],
+    "resolve": Object {
+      "alias": Object {
+        "src": ".tmp_test/test-app/src",
+        "test": ".tmp_test/test-app/test",
+      },
+      "extensions": Array [
+        ".ts",
+        ".tsx",
+        ".js",
+        ".json",
+        ".css",
+        ".jsx",
+        ".styl",
+      ],
+      "modules": Array [
+        ".tmp_test/test-app/src",
+        "node_modules",
+        ".tmp_test/test-app/node_modules",
+      ],
+      "symlinks": false,
+    },
+    "target": "node",
+  },
+]
+`;

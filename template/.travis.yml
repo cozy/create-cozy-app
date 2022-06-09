@@ -1,0 +1,46 @@
+language: node_js
+node_js:
+- '10'
+branches:
+  only:
+  - master
+env:
+  global:
+  # GITHUB_TOKEN for yarn deploy script
+  # to generate yours : travis encrypt GITHUB_TOKEN=<your_GITHUB_TOKEN> -r <USERNAME_GH>/<SLUG_GH> 
+  # REGISTRY_TOKEN for yarn cozyPublish script
+  # to generate yours : travis encrypt REGISTRY_TOKEN=<your_REGISTRY_TOKEN> -r <USERNAME_GH>/<SLUG_GH>
+  # N.B.: the --org option is needed only for public repositories
+cache:
+  yarn: true
+  directories:
+  - node_modules
+stages:
+  - prebuild
+  - build
+jobs:
+  include:
+    - name: 'Lint'
+      stage: 'prebuild'
+      script: yarn lint
+    - name: 'Tests'
+      stage: 'prebuild'
+      script: yarn test
+    - name: 'Build app'
+      stage: 'build'
+      script: yarn build
+      deploy:
+        - provider: script
+          repo: <USERNAME_GH>/<SLUG_GH>
+          skip-cleanup: true
+          # deploy the build on a build branch and publish to the Cozy registry
+          script: DEPLOY_BRANCH=build && yarn deploy && yarn cozyPublish
+          on:
+            branch: master
+        - provider: script
+          repo: <USERNAME_GH>/<SLUG_GH>
+          skip-cleanup: true
+          # publish stable or beta versions using Github Releases (git tag)
+          script: DEPLOY_BRANCH=build && yarn cozyPublish
+          on:
+            tags: true

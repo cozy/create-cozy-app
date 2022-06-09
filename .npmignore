@@ -1,0 +1,30 @@
+# NPM
+node_modules/
+template/node_modules/
+npm-debug.log
+template/npm-debug.log
+yarn-error.log
+template/yarn-error.log
+
+# Locales
+**/locales/*
+!**/locales/en.json
+
+
+# transifex
+.transifexrc
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+
+# Editors / IDEs
+.floo
+.flooignore

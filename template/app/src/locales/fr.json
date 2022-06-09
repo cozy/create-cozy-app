@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "todos": "Tâches",
+    "hello_nav_2": "Bonjour 1",
+    "hello_nav_3": "Bonjour 2"
+  },
+  "todoAdd": {
+    "title": "Ajouter une nouvelle tâche:",
+    "label": "Nom de la tâche:",
+    "button": {
+      "label": "Ajouter"
+    }
+  },
+  "todoList": {
+    "title": "Liste de tâches:"
+  },
+  "todoRemoveButton": {
+    "label": "Supprimer"
+  }
+}

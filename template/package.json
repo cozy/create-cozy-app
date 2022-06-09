@@ -1,0 +1,56 @@
+{
+  "name": "cozy-scripts-template",
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "yarn lint:js && yarn lint:styles",
+    "lint:js": "cs lint '{src,test}/**/*.{js,jsx}'",
+    "lint:styles": "stylint src/styles --config ./.stylintrc",
+    "prebuild": "yarn lint",
+    "build": "yarn build:browser",
+    "build:browser": "cs build --browser",
+    "build:mobile": "cs build --mobile",
+    "watch": "yarn watch:browser",
+    "watch:browser": "cs watch --browser",
+    "watch:mobile": "cs watch --mobile",
+    "start": "cs start --browser",
+    "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/<USERNAME_GH>/<SLUG_GH>.git}",
+    "test": "cs test --verbose --coverage",
+    "cozyPublish": "git fetch origin ${DEPLOY_BRANCH:-build}:${DEPLOY_BRANCH:-build} && cs publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})",
+    "stack:docker:dev": "cs stackDocker",
+    "stack:docker:prod": "cs stackDocker --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<USERNAME_GH>/<SLUG_GH>.git"
+  },
+  "author": "",
+  "contributors": [],
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/<USERNAME_GH>/<SLUG_GH>/issues"
+  },
+  "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
+  "devDependencies": {
+    "@testing-library/react": "11.2.7",
+    "babel-preset-cozy-app": "1.11.0",
+    "cozy-bar": "7.16.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.6",
+    "eslint": "5.9.0",
+    "eslint-config-cozy-app": "2.1.0",
+    "git-directory-deploy": "1.5.1",
+    "react-hot-loader": "4.13.0",
+    "react-test-renderer": "16.14.0",
+    "redux-mock-store": "1.5.4",
+    "stylint": "2.0.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "4",
+    "cozy-client": "24.0.0",
+    "cozy-scripts": "5.13.0",
+    "cozy-ui": "51.5.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-router-dom": "5.2.0"
+  }
+}

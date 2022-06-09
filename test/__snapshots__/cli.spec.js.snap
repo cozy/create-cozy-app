@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cozy-scripts (cs) CLI should build on \`build\` command with all passed options with production mode by default 1`] = `
+Object {
+  "cliArgs": Array [
+    "--browser",
+  ],
+  "mode": "production",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should call cozy-publish on \`publish\` command and pass remaining args to cozy-publish 1`] = `"cozy-publish --token aMockedReGIStrYToKeN"`;
+
+exports[`cozy-scripts (cs) CLI should call cozy-release on \`release\` command and pass remaining args to cozy-release 1`] = `"cozy-release patch 1.2.4"`;
+
+exports[`cozy-scripts (cs) CLI should call eslint on \`lint\` command and pass remaining args to eslint 1`] = `"eslint --fix {src,test}/**/*.{js,jsx}"`;
+
+exports[`cozy-scripts (cs) CLI should call jest on \`test\` command and pass remaining args to jest 1`] = `"jest --watch --runInBand --config undefile.js"`;
+
+exports[`cozy-scripts (cs) CLI should display an error message if the action/command is not recognize 1`] = `"cozy-scripts: unknown command nobodyKnowIt"`;
+
+exports[`cozy-scripts (cs) CLI should display an help message if no args passed 1`] = `"Use \`--help\` option to get more informations about cozy-scripts usage."`;
+
+exports[`cozy-scripts (cs) CLI should display the webpack config if option \`--show-config\` passed 1`] = `
+Object {
+  "cliArgs": Array [
+    "--browser",
+    "--show-config",
+  ],
+  "mode": "production",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should display the webpack config if option \`--show-config\` passed 2`] = `
+"{
+  \\"config\\": \\"Mocked config\\"
+}"
+`;
+
+exports[`cozy-scripts (cs) CLI should handle --analyzer option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--browser",
+    "--analyzer",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle --development option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--browser",
+    "--development",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle --production option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--browser",
+    "--production",
+  ],
+  "mode": "production",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle build directory path providing with --build-dir option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--build-dir",
+    "custom/app/buildHere",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle changing dev server host with --host option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--host",
+    "cozy.tools",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle changing dev server port with --port option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--port",
+    "9999",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle config path providing with --config option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--config",
+    "custom/app/app.config.js",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle debug mode with --debug option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--debug",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle eslint fix mode with --fix option 1`] = `"eslint --fix"`;
+
+exports[`cozy-scripts (cs) CLI should handle hot reload mode with --hot option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--hot",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle manifest path providing with --manifest option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--manifest",
+    "custom/app/manifest.webapp",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle mobile target with --mobile option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--mobile",
+  ],
+  "mode": "development",
+  "target": "mobile",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should handle src directory path providing with --src-dir option 1`] = `
+Object {
+  "cliArgs": Array [
+    "--src-dir",
+    "custom/app/src",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should run start script on \`start\` command with all passed options with development mode by default 1`] = `
+Object {
+  "cliArgs": Array [
+    "--stack",
+  ],
+  "mode": "development",
+  "stack": true,
+  "target": "browser",
+}
+`;
+
+exports[`cozy-scripts (cs) CLI should watch on \`watch\` command with all passed options with development mode by default 1`] = `
+Object {
+  "cliArgs": Array [
+    "--browser",
+  ],
+  "mode": "development",
+  "target": "browser",
+}
+`;
