@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.4](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.3...cozy-scripts@6.3.4) (2022-07-08)
+
+
+### Bug Fixes
+
+* Import dev cozy-bar in dev env ([7c3e22d](https://github.com/cozy/create-cozy-app/commit/7c3e22d))
+
+
+
+
+
 ## [6.3.3](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.2...cozy-scripts@6.3.3) (2022-06-03)
 
 **Note:** Version bump only for package cozy-scripts
