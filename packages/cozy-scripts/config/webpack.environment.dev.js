@@ -34,7 +34,7 @@ let stackProvidedLibsConfig = {
 
 if (bar) {
   const newProvidePlugin = new webpack.ProvidePlugin({
-    'cozy.bar': 'cozy-bar/dist/cozy-bar.min.js'
+    'cozy.bar': 'cozy-bar/dist/cozy-bar.js'
   })
   stackProvidedLibsConfig.plugins.push(newProvidePlugin)
 
@@ -44,10 +44,10 @@ if (bar) {
       module: {
         rules: [
           {
-            test: /cozy-bar(\/|\\)dist(\/|\\)cozy-bar\.min\.js$/,
+            test: /cozy-bar(\/|\\)dist(\/|\\)cozy-bar\.js$/,
             // Automatically import the CSS if the JS is imported.
             // imports-loader@0.8.0 works but imports-loader@1.0.0 does not
-            loader: 'imports-loader?css=./cozy-bar.min.css'
+            loader: 'imports-loader?css=./cozy-bar.css'
           }
         ]
       }
