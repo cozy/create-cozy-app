@@ -103,7 +103,6 @@ Array [
   "src/doctypes/todos.js",
   "src/locales/en.json",
   "src/locales/fr.json",
-  "src/serviceWorker/service-worker.js",
   "src/styles/index.styl",
   "src/targets/browser/index.ejs",
   "src/targets/browser/index.jsx",
