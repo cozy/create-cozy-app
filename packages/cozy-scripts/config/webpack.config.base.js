@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const webpack = require('webpack')
 const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -15,17 +16,29 @@ const {
 } = require('./webpack.vars')
 const production = environment === 'production'
 
+const mapToNodeModules = packages => {
+  const res = {}
+  packages.forEach(pkgName => {
+    res[pkgName] = path.resolve(paths.appSrc(), `../node_modules/${pkgName}`)
+  })
+  return res
+}
+
 module.exports = {
   resolve: {
     // It's important that node_modules here is kept relative so that
     // inner node_modules are checked before checking the app node_modules
     modules: [paths.appSrc(), 'node_modules', paths.appNodeModules()],
     extensions: ['.ts', '.tsx', '.js', '.json', '.css'],
-    // linked package will still be see as a node_modules package
+    // linked package will still be seen as a node_modules package
     symlinks: false,
     alias: {
       src: paths.appSrc(),
-      test: paths.appTest()
+      test: paths.appTest(),
+      // Resolving manually package that have multiple versions. They emit warnings with
+      // DuplicatePackageChecker plugin. We always use the node_modules version.
+      // https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin#resolving-duplicate-packages-in-your-bundle
+      ...mapToNodeModules(['@material-ui/core'])
     }
   },
   bail: true,
