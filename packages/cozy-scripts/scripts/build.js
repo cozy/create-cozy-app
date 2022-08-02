@@ -49,11 +49,11 @@ module.exports = (buildOptions, successCallback) => {
     }
 
     if (stats.hasErrors()) {
-      const errors = flatMap(stats.stats, stat => stat.compilation.errors)
+      const errors = flatMap(stats, stat => stat.compilation.errors)
       for (const error of errors) {
         console.error(error)
       }
-      throw new Error(stats.stats[0])
+      throw new Error(stats[0])
     }
 
     if (isTestMode) successCallback()
