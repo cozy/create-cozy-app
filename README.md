@@ -27,14 +27,14 @@
 
 This tool can be run as an installed CLI or by using `yarn create`, see below for more information.
 
-By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/cozy/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on React. 
+By default, `create-cozy-app` will use the [`cozy-scripts`](https://github.com/cozy/create-cozy-app/tree/master/packages/cozy-scripts) scripts bundle to build your app based on React.
 
 __You can find a complete tutorial about creating a Cozy application using `create-cozy-app` in [the official documentation (docs.cozy.io)](https://docs.cozy.io/en/tutorials/app/).__
 
 
 #### Requirements
 
- - NodeJS version 12+
+ - NodeJS version 16+
  - [Yarn](https://yarnpkg.com): a NodeJS package manager, like `npm`;
  - a running [Cozy development environment](https://docs.cozy.io/en/tutorials/app/#install-the-development-environment)
 
@@ -65,7 +65,7 @@ the latest version of the CLI.
 
 </details>
 
-It will 
+It will
 
 * download dependencies (it may take a while, you can go grab a coffee)
 * ask you a few questions
