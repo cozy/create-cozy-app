@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.9](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.8...cozy-scripts@6.3.9) (2022-08-29)
+
+
+### Bug Fixes
+
+* **build:** Handling errors stats fix ([7f77b27](https://github.com/cozy/create-cozy-app/commit/7f77b27))
+
+
+
+
+
 ## [6.3.8](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.7...cozy-scripts@6.3.8) (2022-07-25)
 
 **Note:** Version bump only for package cozy-scripts
