@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.10](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.9...cozy-scripts@6.3.10) (2022-08-30)
+
+
+### Bug Fixes
+
+* Merge locales and langs entry in manifest ([f28281c](https://github.com/cozy/create-cozy-app/commit/f28281c))
+
+
+
+
+
 ## [6.3.9](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.8...cozy-scripts@6.3.9) (2022-08-29)
 
 
