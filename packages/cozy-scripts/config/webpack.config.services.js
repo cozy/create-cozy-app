@@ -4,7 +4,7 @@ const path = require('path')
 const fs = require('fs-extra')
 const webpack = require('webpack')
 const paths = require('../utils/paths')
-const { eslintFix, getFilename, target } = require('./webpack.vars')
+const { eslintFix, makeFilename, target } = require('./webpack.vars')
 
 const servicesFolder = paths.appServicesFolder()
 const servicesPaths = fs.existsSync(servicesFolder)
@@ -33,7 +33,7 @@ const config = {
   entry: servicesEntries,
   output: {
     path: paths.appServicesBuild(),
-    filename: `${getFilename(false)}.js`
+    filename: `${makeFilename(false)}.js`
   },
   target: 'node',
   optimization: {}, // reset optimization property

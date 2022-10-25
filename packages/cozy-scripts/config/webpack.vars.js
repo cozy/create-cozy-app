@@ -43,7 +43,7 @@ const getCSSLoader = function() {
  * @param  {boolean} [enableProductionHash=true] - Add hash to filename
  * @returns {string} filename with path without extension
  */
-const getFilename = function(enableProductionHash = true) {
+const makeFilename = function(enableProductionHash = true) {
   return environment === 'production' && enableProductionHash
     ? `[name]/${manifest.slug}.[contenthash]`
     : `[name]/${manifest.slug}`
@@ -59,8 +59,8 @@ const getFilename = function(enableProductionHash = true) {
  */
 const makeCSSFilename = chunkName => {
   return chunkName === publicFolderName
-    ? `${getFilename()}${production ? '.min' : ''}.css`
-    : `${getFilename().replace(/\//g, '-')}${production ? '.min' : ''}.css`
+    ? `${makeFilename()}${production ? '.min' : ''}.css`
+    : `${makeFilename().replace(/\//g, '-')}${production ? '.min' : ''}.css`
 }
 /**
  * Make chunk filename
@@ -68,7 +68,7 @@ const makeCSSFilename = chunkName => {
  * @returns {string} Filename with path without extension
  */
 const makeCSSChunkFilename = () => {
-  return `${getFilename().replace(/\//g, '-')}${
+  return `${makeFilename().replace(/\//g, '-')}${
     production ? '.[id].min' : ''
   }.css`
 }
@@ -88,7 +88,7 @@ module.exports = {
   environment,
   eslintFix,
   getEnabledFlags,
-  getFilename,
+  makeFilename,
   makeCSSFilename,
   makeCSSChunkFilename,
   getCSSLoader,
