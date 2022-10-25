@@ -10,7 +10,8 @@ const {
   environment,
   isDebugMode,
   getCSSLoader,
-  getFilename,
+  makeCSSChunkFilename,
+  makeCSSFilename,
   getEnabledFlags
 } = require('./webpack.vars')
 const production = environment === 'production'
@@ -64,21 +65,15 @@ module.exports = {
     noParse: [/localforage\/dist/]
   },
   plugins: [
+    /*
+    Adding the `MiniCssExtractPlugin` plugin to the `webpack.config.public.js` configuration file,
+    prevents duplication of CSS files except for the CSS file in the public folder
+    which is duplicated in the root of the build.
+    It is therefore preferable to handle this case in the `makeCSSFilename` function.
+    */
     new MiniCssExtractPlugin({
-      filename: `${getFilename()}${production ? '.min' : ''}.css`,
-      chunkFilename: `${getFilename()}${production ? '.[id].min' : ''}.css`
-    }),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional.
-      // Slashes in filename are replaced since mobile needs
-      // fonts to be in the same directory as the CSS stylesheet.
-      filename: `${getFilename().replace(/\//g, '-')}${
-        production ? '.min' : ''
-      }.css`,
-      chunkFilename: `${getFilename().replace(/\//g, '-')}${
-        production ? '.[id].min' : ''
-      }.css`
+      filename: ({ chunk: { name } }) => makeCSSFilename(name),
+      chunkFilename: makeCSSChunkFilename()
     }),
     new PostCSSAssetsPlugin({
       test: /\.css$/,
