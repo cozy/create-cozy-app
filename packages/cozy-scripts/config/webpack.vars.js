@@ -12,6 +12,7 @@ if (!process.env.NODE_ENV) process.env.NODE_ENV = 'browser:development'
 
 const target = process.env.NODE_ENV.match(/^(\w+):/)[1]
 const environment = process.env.NODE_ENV.match(/^\w+:(\w+)$/)[1]
+const production = environment === 'production'
 
 console.log(
   colorize.cyan(
@@ -36,10 +37,40 @@ const getCSSLoader = function() {
     : MiniCssExtractPlugin.loader
 }
 
+/**
+ * Make filename with path without extension
+ *
+ * @param  {boolean} [enableProductionHash=true] - Add hash to filename
+ * @returns {string} filename with path without extension
+ */
 const getFilename = function(enableProductionHash = true) {
   return environment === 'production' && enableProductionHash
     ? `[name]/${manifest.slug}.[contenthash]`
     : `[name]/${manifest.slug}`
+}
+
+/**
+ * Make filename with path & extension.
+ * Replace the "/" by "-" for all chunkName !== "public",
+ * in order to have the files at the root of the build
+ *
+ * @param {string} chunkName - (public, vendors, etc)
+ * @returns {string} Filename with extension
+ */
+const makeCSSFilename = chunkName => {
+  return chunkName === publicFolderName
+    ? `${getFilename()}${production ? '.min' : ''}.css`
+    : `${getFilename().replace(/\//g, '-')}${production ? '.min' : ''}.css`
+}
+/**
+ * Make chunk filename
+ *
+ * @returns {string} Filename with path without extension
+ */
+const makeCSSChunkFilename = () => {
+  return `${getFilename().replace(/\//g, '-')}${
+    production ? '.[id].min' : ''
+  }.css`
 }
 
 const getEnabledFlags = function() {
@@ -58,6 +89,8 @@ module.exports = {
   eslintFix,
   getEnabledFlags,
   getFilename,
+  makeCSSFilename,
+  makeCSSChunkFilename,
   getCSSLoader,
   isDebugMode,
   target,
