@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.11](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.10...cozy-scripts@6.3.11) (2022-10-26)
+
+
+### Bug Fixes
+
+* **scripts:** Webpack must not duplicate the css files ([f6cbf55](https://github.com/cozy/create-cozy-app/commit/f6cbf55))
+
+
+
+
+
 ## [6.3.10](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.9...cozy-scripts@6.3.10) (2022-08-30)
 
 
