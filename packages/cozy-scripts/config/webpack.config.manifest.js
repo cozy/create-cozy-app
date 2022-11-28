@@ -1,7 +1,6 @@
 'use strict'
 
 const CopyPlugin = require('copy-webpack-plugin')
-const merge = require('lodash/merge')
 
 const { environment } = require('./webpack.vars')
 const paths = require('../utils/paths')
@@ -29,20 +28,21 @@ module.exports = {
 
 /**
  * Merges content from locales JSON files into manifest
+ * Bails out if either manifest.locales or manifest.lang is there
  */
 const insertLocalesIntoManifest = manifest => {
+  if (manifest.locales || manifest.lang) {
+    return
+  }
   const locales = fs.readdirSync(paths.appLocales())
-  manifest.locales = manifest.locales ?? {}
-  const langs = manifest.langs?.length > 0 ? manifest.langs : []
+  manifest.locales = {}
+  manifest.langs = []
   for (const idx in locales) {
     const localContent = require(path.join(paths.appLocales(), locales[idx]))
     const lang = locales[idx].match(/^([^.]*).json$/)[1]
-    manifest.locales[lang] = localContent.manifest
-      ? merge(manifest.locales[lang], localContent.manifest)
-      : manifest.locales[lang]
-    if (!manifest.langs || manifest.langs?.length === 0) langs.push(lang)
+    manifest.locales[lang] = localContent.manifest ? localContent.manifest : {}
+    manifest.langs.push(lang)
   }
-  manifest.langs = [...new Set(langs)]
 }
 
 // Method to modify the manifest:
