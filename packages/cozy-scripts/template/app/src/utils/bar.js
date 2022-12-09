@@ -32,8 +32,10 @@ export const getValues = ({ app, locale }) => {
  * Cozy bar initialization
  * @param {object} client - cozy client
  */
-export const initBar = ({ client, root, lang, appName }) => {
-  const { appNamePrefix, iconPath } = getValues(JSON.parse(root.dataset.cozy))
+export const initBar = ({ client, container, lang, appName }) => {
+  const { appNamePrefix, iconPath } = getValues(
+    JSON.parse(container.dataset.cozy)
+  )
 
   cozy.bar.init({
     appName,
