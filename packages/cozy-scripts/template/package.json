@@ -35,19 +35,13 @@
     "@testing-library/react": "11.2.7",
     "babel-preset-cozy-app": "^2.0.4",
     "cozy-bar": "7.16.0",
-    "enzyme": "3.11.0",
-    "enzyme-adapter-react-16": "1.15.6",
-    "eslint": "5.9.0",
     "eslint-config-cozy-app": "^5.2.0",
     "git-directory-deploy": "1.5.1",
     "react-hot-loader": "4.13.0",
-    "react-test-renderer": "16.14.0",
-    "redux-mock-store": "1.5.4",
-    "stylint": "2.0.0"
+    "react-test-renderer": "16.14.0"
   },
   "dependencies": {
     "cozy-client": "^34.5.0",
-    "cozy-device-helper": "^2.6.0",
     "cozy-flags": "^2.10.2",
     "cozy-intent": "^2.7.0",
     "cozy-scripts": "^6.3.12",
