@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import cx from 'classnames'
 
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import { useClient } from 'cozy-client'
-import Input from 'cozy-ui/transpiled/react/Input'
-import Label from 'cozy-ui/transpiled/react/Label'
-import Button from 'cozy-ui/transpiled/react/Button'
+import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import OutlinedInput from 'cozy-ui/transpiled/react/OutlinedInput'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import InputAdornment from 'cozy-ui/transpiled/react/InputAdornment'
 import { useI18n } from 'cozy-ui/transpiled/react/I18n'
 import Typography from 'cozy-ui/transpiled/react/Typography'
+import Box from 'cozy-ui/transpiled/react/Box'
 
 import { TODOS_DOCTYPE } from 'src/doctypes'
 
@@ -33,21 +33,29 @@ export const TodoAdd = () => {
 
   return (
     <>
-      <Typography variant={'h3'} className={'u-mt-2 u-mb-1'}>
+      <Typography variant="h3" className="u-mt-2 u-mb-1">
         {t('todoAdd.title')}
       </Typography>
-      <form onSubmit={handleSubmit}>
-        <Label htmlFor="todo-add-input">{t('todoAdd.label')}</Label>
-        <Input value={todoToAdd} onChange={handleChange} id="todo-add-input" />
-        <Button
-          type="submit"
-          busy={isWorking}
-          label={t('todoAdd.button.label')}
-          size="large"
-          extension={isMobile ? 'full' : 'narrow'}
-          className={cx({ 'u-mt-half': isMobile })}
+      <Box maxWidth="30rem" {...(!isMobile && { pl: '2rem' })}>
+        <OutlinedInput
+          value={todoToAdd}
+          fullWidth
+          onChange={handleChange}
+          inputProps={{
+            'data-testid': 'todo-add-input'
+          }}
+          endAdornment={
+            <InputAdornment position="end">
+              <Button
+                busy={isWorking}
+                label={t('todoAdd.button.label')}
+                onClick={handleSubmit}
+                data-testid="submit-btn"
+              />
+            </InputAdornment>
+          }
         />
-      </form>
+      </Box>
     </>
   )
 }
