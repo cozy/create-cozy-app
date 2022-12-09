@@ -42,8 +42,10 @@
   },
   "dependencies": {
     "cozy-client": "^34.5.0",
+    "cozy-device-helper": "^2.6.0",
     "cozy-flags": "^2.10.2",
     "cozy-intent": "^2.7.0",
+    "cozy-logger": "^1.9.1",
     "cozy-scripts": "^6.3.12",
     "cozy-ui": "^78.1.1",
     "react": "16.14.0",
