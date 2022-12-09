@@ -32,13 +32,13 @@
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "11.2.7",
+    "@testing-library/react": "13.4.0",
     "babel-preset-cozy-app": "^2.0.4",
     "cozy-bar": "7.16.0",
     "eslint-config-cozy-app": "^5.2.0",
     "git-directory-deploy": "1.5.1",
     "react-hot-loader": "4.13.0",
-    "react-test-renderer": "16.14.0"
+    "react-test-renderer": "18.2.0"
   },
   "dependencies": {
     "cozy-client": "^34.5.0",
@@ -48,8 +48,8 @@
     "cozy-logger": "^1.9.1",
     "cozy-scripts": "^6.3.12",
     "cozy-ui": "^78.1.1",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-router-dom": "5.2.0"
   }
 }

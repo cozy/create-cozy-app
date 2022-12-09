@@ -9,14 +9,14 @@ import { getValues, initBar } from 'src/utils/bar'
  * Memoize this function in its own file so that it is correctly memoized
  */
 const setupApp = memoize(() => {
-  const root = document.querySelector('[role=application]')
-  const { lang, appName } = getValues(JSON.parse(root.dataset.cozy))
+  const container = document.querySelector('[role=application]')
+  const { lang, appName } = getValues(JSON.parse(container.dataset.cozy))
   const polyglot = initTranslation(lang, lang => require(`locales/${lang}`))
   const client = getClient()
 
-  initBar({ client, root, lang, appName })
+  initBar({ client, container, lang, appName })
 
-  return { root, client, lang, polyglot }
+  return { container, client, lang, polyglot }
 })
 
 export default setupApp

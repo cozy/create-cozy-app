@@ -4,7 +4,7 @@ import 'cozy-ui/dist/cozy-ui.utils.min.css'
 import 'src/styles/index.styl'
 
 import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import {
   StylesProvider,
@@ -30,9 +30,10 @@ const generateClassName = createGenerateClassName({
 })
 
 const init = () => {
-  const { root, client, lang, polyglot } = setupApp()
+  const { container, client, lang, polyglot } = setupApp()
+  const root = createRoot(container)
 
-  render(
+  root.render(
     <StylesProvider generateClassName={generateClassName}>
       <CozyProvider client={client}>
         <I18n lang={lang} polyglot={polyglot}>
@@ -43,8 +44,7 @@ const init = () => {
           </MuiCozyTheme>
         </I18n>
       </CozyProvider>
-    </StylesProvider>,
-    root
+    </StylesProvider>
   )
 }
 
