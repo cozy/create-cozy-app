@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
 import { useClient } from 'cozy-client'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import { useI18n } from 'cozy-ui/transpiled/react/I18n'
+import Icon from 'cozy-ui/transpiled/react/Icon'
 
 export const TodoRemoveButton = ({ todo }) => {
   const { t } = useI18n()
@@ -22,14 +23,13 @@ export const TodoRemoveButton = ({ todo }) => {
 
   return (
     <Button
-      theme="danger"
-      icon="trash"
-      iconOnly
-      label={t('todoRemoveButton.label')}
+      color="error"
+      label={<Icon icon="trash" />}
+      title={t('todoRemoveButton.label')}
       busy={isWorking}
       disabled={isWorking}
       onClick={removeTodo}
-      extension="narrow"
+      data-testid="submit-btn"
     />
   )
 }

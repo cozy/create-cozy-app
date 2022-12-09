@@ -31,13 +31,14 @@
   },
   "homepage": "https://github.com/<USERNAME_GH>/<SLUG_GH>#readme",
   "devDependencies": {
+    "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "11.2.7",
-    "babel-preset-cozy-app": "1.11.0",
+    "babel-preset-cozy-app": "^2.0.4",
     "cozy-bar": "7.16.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
     "eslint": "5.9.0",
-    "eslint-config-cozy-app": "2.1.0",
+    "eslint-config-cozy-app": "^5.2.0",
     "git-directory-deploy": "1.5.1",
     "react-hot-loader": "4.13.0",
     "react-test-renderer": "16.14.0",
@@ -45,10 +46,12 @@
     "stylint": "2.0.0"
   },
   "dependencies": {
-    "@material-ui/core": "4",
-    "cozy-client": "24.0.0",
-    "cozy-scripts": "5.13.0",
-    "cozy-ui": "51.5.1",
+    "cozy-client": "^34.5.0",
+    "cozy-device-helper": "^2.6.0",
+    "cozy-flags": "^2.10.2",
+    "cozy-intent": "^2.7.0",
+    "cozy-scripts": "^6.3.12",
+    "cozy-ui": "^78.1.1",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-router-dom": "5.2.0"

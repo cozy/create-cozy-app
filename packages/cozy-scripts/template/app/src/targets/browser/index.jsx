@@ -5,15 +5,15 @@ import 'src/styles/index.styl'
 
 import React from 'react'
 import { render } from 'react-dom'
+
 import {
   StylesProvider,
   createGenerateClassName
-} from '@material-ui/core/styles'
-
-import { CozyProvider } from 'cozy-client'
+} from 'cozy-ui/transpiled/react/styles'
 import { I18n } from 'cozy-ui/transpiled/react/I18n'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { CozyProvider } from 'cozy-client'
 
 import setupApp from 'src/targets/browser/setupApp'
 import App from 'src/components/App'
@@ -29,8 +29,9 @@ const generateClassName = createGenerateClassName({
   disableGlobal: true
 })
 
-const init = function() {
+const init = () => {
   const { root, client, lang, polyglot } = setupApp()
+
   render(
     <StylesProvider generateClassName={generateClassName}>
       <CozyProvider client={client}>

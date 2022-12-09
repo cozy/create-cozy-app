@@ -1,5 +1,5 @@
-'use strict'
 import React from 'react'
+import '@testing-library/jest-dom'
 import { render, fireEvent, waitFor } from '@testing-library/react'
 
 import { createMockClient } from 'cozy-client'
@@ -40,22 +40,21 @@ describe('TodoAdd component:', () => {
   })
 
   it('should handle isWorking correctly (display spinner)', async () => {
-    const { container } = setup()
-    const submitButton = container.querySelector('button[type="submit"]')
+    const { getByTestId } = setup()
+    const submitButton = getByTestId('submit-btn')
 
     expect(submitButton).toBeDefined()
-    expect(submitButton.getAttribute('aria-busy')).toEqual(null)
     fireEvent.click(submitButton)
-    expect(submitButton.getAttribute('aria-busy')).toEqual('true')
+    expect(submitButton).toHaveAttribute('disabled', '')
     await waitFor(() =>
-      expect(submitButton.getAttribute('aria-busy')).toEqual(null)
+      expect(submitButton).not.toHaveAttribute('disabled', '')
     )
   })
 
   it('should handle save correctly on button click', async () => {
-    const { container } = setup()
-    const input = container.querySelector('input#todo-add-input')
-    const submitButton = container.querySelector('button[type="submit"]')
+    const { getByTestId } = setup()
+    const input = getByTestId('todo-add-input')
+    const submitButton = getByTestId('submit-btn')
 
     expect(input).toBeDefined()
     fireEvent.change(input, targetValue(todo.name))
@@ -65,8 +64,8 @@ describe('TodoAdd component:', () => {
   })
 
   it('should update the state on input value change', () => {
-    const { container } = setup()
-    const input = container.querySelector('input#todo-add-input')
+    const { getByTestId } = setup()
+    const input = getByTestId('todo-add-input')
 
     expect(input).toBeDefined()
     expect(input.value).toBe('')

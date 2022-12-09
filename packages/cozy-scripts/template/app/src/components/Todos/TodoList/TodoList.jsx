@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
-import { makeStyles } from '@material-ui/core/styles'
 
+import { makeStyles } from 'cozy-ui/transpiled/react/styles'
 import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import { useI18n } from 'cozy-ui/transpiled/react/I18n'
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
@@ -32,7 +32,7 @@ export const TodosList = ({ todos }) => {
 
   return (
     <>
-      <Typography variant={'h3'} className={'u-mv-1'}>
+      <Typography variant="h3" className="u-mv-1">
         {t('todoList.title')}
       </Typography>
       <List className={cx({ 'u-pl-0': isMobile, 'u-pl-2': !isMobile })}>

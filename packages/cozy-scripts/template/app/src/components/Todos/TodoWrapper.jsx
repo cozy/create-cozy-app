@@ -17,8 +17,8 @@ export const TodoWrapper = () => {
     <Spinner size="xxlarge" className="u-flex u-flex-justify-center" />
   ) : (
     <>
-      <TodoList todos={data} />
       <TodoAdd />
+      <TodoList todos={data} />
     </>
   )
 }

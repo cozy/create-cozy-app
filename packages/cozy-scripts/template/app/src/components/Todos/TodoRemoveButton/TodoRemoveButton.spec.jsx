@@ -1,5 +1,5 @@
-'use strict'
 import React from 'react'
+import '@testing-library/jest-dom'
 import { render, fireEvent, waitFor } from '@testing-library/react'
 
 import { createMockClient } from 'cozy-client'
@@ -34,20 +34,19 @@ describe('TodoRemoveButton component:', () => {
   })
 
   it('should handle isWorking correctly (display spinner)', () => {
-    const { container } = setup()
-    const button = container.querySelector('button[type="submit"]')
+    const { getByTestId } = setup()
+    const button = getByTestId('submit-btn')
 
     expect(button).toBeDefined()
-    expect(button.getAttribute('aria-busy')).toEqual(null)
-    expect(button.getAttribute('disabled')).toEqual(null)
+    expect(button).not.toHaveAttribute('disabled')
+
     fireEvent.click(button)
-    expect(button.getAttribute('aria-busy')).toEqual('true')
-    expect(button.getAttribute('disabled')).toEqual('')
+    expect(button).toHaveAttribute('disabled', '')
   })
 
   it('should handle removeTodo correctly on button click', async () => {
-    const { container } = setup()
-    const button = container.querySelector('button[type="submit"]')
+    const { getByTestId } = setup()
+    const button = getByTestId('submit-btn')
 
     expect(button).toBeDefined()
     fireEvent.click(button)
