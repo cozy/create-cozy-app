@@ -16,7 +16,7 @@ import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoin
 import { CozyProvider } from 'cozy-client'
 
 import setupApp from 'src/targets/browser/setupApp'
-import App from 'src/components/App'
+import AppRouter from 'src/components/AppRouter'
 
 /*
 With MUI V4, it is possible to generate deterministic class names.
@@ -39,7 +39,7 @@ const init = () => {
         <I18n lang={lang} polyglot={polyglot}>
           <MuiCozyTheme>
             <BreakpointsProvider>
-              <App />
+              <AppRouter />
             </BreakpointsProvider>
           </MuiCozyTheme>
         </I18n>

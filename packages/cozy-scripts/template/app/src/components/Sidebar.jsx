@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink as RouterLink } from 'react-router-dom'
+import cx from 'classnames'
 
 import { useI18n } from 'cozy-ui/transpiled/react/I18n'
 import UISidebar from 'cozy-ui/transpiled/react/Sidebar'
@@ -21,8 +22,11 @@ const Sidebar = () => {
         <NavItem>
           <RouterLink
             to="/todos"
-            className={NavLink.className}
-            activeClassName={NavLink.activeClassName}
+            className={({ isActive }) =>
+              cx(NavLink.className, {
+                [NavLink.activeClassName]: isActive
+              })
+            }
           >
             <NavIcon icon={BulletPoint} />
             <NavText>{t('nav.todos')}</NavText>
@@ -31,8 +35,11 @@ const Sidebar = () => {
         <NavItem>
           <RouterLink
             to="/viewhello1"
-            className={NavLink.className}
-            activeClassName={NavLink.activeClassName}
+            className={({ isActive }) =>
+              cx(NavLink.className, {
+                [NavLink.activeClassName]: isActive
+              })
+            }
           >
             <NavIcon icon={BulletPoint} />
             <NavText>{t('nav.hello_nav_2')}</NavText>
@@ -41,8 +48,11 @@ const Sidebar = () => {
         <NavItem>
           <RouterLink
             to="/viewhello2"
-            className={NavLink.className}
-            activeClassName={NavLink.activeClassName}
+            className={({ isActive }) =>
+              cx(NavLink.className, {
+                [NavLink.activeClassName]: isActive
+              })
+            }
           >
             <NavIcon icon={BulletPoint} />
             <NavText>{t('nav.hello_nav_3')}</NavText>
