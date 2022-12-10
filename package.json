@@ -2,7 +2,7 @@
 	"scripts": {
 		"postinstall": "lerna bootstrap",
 		"changelog": "lerna-changelog",
-		"lint": "eslint --ignore-path .gitignore './**/*.{js,jsx}'",
+		"lint": "eslint --ignore-path .gitignore './**/*.js'",
 		"test": "yarn test:tools && yarn test:cozy-scripts",
 		"test:tools": "yarn test:cca && yarn test:cozy-scripts:cli && yarn test:cozy-scripts:utils",
 		"test:cca": "bash packages/create-cozy-app/test/create-cozy-app.sh",
