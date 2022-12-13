@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.4.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.12...cozy-scripts@6.4.0) (2022-12-13)
+
+
+### Features
+
+* **cca-template:** Update all cozy packages in template ([ee78b37](https://github.com/cozy/create-cozy-app/commit/ee78b37))
+* **cca-template:** Upgrade react to 18.2.0 ([4c01fd2](https://github.com/cozy/create-cozy-app/commit/4c01fd2))
+* **cca-template:** Upgrade react-router-dom to 6.4.5 ([a7517cb](https://github.com/cozy/create-cozy-app/commit/a7517cb))
+
+
+
+
+
 ## [6.3.12](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.11...cozy-scripts@6.3.12) (2022-11-29)
 
 **Note:** Version bump only for package cozy-scripts
