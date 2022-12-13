@@ -24,12 +24,14 @@ console.log(
 
 const isDebugMode = process.env[CTS.DEBUG] === 'true'
 const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
+const addCozyBarV7 = process.env[CTS.BAR_V7] === 'true'
 const useHotReload =
   process.env[CTS.HOT] === 'true' && environment === 'development'
 const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
 const devtool =
   process.env[CTS.DEVTOOL] === 'false' ? false : process.env[CTS.DEVTOOL]
 const publicFolderName = 'public'
+const intentsFolderName = 'intents'
 
 const getCSSLoader = function() {
   return useHotReload
@@ -85,6 +87,7 @@ const getReactExposer = () => paths.csReactExposer()
 
 module.exports = {
   addAnalyzer,
+  addCozyBarV7,
   environment,
   eslintFix,
   getEnabledFlags,
@@ -96,6 +99,7 @@ module.exports = {
   target,
   useHotReload,
   publicFolderName,
+  intentsFolderName,
   getReactExposer,
   devtool
 }

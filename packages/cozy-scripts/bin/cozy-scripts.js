@@ -92,6 +92,7 @@ const getEnvVarsFromCLIArgs = program => {
   const env = {}
   // program property, environment variable name, content to set
   ;[
+    ['barV7', CTS.BAR_V7, true],
     ['hot', CTS.HOT, true],
     ['port', CTS.PORT, program.port],
     ['host', CTS.HOST, program.host],

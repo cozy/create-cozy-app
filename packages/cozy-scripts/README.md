@@ -217,6 +217,9 @@ if (flag('flag1') || flag('flag2')) {
 }
 ```
 
+### `cozy-bar`
+
+`cozy-scripts` works by default with `cozy-bar` version 7.0. If you want to use version 8.0, you need to add on your `cozy-scripts` command `yarn build --barV7 false` or `COZY_BAR_V7=false yarn build`
 
 You can find more information about webpack configuration files available via
 `cozy-scripts` in the dedicated [webpack configs
