@@ -1,7 +1,12 @@
 'use strict'
 
 const merge = require('webpack-merge')
-const { environment, target, addAnalyzer } = require('./webpack.vars')
+const {
+  environment,
+  target,
+  addAnalyzer,
+  addCozyBarV7
+} = require('./webpack.vars')
 
 const configs = [
   require('./webpack.config.base'),
@@ -18,6 +23,7 @@ const configs = [
   require('./webpack.config.manifest'),
   require('./webpack.config.progress'),
   require('./webpack.config.duplicates'),
+  addCozyBarV7 ? require('./webpack.config.cozy-bar-v7') : null,
   addAnalyzer ? require('./webpack.config.analyzer') : null,
   require('./webpack.config.services'),
   require(`./webpack.target.${target}`)

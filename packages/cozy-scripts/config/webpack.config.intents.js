@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const manifest = fs.readJsonSync(paths.appManifest())
-const { target, getReactExposer } = require('./webpack.vars')
+const { target } = require('./webpack.vars')
 
 const intentsFolderName = 'intents'
 
@@ -26,8 +26,6 @@ function getConfig() {
           // we get it from a function call
           [intentsFolderName]: [
             require.resolve('@babel/polyfill'),
-            // Exposed variables in global scope (needed for cozy-bar)
-            getReactExposer(),
             paths.appIntentsIndex()
           ]
         },

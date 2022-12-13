@@ -5,7 +5,7 @@ const fs = require('fs-extra')
 const paths = require('../utils/paths')
 const CTS = require('../utils/constants')
 const manifest = fs.readJsonSync(paths.appManifest())
-const { publicFolderName, target, getReactExposer } = require('./webpack.vars')
+const { publicFolderName, target } = require('./webpack.vars')
 
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
@@ -21,8 +21,6 @@ const shouldAddPublicConfig = () =>
     fs.existsSync(paths.appPublicIndex()) &&
     fs.existsSync(paths.appPublicHtmlTemplate()))
 
-const buildPublicCozyBarCss = `${paths.appBuild()}/${publicFolderName}/cozy-bar.css`
-const buildPublicCozyBarJs = `${paths.appBuild()}/${publicFolderName}/cozy-bar.js`
 const buildPublicCozyClientJs = `${paths.appBuild()}/${publicFolderName}/cozy-client-js.js`
 
 function getConfig() {
@@ -33,8 +31,6 @@ function getConfig() {
           // we get it from a function call
           [publicFolderName]: [
             require.resolve('@babel/polyfill'),
-            // Exposed variables in global scope (needed for cozy-bar)
-            getReactExposer(),
             paths.appPublicIndex()
           ]
         },
@@ -54,24 +50,12 @@ function getConfig() {
           // public pages will need to have them public
           new CopyPlugin([
             {
-              from: paths.appCozyBarJs(),
-              to: buildPublicCozyBarJs
-            },
-            {
-              from: paths.appCozyBarCss(),
-              to: buildPublicCozyBarCss
-            },
-            {
               from: paths.appCozyClientJs(),
               to: buildPublicCozyClientJs
             }
           ]),
           new HtmlWebpackIncludeAssetsPlugin({
-            assets: [
-              `${publicFolderName}/cozy-bar.js`,
-              `${publicFolderName}/cozy-bar.css`,
-              `${publicFolderName}/cozy-client-js.js`
-            ],
+            assets: [`${publicFolderName}/cozy-client-js.js`],
             append: false,
             publicPath: true
           })

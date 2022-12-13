@@ -6,7 +6,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
-const { environment, isDebugMode, getReactExposer } = require('./webpack.vars')
+const { environment, isDebugMode } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest())
 
 const production = environment === 'production'
@@ -18,12 +18,7 @@ module.exports = {
   entry: {
     // since the file extension depends on the framework here
     // we get it from a function call
-    app: [
-      require.resolve('@babel/polyfill'),
-      // Exposed variables in global scope (needed for cozy-bar)
-      getReactExposer(),
-      paths.appMobileIndex()
-    ]
+    app: [require.resolve('@babel/polyfill'), paths.appMobileIndex()]
   },
   output: {
     path: paths.appMobileWWW(),
@@ -38,10 +33,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       'cozy.client': production
         ? 'cozy-client-js/dist/cozy-client.min.js'
-        : 'cozy-client-js/dist/cozy-client.js',
-      'cozy.bar': production
-        ? 'cozy-bar/dist/cozy-bar.mobile.min.js'
-        : 'cozy-bar/dist/cozy-bar.mobile.js'
+        : 'cozy-client-js/dist/cozy-client.js'
     }),
     new HtmlWebpackPlugin({
       template: paths.appMobileHtmlTemplate(),
