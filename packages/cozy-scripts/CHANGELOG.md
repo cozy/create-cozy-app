@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.4.0...cozy-scripts@7.0.0) (2022-12-15)
+
+
+### Features
+
+* isolate cozy bar v7 webpack config ([c68ce35](https://github.com/cozy/create-cozy-app/commit/c68ce35))
+
+
+### BREAKING CHANGES
+
+* add --barV7 false if you are using  cozy-bar v8
+
+
+
+
+
 # [6.4.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.3.12...cozy-scripts@6.4.0) (2022-12-13)
 
 
