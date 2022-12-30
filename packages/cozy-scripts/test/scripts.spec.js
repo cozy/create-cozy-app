@@ -91,10 +91,7 @@ describe('App from cozy-scripts', () => {
     process.chdir(appPath)
     fs.writeJsonSync('./package.json', { name: appName })
     // install the scripts and run it, this part is normally handlded by create-cozy-app
-    const args = [
-      'add',
-//      '--exact' // always at the end
-    ].concat([
+    const args = ['add'].concat([
       `cozy-scripts@file:${path.join(rootPath, 'packages', 'cozy-scripts')}`
     ])
     spawn.sync('yarn', args, { stdio: 'inherit' })
