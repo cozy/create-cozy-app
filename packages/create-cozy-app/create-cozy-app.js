@@ -281,7 +281,7 @@ function bootstrapApp(rootPath, appName, cliOptions) {
 function install(dependencies, verbose) {
   return new Promise((resolve, reject) => {
     const command = 'yarn'
-    const args = ['add', '--exact'].concat(dependencies)
+    const args = ['add',].concat(dependencies)
 
     // disable output here using pipe stdio
     const installProcess = spawn(command, args, {
