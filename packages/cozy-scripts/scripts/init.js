@@ -225,7 +225,7 @@ function run(appPath, dataMap, cliOptions, gracefulRootExit, successCallback) {
 function installDependencies(verbose) {
   return new Promise((resolve, reject) => {
     const command = 'yarn'
-    const args = ['install', '--prefer-offline']
+    const args = ['install']
     if (!verbose) {
       args.push('--silent')
       console.log()
