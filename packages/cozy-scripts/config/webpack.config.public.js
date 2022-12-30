@@ -48,12 +48,14 @@ function getConfig() {
 
           // We need to put all assets in the public build folder since
           // public pages will need to have them public
-          new CopyPlugin([
-            {
-              from: paths.appCozyClientJs(),
-              to: buildPublicCozyClientJs
-            }
-          ]),
+          new CopyPlugin({
+            patterns: [
+              {
+                from: paths.appCozyClientJs(),
+                to: buildPublicCozyClientJs
+              }
+            ]
+          }),
           new HtmlWebpackIncludeAssetsPlugin({
             assets: [`${publicFolderName}/cozy-client-js.js`],
             append: false,
