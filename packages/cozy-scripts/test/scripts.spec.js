@@ -93,7 +93,7 @@ describe('App from cozy-scripts', () => {
     // install the scripts and run it, this part is normally handlded by create-cozy-app
     const args = [
       'add',
-      '--exact' // always at the end
+//      '--exact' // always at the end
     ].concat([
       `cozy-scripts@file:${path.join(rootPath, 'packages', 'cozy-scripts')}`
     ])
