@@ -29,19 +29,32 @@ module.exports = {
 /**
  * Merges content from locales JSON files into manifest
  * Bails out if either manifest.locales or manifest.lang is there
+ * Only use locales from manifest.langs if is there
  */
 const insertLocalesIntoManifest = manifest => {
   if (manifest.locales || manifest.lang) {
     return
   }
   const locales = fs.readdirSync(paths.appLocales())
-  manifest.locales = {}
-  manifest.langs = []
+  let localesContent = {}
+  let langs = []
   for (const idx in locales) {
     const localContent = require(path.join(paths.appLocales(), locales[idx]))
     const lang = locales[idx].match(/^([^.]*).json$/)[1]
-    manifest.locales[lang] = localContent.manifest ? localContent.manifest : {}
-    manifest.langs.push(lang)
+    localesContent[lang] = localContent.manifest ? localContent.manifest : {}
+    langs.push(lang)
+  }
+
+  if (manifest.langs) {
+    manifest.locales = Object.keys(localesContent)
+      .filter(key => manifest.langs.includes(key))
+      .reduce((obj, key) => {
+        obj[key] = localesContent[key]
+        return obj
+      }, {})
+  } else {
+    manifest.locales = localesContent
+    manifest.langs = langs
   }
 }
 
