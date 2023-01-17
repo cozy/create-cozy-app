@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@7.0.0...cozy-scripts@7.0.1) (2023-01-17)
+
+
+### Bug Fixes
+
+* Filter manifest locales by correlating manifest langs ([8ec5a70](https://github.com/cozy/create-cozy-app/commit/8ec5a70))
+
+
+
+
+
 # [7.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@6.4.0...cozy-scripts@7.0.0) (2022-12-15)
 
 
