@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@7.0.1...cozy-scripts@7.0.2) (2023-01-23)
+
+
+### Bug Fixes
+
+* Use by default cozy-bar v7 ([cca4ef2](https://github.com/cozy/create-cozy-app/commit/cca4ef2))
+
+
+
+
+
 ## [7.0.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@7.0.0...cozy-scripts@7.0.1) (2023-01-17)
 
 
