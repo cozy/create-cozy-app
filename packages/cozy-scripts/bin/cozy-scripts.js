@@ -73,6 +73,11 @@ const program = new commander.Command(pkg.name)
     '--devtool',
     'Configure the devtool used. Use false to deactivate completely'
   )
+  .option(
+    '--barV7 <isBarV7>',
+    'By default, we load version 7 of cozy-bar. Use false to load nothing',
+    true
+  )
   .parse(process.argv)
 
 // build mode and target computing (overwritten by NODE_ENV)
@@ -92,7 +97,7 @@ const getEnvVarsFromCLIArgs = program => {
   const env = {}
   // program property, environment variable name, content to set
   ;[
-    ['barV7', CTS.BAR_V7, true],
+    ['barV7', CTS.BAR_V7, program.barV7],
     ['hot', CTS.HOT, true],
     ['port', CTS.PORT, program.port],
     ['host', CTS.HOST, program.host],

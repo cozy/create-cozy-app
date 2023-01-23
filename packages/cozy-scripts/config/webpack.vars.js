@@ -25,6 +25,7 @@ console.log(
 const isDebugMode = process.env[CTS.DEBUG] === 'true'
 const addAnalyzer = process.env[CTS.ANALYZER] === 'true'
 const addCozyBarV7 = process.env[CTS.BAR_V7] === 'true'
+
 const useHotReload =
   process.env[CTS.HOT] === 'true' && environment === 'development'
 const eslintFix = process.env[CTS.ESLINT_FIX] === 'true'
