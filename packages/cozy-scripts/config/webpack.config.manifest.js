@@ -18,11 +18,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin([
-      { from: paths.appManifest(), transform: transformManifest },
-      { from: paths.appREADME() },
-      { from: paths.appLICENSE() }
-    ])
+    new CopyPlugin({
+      patterns: [
+        { from: paths.appManifest(), transform: transformManifest },
+        { from: paths.appREADME() },
+        { from: paths.appLICENSE() }
+      ]
+    })
   ]
 }
 

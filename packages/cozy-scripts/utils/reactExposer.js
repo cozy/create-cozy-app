@@ -1,3 +1,4 @@
-/* eslint-disable import/no-webpack-loader-syntax */
-require('expose-loader?React!react')
-require('expose-loader?ReactDOM!react-dom')
+/* eslint-disable no-unused-vars */
+
+import React from 'expose-loader?exposes=React!react'
+import ReactDOM from 'expose-loader?exposes=ReactDOM!react-dom'

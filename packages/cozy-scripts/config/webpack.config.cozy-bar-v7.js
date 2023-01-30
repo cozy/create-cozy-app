@@ -24,16 +24,18 @@ let cozyBarModule = {
     [intentsFolderName]: [getReactExposer()]
   },
   plugins: [
-    new CopyPlugin([
-      {
-        from: paths.appCozyBarJs(),
-        to: buildPublicCozyBarJs
-      },
-      {
-        from: paths.appCozyBarCss(),
-        to: buildPublicCozyBarCss
-      }
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: paths.appCozyBarJs(),
+          to: buildPublicCozyBarJs
+        },
+        {
+          from: paths.appCozyBarCss(),
+          to: buildPublicCozyBarCss
+        }
+      ]
+    }),
     new HtmlWebpackIncludeAssetsPlugin({
       assets: [
         `${publicFolderName}/cozy-bar.js`,

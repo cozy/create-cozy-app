@@ -37,8 +37,8 @@ function optimizeSVGIcon(buffer, path) {
 
 module.exports = {
   plugins: [
-    new CopyPlugin([
-      { from: paths.appVendorAssets(), transform: optimizeSVGIcon }
-    ])
+    new CopyPlugin({
+      patterns: [{ from: paths.appVendorAssets(), transform: optimizeSVGIcon }]
+    })
   ]
 }
