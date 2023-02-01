@@ -33,6 +33,7 @@ const devtool =
   process.env[CTS.DEVTOOL] === 'false' ? false : process.env[CTS.DEVTOOL]
 const publicFolderName = 'public'
 const intentsFolderName = 'intents'
+const useCozyClientJs = process.env[CTS.COZY_CLIENT_JS] === 'true'
 
 const getCSSLoader = function() {
   return useHotReload
@@ -99,6 +100,7 @@ module.exports = {
   isDebugMode,
   target,
   useHotReload,
+  useCozyClientJs,
   publicFolderName,
   intentsFolderName,
   getReactExposer,

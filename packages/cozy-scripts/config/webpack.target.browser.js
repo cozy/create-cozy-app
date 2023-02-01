@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const paths = require('../utils/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
-const { makeFilename, isDebugMode } = require('./webpack.vars')
+const { makeFilename, isDebugMode, useCozyClientJs } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest())
 
 const appName = manifest.name_prefix
@@ -27,9 +27,12 @@ module.exports = {
     filename: `${makeFilename()}.js`,
     pathinfo: isDebugMode
   },
-  externals: {
-    'cozy-client-js': 'cozy'
-  },
+
+  externals: useCozyClientJs
+    ? {
+        'cozy-client-js': 'cozy'
+      }
+    : {},
   plugins: [
     new HtmlWebpackPlugin({
       template: paths.appBrowserHtmlTemplate(),
