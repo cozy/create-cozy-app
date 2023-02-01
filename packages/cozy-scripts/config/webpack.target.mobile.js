@@ -6,7 +6,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
-const { environment, isDebugMode } = require('./webpack.vars')
+const { environment, isDebugMode, useCozyClientJs } = require('./webpack.vars')
 const manifest = fs.readJsonSync(paths.appManifest())
 
 const production = environment === 'production'
@@ -30,11 +30,13 @@ module.exports = {
       __TARGET__: JSON.stringify('mobile'),
       __APP_VERSION__: JSON.stringify(manifest.version)
     }),
-    new webpack.ProvidePlugin({
-      'cozy.client': production
-        ? 'cozy-client-js/dist/cozy-client.min.js'
-        : 'cozy-client-js/dist/cozy-client.js'
-    }),
+    useCozyClientJs
+      ? new webpack.ProvidePlugin({
+          'cozy.client': production
+            ? 'cozy-client-js/dist/cozy-client.min.js'
+            : 'cozy-client-js/dist/cozy-client.js'
+        })
+      : null,
     new HtmlWebpackPlugin({
       template: paths.appMobileHtmlTemplate(),
       title: appName,
