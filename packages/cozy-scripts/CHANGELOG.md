@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@7.0.2...cozy-scripts@8.0.0) (2023-02-02)
+
+
+### Bug Fixes
+
+* Clean unused workers config ([c169f96](https://github.com/cozy/create-cozy-app/commit/c169f96))
+* Use --cozyClientJs option to load cozy-client-js ([b6a082d](https://github.com/cozy/create-cozy-app/commit/b6a082d)), closes [#1369](https://github.com/cozy/create-cozy-app/issues/1369)
+
+
+### BREAKING CHANGES
+
+* By default, we don't load anymore cozy-client-js, you can still load it with the option --cozyClientJs
+
+
+
+
+
 ## [7.0.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@7.0.1...cozy-scripts@7.0.2) (2023-01-23)
 
 
