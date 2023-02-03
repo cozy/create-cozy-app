@@ -18,13 +18,16 @@ let stackProvidedLibsConfig = {
   plugins: [
     new webpack.DefinePlugin({
       __STACK_ASSETS__: false
-    }),
-    useCozyClientJs
-      ? new webpack.ProvidePlugin({
-          'cozy.client': 'cozy-client-js/dist/cozy-client.min.js'
-        })
-      : null
+    })
   ]
+}
+
+if (useCozyClientJs) {
+  stackProvidedLibsConfig.plugins.push(
+    new webpack.ProvidePlugin({
+      'cozy.client': 'cozy-client-js/dist/cozy-client.min.js'
+    })
+  )
 }
 
 let output = {}
