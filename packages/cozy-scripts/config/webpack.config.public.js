@@ -25,7 +25,7 @@ const buildPublicCozyClientJs = `${paths.appBuild()}/${publicFolderName}/cozy-cl
 
 function getConfig() {
   if (shouldAddPublicConfig()) {
-    let plugins = [
+    const plugins = [
       new HtmlWebpackPlugin({
         template: paths.appPublicHtmlTemplate(),
         title: appName,

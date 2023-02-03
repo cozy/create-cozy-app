@@ -14,6 +14,36 @@ const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
   : manifest.name
 
+const plugins = [
+  new webpack.DefinePlugin({
+    __ALLOW_HTTP__: !production,
+    __TARGET__: JSON.stringify('mobile'),
+    __APP_VERSION__: JSON.stringify(manifest.version)
+  }),
+  new HtmlWebpackPlugin({
+    template: paths.appMobileHtmlTemplate(),
+    title: appName,
+    chunks: ['vendors', 'app'],
+    inject: false,
+    minify: {
+      collapseWhitespace: true
+    }
+  }),
+  new ScriptExtHtmlWebpackPlugin({
+    defaultAttribute: 'defer'
+  })
+]
+
+if (useCozyClientJs) {
+  plugins.push(
+    new webpack.ProvidePlugin({
+      'cozy.client': production
+        ? 'cozy-client-js/dist/cozy-client.min.js'
+        : 'cozy-client-js/dist/cozy-client.js'
+    })
+  )
+}
+
 module.exports = {
   entry: {
     // since the file extension depends on the framework here
@@ -24,30 +54,5 @@ module.exports = {
     path: paths.appMobileWWW(),
     pathinfo: isDebugMode
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      __ALLOW_HTTP__: !production,
-      __TARGET__: JSON.stringify('mobile'),
-      __APP_VERSION__: JSON.stringify(manifest.version)
-    }),
-    useCozyClientJs
-      ? new webpack.ProvidePlugin({
-          'cozy.client': production
-            ? 'cozy-client-js/dist/cozy-client.min.js'
-            : 'cozy-client-js/dist/cozy-client.js'
-        })
-      : null,
-    new HtmlWebpackPlugin({
-      template: paths.appMobileHtmlTemplate(),
-      title: appName,
-      chunks: ['vendors', 'app'],
-      inject: false,
-      minify: {
-        collapseWhitespace: true
-      }
-    }),
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
-    })
-  ]
+  plugins
 }
