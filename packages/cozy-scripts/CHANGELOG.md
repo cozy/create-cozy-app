@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.0.0...cozy-scripts@8.0.1) (2023-02-06)
+
+
+### Bug Fixes
+
+* useCozyClientJs in dev environnement ([cc4da2a](https://github.com/cozy/create-cozy-app/commit/cc4da2a))
+
+
+
+
+
 # [8.0.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@7.0.2...cozy-scripts@8.0.0) (2023-02-02)
 
 
