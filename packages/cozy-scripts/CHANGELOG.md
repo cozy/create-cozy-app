@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.0.1...cozy-scripts@8.0.2) (2023-02-08)
+
+
+### Bug Fixes
+
+* Css Order ([c6b9b53](https://github.com/cozy/create-cozy-app/commit/c6b9b53))
+
+
+
+
+
 ## [8.0.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.0.0...cozy-scripts@8.0.1) (2023-02-06)
 
 
