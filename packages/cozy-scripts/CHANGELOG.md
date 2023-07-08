@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.0.3...cozy-scripts@8.1.0) (2023-07-08)
+
+
+### Features
+
+* Copy static images from transpiled/react ([5938cda](https://github.com/cozy/create-cozy-app/commit/5938cda))
+* Update cozy-scripts babel to 7.10 ([b3c4e4c](https://github.com/cozy/create-cozy-app/commit/b3c4e4c))
+
+
+
+
+
 ## [8.0.3](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.0.2...cozy-scripts@8.0.3) (2023-03-20)
 
 **Note:** Version bump only for package cozy-scripts
