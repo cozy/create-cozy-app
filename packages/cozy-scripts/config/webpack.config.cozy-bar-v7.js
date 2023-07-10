@@ -6,6 +6,7 @@ const {
   publicFolderName,
   intentsFolderName,
   getReactExposer,
+  shouldAddPublicConfig,
   environment,
   target
 } = require('./webpack.vars')
@@ -20,29 +21,41 @@ let cozyBarModule = {
   // Exposed variables in global scope (needed for cozy-bar)
   entry: {
     app: [getReactExposer()],
-    [publicFolderName]: [getReactExposer()],
     [intentsFolderName]: [getReactExposer()]
   },
-  plugins: [
-    new CopyPlugin([
-      {
-        from: paths.appCozyBarJs(),
-        to: buildPublicCozyBarJs
-      },
-      {
-        from: paths.appCozyBarCss(),
-        to: buildPublicCozyBarCss
-      }
-    ]),
-    new HtmlWebpackIncludeAssetsPlugin({
-      assets: [
-        `${publicFolderName}/cozy-bar.js`,
-        `${publicFolderName}/cozy-bar.css`
-      ],
-      append: false,
-      publicPath: true
-    })
-  ]
+  plugins: []
+}
+
+// We need to put all assets in the public build folder since
+// public pages will need to have them public
+if (shouldAddPublicConfig()) {
+  cozyBarModule = {
+    ...cozyBarModule,
+    entry: {
+      ...cozyBarModule.entry,
+      [publicFolderName]: [getReactExposer()]
+    },
+    plugins: [
+      new CopyPlugin([
+        {
+          from: paths.appCozyBarJs(),
+          to: buildPublicCozyBarJs
+        },
+        {
+          from: paths.appCozyBarCss(),
+          to: buildPublicCozyBarCss
+        }
+      ]),
+      new HtmlWebpackIncludeAssetsPlugin({
+        assets: [
+          `${publicFolderName}/cozy-bar.js`,
+          `${publicFolderName}/cozy-bar.css`
+        ],
+        append: false,
+        publicPath: true
+      })
+    ]
+  }
 }
 
 if (target === 'mobile') {

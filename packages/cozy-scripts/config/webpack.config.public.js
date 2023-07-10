@@ -3,9 +3,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs-extra')
 const paths = require('../utils/paths')
-const CTS = require('../utils/constants')
 const manifest = fs.readJsonSync(paths.appManifest())
-const { publicFolderName, target, useCozyClientJs } = require('./webpack.vars')
+const {
+  publicFolderName,
+  useCozyClientJs,
+  shouldAddPublicConfig
+} = require('./webpack.vars')
 
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
@@ -14,15 +17,9 @@ const appName = manifest.name_prefix
   ? `${manifest.name_prefix} ${manifest.name}`
   : manifest.name
 
-/* We don't build public if no public and if on mobile build */
-const shouldAddPublicConfig = () =>
-  process.env[CTS.FORCE_PUBLIC] == 'true' ||
-  (target === 'browser' &&
-    fs.existsSync(paths.appPublicIndex()) &&
-    fs.existsSync(paths.appPublicHtmlTemplate()))
-
 const buildPublicCozyClientJs = `${paths.appBuild()}/${publicFolderName}/cozy-client-js.js`
 
+/* We don't build public if no public and if on mobile build */
 function getConfig() {
   if (shouldAddPublicConfig()) {
     const plugins = [
