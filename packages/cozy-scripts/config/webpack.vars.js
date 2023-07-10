@@ -87,6 +87,12 @@ const getEnabledFlags = function() {
 
 const getReactExposer = () => paths.csReactExposer()
 
+const shouldAddPublicConfig = () =>
+  process.env[CTS.FORCE_PUBLIC] == 'true' ||
+  (target === 'browser' &&
+    fs.existsSync(paths.appPublicIndex()) &&
+    fs.existsSync(paths.appPublicHtmlTemplate()))
+
 module.exports = {
   addAnalyzer,
   addCozyBarV7,
@@ -104,5 +110,6 @@ module.exports = {
   publicFolderName,
   intentsFolderName,
   getReactExposer,
+  shouldAddPublicConfig,
   devtool
 }
