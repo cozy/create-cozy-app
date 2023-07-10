@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.1.0...cozy-scripts@8.1.1) (2023-07-10)
+
+
+### Bug Fixes
+
+* Copy cozy-bar v7 assets only if should add public config ([9eab1cd](https://github.com/cozy/create-cozy-app/commit/9eab1cd))
+
+
+
+
+
 # [8.1.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.0.3...cozy-scripts@8.1.0) (2023-07-08)
 
 
