@@ -9,6 +9,13 @@ const CTS = require('../utils/constants.js')
 const regexpReplacer = require('../utils/regexpReplacer')
 const getWebpackConfigs = require('../scripts/config')
 
+// Required to work from Node version 17+
+// More info: https://github.com/webpack/webpack/issues/13572#issuecomment-923736472
+const crypto = require('crypto')
+const crypto_orig_createHash = crypto.createHash
+crypto.createHash = algorithm =>
+  crypto_orig_createHash(algorithm == 'md4' ? 'sha256' : algorithm)
+
 let actionName
 const program = new commander.Command(pkg.name)
   .description(
