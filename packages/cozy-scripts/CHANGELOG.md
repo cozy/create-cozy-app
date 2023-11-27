@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.2.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.1.2...cozy-scripts@8.2.0) (2023-11-27)
+
+
+### Features
+
+* Add support of ts file ([eaa194b](https://github.com/cozy/create-cozy-app/commit/eaa194b))
+
+
+
+
+
 ## [8.1.2](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.1.1...cozy-scripts@8.1.2) (2023-09-25)
 
 **Note:** Version bump only for package cozy-scripts
