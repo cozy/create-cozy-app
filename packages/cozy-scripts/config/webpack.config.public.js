@@ -36,7 +36,7 @@ function getConfig() {
     ]
 
     if (useCozyClientJs) {
-      /* We need to put all assets in the public build folder since 
+      /* We need to put all assets in the public build folder since
          public pages will need to have them public */
       plugins.push(
         new CopyPlugin([

@@ -30,7 +30,13 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/i,
         include: /cozy-ui\/transpiled\/react(\/|\\)/,
-        loader: require.resolve('file-loader')
+        loader: require.resolve('file-loader'),
+        options: {
+          // mobile app needs relative path since it uses file://
+          outputPath: isMobile ? './img' : 'img/',
+          publicPath: isMobile ? './img' : '/img',
+          name: `[name]${environment === 'production' ? '.[hash]' : ''}.[ext]`
+        }
       },
       /*
         For public pages, we need to have all used assets into the build/public

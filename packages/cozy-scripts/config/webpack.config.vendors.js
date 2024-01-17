@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 const SvgoInstance = require('svgo')
 const paths = require('../utils/paths')
 const fs = require('fs')
+const { publicFolderName, shouldAddPublicConfig } = require('./webpack.vars')
 
 const svgo = new SvgoInstance({
   plugins: [
@@ -35,10 +36,28 @@ function optimizeSVGIcon(buffer, path) {
   }
 }
 
-module.exports = {
-  plugins: [
+function getConfig() {
+  let plugins = [
     new CopyPlugin([
       { from: paths.appVendorAssets(), transform: optimizeSVGIcon }
     ])
   ]
+
+  if (shouldAddPublicConfig()) {
+    plugins.push(
+      new CopyPlugin([
+        {
+          from: paths.appVendorAssets(),
+          to: `${publicFolderName}`,
+          transform: optimizeSVGIcon
+        }
+      ])
+    )
+  }
+
+  return {
+    plugins
+  }
 }
+
+module.exports = getConfig()
