@@ -1,6 +1,7 @@
 language: node_js
+dist: jammy
 node_js:
-- 16
+- 20
 cache: false
 jobs:
   include:
