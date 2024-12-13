@@ -32,6 +32,12 @@ module.exports = {
         include: /cozy-ui\/transpiled\/react(\/|\\)/,
         loader: require.resolve('file-loader')
       },
+      // We want to keep static images used by cozy-dataproxy-lib inside components
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        include: /cozy-dataproxy-lib\/dist\/assets(\/|\\)/,
+        loader: require.resolve('file-loader')
+      },
       /*
         For public pages, we need to have all used assets into the build/public
         folder in order to be served by cozy-stack in the public pages
