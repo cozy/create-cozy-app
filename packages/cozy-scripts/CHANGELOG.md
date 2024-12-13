@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.4.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.3.0...cozy-scripts@8.4.0) (2024-12-13)
+
+
+### Features
+
+* Keep image from dataproxy ([0d16e2d](https://github.com/cozy/create-cozy-app/commit/0d16e2d))
+* Update to node 20 ([7409e73](https://github.com/cozy/create-cozy-app/commit/7409e73))
+
+
+
+
+
 # [8.3.0](https://github.com/cozy/create-cozy-app/compare/cozy-scripts@8.2.0...cozy-scripts@8.3.0) (2024-01-15)
 
 
