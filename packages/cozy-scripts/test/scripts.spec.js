@@ -1,5 +1,12 @@
 /* eslint-env jest */
 
+// Required to work from Node version 17+
+// More info: https://github.com/webpack/webpack/issues/13572#issuecomment-923736472
+const crypto = require('crypto')
+const crypto_orig_createHash = crypto.createHash
+crypto.createHash = algorithm =>
+  crypto_orig_createHash(algorithm == 'md4' ? 'sha256' : algorithm)
+
 const fs = require('fs-extra')
 const path = require('path')
 const colorize = require('../utils/_colorize.js')
