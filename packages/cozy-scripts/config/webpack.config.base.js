@@ -42,6 +42,15 @@ module.exports = {
         }
       },
       {
+        test: /\.js$/,
+        exclude: /(@fastify\/deepmerge)/,
+        loader: require.resolve('babel-loader'),
+        options: {
+          cacheDirectory: 'node_modules/.cache/babel-loader/js',
+          presets: [['cozy-app', { react: false }]]
+        }
+      },
+      {
         test: /\.css$/,
         use: [
           getCSSLoader(),
